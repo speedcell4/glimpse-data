@@ -3,7 +3,7 @@
     "title": "Linearly Convergent Frank-Wolfe with Backtracking Line-Search",
     "abstract": "Structured constraints in Machine Learning have recently brought the Frank-Wolfe (FW) family of algorithms back in the spotlight. While the classical FW algorithm has poor local convergence properties, the Away-steps and Pairwise FW variants have emerged as improved variants with faster convergence. However, these improved variants suffer from two practical limitations: they require at each iteration to solve a 1-dimensional minimization problem to set the step-size and also require the Frank-Wolfe linear subproblems to be solved exactly. In this paper, we propose variants of Away-steps and Pairwise FW that lift both restrictions simultaneously. The proposed methods set the step-size based on a sufficient decrease condition, and do not require prior knowledge of the objective. Furthermore, they inherit all the favorable convergence properties of the exact line-search version, including linear convergence for strongly convex functions over polytopes. Benchmarks on different machine learning problems illustrate large performance gains of the proposed variants",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "aad1fa3bf0fdb034284e5dfd5f786fa4228f7e4d",
     "citation_count": 27
   },
@@ -761,7 +761,7 @@
   },
   "https://proceedings.mlr.press/v108/li20d.html": {
     "title": "A Fast Anderson-Chebyshev Acceleration for Nonlinear Optimization",
-    "abstract": "Anderson acceleration (or Anderson mixing) is an efficient acceleration method for fixed point iterations $x_{t+1}=G(x_t)$, e.g., gradient descent can be viewed as iteratively applying the operation $G(x) \\triangleq x-\\alpha\  abla f(x)$. It is known that Anderson acceleration is quite efficient in practice and can be viewed as an extension of Krylov subspace methods for nonlinear problems. In this paper, we show that Anderson acceleration with Chebyshev polynomial can achieve the optimal convergence rate $O(\\sqrt{\\kappa}\\ln\\frac{1}{\\epsilon})$, which improves the previous result $O(\\kappa\\ln\\frac{1}{\\epsilon})$ provided by (Toth and Kelley, 2015) for quadratic functions. Moreover, we provide a convergence analysis for minimizing general nonlinear problems. Besides, if the hyperparameters (e.g., the Lipschitz smooth parameter $L$) are not available, we propose a guessing algorithm for guessing them dynamically and also prove a similar convergence rate. Finally, the experimental results demonstrate that the proposed Anderson-Chebyshev acceleration method converges significantly faster than other algorithms, e.g., vanilla gradient descent (GD), Nesterov's Accelerated GD. Also, these algorithms combined with the proposed guessing algorithm (guessing the hyperparameters dynamically) achieve much better performance",
+    "abstract": "Anderson acceleration (or Anderson mixing) is an efficient acceleration method for fixed point iterations $x_{t+1}=G(x_t)$, e.g., gradient descent can be viewed as iteratively applying the operation $G(x) \\triangleq x-\\alpha\\  abla f(x)$. It is known that Anderson acceleration is quite efficient in practice and can be viewed as an extension of Krylov subspace methods for nonlinear problems. In this paper, we show that Anderson acceleration with Chebyshev polynomial can achieve the optimal convergence rate $O(\\sqrt{\\kappa}\\ln\\frac{1}{\\epsilon})$, which improves the previous result $O(\\kappa\\ln\\frac{1}{\\epsilon})$ provided by (Toth and Kelley, 2015) for quadratic functions. Moreover, we provide a convergence analysis for minimizing general nonlinear problems. Besides, if the hyperparameters (e.g., the Lipschitz smooth parameter $L$) are not available, we propose a guessing algorithm for guessing them dynamically and also prove a similar convergence rate. Finally, the experimental results demonstrate that the proposed Anderson-Chebyshev acceleration method converges significantly faster than other algorithms, e.g., vanilla gradient descent (GD), Nesterov's Accelerated GD. Also, these algorithms combined with the proposed guessing algorithm (guessing the hyperparameters dynamically) achieve much better performance",
     "volume": "main",
     "checked": true,
     "id": "6586f2f1282d37537c3a232aa711a52b92eed2ff",
@@ -1033,7 +1033,7 @@
   },
   "https://proceedings.mlr.press/v108/vogel20a.html": {
     "title": "A Multiclass Classification Approach to Label Ranking",
-    "abstract": "In multiclass classification, the goal is to learn how to predict a random label $Y$, valued in $\\mathcal{Y}=\\{1,\\; \\ldots,\\; K \\}$ with $K\\geq 3$, based upon observing a r.v. $X$, taking its values in $\\mathbb{R}^q$ with $q\\geq 1$ say, by means of a classification rule $g:\\mathbb{R}^q\\to \\mathcal{Y}$ with minimum probability of error $\\mathbb{P}\\{Y\  eq g(X) \\}$. However, in a wide variety of situations, the task targeted may be more ambitious, consisting in sorting all the possible label values $y$ that may be assigned to $X$ by decreasing order of the posterior probability $\\eta_y(X)=\\mathbb{P}\\{Y=y \\mid X \\}$. This article is devoted to the analysis of this statistical learning problem, halfway between multiclass classification and posterior probability estimation (regression) and referred to as label ranking here. We highlight the fact that it can be viewed as a specific variant of ranking median regression (RMR), where, rather than observing a random permutation $\\Sigma$ assigned to the input vector $X$ and drawn from a Bradley-Terry-Luce-Plackett model with conditional preference vector $(\\eta_1(X),\\; \\ldots,\\; \\eta_K(X))$, the sole information available for training a label ranking rule is the label $Y$ ranked on top, namely $\\Sigma^{-1}(1)$. Inspired by recent results in RMR, we prove that under appropriate noise conditions, the One-Versus-One (OVO) approach to multiclassification yields, as a by-product, an optimal ranking of the labels with overwhelming probability. Beyond theoretical guarantees, the relevance of the approach to label ranking promoted in this article is supported by experimental results",
+    "abstract": "In multiclass classification, the goal is to learn how to predict a random label $Y$, valued in $\\mathcal{Y}=\\{1,\\; \\ldots,\\; K \\}$ with $K\\geq 3$, based upon observing a r.v. $X$, taking its values in $\\mathbb{R}^q$ with $q\\geq 1$ say, by means of a classification rule $g:\\mathbb{R}^q\\to \\mathcal{Y}$ with minimum probability of error $\\mathbb{P}\\{Y\\ eq g(X) \\}$. However, in a wide variety of situations, the task targeted may be more ambitious, consisting in sorting all the possible label values $y$ that may be assigned to $X$ by decreasing order of the posterior probability $\\eta_y(X)=\\mathbb{P}\\{Y=y \\mid X \\}$. This article is devoted to the analysis of this statistical learning problem, halfway between multiclass classification and posterior probability estimation (regression) and referred to as label ranking here. We highlight the fact that it can be viewed as a specific variant of ranking median regression (RMR), where, rather than observing a random permutation $\\Sigma$ assigned to the input vector $X$ and drawn from a Bradley-Terry-Luce-Plackett model with conditional preference vector $(\\eta_1(X),\\; \\ldots,\\; \\eta_K(X))$, the sole information available for training a label ranking rule is the label $Y$ ranked on top, namely $\\Sigma^{-1}(1)$. Inspired by recent results in RMR, we prove that under appropriate noise conditions, the One-Versus-One (OVO) approach to multiclassification yields, as a by-product, an optimal ranking of the labels with overwhelming probability. Beyond theoretical guarantees, the relevance of the approach to label ranking promoted in this article is supported by experimental results",
     "volume": "main",
     "checked": true,
     "id": "dc04553c5d0808bbc8e61884b3ea3835995601a2",
@@ -1211,7 +1211,7 @@
     "title": "Communication-Efficient Distributed Optimization in Networks with Gradient Tracking and Variance Reduction",
     "abstract": "There is growing interest in large-scale machine learning and optimization over decentralized networks, e.g. in the context of multi-agent learning and federated learning. Due to the imminent need to alleviate the communication burden, the investigation of communication-efficient distributed optimization algorithms - particularly for empirical risk minimization - has flourished in recent years. A large fraction of these algorithms have been developed for the master/slave setting, relying on a central parameter server that can communicate with all agents. This paper focuses on distributed optimization over networks, or decentralized optimization, where each agent is only allowed to aggregate information from its neighbors. By properly adjusting the global gradient estimate via local averaging in conjunction with proper correction, we develop a communication-efficient approximate Newton-type method Network-DANE, which generalizes DANE to the decentralized scenarios. Our key ideas can be applied in a systematic manner to obtain decentralized versions of other master/slave distributed algorithms. A notable development is Network-SVRG/SARAH, which employs variance reduction to further accelerate local computation. We establish linear convergence of Network-DANE and Network-SVRG for strongly convex losses, and Network-SARAH for quadratic losses, which shed light on the impacts of data homogeneity, network connectivity, and local averaging upon the rate of convergence. We further extend Network-DANE to composite optimization by allowing a nonsmooth penalty term. Numerical evidence is provided to demonstrate the appealing performance of our algorithms over competitive baselines, in terms of both communication and computation efficiency. Our work suggests that performing a certain amount of local communications and computations per iteration can substantially improve the overall efficiency",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "2da0639539b82c4a29759de67f2392e5c128a2d5",
     "citation_count": 54
   },
@@ -1265,11 +1265,11 @@
   },
   "https://proceedings.mlr.press/v108/diakonikolas20a.html": {
     "title": "Locally Accelerated Conditional Gradients",
-    "abstract": "Projection-free conditional gradient (CG) methods are the algorithms of choice for constrained optimization setups in which projections are often computationally prohibitive but linear optimization over the constraint set remains computationally feasible. Unlike in projection-based methods, globally accelerated convergence rates are in general unattainable for CG. However, a very recent work on Locally accelerated CG (LaCG) has demonstrated that local acceleration for CG is possible for many settings of interest. The main downside of LaCG is that it requires knowledge of the smoothness and strong convexity parameters of the objective function. We remove this limitation by introducing a novel, Parameter-Free Locally accelerated CG (PF-LaCG) algorithm, for which we provide rigorous convergence guarantees. Our theoretical results are complemented by numerical experiments, which demonstrate local acceleration and showcase the practical improvements of PF-LaCG over non-accelerated algorithms, both in terms of iteration count and wall-clock time",
+    "abstract": "Conditional gradients constitute a class of projection-free first-order algorithms for smooth convex optimization. As such, they are frequently used in solving smooth convex optimization problems over polytopes, for which the computational cost of orthogonal projections would be prohibitive. However, they do not enjoy the optimal convergence rates achieved by projection-based accelerated methods; moreover, achieving such globally-accelerated rates is information-theoretically impossible for these methods. To address this issue, we present Locally Accelerated Conditional Gradients -- an algorithmic framework that couples accelerated steps with conditional gradient steps to achieve local acceleration on smooth strongly convex problems. Our approach does not require projections onto the feasible set, but only on (typically low-dimensional) simplices, thus keeping the computational cost of projections at bay. Further, it achieves the optimal accelerated local convergence. Our theoretical results are supported by numerical experiments, which demonstrate significant speedups of our framework over state of the art methods in both per-iteration progress and wall-clock time.",
     "volume": "main",
-    "checked": false,
-    "id": "a9d5c5c0dd06cdfeea4a30d8fbbc3cb22f45f9a3",
-    "citation_count": 5
+    "checked": true,
+    "id": "afba27096a777d97410959ed18defcd273b9f6be",
+    "citation_count": 12
   },
   "https://proceedings.mlr.press/v108/rolf20a.html": {
     "title": "Post-Estimation Smoothing: A Simple Baseline for Learning with Side Information",
@@ -1379,7 +1379,7 @@
     "title": "RelatIF: Identifying Explanatory Training Samples via Relative Influence",
     "abstract": "In this work, we focus on the use of influence functions to identify relevant training examples that one might hope \"explain\" the predictions of a machine learning model. One shortcoming of influence functions is that the training examples deemed most \"influential\" are often outliers or mislabelled, making them poor choices for explanation. In order to address this shortcoming, we separate the role of global versus local influence. We introduce RelatIF, a new class of criteria for choosing relevant training examples by way of an optimization objective that places a constraint on global influence. RelatIF considers the local influence that an explanatory example has on a prediction relative to its global effects on the model. In empirical evaluations, we find that the examples returned by RelatIF are more intuitive when compared to those found using influence functions",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "147210657d02efd4f5460238aeda81007332f970",
     "citation_count": 40
   },
@@ -1521,7 +1521,7 @@
   },
   "https://proceedings.mlr.press/v108/zimmer20a.html": {
     "title": "Adaptive Discretization for Evaluation of Probabilistic Cost Functions",
-    "abstract": null,
+    "abstract": "In many real-world planning applications, e.g. dynamic design of experiments, autonomous driving and robot manipulation, it is necessary to evaluate candidate movement paths with respect to a safety cost function. Here, the continuous candidate paths need to be discretized first and, subsequently, evaluated onthe discretization points. The resulting quality of planned paths, thus, highly depends on the definition of the safety cost functions, and the resolution of the discretization. In this paper, we propose an approach for evaluating continuous candidate paths by employing an adaptive discretization scheme, with a probabilistic cost function learned from observations. The obtained path is then guaranteed to be epsilon-safe, i.e. the remaining risk of still finding an unsafe point on the trajectory is smaller than epsilon. The proposed approach is investigated theoretically, as well as empirically validated on several robotic path planning scenarios.",
     "volume": "main",
     "checked": true,
     "id": "0708107d1f2f73a0fb78e90f1461fc365508e8ec",
@@ -1569,11 +1569,11 @@
   },
   "https://proceedings.mlr.press/v108/calderon20a.html": {
     "title": "Conditional Linear Regression",
-    "abstract": "Often machine learning and statistical models will attempt to describe the majority of the data. However, there may be situations where only a fraction of the data can be fit well by a linear regression model. Here, we are interested in a case where such inliers can be identified by a Disjunctive Normal Form (DNF) formula. We give a polynomial time algorithm for the conditional linear regression task, which identifies a DNF condition together with the linear predictor on the corresponding portion of the data. In this work, we improve on previous algorithms by removing a requirement that the covariances of the data satisfying each of the terms of the condition have to all be very similar in spectral norm to the covariance of the overall condition",
+    "abstract": "Work in machine learning and statistics commonly focuses on building models that capture the vast majority of data, possibly ignoring a segment of the population as outliers. However, there may not exist a good, simple model for the distribution, so we seek to find a small subset where there exists such a model. We give a computationally efficient algorithm with theoretical analysis for the conditional linear regression task, which is the joint task of identifying a significant portion of the data distribution, described by a k-DNF, along with a linear predictor on that portion with a small loss. In contrast to work in robust statistics on small subsets, our loss bounds do not feature a dependence on the density of the portion we fit, and compared to previous work on conditional linear regression, our algorithm’s running time scales polynomially with the sparsity of the linear predictor. We also demonstrate empirically that our algorithm can leverage this advantage to obtain a k-DNF with a better linear predictor in practice.",
     "volume": "main",
-    "checked": false,
-    "id": "6aa9c395d094553abb0e01936518af5175ef131d",
-    "citation_count": 0
+    "checked": true,
+    "id": "ac8eb8a01defd60ae145c14080ce3da7f3b63987",
+    "citation_count": 4
   },
   "https://proceedings.mlr.press/v108/kirschner20a.html": {
     "title": "Distributionally Robust Bayesian Optimization",
@@ -1809,7 +1809,7 @@
   },
   "https://proceedings.mlr.press/v108/janz20a.html": {
     "title": "Bandit optimisation of functions in the Matérn kernel RKHS",
-    "abstract": "We consider the problem of optimising functions in the reproducing kernel Hilbert space (RKHS) of a Mat\\'ern kernel with smoothness parameter $\  u$ over the domain $[0,1]^d$ under noisy bandit feedback. Our contribution, the $\\pi$-GP-UCB algorithm, is the first practical approach with guaranteed sublinear regret for all $\  u>1$ and $d \\geq 1$. Empirical validation suggests better performance and drastically improved computational scalablity compared with its predecessor, Improved GP-UCB",
+    "abstract": "We consider the problem of optimising functions in the reproducing kernel Hilbert space (RKHS) of a Mat\\'ern kernel with smoothness parameter $\\u$ over the domain $[0,1]^d$ under noisy bandit feedback. Our contribution, the $\\pi$-GP-UCB algorithm, is the first practical approach with guaranteed sublinear regret for all $\\  u>1$ and $d \\geq 1$. Empirical validation suggests better performance and drastically improved computational scalablity compared with its predecessor, Improved GP-UCB",
     "volume": "main",
     "checked": true,
     "id": "1228d08ce6b6a1eb86c16b6a121ee3bdf6b0a11f",
@@ -1913,7 +1913,7 @@
   },
   "https://proceedings.mlr.press/v108/heide20a.html": {
     "title": " Safe-Bayesian Generalized Linear Regression",
-    "abstract": "We study generalized Bayesian inference under misspecification, i.e. when the model is 'wrong but useful'. Generalized Bayes equips the likelihood with a learning rate $\\eta$. We show that for generalized linear models (GLMs), $\\eta$-generalized Bayes concentrates around the best approximation of the truth within the model for specific $\\eta \  eq 1$, even under severely misspecified noise, as long as the tails of the true distribution are exponential. We derive MCMC samplers for generalized Bayesian lasso and logistic regression and give examples of both simulated and real-world data in which generalized Bayes substantially outperforms standard Bayes",
+    "abstract": "We study generalized Bayesian inference under misspecification, i.e. when the model is 'wrong but useful'. Generalized Bayes equips the likelihood with a learning rate $\\eta$. We show that for generalized linear models (GLMs), $\\eta$-generalized Bayes concentrates around the best approximation of the truth within the model for specific $\\eta \\eq 1$, even under severely misspecified noise, as long as the tails of the true distribution are exponential. We derive MCMC samplers for generalized Bayesian lasso and logistic regression and give examples of both simulated and real-world data in which generalized Bayes substantially outperforms standard Bayes",
     "volume": "main",
     "checked": true,
     "id": "732351d8e50a6ca3bf7da535130c184dd46e0b52",
@@ -2105,7 +2105,7 @@
   },
   "https://proceedings.mlr.press/v108/valls20a.html": {
     "title": "Online Convex Optimization with Perturbed Constraints: Optimal Rates against Stronger Benchmarks",
-    "abstract": null,
+    "abstract": "This paper studies Online Convex Optimization (OCO) problems where the constraints have additive perturbations that (i) vary over time and (ii) are not known at the time to make a decision. Perturbations may not be i.i.d. generated and can be used, for example, to model a time-varying budget or time-varying requests in resource allocation problems. Our goal is to design a policy that obtains sublinear regret and satisfies the constraints in the long-term. To this end, we present an online primal-dual proximal gradient algorithm that has \uD835\uDC42(\uD835\uDC47\uD835\uDF16∨\uD835\uDC471−\uD835\uDF16)\nO\n(\nT\nϵ\n∨\nT\n1\n−\nϵ\n)\n regret and \uD835\uDC42(\uD835\uDC47\uD835\uDF16)\nO\n(\nT\nϵ\n)\n constraint violation, where \uD835\uDF16∈[0,1)\nϵ\n∈\n[\n0\n,\n1\n)\n is a parameter in the learning rate. The proposed algorithm obtains optimal rates when \uD835\uDF16=1/2\nϵ\n=\n1\n/\n2\n, and can compare against a stronger comparator (the set of fixed decisions in hindsight) than previous work.",
     "volume": "main",
     "checked": true,
     "id": "3ceac11873c963446dc4d2a2495685ae04f173cc",
@@ -2123,9 +2123,9 @@
     "title": "Feature relevance quantification in explainable AI: A causal problem",
     "abstract": "We discuss promising recent contributions on quantifying feature relevance using Shapley values, where we observed some confusion on which probability distribution is the right one for dropped features. We argue that the confusion is based on not carefully distinguishing between observational and interventional conditional probabilities and try a clarification based on Pearl's seminal work on causality. We conclude that unconditional rather than conditional expectations provide the right notion of dropping features in contradiction to the theoretical justification of the software package SHAP. Parts of SHAP are unaffected because unconditional expectations (which we argue to be conceptually right) are used as approximation for the conditional ones, which encouraged others to `improve' SHAP in a way that we believe to be flawed",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "b6530a0079b62615ec44d6a36ae011d4df40af9b",
-    "citation_count": 140
+    "citation_count": 141
   },
   "https://proceedings.mlr.press/v108/martens20a.html": {
     "title": "Neural Decomposition: Functional ANOVA with Variational Autoencoders",
@@ -2203,7 +2203,7 @@
     "title": "Finite-Time Error Bounds for Biased Stochastic Approximation with Applications to Q-Learning",
     "abstract": "Inspired by the widespread use of Q-learning algorithms in reinforcement learning (RL), this paper studies a class of biased stochastic approximation (SA) procedures under an \"ergodic-like\" assumption on the stochastic noise sequence. Leveraging a multistep Lyapunov function that looks ahead to several future updates to accommodate the gradient bias, we prove a general result on the convergence of the iterates, and use it to derive finite-time bounds on the mean-square error in the case of constant stepsizes. This novel viewpoint renders the finite-time analysis of biased SA algorithms under a broad family of stochastic perturbations possible. For direct comparison with past works, we also demonstrate these bounds by applying them to Qlearning with linear function approximation, under the realistic Markov chain observation model. The resultant finite-time error bound for Q-learning is the first of its kind, in the sense that it holds: i) for the unmodified version (i.e., without making any modifications to the updates), and ii), for Markov chains starting from any initial distribution, at least one of which has to be violated for existing results to be applicable",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "669dc0e321755499ed034254dc4716456cc6eaf3",
     "citation_count": 0
   },
@@ -2243,7 +2243,7 @@
     "title": "Flexible distribution-free conditional predictive bands using density estimators",
     "abstract": "Conformal methods create prediction bands that control average coverage under no assumptions besides i.i.d. data. Besides average coverage, one might also desire to control conditional coverage, that is, coverage for every new testing point. However, without strong assumptions, conditional coverage is unachievable. Given this limitation, the literature has focused on methods with asymptotical conditional coverage. In order to obtain this property, these methods require strong conditions on the dependence between the target variable and the features. We introduce two conformal methods based on conditional density estimators that do not depend on this type of assumption to obtain asymptotic conditional coverage: Dist-split and CD-split. While Dist-split asymptotically obtains optimal intervals, which are easier to interpret than general regions, CD-split obtains optimal size regions, which are smaller than intervals. CD-split also obtains local coverage by creating a data-driven partition of the feature space that scales to high-dimensional settings and by generating prediction bands locally on the partition elements. In a wide variety of simulated scenarios, our methods have a better control of conditional coverage and have smaller length than previously proposed methods",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "5fefad7cf9b7c9db21f007a4946c82c4ce226f46",
     "citation_count": 38
   },
@@ -2305,11 +2305,11 @@
   },
   "https://proceedings.mlr.press/v108/aglietti20a.html": {
     "title": "Causal Bayesian Optimization",
-    "abstract": "This paper studies the problem of performing a sequence of optimal interventions in a causal dynamical system where both the target variable of interest and the inputs evolve over time. This problem arises in a variety of domains e.g. system biology and operational research. Dynamic Causal Bayesian Optimization (DCBO) brings together ideas from sequential decision making, causal inference and Gaussian process (GP) emulation. DCBO is useful in scenarios where all causal effects in a graph are changing over time. At every time step DCBO identifies a local optimal intervention by integrating both observational and past interventional data collected from the system. We give theoretical results detailing how one can transfer interventional information across time steps and define a dynamic causal GP model which can be used to quantify uncertainty and find optimal interventions in practice. We demonstrate how DCBO identifies optimal interventions faster than competing approaches in multiple settings and applications",
+    "abstract": "This paper studies the problem of globally optimizing a variable of interest that is part of a causal model in which a sequence of interventions can be performed. This problem arises in biology, operational research, communications and, more generally, in all fields where the goal is to optimize an output metric of a system of interconnected nodes. Our approach combines ideas from causal inference, uncertainty quantification and sequential decision making. In particular, it generalizes Bayesian optimization, which treats the input variables of the objective function as independent, to scenarios where causal information is available. We show how knowing the causal graph significantly improves the ability to reason about optimal decision making strategies decreasing the optimization cost while avoiding suboptimal solutions. We propose a new algorithm called Causal Bayesian Optimization (CBO). CBO automatically balances two trade-offs: the classical exploration-exploitation and the new observation-intervention, which emerges when combining real interventional data with the estimated intervention effects computed via do-calculus. We demonstrate the practical benefits of this method in a synthetic setting and in two real-world applications.",
     "volume": "main",
-    "checked": false,
-    "id": "3eb3a91f7005ce655c6986383a7ed74d4327dbf2",
-    "citation_count": 5
+    "checked": true,
+    "id": "a6677e17faf58c582d311eca2453a46cd21f7795",
+    "citation_count": 14
   },
   "https://proceedings.mlr.press/v108/morvan20a.html": {
     "title": "Linear predictor on linearly-generated data with missing values: non consistency and solutions",
@@ -2593,7 +2593,7 @@
   },
   "https://proceedings.mlr.press/v108/meehan20a.html": {
     "title": "A Three Sample Hypothesis Test for Evaluating Generative Models",
-    "abstract": null,
+    "abstract": "Detecting overfitting in generative models is an important challenge in machine learning. In this work, we formalize a form of overfitting that we call {\\em{data-copying}} – where the generative model memorizes and outputs training samples or small variations thereof. We provide a three sample test for detecting data-copying that uses the training set, a separate sample from the target distribution, and a generated sample from the model, and study the performance of our test on several canonical models and datasets.",
     "volume": "main",
     "checked": true,
     "id": "5641584e314da699a9fb1473403aabd8440bfe99",
@@ -2643,13 +2643,13 @@
     "title": "Screening Data Points in Empirical Risk Minimization via Ellipsoidal Regions and Safe Loss Functions",
     "abstract": "We design simple screening tests to automatically discard data samples in empirical risk minimization without losing optimization guarantees. We derive loss functions that produce dual objectives with a sparse solution. We also show how to regularize convex losses to ensure such a dual sparsity-inducing property, and propose a general method to design screening tests for classification or regression based on ellipsoidal approximations of the optimal set. In addition to producing computational gains, our approach also allows us to compress a dataset into a subset of representative points",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "7ddd5a0d15541f62c972a2360a443b32dce3a969",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v108/wen20a.html": {
     "title": "An Empirical Study of Stochastic Gradient Descent with Structured Covariance Noise",
-    "abstract": null,
+    "abstract": "The choice of batch-size in a stochastic optimization algorithm plays a substantial role for both optimization and generalization. Increasing the batch-size used typically improves optimization but degrades generalization. To address the problem of improving generalization while maintaining optimal convergence in large-batch training, we propose to add covariance noise to the gradients. We demonstrate that the learning performance of our method is more accurately captured by the structure of the covariance matrix of the noise rather than by the variance of gradients. Moreover, over the convex-quadratic, we prove in theory that it can be characterized by the Frobenius norm of the noise matrix. Our empirical studies with standard deep learning model-architectures and datasets shows that our method not only improves generalization performance in large-batch training, but furthermore, does so in a way where the optimization performance remains desirable and the training duration is not elongated.",
     "volume": "main",
     "checked": true,
     "id": "390e7e4983f9651a089ce8374bcc58cdefc44428",
@@ -2675,7 +2675,7 @@
     "title": "Logistic regression with peer-group effects via inference in higher-order Ising models",
     "abstract": "Spin glass models, such as the Sherrington-Kirkpatrick, Hopfield and Ising models, are all well-studied members of the exponential family of discrete distributions, and have been influential in a number of application domains where they are used to model correlation phenomena on networks. Conventionally these models have quadratic sufficient statistics and consequently capture correlations arising from pairwise interactions. In this work we study extensions of these to models with higher-order sufficient statistics, modeling behavior on a social network with peer-group effects. In particular, we model binary outcomes on a network as a higher-order spin glass, where the behavior of an individual depends on a linear function of their own vector of covariates and some polynomial function of the behavior of others, capturing peer-group effects. Using a {\\em single}, high-dimensional sample from such model our goal is to recover the coefficients of the linear function as well as the strength of the peer-group effects. The heart of our result is a novel approach for showing strong concavity of the log pseudo-likelihood of the model, implying statistical error rate of $\\sqrt{d/n}$ for the Maximum Pseudo-Likelihood Estimator (MPLE), where $d$ is the dimensionality of the covariate vectors and $n$ is the size of the network (number of nodes). Our model generalizes vanilla logistic regression as well as the peer-effect models studied in recent works, and our results extend these results to accommodate higher-order interactions",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "56b7871e4534eb6b2c1bf6a8d5b0731fb91d8a89",
     "citation_count": 7
   },
@@ -3289,11 +3289,11 @@
   },
   "https://proceedings.mlr.press/v108/sun20a.html": {
     "title": "Finite-Time Analysis of Decentralized Temporal-Difference Learning with Linear Function Approximation",
-    "abstract": "—In this paper, we consider the policy evaluation problem in multi-agent reinforcement learning (MARL) and derive exact closed-form formulas for the ﬁnite-time mean- squared estimation errors of decentralized temporal difference (TD) learning with linear function approximation. Our analysis hinges upon the fact that the decentralized TD learning method can be viewed as a Markov jump linear system (MJLS). Then standard MJLS theory can be applied to quantify the mean and covariance matrix of the estimation error of the decentralized TD method at every time step. Various implications of our exact formulas on the algorithm performance are also discussed. An interesting ﬁnding is that under a necessary and sufﬁcient stability condition, the mean-squared TD estimation error will converge to an exact limit at a speciﬁc exponential rate",
+    "abstract": "Motivated by the emerging use of multi-agent reinforcement learning (MARL) in engineering applications such as networked robotics, swarming drones, and sensor networks, we investigate the policy evaluation problem in a fully decentralized setting, using temporal-difference (TD) learning with linear function approximation to handle large state spaces in practice. The goal of the group of agents is to collaboratively learn the value function of a given policy from locally private rewards observed in a shared environment, through exchanging local estimates with neighbors. Despite their simplicity and widespread use, our theoretical understanding of such decentralized TD learning algorithms remains limited. Existing results were obtained based on i.i.d. data samples, or by imposing an ‘additional’ projection step to control the ‘gradient’ bias incurred by the Markovian observations. In this paper, we provide a finite-time analysis of the fully decentralized TD(0) learning under both i.i.d. as well as Markovian samples, and prove that all local estimates converge linearly to a small neighborhood of the optimum. The resultant error bounds are the first of its type—in the sense that they hold under the most practical assumptions—which is made possible by means of a novel multi-step Lyapunov approach.",
     "volume": "main",
-    "checked": false,
-    "id": "1bbb8c1ec0b535b72c4536e31c50cfc5399c9ca3",
-    "citation_count": 0
+    "checked": true,
+    "id": "8237b2311d0c41eb4562b3c70eeb1626c64334b6",
+    "citation_count": 213
   },
   "https://proceedings.mlr.press/v108/astudillo20a.html": {
     "title": "Multi-attribute Bayesian optimization with interactive preference learning",
@@ -3377,10 +3377,10 @@
   },
   "https://proceedings.mlr.press/v108/warrington20a.html": {
     "title": "Coping With Simulators That Don’t Always Return",
-    "abstract": null,
+    "abstract": "Deterministic models are approximations of reality that are easy to interpret and often easier to build than stochastic alternatives. Unfortunately, as nature is capricious, observational data can never be fully explained by deterministic models in practice. Observation and process noise need to be added to adapt deterministic models to behave stochastically, such that they are capable of explaining and extrapolating from noisy data. We investigate and address computational inefficiencies that arise from adding process noise to deterministic simulators that fail to return for certain inputs; a property we describe as ’brittle’. We show how to train a conditional normalizing flow to propose perturbations such that the simulator succeeds with high probability, increasing computational efficiency.\n",
     "volume": "main",
-    "checked": false,
-    "id": null,
-    "citation_count": 0
+    "checked": true,
+    "id": "c7f136c34df511c69ab695581fcb2d769317c71b",
+    "citation_count": 3
   }
 }
