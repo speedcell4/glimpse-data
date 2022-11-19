@@ -19,7 +19,7 @@
     "title": "Convex Block-sparse Linear Regression with Expanders – Provably",
     "abstract": "Sparse matrices are favorable objects in machine learning and optimization. When such matrices are used, in place of dense ones, the overall complexity requirements in optimization can be significantly reduced in practice, both in terms of space and run-time. Prompted by this observation, we study a convex optimization scheme for block-sparse recovery from linear measurements. To obtain linear sketches, we use expander matrices, i.e., sparse matrices containing only few non-zeros per column. Hitherto, to the best of our knowledge, such algorithmic solutions have been only studied from a non-convex perspective. Our aim here is to theoretically characterize the performance of convex approaches under such setting.   Our key novelty is the expression of the recovery error in terms of the model-based norm, while assuring that solution lives in the model. To achieve this, we show that sparse model-based matrices satisfy a group version of the null-space property. Our experimental findings on synthetic and real applications support our claims for faster recovery in the convex setting -- as opposed to using dense sensing matrices, while showing a competitive recovery performance",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "4f0e0b975b4cfd76669bf3a57a5581acacb9a4c2",
     "citation_count": 1
   },
@@ -321,11 +321,11 @@
   },
   "https://proceedings.mlr.press/v51/wilson16.html": {
     "title": "Deep Kernel Learning",
-    "abstract": "Deep kernel learning and related techniques promise to combine the representational power of neural networks with the reliable uncertainty esti-mates of Gaussian processes. One crucial aspect of these models is an expectation that, because they are treated as Gaussian process models optimized using the marginal likelihood, they are protected from overﬁtting. However, we identify pathological behavior, including overﬁtting, on a simple toy example. We explore this pathology, explaining its origins and considering how it applies to real datasets. Through careful experimentation on UCI datasets, CIFAR-10, and the UTKFace dataset, we ﬁnd that the overﬁtting from overparameterized deep kernel learning, in which the model is \"some-what Bayesian\", can in certain scenarios be worse than that from not being Bayesian at all. However, we ﬁnd that a fully Bayesian treatment of deep kernel learning can rectify this overﬁtting and obtain the desired performance improvements over standard neural networks and Gaussian processes",
+    "abstract": "We introduce scalable deep kernels, which combine the structural properties of deep learning architectures with the non-parametric flexibility of kernel methods. Specifically, we transform the inputs of a spectral mixture base kernel with a deep architecture, using local kernel interpolation, inducing points, and structure exploiting (Kronecker and Toeplitz) algebra for a scalable kernel representation. These closed-form kernels can be used as drop-in replacements for standard kernels, with benefits in expressive power and scalability. We jointly learn the properties of these kernels through the marginal likelihood of a Gaussian process. Inference and learning cost O(n) for n training points, and predictions cost O(1) per test point. On a large and diverse collection of applications, including a dataset with 2 million examples, we show improved performance over scalable Gaussian processes with flexible kernel learning models, and stand-alone deep architectures.",
     "volume": "main",
-    "checked": false,
-    "id": "84eb0e6772452f9a92438259b9bd3cdd497e4202",
-    "citation_count": 34
+    "checked": true,
+    "id": "34ab95637e7723302058f6526e33dc73857b9af2",
+    "citation_count": 555
   },
   "https://proceedings.mlr.press/v51/gottlieb16.html": {
     "title": "Nearly Optimal Classification for Semimetrics",
@@ -337,7 +337,7 @@
   },
   "https://proceedings.mlr.press/v51/lloyd16.html": {
     "title": "Latent Point Process Allocation",
-    "abstract": null,
+    "abstract": "We introduce a probabilistic model for the factorisation of continuous Poisson process rate functions. Our model can be thought of as a topic model for Poisson point processes in which each point is assigned to one of a set of latent rate functions that are shared across multiple outputs. We show that the model brings a means of incorporating structure in point process inference beyond the state-of-the-art. We derive an efficient variational inference scheme for the model based on sparse Gaussian processes that scales linearly in the number of data points. Finally, we demonstrate, using examples from spatial and temporal statistics, how the model can be used for discovering hidden structure with greater precision than standard frequentist approaches.\n",
     "volume": "main",
     "checked": true,
     "id": "a7d518afbe04583bad218f9fbda41b11833debc9",
@@ -649,11 +649,11 @@
   },
   "https://proceedings.mlr.press/v51/wang16d.html": {
     "title": "Distributed Multi-Task Learning",
-    "abstract": "Consider a distributed multi-task learning (MTL) framework where the distributed users first train their own models based on the local data and then send the local updates to the server, and the server sends back helpful information by which each user can learn its task independently. Compared to the single-task case, the distributed MTL suffers more severely from the communication bottleneck, because the users wish to learn multiple models, causing the downlink communication load to linearly increase with the total number of tasks. In this paper, we propose a novel scheme named coded distributed multi-task learning, to reduce the communication loads both in the uplink and downlink. The key idea is to exploit the local information stored at the users during the local training, and utilize a particular repetitive placement and computation on the publicly shared dataset such that coded multicasting opportunities can be created at the server and users. Our method for the first time applies coding strategy to reduce the communication cost for distributed MTL framework. Experiments on real-world dataset show that the proposed scheme can substantially reduce the communication load compared to the traditional uncoded approach",
+    "abstract": "We consider the problem of distributed multi-task learning, where each machine learns a separate, but related, task. Specifically, each machine learns a linear predictor in high-dimensional space, where all tasks share the same small support. We present a communication-efficient estimator based on the debiased lasso and show that it is comparable with the optimal centralized method.",
     "volume": "main",
-    "checked": false,
-    "id": "65abe5fe435bcb1bad6f87d94480020f35ea28e7",
-    "citation_count": 1
+    "checked": true,
+    "id": "bfc6d423a6d8f639698f071c8bce7e21d75acf6f",
+    "citation_count": 56
   },
   "https://proceedings.mlr.press/v51/sheth16.html": {
     "title": "A Fixed-Point Operator for Inference in Variational Bayesian Latent Gaussian Models",
@@ -817,7 +817,7 @@
   },
   "https://proceedings.mlr.press/v51/abdullah16.html": {
     "title": "Sketching, Embedding and Dimensionality Reduction in Information Theoretic Spaces",
-    "abstract": null,
+    "abstract": "In this paper we show how to embed information distances like the χ^2 and Jensen-Shannon divergences efficiently in low dimensional spaces while preserving all pairwise distances. We then prove a dimensionality reduction result for the Hellinger, Jensen–Shannon, and χ^2 divergences that preserves the information geometry of the distributions, specifically, by retaining the simplex structure of the space. While our first result already implies these divergences can be explicitly embedded in the Euclidean space, retaining the simplex structure is important because it allows us to do inferences in the reduced space. We also show that these divergences can be sketched efficiently (i.e., up to a multiplicative error in sublinear space) in the aggregate streaming model. This result is exponentially stronger than known upper bounds for sketching these distances in the strict turnstile streaming model.\n",
     "volume": "main",
     "checked": true,
     "id": "6702ff4774e0c675ac982801b1ff124aac3bba94",
@@ -841,11 +841,11 @@
   },
   "https://proceedings.mlr.press/v51/mattei16.html": {
     "title": "Globally Sparse Probabilistic PCA",
-    "abstract": "Sparse versions of principal component analysis (PCA) have imposed themselves as simple, yet powerful ways of selecting relevant features of high-dimensional data in an unsupervised manner. However, when several sparse principal components are computed, the interpretation of the selected variables is difficult since each axis has its own sparsity pattern and has to be interpreted separately. To overcome this drawback, we propose a Bayesian procedure called globally sparse probabilistic PCA (GSPPCA) that allows to obtain several sparse components with the same sparsity pattern. This allows the practitioner to identify the original variables which are relevant to describe the data. To this end, using Roweis' probabilistic interpretation of PCA and a Gaussian prior on the loading matrix, we provide the first exact computation of the marginal likelihood of a Bayesian PCA model. To avoid the drawbacks of discrete model selection, a simple relaxation of this framework is presented. It allows to find a path of models using a variational expectation-maximization algorithm. The exact marginal likelihood is then maximized over this path. This approach is illustrated on real and synthetic data sets. In particular, using unlabeled microarray data, GSPPCA infers much more relevant gene subsets than traditional sparse PCA algorithms",
+    "abstract": "With the flourishing development of high-dimensional data, sparse versions of principal component analysis (PCA) have imposed themselves as simple, yet powerful ways of selecting relevant features in an unsupervised manner. However, when several sparse principal components are computed, the interpretation of the selected variables may be difficult since each axis has its own sparsity pattern and has to be interpreted separately. To overcome this drawback, we propose a Bayesian procedure that allows to obtain several sparse components with the same sparsity pattern. To this end, using Roweis’ probabilistic interpretation of PCA and an isotropic Gaussian prior on the loading matrix, we provide the first exact computation of the marginal likelihood of a Bayesian PCA model. In order to avoid the drawbacks of discrete model selection, we propose a simple relaxation of our framework which allows to find a path of models using a variational expectation-maximization algorithm. The exact marginal likelihood can eventually be maximized over this path, relying on Occam’s razor to select the relevant variables. Since the sparsity pattern is common to all components, we call this approach globally sparse probabilistic PCA (GSPPCA). Its usefulness is illustrated on synthetic data sets and on several real unsupervised feature selection problems.",
     "volume": "main",
-    "checked": false,
-    "id": "263bdda21ff487fe082634b653078d85ba606890",
-    "citation_count": 19
+    "checked": true,
+    "id": "e0109e751d31f7820247e7c367635321f8ae3bae",
+    "citation_count": 7
   },
   "https://proceedings.mlr.press/v51/dai16.html": {
     "title": "Provable Bayesian Inference via Particle Mirror Descent",
@@ -1097,11 +1097,11 @@
   },
   "https://proceedings.mlr.press/v51/chen16d.html": {
     "title": "Robust Covariate Shift Regression",
-    "abstract": "Importance weighting is naturally used to adjust for covariate shift. However, this simple strategy is not robust to model misspecifcation or excessive estimation error. To handle this problem, we propose a doubly robust covariate shift regression method by introducing an imputation model for conditional mean of the response to augment the importance weighted estimating equation. With a novel semi-nonparametric construction on the nuisance importance weight and imputation model, our method is more robust to excessive fitting error compared to the existing nonparametric or machine learning approaches and less likely to suffer from model misspecification than the parametric approach. To remove the overfitting bias of the nonparametric components under potential model misspecification, we construct specific calibrated moment estimating equations for the semi-nonparametric models. Theoretical properties of our estimator are studied. We show that our estimator attains the parametric rate when at least one nuisance model is correctly specified, estimation for the parametric part of the nuisance models achieves parametric rate and the nonparametric components satisfy the rate double robustness property. Simulation studies demonstrate that our method is more robust and efficient than parametric and fully nonparametric (machine learning) estimators under various configurations. We also examine the utility of our method through a real example about transfer learning of phenotyping algorithm for bipolar disorder. Finally, we discuss on possible ways to improve the (intrinsic) efficiency of our estimator and the potentiality of incorporating other nonparametric, high dimensional and machine learning models with our proposed framework",
+    "abstract": "In many learning settings, the source data available to train a regression model differs from the target data it encounters when making predictions due to input distribution shift. Appropriately dealing with this situation remains an important challenge. Existing methods attempt to “reweight” the source data samples to better represent the target domain, but this introduces strong inductive biases that are highly extrapolative and can often err greatly in practice. We propose a robust approach for regression under covariate shift that embraces the uncertainty resulting from sample selection bias by producing regression models that are explicitly robust to it. We demonstrate the benefits of our approach on a number of regression tasks.",
     "volume": "main",
-    "checked": false,
-    "id": "4ad54ce332768e5299848c7b94568cb0a9ed16d4",
-    "citation_count": 5
+    "checked": true,
+    "id": "8cd9852ee0defbf3a19210afc09f87568dba3086",
+    "citation_count": 54
   },
   "https://proceedings.mlr.press/v51/tang16b.html": {
     "title": "On Lloyd’s Algorithm: New Theoretical Insights for Clustering in Practice",
@@ -1129,11 +1129,11 @@
   },
   "https://proceedings.mlr.press/v51/kusner16.html": {
     "title": "Private Causal Inference",
-    "abstract": "The use of propensity score methods to reduce selection bias when determining causal effects is common practice for observational studies. Although such studies in econometrics, social science, and medicine often rely on sensitive data, there has been no prior work on privatising the propensity scores used to ascertain causal effects from observed data. In this paper, we demonstrate how to privatise the propensity score and quantify how the added noise for privatisation affects the propensity score as well as subsequent causal inference. We test our methods on both simulated and real-world datasets. The results are consistent with our theoretical findings that the privatisation preserves the validity of subsequent causal analysis with high probability. More importantly, our results empirically demonstrate that the proposed solutions are practical for moderately-sized datasets",
+    "abstract": "Causal inference deals with identifying which random variables ”cause” or control other random variables. Recent advances on the topic of causal inference based on tools from statistical estimation and machine learning have resulted in practical algorithms for causal inference. Causal inference has the potential to have significant impact on medical research, prevention and control of diseases, and identifying factors that impact economic changes to name just a few. However, these promising applications for causal inference are often ones that involve sensitive or personal data of users that need to be kept private (e.g., medical records, personal finances, etc). Therefore, there is a need for the development of causal inference methods that preserve data privacy. We study the problem of inferring causality using the current, popular causal inference framework, the additive noise model (ANM) while simultaneously ensuring privacy of the users. Our framework provides differential privacy guarantees for a variety of ANM variants. We run extensive experiments, and demonstrate that our techniques are practical and easy to implement.",
     "volume": "main",
-    "checked": false,
-    "id": "816cc6f741198aed2bd1ac3058d6ff4e9afadb1a",
-    "citation_count": 1
+    "checked": true,
+    "id": "531a52a9223901deaf5bed4ae1f89bba8ecd9ad6",
+    "citation_count": 11
   },
   "https://proceedings.mlr.press/v51/basse16a.html": {
     "title": "Parallel Markov Chain Monte Carlo via Spectral Clustering",
@@ -1185,9 +1185,9 @@
   },
   "https://proceedings.mlr.press/v51/que16.html": {
     "title": "Back to the Future: Radial Basis Function Networks Revisited",
-    "abstract": "Radial Basis Function (RBF) networks are a classical family of algorithms for supervised learning. The most popular approach for training RBF networks has relied on kernel methods using regularization based on a norm in a Reproducing Kernel Hilbert Space (RKHS), which is a principled and empirically successful framework. In this paper we aim to revisit some of the older approaches to training the RBF networks from a more modern perspective. Specifically, we analyze two common regularization procedures, one based on the square norm of the coefficients in the network and another one using centers obtained by <inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"que-ieq1-2906594.gif\"/></alternatives></inline-formula>-means clustering. We show that both of these RBF methods can be recast as certain data-dependent kernels. We provide a theoretical analysis of these methods as well as a number of experimental results, pointing out very competitive experimental performance as well as certain advantages over the standard kernel methods in terms of both flexibility (incorporating of unlabeled data) and computational complexity. Finally, our results shed light on some impressive recent successes of using soft <inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"que-ieq2-2906594.gif\"/></alternatives></inline-formula>-means features for image recognition and other tasks",
+    "abstract": "Radial Basis Function (RBF) networks are a classical family of algorithms for supervised learning. The most popular approach for training RBF networks has relied on kernel methods using regularization based on a norm in a Reproducing Kernel Hilbert Space (RKHS), which is a principled and empirically successful framework. In this paper we aim to revisit some of the older approaches to training the RBF networks from a more modern perspective. Specifically, we analyze two common regularization procedures, one based on the square norm of the coefficients in the network and another on using centers obtained by k-means clustering. We show that both of these RBF methods can be recast as certain data-dependent kernels. We provide a theoretical analysis of these methods as well as a number of experimental results, pointing out very competitive experimental performance as well as certain advantages over the standard kernel methods in terms of both flexibility (incorporating of unlabeled data) and computational complexity. Finally, our results shed light on some impressive recent successes of using soft k-means features for image recognition and other tasks.\n",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "7133ba618920ba4809f622c76f06709450c745eb",
     "citation_count": 54
   },
@@ -1233,11 +1233,11 @@
   },
   "https://proceedings.mlr.press/v51/saul16.html": {
     "title": "Chained Gaussian Processes",
-    "abstract": "Heteroscedastic Gaussian process regression, based on the concept of chained Gaussian processes, is used to build surrogates to predict site-specific loads on an offshore wind turbine. Stochasticity in the inflow turbulence and irregular waves results in load responses that are best represented as random variables rather than deterministic values. Moreover, the effect of these stochastic sources on the loads depends strongly on the mean environmental conditions - for instance, at low mean wind speeds, inflow turbulence produces much less variability in loads than at high wind speeds. Statistically, this is known as heteroscedasticity. Deterministic and most stochastic surrogates do not account for the heteroscedastic noise, giving an incomplete and potentially misleading picture of the structural response. In this paper, we draw on the recent advancements in statistical inference to train a heteroscedastic surrogate model on a noisy database to predict the conditional pdf of the response. The model is informed via 10-minute load statistics of the IEA-10MW-RWT subject to both aero- and hydrodynamic loads, simulated with OpenFAST. Its performance is assessed against the standard Gaussian process regression. The predicted mean is similar in both models, but the heteroscedastic surrogate approximates the large-scale variance of the responses significantly better",
+    "abstract": "Gaussian process models are flexible, Bayesian non-parametric approaches to regression. Properties of multivariate Gaussians mean that they can be combined linearly in the manner of additive models and via a link function (like in generalized linear models) to handle non-Gaussian data. However, the link function formalism is restrictive, link functions are always invertible and must convert a parameter of interest to an linear combination of the underlying processes. There are many likelihoods and models where a non-linear combination is more appropriate. We term these more general models \"Chained Gaussian Processes\": the transformation of the GPs to the likelihood parameters will not generally be invertible, and that implies that linearisation would only be possible with multiple (localized) links, i.e a chain. We develop an approximate inference procedure for Chained GPs that is scalable and applicable to any factorized likelihood. We demonstrate the approximation on a range of likelihood functions.",
     "volume": "main",
-    "checked": false,
-    "id": "513767c9e6c27a596a20362202154613de48d914",
-    "citation_count": 2
+    "checked": true,
+    "id": "5accab5f16c5eb4a668e73021a97b727ace21d3e",
+    "citation_count": 44
   },
   "https://proceedings.mlr.press/v51/teneva16.html": {
     "title": "Multiresolution Matrix Compression",
