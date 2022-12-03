@@ -2,7 +2,7 @@
   "https://openreview.net/forum?id=BkeStsCcKQ": {
     "title": "Critical Learning Periods in Deep Networks",
     "abstract": "Similar to humans and animals, deep artificial neural networks exhibit critical periods during which a temporary stimulus deficit can impair the development of a skill. The extent of the impairment depends on the onset and length of the deficit window, as in animal models, and on the size of the neural network. Deficits that do not affect low-level statistics, such as vertical flipping of the images, have no lasting effect on performance and can be overcome with further training.  To better understand this phenomenon, we use the Fisher Information of the weights to measure the effective connectivity between layers of a network during training.  Counterintuitively, information rises rapidly in the early phases of training, and then decreases, preventing redistribution of information resources in a phenomenon we refer to as a loss of \"Information Plasticity\".  Our analysis suggests that the first few epochs are critical for the creation of strong connections that are optimal relative to the input data distribution. Once such strong connections are created, they do not appear to change during additional training. These findings suggest that the initial learning transient, under-scrutinized compared to asymptotic behavior, plays a key role in determining the outcome of the training process. Our findings, combined with recent theoretical results in the literature, also suggest that forgetting (decrease of information in the weights) is critical to achieving invariance and disentanglement in representation learning. Finally, critical periods are not restricted to biological systems, but can emerge naturally in learning systems, whether biological or artificial, due to fundamental constrains arising from learning dynamics and information processing",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "1802a7870a642d414f435273dd9e9190a0dc4fcb",
     "citation_count": 83
@@ -10,7 +10,7 @@
   "https://openreview.net/forum?id=BklCusRct7": {
     "title": "Optimal Transport Maps For Distribution Preserving Operations on Latent Spaces of Generative Models",
     "abstract": "Generative models such as Variational Auto Encoders (VAEs) and Generative Adversarial Networks (GANs) are typically trained for a fixed prior distribution in the latent space, such as uniform or Gaussian. After a trained model is obtained, one can sample the Generator in various forms for exploration and understanding, such as interpolating between two samples, sampling in the vicinity of a sample or exploring differences between a pair of samples applied to a third sample. In this paper, we show that the latent space operations used in the literature so far induce a distribution mismatch between the resulting outputs and the prior distribution the model was trained on. To address this, we propose to use distribution matching transport maps to ensure that such latent space operations preserve the prior distribution, while minimally modifying the original operation. Our experimental results validate that the proposed operations give higher quality samples compared to the original operations",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "801a80f7a18fccb2e8068996a73aee2cf04ae460",
     "citation_count": 22
@@ -58,7 +58,7 @@
   "https://openreview.net/forum?id=Bkxbrn0cYX": {
     "title": "Selfless Sequential Learning",
     "abstract": "Sequential learning, also called lifelong learning, studies the problem of learning tasks in a sequence with access restricted to only the data of the current task. In this paper we look at a scenario with fixed model capacity, and postulate that the learning process should not be selfish, i.e. it should account for future tasks to be added and thus leave enough capacity for them. To achieve Selfless Sequential Learning we study different regularization strategies and activation functions. We find that imposing sparsity at the level of the representation (i.e.~neuron activations) is more beneficial for sequential learning than encouraging parameter sparsity. In particular, we propose a novel regularizer, that encourages representation sparsity by means of neural inhibition. It results in few active neurons which in turn leaves more free neurons to be utilized by upcoming tasks. As neural inhibition over an entire layer can be too drastic, especially for complex tasks requiring strong representations, our regularizer only inhibits other neurons in a local neighbourhood, inspired by lateral inhibition processes in the brain. We combine our novel regularizer, with state-of-the-art lifelong learning methods that penalize changes to important previously learned parts of the network. We show that our new regularizer leads to increased sparsity which translates in consistent performance improvement %over alternative regularizers we studied on diverse datasets",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "974e22699cb165b0285a7c72b5cc6c3d42010143",
     "citation_count": 85
@@ -74,7 +74,7 @@
   "https://openreview.net/forum?id=BJxgz2R9t7": {
     "title": "Learning To Solve Circuit-SAT: An Unsupervised Differentiable Approach",
     "abstract": "Recent efforts to combine Representation Learning with Formal Methods, commonly known as Neuro-Symbolic Methods, have given rise to a new trend of applying rich neural architectures to solve classical combinatorial optimization problems. In this paper, we propose a neural framework that can learn to solve the Circuit Satisfiability problem. Our framework is built upon two fundamental contributions: a rich embedding architecture that encodes the problem structure, and an end-to-end differentiable training procedure that mimics Reinforcement Learning and trains the model directly toward solving the SAT problem. The experimental results show the superior out-of-sample generalization performance of our framework compared to the recently developed NeuroSAT method",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "2b64300879d6fcaabe932e87ecb412066359b286",
     "citation_count": 57
@@ -130,7 +130,7 @@
   "https://openreview.net/forum?id=ByGuynAct7": {
     "title": "The Deep Weight Prior",
     "abstract": "Bayesian inference is known to provide a general framework for incorporating prior knowledge or specific properties into machine learning models via carefully choosing a prior distribution. In this work, we propose a new type of prior distributions for convolutional neural networks, deep weight prior, that in contrast to previously published techniques, favors empirically estimated structure of convolutional filters e.g., spatial correlations of weights. We define deep weight prior as an implicit distribution and propose a method for variational inference with such type of implicit priors. In experiments, we show that deep weight priors can improve the performance of Bayesian neural networks on several problems when training data are limited. Also, we found that initialization of weights of conventional networks with samples from deep weight prior leads to faster training",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "cf9d672680312c086b2277dbaa04bd37cb295d6e",
     "citation_count": 29
@@ -298,10 +298,10 @@
   "https://openreview.net/forum?id=BJxhijAcY7": {
     "title": "signSGD with Majority Vote is Communication Efficient and Fault Tolerant",
     "abstract": "Training neural networks on large datasets can be accelerated by distributing the workload over a network of machines. As datasets grow ever larger, networks of hundreds or thousands of machines become economically viable. The time cost of communicating gradients limits the effectiveness of using such large machine counts, as may the increased chance of network faults. We explore a particularly simple algorithm for robust, communication-efficient learning---signSGD. Workers transmit only the sign of their gradient vector to a server, and the overall update is decided by a majority vote. This algorithm uses 32× less communication per iteration than full-precision, distributed SGD. Under natural conditions verified by experiment, we prove that signSGD converges in the large and mini-batch settings, establishing convergence for a parameter regime of Adam as a byproduct. Aggregating sign gradients by majority vote means that no individual worker has too much power. We prove that unlike SGD, majority vote is robust when up to 50% of workers behave adversarially. The class of adversaries we consider includes as special cases those that invert or randomise their gradient estimate. On the practical side, we built our distributed training system in Pytorch. Benchmarking against the state of the art collective communications library (NCCL), our framework---with the parameter server housed entirely on one machine---led to a 25% reduction in time for training resnet50 on Imagenet when using 15 AWS p3.2xlarge machines",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "dbca9dbe14e9933515d2005dc1163ae2c24d9afd",
-    "citation_count": 134
+    "citation_count": 135
   },
   "https://openreview.net/forum?id=SyVU6s05K7": {
     "title": "Deep Frank-Wolfe For Neural Network Optimization",
@@ -370,26 +370,26 @@
   "https://openreview.net/forum?id=B1xsqj09Fm": {
     "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
     "abstract": "Despite recent progress in generative image modeling, successfully generating high-resolution, diverse samples from complex datasets such as ImageNet remains an elusive goal. To this end, we train Generative Adversarial Networks at the largest scale yet attempted, and study the instabilities specific to such scale. We find that applying orthogonal regularization to the generator renders it amenable to a simple \"truncation trick,\" allowing fine control over the trade-off between sample fidelity and variety by reducing the variance of the Generator's input. Our modifications lead to models which set the new state of the art in class-conditional image synthesis. When trained on ImageNet at 128x128 resolution, our models (BigGANs) achieve an Inception Score (IS) of 166.5 and Frechet Inception Distance (FID) of 7.4, improving over the previous best IS of 52.52 and FID of 18.6",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "22aab110058ebbd198edb1f1e7b4f69fb13c0613",
-    "citation_count": 3216
+    "citation_count": 3230
   },
   "https://openreview.net/forum?id=Bke4KsA5FX": {
     "title": "Generative Code Modeling with Graphs",
     "abstract": "Generative models for source code are an interesting structured prediction problem, requiring to reason about both hard syntactic and semantic constraints as well as about natural, likely programs. We present a novel model for this problem that uses a graph to represent the intermediate state of the generated output. The generative procedure interleaves grammar-driven expansion steps with graph augmentation and neural message passing steps. An experimental evaluation shows that our new model can generate semantically meaningful expressions, outperforming a range of strong baselines",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "75c0d369c7151b925155cfe1b3f01dd7d0503981",
-    "citation_count": 127
+    "citation_count": 128
   },
   "https://openreview.net/forum?id=BJG0voC9YQ": {
     "title": "Woulda, Coulda, Shoulda: Counterfactually-Guided Policy Search",
     "abstract": "Learning policies on data synthesized by models can in principle quench the thirst of reinforcement learning algorithms for large amounts of real experience, which is often costly to acquire. However, simulating plausible experience de novo is a hard problem for many complex environments, often resulting in biases for model-based policy evaluation and search. Instead of de novo synthesis of data, here we assume logged, real experience and model alternative outcomes of this experience under counterfactual actions, actions that were not actually taken. Based on this, we propose the Counterfactually-Guided Policy Search (CF-GPS) algorithm for learning policies in POMDPs from off-policy experience. It leverages structural causal models for counterfactual evaluation of arbitrary policies on individual off-policy episodes. CF-GPS can improve on vanilla model-based RL algorithms by making use of available logged data to de-bias model predictions. In contrast to off-policy algorithms based on Importance Sampling which re-weight data, CF-GPS leverages a model to explicitly consider alternative outcomes, allowing the algorithm to make better use of experience data. We find empirically that these advantages translate into improved policy evaluation and search results on a non-trivial grid-world task. Finally, we show that CF-GPS generalizes the previously proposed Guided Policy Search and that reparameterization-based algorithms such Stochastic Value Gradient can be interpreted as counterfactual methods",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "745a134eca192982e8e0c16d6f36cfe24f9bdd08",
-    "citation_count": 83
+    "citation_count": 84
   },
   "https://openreview.net/forum?id=rJNwDjAqYX": {
     "title": "Large-Scale Study of Curiosity-Driven Learning",
@@ -426,10 +426,10 @@
   "https://openreview.net/forum?id=BJg9DoR9t7": {
     "title": "Max-MIG: an Information Theoretic Approach for Joint Learning from Crowds",
     "abstract": "Eliciting labels from crowds is a potential way to obtain large labeled data. Despite a variety of methods developed for learning from crowds, a key challenge remains unsolved: \\emph{learning from crowds without knowing the information structure among the crowds a priori, when some people of the crowds make highly correlated mistakes and some of them label effortlessly (e.g. randomly)}. We propose an information theoretic approach, Max-MIG, for joint learning from crowds, with a common assumption: the crowdsourced labels and the data are independent conditioning on the ground truth. Max-MIG simultaneously aggregates the crowdsourced labels and learns an accurate data classifier. Furthermore, we devise an accurate data-crowds forecaster that employs both the data and the crowdsourced labels to forecast the ground truth. To the best of our knowledge, this is the first algorithm that solves the aforementioned challenge of learning from crowds. In addition to the theoretical validation, we also empirically show that our algorithm achieves the new state-of-the-art results in most settings, including the real-world data, and is the first algorithm that is robust to various information structures. Codes are available at \\hyperlink{this https URL}{this https URL}",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "789e1c58964f98f67471fe3552ed9934f24d10ff",
-    "citation_count": 27
+    "citation_count": 28
   },
   "https://openreview.net/forum?id=Hke-JhA9Y7": {
     "title": "Learning concise representations for regression by evolving networks of trees",
@@ -442,7 +442,7 @@
   "https://openreview.net/forum?id=B1MXz20cYQ": {
     "title": "Explaining Image Classifiers by Counterfactual Generation",
     "abstract": "When an image classifier makes a prediction, which parts of the image are relevant and why? We can rephrase this question to ask: which parts of the image, if they were not seen by the classifier, would most change its decision? Producing an answer requires marginalizing over images that could have been seen but weren't. We can sample plausible image in-fills by conditioning a generative model on the rest of the image. We then optimize to find the image regions that most change the classifier's decision after in-fill. Our approach contrasts with ad-hoc in-filling approaches, such as blurring or injecting noise, which generate inputs far from the data distribution, and ignore informative relationships between different parts of the image. Our method produces more compact and relevant saliency maps, with fewer artifacts compared to previous methods",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "f1173ca43481c1b33f4e7891ce77200e51eecba2",
     "citation_count": 181
@@ -458,7 +458,7 @@
   "https://openreview.net/forum?id=B1ffQnRcKX": {
     "title": "Automatically Composing Representation Transformations as a Means for Generalization",
     "abstract": "A generally intelligent learner should generalize to more complex tasks than it has previously encountered, but the two common paradigms in machine learning -- either training a separate learner per task or training a single learner for all tasks -- both have difficulty with such generalization because they do not leverage the compositional structure of the task distribution. This paper introduces the compositional problem graph as a broadly applicable formalism to relate tasks of different complexity in terms of problems with shared subproblems. We propose the compositional generalization problem for measuring how readily old knowledge can be reused and hence built upon. As a first step for tackling compositional generalization, we introduce the compositional recursive learner, a domain-general framework for learning algorithmic procedures for composing representation transformations, producing a learner that reasons about what computation to execute by making analogies to previously seen problems. We show on a symbolic and a high-dimensional domain that our compositional approach can generalize to more complex problems than the learner has previously encountered, whereas baselines that are not explicitly compositional do not",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "56326d969591d3c30e2f48027b926be20a3e75f7",
     "citation_count": 58
@@ -562,7 +562,7 @@
   "https://openreview.net/forum?id=ByeMB3Act7": {
     "title": "Learning to Screen for Fast Softmax Inference on Large Vocabulary Neural Networks",
     "abstract": "Neural language models have been widely used in various NLP tasks, including machine translation, next word prediction and conversational agents. However, it is challenging to deploy these models on mobile devices due to their slow prediction speed, where the bottleneck is to compute top candidates in the softmax layer. In this paper, we introduce a novel softmax layer approximation algorithm by exploiting the clustering structure of context vectors. Our algorithm uses a light-weight screening model to predict a much smaller set of candidate words based on the given context, and then conducts an exact softmax only within that subset. Training such a procedure end-to-end is challenging as traditional clustering methods are discrete and non-differentiable, and thus unable to be used with back-propagation in the training process. Using the Gumbel softmax, we are able to train the screening model end-to-end on the training set to exploit data distribution. The algorithm achieves an order of magnitude faster inference than the original softmax layer for predicting top-$k$ words in various tasks such as beam search in machine translation or next words prediction. For example, for machine translation task on German to English dataset with around 25K vocabulary, we can achieve 20.4 times speed up with 98.9\\% precision@1 and 99.3\\% precision@5 with the original softmax layer prediction, while state-of-the-art ~\\citep{MSRprediction} only achieves 6.7x speedup with 98.7\\% precision@1 and 98.1\\% precision@5 for the same task",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e3392bdb1c03ab359f6acd452b3610999c02131b",
     "citation_count": 15
@@ -690,7 +690,7 @@
   "https://openreview.net/forum?id=BJlgNh0qKQ": {
     "title": "Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder",
     "abstract": "Human annotation for syntactic parsing is expensive, and large resources are available only for a fraction of languages. A question we ask is whether one can leverage abundant unlabeled texts to improve syntactic parsers, beyond just using the texts to obtain more generalisable lexical features (i.e. beyond word embeddings). To this end, we propose a novel latent-variable generative model for semi-supervised syntactic dependency parsing. As exact inference is intractable, we introduce a differentiable relaxation to obtain approximate samples and compute gradients with respect to the parser parameters. Our method (Differentiable Perturb-and-Parse) relies on differentiable dynamic programming over stochastically perturbed edge scores. We demonstrate effectiveness of our approach with experiments on English, French and Swedish",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e73995cfea2b373d811df1bafae9e2596aa958d0",
     "citation_count": 53
@@ -714,10 +714,10 @@
   "https://openreview.net/forum?id=B1e0X3C9tQ": {
     "title": "Diagnosing and Enhancing VAE Models",
     "abstract": "Although variational autoencoders (VAEs) represent a widely influential deep generative model, many aspects of the underlying energy function remain poorly understood. In particular, it is commonly believed that Gaussian encoder/decoder assumptions reduce the effectiveness of VAEs in generating realistic samples. In this regard, we rigorously analyze the VAE objective, differentiating situations where this belief is and is not actually true. We then leverage the corresponding insights to develop a simple VAE enhancement that requires no additional hyperparameters or sensitive tuning. Quantitatively, this proposal produces crisp samples and stable FID scores that are actually competitive with a variety of GAN models, all while retaining desirable attributes of the original VAE architecture. A shorter version of this work will appear in the ICLR 2019 conference proceedings (Dai and Wipf, 2019). The code for our model is available at this https URL TwoStageVAE",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d3dd00e24f96bae7ad780ac5fdb0c14194d5cb74",
-    "citation_count": 257
+    "citation_count": 260
   },
   "https://openreview.net/forum?id=BylQV305YQ": {
     "title": "Toward Understanding the Impact of Staleness in Distributed Machine Learning",
@@ -762,7 +762,7 @@
   "https://openreview.net/forum?id=BJzbG20cFQ": {
     "title": "Towards Metamerism via Foveated Style Transfer",
     "abstract": "The problem of $\\textit{visual metamerism}$ is defined as finding a family of perceptually indistinguishable, yet physically different images. In this paper, we propose our NeuroFovea metamer model, a foveated generative model that is based on a mixture of peripheral representations and style transfer forward-pass algorithms. Our gradient-descent free model is parametrized by a foveated VGG19 encoder-decoder which allows us to encode images in high dimensional space and interpolate between the content and texture information with adaptive instance normalization anywhere in the visual field. Our contributions include: 1) A framework for computing metamers that resembles a noisy communication system via a foveated feed-forward encoder-decoder network -- We observe that metamerism arises as a byproduct of noisy perturbations that partially lie in the perceptual null space; 2) A perceptual optimization scheme as a solution to the hyperparametric nature of our metamer model that requires tuning of the image-texture tradeoff coefficients everywhere in the visual field which are a consequence of internal noise; 3) An ABX psychophysical evaluation of our metamers where we also find that the rate of growth of the receptive fields in our model match V1 for reference metamers and V2 between synthesized samples. Our model also renders metamers at roughly a second, presenting a $\\times1000$ speed-up compared to the previous work, which allows for tractable data-driven metamer experiments",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "7f3df93baabaf66bebbf7a24257f4ada252bc959",
     "citation_count": 24
@@ -810,7 +810,7 @@
   "https://openreview.net/forum?id=ByMVTsR5KQ": {
     "title": "Adversarial Audio Synthesis",
     "abstract": "Audio signals are sampled at high temporal resolutions, and learning to synthesize audio requires capturing structure across a range of timescales. Generative adversarial networks (GANs) have seen wide success at generating images that are both locally and globally coherent, but they have seen little application to audio generation. In this paper we introduce WaveGAN, a first attempt at applying GANs to unsupervised synthesis of raw-waveform audio. WaveGAN is capable of synthesizing one second slices of audio waveforms with global coherence, suitable for sound effect generation. Our experiments demonstrate that, without labels, WaveGAN learns to produce intelligible words when trained on a small-vocabulary speech dataset, and can also synthesize audio from other domains such as drums, bird vocalizations, and piano. We compare WaveGAN to a method which applies GANs designed for image generation on image-like audio feature representations, finding both approaches to be promising",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "0d3bbe47fe67e5a125a2547913ac0e4a30f18c8d",
     "citation_count": 386
@@ -826,7 +826,7 @@
   "https://openreview.net/forum?id=B1xY-hRctX": {
     "title": "Neural Logic Machines",
     "abstract": "We propose the Neural Logic Machine (NLM), a neural-symbolic architecture for both inductive learning and logic reasoning. NLMs exploit the power of both neural networks---as function approximators, and logic programming---as a symbolic processor for objects with properties, relations, logic connectives, and quantifiers. After being trained on small-scale tasks (such as sorting short arrays), NLMs can recover lifted rules, and generalize to large-scale tasks (such as sorting longer arrays). In our experiments, NLMs achieve perfect generalization in a number of tasks, from relational reasoning tasks on the family tree and general graphs, to decision making tasks including sorting arrays, finding shortest paths, and playing the blocks world. Most of these tasks are hard to accomplish for neural networks or inductive logic programming alone",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "3a6447361b20c249f5306ae17dee43f645430e31",
     "citation_count": 145
@@ -866,10 +866,10 @@
   "https://openreview.net/forum?id=ByME42AqK7": {
     "title": "Efficient Multi-Objective Neural Architecture Search via Lamarckian Evolution",
     "abstract": "Neural Architecture Search aims at automatically finding neural architectures that are competitive with architectures designed by human experts. While recent approaches have achieved state-of-the-art predictive performance for image recognition, they are problematic under resource constraints for two reasons: (1)the neural architectures found are solely optimized for high predictive performance, without penalizing excessive resource consumption, (2) most architecture search methods require vast computational resources. We address the first shortcoming by proposing LEMONADE, an evolutionary algorithm for multi-objective architecture search that allows approximating the entire Pareto-front of architectures under multiple objectives, such as predictive performance and number of parameters, in a single run of the method. We address the second shortcoming by proposing a Lamarckian inheritance mechanism for LEMONADE which generates children networks that are warmstarted with the predictive performance of their trained parents. This is accomplished by using (approximate) network morphism operators for generating children. The combination of these two contributions allows finding models that are on par or even outperform both hand-crafted as well as automatically-designed networks",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "3662def6e3909868f92461694a586a626e725416",
-    "citation_count": 366
+    "citation_count": 367
   },
   "https://openreview.net/forum?id=H1xQVn09FX": {
     "title": "GANSynth: Adversarial Neural Audio Synthesis",
@@ -890,7 +890,7 @@
   "https://openreview.net/forum?id=Byf5-30qFX": {
     "title": "DHER: Hindsight Experience Replay for Dynamic Goals",
     "abstract": "Dealing with sparse rewards is one of the most important challenges in reinforcement learning (RL), especially when a goal is dynamic (e.g., to grasp a moving object). Hindsight experience replay (HER) has been shown an effective solution to handling  sparse rewards with fixed goals. However, it does not account for dynamic goals in its vanilla form and, as a result, even degrades the performance of existing off-policy RL algorithms when the goal is changing over time. In this paper, we present  Dynamic Hindsight Experience Replay (DHER), a novel approach for tasks with dynamic goals in the presence of sparse rewards. DHER automatically assembles successful experiences from two relevant failures and can be used to enhance an arbitrary off-policy RL algorithm when the tasks' goals are dynamic. We evaluate DHER on tasks of robotic manipulation and moving object tracking, and transfer the polices from simulation to physical robots. Extensive comparison and ablation studies demonstrate  the superiority of our approach, showing that DHER is a crucial ingredient to enable RL to solve tasks with dynamic goals in manipulation and grid world domains",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "154a19b77f2302d6b9bab354d3160ef527d29f55",
     "citation_count": 45
@@ -930,7 +930,7 @@
   "https://openreview.net/forum?id=HygBZnRctX": {
     "title": "Transferring Knowledge across Learning Processes",
     "abstract": "In complex transfer learning scenarios new tasks might not be tightly linked to previous tasks. Approaches that transfer information contained only in the final parameters of a source model will therefore struggle. Instead, transfer learning at a higher level of abstraction is needed. We propose Leap, a framework that achieves this by transferring knowledge across learning processes. We associate each task with a manifold on which the training process travels from initialization to final parameters and construct a meta-learning objective that minimizes the expected length of this path. Our framework leverages only information obtained during training and can be computed on the fly at negligible cost. We demonstrate that our framework outperforms competing methods, both in meta-learning and transfer learning, on a set of computer vision tasks. Finally, we demonstrate that Leap can transfer knowledge across learning processes in demanding reinforcement learning environments (Atari) that involve millions of gradient steps",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "0c37a1feac9a09a2fa5554cb7ff735d4bcd6ed5b",
     "citation_count": 50
@@ -954,10 +954,10 @@
   "https://openreview.net/forum?id=rJl-b3RcF7": {
     "title": "The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",
     "abstract": "Neural network pruning techniques can reduce the parameter counts of trained networks by over 90%, decreasing storage requirements and improving computational performance of inference without compromising accuracy. However, contemporary experience is that the sparse architectures produced by pruning are difficult to train from the start, which would similarly improve training performance.   We find that a standard pruning technique naturally uncovers subnetworks whose initializations made them capable of training effectively. Based on these results, we articulate the \"lottery ticket hypothesis:\" dense, randomly-initialized, feed-forward networks contain subnetworks (\"winning tickets\") that - when trained in isolation - reach test accuracy comparable to the original network in a similar number of iterations. The winning tickets we find have won the initialization lottery: their connections have initial weights that make training particularly effective.   We present an algorithm to identify winning tickets and a series of experiments that support the lottery ticket hypothesis and the importance of these fortuitous initializations. We consistently find winning tickets that are less than 10-20% of the size of several fully-connected and convolutional feed-forward architectures for MNIST and CIFAR10. Above this size, the winning tickets that we find learn faster than the original network and reach higher test accuracy",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "21937ecd9d66567184b83eca3d3e09eb4e6fbd60",
-    "citation_count": 1747
+    "citation_count": 1756
   },
   "https://openreview.net/forum?id=rJg4J3CqFm": {
     "title": "Learning Embeddings into Entropic Wasserstein Spaces",
@@ -1010,7 +1010,7 @@
   "https://openreview.net/forum?id=BJgRDjR9tQ": {
     "title": "Robust estimation via Generative Adversarial Networks",
     "abstract": "Robust estimation under Huber's -contamination model has become an important topic in statistics and theoretical computer science. Rate-optimal procedures such as Tukey's median and other estimators based on statistical depth functions are impractical because of their computational intractability. In this paper, we establish an intriguing connection between f-GANs and various depth functions through the lens of f-Learning. Similar to the derivation of f-GAN, we show that these depth functions that lead to rate-optimal robust estimators can all be viewed as variational lower bounds of the total variation distance in the framework of f-Learning. This connection opens the door of computing robust estimators using tools developed for training GANs. In particular, we show that a JS-GAN that uses a neural network discriminator with at least one hidden layer is able to achieve the minimax rate of robust mean estimation under Huber's -contamination model. Interestingly, the hidden layers of the neural net structure in the discriminator class are shown to be necessary for robust estimation",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "a78d516846e1931b251ae873d9e78f2717c2ccec",
     "citation_count": 6
@@ -1026,7 +1026,7 @@
   "https://openreview.net/forum?id=BJxh2j0qYm": {
     "title": "Dynamic Channel Pruning: Feature Boosting and Suppression",
     "abstract": "Making deep convolutional neural networks more accurate typically comes at the cost of increased computational and memory resources. In this paper, we reduce this cost by exploiting the fact that the importance of features computed by convolutional layers is highly input-dependent, and propose feature boosting and suppression (FBS), a new method to predictively amplify salient convolutional channels and skip unimportant ones at run-time. FBS introduces small auxiliary connections to existing convolutional layers. In contrast to channel pruning methods which permanently remove channels, it preserves the full network structures and accelerates convolution by dynamically skipping unimportant input and output channels. FBS-augmented networks are trained with conventional stochastic gradient descent, making it readily available for many state-of-the-art CNNs. We compare FBS to a range of existing channel pruning and dynamic execution schemes and demonstrate large improvements on ImageNet classification. Experiments show that FBS can respectively provide $5\\times$ and $2\\times$ savings in compute on VGG-16 and ResNet-18, both with less than $0.6\\%$ top-5 accuracy loss",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "a055b9917759dd75811edbc8500ca247b457c5b2",
     "citation_count": 203
@@ -1034,7 +1034,7 @@
   "https://openreview.net/forum?id=Bklfsi0cKm": {
     "title": "Deep Convolutional Networks as shallow Gaussian Processes",
     "abstract": "We show that the output of a (residual) convolutional neural network (CNN) with an appropriate prior over the weights and biases is a Gaussian process (GP) in the limit of infinitely many convolutional filters, extending similar results for dense networks. For a CNN, the equivalent kernel can be computed exactly and, unlike \"deep kernels\", has very few parameters: only the hyperparameters of the original CNN. Further, we show that this kernel has two properties that allow it to be computed efficiently; the cost of evaluating the kernel for a pair of images is similar to a single forward pass through the original CNN with only one filter per layer. The kernel equivalent to a 32-layer ResNet obtains 0.84% classification error on MNIST, a new record for GPs with a comparable number of parameters",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "459c8f314986db959fad1ab962bc0bbb0e430344",
     "citation_count": 192
@@ -1058,10 +1058,10 @@
   "https://openreview.net/forum?id=Bygh9j09KX": {
     "title": "ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness",
     "abstract": "Convolutional Neural Networks (CNNs) are commonly thought to recognise objects by learning increasingly complex representations of object shapes. Some recent studies suggest a more important role of image textures. We here put these conflicting hypotheses to a quantitative test by evaluating CNNs and human observers on images with a texture-shape cue conflict. We show that ImageNet-trained CNNs are strongly biased towards recognising textures rather than shapes, which is in stark contrast to human behavioural evidence and reveals fundamentally different classification strategies. We then demonstrate that the same standard architecture (ResNet-50) that learns a texture-based representation on ImageNet is able to learn a shape-based representation instead when trained on \"Stylized-ImageNet\", a stylized version of ImageNet. This provides a much better fit for human behavioural performance in our well-controlled psychophysical lab setting (nine experiments totalling 48,560 psychophysical trials across 97 observers) and comes with a number of unexpected emergent benefits such as improved object detection performance and previously unseen robustness towards a wide range of image distortions, highlighting advantages of a shape-based representation",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "0f50b7483f1b200ebf88c4dd7698de986399a0f3",
-    "citation_count": 1501
+    "citation_count": 1509
   },
   "https://openreview.net/forum?id=Hye9lnCct7": {
     "title": "Learning Actionable Representations with Goal Conditioned Policies",
@@ -1130,10 +1130,10 @@
   "https://openreview.net/forum?id=rJxgknCcK7": {
     "title": "FFJORD: Free-Form Continuous Dynamics for Scalable Reversible Generative Models",
     "abstract": "A promising class of generative models maps points from a simple distribution to a complex distribution through an invertible neural network. Likelihood-based training of these models requires restricting their architectures to allow cheap computation of Jacobian determinants. Alternatively, the Jacobian trace can be used if the transformation is specified by an ordinary differential equation. In this paper, we use Hutchinson's trace estimator to give a scalable unbiased estimate of the log-density. The result is a continuous-time invertible generative model with unbiased density estimation and one-pass sampling, while allowing unrestricted neural network architectures. We demonstrate our approach on high-dimensional density estimation, image generation, and variational inference, achieving the state-of-the-art among exact likelihood methods with efficient sampling",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "8afa6dd9f9ac46462a1fb70a757c4ae1cd45bbf6",
-    "citation_count": 520
+    "citation_count": 524
   },
   "https://openreview.net/forum?id=HyEtjoCqFX": {
     "title": "Soft Q-Learning with Mutual-Information Regularization",
@@ -1146,7 +1146,7 @@
   "https://openreview.net/forum?id=S1x4ghC9tQ": {
     "title": "Temporal Difference Variational Auto-Encoder",
     "abstract": "To act and plan in complex environments, we posit that agents should have a mental simulator of the world with three characteristics: (a) it should build an abstract state representing the condition of the world; (b) it should form a belief which represents uncertainty on the world; (c) it should go beyond simple step-by-step simulation, and exhibit temporal abstraction. Motivated by the absence of a model satisfying all these requirements, we propose TD-VAE, a generative sequence model that learns representations containing explicit beliefs about states several steps into the future, and that can be rolled out directly without single-step transitions. TD-VAE is trained on pairs of temporally separated time points, using an analogue of temporal difference learning used in reinforcement learning",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "9d671a4de50b98c3f00623ee597e37c9f00ba0cc",
     "citation_count": 97
@@ -1162,7 +1162,7 @@
   "https://openreview.net/forum?id=BkgBvsC9FQ": {
     "title": "DialogWAE: Multimodal Response Generation with Conditional Wasserstein Auto-Encoder",
     "abstract": "Variational autoencoders~(VAEs) have shown a promise in data-driven conversation modeling. However, most VAE conversation models match the approximate posterior distribution over the latent variables to a simple prior such as standard normal distribution, thereby restricting the generated responses to a relatively simple (e.g., unimodal) scope. In this paper, we propose DialogWAE, a conditional Wasserstein autoencoder~(WAE) specially designed for dialogue modeling. Unlike VAEs that impose a simple distribution over the latent variables, DialogWAE models the distribution of data by training a GAN within the latent variable space. Specifically, our model samples from the prior and posterior distributions over the latent variables by transforming context-dependent random noise using neural networks and minimizes the Wasserstein distance between the two distributions. We further develop a Gaussian mixture prior network to enrich the latent space. Experiments on two popular datasets show that DialogWAE outperforms the state-of-the-art approaches in generating more coherent, informative and diverse responses",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "77b9505e6967cfb45eaf6ec8ac7746cbaaab6e0d",
     "citation_count": 105
@@ -1202,7 +1202,7 @@
   "https://openreview.net/forum?id=BJemQ209FQ": {
     "title": "Learning to Navigate the Web",
     "abstract": "Learning in environments with large state and action spaces, and sparse rewards, can hinder a Reinforcement Learning (RL) agent's learning through trial-and-error. For instance, following natural language instructions on the Web (such as booking a flight ticket) leads to RL settings where input vocabulary and number of actionable elements on a page can grow very large. Even though recent approaches improve the success rate on relatively simple environments with the help of human demonstrations to guide the exploration, they still fail in environments where the set of possible instructions can reach millions. We approach the aforementioned problems from a different perspective and propose guided RL approaches that can generate unbounded amount of experience for an agent to learn from. Instead of learning from a complicated instruction with a large vocabulary, we decompose it into multiple sub-instructions and schedule a curriculum in which an agent is tasked with a gradually increasing subset of these relatively easier sub-instructions. In addition, when the expert demonstrations are not available, we propose a novel meta-learning framework that generates new instruction following tasks and trains the agent more effectively. We train DQN, deep reinforcement learning agent, with Q-value function approximated with a novel QWeb neural network architecture on these smaller, synthetic instructions. We evaluate the ability of our agent to generalize to new instructions on World of Bits benchmark, on forms with up to 100 elements, supporting 14 million possible instructions. The QWeb agent outperforms the baseline without using any human demonstration achieving 100% success rate on several difficult environments",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "a7038473320c50df76fa950aca486015c5659503",
     "citation_count": 21
@@ -1226,7 +1226,7 @@
   "https://openreview.net/forum?id=B1xf9jAqFQ": {
     "title": "Neural Speed Reading with Structural-Jump-LSTM",
     "abstract": "Recurrent neural networks (RNNs) can model natural language by sequentially 'reading' input tokens and outputting a distributed representation of each token. Due to the sequential nature of RNNs, inference time is linearly dependent on the input length, and all inputs are read regardless of their importance. Efforts to speed up this inference, known as 'neural speed reading', either ignore or skim over part of the input. We present Structural-Jump-LSTM: the first neural speed reading model to both skip and jump text during inference. The model consists of a standard LSTM and two agents: one capable of skipping single words when reading, and one capable of exploiting punctuation structure (sub-sentence separators (,:), sentence end symbols (.!?), or end of text markers) to jump ahead after reading a word. A comprehensive experimental evaluation of our model against all five state-of-the-art neural reading models shows that Structural-Jump-LSTM achieves the best overall floating point operations (FLOP) reduction (hence is faster), while keeping the same accuracy or even improving it compared to a vanilla LSTM that reads the whole text",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d647a64de005113f7bb5859347f5edca81bc0eec",
     "citation_count": 24
@@ -1242,10 +1242,10 @@
   "https://openreview.net/forum?id=r1lYRjC9F7": {
     "title": "Enabling Factorized Piano Music Modeling and Generation with the MAESTRO Dataset",
     "abstract": "Generating musical audio directly with neural networks is notoriously difficult because it requires coherently modeling structure at many different timescales. Fortunately, most music is also highly structured and can be represented as discrete note events played on musical instruments. Herein, we show that by using notes as an intermediate representation, we can train a suite of models capable of transcribing, composing, and synthesizing audio waveforms with coherent musical structure on timescales spanning six orders of magnitude (~0.1 ms to ~100 s), a process we call Wave2Midi2Wave. This large advance in the state of the art is enabled by our release of the new MAESTRO (MIDI and Audio Edited for Synchronous TRacks and Organization) dataset, composed of over 172 hours of virtuosic piano performances captured with fine alignment (~3 ms) between note labels and audio waveforms. The networks and the dataset together present a promising approach toward creating new expressive and interpretable neural models of music",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "5ad465e098052d0e645fe6f92d94ffa7282d5496",
-    "citation_count": 225
+    "citation_count": 226
   },
   "https://openreview.net/forum?id=HyNA5iRcFQ": {
     "title": "Detecting Egregious Responses in Neural Sequence-to-sequence Models",
@@ -1330,15 +1330,15 @@
   "https://openreview.net/forum?id=Bklr3j0cKX": {
     "title": "Learning deep representations by mutual information estimation and maximization",
     "abstract": "This work investigates unsupervised learning of representations by maximizing mutual information between an input and the output of a deep neural network encoder. Importantly, we show that structure matters: incorporating knowledge about locality in the input into the objective can significantly improve a representation's suitability for downstream tasks. We further control characteristics of the representation by matching to a prior distribution adversarially. Our method, which we call Deep InfoMax (DIM), outperforms a number of popular unsupervised learning methods and compares favorably with fully-supervised learning on several classification tasks in with some standard architectures. DIM opens new avenues for unsupervised learning of representations and is an important step towards flexible formulations of representation learning objectives for specific end-goals",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "eae7d5b15423a148e6bb32d24bbabedfacd0e2df",
-    "citation_count": 1582
+    "citation_count": 1596
   },
   "https://openreview.net/forum?id=B1G9doA9F7": {
     "title": "Augmented Cyclic Adversarial Learning for Low Resource Domain Adaptation",
     "abstract": "Training a model to perform a task typically requires a large amount of data from the domains in which the task will be applied. However, it is often the case that data are abundant in some domains but scarce in others. Domain adaptation deals with the challenge of adapting a model trained from a data-rich source domain to perform well in a data-poor target domain. In general, this requires learning plausible mappings between domains. CycleGAN is a powerful framework that efficiently learns to map inputs from one domain to another using adversarial training and a cycle-consistency constraint. However, the conventional approach of enforcing cycle-consistency via reconstruction may be overly restrictive in cases where one or more domains have limited training data. In this paper, we propose an augmented cyclic adversarial learning model that enforces the cycle-consistency constraint via an external task specific model, which encourages the preservation of task-relevant content as opposed to exact reconstruction. We explore digit classification in a low-resource setting in supervised, semi and unsupervised situation, as well as high resource unsupervised. In low-resource supervised setting, the results show that our approach improves absolute performance by 14% and 4% when adapting SVHN to MNIST and vice versa, respectively, which outperforms unsupervised domain adaptation methods that require high-resource unlabeled target domain. Moreover, using only few unsupervised target data, our approach can still outperforms many high-resource unsupervised models. In speech domains, we similarly adopt a speech recognition model from each domain as the task specific model. Our approach improves absolute performance of speech recognition by 2% for female speakers in the TIMIT dataset, where the majority of training samples are from male voices",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "653435e90a6dc9c331e03f70ed32906eb3f6810d",
     "citation_count": 41
@@ -1410,7 +1410,7 @@
   "https://openreview.net/forum?id=ByftGnR9KX": {
     "title": "FlowQA: Grasping Flow in History for Conversational Machine Comprehension",
     "abstract": "Conversational machine comprehension requires the understanding of the conversation history, such as previous question/answer pairs, the document context, and the current question. To enable traditional, single-turn models to encode the history comprehensively, we introduce Flow, a mechanism that can incorporate intermediate representations generated during the process of answering previous questions, through an alternating parallel processing structure. Compared to approaches that concatenate previous questions/answers as input, Flow integrates the latent semantics of the conversation history more deeply. Our model, FlowQA, shows superior performance on two recently proposed conversational challenges (+7.2% F1 on CoQA and +4.0% on QuAC). The effectiveness of Flow also shows in other tasks. By reducing sequential instruction understanding to conversational machine comprehension, FlowQA outperforms the best models on all three domains in SCONE, with +1.8% to +4.4% improvement in accuracy",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "520fcc38b93ece751869636cadc9ca9bf068b024",
     "citation_count": 98
@@ -1442,7 +1442,7 @@
   "https://openreview.net/forum?id=BkMiWhR5K7": {
     "title": "Prior Convictions: Black-box Adversarial Attacks with Bandits and Priors",
     "abstract": "We study the problem of generating adversarial examples in a black-box setting in which only loss-oracle access to a model is available. We introduce a framework that conceptually unifies much of the existing work on black-box attacks, and we demonstrate that the current state-of-the-art methods are optimal in a natural sense. Despite this optimality, we show how to improve black-box attacks by bringing a new element into the problem: gradient priors. We give a bandit optimization-based algorithm that allows us to seamlessly integrate any such priors, and we explicitly identify and incorporate two examples. The resulting methods use two to four times fewer queries and fail two to five times less often than the current state-of-the-art",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "10ab21b120e305b6d3cbf81c5a906d36521152f1",
     "citation_count": 245
@@ -1458,7 +1458,7 @@
   "https://openreview.net/forum?id=Byg3y3C9Km": {
     "title": "Learning Protein Structure with a Differentiable Simulator",
     "abstract": "The Boltzmann distribution is a natural model for many systems, from brains to materials and biomolecules, but is often of limited utility for fitting data because Monte Carlo algorithms are unable to simulate it in available time. This gap between the expressive capabilities and sampling practicalities of energy-based models is exemplified by the protein folding problem, since energy landscapes underlie contemporary knowledge of protein biophysics but computer simulations are challenged to fold all but the smallest proteins from first principles. In this work we aim to bridge the gap between the expressive capacity of energy functions and the practical capabilities of their simulators by using an unrolled Monte Carlo simulation as a model for data. We compose a neural energy function with a novel and efficient simulator based on Langevin dynamics to build an end-to-end-differentiable model of atomic protein structure given amino acid sequence information. We introduce techniques for stabilizing backpropagation under long roll-outs and demonstrate the model's capacity to make multimodal predictions and to, in some cases, generalize to unobserved protein fold types when trained on a large corpus of protein structures",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "5909909bd3f6d6d15d5c8d9a64c8031cddf604db",
     "citation_count": 115
@@ -1474,7 +1474,7 @@
   "https://openreview.net/forum?id=BkfbpsAcF7": {
     "title": "Excessive Invariance Causes Adversarial Vulnerability",
     "abstract": "Despite their impressive performance, deep neural networks exhibit striking failures on out-of-distribution inputs. One core idea of adversarial example research is to reveal neural network errors under such distribution shifts. We decompose these errors into two complementary sources: sensitivity and invariance. We show deep networks are not only too sensitive to task-irrelevant changes of their input, as is well-known from epsilon-adversarial examples, but are also too invariant to a wide range of task-relevant changes, thus making vast regions in input space vulnerable to adversarial attacks. We show such excessive invariance occurs across various tasks and architecture types. On MNIST and ImageNet one can manipulate the class-specific content of almost any image without changing the hidden activations. We identify an insufficiency of the standard cross-entropy loss as a reason for these failures. Further, we extend this objective based on an information-theoretic analysis so it encourages the model to consider all task-dependent features in its decision. This provides the first approach tailored explicitly to overcome excessive invariance and resulting vulnerabilities",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "67b72e427187b1113c787f9265926322e3d123e8",
     "citation_count": 130
@@ -1546,15 +1546,15 @@
   "https://openreview.net/forum?id=Bkl-43C9FQ": {
     "title": "Spherical CNNs on Unstructured Grids",
     "abstract": "We present an efficient convolution kernel for Convolutional Neural Networks (CNNs) on unstructured grids using parameterized differential operators while focusing on spherical signals such as panorama images or planetary signals. To this end, we replace conventional convolution kernels with linear combinations of differential operators that are weighted by learnable parameters. Differential operators can be efficiently estimated on unstructured grids using one-ring neighbors, and learnable parameters can be optimized through standard back-propagation. As a result, we obtain extremely efficient neural networks that match or outperform state-of-the-art network architectures in terms of performance but with a significantly lower number of network parameters. We evaluate our algorithm in an extensive series of experiments on a variety of computer vision and climate science tasks, including shape classification, climate pattern segmentation, and omnidirectional image semantic segmentation. Overall, we present (1) a novel CNN approach on unstructured grids using parameterized differential operators for spherical signals, and (2) we show that our unique kernel parameterization allows our model to achieve the same or higher accuracy with significantly fewer network parameters",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "4aa2c7ab9646b9f988d2dd2e2375060b3158dc2a",
-    "citation_count": 115
+    "citation_count": 116
   },
   "https://openreview.net/forum?id=BJfOXnActQ": {
     "title": "Learning to Learn with Conditional Class Dependencies",
     "abstract": "Neural networks can learn to extract statistical properties from data, but they seldom make use of structured information from the label space to help representation learning. For example \"cat\" and \"dog\" are closer than \"cat\" and \"truck\". Although some label structure can implicitly be obtained when training on huge amounts of data, in a few-shot learning context where little data is available, making explicit use of the label structure can inform the model to reshape the representation space to reflect a global sense of class dependencies. We propose a meta-learning framework, Conditional class-Aware Meta-Learning (CAML), that conditionally transforms feature representations based on a metric space that is trained to capture inter-class dependencies. This enables a conditional modulation of the feature representations of the base-learner to impose regularities informed by the label space. Experiments show that the conditional transformation in CAML leads to more disentangled representations and achieves competitive results on the miniImageNet benchmark",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "cb80484b34f62d9d7db0bb9214c5374f6bcb861d",
     "citation_count": 49
@@ -1570,7 +1570,7 @@
   "https://openreview.net/forum?id=B1G5ViAqFm": {
     "title": "Convolutional Neural Networks on Non-uniform Geometrical Signals Using Euclidean Spectral Transformation",
     "abstract": "Convolutional Neural Networks (CNN) have been successful in processing data signals that are uniformly sampled in the spatial domain (e.g., images). However, most data signals do not natively exist on a grid, and in the process of being sampled onto a uniform physical grid suffer significant aliasing error and information loss. Moreover, signals can exist in different topological structures as, for example, points, lines, surfaces and volumes. It has been challenging to analyze signals with mixed topologies (for example, point cloud with surface mesh). To this end, we develop mathematical formulations for Non-Uniform Fourier Transforms (NUFT) to directly, and optimally, sample nonuniform data signals of different topologies defined on a simplex mesh into the spectral domain with no spatial sampling error. The spectral transform is performed in the Euclidean space, which removes the translation ambiguity from works on the graph spectrum. Our representation has four distinct advantages: (1) the process causes no spatial sampling error during the initial sampling, (2) the generality of this approach provides a unified framework for using CNNs to analyze signals of mixed topologies, (3) it allows us to leverage state-of-the-art backbone CNN architectures for effective learning without having to design a particular architecture for a particular data structure in an ad-hoc fashion, and (4) the representation allows weighted meshes where each element has a different weight (i.e., texture) indicating local properties. We achieve results on par with the state-of-the-art for the 3D shape retrieval task, and a new state-of-the-art for the point cloud to surface reconstruction task",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "c7ae7cb97e954b33878c893ed237886c2bfc9e7d",
     "citation_count": 10
@@ -1578,7 +1578,7 @@
   "https://openreview.net/forum?id=B1xJAsA5F7": {
     "title": "Learning Multimodal Graph-to-Graph Translation for Molecule Optimization",
     "abstract": "We view molecular optimization as a graph-to-graph translation problem. The goal is to learn to map from one molecular graph to another with better properties based on an available corpus of paired molecules. Since molecules can be optimized in different ways, there are multiple viable translations for each input graph. A key challenge is therefore to model diverse translation outputs. Our primary contributions include a junction tree encoder-decoder for learning diverse graph translations along with a novel adversarial training method for aligning distributions of molecules. Diverse output distributions in our model are explicitly realized by low-dimensional latent vectors that modulate the translation process. We evaluate our model on multiple molecular optimization tasks and show that our model outperforms previous state-of-the-art baselines",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "8ee3ba29ad49c2ded00e88ee0dad1de17cc2b309",
     "citation_count": 153
@@ -1602,7 +1602,7 @@
   "https://openreview.net/forum?id=ByeZ5jC5YQ": {
     "title": "KnockoffGAN: Generating Knockoffs for Feature Selection using Generative Adversarial Networks",
     "abstract": "Feature selection is a pervasive problem. The discovery of relevant features can be as important for performing a particular task (such as to avoid overfitting in prediction) as it can be for understanding the underlying processes governing the true label (such as discovering relevant genetic factors for a disease). Machine learning driven feature selection can enable discovery from large, high-dimensional, non-linear observational datasets by creating a subset of features for experts to focus on. In order to use expert time most efficiently, we need a principled methodology capable of controlling the False Discovery Rate. In this work, we build on the promising Knockoff framework by developing a flexible knockoff generation model. We adapt the Generative Adversarial Networks framework to allow us to generate knockoffs with no assumptions on the feature distribution. Our model consists of 4 networks, a generator, a discriminator, a stability network and a power network. We demonstrate the capability of our model to perform feature selection, showing that it performs as well as the originally proposed knockoff generation model in the Gaussian setting and that it outperforms the original model in non-Gaussian settings, including on a real-world dataset",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "7b767e7cb5b67589646f0c1162423ceeb2daa3a7",
     "citation_count": 41
@@ -1706,7 +1706,7 @@
   "https://openreview.net/forum?id=B1fpDsAqt7": {
     "title": "Visual Reasoning by Progressive Module Networks",
     "abstract": "Humans learn to solve tasks of increasing complexity by building on top of previously acquired knowledge. Typically, there exists a natural progression in the tasks that we learn - most do not require completely independent solutions, but can be broken down into simpler subtasks. We propose to represent a solver for each task as a neural module that calls existing modules (solvers for simpler tasks) in a functional program-like manner. Lower modules are a black box to the calling module, and communicate only via a query and an output. Thus, a module for a new task learns to query existing modules and composes their outputs in order to produce its own output. Our model effectively combines previous skill-sets, does not suffer from forgetting, and is fully differentiable. We test our model in learning a set of visual reasoning tasks, and demonstrate improved performances in all tasks by learning progressively. By evaluating the reasoning process using human judges, we show that our model is more interpretable than an attention-based baseline",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "f27b833c4a0dcb809215b185e8e2601aef6e7fb8",
     "citation_count": 9
@@ -1866,7 +1866,7 @@
   "https://openreview.net/forum?id=r1xlvi0qYm": {
     "title": "Learning to Remember More with Less Memorization",
     "abstract": "Memory-augmented neural networks consisting of a neural controller and an external memory have shown potentials in long-term sequential learning. Current RAM-like memory models maintain memory accessing every timesteps, thus they do not effectively leverage the short-term memory held in the controller. We hypothesize that this scheme of writing is suboptimal in memory utilization and introduces redundant computation. To validate our hypothesis, we derive a theoretical bound on the amount of information stored in a RAM-like system and formulate an optimization problem that maximizes the bound. The proposed solution dubbed Uniform Writing is proved to be optimal under the assumption of equal timestep contributions. To relax this assumption, we introduce modifications to the original solution, resulting in a solution termed Cached Uniform Writing. This method aims to balance between maximizing memorization and forgetting via overwriting mechanisms. Through an extensive set of experiments, we empirically demonstrate the advantages of our solutions over other recurrent architectures, claiming the state-of-the-arts in various sequential modeling tasks",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "dc836eda6649fa9e0534a7ba4ddafd97a579926b",
     "citation_count": 28
@@ -1882,10 +1882,10 @@
   "https://openreview.net/forum?id=B1VZqjAcYX": {
     "title": "Snip: single-Shot Network Pruning based on Connection sensitivity",
     "abstract": "Pruning large neural networks while maintaining their performance is often desirable due to the reduced space and time complexity. In existing methods, pruning is done within an iterative optimization procedure with either heuristically designed pruning schedules or additional hyperparameters, undermining their utility. In this work, we present a new approach that prunes a given network once at initialization prior to training. To achieve this, we introduce a saliency criterion based on connection sensitivity that identifies structurally important connections in the network for the given task. This eliminates the need for both pretraining and the complex pruning schedule while making it robust to architecture variations. After pruning, the sparse network is trained in the standard way. Our method obtains extremely sparse networks with virtually the same accuracy as the reference network on the MNIST, CIFAR-10, and Tiny-ImageNet classification tasks and is broadly applicable to various architectures including convolutional, residual and recurrent networks. Unlike existing methods, our approach enables us to demonstrate that the retained connections are indeed relevant to the given task",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "cf440ccce4a7a8681e238b4f26d5b95109add55d",
-    "citation_count": 570
+    "citation_count": 575
   },
   "https://openreview.net/forum?id=HyxKIiAqYQ": {
     "title": "Context-adaptive Entropy Model for End-to-end Optimized Image Compression",
@@ -1970,10 +1970,10 @@
   "https://openreview.net/forum?id=Bkx0RjA9tX": {
     "title": "Generative Question Answering: Learning to Answer the Whole Question",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "6182aed90596acd1573bd5ccbc2284b1e8a7291b",
-    "citation_count": 55
+    "citation_count": 56
   },
   "https://openreview.net/forum?id=Hkg4W2AcFm": {
     "title": "Overcoming the Disentanglement vs Reconstruction Trade-off via Jacobian Supervision",
@@ -1986,7 +1986,7 @@
   "https://openreview.net/forum?id=Bye5SiAqKX": {
     "title": "Preconditioner on Matrix Lie Group for SGD",
     "abstract": "We study two types of preconditioners and preconditioned stochastic gradient descent (SGD) methods in a unified framework. We call the first one the Newton type due to its close relationship to the Newton method, and the second one the Fisher type as its preconditioner is closely related to the inverse of Fisher information matrix. Both preconditioners can be derived from one framework, and efficiently estimated on any matrix Lie groups designated by the user using natural or relative gradient descent minimizing certain preconditioner estimation criteria. Many existing preconditioners and methods, e.g., RMSProp, Adam, KFAC, equilibrated SGD, batch normalization, etc., are special cases of or closely related to either the Newton type or the Fisher type ones. Experimental results on relatively large scale machine learning problems are reported for performance study",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "448491374325bd2c3f8cbc381b67b7742329144b",
     "citation_count": 6
@@ -2018,7 +2018,7 @@
   "https://openreview.net/forum?id=HJx54i05tX": {
     "title": "On Random Deep Weight-Tied Autoencoders: Exact Asymptotic Analysis, Phase Transitions, and Implications to Training",
     "abstract": "We study the behavior of weight-tied multilayer vanilla autoencoders under the assumption of random weights. Via an exact characterization in the limit of large dimensions, our analysis reveals interesting phase transition phenomena when the depth becomes large. This, in particular, provides quantitative answers and insights to three questions that were yet fully understood in the literature. Firstly, we provide a precise answer on how the random deep weight-tied autoencoder model performs \"approximate inference\" as posed by Scellier et al. (2018), and its connection to reversibility considered by several theoretical studies. Secondly, we show that deep autoencoders display a higher degree of sensitivity to perturbations in the parameters, distinct from the shallow counterparts. Thirdly, we obtain insights on pitfalls in training initialization practice, and demonstrate experimentally that it is possible to train a deep autoencoder, even with the tanh activation and a depth as large as 200 layers, without resorting to techniques such as layer-wise pre-training or batch normalization. Our analysis is not specific to any depths or any Lipschitz activations, and our analytical techniques may have broader applicability",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "5a0772885ed113e9da7aa643c877feea387d160e",
     "citation_count": 24
@@ -2026,7 +2026,7 @@
   "https://openreview.net/forum?id=H1xSNiRcF7": {
     "title": "Smoothing the Geometry of Probabilistic Box Embeddings",
     "abstract": null,
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "63bcdc392c7135ccc2ded4cd53ef4e2f65ba80a0",
     "citation_count": 56
@@ -2058,10 +2058,10 @@
   "https://openreview.net/forum?id=BkedznAqKQ": {
     "title": "LanczosNet: Multi-Scale Deep Graph Convolutional Networks",
     "abstract": "We propose the Lanczos network (LanczosNet), which uses the Lanczos algorithm to construct low rank approximations of the graph Laplacian for graph convolution. Relying on the tridiagonal decomposition of the Lanczos algorithm, we not only efficiently exploit multi-scale information via fast approximated computation of matrix power but also design learnable spectral filters. Being fully differentiable, LanczosNet facilitates both graph kernel learning as well as learning node embeddings. We show the connection between our LanczosNet and graph based manifold learning methods, especially the diffusion maps. We benchmark our model against several recent deep graph networks on citation networks and QM8 quantum chemistry dataset. Experimental results show that our model achieves the state-of-the-art performance in most tasks. Code is released at: \\url{this https URL}",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "5098df13be6d1f2a31c9fbf85703336ef77a9665",
-    "citation_count": 153
+    "citation_count": 155
   },
   "https://openreview.net/forum?id=ryetZ20ctX": {
     "title": "Defensive Quantization: When Efficiency Meets Robustness",
@@ -2074,7 +2074,7 @@
   "https://openreview.net/forum?id=B1gstsCqt7": {
     "title": "Sparse Dictionary Learning by Dynamical Neural Networks",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "33cacec6bc67f52f611845b8c6a88feaa5f88d09",
     "citation_count": 4
@@ -2082,7 +2082,7 @@
   "https://openreview.net/forum?id=S1xq3oR5tQ": {
     "title": "A Unified Theory of Early Visual Representations from Retina to Cortex through Anatomically Constrained Deep CNNs",
     "abstract": "The vertebrate visual system is hierarchically organized to process visual information in successive stages. Neural representations vary drastically across the first stages of visual processing: at the output of the retina, ganglion cell receptive fields (RFs) exhibit a clear antagonistic center-surround structure, whereas in the primary visual cortex (V1), typical RFs are sharply tuned to a precise orientation. There is currently no unified theory explaining these differences in representations across layers. Here, using a deep convolutional neural network trained on image recognition as a model of the visual system, we show that such differences in representation can emerge as a direct consequence of different neural resource constraints on the retinal and cortical networks, and for the first time we find a single model from which both geometries spontaneously emerge at the appropriate stages of visual processing. The key constraint is a reduced number of neurons at the retinal output, consistent with the anatomy of the optic nerve as a stringent bottleneck. Second, we find that, for simple downstream cortical networks, visual representations at the retinal output emerge as nonlinear and lossy feature detectors, whereas they emerge as linear and faithful encoders of the visual scene for more complex cortical networks. This result predicts that the retinas of small vertebrates (e.g. salamander, frog) should perform sophisticated nonlinear computations, extracting features directly relevant to behavior, whereas retinas of large animals such as primates should mostly encode the visual scene linearly and respond to a much broader range of stimuli. These predictions could reconcile the two seemingly incompatible views of the retina as either performing feature extraction or efficient coding of natural scenes, by suggesting that all vertebrates lie on a spectrum between these two objectives, depending on the degree of neural resources allocated to their visual system",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "ad0466d3f1c128691416bab7244ace11a6716c7d",
     "citation_count": 50
@@ -2090,15 +2090,15 @@
   "https://openreview.net/forum?id=BJgLg3R9KQ": {
     "title": "Learning what and where to attend",
     "abstract": "Most recent gains in visual recognition have originated from the inclusion of attention mechanisms in deep convolutional networks (DCNs). Because these networks are optimized for object recognition, they learn where to attend using only a weak form of supervision derived from image class labels. Here, we demonstrate the benefit of using stronger supervisory signals by teaching DCNs to attend to image regions that humans deem important for object recognition. We first describe a large-scale online experiment (ClickMe) used to supplement ImageNet with nearly half a million human-derived \"top-down\" attention maps. Using human psychophysics, we confirm that the identified top-down features from ClickMe are more diagnostic than \"bottom-up\" saliency features for rapid image categorization. As a proof of concept, we extend a state-of-the-art attention network and demonstrate that adding ClickMe supervision significantly improves its accuracy and yields visual features that are more interpretable and more similar to those used by human observers",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "136c96810238657bf0c6f0d4b56b0e40e24f3c47",
-    "citation_count": 64
+    "citation_count": 65
   },
   "https://openreview.net/forum?id=BJe-DsC5Fm": {
     "title": "signSGD via Zeroth-Order Oracle",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "3ae1544865a18d8649a5c4939f9eb17165b23bea",
     "citation_count": 60
@@ -2106,10 +2106,10 @@
   "https://openreview.net/forum?id=B1lnzn0ctQ": {
     "title": "ALISTA: Analytic Weights Are As Good As Learned Weights in LISTA",
     "abstract": "Deep neural networks based on unfolding an iterative algorithm, for example, LISTA (learned iterative shrinkage thresholding algorithm), have been an empirical success for sparse signal recovery. The weights of these neural networks are currently determined by data-driven \"black-box\" training. In this work, we propose Analytic LISTA (ALISTA), where the weight matrix in LISTA is computed as the solution to a data-free optimization problem, leaving only the stepsize and threshold parameters to data-driven learning. This significantly simplifies the training. Specifically, the data-free optimization problem is based on coherence minimization. We show our ALISTA retains the optimal linear convergence proved in (Chen et al., 2018) and has a performance comparable to LISTA. Furthermore, we extend ALISTA to convolutional linear operators, again determined in a data-free manner. We also propose a feed-forward framework that combines the data-free optimization and ALISTA networks from end to end, one that can be jointly trained to gain robustness to small perturbations in the encoding model",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e15e022cb7874912313e2601d38b944fc93bbdd9",
-    "citation_count": 115
+    "citation_count": 116
   },
   "https://openreview.net/forum?id=H1goBoR9F7": {
     "title": "Dynamic Sparse Graph for Efficient Deep Learning",
@@ -2122,7 +2122,7 @@
   "https://openreview.net/forum?id=BkG8sjR5Km": {
     "title": "Emergent Coordination Through Competition",
     "abstract": "We study the emergence of cooperative behaviors in reinforcement learning agents by introducing a challenging competitive multi-agent soccer environment with continuous simulated physics. We demonstrate that decentralized, population-based training with co-play can lead to a progression in agents' behaviors: from random, to simple ball chasing, and finally showing evidence of cooperation. Our study highlights several of the challenges encountered in large scale multi-agent training in continuous control. In particular, we demonstrate that the automatic optimization of simple shaping rewards, not themselves conducive to co-operative behavior, can lead to long-horizon team behavior. We further apply an evaluation scheme, grounded by game theoretic principals, that can assess agent performance in the absence of pre-defined evaluation tasks or human baselines",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "8a5c62f9c49a943b66fb1ae379442497609c8596",
     "citation_count": 102
@@ -2146,7 +2146,7 @@
   "https://openreview.net/forum?id=BJeOioA9Y7": {
     "title": "Knowledge Flow: Improve Upon Your Teachers",
     "abstract": "A zoo of deep nets is available these days for almost any given task, and it is increasingly unclear which net to start with when addressing a new task, or which net to use as an initialization for fine-tuning a new model. To address this issue, in this paper, we develop knowledge flow which moves 'knowledge' from multiple deep nets, referred to as teachers, to a new deep net model, called the student. The structure of the teachers and the student can differ arbitrarily and they can be trained on entirely different tasks with different output spaces too. Upon training with knowledge flow the student is independent of the teachers. We demonstrate our approach on a variety of supervised and reinforcement learning tasks, outperforming fine-tuning and other 'knowledge exchange' methods",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e198e43d4a6a1b81da414bdc80875e6e1f459c54",
     "citation_count": 37
@@ -2202,10 +2202,10 @@
   "https://openreview.net/forum?id=Bkg6RiCqY7": {
     "title": "Decoupled Weight Decay Regularization",
     "abstract": "L$_2$ regularization and weight decay regularization are equivalent for standard stochastic gradient descent (when rescaled by the learning rate), but as we demonstrate this is \\emph{not} the case for adaptive gradient algorithms, such as Adam. While common implementations of these algorithms employ L$_2$ regularization (often calling it \"weight decay\" in what may be misleading due to the inequivalence we expose), we propose a simple modification to recover the original formulation of weight decay regularization by \\emph{decoupling} the weight decay from the optimization steps taken w.r.t. the loss function. We provide empirical evidence that our proposed modification (i) decouples the optimal choice of weight decay factor from the setting of the learning rate for both standard SGD and Adam and (ii) substantially improves Adam's generalization performance, allowing it to compete with SGD with momentum on image classification datasets (on which it was previously typically outperformed by the latter). Our proposed decoupled weight decay has already been adopted by many researchers, and the community has implemented it in TensorFlow and PyTorch; the complete source code for our experiments is available at this https URL",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d07284a6811f1b2745d91bdb06b040b57f226882",
-    "citation_count": 5274
+    "citation_count": 5330
   },
   "https://openreview.net/forum?id=HkxjYoCqKX": {
     "title": "Relaxed Quantization for Discretized Neural Networks",
@@ -2218,7 +2218,7 @@
   "https://openreview.net/forum?id=Byey7n05FQ": {
     "title": "Plan Online, Learn Offline: Efficient Learning and Exploration via Model-Based Control",
     "abstract": "We propose a plan online and learn offline (POLO) framework for the setting where an agent, with an internal model, needs to continually act and learn in the world. Our work builds on the synergistic relationship between local model-based control, global value function learning, and exploration. We study how local trajectory optimization can cope with approximation errors in the value function, and can stabilize and accelerate value function learning. Conversely, we also study how approximate value functions can help reduce the planning horizon and allow for better policies beyond local solutions. Finally, we also demonstrate how trajectory optimization can be used to perform temporally coordinated exploration in conjunction with estimating uncertainty in value function approximation. This exploration is critical for fast and stable learning of the value function. Combining these components enable solutions to complex simulated control tasks, like humanoid locomotion and dexterous in-hand manipulation, in the equivalent of a few minutes of experience in the real world",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "6a9013a8cdd84e423223f76a903028011c84c4ab",
     "citation_count": 148
@@ -2226,7 +2226,7 @@
   "https://openreview.net/forum?id=B1xWcj0qYm": {
     "title": "On the Minimal Supervision for Training Any Binary Classifier from Only Unlabeled Data",
     "abstract": "Empirical risk minimization (ERM), with proper loss function and regularization, is the common practice of supervised classification. In this paper, we study training arbitrary (from linear to deep) binary classifier from only unlabeled (U) data by ERM. We prove that it is impossible to estimate the risk of an arbitrary binary classifier in an unbiased manner given a single set of U data, but it becomes possible given two sets of U data with different class priors. These two facts answer a fundamental question---what the minimal supervision is for training any binary classifier from only U data. Following these findings, we propose an ERM-based learning method from two sets of U data, and then prove it is consistent. Experiments demonstrate the proposed method could train deep models and outperform state-of-the-art methods for learning from two sets of U data",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "73f6302adc9a6880ce354ef0153fa87a9607aa10",
     "citation_count": 60
@@ -2258,15 +2258,15 @@
   "https://openreview.net/forum?id=Bkg3g2R9FX": {
     "title": "Adaptive Gradient Methods with Dynamic Bound of Learning Rate",
     "abstract": "Adaptive optimization methods such as AdaGrad, RMSprop and Adam have been proposed to achieve a rapid training process with an element-wise scaling term on learning rates. Though prevailing, they are observed to generalize poorly compared with SGD or even fail to converge due to unstable and extreme learning rates. Recent work has put forward some algorithms such as AMSGrad to tackle this issue but they failed to achieve considerable improvement over existing methods. In our paper, we demonstrate that extreme learning rates can lead to poor performance. We provide new variants of Adam and AMSGrad, called AdaBound and AMSBound respectively, which employ dynamic bounds on learning rates to achieve a gradual and smooth transition from adaptive methods to SGD and give a theoretical proof of convergence. We further conduct experiments on various popular tasks and models, which is often insufficient in previous work. Experimental results show that new variants can eliminate the generalization gap between adaptive methods and SGD and maintain higher learning speed early in training at the same time. Moreover, they can bring significant improvement over their prototypes, especially on complex deep networks. The implementation of the algorithm can be found at this https URL",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "03af562fb8e69677865dbe94910e464443dd4623",
-    "citation_count": 415
+    "citation_count": 417
   },
   "https://openreview.net/forum?id=BJe1E2R5KX": {
     "title": "Algorithmic Framework for Model-based Deep Reinforcement Learning with Theoretical Guarantees",
     "abstract": "Model-based reinforcement learning (RL) is considered to be a promising approach to reduce the sample complexity that hinders model-free RL. However, the theoretical understanding of such methods has been rather limited. This paper introduces a novel algorithmic framework for designing and analyzing model-based RL algorithms with theoretical guarantees. We design a meta-algorithm with a theoretical guarantee of monotone improvement to a local maximum of the expected reward. The meta-algorithm iteratively builds a lower bound of the expected reward based on the estimated dynamical model and sample trajectories, and then maximizes the lower bound jointly over the policy and the model. The framework extends the optimism-in-face-of-uncertainty principle to non-linear dynamical models in a way that requires \\textit{no explicit} uncertainty quantification. Instantiating our framework with simplification gives a variant of model-based RL algorithms Stochastic Lower Bounds Optimization (SLBO). Experiments demonstrate that SLBO achieves state-of-the-art performance when only one million or fewer samples are permitted on a range of continuous control benchmark tasks",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d333f99881b09426283a9c7a1d25f7ac30d63062",
     "citation_count": 150
@@ -2274,10 +2274,10 @@
   "https://openreview.net/forum?id=BklHpjCqKm": {
     "title": "Deep Lagrangian Networks: Using Physics as Model Prior for Deep Learning",
     "abstract": "Deep learning has achieved astonishing results on many tasks with large amounts of data and generalization within the proximity of training data. For many important real-world applications, these requirements are unfeasible and additional prior knowledge on the task domain is required to overcome the resulting problems. In particular, learning physics models for model-based control requires robust extrapolation from fewer samples - often collected online in real-time - and model errors may lead to drastic damages of the system. Directly incorporating physical insight has enabled us to obtain a novel deep model learning approach that extrapolates well while requiring fewer samples. As a first example, we propose Deep Lagrangian Networks (DeLaN) as a deep network structure upon which Lagrangian Mechanics have been imposed. DeLaN can learn the equations of motion of a mechanical system (i.e., system dynamics) with a deep network efficiently while ensuring physical plausibility. The resulting DeLaN network performs very well at robot tracking control. The proposed method did not only outperform previous model learning approaches at learning speed but exhibits substantially improved and more robust extrapolation to novel trajectories and learns online in real-time",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e129e344083b307e005c5342ba49524d9981a420",
-    "citation_count": 214
+    "citation_count": 216
   },
   "https://openreview.net/forum?id=H1ziPjC5Fm": {
     "title": "Visual Explanation by Interpretation: Improving Visual Feedback Capabilities of Deep Neural Networks",
@@ -2354,10 +2354,10 @@
   "https://openreview.net/forum?id=rJgMlhRctm": {
     "title": "The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences From Natural Supervision",
     "abstract": "We propose the Neuro-Symbolic Concept Learner (NS-CL), a model that learns visual concepts, words, and semantic parsing of sentences without explicit supervision on any of them; instead, our model learns by simply looking at images and reading paired questions and answers. Our model builds an object-based scene representation and translates sentences into executable, symbolic programs. To bridge the learning of two modules, we use a neuro-symbolic reasoning module that executes these programs on the latent scene representation. Analogical to human concept learning, the perception module learns visual concepts based on the language description of the object being referred to. Meanwhile, the learned visual concepts facilitate learning new words and parsing new sentences. We use curriculum learning to guide the searching over the large compositional space of images and language. Extensive experiments demonstrate the accuracy and efficiency of our model on learning visual concepts, word representations, and semantic parsing of sentences. Further, our method allows easy generalization to new object attributes, compositions, language concepts, scenes and questions, and even new program domains. It also empowers applications including visual question answering and bidirectional image-text retrieval",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "ec9b27d019fefadb5e97c8174ac889e831f483d7",
-    "citation_count": 398
+    "citation_count": 400
   },
   "https://openreview.net/forum?id=Hyg1G2AqtQ": {
     "title": "Variance Reduction for Reinforcement Learning in Input-Driven Environments",
@@ -2394,7 +2394,7 @@
   "https://openreview.net/forum?id=BJx0sjC5FX": {
     "title": "RNNs implicitly implement tensor-product representations",
     "abstract": "Recurrent neural networks (RNNs) can learn continuous vector representations of symbolic structures such as sequences and sentences; these representations often exhibit linear regularities (analogies). Such regularities motivate our hypothesis that RNNs that show such regularities implicitly compile symbolic structures into tensor product representations (TPRs; Smolensky, 1990), which additively combine tensor products of vectors representing roles (e.g., sequence positions) and vectors representing fillers (e.g., particular words). To test this hypothesis, we introduce Tensor Product Decomposition Networks (TPDNs), which use TPRs to approximate existing vector representations. We demonstrate using synthetic data that TPDNs can successfully approximate linear and tree-based RNN autoencoder representations, suggesting that these representations exhibit interpretable compositional structure; we explore the settings that lead RNNs to induce such structure-sensitive representations. By contrast, further TPDN experiments show that the representations of four models trained to encode naturally-occurring sentences can be largely approximated with a bag of words, with only marginal improvements from more sophisticated structures. We conclude that TPDNs provide a powerful method for interpreting vector representations, and that standard RNNs can induce compositional sequence representations that are remarkably well approximated by TPRs; at the same time, existing training tasks for sentence representation learning may not be sufficient for inducing robust structural representations",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d3ded34ff3378aadaa9a7c10e51cef6d04391a86",
     "citation_count": 36
@@ -2418,7 +2418,7 @@
   "https://openreview.net/forum?id=HylzTiC5Km": {
     "title": "Generating High fidelity Images with subscale pixel Networks and Multidimensional Upscaling",
     "abstract": "The unconditional generation of high fidelity images is a longstanding benchmark for testing the performance of image decoders. Autoregressive image models have been able to generate small images unconditionally, but the extension of these methods to large images where fidelity can be more readily assessed has remained an open problem. Among the major challenges are the capacity to encode the vast previous context and the sheer difficulty of learning a distribution that preserves both global semantic coherence and exactness of detail. To address the former challenge, we propose the Subscale Pixel Network (SPN), a conditional decoder architecture that generates an image as a sequence of sub-images of equal size. The SPN compactly captures image-wide spatial dependencies and requires a fraction of the memory and the computation required by other fully autoregressive models. To address the latter challenge, we propose to use Multidimensional Upscaling to grow an image in both size and depth via intermediate stages utilising distinct SPNs. We evaluate SPNs on the unconditional generation of CelebAHQ of size 256 and of ImageNet from size 32 to 256. We achieve state-of-the-art likelihood results in multiple settings, set up new benchmark results in previously unexplored settings and are able to generate very high fidelity large scale samples on the basis of both datasets",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "7d3ab2a839b077a318022f7842225db55033b2c3",
     "citation_count": 115
@@ -2426,7 +2426,7 @@
   "https://openreview.net/forum?id=BJfYvo09Y7": {
     "title": "Hierarchical Visuomotor Control of Humanoids",
     "abstract": "We aim to build complex humanoid agents that integrate perception, motor control, and memory. In this work, we partly factor this problem into low-level motor control from proprioception and high-level coordination of the low-level skills informed by vision. We develop an architecture capable of surprisingly flexible, task-directed motor control of a relatively high-DoF humanoid body by combining pre-training of low-level motor controllers with a high-level, task-focused controller that switches among low-level sub-policies. The resulting system is able to control a physically-simulated humanoid body to solve tasks that require coupling visual perception from an unstabilized egocentric RGB camera during locomotion in the environment. For a supplementary video link, see this https URL",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "a8a7219ee83cfd7ca258e20b5826a0c0786dcb73",
     "citation_count": 82
@@ -2434,7 +2434,7 @@
   "https://openreview.net/forum?id=BJl6TjRcY7": {
     "title": "Neural Probabilistic Motor Primitives for Humanoid Control",
     "abstract": "We focus on the problem of learning a single motor module that can flexibly express a range of behaviors for the control of high-dimensional physically simulated humanoids. To do this, we propose a motor architecture that has the general structure of an inverse model with a latent-variable bottleneck. We show that it is possible to train this model entirely offline to compress thousands of expert policies and learn a motor primitive embedding space. The trained neural probabilistic motor primitive system can perform one-shot imitation of whole-body humanoid behaviors, robustly mimicking unseen trajectories. Additionally, we demonstrate that it is also straightforward to train controllers to reuse the learned motor primitive space to solve tasks, and the resulting movements are relatively naturalistic. To support the training of our model, we compare two approaches for offline policy cloning, including an experience efficient method which we call linear feedback policy cloning. We encourage readers to view a supplementary video ( this https URL ) summarizing our results",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "96ae5d3ac1a1dcc365684bc92fcfa4d40d802bca",
     "citation_count": 92
@@ -2442,7 +2442,7 @@
   "https://openreview.net/forum?id=Bkg8jjC9KQ": {
     "title": "Optimistic mirror descent in saddle-point problems: Going the extra (gradient) mile",
     "abstract": "Owing to their connection with generative adversarial networks (GANs), saddle-point problems have recently attracted considerable interest in machine learning and beyond. By necessity, most theoretical guarantees revolve around convex-concave (or even linear) problems; however, making theoretical inroads towards efficient GAN training depends crucially on moving beyond this classic framework. To make piecemeal progress along these lines, we analyze the behavior of mirror descent (MD) in a class of non-monotone problems whose solutions coincide with those of a naturally associated variational inequality-a property which we call coherence. We first show that ordinary, \"vanilla\" MD converges under a strict version of this condition, but not otherwise; in particular, it may fail to converge even in bilinear models with a unique solution. We then show that this deficiency is mitigated by optimism: by taking an \"extra-gradient\" step, optimistic mirror descent (OMD) converges in all coherent problems. Our analysis generalizes and extends the results of Daskalakis et al. [2018] for optimistic gradient descent (OGD) in bilinear problems, and makes concrete headway for provable convergence beyond convex-concave games. We also provide stochastic analogues of these results, and we validate our analysis by numerical experiments in a wide array of GAN models (including Gaussian mixture models, and the CelebA and CIFAR-10 datasets)",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "0ffb2d5bbbc4f2cc547569337bd20cc77c1111d7",
     "citation_count": 209
@@ -2450,7 +2450,7 @@
   "https://openreview.net/forum?id=HkNDsiC9KQ": {
     "title": "Meta-Learning Update Rules for Unsupervised Representation Learning",
     "abstract": "A major goal of unsupervised learning is to discover data representations that are useful for subsequent tasks, without access to supervised labels during training. Typically, this involves minimizing a surrogate objective, such as the negative log likelihood of a generative model, with the hope that representations useful for subsequent tasks will arise as a side effect. In this work, we propose instead to directly target later desired tasks by meta-learning an unsupervised learning rule which leads to representations useful for those tasks. Specifically, we target semi-supervised classification performance, and we meta-learn an algorithm -- an unsupervised weight update rule -- that produces representations useful for this task. Additionally, we constrain our unsupervised update rule to a be a biologically-motivated, neuron-local function, which enables it to generalize to different neural network architectures, datasets, and data modalities. We show that the meta-learned update rule produces useful features and sometimes outperforms existing unsupervised learning techniques. We further show that the meta-learned unsupervised update rule generalizes to train networks with different widths, depths, and nonlinearities. It also generalizes to train on data with randomly permuted input dimensions and even generalizes from image datasets to a text task",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "c6509a450bdda7ca5b8567103dfe9671dbf3b567",
     "citation_count": 88
@@ -2498,7 +2498,7 @@
   "https://openreview.net/forum?id=B1xVTjCqKQ": {
     "title": "A Data-Driven and Distributed Approach to Sparse Signal Representation and Recovery",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e34755989bc59b1092bd83393f21d42cbd68623e",
     "citation_count": 22
@@ -2506,7 +2506,7 @@
   "https://openreview.net/forum?id=BJxvEh0cFQ": {
     "title": "K for the Price of 1: Parameter-efficient Multi-task and Transfer Learning",
     "abstract": "We introduce a novel method that enables parameter-efficient transfer and multi-task learning with deep neural networks. The basic approach is to learn a model patch - a small set of parameters - that will specialize to each task, instead of fine-tuning the last layer or the entire network. For instance, we show that learning a set of scales and biases is sufficient to convert a pretrained network to perform well on qualitatively different problems (e.g. converting a Single Shot MultiBox Detection (SSD) model into a 1000-class image classification model while reusing 98% of parameters of the SSD feature extractor). Similarly, we show that re-learning existing low-parameter layers (such as depth-wise convolutions) while keeping the rest of the network frozen also improves transfer-learning accuracy significantly. Our approach allows both simultaneous (multi-task) as well as sequential transfer learning. In several multi-task learning problems, despite using much fewer parameters than traditional logits-only fine-tuning, we match single-task performance",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e685efa9ab0672bd83b01cc61e5cc753aa33db68",
     "citation_count": 41
@@ -2514,10 +2514,10 @@
   "https://openreview.net/forum?id=BJluy2RcFm": {
     "title": "Janossy Pooling: Learning Deep Permutation-Invariant Functions for Variable-Size Inputs",
     "abstract": "We consider a simple and overarching representation for permutation-invariant functions of sequences (or multiset functions). Our approach, which we call Janossy pooling, expresses a permutation-invariant function as the average of a permutation-sensitive function applied to all reorderings of the input sequence. This allows us to leverage the rich and mature literature on permutation-sensitive functions to construct novel and flexible permutation-invariant functions. If carried out naively, Janossy pooling can be computationally prohibitive. To allow computational tractability, we consider three kinds of approximations: canonical orderings of sequences, functions with $k$-order interactions, and stochastic optimization algorithms with random permutations. Our framework unifies a variety of existing work in the literature, and suggests possible modeling and algorithmic extensions. We explore a few in our experiments, which demonstrate improved performance over current state-of-the-art methods",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "950a9b1b4c13812c54d0f754b2f5045c96a12778",
-    "citation_count": 121
+    "citation_count": 122
   },
   "https://openreview.net/forum?id=S1EERs09YQ": {
     "title": "Discovery of Natural Language Concepts in Individual Units of CNNs",
@@ -2586,7 +2586,7 @@
   "https://openreview.net/forum?id=B1GAUs0cKQ": {
     "title": "Variance Networks: When Expectation Does Not Meet Your Expectations",
     "abstract": "Ordinary stochastic neural networks mostly rely on the expected values of their weights to make predictions, whereas the induced noise is mostly used to capture the uncertainty, prevent overfitting and slightly boost the performance through test-time averaging. In this paper, we introduce variance layers, a different kind of stochastic layers. Each weight of a variance layer follows a zero-mean distribution and is only parameterized by its variance. We show that such layers can learn surprisingly well, can serve as an efficient exploration tool in reinforcement learning tasks and provide a decent defense against adversarial attacks. We also show that a number of conventional Bayesian neural networks naturally converge to such zero-mean posteriors. We observe that in these cases such zero-mean parameterization leads to a much better training objective than conventional parameterizations where the mean is being learned",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "58b8a5d5e46192c9bb0cf720cbe225f205ad1b3d",
     "citation_count": 18
@@ -2626,7 +2626,7 @@
   "https://openreview.net/forum?id=B1g30j0qF7": {
     "title": "Bayesian Deep Convolutional Networks with Many Channels are Gaussian Processes",
     "abstract": "There is a previously identified equivalence between wide fully connected neural networks (FCNs) and Gaussian processes (GPs). This equivalence enables, for instance, test set predictions that would have resulted from a fully Bayesian, infinitely wide trained FCN to be computed without ever instantiating the FCN, but by instead evaluating the corresponding GP. In this work, we derive an analogous equivalence for multi-layer convolutional neural networks (CNNs) both with and without pooling layers, and achieve state of the art results on CIFAR10 for GPs without trainable kernels. We also introduce a Monte Carlo method to estimate the GP corresponding to a given neural network architecture, even in cases where the analytic form has too many terms to be computationally feasible.   Surprisingly, in the absence of pooling layers, the GPs corresponding to CNNs with and without weight sharing are identical. As a consequence, translation equivariance, beneficial in finite channel CNNs trained with stochastic gradient descent (SGD), is guaranteed to play no role in the Bayesian treatment of the infinite channel limit - a qualitative difference between the two regimes that is not present in the FCN case. We confirm experimentally, that while in some scenarios the performance of SGD-trained finite CNNs approaches that of the corresponding GPs as the channel count increases, with careful tuning SGD-trained CNNs can significantly outperform their corresponding GPs, suggesting advantages from SGD training compared to fully Bayesian parameter estimation",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "9ff05248a26c637a4fc9a11e08608574467d6320",
     "citation_count": 233
@@ -2634,7 +2634,7 @@
   "https://openreview.net/forum?id=B1GMDsR5tm": {
     "title": "Initialized Equilibrium Propagation for Backprop-Free Training",
     "abstract": "Deep neural networks are almost universally trained with reverse-mode automatic differentiation (a.k.a. backpropagation). Biological networks, on the other hand, appear to lack any mechanism for sending gradients back to their input neurons, and thus cannot be learning in this way. In response to this, Scellier & Bengio (2017) proposed Equilibrium Propagation - a method for gradient-based train- ing of neural networks which uses only local learning rules and, crucially, does not rely on neurons having a mechanism for back-propagating an error gradient. Equilibrium propagation, however, has a major practical limitation: inference involves doing an iterative optimization of neural activations to find a fixed-point, and the number of steps required to closely approximate this fixed point scales poorly with the depth of the network. In response to this problem, we propose Initialized Equilibrium Propagation, which trains a feedforward network to initialize the iterative inference procedure for Equilibrium propagation. This feed-forward network learns to approximate the state of the fixed-point using a local learning rule. After training, we can simply use this initializing network for inference, resulting in a learned feedforward network. Our experiments show that this network appears to work as well or better than the original version of Equilibrium propagation. This shows how we might go about training deep networks without using backpropagation",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "38f09e82f62db0379ec8de079a7f10de44704f5e",
     "citation_count": 3
@@ -2658,7 +2658,7 @@
   "https://openreview.net/forum?id=BJg4Z3RqF7": {
     "title": "Unsupervised Adversarial Image Reconstruction",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "59ae0a50c5ebc8aa9c408e9d75f56c195ac7276e",
     "citation_count": 25
@@ -2666,10 +2666,10 @@
   "https://openreview.net/forum?id=ByMHvs0cFQ": {
     "title": "Quaternion Recurrent Neural Networks",
     "abstract": "Recurrent neural networks (RNNs) are powerful architectures to model sequential data, due to their capability to learn short and long-term dependencies between the basic elements of a sequence. Nonetheless, popular tasks such as speech or images recognition, involve multi-dimensional input features that are characterized by strong internal dependencies between the dimensions of the input vector. We propose a novel quaternion recurrent neural network (QRNN), alongside with a quaternion long-short term memory neural network (QLSTM), that take into account both the external relations and these internal structural dependencies with the quaternion algebra. Similarly to capsules, quaternions allow the QRNN to code internal dependencies by composing and processing multidimensional features as single entities, while the recurrent operation reveals correlations between the elements composing the sequence. We show that both QRNN and QLSTM achieve better performances than RNN and LSTM in a realistic application of automatic speech recognition. Finally, we show that QRNN and QLSTM reduce by a maximum factor of 3.3x the number of free parameters needed, compared to real-valued RNNs and LSTMs to reach better results, leading to a more compact representation of the relevant information",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "31a857249f9f3bcdeb8a3b2944620fc16f128f64",
-    "citation_count": 72
+    "citation_count": 73
   },
   "https://openreview.net/forum?id=HyxPx3R9tm": {
     "title": "Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow",
@@ -2714,7 +2714,7 @@
   "https://openreview.net/forum?id=BkloRs0qK7": {
     "title": "A comprehensive, application-oriented study of catastrophic forgetting in DNNs",
     "abstract": "We present a large-scale empirical study of catastrophic forgetting (CF) in modern Deep Neural Network (DNN) models that perform sequential (or: incremental) learning. A new experimental protocol is proposed that enforces typical constraints encountered in application scenarios. As the investigation is empirical, we evaluate CF behavior on the hitherto largest number of visual classification datasets, from each of which we construct a representative number of Sequential Learning Tasks (SLTs) in close alignment to previous works on CF. Our results clearly indicate that there is no model that avoids CF for all investigated datasets and SLTs under application conditions. We conclude with a discussion of potential solutions and workarounds to CF, notably for the EWC and IMM models",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "eaf6a986ef90b442d6363ee54852d9b5b4788b0f",
     "citation_count": 63
@@ -2722,7 +2722,7 @@
   "https://openreview.net/forum?id=ByetGn0cYX": {
     "title": "Probabilistic Planning with Sequential Monte Carlo methods",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "c6b040f3f8215f32e362ca7a483c48070585b029",
     "citation_count": 33
@@ -2738,7 +2738,7 @@
   "https://openreview.net/forum?id=BkeU5j0ctQ": {
     "title": "CEM-RL: Combining evolutionary and gradient-based methods for policy search",
     "abstract": "Deep neuroevolution and deep reinforcement learning (deep RL) algorithms are two popular approaches to policy search. The former is widely applicable and rather stable, but suffers from low sample efficiency. By contrast, the latter is more sample efficient, but the most sample efficient variants are also rather unstable and highly sensitive to hyper-parameter setting. So far, these families of methods have mostly been compared as competing tools. However, an emerging approach consists in combining them so as to get the best of both worlds. Two previously existing combinations use either an ad hoc evolutionary algorithm or a goal exploration process together with the Deep Deterministic Policy Gradient (DDPG) algorithm, a sample efficient off-policy deep RL algorithm. In this paper, we propose a different combination scheme using the simple cross-entropy method (CEM) and Twin Delayed Deep Deterministic policy gradient (td3), another off-policy deep RL algorithm which improves over ddpg. We evaluate the resulting method, cem-rl, on a set of benchmarks classically used in deep RL. We show that cem-rl benefits from several advantages over its competitors and offers a satisfactory trade-off between performance and sample efficiency",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d9e08e872c69e5acfed2a93ec6f6d623cfd0c680",
     "citation_count": 111
@@ -2762,7 +2762,7 @@
   "https://openreview.net/forum?id=BJxssoA5KX": {
     "title": "Bounce and Learn: Modeling Scene Dynamics with Real-World Bounces",
     "abstract": "We introduce an approach to model surface properties governing bounces in everyday scenes. Our model learns end-to-end, starting from sensor inputs, to predict post-bounce trajectories and infer two underlying physical properties that govern bouncing - restitution and effective collision normals. Our model, Bounce and Learn, comprises two modules -- a Physics Inference Module (PIM) and a Visual Inference Module (VIM). VIM learns to infer physical parameters for locations in a scene given a single still image, while PIM learns to model physical interactions for the prediction task given physical parameters and observed pre-collision 3D trajectories. To achieve our results, we introduce the Bounce Dataset comprising 5K RGB-D videos of bouncing trajectories of a foam ball to probe surfaces of varying shapes and materials in everyday scenes including homes and offices. Our proposed model learns from our collected dataset of real-world bounces and is bootstrapped with additional information from simple physics simulations. We show on our newly collected dataset that our model out-performs baselines, including trajectory fitting with Newtonian physics, in predicting post-bounce trajectories and inferring physical properties of a scene",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "b39399b1b7c8d2950109b645552439a712913bf1",
     "citation_count": 18
@@ -2794,7 +2794,7 @@
   "https://openreview.net/forum?id=BkxWJnC9tX": {
     "title": "Diversity and Depth in Per-Example Routing Models",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "7b7482c433da5e3b52224524206f36bda4c14edf",
     "citation_count": 26
@@ -2802,7 +2802,7 @@
   "https://openreview.net/forum?id=ByeSdsC9Km": {
     "title": "Adaptive Posterior Learning: few-shot learning with a surprise-based memory module",
     "abstract": "The ability to generalize quickly from few observations is crucial for intelligent systems. In this paper we introduce APL, an algorithm that approximates probability distributions by remembering the most surprising observations it has encountered. These past observations are recalled from an external memory module and processed by a decoder network that can combine information from different memory slots to generalize beyond direct recall. We show this algorithm can perform as well as state of the art baselines on few-shot classification benchmarks with a smaller memory footprint. In addition, its memory compression allows it to scale to thousands of unknown labels. Finally, we introduce a meta-learning reasoning task which is more challenging than direct classification. In this setting, APL is able to generalize with fewer than one example per class via deductive reasoning",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "f3bcab5b23eb8999ea3c3c29140c75861255cfea",
     "citation_count": 52
@@ -2818,7 +2818,7 @@
   "https://openreview.net/forum?id=Bkg2viA5FQ": {
     "title": "Hindsight policy gradients",
     "abstract": "Goal-conditional policies allow reinforcement learning agents to pursue specific goals during different episodes. In addition to their potential to generalize desired behavior to unseen goals, such policies may also help in defining options for arbitrary subgoals, enabling higher-level planning. While trying to achieve a specific goal, an agent may also be able to exploit information about the degree to which it has achieved alternative goals. Reinforcement learning agents have only recently been endowed with such capacity for hindsight, which is highly valuable in environments with sparse rewards. In this paper, we show how hindsight can be introduced to likelihood-ratio policy gradient methods, generalizing this capacity to an entire class of highly successful algorithms. Our preliminary experiments suggest that hindsight may increase the sample efficiency of policy gradient methods",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "1fa1f04b80f057e477549e6b9798fab7c7e57db5",
     "citation_count": 50
@@ -2834,10 +2834,10 @@
   "https://openreview.net/forum?id=BJe0Gn0cY7": {
     "title": "Preventing Posterior Collapse with delta-VAEs",
     "abstract": "Due to the phenomenon of \"posterior collapse,\" current latent variable generative models pose a challenging design choice that either weakens the capacity of the decoder or requires augmenting the objective so it does not only maximize the likelihood of the data. In this paper, we propose an alternative that utilizes the most powerful generative models as decoders, whilst optimising the variational lower bound all while ensuring that the latent variables preserve and encode useful information. Our proposed $\\delta$-VAEs achieve this by constraining the variational family for the posterior to have a minimum distance to the prior. For sequential latent variable models, our approach resembles the classic representation learning approach of slow feature analysis. We demonstrate the efficacy of our approach at modeling text on LM1B and modeling images: learning representations, improving sample quality, and achieving state of the art log-likelihood on CIFAR-10 and ImageNet $32\\times 32$",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "12e524ff107ede4e653ad06391be9585ad8d5fa0",
-    "citation_count": 121
+    "citation_count": 122
   },
   "https://openreview.net/forum?id=ByxkijC5FQ": {
     "title": "Neural Persistence: A Complexity Measure for Deep Neural Networks Using Algebraic Topology",
@@ -2850,10 +2850,10 @@
   "https://openreview.net/forum?id=B1gTShAct7": {
     "title": "Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference",
     "abstract": "Lack of performance when it comes to continual learning over non-stationary distributions of data remains a major challenge in scaling neural network learning to more human realistic settings. In this work we propose a new conceptualization of the continual learning problem in terms of a temporally symmetric trade-off between transfer and interference that can be optimized by enforcing gradient alignment across examples. We then propose a new algorithm, Meta-Experience Replay (MER), that directly exploits this view by combining experience replay with optimization based meta-learning. This method learns parameters that make interference based on future gradients less likely and transfer based on future gradients more likely. We conduct experiments across continual lifelong supervised learning benchmarks and non-stationary reinforcement learning environments demonstrating that our approach consistently outperforms recently proposed baselines for continual learning. Our experiments show that the gap between the performance of MER and baseline algorithms grows both as the environment gets more non-stationary and as the fraction of the total experiences stored gets smaller",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "c575d724615a2852f04dfce84547aa3654101150",
-    "citation_count": 398
+    "citation_count": 400
   },
   "https://openreview.net/forum?id=ryGfnoC5KQ": {
     "title": "Kernel RNN Learning (KeRNL)",
@@ -2898,7 +2898,7 @@
   "https://openreview.net/forum?id=ByfyHh05tQ": {
     "title": "Learning to Design RNA",
     "abstract": "Designing RNA molecules has garnered recent interest in medicine, synthetic biology, biotechnology and bioinformatics since many functional RNA molecules were shown to be involved in regulatory processes for transcription, epigenetics and translation. Since an RNA's function depends on its structural properties, the RNA Design problem is to find an RNA sequence which satisfies given structural constraints. Here, we propose a new algorithm for the RNA Design problem, dubbed LEARNA. LEARNA uses deep reinforcement learning to train a policy network to sequentially design an entire RNA sequence given a specified target structure. By meta-learning across 65000 different RNA Design tasks for one hour on 20 CPU cores, our extension Meta-LEARNA constructs an RNA Design policy that can be applied out of the box to solve novel RNA Design tasks. Methodologically, for what we believe to be the first time, we jointly optimize over a rich space of architectures for the policy network, the hyperparameters of the training procedure and the formulation of the decision process. Comprehensive empirical results on two widely-used RNA Design benchmarks, as well as a third one that we introduce, show that our approach achieves new state-of-the-art performance on the former while also being orders of magnitudes faster in reaching the previous state-of-the-art performance. In an ablation study, we analyze the importance of our method's different components",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "60b115f0c1ea9565928ebced8d0606f4c31d6640",
     "citation_count": 41
@@ -2906,10 +2906,10 @@
   "https://openreview.net/forum?id=BJgklhAcK7": {
     "title": "Meta-Learning with Latent Embedding Optimization",
     "abstract": "Gradient-based meta-learning techniques are both widely applicable and proficient at solving challenging few-shot learning and fast adaptation problems. However, they have practical difficulties when operating on high-dimensional parameter spaces in extreme low-data regimes. We show that it is possible to bypass these limitations by learning a data-dependent latent generative representation of model parameters, and performing gradient-based meta-learning in this low-dimensional latent space. The resulting approach, latent embedding optimization (LEO), decouples the gradient-based adaptation procedure from the underlying high-dimensional space of model parameters. Our evaluation shows that LEO can achieve state-of-the-art performance on the competitive miniImageNet and tieredImageNet few-shot classification tasks. Further analysis indicates LEO is able to capture uncertainty in the data, and can perform adaptation more effectively by optimizing in latent space",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "04f739a0c29b75877243731aeead512bf0ed1dff",
-    "citation_count": 900
+    "citation_count": 907
   },
   "https://openreview.net/forum?id=SylPMnR9Ym": {
     "title": "Learning what you can do before doing anything",
@@ -2946,7 +2946,7 @@
   "https://openreview.net/forum?id=BklMjsRqY7": {
     "title": "Accumulation Bit-Width Scaling For Ultra-Low Precision Training Of Deep Networks",
     "abstract": "Efforts to reduce the numerical precision of computations in deep learning training have yielded systems that aggressively quantize weights and activations, yet employ wide high-precision accumulators for partial sums in inner-product operations to preserve the quality of convergence. The absence of any framework to analyze the precision requirements of partial sum accumulations results in conservative design choices. This imposes an upper-bound on the reduction of complexity of multiply-accumulate units. We present a statistical approach to analyze the impact of reduced accumulation precision on deep learning training. Observing that a bad choice for accumulation precision results in loss of information that manifests itself as a reduction in variance in an ensemble of partial sums, we derive a set of equations that relate this variance to the length of accumulation and the minimum number of bits needed for accumulation. We apply our analysis to three benchmark networks: CIFAR-10 ResNet 32, ImageNet ResNet 18 and ImageNet AlexNet. In each case, with accumulation precision set in accordance with our proposed equations, the networks successfully converge to the single precision floating-point baseline. We also show that reducing accumulation precision further degrades the quality of the trained network, proving that our equations produce tight bounds. Overall this analysis enables precise tailoring of computation hardware to the application, yielding area- and power-optimal systems",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "e931f4444f634695bfab5a6e57c817da52fc512b",
     "citation_count": 20
@@ -2954,7 +2954,7 @@
   "https://openreview.net/forum?id=BkN5UoAqF7": {
     "title": "Sample Efficient Imitation Learning for Continuous Control",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "21946808f15dab6c73a76e89d1fa5869df515a3f",
     "citation_count": 50
@@ -3058,7 +3058,7 @@
   "https://openreview.net/forum?id=BkltNhC9FX": {
     "title": "Posterior Attention Models for Sequence to Sequence Learning",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "086cef88cbac0b733e1d0b7d4756600df953851f",
     "citation_count": 28
@@ -3066,7 +3066,7 @@
   "https://openreview.net/forum?id=BJeWUs05KQ": {
     "title": "Directed-Info GAIL: Learning Hierarchical Policies from Unsegmented Demonstrations using Directed Information",
     "abstract": "The use of imitation learning to learn a single policy for a complex task that has multiple modes or hierarchical structure can be challenging. In fact, previous work has shown that when the modes are known, learning separate policies for each mode or sub-task can greatly improve the performance of imitation learning. In this work, we discover the interaction between sub-tasks from their resulting state-action trajectory sequences using a directed graphical model. We propose a new algorithm based on the generative adversarial imitation learning framework which automatically learns sub-task policies from unsegmented demonstrations. Our approach maximizes the directed information flow in the graphical model between sub-task latent variables and their generated trajectories. We also show how our approach connects with the existing Options framework, which is commonly used to learn hierarchical policies",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "b43d8c8b25bc65cbf3097480e9000649c79b7a51",
     "citation_count": 38
@@ -3082,7 +3082,7 @@
   "https://openreview.net/forum?id=B1l6qiR5F7": {
     "title": "Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks",
     "abstract": "Natural language is hierarchically structured: smaller units (e.g., phrases) are nested within larger units (e.g., clauses). When a larger constituent ends, all of the smaller constituents that are nested within it must also be closed. While the standard LSTM architecture allows different neurons to track information at different time scales, it does not have an explicit bias towards modeling a hierarchy of constituents. This paper proposes to add such an inductive bias by ordering the neurons; a vector of master input and forget gates ensures that when a given neuron is updated, all the neurons that follow it in the ordering are also updated. Our novel recurrent architecture, ordered neurons LSTM (ON-LSTM), achieves good performance on four different tasks: language modeling, unsupervised parsing, targeted syntactic evaluation, and logical inference",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "15d6f3d815d0ff176fafb14a3f46e5723ebac723",
     "citation_count": 254
@@ -3096,9 +3096,9 @@
     "citation_count": 35
   },
   "https://openreview.net/forum?id=BkzeUiRcY7": {
-    "title": "M3RL: Mind-aware Multi-agent Management Reinforcement Learning",
+    "title": "M^3RL: Mind-aware Multi-agent Management Reinforcement Learning",
     "abstract": "Most of the prior work on multi-agent reinforcement learning (MARL) achieves optimal collaboration by directly controlling the agents to maximize a common reward. In this paper, we aim to address this from a different angle. In particular, we consider scenarios where there are self-interested agents (i.e., worker agents) which have their own minds (preferences, intentions, skills, etc.) and can not be dictated to perform tasks they do not wish to do. For achieving optimal coordination among these agents, we train a super agent (i.e., the manager) to manage them by first inferring their minds based on both current and past observations and then initiating contracts to assign suitable tasks to workers and promise to reward them with corresponding bonuses so that they will agree to work together. The objective of the manager is maximizing the overall productivity as well as minimizing payments made to the workers for ad-hoc worker teaming. To train the manager, we propose Mind-aware Multi-agent Management Reinforcement Learning (M^3RL), which consists of agent modeling and policy learning. We have evaluated our approach in two environments, Resource Collection and Crafting, to simulate multi-agent management problems with various task settings and multiple designs for the worker agents. The experimental results have validated the effectiveness of our approach in modeling worker agents' minds online, and in achieving optimal ad-hoc teaming with good generalization and fast adaptation",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "d341764a2020dcc3389f27d6508679e0c3cab486",
     "citation_count": 25
@@ -3154,7 +3154,7 @@
   "https://openreview.net/forum?id=BklhAj09K7": {
     "title": "Unsupervised Domain Adaptation for Distance Metric Learning",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "c9c3e58677b95a110220ad89946fd941fa1b287e",
     "citation_count": 38
@@ -3250,10 +3250,10 @@
   "https://openreview.net/forum?id=B1gabhRcYX": {
     "title": "BA-Net: Dense Bundle Adjustment Networks",
     "abstract": "This paper introduces a network architecture to solve the structure-from-motion (SfM) problem via feature-metric bundle adjustment (BA), which explicitly enforces multi-view geometry constraints in the form of feature-metric error. The whole pipeline is differentiable, so that the network can learn suitable features that make the BA problem more tractable. Furthermore, this work introduces a novel depth parameterization to recover dense per-pixel depth. The network first generates several basis depth maps according to the input image, and optimizes the final depth as a linear combination of these basis depth maps via feature-metric BA. The basis depth maps generator is also learned via end-to-end training. The whole system nicely combines domain knowledge (i.e. hard-coded multi-view geometry constraints) and deep learning (i.e. feature learning and basis depth maps learning) to address the challenging dense SfM problem. Experiments on large scale real data prove the success of the proposed method",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "4ba326228728c7ea03a4de6778d0b428b035d5cd",
-    "citation_count": 50
+    "citation_count": 51
   },
   "https://openreview.net/forum?id=SJzSgnRcKX": {
     "title": "What do you learn from context? Probing for sentence structure in contextualized word representations",
@@ -3306,7 +3306,7 @@
   "https://openreview.net/forum?id=BJlxm30cKm": {
     "title": "An Empirical Study of Example Forgetting during Deep Neural Network Learning",
     "abstract": "Inspired by the phenomenon of catastrophic forgetting, we investigate the learning dynamics of neural networks as they train on single classification tasks. Our goal is to understand whether a related phenomenon occurs when data does not undergo a clear distributional shift. We define a \"forgetting event\" to have occurred when an individual training example transitions from being classified correctly to incorrectly over the course of learning. Across several benchmark data sets, we find that: (i) certain examples are forgotten with high frequency, and some not at all; (ii) a data set's (un)forgettable examples generalize across neural architectures; and (iii) based on forgetting dynamics, a significant fraction of examples can be omitted from the training data set while still maintaining state-of-the-art generalization performance",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "a2b5d224895d96bfe2e384e2dcf1ebd136ac3782",
     "citation_count": 251
@@ -3322,10 +3322,10 @@
   "https://openreview.net/forum?id=rJVorjCcKQ": {
     "title": "Slalom: Fast, Verifiable and Private Execution of Neural Networks in Trusted Hardware",
     "abstract": "As Machine Learning (ML) gets applied to security-critical or sensitive domains, there is a growing need for integrity and privacy for outsourced ML computations. A pragmatic solution comes from Trusted Execution Environments (TEEs), which use hardware and software protections to isolate sensitive computations from the untrusted software stack. However, these isolation guarantees come at a price in performance, compared to untrusted alternatives. This paper initiates the study of high performance execution of Deep Neural Networks (DNNs) in TEEs by efficiently partitioning DNN computations between trusted and untrusted devices. Building upon an efficient outsourcing scheme for matrix multiplication, we propose Slalom, a framework that securely delegates execution of all linear layers in a DNN from a TEE (e.g., Intel SGX or Sanctum) to a faster, yet untrusted, co-located processor. We evaluate Slalom by running DNNs in an Intel SGX enclave, which selectively delegates work to an untrusted GPU. For canonical DNNs (VGG16, MobileNet and ResNet variants) we obtain 6x to 20x increases in throughput for verifiable inference, and 4x to 11x for verifiable and private inference",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "662f3ca1f074e24803d33fcd6c7d19564de107f2",
-    "citation_count": 241
+    "citation_count": 242
   },
   "https://openreview.net/forum?id=HyePrhR5KX": {
     "title": "DyRep: Learning Representations over Dynamic Graphs",
@@ -3362,7 +3362,7 @@
   "https://openreview.net/forum?id=B1xhQhRcK7": {
     "title": "Rigorous Agent Evaluation: An Adversarial Approach to Uncover Catastrophic Failures",
     "abstract": "This paper addresses the problem of evaluating learning systems in safety critical domains such as autonomous driving, where failures can have catastrophic consequences. We focus on two problems: searching for scenarios when learned agents fail and assessing their probability of failure. The standard method for agent evaluation in reinforcement learning, Vanilla Monte Carlo, can miss failures entirely, leading to the deployment of unsafe agents. We demonstrate this is an issue for current agents, where even matching the compute used for training is sometimes insufficient for evaluation. To address this shortcoming, we draw upon the rare event probability estimation literature and propose an adversarial evaluation approach. Our approach focuses evaluation on adversarially chosen situations, while still providing unbiased estimates of failure probabilities. The key difficulty is in identifying these adversarial situations -- since failures are rare there is little signal to drive optimization. To solve this we propose a continuation approach that learns failure modes in related but less robust agents. Our approach also allows reuse of data already collected for training the agent. We demonstrate the efficacy of adversarial evaluation on two standard domains: humanoid control and simulated driving. Experimental results show that our methods can find catastrophic failures and estimate failures rates of agents multiple orders of magnitude faster than standard evaluation schemes, in minutes to hours rather than days",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "553e6c8a79a24abc554782bfe2c5a0ecb31bbb61",
     "citation_count": 59
@@ -3402,7 +3402,7 @@
   "https://openreview.net/forum?id=BJej72AqF7": {
     "title": "A Max-Affine Spline Perspective of Recurrent Neural Networks",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "1bd7d872d54a650affb8b0e1101c0c52e2a912da",
     "citation_count": 12
@@ -3410,18 +3410,18 @@
   "https://openreview.net/forum?id=rJEjjoR9K7": {
     "title": "Learning Robust Representations by Projecting Superficial Statistics Out",
     "abstract": "Despite impressive performance as evaluated on i.i.d. holdout data, deep neural networks depend heavily on superficial statistics of the training data and are liable to break under distribution shift. For example, subtle changes to the background or texture of an image can break a seemingly powerful classifier. Building on previous work on domain generalization, we hope to produce a classifier that will generalize to previously unseen domains, even when domain identifiers are not available during training. This setting is challenging because the model may extract many distribution-specific (superficial) signals together with distribution-agnostic (semantic) signals. To overcome this challenge, we incorporate the gray-level co-occurrence matrix (GLCM) to extract patterns that our prior knowledge suggests are superficial: they are sensitive to the texture but unable to capture the gestalt of an image. Then we introduce two techniques for improving our networks' out-of-sample performance. The first method is built on the reverse gradient method that pushes our model to learn representations from which the GLCM representation is not predictable. The second method is built on the independence introduced by projecting the model's representation onto the subspace orthogonal to GLCM representation's. We test our method on the battery of standard domain generalization data sets and, interestingly, achieve comparable or better performance as compared to other domain generalization methods that explicitly require samples from the target distribution for training",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "96b32b204a62777bef66eea595de2c47b4e9d6e9",
-    "citation_count": 133
+    "citation_count": 134
   },
   "https://openreview.net/forum?id=B1lKS2AqtX": {
     "title": "Eidetic 3D LSTM: A Model for Video Prediction and Beyond",
     "abstract": "I We build space-time models of the world through predictive unsupervised learning. I Task1: Future frames prediction. Applications: urban computing, weather forecasting, learning dynamics of complex environments I Task2: Early action recognition. Predicting future percepts from available information. We ask: Can pixel-level predictive learning help percept-level tasks? I Code/models available: github.com/google/e3d_lstm",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "82a646e1cb33124f672beba451f5039e9e32fb6d",
-    "citation_count": 174
+    "citation_count": 175
   },
   "https://openreview.net/forum?id=Skeke3C5Fm": {
     "title": "Multilingual Neural Machine Translation With Soft Decoupled Encoding",
@@ -3434,7 +3434,7 @@
   "https://openreview.net/forum?id=BkgtDsCcKQ": {
     "title": "Function Space Particle Optimization for Bayesian Neural Networks",
     "abstract": "While Bayesian neural networks (BNNs) have drawn increasing attention, their posterior inference remains challenging, due to the high-dimensional and over-parameterized nature. To address this issue, several highly flexible and scalable variational inference procedures based on the idea of particle optimization have been proposed. These methods directly optimize a set of particles to approximate the target posterior. However, their application to BNNs often yields sub-optimal performance, as such methods have a particular failure mode on over-parameterized models. In this paper, we propose to solve this issue by performing particle optimization directly in the space of regression functions. We demonstrate through extensive experiments that our method successfully overcomes this issue, and outperforms strong baselines in a variety of tasks including prediction, defense against adversarial examples, and reinforcement learning",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "4e1e6f810375fd0a52404fc4f71eb566cbce3b99",
     "citation_count": 36
@@ -3474,7 +3474,7 @@
   "https://openreview.net/forum?id=BkgWHnR5tm": {
     "title": "Neural Graph Evolution: Towards Efficient Automatic Robot Design",
     "abstract": "Despite the recent successes in robotic locomotion control, the design of robot relies heavily on human engineering. Automatic robot design has been a long studied subject, but the recent progress has been slowed due to the large combinatorial search space and the difficulty in evaluating the found candidates. To address the two challenges, we formulate automatic robot design as a graph search problem and perform evolution search in graph space. We propose Neural Graph Evolution (NGE), which performs selection on current candidates and evolves new ones iteratively. Different from previous approaches, NGE uses graph neural networks to parameterize the control policies, which reduces evaluation cost on new candidates with the help of skill transfer from previously evaluated designs. In addition, NGE applies Graph Mutation with Uncertainty (GM-UC) by incorporating model uncertainty, which reduces the search space by balancing exploration and exploitation. We show that NGE significantly outperforms previous methods by an order of magnitude. As shown in experiments, NGE is the first algorithm that can automatically discover kinematically preferred robotic graph structures, such as a fish with two symmetrical flat side-fins and a tail, or a cheetah with athletic front and back legs. Instead of using thousands of cores for weeks, NGE efficiently solves searching problem within a day on a single 64 CPU-core Amazon EC2 machine",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "5b3a45b76e144fed2478419a7229930b28151f46",
     "citation_count": 27
@@ -3498,7 +3498,7 @@
   "https://openreview.net/forum?id=B1exrnCcF7": {
     "title": "Disjoint Mapping Network for Cross-modal Matching of Voices and Faces",
     "abstract": "We propose a novel framework, called Disjoint Mapping Network (DIMNet), for cross-modal biometric matching, in particular of voices and faces. Different from the existing methods, DIMNet does not explicitly learn the joint relationship between the modalities. Instead, DIMNet learns a shared representation for different modalities by mapping them individually to their common covariates. These shared representations can then be used to find the correspondences between the modalities. We show empirically that DIMNet is able to achieve better performance than other current methods, with the additional benefits of being conceptually simpler and less data-intensive",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "4188f289eb85bb047dbbc15acbd79fae6abe25f5",
     "citation_count": 41
@@ -3514,7 +3514,7 @@
   "https://openreview.net/forum?id=BkgPajAcY7": {
     "title": "No Training Required: Exploring Random Encoders for Sentence Classification",
     "abstract": "We explore various methods for computing sentence representations from pre-trained word embeddings without any training, i.e., using nothing but random parameterizations. Our aim is to put sentence embeddings on more solid footing by 1) looking at how much modern sentence embeddings gain over random methods---as it turns out, surprisingly little; and by 2) providing the field with more appropriate baselines going forward---which are, as it turns out, quite strong. We also make important observations about proper experimental protocol for sentence classification evaluation, together with recommendations for future research",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "7a8f8109e65ed9a6048859681a825eb5655e5dd2",
     "citation_count": 89
@@ -3530,18 +3530,18 @@
   "https://openreview.net/forum?id=SkVhlh09tX": {
     "title": "Pay Less Attention with Lightweight and Dynamic Convolutions",
     "abstract": "Self-attention is a useful mechanism to build generative models for language and images. It determines the importance of context elements by comparing each element to the current time step. In this paper, we show that a very lightweight convolution can perform competitively to the best reported self-attention results. Next, we introduce dynamic convolutions which are simpler and more efficient than self-attention. We predict separate convolution kernels based solely on the current time-step in order to determine the importance of context elements. The number of operations required by this approach scales linearly in the input length, whereas self-attention is quadratic. Experiments on large-scale machine translation, language modeling and abstractive summarization show that dynamic convolutions improve over strong self-attention models. On the WMT'14 English-German test set dynamic convolutions achieve a new state of the art of 29.7 BLEU",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "4b344351fe43544317efc9adaebe6791c4242814",
-    "citation_count": 447
+    "citation_count": 448
   },
   "https://openreview.net/forum?id=B1l08oAct7": {
     "title": "Deterministic Variational Inference for Robust Bayesian Neural Networks",
     "abstract": "Bayesian neural networks (BNNs) hold great promise as a flexible and principled solution to deal with uncertainty when learning from finite data. Among approaches to realize probabilistic inference in deep neural networks, variational Bayes (VB) is theoretically grounded, generally applicable, and computationally efficient. With wide recognition of potential advantages, why is it that variational Bayes has seen very limited practical use for BNNs in real applications? We argue that variational inference in neural networks is fragile: successful implementations require careful initialization and tuning of prior variances, as well as controlling the variance of Monte Carlo gradient estimates. We provide two innovations that aim to turn VB into a robust inference tool for Bayesian neural networks: first, we introduce a novel deterministic method to approximate moments in neural networks, eliminating gradient variance; second, we introduce a hierarchical prior for parameters and a novel Empirical Bayes procedure for automatically selecting prior variances. Combining these two innovations, the resulting method is highly efficient and robust. On the application of heteroscedastic regression we demonstrate good predictive performance over alternative approaches",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "b2f9c202a25ad6dc3472a2b2e23b1181225fef3d",
-    "citation_count": 112
+    "citation_count": 113
   },
   "https://openreview.net/forum?id=ryxnHhRqFm": {
     "title": "Global-to-local Memory Pointer Networks for Task-Oriented Dialogue",
@@ -3578,7 +3578,7 @@
   "https://openreview.net/forum?id=BJfIVjAcKm": {
     "title": "Training for Faster Adversarial Robustness Verification via Inducing ReLU Stability",
     "abstract": "We explore the concept of co-design in the context of neural network verification. Specifically, we aim to train deep neural networks that not only are robust to adversarial perturbations but also whose robustness can be verified more easily. To this end, we identify two properties of network models - weight sparsity and so-called ReLU stability - that turn out to significantly impact the complexity of the corresponding verification task. We demonstrate that improving weight sparsity alone already enables us to turn computationally intractable verification problems into tractable ones. Then, improving ReLU stability leads to an additional 4-13x speedup in verification times. An important feature of our methodology is its \"universality,\" in the sense that it can be used with a broad range of training procedures and verification approaches",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "de49430578bb3f8de3e610423255662c45f17610",
     "citation_count": 159
@@ -3618,10 +3618,10 @@
   "https://openreview.net/forum?id=ryGs6iA5Km": {
     "title": "How Powerful are Graph Neural Networks?",
     "abstract": "Graph Neural Networks (GNNs) are an effective framework for representation learning of graphs. GNNs follow a neighborhood aggregation scheme, where the representation vector of a node is computed by recursively aggregating and transforming representation vectors of its neighboring nodes. Many GNN variants have been proposed and have achieved state-of-the-art results on both node and graph classification tasks. However, despite GNNs revolutionizing graph representation learning, there is limited understanding of their representational properties and limitations. Here, we present a theoretical framework for analyzing the expressive power of GNNs to capture different graph structures. Our results characterize the discriminative power of popular GNN variants, such as Graph Convolutional Networks and GraphSAGE, and show that they cannot learn to distinguish certain simple graph structures. We then develop a simple architecture that is provably the most expressive among the class of GNNs and is as powerful as the Weisfeiler-Lehman graph isomorphism test. We empirically validate our theoretical findings on a number of graph classification benchmarks, and demonstrate that our model achieves state-of-the-art performance",
-    "volume": "main",
+    "volume": "oral",
     "checked": true,
     "id": "62ed9bf1d83c8db1f9cbf92ea2f57ea90ef683d9",
-    "citation_count": 3202
+    "citation_count": 3228
   },
   "https://openreview.net/forum?id=rJe10iC5K7": {
     "title": "Unsupervised Discovery of Parts, Structure, and Dynamics",
@@ -3634,7 +3634,7 @@
   "https://openreview.net/forum?id=BkgzniCqY7": {
     "title": "Structured Adversarial Attack: Towards General Implementation and Better Interpretability",
     "abstract": "When generating adversarial examples to attack deep neural networks (DNNs), Lp norm of the added perturbation is usually used to measure the similarity between original image and adversarial example. However, such adversarial attacks perturbing the raw input spaces may fail to capture structural information hidden in the input. This work develops a more general attack model, i.e., the structured attack (StrAttack), which explores group sparsity in adversarial perturbations by sliding a mask through images aiming for extracting key spatial structures. An ADMM (alternating direction method of multipliers)-based framework is proposed that can split the original problem into a sequence of analytically solvable subproblems and can be generalized to implement other attacking methods. Strong group sparsity is achieved in adversarial perturbations even with the same level of Lp norm distortion as the state-of-the-art attacks. We demonstrate the effectiveness of StrAttack by extensive experimental results onMNIST, CIFAR-10, and ImageNet. We also show that StrAttack provides better interpretability (i.e., better correspondence with discriminative image regions)through adversarial saliency map (Papernot et al., 2016b) and class activation map(Zhou et al., 2016)",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "5bc67a8a47c796053d5ed77aaecd3cbbd4c5d4c1",
     "citation_count": 122
@@ -3650,7 +3650,7 @@
   "https://openreview.net/forum?id=BJgK6iA5KX": {
     "title": "AutoLoss: Learning Discrete Schedule for Alternate Optimization",
     "abstract": "Many machine learning problems involve iteratively and alternately optimizing different task objectives with respect to different sets of parameters. Appropriately scheduling the optimization of a task objective or a set of parameters is usually crucial to the quality of convergence. In this paper, we present AutoLoss, a meta-learning framework that automatically learns and determines the optimization schedule. AutoLoss provides a generic way to represent and learn the discrete optimization schedule from metadata, allows for a dynamic and data-driven schedule in ML problems that involve alternating updates of different parameters or from different loss objectives. We apply AutoLoss on four ML tasks: d-ary quadratic regression, classification using a multi-layer perceptron (MLP), image generation using GANs, and multi-task neural machine translation (NMT). We show that the AutoLoss controller is able to capture the distribution of better optimization schedules that result in higher quality of convergence on all four tasks. The trained AutoLoss controller is generalizable -- it can guide and improve the learning of a new task model with different specifications, or on different datasets",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "84f6f00c6b82415b73fcce4036530bd71b6dd2b7",
     "citation_count": 25
@@ -3666,7 +3666,7 @@
   "https://openreview.net/forum?id=BkG5SjR5YQ": {
     "title": "Post Selection Inference with Incomplete Maximum Mean Discrepancy Estimator",
     "abstract": "Measuring divergence between two distributions is essential in machine learning and statistics and has various applications including binary classification, change point detection, and two-sample test. Furthermore, in the era of big data, designing divergence measure that is interpretable and can handle high-dimensional and complex data becomes extremely important. In the paper, we propose a post selection inference (PSI) framework for divergence measure, which can select a set of statistically significant features that discriminate two distributions. Specifically, we employ an additive variant of maximum mean discrepancy (MMD) for features and introduce a general hypothesis test for PSI. A novel MMD estimator using the incomplete U-statistics, which has an asymptotically Normal distribution (under mild assumptions) and gives high detection power in PSI, is also proposed and analyzed theoretically. Through synthetic and real-world feature selection experiments, we show that the proposed framework can successfully detect statistically significant features. Last, we propose a sample selection framework for analyzing different members in the Generative Adversarial Networks (GANs) family",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "0d93de3e89ea7ed04fe44be572472a244b97c678",
     "citation_count": 11
@@ -3754,7 +3754,7 @@
   "https://openreview.net/forum?id=BJl6AjC5F7": {
     "title": "Learning to Represent Edits",
     "abstract": "We introduce the problem of learning distributed representations of edits. By combining a \"neural editor\" with an \"edit encoder\", our models learn to represent the salient information of an edit and can be used to apply edits to new inputs. We experiment on natural language and source code edit data. Our evaluation yields promising results that suggest that our neural network models learn to capture the structure and semantics of edits. We hope that this interesting task and data source will inspire other researchers to work further on this problem",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "a99de68ee8d6729eee5ca5943b152aba7e4738ee",
     "citation_count": 78
@@ -3770,10 +3770,10 @@
   "https://openreview.net/forum?id=BJg_roAcK7": {
     "title": "INVASE: Instance-wise Variable Selection using Neural Networks",
     "abstract": null,
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "0e5793fc79f155a619a50aab2be4f577e87e3f99",
-    "citation_count": 82
+    "citation_count": 83
   },
   "https://openreview.net/forum?id=H1g6osRcFQ": {
     "title": "Policy Transfer with Strategy Optimization",
@@ -3914,7 +3914,7 @@
   "https://openreview.net/forum?id=B1lz-3Rct7": {
     "title": "Three Mechanisms of Weight Decay Regularization",
     "abstract": "Weight decay is one of the standard tricks in the neural network toolbox, but the reasons for its regularization effect are poorly understood, and recent results have cast doubt on the traditional interpretation in terms of $L_2$ regularization. Literal weight decay has been shown to outperform $L_2$ regularization for optimizers for which they differ. We empirically investigate weight decay for three optimization algorithms (SGD, Adam, and K-FAC) and a variety of network architectures. We identify three distinct mechanisms by which weight decay exerts a regularization effect, depending on the particular optimization algorithm and architecture: (1) increasing the effective learning rate, (2) approximately regularizing the input-output Jacobian norm, and (3) reducing the effective damping coefficient for second-order optimization. Our results provide insight into how to improve the regularization of neural networks",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "f270537f0d80dffc9748d4d2794093031becde69",
     "citation_count": 170
@@ -3986,7 +3986,7 @@
   "https://openreview.net/forum?id=BJgqqsAct7": {
     "title": "Non-vacuous Generalization Bounds at the ImageNet Scale: a PAC-Bayesian Compression Approach",
     "abstract": "Modern neural networks are highly overparameterized, with capacity to substantially overfit to training data. Nevertheless, these networks often generalize well in practice. It has also been observed that trained networks can often be \"compressed\" to much smaller representations. The purpose of this paper is to connect these two empirical observations. Our main technical result is a generalization bound for compressed networks based on the compressed size. Combined with off-the-shelf compression algorithms, the bound leads to state of the art generalization guarantees; in particular, we provide the first non-vacuous generalization guarantees for realistic architectures applied to the ImageNet classification problem. As additional evidence connecting compression and generalization, we show that compressibility of models that tend to overfit is limited: We establish an absolute limit on expected compressibility as a function of expected generalization error, where the expectations are over the random choice of training examples. The bounds are complemented by empirical results that show an increase in overfitting implies an increase in the number of bits required to describe a trained network",
-    "volume": "main",
+    "volume": "poster",
     "checked": true,
     "id": "74fe26e60f04055af52a88a513a1d6229ade5781",
     "citation_count": 148
