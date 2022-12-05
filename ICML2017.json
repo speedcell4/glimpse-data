@@ -3261,7 +3261,7 @@
     "volume": "main",
     "checked": true,
     "id": "55470ea8858d18e5c7675d2e717e2a0cd9a1e319",
-    "citation_count": 43
+    "citation_count": 44
   },
   "https://proceedings.mlr.press/v70/zaheer17b.html": {
     "title": "Canopy Fast Sampling with Cover Trees",
@@ -3277,11 +3277,11 @@
     "volume": "main",
     "checked": true,
     "id": "a99d857ecc78316a0d9a774972b775058d5644ca",
-    "citation_count": 1256
+    "citation_count": 1311
   },
   "https://proceedings.mlr.press/v70/zhang17a.html": {
     "title": "Stochastic Gradient Monomial Gamma Sampler",
-    "abstract": "Recent advances in stochastic gradient techniques have made it possible to estimate posterior distributions from large datasets via Markov Chain Monte Carlo (MCMC). However, when the target posterior is multimodal, mixing performance is often poor. This results in inadequate exploration of the posterior distribution. A framework is proposed to improve the sampling efficiency of stochastic gradient MCMC, based on Hamiltonian Monte Carlo. A generalized kinetic function is leveraged, delivering superior stationary mixing, especially for multimodal distributions. Techniques are also discussed to overcome the practical issues introduced by this generalization. It is shown that the proposed approach is better at exploring complex multimodal posterior distributions, as demonstrated on multiple applications and in comparison with other stochastic gradient MCMC methods",
+    "abstract": "Scaling Markov Chain Monte Carlo (MCMC) to estimate posterior distributions from large datasets has been made possible as a result of advances in stochastic gradient techniques. Despite their success, mixing performance of existing methods when sampling from multimodal distributions can be less efficient with insufficient Monte Carlo samples; this is evidenced by slow convergence and insufficient exploration of posterior distributions. We propose a generalized framework to improve the sampling efficiency of stochastic gradient MCMC, by leveraging a generalized kinetics that delivers superior stationary mixing, especially in multimodal distributions, and propose several techniques to overcome the practical issues. We show that the proposed approach is better at exploring a complicated multimodal posterior distribution, and demonstrate improvements over other stochastic gradient MCMC methods on various applications",
     "volume": "main",
     "checked": true,
     "id": "6d641c496ed20dedf1722cc3c0ef8fe0a27d5de0",
@@ -3293,11 +3293,11 @@
     "volume": "main",
     "checked": true,
     "id": "0d16298285eb347bf951b302e6f2c8e4dc472253",
-    "citation_count": 270
+    "citation_count": 274
   },
   "https://proceedings.mlr.press/v70/zhang17c.html": {
     "title": "Scaling Up Sparse Support Vector Machines by Simultaneous Feature and Sample Reduction",
-    "abstract": "Sparse support vector machine (SVM) is a popular classification technique that can simultaneously learn a small set of the most interpretable features and identify the support vectors. It has achieved great successes in many real-world applications. However, for large-scale problems involving a huge number of samples and ultra-high dimensional features, solving sparse SVMs remains challenging. By noting that sparse SVMs induce sparsities in both feature and sample spaces, we propose a novel approach, which is based on accurate estimations of the primal and dual optima of sparse SVMs, to simultaneously identify the inactive features and samples that are guaranteed to be irrelevant to the outputs. Thus, we can remove the identified inactive samples and features from the training phase, leading to substantial savings in the computational cost without sacrificing the accuracy. Moreover, we show that our method can be extended to multi-class sparse support vector machines. To the best of our knowledge, the proposed method is the \\emph{first} \\emph{static} feature and sample reduction method for sparse SVMs and multi-class sparse SVMs. Experiments on both synthetic and real data sets demonstrate that our approach significantly outperforms state-of-the-art methods and the speedup gained by our approach can be orders of magnitude",
+    "abstract": "Sparse support vector machine (SVM) is a popular classification technique that can simultaneously learn a small set of the most interpretable features and identify the support vectors. It has achieved great successes in many real-world applications. However, for large-scale problems involving a huge number of samples and extremely high-dimensional features, solving sparse SVMs remains challenging. By noting that sparse SVMs induce sparsities in both feature and sample spaces, we propose a novel approach, which is based on accurate estimations of the primal and dual optima of sparse SVMs, to simultaneously identify the features and samples that are guaranteed to be irrelevant to the outputs. Thus, we can remove the identified inactive samples and features from the training phase, leading to substantial savings in both the memory usage and computational cost without sacrificing accuracy. To the best of our knowledge, the proposed method is the first static feature and sample reduction method for sparse SVMs. Experiments on both synthetic and real datasets (e.g., the kddb dataset with about 20 million samples and 30 million features) demonstrate that our approach significantly outperforms state-of-the-art methods and the speedup gained by our approach can be orders of magnitude",
     "volume": "main",
     "checked": true,
     "id": "de79813db667a93b873a9df69eca1f514a1bec3e",
@@ -3309,27 +3309,27 @@
     "volume": "main",
     "checked": true,
     "id": "dacec48d03401ebdf12939da3aa443ac5edd8712",
-    "citation_count": 40
+    "citation_count": 42
   },
   "https://proceedings.mlr.press/v70/zhang17e.html": {
     "title": "ZipML: Training Linear Models with End-to-End Low Precision, and a Little Bit of Deep Learning",
-    "abstract": "Recently there has been significant interest in training machine-learning models at low precision: by reducing precision, one can reduce computation and communication by one order of magnitude. We examine training at reduced precision, both from a theoretical and practical perspective, and ask: is it possible to train models at end-to-end low precision with provable guarantees? Can this lead to consistent order-ofmagnitude speedups? We mainly focus on linear models, and the answer is yes for linear models. We develop a simple framework called ZipML based on one simple but novel strategy called double sampling. Our ZipML framework is able to execute training at low precision with no bias, guaranteeing convergence, whereas naive quantization would introduce significant bias. We validate our framework across a range of applications, and show that it enables an FPGA prototype that is up to 6.5× faster than an implementation using full 32-bit precision. We further develop a variance-optimal stochastic quantization strategy and show that it can make a significant difference in a variety of settings. When applied to linear models together with double sampling, we save up to another 1.7× in data movement compared with uniform quantization. When training deep networks with quantized models, we achieve higher accuracy than the state-of-theart XNOR-Net. ETH Zurich, Switzerland Massachusetts Institute of Technology, USA IST Austria, Austria University of Rochester, USA. Correspondence to: Hantian Zhang <hantian.zhang@inf.ethz.ch>, Ce Zhang <ce.zhang@inf.ethz.ch>. Proceedings of the 34 th International Conference on Machine Learning, Sydney, Australia, PMLR 70, 2017. Copyright 2017 by the author(s). (a) Linear Regression (c) 3D Reconstruction 32Bit 12Bit (b) FPGA Speed Up (d) Deep Learning Machine Learning Models Data Movement Channels Speed up because of our techniques Gradient Input Samples Model Linear Models De Sa et la., Alistarh et al., ... 1. Double Sampling 2. Data-Optimal Encoding Stochastic Rounding Very Significant Speed up (Up to 10x) Deep Learning Courbariaux et al., Rastegari et al., ... Data-Optimal Encoding Significant Speed up 0 25 50 75 100 32-bit Full Precision Double Sampling 4-bit #Epochs Tr ai ni ng L os s #Epochs (a) Linear Regression (b) LS-SVM 0 25 50 75 100 .3",
+    "abstract": "Recently there has been significant interest in training machine-learning models at low precision: by reducing precision, one can reduce computation and communication by one order of magnitude. We examine training at reduced precision, both from a theoretical and practical perspective, and ask: is it possible to train models at end-to-end low precision with provable guarantees? Can this lead to consistent order-of-magnitude speedups? We mainly focus on linear models, and the answer is yes for linear models. We develop a simple framework called ZipML based on one simple but novel strategy called double sampling. Our ZipML framework is able to execute training at low precision with no bias, guaranteeing convergence, whereas naive quantization would introduce significant bias. We validate our framework across a range of applications, and show that it enables an FPGA prototype that is up to $6.5\\times$ faster than an implementation using full 32-bit precision. We further develop a variance-optimal stochastic quantization strategy and show that it can make a significant difference in a variety of settings. When applied to linear models together with double sampling, we save up to another $1.7\\times$ in data movement compared with uniform quantization. When training deep networks with quantized models, we achieve higher accuracy than the state-of-the-art XNOR-Net",
     "volume": "main",
     "checked": true,
     "id": "7f0d3991feb75f6f2fd50d0f2f80d820f20054cc",
-    "citation_count": 151
+    "citation_count": 154
   },
   "https://proceedings.mlr.press/v70/zhang17f.html": {
     "title": "Convexified Convolutional Neural Networks",
-    "abstract": "We describe the class of convexified convolutional neural networks (CCNNs), which capture the parameter sharing of convolutional neural networks in a convex manner. By representing the nonlinear convolutional filters as vectors in a reproducing kernel Hilbert space, the CNN parameters can be represented as a low-rank matrix, which can be relaxed to obtain a convex optimization problem. For learning two-layer convolutional neural networks, we prove that the generalization error obtained by a convexified CNN converges to that of the best possible CNN. For learning deeper networks, we train CCNNs in a layer-wise manner. Empirically, CCNNs achieve performance competitive with CNNs trained by backpropagation, SVMs, fully-connected neural networks, stacked denoising auto-encoders, and other baseline methods",
+    "abstract": "We describe the class of convexified convolutional neural networks (CCNNs), which capture the parameter sharing of convolutional neural networks in a convex manner. By representing the nonlinear convolutional filters as vectors in a reproducing kernel Hilbert space, the CNN parameters can be represented as a low-rank matrix, which can be relaxed to obtain a convex optimization problem. For learning two-layer convolutional neural networks, we prove that the generalization error obtained by a convexified CNN converges to that of the best possible CNN. For learning deeper networks, we train CCNNs in a layer-wise manner. Empirically, CCNNs achieve competitive or better performance than CNNs trained by backpropagation, SVMs, fully-connected neural networks, stacked denoising auto-encoders, and other baseline methods",
     "volume": "main",
     "checked": true,
     "id": "5f2be234935c8c4f201ccf755de658dbeea44e75",
-    "citation_count": 57
+    "citation_count": 58
   },
   "https://proceedings.mlr.press/v70/zhang17g.html": {
     "title": "Projection-free Distributed Online Learning in Networks",
-    "abstract": "The conditional gradient algorithm has regained a surge of research interest in recent years due to its high efficiency in handling large-scale machine learning problems. However, none of existing studies has explored it in the distributed online learning setting, where locally light computation is assumed. In this paper, we fill this gap by proposing the distributed online conditional gradient algorithm, which eschews the expensive projection operation needed in its counterpart algorithms by exploiting much simpler linear optimization steps. We give a regret bound for the proposed algorithm as a function of the network size and topology, which will be smaller on smaller graphs or \"well-connected\" graphs. Experiments on two large-scale real-world datasets for a multiclass classification task confirm the computational benefit of the proposed algorithm and also verify the theoretical regret bound",
+    "abstract": "The conditional gradient algorithm has regained a surge of research interest in recent years due to its high efficiency in handling large-scale machine learning problems. However, none of existing studies has explored it in the distributed online learning setting, where locally light computation is assumed. In this paper, we fill this gap by proposing the distributed online conditional gradient algorithm, which eschews the expensive projection operation needed in its counterpart algorithms by exploiting much simpler linear optimization steps. We give a regret bound for the proposed algorithm as a function of the network size and topology, which will be smaller on smaller graphs or “well-connected” graphs. Experiments on two large-scale real-world datasets for a multiclass classification task confirm the computational benefit of the proposed algorithm and also verify the theoretical regret bound",
     "volume": "main",
     "checked": true,
     "id": "5c3d16906d223d19d7c79a3ef177b61b001cc22b",
@@ -3337,7 +3337,7 @@
   },
   "https://proceedings.mlr.press/v70/zhang17h.html": {
     "title": "Multi-Class Optimal Margin Distribution Machine",
-    "abstract": "Recent studies disclose that maximizing the minimum margin like support vector machines does not necessarily lead to better generalization performances, and instead, it is crucial to optimize the margin distribution. Although it has been shown that for binary classification, characterizing the margin distribution by the firstand second-order statistics can achieve superior performance. It still remains open for multiclass classification, and due to the complexity of margin for multi-class classification, optimizing its distribution by mean and variance can also be difficult. In this paper, we propose mcODM (multi-class Optimal margin Distribution Machine), which can solve this problem efficiently. We also give a theoretical analysis for our method, which verifies the significance of margin distribution for multi-class classification. Empirical study further shows that mcODM always outperforms all four versions of multi-class SVMs on all experimental data sets",
+    "abstract": "Recent studies disclose that maximizing the minimum margin like support vector machines does not necessarily lead to better generalization performances, and instead, it is crucial to optimize the margin distribution. Although it has been shown that for binary classification, characterizing the margin distribution by the first- and second-order statistics can achieve superior performance. It still remains open for multi-class classification, and due to the complexity of margin for multi-class classification, optimizing its distribution by mean and variance can also be difficult. In this paper, we propose mcODM (multi-class Optimal margin Distribution Machine), which can solve this problem efficiently. We also give a theoretical analysis for our method, which verifies the significance of margin distribution for multi-class classification. Empirical study further shows that mcODM always outperforms all four versions of multi-class SVMs on all experimental data sets",
     "volume": "main",
     "checked": true,
     "id": "d25eb5677beb6791b16e9a011d7c5c6d83527a7d",
@@ -3349,11 +3349,11 @@
     "volume": "main",
     "checked": true,
     "id": "445f0e684e284a86b85f6ba6954cd3bbe452c395",
-    "citation_count": 32
+    "citation_count": 33
   },
   "https://proceedings.mlr.press/v70/zhao17b.html": {
     "title": "Theoretical Properties for Neural Networks with Weight Matrices of Low Displacement Rank",
-    "abstract": "Recently low displacement rank (LDR) matrices, or so-called structured matrices, have been proposed to compress large-scale neural networks. Empirical results have shown that neural networks with weight matrices of LDR matrices, referred as LDR neural networks, can achieve significant reduction in space and computational complexity while retaining high accuracy. We formally study LDR matrices in deep learning. First, we prove the universal approximation property of LDR neural networks with a mild condition on the displacement operators. We then show that the error bounds of LDR neural networks are as efficient as general neural networks with both single-layer and multiple-layer structure. Finally, we propose back-propagation based training algorithm for general LDR neural networks",
+    "abstract": "Recently low displacement rank (LDR) matrices, or so-called structured matrices, have been proposed to compress large-scale neural networks. Empirical results have shown that neural networks with weight matrices of LDR matrices, referred as LDR neural networks, can achieve significant reduction in space and computational complexity while retaining high accuracy. This paper gives theoretical study on LDR neural networks. First, we prove the universal approximation property of LDR neural networks with a mild condition on the displacement operators. We then show that the error bounds of LDR neural networks are as efficient as general neural networks with both single-layer and multiple-layer structure. Finally, we propose back-propagation based training algorithm for general LDR neural networks",
     "volume": "main",
     "checked": true,
     "id": "983db08bf7f6c837616780098cb363fd435c4d5c",
@@ -3361,11 +3361,11 @@
   },
   "https://proceedings.mlr.press/v70/zhao17c.html": {
     "title": "Learning Hierarchical Features from Deep Generative Models",
-    "abstract": "Deep neural networks have been shown to be very successful at learning feature hierarchies in supervised learning tasks. Generative models, on the other hand, have benefited less from hierarchical models with multiple layers of latent variables. In this paper, we prove that hierarchical latent variable models do not take advantage of the hierarchical structure when trained with some existing variational methods, and provide some limitations on the kind of features existing models can learn. Finally we propose an alternative architecture that does not suffer from these limitations. Our model is able to learn highly interpretable and disentangled hierarchical features on several natural image datasets with no taskspecific regularization",
+    "abstract": "Deep neural networks have been shown to be very successful at learning feature hierarchies in supervised learning tasks. Generative models, on the other hand, have benefited less from hierarchical models with multiple layers of latent variables. In this paper, we prove that hierarchical latent variable models do not take advantage of the hierarchical structure when trained with existing variational methods, and provide some limitations on the kind of features existing models can learn. Finally we propose an alternative architecture that do not suffer from these limitations. Our model is able to learn highly interpretable and disentangled hierarchical features on several natural image datasets with no task specific regularization or prior knowledge",
     "volume": "main",
     "checked": true,
     "id": "6b2db002cbc5312e4796de4d4b14573df2c01648",
-    "citation_count": 88
+    "citation_count": 90
   },
   "https://proceedings.mlr.press/v70/zhao17d.html": {
     "title": "Learning Sleep Stages from Radio Signals: A Conditional Adversarial Architecture",
@@ -3373,11 +3373,11 @@
     "volume": "main",
     "checked": true,
     "id": "c7e76dadedcf10f01fe916d23232906b6e3ea314",
-    "citation_count": 162
+    "citation_count": 166
   },
   "https://proceedings.mlr.press/v70/zheng17a.html": {
     "title": "Follow the Moving Leader in Deep Learning",
-    "abstract": "Deep networks are highly nonlinear and difficult to optimize. During training, the parameter iterate may move from one local basin to another, or the data distribution may even change. Inspired by the close connection between stochastic optimization and online learning, we propose a variant of the follow the regularized leader (FTRL) algorithm called follow the moving leader (FTML). Unlike the FTRL family of algorithms, the recent samples are weighted more heavily in each iteration and so FTML can adapt more quickly to changes. We show that FTML enjoys the nice properties of RMSprop and Adam, while avoiding their pitfalls. Experimental results on a number of deep learning models and tasks demonstrate that FTML converges quickly, and outperforms other state-ofthe-art optimizers",
+    "abstract": "Deep networks are highly nonlinear and difficult to optimize. During training, the parameter iterate may move from one local basin to another, or the data distribution may even change. Inspired by the close connection between stochastic optimization and online learning, we propose a variant of the follow the regularized leader (FTRL) algorithm called follow the moving leader (FTML). Unlike the FTRL family of algorithms, the recent samples are weighted more heavily in each iteration and so FTML can adapt more quickly to changes. We show that FTML enjoys the nice properties of RMSprop and Adam, while avoiding their pitfalls. Experimental results on a number of deep learning models and tasks demonstrate that FTML converges quickly, and outperforms other state-of-the-art optimizers",
     "volume": "main",
     "checked": true,
     "id": "2e23a0e8e4f8d9a241f3d654842ca6439115194a",
@@ -3385,15 +3385,15 @@
   },
   "https://proceedings.mlr.press/v70/zheng17b.html": {
     "title": "Asynchronous Stochastic Gradient Descent with Delay Compensation",
-    "abstract": "With the fast development of deep learning, it has become common to learn big neural networks using massive training data. Asynchronous Stochastic Gradient Descent (ASGD) is widely adopted to fulfill this task for its efficiency, which is, however, known to suffer from the problem of delayed gradients. That is, when a local worker adds its gradient to the global model, the global model may have been updated by other workers and this gradient becomes \"delayed\". We propose a novel technology to compensate this delay, so as to make the optimization behavior of ASGD closer to that of sequential SGD. This is achieved by leveraging Taylor expansion of the gradient function and efficient approximation to the Hessian matrix of the loss function. We call the new algorithm Delay Compensated ASGD (DC-ASGD). We evaluated the proposed algorithm on CIFAR-10 and ImageNet datasets, and the experimental results demonstrate that DC-ASGD outperforms both synchronous SGD and asynchronous SGD, and nearly approaches the performance of sequential SGD",
+    "abstract": "With the fast development of deep learning, it has become common to learn big neural networks using massive training data. Asynchronous Stochastic Gradient Descent (ASGD) is widely adopted to fulfill this task for its efficiency, which is, however, known to suffer from the problem of delayed gradients. That is, when a local worker adds its gradient to the global model, the global model may have been updated by other workers and this gradient becomes “delayed”. We propose a novel technology to compensate this delay, so as to make the optimization behavior of ASGD closer to that of sequential SGD. This is achieved by leveraging Taylor expansion of the gradient function and efficient approximators to the Hessian matrix of the loss function. We call the new algorithm Delay Compensated ASGD (DC-ASGD). We evaluated the proposed algorithm on CIFAR-10 and ImageNet datasets, and the experimental results demonstrate that DC-ASGD outperforms both synchronous SGD and asynchronous SGD, and nearly approaches the performance of sequential SGD",
     "volume": "main",
     "checked": true,
     "id": "dc588d4c89026edf2beebf3937a940ea9ff34414",
-    "citation_count": 174
+    "citation_count": 180
   },
   "https://proceedings.mlr.press/v70/zheng17c.html": {
     "title": "Collect at Once, Use Effectively: Making Non-interactive Locally Private Learning Possible",
-    "abstract": "Non-interactive Local Differential Privacy (LDP) requires data analysts to collect data from users through noisy channel at once. In this paper, we extend the frontiers of Non-interactive LDP learning and estimation from several aspects. For learning with smooth generalized linear losses, we propose an approximate stochastic gradient oracle estimated from non-interactive LDP channel, using Chebyshev expansion. Combined with inexact gradient methods, we obtain an efficient algorithm with quasi-polynomial sample complexity bound. For the high-dimensional world, we discover that under $\\ell_2$-norm assumption on data points, high-dimensional sparse linear regression and mean estimation can be achieved with logarithmic dependence on dimension, using random projection and approximate recovery. We also extend our methods to Kernel Ridge Regression. Our work is the first one that makes learning and estimation possible for a broad range of learning tasks under non-interactive LDP model",
+    "abstract": "Non-interactive Local Differential Privacy (LDP) requires data analysts to collect data from users through noisy channel at once. In this paper, we extend the frontiers of Non-interactive LDP learning and estimation from several aspects. For learning with smooth generalized linear losses, we propose an approximate stochastic gradient oracle estimated from non-interactive LDP channel using Chebyshev expansion, which is combined with inexact gradient methods to obtain an efficient algorithm with quasi-polynomial sample complexity bound. For the high-dimensional world, we discover that under $\\ell_2$-norm assumption on data points, high-dimensional sparse linear regression and mean estimation can be achieved with logarithmic dependence on dimension, using random projection and approximate recovery. We also extend our methods to Kernel Ridge Regression. Our work is the first one that makes learning and estimation possible for a broad range of learning tasks under non-interactive LDP model",
     "volume": "main",
     "checked": true,
     "id": "f158a0828c9956f2888f9aaa4f71c94c28c40a82",
@@ -3401,11 +3401,11 @@
   },
   "https://proceedings.mlr.press/v70/zhong17a.html": {
     "title": "Recovery Guarantees for One-hidden-layer Neural Networks",
-    "abstract": "In this paper, we consider regression problems with one-hidden-layer neural networks (1NNs). We distill some properties of activation functions that lead to $\\mathit{local~strong~convexity}$ in the neighborhood of the ground-truth parameters for the 1NN squared-loss objective. Most popular nonlinear activation functions satisfy the distilled properties, including rectified linear units (ReLUs), leaky ReLUs, squared ReLUs and sigmoids. For activation functions that are also smooth, we show $\\mathit{local~linear~convergence}$ guarantees of gradient descent under a resampling rule. For homogeneous activations, we show tensor methods are able to initialize the parameters to fall into the local strong convexity region. As a result, tensor initialization followed by gradient descent is guaranteed to recover the ground truth with sample complexity $ d \\cdot \\log(1/\\epsilon) \\cdot \\mathrm{poly}(k,\\lambda )$ and computational complexity $n\\cdot d \\cdot \\mathrm{poly}(k,\\lambda) $ for smooth homogeneous activations with high probability, where $d$ is the dimension of the input, $k$ ($k\\leq d$) is the number of hidden nodes, $\\lambda$ is a conditioning property of the ground-truth parameter matrix between the input layer and the hidden layer, $\\epsilon$ is the targeted precision and $n$ is the number of samples. To the best of our knowledge, this is the first work that provides recovery guarantees for 1NNs with both sample complexity and computational complexity $\\mathit{linear}$ in the input dimension and $\\mathit{logarithmic}$ in the precision",
+    "abstract": "In this paper, we consider regression problems with one-hidden-layer neural networks (1NNs). We distill some properties of activation functions that lead to   local strong convexity in the neighborhood of the ground-truth parameters for the 1NN squared-loss objective and most popular nonlinear activation functions  satisfy the distilled properties, including rectified linear units (ReLUs), leaky ReLUs, squared ReLUs and sigmoids. For activation functions that are also smooth, we show local linear convergence guarantees of gradient descent under a resampling rule. For homogeneous activations, we show tensor methods are able to initialize the parameters to fall into the local strong convexity region. As a result, tensor initialization followed by gradient descent is guaranteed to recover the ground truth with sample complexity $ d \\cdot \\log(1/\\epsilon) \\cdot \\mathrm{poly}(k,\\lambda )$ and computational complexity $n\\cdot d \\cdot \\mathrm{poly}(k,\\lambda) $ for smooth  homogeneous activations with high probability, where $d$ is the dimension of the input, $k$ ($k\\leq d$) is the number of hidden nodes, $\\lambda$ is a conditioning  property of the ground-truth parameter matrix between the input layer and the hidden layer, $\\epsilon$ is the targeted precision and $n$ is the number of samples. To the best of our knowledge, this is the first work that provides recovery guarantees for 1NNs with both sample complexity and computational complexity linear in the input dimension and logarithmic in the precision",
     "volume": "main",
     "checked": true,
     "id": "99ed21b585f4d6cbc4e20002bedca8d6c08169c6",
-    "citation_count": 276
+    "citation_count": 277
   },
   "https://proceedings.mlr.press/v70/zhou17a.html": {
     "title": "Stochastic Adaptive Quasi-Newton Methods for Minimizing Expected Values",
@@ -3425,7 +3425,7 @@
   },
   "https://proceedings.mlr.press/v70/zhou17c.html": {
     "title": "When can Multi-Site Datasets be Pooled for Regression? Hypothesis Tests, $\\ell_2$-consistency and Neuroscience Applications",
-    "abstract": "Many studies in biomedical and health sciences involve small sample sizes due to logistic or financial constraints. Often, identifying weak (but scientifically interesting) associations between a set of predictors and a response necessitates pooling datasets from multiple diverse labs or groups. While there is a rich literature in statistical machine learning to address distributional shifts and inference in multi-site datasets, it is less clear when such pooling is guaranteed to help (and when it does not) - independent of the inference algorithms we use. In this paper, we present a hypothesis test to answer this question, both for classical and high dimensional linear regression. We precisely identify regimes where pooling datasets across multiple sites is sensible, and how such policy decisions can be made via simple checks executable on each site before any data transfer ever happens. With a focus on Alzheimer's disease studies, we present empirical results showing that in regimes suggested by our analysis, pooling a local dataset with data from an international study improves power",
+    "abstract": "Many studies in biomedical and health sciences involve small sample sizes due to logistic or financial constraints. Often, identifying weak (but scientifically interesting) associations between a set of predictors and a response necessitates pooling datasets from multiple diverse labs or groups. While there is a rich literature in statistical machine learning to address distributional shifts and inference in multi-site datasets, it is less clear when such pooling is guaranteed to help (and when it does not) – independent of the inference algorithms we use. In this paper, we present a hypothesis test to answer this question, both for classical and high dimensional linear regression. We precisely identify regimes where pooling datasets across multiple sites is sensible, and how such policy decisions can be made via simple checks executable on each site before any data transfer ever happens. With a focus on Alzheimer’s disease studies, we present empirical results showing that in regimes suggested by our analysis, pooling a local dataset with data from an international study improves power",
     "volume": "main",
     "checked": true,
     "id": "c56fcbb5dd15727c5dc2d29a2aacd64afbb59e19",
@@ -3433,7 +3433,7 @@
   },
   "https://proceedings.mlr.press/v70/zhu17a.html": {
     "title": "High-Dimensional Variance-Reduced Stochastic Gradient Expectation-Maximization Algorithm",
-    "abstract": "We propose a generic stochastic expectationmaximization (EM) algorithm for the estimation of high-dimensional latent variable models. At the core of our algorithm is a novel semi-stochastic variance-reduced gradient designed for the Qfunction in the EM algorithm. Under a mild condition on the initialization, our algorithm is guaranteed to attain a linear convergence rate to the unknown parameter of the latent variable model, and achieve an optimal statistical rate up to a logarithmic factor for parameter estimation. Compared with existing high-dimensional EM algorithms, our algorithm enjoys a better computational complexity and is therefore more efficient. We apply our generic algorithm to two illustrative latent variable models: Gaussian mixture model and mixture of linear regression, and demonstrate the advantages of our algorithm by both theoretical analysis and numerical experiments. We believe that the proposed semi-stochastic gradient is of independent interest for general nonconvex optimization problems with bivariate structures",
+    "abstract": "We propose a generic stochastic expectation-maximization (EM) algorithm for the estimation of high-dimensional latent variable models. At the core of our algorithm is a novel semi-stochastic variance-reduced gradient designed for the $Q$-function in the EM algorithm. Under a mild condition on the initialization, our algorithm is guaranteed to attain a linear convergence rate to the unknown parameter of the latent variable model, and achieve an optimal statistical rate up to a logarithmic factor for parameter estimation. Compared with existing high-dimensional EM algorithms, our algorithm enjoys a better computational complexity and is therefore more efficient. We apply our generic algorithm to two illustrative latent variable models: Gaussian mixture model and mixture of linear regression, and demonstrate the advantages of our algorithm by both theoretical analysis and numerical experiments. We believe that the proposed semi-stochastic gradient is of independent interest for general nonconvex optimization problems with bivariate structures",
     "volume": "main",
     "checked": true,
     "id": "53d566fab75b01b0e44b3ccd7added16d520f89d",
@@ -3441,11 +3441,11 @@
   },
   "https://proceedings.mlr.press/v70/zilly17a.html": {
     "title": "Recurrent Highway Networks",
-    "abstract": "Many sequential processing tasks require complex nonlinear transition functions from one step to the next. However, recurrent neural networks with 'deep' transition functions remain difficult to train, even when using Long Short-Term Memory (LSTM) networks. We introduce a novel theoretical analysis of recurrent networks based on Gersgorin's circle theorem that illuminates several modeling and optimization issues and improves our understanding of the LSTM cell. Based on this analysis we propose Recurrent Highway Networks, which extend the LSTM architecture to allow step-to-step transition depths larger than one. Several language modeling experiments demonstrate that the proposed architecture results in powerful and efficient models. On the Penn Treebank corpus, solely increasing the transition depth from 1 to 10 improves word-level perplexity from 90.6 to 65.4 using the same number of parameters. On the larger Wikipedia datasets for character prediction (text8 and enwik8), RHNs outperform all previous results and achieve an entropy of 1.27 bits per character",
+    "abstract": "Many sequential processing tasks require complex nonlinear transition functions from one step to the next. However, recurrent neural networks with “deep” transition functions remain difficult to train, even when using Long Short-Term Memory (LSTM) networks. We introduce a novel theoretical analysis of recurrent networks based on Gersgorin’s circle theorem that illuminates several modeling and optimization issues and improves our understanding of the LSTM cell. Based on this analysis we propose Recurrent Highway Networks, which extend the LSTM architecture to allow step-to-step transition depths larger than one. Several language modeling experiments demonstrate that the proposed architecture results in powerful and efficient models. On the Penn Treebank corpus, solely increasing the transition depth from 1 to 10 improves word-level perplexity from 90.6 to 65.4 using the same number of parameters. On the larger Wikipedia datasets for character prediction (text8 and enwik8), RHNs outperform all previous results and achieve an entropy of 1.27 bits per character",
     "volume": "main",
     "checked": true,
     "id": "7dba53e72c182e25e98e8f73a99d75ff69dda0c2",
-    "citation_count": 362
+    "citation_count": 364
   },
   "https://proceedings.mlr.press/v70/zoghi17a.html": {
     "title": "Online Learning to Rank in Stochastic Click Models",
@@ -3453,7 +3453,7 @@
     "volume": "main",
     "checked": true,
     "id": "e82b0b0a06a10318682b272a77b1250c89a1798e",
-    "citation_count": 82
+    "citation_count": 83
   },
   "https://proceedings.mlr.press/v70/cai17a.html": {
     "title": "Priv'IT: Private and Sample Efficient Identity Testing",
