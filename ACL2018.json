@@ -2097,11 +2097,11 @@
   },
   "https://aclanthology.org/W18-3407": {
     "title": "Domain Adapted Word Embeddings for Improved Sentiment Classification",
-    "abstract": "Generic word embeddings are trained on large-scale generic corpora; Domain Specific (DS) word embeddings are trained only on data from a domain of interest. This paper proposes a method to combine the breadth of generic embeddings with the specificity of domain specific embeddings. The resulting embeddings, called Domain Adapted (DA) word embeddings, are formed by aligning corresponding word vectors using Canonical Correlation Analysis (CCA) or the related nonlinear Kernel CCA. Evaluation results on sentiment classification tasks show that the DA embeddings substantially outperform both generic, DS embeddings when used as input features to standard or state-of-the-art sentence encoding algorithms for classification",
+    "abstract": "Generic word embeddings are trained on large-scale generic corpora; Domain Specific (DS) word embeddings are trained only on data from a domain of interest. This paper proposes a method to combine the breadth of generic embeddings with the specificity of domain specific embeddings. The resulting embeddings, called Domain Adapted (DA) word embeddings, are formed by first aligning corresponding word vectors using Canonical Correlation Analysis (CCA) or the related nonlinear Kernel CCA (KCCA) and then combining them via convex optimization. Results from evaluation on sentiment classification tasks show that the DA embeddings substantially outperform both generic, DS embeddings when used as input features to standard or state-of-the-art sentence encoding algorithms for classification",
     "volume": "workshop",
     "checked": true,
     "id": "756462aff77a451792778a3f6e3ebc09bcee6c1a",
-    "citation_count": 56
+    "citation_count": 58
   },
   "https://aclanthology.org/P18-2008": {
     "title": "Active learning for deep semantic parsing",
@@ -4249,7 +4249,7 @@
   },
   "https://aclanthology.org/W18-3006": {
     "title": "Quantum-Inspired Complex Word Embedding",
-    "abstract": "A challenging task for word embeddings is to capture the emergent meaning or polarity of a combination of individual words. For example, existing approaches in word embeddings will assign high probabilities to the words \"Penguin\" and \"Fly\" if they frequently co-occur, but it fails to capture the fact that they occur in an opposite sense - Penguins do not fly. We hypothesize that humans do not associate a single polarity or sentiment to each word. The word contributes to the overall polarity of a combination of words depending upon which other words it is combined with. This is analogous to the behavior of microscopic particles which exist in all possible states at the same time and interfere with each other to give rise to new states depending upon their relative phases. We make use of the Hilbert Space representation of such particles in Quantum Mechanics where we subscribe a relative phase to each word, which is a complex number, and investigate two such quantum inspired models to derive the meaning of a combination of words. The proposed models achieve better performances than state-of-the-art non-quantum models on binary sentence classification tasks",
+    "abstract": "A challenging task for word embeddings is to capture the emergent meaning or polarity of a combination of individual words. For example, existing approaches in word embeddings will assign high probabilities to the words “Penguin” and “Fly” if they frequently co-occur, but it fails to capture the fact that they occur in an opposite sense - Penguins do not fly. We hypothesize that humans do not associate a single polarity or sentiment to each word. The word contributes to the overall polarity of a combination of words depending upon which other words it is combined with. This is analogous to the behavior of microscopic particles which exist in all possible states at the same time and interfere with each other to give rise to new states depending upon their relative phases. We make use of the Hilbert Space representation of such particles in Quantum Mechanics where we subscribe a relative phase to each word, which is a complex number, and investigate two such quantum inspired models to derive the meaning of a combination of words. The proposed models achieve better performances than state-of-the-art non-quantum models on binary sentence classification tasks",
     "volume": "workshop",
     "checked": true,
     "id": "bf386f23f2c826461e61c583d6cb63326e81c17b",
@@ -4297,11 +4297,11 @@
   },
   "https://aclanthology.org/W18-3012": {
     "title": "Unsupervised Random Walk Sentence Embeddings: A Strong but Simple Baseline",
-    "abstract": "Using a random walk model of text generation, Arora et al. (2017) proposed a strong baseline for computing sentence embeddings: take a weighted average of word embeddings and modify with SVD. This simple method even outperforms far more complex approaches such as LSTMs on textual similarity tasks. In this paper, we first show that word vector length has a confounding effect on the probability of a sentence being generated in Arora et al.'s model. We propose a random walk model that is robust to this confound, where the probability of word generation is inversely related to the angular distance between the word and sentence embeddings. Our approach beats Arora et al.'s by up to 44.4% on textual similarity tasks and is competitive with state-of-the-art methods. Unlike Arora et al.'s method, ours requires no hyperparameter tuning, which means it can be used when there is no labelled data",
+    "abstract": "Using a random walk model of text generation, Arora et al. (2017) proposed a strong baseline for computing sentence embeddings: take a weighted average of word embeddings and modify with SVD. This simple method even outperforms far more complex approaches such as LSTMs on textual similarity tasks. In this paper, we first show that word vector length has a confounding effect on the probability of a sentence being generated in Arora et al.’s model. We propose a random walk model that is robust to this confound, where the probability of word generation is inversely related to the angular distance between the word and sentence embeddings. Our approach beats Arora et al.’s by up to 44.4% on textual similarity tasks and is competitive with state-of-the-art methods. Unlike Arora et al.’s method, ours requires no hyperparameter tuning, which means it can be used when there is no labelled data",
     "volume": "workshop",
     "checked": true,
     "id": "885d516b8a65fb64535b84a9a225a5c38dcc209a",
-    "citation_count": 67
+    "citation_count": 70
   },
   "https://aclanthology.org/W18-3013": {
     "title": "Evaluating Word Embeddings in Multi-label Classification Using Fine-Grained Name Typing",
@@ -4325,15 +4325,15 @@
     "volume": "workshop",
     "checked": true,
     "id": "42f571c4d38b0f7e08f57a675b9bd06692c984fd",
-    "citation_count": 25
+    "citation_count": 27
   },
   "https://aclanthology.org/W18-3017": {
     "title": "Knowledge Graph Embedding with Numeric Attributes of Entities",
-    "abstract": "Knowledge Graph (KG) embedding projects entities and relations into low dimensional vector space, which has been successfully applied in KG completion task. The previous embedding approaches only model entities and their relations, ignoring a large number of entities' numeric attributes in KGs. In this paper, we propose a new KG embedding model which jointly model entity relations and numeric attributes. Our approach combines an attribute embedding model with a translation-based structure embedding model, which learns the embeddings of entities, relations, and attributes simultaneously. Experiments of link prediction on YAGO and Freebase show that the performance is effectively improved by adding entities' numeric attributes in the embedding model",
+    "abstract": "Knowledge Graph (KG) embedding projects entities and relations into low dimensional vector space, which has been successfully applied in KG completion task. The previous embedding approaches only model entities and their relations, ignoring a large number of entities’ numeric attributes in KGs. In this paper, we propose a new KG embedding model which jointly model entity relations and numeric attributes. Our approach combines an attribute embedding model with a translation-based structure embedding model, which learns the embeddings of entities, relations, and attributes simultaneously. Experiments of link prediction on YAGO and Freebase show that the performance is effectively improved by adding entities’ numeric attributes in the embedding model",
     "volume": "workshop",
     "checked": true,
     "id": "71245f9d9ba0317f78151698dc1ddba7583a3afd",
-    "citation_count": 21
+    "citation_count": 22
   },
   "https://aclanthology.org/W18-3018": {
     "title": "Injecting Lexical Contrast into Word Vectors by Guiding Vector Space Specialisation",
@@ -4349,7 +4349,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "4ad638ae669a28c24c18412c14bff57e284663dd",
-    "citation_count": 15
+    "citation_count": 18
   },
   "https://aclanthology.org/W18-3020": {
     "title": "Learning Hierarchical Structures On-The-Fly with a Recurrent-Recursive Model for Sequences",
@@ -4361,7 +4361,7 @@
   },
   "https://aclanthology.org/W18-3021": {
     "title": "Limitations of Cross-Lingual Learning from Image Search",
-    "abstract": "Cross-lingual representation learning is an important step in making NLP scale to all the world's languages. Previous work on bilingual lexicon induction suggests that it is possible to learn cross-lingual representations of words based on similarities between images associated with these words. However, that work focused (almost exclusively) on the translation of nouns only. Here, we investigate whether the meaning of other parts-of-speech (POS), in particular adjectives and verbs, can be learned in the same way. Our experiments across five language pairs indicate that previous work does not scale to the problem of learning cross-lingual representations beyond simple nouns",
+    "abstract": "Cross-lingual representation learning is an important step in making NLP scale to all the world’s languages. Previous work on bilingual lexicon induction suggests that it is possible to learn cross-lingual representations of words based on similarities between images associated with these words. However, that work focused (almost exclusively) on the translation of nouns only. Here, we investigate whether the meaning of other parts-of-speech (POS), in particular adjectives and verbs, can be learned in the same way. Our experiments across five language pairs indicate that previous work does not scale to the problem of learning cross-lingual representations beyond simple nouns",
     "volume": "workshop",
     "checked": true,
     "id": "adfa6642878e2d1ede33047ec5f64dcddf0ae890",
@@ -4369,11 +4369,11 @@
   },
   "https://aclanthology.org/W18-3022": {
     "title": "Learning Semantic Textual Similarity from Conversations",
-    "abstract": "We present a novel approach to learn representations for sentence-level semantic similarity using conversational data. Our method trains an unsupervised model to predict conversational responses. The resulting sentence embeddings perform well on the Semantic Textual Similarity (STS) Benchmark and SemEval 2017's Community Question Answering (CQA) question similarity subtask. Performance is further improved by introducing multitask training, combining conversational response prediction and natural language inference. Extensive experiments show the proposed model achieves the best performance among all neural models on the STS Benchmark and is competitive with the state-of-the-art feature engineered and mixed systems for both tasks",
+    "abstract": "We present a novel approach to learn representations for sentence-level semantic similarity using conversational data. Our method trains an unsupervised model to predict conversational responses. The resulting sentence embeddings perform well on the Semantic Textual Similarity (STS) Benchmark and SemEval 2017’s Community Question Answering (CQA) question similarity subtask. Performance is further improved by introducing multitask training, combining conversational response prediction and natural language inference. Extensive experiments show the proposed model achieves the best performance among all neural models on the STS Benchmark and is competitive with the state-of-the-art feature engineered and mixed systems for both tasks",
     "volume": "workshop",
     "checked": true,
     "id": "245b03b60cb4bf0235109af4e48f958fbab03b34",
-    "citation_count": 131
+    "citation_count": 135
   },
   "https://aclanthology.org/W18-3023": {
     "title": "Multilingual Seq2seq Training with Similarity Loss for Cross-Lingual Document Classification",
@@ -4385,7 +4385,7 @@
   },
   "https://aclanthology.org/W18-3024": {
     "title": "LSTMs Exploit Linguistic Attributes of Data",
-    "abstract": "While recurrent neural networks have found success in a variety of natural language processing applications, they are general models of sequential data. We investigate how the properties of natural language data affect an LSTM's ability to learn a nonlinguistic task: recalling elements from its input. We find that models trained on natural language data are able to recall tokens from much longer sequences than models trained on non-language sequential data. Furthermore, we show that the LSTM learns to solve the memorization task by explicitly using a subset of its neurons to count timesteps in the input. We hypothesize that the patterns and structure in natural language data enable LSTMs to learn by providing approximate ways of reducing loss, but understanding the effect of different training data on the learnability of LSTMs remains an open question",
+    "abstract": "While recurrent neural networks have found success in a variety of natural language processing applications, they are general models of sequential data. We investigate how the properties of natural language data affect an LSTM’s ability to learn a nonlinguistic task: recalling elements from its input. We find that models trained on natural language data are able to recall tokens from much longer sequences than models trained on non-language sequential data. Furthermore, we show that the LSTM learns to solve the memorization task by explicitly using a subset of its neurons to count timesteps in the input. We hypothesize that the patterns and structure in natural language data enable LSTMs to learn by providing approximate ways of reducing loss, but understanding the effect of different training data on the learnability of LSTMs remains an open question",
     "volume": "workshop",
     "checked": true,
     "id": "d84cc6d952375f9a894c8acac4483d8e7b946a46",
@@ -4393,7 +4393,7 @@
   },
   "https://aclanthology.org/W18-3025": {
     "title": "Learning Distributional Token Representations from Visual Features",
-    "abstract": "In this study, we compare token representations constructed from visual features (i.e., pixels) with standard lookup-based embeddings. Our goal is to gain insight about the challenges of encoding a text representation from low-level features, e.g. from characters or pixels. We focus on Chinese, which—as a logographic language—has properties that make a representation via visual features challenging and interesting. To train and evaluate different models for the token representation, we chose the task of character-based neural machine translation (NMT) from Chinese to English. We found that a token representation computed only from visual features can achieve competitive results to lookup embeddings. However, we also show different strengths and weaknesses in the models' performance in a part-of-speech tagging task and also a semantic similarity task. In summary, we show that it is possible to achieve a text representation only from pixels. We hope that this is a useful stepping stone for future studies that exclusively rely on visual input, or aim at exploiting visual features of written language",
+    "abstract": "In this study, we compare token representations constructed from visual features (i.e., pixels) with standard lookup-based embeddings. Our goal is to gain insight about the challenges of encoding a text representation from low-level features, e.g. from characters or pixels. We focus on Chinese, which—as a logographic language—has properties that make a representation via visual features challenging and interesting. To train and evaluate different models for the token representation, we chose the task of character-based neural machine translation (NMT) from Chinese to English. We found that a token representation computed only from visual features can achieve competitive results to lookup embeddings. However, we also show different strengths and weaknesses in the models’ performance in a part-of-speech tagging task and also a semantic similarity task. In summary, we show that it is possible to achieve a text representation only from pixels. We hope that this is a useful stepping stone for future studies that exclusively rely on visual input, or aim at exploiting visual features of written language",
     "volume": "workshop",
     "checked": true,
     "id": "9e95df7a7f667c8ee907d0ba4537889e0e27ec3e",
@@ -4413,7 +4413,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "e96ac64936322a51b6088cdd843375fb86ef5b9a",
-    "citation_count": 10
+    "citation_count": 11
   },
   "https://aclanthology.org/W18-3028": {
     "title": "Predicting Concreteness and Imageability of Words Within and Across Languages via Word Embeddings",
@@ -4429,7 +4429,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "bb88de5263ae5dd211aef08a20ff7cf8821cbfa5",
-    "citation_count": 28
+    "citation_count": 31
   },
   "https://aclanthology.org/W18-3102": {
     "title": "Causality Analysis of Twitter Sentiments and Stock Market Returns",
@@ -4437,11 +4437,11 @@
     "volume": "workshop",
     "checked": true,
     "id": "238ecc4956656d4aaecfa79d8239dd8f10b3d83a",
-    "citation_count": 19
+    "citation_count": 21
   },
   "https://aclanthology.org/W18-3103": {
     "title": "A Corpus of Corporate Annual and Social Responsibility Reports: 280 Million Tokens of Balanced Organizational Writing",
-    "abstract": "We introduce JOCO, a novel text corpus for NLP analytics in the field of economics, business and management. This corpus is composed of corporate annual and social responsibility reports of the top 30 US, UK and German companies in the major (DJIA, FTSE 100, DAX), middlesized (S&P 500, FTSE 250, MDAX) and technology (NASDAQ, FTSE AIM 100, TECDAX) stock indices, respectively. Altogether, this adds up to 5,000 reports from 270 companies headquartered in three of the world's most important economies. The corpus spans a time frame from 2000 up to 2015 and contains, in total, 282M tokens. We also feature JOCO in a smallscale experiment to demonstrate its potential for NLP-fueled studies in economics, business and management research",
+    "abstract": "We introduce JOCo, a novel text corpus for NLP analytics in the field of economics, business and management. This corpus is composed of corporate annual and social responsibility reports of the top 30 US, UK and German companies in the major (DJIA, FTSE 100, DAX), middle-sized (S&P 500, FTSE 250, MDAX) and technology (NASDAQ, FTSE AIM 100, TECDAX) stock indices, respectively. Altogether, this adds up to 5,000 reports from 270 companies headquartered in three of the world’s most important economies. The corpus spans a time frame from 2000 up to 2015 and contains, in total, 282M tokens. We also feature JOCo in a small-scale experiment to demonstrate its potential for NLP-fueled studies in economics, business and management research",
     "volume": "workshop",
     "checked": true,
     "id": "01c35f373b5e07439aa0f3548c6fed9f86e83a03",
@@ -4449,7 +4449,7 @@
   },
   "https://aclanthology.org/W18-3104": {
     "title": "Word Embeddings-Based Uncertainty Detection in Financial Disclosures",
-    "abstract": "In this paper, we use NLP techniques to detect linguistic uncertainty in financial disclosures. Leveraging generaldomain and domain-specific word embedding models, we automatically expand an existing dictionary of uncertainty triggers. We furthermore examine how an expert filtering affects the quality of such an expansion. We show that the dictionary expansions significantly improve regressions on stock return volatility. Lastly, we prove that the expansions significantly boost the automatic detection of uncertain sentences",
+    "abstract": "In this paper, we use NLP techniques to detect linguistic uncertainty in financial disclosures. Leveraging general-domain and domain-specific word embedding models, we automatically expand an existing dictionary of uncertainty triggers. We furthermore examine how an expert filtering affects the quality of such an expansion. We show that the dictionary expansions significantly improve regressions on stock return volatility. Lastly, we prove that the expansions significantly boost the automatic detection of uncertain sentences",
     "volume": "workshop",
     "checked": true,
     "id": "1778d275965921e75e93fda7bf40d922071682ff",
@@ -4457,7 +4457,7 @@
   },
   "https://aclanthology.org/W18-3105": {
     "title": "A Simple End-to-End Question Answering Model for Product Information",
-    "abstract": "When evaluating a potential product purchase, customers may have many questions in mind. They want to get adequate information to determine whether the product of interest is worth their money. In this paper we present a simple deep learning model for answering questions regarding product facts and specifications. Given a question and a product specification, the model outputs a score indicating their relevance. To train and evaluate our proposed model, we collected a dataset of 7,119 questions that are related to 153 different products. Experimental results demonstrate that — despite its simplicity — the performance of our model is shown to be comparable to a more complex state-of-the-art baseline",
+    "abstract": "When evaluating a potential product purchase, customers may have many questions in mind. They want to get adequate information to determine whether the product of interest is worth their money. In this paper we present a simple deep learning model for answering questions regarding product facts and specifications. Given a question and a product specification, the model outputs a score indicating their relevance. To train and evaluate our proposed model, we collected a dataset of 7,119 questions that are related to 153 different products. Experimental results demonstrate that –despite its simplicity– the performance of our model is shown to be comparable to a more complex state-of-the-art baseline",
     "volume": "workshop",
     "checked": true,
     "id": "dc64a09b1d58f65a6fc4784684a54bed6fe7857d",
@@ -4477,7 +4477,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "1e75b03bce78e73b7d0e707912f394585262cff0",
-    "citation_count": 5
+    "citation_count": 6
   },
   "https://aclanthology.org/W18-3108": {
     "title": "Implicit and Explicit Aspect Extraction in Financial Microblogs",
@@ -4501,7 +4501,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "1c3880a87966c5cb644ecef6db4bece3a1786e5a",
-    "citation_count": 15
+    "citation_count": 16
   },
   "https://aclanthology.org/W18-3202": {
     "title": "Phone Merging For Code-Switched Speech Recognition",
@@ -4509,7 +4509,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "bee2b9755532c5577fd8b8dee6e0845fc19e62bd",
-    "citation_count": 18
+    "citation_count": 21
   },
   "https://aclanthology.org/W18-3203": {
     "title": "Improving Neural Network Performance by Injecting Background Knowledge: Detecting Code-switching and Borrowing in Algerian texts",
@@ -4517,7 +4517,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "a048987b85ec53026af64f2cafc352edf836b22d",
-    "citation_count": 9
+    "citation_count": 10
   },
   "https://aclanthology.org/W18-3204": {
     "title": "Code-Mixed Question Answering Challenge: Crowd-sourcing Data and Techniques",
@@ -4525,7 +4525,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "82747fd4d75eabe05f443a51a662c6d95fb034fa",
-    "citation_count": 30
+    "citation_count": 32
   },
   "https://aclanthology.org/W18-3205": {
     "title": "Transliteration Better than Translation? Answering Code-mixed Questions over a Knowledge Base",
@@ -4533,7 +4533,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "20ae8ff5a9dc8150f21a72cd71cd04fbc3e8be01",
-    "citation_count": 8
+    "citation_count": 9
   },
   "https://aclanthology.org/W18-3206": {
     "title": "Language Identification and Analysis of Code-Switched Social Media Text",
@@ -4541,7 +4541,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "efe6e910516a1a40472a8c696d2ef162176e3ca2",
-    "citation_count": 30
+    "citation_count": 34
   },
   "https://aclanthology.org/W18-3207": {
     "title": "Code-Switching Language Modeling using Syntax-Aware Multi-Task Learning",
@@ -4549,7 +4549,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "40b630d58c55f2aacb277c18bbe196f852eedbc2",
-    "citation_count": 26
+    "citation_count": 29
   },
   "https://aclanthology.org/W18-3208": {
     "title": "Predicting the presence of a Matrix Language in code-switching",
@@ -4557,7 +4557,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "a4262a417fb7e5698ff17824491978abc47e5285",
-    "citation_count": 7
+    "citation_count": 8
   },
   "https://aclanthology.org/W18-3209": {
     "title": "Automatic Detection of Code-switching Style from Acoustics",
@@ -4565,11 +4565,11 @@
     "volume": "workshop",
     "checked": true,
     "id": "233295c0322ff98318ce63ed0b7a82de3bf58ed8",
-    "citation_count": 8
+    "citation_count": 9
   },
   "https://aclanthology.org/W18-3210": {
     "title": "Accommodation of Conversational Code-Choice",
-    "abstract": "Bilingual speakers often freely mix languages. However, in such bilingual conversations, are the language choices of the speakers coordinated? How much does one speaker's choice of language affect other speakers? In this paper, we formulate code-choice as a linguistic style, and show that speakers are indeed sensitive to and accommodating of each other's code-choice. We find that the saliency or markedness of a language in context directly affects the degree of accommodation observed. More importantly, we discover that accommodation of code-choices persists over several conversational turns. We also propose an alternative interpretation of conversational accommodation as a retrieval problem, and show that the differences in accommodation characteristics of code-choices are based on their markedness in context",
+    "abstract": "Bilingual speakers often freely mix languages. However, in such bilingual conversations, are the language choices of the speakers coordinated? How much does one speaker’s choice of language affect other speakers? In this paper, we formulate code-choice as a linguistic style, and show that speakers are indeed sensitive to and accommodating of each other’s code-choice. We find that the saliency or markedness of a language in context directly affects the degree of accommodation observed. More importantly, we discover that accommodation of code-choices persists over several conversational turns. We also propose an alternative interpretation of conversational accommodation as a retrieval problem, and show that the differences in accommodation characteristics of code-choices are based on their markedness in context",
     "volume": "workshop",
     "checked": true,
     "id": "ab625771438b5c3c4a4cee0f07f95e34958726e9",
@@ -4589,15 +4589,15 @@
     "volume": "workshop",
     "checked": true,
     "id": "4d03b9dca2b589b34a810766eebb583f96685278",
-    "citation_count": 10
+    "citation_count": 11
   },
   "https://aclanthology.org/W18-3213": {
     "title": "Simple Features for Strong Performance on Named Entity Recognition in Code-Switched Twitter Data",
-    "abstract": "In this work, we address the problem of Named Entity Recognition (NER) in code-switched tweets as a part of the Workshop on Computational Approaches to Linguistic Code-switching (CALCS) at ACL'18. Code-switching is the phenomenon where a speaker switches between two languages or variants of the same language within or across utterances, known as intra-sentential or inter-sentential code-switching, respectively. Processing such data is challenging using state of the art methods since such technology is generally geared towards processing monolingual text. In this paper we explored ways to use language identification and translation to recognize named entities in such data, however, utilizing simple features (sans multi-lingual features) with Conditional Random Field (CRF) classifier achieved the best results. Our experiments were mainly aimed at the (ENG-SPA) English-Spanish dataset but we submitted a language-independent version of our system to the (MSA-EGY) Arabic-Egyptian dataset as well and achieved good results",
+    "abstract": "In this work, we address the problem of Named Entity Recognition (NER) in code-switched tweets as a part of the Workshop on Computational Approaches to Linguistic Code-switching (CALCS) at ACL’18. Code-switching is the phenomenon where a speaker switches between two languages or variants of the same language within or across utterances, known as intra-sentential or inter-sentential code-switching, respectively. Processing such data is challenging using state of the art methods since such technology is generally geared towards processing monolingual text. In this paper we explored ways to use language identification and translation to recognize named entities in such data, however, utilizing simple features (sans multi-lingual features) with Conditional Random Field (CRF) classifier achieved the best results. Our experiments were mainly aimed at the (ENG-SPA) English-Spanish dataset but we submitted a language-independent version of our system to the (MSA-EGY) Arabic-Egyptian dataset as well and achieved good results",
     "volume": "workshop",
     "checked": true,
     "id": "42dcee7fbfc485637d839fb8d78cdd70f08864e9",
-    "citation_count": 4
+    "citation_count": 5
   },
   "https://aclanthology.org/W18-3214": {
     "title": "Bilingual Character Representation for Efficiently Addressing Out-of-Vocabulary Words in Code-Switching Named Entity Recognition",
@@ -4605,7 +4605,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "084ae7dad200635a8e440342bdab30f80b832b78",
-    "citation_count": 13
+    "citation_count": 14
   },
   "https://aclanthology.org/W18-3215": {
     "title": "Named Entity Recognition on Code-Switched Data Using Conditional Random Fields",
@@ -4621,7 +4621,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "978ac2b3a2ad4efa14a142c4ff839dd9da73f70e",
-    "citation_count": 2
+    "citation_count": 3
   },
   "https://aclanthology.org/W18-3217": {
     "title": "Tackling Code-Switched NER: Participation of CMU",
@@ -4629,7 +4629,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "70ee13de606d510534bc84a04564dcc09022194a",
-    "citation_count": 6
+    "citation_count": 7
   },
   "https://aclanthology.org/W18-3218": {
     "title": "Multilingual Named Entity Recognition on Spanish-English Code-switched Tweets using Support Vector Machines",
@@ -4637,7 +4637,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "976bff96dc12f711b47f3fd045aed359ffd3c8a8",
-    "citation_count": 2
+    "citation_count": 3
   },
   "https://aclanthology.org/W18-3219": {
     "title": "Named Entity Recognition on Code-Switched Data: Overview of the CALCS 2018 Shared Task",
@@ -4645,7 +4645,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "085544fef740255e2fc57bb13a5d047ad2fa2a82",
-    "citation_count": 46
+    "citation_count": 50
   },
   "https://aclanthology.org/W18-3220": {
     "title": "IIT (BHU) Submission for the ACL Shared Task on Named Entity Recognition on Code-switched Data",
@@ -4653,7 +4653,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "1c41e37a8201ea8f86f67380dfadc0f786eacd92",
-    "citation_count": 9
+    "citation_count": 10
   },
   "https://aclanthology.org/W18-3221": {
     "title": "Code-Switched Named Entity Recognition with Embedding Attention",
@@ -4661,7 +4661,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "81f4552d2445eae0f13cc22dcb892038ed6b4cbd",
-    "citation_count": 18
+    "citation_count": 19
   },
   "https://aclanthology.org/W18-3301": {
     "title": "Getting the subtext without the text: Scalable multimodal sentiment classification from visual and acoustic modalities",
@@ -4669,7 +4669,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "458b686034c0501e4ce807c178bb27629b9deb03",
-    "citation_count": 13
+    "citation_count": 14
   },
   "https://aclanthology.org/W18-3302": {
     "title": "Recognizing Emotions in Video Using Multimodal DNN Feature Fusion",
@@ -4677,7 +4677,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "fc7788e75e2a060e4fd96a4e030eaac77ebebc48",
-    "citation_count": 23
+    "citation_count": 27
   },
   "https://aclanthology.org/W18-3303": {
     "title": "Multimodal Relational Tensor Network for Sentiment and Emotion Classification",
@@ -4685,7 +4685,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "662e48df100e85665d8dea288fc6cc7e426f6b72",
-    "citation_count": 16
+    "citation_count": 18
   },
   "https://aclanthology.org/W18-3304": {
     "title": "Convolutional Attention Networks for Multimodal Emotion Recognition from Speech and Text Data",
@@ -4693,7 +4693,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "f357cffffca307e290d113ef450db47a31115172",
-    "citation_count": 54
+    "citation_count": 57
   },
   "https://aclanthology.org/W18-3305": {
     "title": "Sentiment Analysis using Imperfect Views from Spoken Language and Acoustic Modalities",
@@ -4701,7 +4701,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "a42e66bc97e21d6a0f050f7d8899b509b00bd0b1",
-    "citation_count": 8
+    "citation_count": 10
   },
   "https://aclanthology.org/W18-3306": {
     "title": "Polarity and Intensity: the Two Aspects of Sentiment Analysis",
@@ -4709,7 +4709,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "c2c15a4d41c0cd91913f862309bf16aba112dcf4",
-    "citation_count": 17
+    "citation_count": 19
   },
   "https://aclanthology.org/W18-3307": {
     "title": "ASR-based Features for Emotion Recognition: A Transfer Learning Approach",
@@ -4717,15 +4717,15 @@
     "volume": "workshop",
     "checked": true,
     "id": "495a17a9f719d8bd64350f0df08819559cb0354b",
-    "citation_count": 15
+    "citation_count": 17
   },
   "https://aclanthology.org/W18-3308": {
     "title": "Seq2Seq2Sentiment: Multimodal Sequence to Sequence Models for Sentiment Analysis",
-    "abstract": "Multimodal machine learning is a core research area spanning the language, visual and acoustic modalities. The central challenge in multimodal learning involves learning representations that can process and relate information from multiple modalities. In this paper, we propose two methods for unsupervised learning of joint multimodal representations using sequence to sequence (Seq2Seq) methods: a \\textit{Seq2Seq Modality Translation Model} and a \\textit{Hierarchical Seq2Seq Modality Translation Model}. We also explore multiple different variations on the multimodal inputs and outputs of these seq2seq models. Our experiments on multimodal sentiment analysis using the CMU-MOSI dataset indicate that our methods learn informative multimodal representations that outperform the baselines and achieve improved performance on multimodal sentiment analysis, specifically in the Bimodal case where our model is able to improve F1 Score by twelve points. We also discuss future directions for multimodal Seq2Seq methods",
+    "abstract": "Multimodal machine learning is a core research area spanning the language, visual and acoustic modalities. The central challenge in multimodal learning involves learning representations that can process and relate information from multiple modalities. In this paper, we propose two methods for unsupervised learning of joint multimodal representations using sequence to sequence (Seq2Seq) methods: a Seq2Seq Modality Translation Model and a Hierarchical Seq2Seq Modality Translation Model. We also explore multiple different variations on the multimodal inputs and outputs of these seq2seq models. Our experiments on multimodal sentiment analysis using the CMU-MOSI dataset indicate that our methods learn informative multimodal representations that outperform the baselines and achieve improved performance on multimodal sentiment analysis, specifically in the Bimodal case where our model is able to improve F1 Score by twelve points. We also discuss future directions for multimodal Seq2Seq methods",
     "volume": "workshop",
     "checked": true,
     "id": "9d55bd57e64c8e48c61e4f1746a2c280d608a8d2",
-    "citation_count": 45
+    "citation_count": 46
   },
   "https://aclanthology.org/W18-3309": {
     "title": "DNN Multimodal Fusion Techniques for Predicting Video Sentiment",
@@ -4733,7 +4733,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "990646d7003705b121caad08147bf1fb309ceae7",
-    "citation_count": 16
+    "citation_count": 18
   },
   "https://aclanthology.org/W18-3401": {
     "title": "Character-level Supervision for Low-resource POS Tagging",
@@ -4745,11 +4745,11 @@
   },
   "https://aclanthology.org/W18-3402": {
     "title": "Training a Neural Network in a Low-Resource Setting on Automatically Annotated Noisy Data",
-    "abstract": "Manually labeled corpora are expensive to create and often not available for low-resource languages or domains. Automatic labeling approaches are an alternative way to obtain labeled data in a quicker and cheaper way. However, these labels often contain more errors which can deteriorate a classifier's performance when trained on this data. We propose a noise layer that is added to a neural network architecture. This allows modeling the noise and train on a combination of clean and noisy data. We show that in a low-resource NER task we can improve performance by up to 35% by using additional, noisy data and handling the noise",
+    "abstract": "Manually labeled corpora are expensive to create and often not available for low-resource languages or domains. Automatic labeling approaches are an alternative way to obtain labeled data in a quicker and cheaper way. However, these labels often contain more errors which can deteriorate a classifier’s performance when trained on this data. We propose a noise layer that is added to a neural network architecture. This allows modeling the noise and train on a combination of clean and noisy data. We show that in a low-resource NER task we can improve performance by up to 35% by using additional, noisy data and handling the noise",
     "volume": "workshop",
     "checked": true,
     "id": "85cad43f428cdf84314483433fa94c74efb56bb1",
-    "citation_count": 19
+    "citation_count": 21
   },
   "https://aclanthology.org/W18-3403": {
     "title": "Multi-task learning for historical text normalization: Size matters",
@@ -4765,7 +4765,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "4d8b8fd487d3e89fa0cd48dd4db546bd2ea25585",
-    "citation_count": 7
+    "citation_count": 8
   },
   "https://aclanthology.org/W18-3405": {
     "title": "Multimodal Neural Machine Translation for Low-resource Language Pairs using Synthetic Data",
@@ -4773,7 +4773,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "3836b6c5e29a7d0ff58c73e5d5c03dc7e8603819",
-    "citation_count": 17
+    "citation_count": 18
   },
   "https://aclanthology.org/W18-3406": {
     "title": "Multi-Task Active Learning for Neural Semantic Role Labeling on Low Resource Conversational Corpus",
@@ -4781,7 +4781,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "1c3dd30b715ea10d2a2e0041e15869a89425009f",
-    "citation_count": 8
+    "citation_count": 9
   },
   "https://aclanthology.org/W18-3408": {
     "title": "Investigating Effective Parameters for Fine-tuning of Word Embeddings Using Only a Small Corpus",
@@ -4793,7 +4793,7 @@
   },
   "https://aclanthology.org/W18-3409": {
     "title": "Semi-Supervised Learning with Auxiliary Evaluation Component for Large Scale e-Commerce Text Classification",
-    "abstract": "The lack of high-quality labeled training data has been one of the critical challenges facing many industrial machine learning tasks. To tackle this challenge, in this paper, we propose a semi-supervised learning method to utilize unlabeled data and user feedback signals to improve the performance of ML models. The method employs a primary model Main and an auxiliary evaluation model Eval, where Main and Eval models are trained iteratively by automatically generating labeled data from unlabeled data and/or users' feedback signals. The proposed approach is applied to different text classification tasks. We report results on both the publicly available Yahoo! Answers dataset and our e-commerce product classification dataset. The experimental results show that the proposed method reduces the classification error rate by 4% and up to 15% across various experimental setups and datasets. A detailed comparison with other semi-supervised learning approaches is also presented later in the paper. The results from various text classification tasks demonstrate that our method outperforms those developed in previous related studies",
+    "abstract": "The lack of high-quality labeled training data has been one of the critical challenges facing many industrial machine learning tasks. To tackle this challenge, in this paper, we propose a semi-supervised learning method to utilize unlabeled data and user feedback signals to improve the performance of ML models. The method employs a primary model Main and an auxiliary evaluation model Eval, where Main and Eval models are trained iteratively by automatically generating labeled data from unlabeled data and/or users’ feedback signals. The proposed approach is applied to different text classification tasks. We report results on both the publicly available Yahoo! Answers dataset and our e-commerce product classification dataset. The experimental results show that the proposed method reduces the classification error rate by 4% and up to 15% across various experimental setups and datasets. A detailed comparison with other semi-supervised learning approaches is also presented later in the paper. The results from various text classification tasks demonstrate that our method outperforms those developed in previous related studies",
     "volume": "workshop",
     "checked": true,
     "id": "2d7044a4afd38b5506f3b416f3a080d735104072",
@@ -4801,7 +4801,7 @@
   },
   "https://aclanthology.org/W18-3410": {
     "title": "Low-rank passthrough neural networks",
-    "abstract": "Deep learning consists in training neural networks to perform computations that sequentially unfold in many steps over a time dimension or an intrinsic depth dimension. Effective learning in this setting is usually accomplished by specialized network architectures that are designed to mitigate the vanishing gradient problem of naive deep networks. Many of these architectures, such as LSTMs, GRUs, Highway Networks and Deep Residual Network, are based on a single structural principle: the state passthrough.   We observe that these architectures, hereby characterized as Passthrough Networks, in addition to the mitigation of the vanishing gradient problem, enable the decoupling of the network state size from the number of parameters of the network, a possibility that is exploited in some recent works but not thoroughly explored.   In this work we propose simple, yet effective, low-rank and low-rank plus diagonal matrix parametrizations for Passthrough Networks which exploit this decoupling property, reducing the data complexity and memory requirements of the network while preserving its memory capacity. We present competitive experimental results on synthetic tasks and a near state of the art result on sequential randomly-permuted MNIST classification, a hard task on natural data",
+    "abstract": "Various common deep learning architectures, such as LSTMs, GRUs, Resnets and Highway Networks, employ state passthrough connections that support training with high feed-forward depth or recurrence over many time steps. These “Passthrough Networks” architectures also enable the decoupling of the network state size from the number of parameters of the network, a possibility has been studied by Sak et al. (2014) with their low-rank parametrization of the LSTM. In this work we extend this line of research, proposing effective, low-rank and low-rank plus diagonal matrix parametrizations for Passthrough Networks which exploit this decoupling property, reducing the data complexity and memory requirements of the network while preserving its memory capacity. This is particularly beneficial in low-resource settings as it supports expressive models with a compact parametrization less susceptible to overfitting. We present competitive experimental results on several tasks, including language modeling and a near state of the art result on sequential randomly-permuted MNIST classification, a hard task on natural data",
     "volume": "workshop",
     "checked": true,
     "id": "b448560aa3557f3e81db7e87a580f77c782efcc6",
@@ -4809,7 +4809,7 @@
   },
   "https://aclanthology.org/W18-3501": {
     "title": "Sociolinguistic Corpus of WhatsApp Chats in Spanish among College Students",
-    "abstract": "This work presents the Sociolinguistic Corpus of WhatsApp Chats in Spanish among College Students, a corpus of raw data for general use. Its purpose is to offer data for the study of of language and interactions via Instant Messaging (IM) among bachelors. Our paper consists of an overview of both the corpus's content and demographic metadata. Furthermore, it presents the current research being conducted with it —namely parenthetical expressions, orality traits, and code-switching. This work also includes a brief outline of similar corpora and recent studies in the field of IM",
+    "abstract": "This work presents the Sociolinguistic Corpus of WhatsApp Chats in Spanish among College Students, a corpus of raw data for general use. Its purpose is to offer data for the study of of language and interactions via Instant Messaging (IM) among bachelors. Our paper consists of an overview of both the corpus’s content and demographic metadata. Furthermore, it presents the current research being conducted with it —namely parenthetical expressions, orality traits, and code-switching. This work also includes a brief outline of similar corpora and recent studies in the field of IM",
     "volume": "workshop",
     "checked": true,
     "id": "03c35721b4ba78be9bb0bb929ed5fe494f5345db",
@@ -4817,11 +4817,11 @@
   },
   "https://aclanthology.org/W18-3502": {
     "title": "A Crowd-Annotated Spanish Corpus for Humor Analysis",
-    "abstract": "Computational Humor involves several tasks, such as humor recognition, humor generation, and humor scoring, for which it is useful to have human-curated data. In this work we present a corpus of 27,000 tweets written in Spanish and crowd-annotated by their humor value and funniness score, with about four annotations per tweet, tagged by 1,300 people over the Internet. It is equally divided between tweets coming from humorous and non-humorous accounts. The inter-annotator agreement Krippendorff's alpha value is 0.5710. The dataset is available for general usage and can serve as a basis for humor detection and as a first step to tackle subjectivity",
+    "abstract": "Computational Humor involves several tasks, such as humor recognition, humor generation, and humor scoring, for which it is useful to have human-curated data. In this work we present a corpus of 27,000 tweets written in Spanish and crowd-annotated by their humor value and funniness score, with about four annotations per tweet, tagged by 1,300 people over the Internet. It is equally divided between tweets coming from humorous and non-humorous accounts. The inter-annotator agreement Krippendorff’s alpha value is 0.5710. The dataset is available for general usage and can serve as a basis for humor detection and as a first step to tackle subjectivity",
     "volume": "workshop",
     "checked": true,
     "id": "1f04dc343808165f421ebebd1f53a73454d4a2aa",
-    "citation_count": 33
+    "citation_count": 34
   },
   "https://aclanthology.org/W18-3503": {
     "title": "A Twitter Corpus for Hindi-English Code Mixed POS Tagging",
@@ -4829,7 +4829,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "f292dc91cd6ff6f5ea65d396459682c604147cc8",
-    "citation_count": 28
+    "citation_count": 30
   },
   "https://aclanthology.org/W18-3504": {
     "title": "Detecting Offensive Tweets in Hindi-English Code-Switched Language",
@@ -4837,7 +4837,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "30f3c9f3b39a732f1987f376e2bde1b2c70c5af1",
-    "citation_count": 90
+    "citation_count": 93
   },
   "https://aclanthology.org/W18-3505": {
     "title": "SocialNLP 2018 EmotionX Challenge Overview: Recognizing Emotions in Dialogues",
@@ -4845,7 +4845,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "c164c0375fc567fbace430c651ebf091b80c47c5",
-    "citation_count": 19
+    "citation_count": 20
   },
   "https://aclanthology.org/W18-3506": {
     "title": "EmotionX-DLC: Self-Attentive BiLSTM for Detecting Sequential Emotions in Dialogues",
@@ -4853,7 +4853,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "d3231ee13390e1eef92b69ed937d80f541042f26",
-    "citation_count": 13
+    "citation_count": 15
   },
   "https://aclanthology.org/W18-3507": {
     "title": "EmotionX-AR: CNN-DCNN autoencoder based Emotion Classifier",
@@ -4861,11 +4861,11 @@
     "volume": "workshop",
     "checked": true,
     "id": "ea3e59a0e6435b126ae8f624b977ae1b84d7d51a",
-    "citation_count": 24
+    "citation_count": 25
   },
   "https://aclanthology.org/W18-3508": {
     "title": "EmotionX-SmartDubai_NLP: Detecting User Emotions In Social Media Text",
-    "abstract": "This paper describes the working note on \"EmotionX\" shared task. It is hosted by SocialNLP 2018. The objective of this task is to detect the emotions, based on each speaker's utterances that are in English. Taking this as multiclass text classification problem, we have experimented to develop a model to classify the target class. The primary challenge in this task is to detect the emotions in short messages, communicated through social media. This paper describes the participation of SmartDubai_NLP team in EmotionX shared task and our investigation to detect the emotions from utterance using Neural networks and Natural language understanding",
+    "abstract": "This paper describes the working note on “EmotionX” shared task. It is hosted by SocialNLP 2018. The objective of this task is to detect the emotions, based on each speaker’s utterances that are in English. Taking this as multiclass text classification problem, we have experimented to develop a model to classify the target class. The primary challenge in this task is to detect the emotions in short messages, communicated through social media. This paper describes the participation of SmartDubai_NLP team in EmotionX shared task and our investigation to detect the emotions from utterance using Neural networks and Natural language understanding",
     "volume": "workshop",
     "checked": true,
     "id": "12f00b5b65ca9751907d6929993634ea85958709",
@@ -4901,7 +4901,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "aafeaea89bc616d7cb20da8da4ea26443ac0b29e",
-    "citation_count": 27
+    "citation_count": 28
   },
   "https://aclanthology.org/W18-3513": {
     "title": "Political discourse classification in social networks using context sensitive convolutional neural networks",
@@ -4913,7 +4913,7 @@
   },
   "https://aclanthology.org/W18-3601": {
     "title": "The First Multilingual Surface Realisation Shared Task (SR'18): Overview and Evaluation Results",
-    "abstract": "We report results from the SR'18 Shared Task, a new multilingual surface realisation task organised as part of the ACL'18 Workshop on Multilingual Surface Realisation. As in its English-only predecessor task SR'11, the shared task comprised two tracks with different levels of complexity: (a) a shallow track where the inputs were full UD structures with word order information removed and tokens lemmatised; and (b) a deep track where additionally, functional words and morphological information were removed. The shallow track was offered in ten, and the deep track in three languages. Systems were evaluated (a) automatically, using a range of intrinsic metrics, and (b) by human judges in terms of readability and meaning similarity. This report presents the evaluation results, along with descriptions of the SR'18 tracks, data and evaluation methods. For full descriptions of the participating systems, please see the separate system reports elsewhere in this volume",
+    "abstract": "We report results from the SR’18 Shared Task, a new multilingual surface realisation task organised as part of the ACL’18 Workshop on Multilingual Surface Realisation. As in its English-only predecessor task SR’11, the shared task comprised two tracks with different levels of complexity: (a) a shallow track where the inputs were full UD structures with word order information removed and tokens lemmatised; and (b) a deep track where additionally, functional words and morphological information were removed. The shallow track was offered in ten, and the deep track in three languages. Systems were evaluated (a) automatically, using a range of intrinsic metrics, and (b) by human judges in terms of readability and meaning similarity. This report presents the evaluation results, along with descriptions of the SR’18 tracks, data and evaluation methods. For full descriptions of the participating systems, please see the separate system reports elsewhere in this volume",
     "volume": "workshop",
     "checked": true,
     "id": "643bb8d632605692b5482fadc9624ed4689c19bb",
@@ -4929,7 +4929,7 @@
   },
   "https://aclanthology.org/W18-3603": {
     "title": "IIT (BHU) Varanasi at MSR-SRST 2018: A Language Model Based Approach for Natural Language Generation",
-    "abstract": "This paper describes our submission system for the Shallow Track of Surface Realization Shared Task 2018 (SRST'18). The task was to convert genuine UD structures, from which word order information had been removed and the tokens had been lemmatized, into their correct sentential form. We divide the problem statement into two parts, word reinflection and correct word order prediction. For the first sub-problem, we use a Long Short Term Memory based Encoder-Decoder approach. For the second sub-problem, we present a Language Model (LM) based approach. We apply two different sub-approaches in the LM Based approach and the combined result of these two approaches is considered as the final output of the system",
+    "abstract": "This paper describes our submission system for the Shallow Track of Surface Realization Shared Task 2018 (SRST’18). The task was to convert genuine UD structures, from which word order information had been removed and the tokens had been lemmatized, into their correct sentential form. We divide the problem statement into two parts, word reinflection and correct word order prediction. For the first sub-problem, we use a Long Short Term Memory based Encoder-Decoder approach. For the second sub-problem, we present a Language Model (LM) based approach. We apply two different sub-approaches in the LM Based approach and the combined result of these two approaches is considered as the final output of the system",
     "volume": "workshop",
     "checked": true,
     "id": "64e2db6316ef6d4e446894e63546cfc9886b15d0",
@@ -4937,14 +4937,14 @@
   },
   "https://aclanthology.org/W18-3604": {
     "title": "Surface Realization Shared Task 2018 (SR18): The Tilburg University Approach",
-    "abstract": "This study describes the approach developed by the Tilburg University team to the shallow track of the Multilingual Surface Realization Shared Task 2019 (SR'19) (Mille et al., 2019). Based on Ferreira et al. (2017) and on our 2018 submission Ferreira et al. (2018), the approach generates texts by first preprocessing an input dependency tree into an ordered linearized string, which is then realized using a rulebased and a statistical machine translation (SMT) model. This year our submission is able to realize texts in the 11 languages proposed for the task, different from our last year submission, which covered only 6 Indo-European languages. The model is publicly available1",
+    "abstract": "This study describes the approach developed by the Tilburg University team to the shallow task of the Multilingual Surface Realization Shared Task 2018 (SR18). Based on (Castro Ferreira et al., 2017), the approach works by first preprocessing an input dependency tree into an ordered linearized string, which is then realized using a statistical machine translation model. Our approach shows promising results, with BLEU scores above 50 for 5 different languages (English, French, Italian, Portuguese and Spanish) and above 35 for the Dutch language",
     "volume": "workshop",
     "checked": true,
     "id": "cc15b4968c9d2438dd4a8fdfb4bee3bce3d36839",
     "citation_count": 10
   },
   "https://aclanthology.org/W18-3605": {
-    "title": "The OSU Realizer for SRST '18: Neural Sequence-to-Sequence Inflection and Incremental Locality-Based Linearization",
+    "title": "The OSU Realizer for SRST ‘18: Neural Sequence-to-Sequence Inflection and Incremental Locality-Based Linearization",
     "abstract": "Surface realization is a nontrivial task as it involves taking structured data and producing grammatically and semantically correct utterances. Many competing grammar-based and statistical models for realization still struggle with relatively simple sentences. For our submission to the 2018 Surface Realization Shared Task, we tackle the shallow task by first generating inflected wordforms with a neural sequence-to-sequence model before incrementally linearizing them. For linearization, we use a global linear model trained using early update that makes use of features that take into account the dependency structure and dependency locality. Using this pipeline sufficed to produce surprisingly strong results in the shared task. In future work, we intend to pursue joint approaches to linearization and morphological inflection and incorporating a neural language model into the linearization choices",
     "volume": "workshop",
     "checked": true,
@@ -4969,7 +4969,7 @@
   },
   "https://aclanthology.org/W18-3608": {
     "title": "NILC-SWORNEMO at the Surface Realization Shared Task: Exploring Syntax-Based Word Ordering using Neural Models",
-    "abstract": "This paper describes the submission by the NILC Computational Linguistics research group of the University of São Paulo/Brazil to the Track 1 of the Surface Realization Shared Task (SRST Track 1). We present a neural-based method that works at the syntactic level to order the words (which we refer by NILC-SWORNEMO, standing for \"Syntax-based Word ORdering using NEural MOdels\"). Additionally, we apply a bottom-up approach to build the sentence and, using language-specific lexicons, we produce the proper word form of each lemma in the sentence. The results obtained by our method outperformed the average of the results for English, Portuguese and Spanish in the track",
+    "abstract": "This paper describes the submission by the NILC Computational Linguistics research group of the University of São Paulo/Brazil to the Track 1 of the Surface Realization Shared Task (SRST Track 1). We present a neural-based method that works at the syntactic level to order the words (which we refer by NILC-SWORNEMO, standing for “Syntax-based Word ORdering using NEural MOdels”). Additionally, we apply a bottom-up approach to build the sentence and, using language-specific lexicons, we produce the proper word form of each lemma in the sentence. The results obtained by our method outperformed the average of the results for English, Portuguese and Spanish in the track",
     "volume": "workshop",
     "checked": true,
     "id": "eef8fa4eb5692eb5a0fe3b14b5f3b90ad53824de",
@@ -4985,7 +4985,7 @@
   },
   "https://aclanthology.org/W18-3701": {
     "title": "Generating Questions for Reading Comprehension using Coherence Relations",
-    "abstract": "In this paper, we have proposed a technique for generating complex reading comprehension questions from a discourse that are more useful than factual ones derived from assertions. Our system produces a set of general-level questions using coherence relations and a set of well-defined syntactic transformations on the input text. Generated questions evaluate comprehension abilities like a comprehensive analysis of the text and its structure, correct identification of the author's intent, a thorough evaluation of stated arguments; and a deduction of the high-level semantic relations that hold between text spans. Experiments performed on the RST-DT corpus allow us to conclude that our system possesses a strong aptitude for generating intricate questions. These questions are capable of effectively assessing a student's interpretation of the text",
+    "abstract": "In this paper, we have proposed a technique for generating complex reading comprehension questions from a discourse that are more useful than factual ones derived from assertions. Our system produces a set of general-level questions using coherence relations and a set of well-defined syntactic transformations on the input text. Generated questions evaluate comprehension abilities like a comprehensive analysis of the text and its structure, correct identification of the author’s intent, a thorough evaluation of stated arguments; and a deduction of the high-level semantic relations that hold between text spans. Experiments performed on the RST-DT corpus allow us to conclude that our system possesses a strong aptitude for generating intricate questions. These questions are capable of effectively assessing a student’s interpretation of the text",
     "volume": "workshop",
     "checked": true,
     "id": "b4e9795bbf957564292888152542199080d5d306",
@@ -5005,11 +5005,11 @@
     "volume": "workshop",
     "checked": true,
     "id": "f7e8eb37667f97d5e24a404b6394e4d435d1bc07",
-    "citation_count": 6
+    "citation_count": 7
   },
   "https://aclanthology.org/W18-3704": {
     "title": "A Tutorial Markov Analysis of Effective Human Tutorial Sessions",
-    "abstract": "This paper investigates what differentiates effective tutorial sessions from less effective sessions. Towards this end, we characterize and explore human tutors' actions in tutorial dialogue sessions by mapping the tutor-tutee interactions, which are streams of dialogue utterances, into streams of actions, based on the language-as-action theory. Next, we use human expert judgment measures, evidence of learning (EL) and evidence of soundness (ES), to identify effective and ineffective sessions. We perform sub-sequence pattern mining to identify sub-sequences of dialogue modes that discriminate good sessions from bad sessions. We finally use the results of sub-sequence analysis method to generate a tutorial Markov process for effective tutorial sessions",
+    "abstract": "This paper investigates what differentiates effective tutorial sessions from less effective sessions. Towards this end, we characterize and explore human tutors’ actions in tutorial dialogue sessions by mapping the tutor-tutee interactions, which are streams of dialogue utterances, into streams of actions, based on the language-as-action theory. Next, we use human expert judgment measures, evidence of learning (EL) and evidence of soundness (ES), to identify effective and ineffective sessions. We perform sub-sequence pattern mining to identify sub-sequences of dialogue modes that discriminate good sessions from bad sessions. We finally use the results of sub-sequence analysis method to generate a tutorial Markov process for effective tutorial sessions",
     "volume": "workshop",
     "checked": true,
     "id": "217cdafa88e3f71929479f9e2afb048d6a6385c1",
@@ -5021,7 +5021,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "0215626217861e5fad3d98cd28269e22f5fbf1a9",
-    "citation_count": 4
+    "citation_count": 5
   },
   "https://aclanthology.org/W18-3706": {
     "title": "Overview of NLPTEA-2018 Share Task Chinese Grammatical Error Diagnosis",
@@ -5029,7 +5029,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "e3363692cb6ee68bcd781fc34f67da91c2b045d2",
-    "citation_count": 28
+    "citation_count": 32
   },
   "https://aclanthology.org/W18-3707": {
     "title": "Chinese Grammatical Error Diagnosis using Statistical and Prior Knowledge driven Features with Probabilistic Ensemble Enhancement",
@@ -5037,15 +5037,15 @@
     "volume": "workshop",
     "checked": true,
     "id": "d2212d091d17494d26147e13850db3e5164af103",
-    "citation_count": 18
+    "citation_count": 19
   },
   "https://aclanthology.org/W18-3708": {
     "title": "A Hybrid System for Chinese Grammatical Error Diagnosis and Correction",
-    "abstract": "This paper introduces the DM_NLP team's system for NLPTEA 2018 shared task of Chinese Grammatical Error Diagnosis (CGED), which can be used to detect and correct grammatical errors in texts written by Chinese as a Foreign Language (CFL) learners. This task aims at not only detecting four types of grammatical errors including redundant words (R), missing words (M), bad word selection (S) and disordered words (W), but also recommending corrections for errors of M and S types. We proposed a hybrid system including four models for this task with two stages: the detection stage and the correction stage. In the detection stage, we first used a BiLSTM-CRF model to tag potential errors by sequence labeling, along with some handcraft features. Then we designed three Grammatical Error Correction (GEC) models to generate corrections, which could help to tune the detection result. In the correction stage, candidates were generated by the three GEC models and then merged to output the final corrections for M and S types. Our system reached the highest precision in the correction subtask, which was the most challenging part of this shared task, and got top 3 on F1 scores for position detection of errors",
+    "abstract": "This paper introduces the DM_NLP team’s system for NLPTEA 2018 shared task of Chinese Grammatical Error Diagnosis (CGED), which can be used to detect and correct grammatical errors in texts written by Chinese as a Foreign Language (CFL) learners. This task aims at not only detecting four types of grammatical errors including redundant words (R), missing words (M), bad word selection (S) and disordered words (W), but also recommending corrections for errors of M and S types. We proposed a hybrid system including four models for this task with two stages: the detection stage and the correction stage. In the detection stage, we first used a BiLSTM-CRF model to tag potential errors by sequence labeling, along with some handcraft features. Then we designed three Grammatical Error Correction (GEC) models to generate corrections, which could help to tune the detection result. In the correction stage, candidates were generated by the three GEC models and then merged to output the final corrections for M and S types. Our system reached the highest precision in the correction subtask, which was the most challenging part of this shared task, and got top 3 on F1 scores for position detection of errors",
     "volume": "workshop",
     "checked": true,
     "id": "388eed63ee61934fda5c94814fa5d93c3dccdc07",
-    "citation_count": 9
+    "citation_count": 10
   },
   "https://aclanthology.org/W18-3709": {
     "title": "Ling@CASS Solution to the NLP-TEA CGED Shared Task 2018",
@@ -5057,15 +5057,15 @@
   },
   "https://aclanthology.org/W18-3710": {
     "title": "Chinese Grammatical Error Diagnosis Based on Policy Gradient LSTM Model",
-    "abstract": "Chinese Grammatical Error Diagnosis (CGED) is a natural language processing task for the NLPTEA2018 workshop held during ACL2018. The goal of this task is to diagnose Chinese sentences containing four kinds of grammatical errors through the model and find out the sentence errors. Chinese grammatical error diagnosis system is a very important tool, which can help Chinese learners automatically diagnose grammatical errors in many scenarios. However, due to the limitations of the Chinese language's own characteristics and datasets, the traditional model faces the problem of extreme imbalances in the positive and negative samples and the disappearance of gradients. In this paper, we propose a sequence labeling method based on the Policy Gradient LSTM model and apply it to this task to solve the above problems. The results show that our model can achieve higher precision scores in the case of lower False positive rate (FPR) and it is convenient to optimize the model on-line",
+    "abstract": "Chinese Grammatical Error Diagnosis (CGED) is a natural language processing task for the NLPTEA2018 workshop held during ACL2018. The goal of this task is to diagnose Chinese sentences containing four kinds of grammatical errors through the model and find out the sentence errors. Chinese grammatical error diagnosis system is a very important tool, which can help Chinese learners automatically diagnose grammatical errors in many scenarios. However, due to the limitations of the Chinese language’s own characteristics and datasets, the traditional model faces the problem of extreme imbalances in the positive and negative samples and the disappearance of gradients. In this paper, we propose a sequence labeling method based on the Policy Gradient LSTM model and apply it to this task to solve the above problems. The results show that our model can achieve higher precision scores in the case of lower False positive rate (FPR) and it is convenient to optimize the model on-line",
     "volume": "workshop",
     "checked": true,
     "id": "0ceee57875e9d85778795155eabd8eee549cc151",
-    "citation_count": 4
+    "citation_count": 5
   },
   "https://aclanthology.org/W18-3711": {
     "title": "The Importance of Recommender and Feedback Features in a Pronunciation Learning Aid",
-    "abstract": "Verbal communication — and pronunciation as its part — is a core skill that can be developed through guided learning. An artificial intelligence system can take a role in these guided learning approaches as an enabler of an application for pronunciation learning with a recommender system to guide language learners through exercises and feedback system to correct their pronunciation. In this paper, we report on a user study on language learners' perceived usefulness of the application. 16 international students who spoke non-native English and lived in Australia participated. 13 of them said they need to improve their pronunciation skills in English because of their foreign accent. The feedback system with features for pronunciation scoring, speech replay, and giving a pronunciation example was deemed essential by most of the respondents. In contrast, a clear dichotomy between the recommender system perceived as useful or useless existed; the system had features to prompt new common words or old poorly-scored words. These results can be used to target research and development from information retrieval and reinforcement learning for better and better recommendations to speech recognition and speech analytics for accent acquisition",
+    "abstract": "Verbal communication — and pronunciation as its part — is a core skill that can be developed through guided learning. An artificial intelligence system can take a role in these guided learning approaches as an enabler of an application for pronunciation learning with a recommender system to guide language learners through exercises and feedback system to correct their pronunciation. In this paper, we report on a user study on language learners’ perceived usefulness of the application. 16 international students who spoke non-native English and lived in Australia participated. 13 of them said they need to improve their pronunciation skills in English because of their foreign accent. The feedback system with features for pronunciation scoring, speech replay, and giving a pronunciation example was deemed essential by most of the respondents. In contrast, a clear dichotomy between the recommender system perceived as useful or useless existed; the system had features to prompt new common words or old poorly-scored words. These results can be used to target research and development from information retrieval and reinforcement learning for better and better recommendations to speech recognition and speech analytics for accent acquisition",
     "volume": "workshop",
     "checked": true,
     "id": "d1fc5138804e041fb914cb8151182afec423d605",
@@ -5085,7 +5085,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "4e6b44b79e988ce877d906d2a35f3a072e913ba6",
-    "citation_count": 20
+    "citation_count": 23
   },
   "https://aclanthology.org/W18-3714": {
     "title": "Joint learning of frequency and word embeddings for multilingual readability assessment",
@@ -5105,7 +5105,7 @@
   },
   "https://aclanthology.org/W18-3716": {
     "title": "Textual Features Indicative of Writing Proficiency in Elementary School Spanish Documents",
-    "abstract": "Childhood acquisition of written language is not straightforward. Writing skills evolve differently depending on external factors, such as the conditions in which children practice their productions and the quality of their instructors' guidance. This can be challenging in low-income areas, where schools may struggle to ensure ideal acquisition conditions. Developing computational tools to support the learning process may counterweight negative environmental influences; however, few work exists on the use of information technologies to improve childhood literacy. This work centers around the computational study of Spanish word and syllable structure in documents written by 2nd and 3rd year elementary school students. The studied texts were compared against a corpus of short stories aimed at the same age group, so as to observe whether the children tend to produce similar written patterns as the ones they are expected to interpret at their literacy level. The obtained results show some significant differences between the two kinds of texts, pointing towards possible strategies for the implementation of new education software in support of written language acquisition",
+    "abstract": "Childhood acquisition of written language is not straightforward. Writing skills evolve differently depending on external factors, such as the conditions in which children practice their productions and the quality of their instructors’ guidance. This can be challenging in low-income areas, where schools may struggle to ensure ideal acquisition conditions. Developing computational tools to support the learning process may counterweight negative environmental influences; however, few work exists on the use of information technologies to improve childhood literacy. This work centers around the computational study of Spanish word and syllable structure in documents written by 2nd and 3rd year elementary school students. The studied texts were compared against a corpus of short stories aimed at the same age group, so as to observe whether the children tend to produce similar written patterns as the ones they are expected to interpret at their literacy level. The obtained results show some significant differences between the two kinds of texts, pointing towards possible strategies for the implementation of new education software in support of written language acquisition",
     "volume": "workshop",
     "checked": true,
     "id": "ddeb43e6b0e7358e0ca536c3f7d4e7241dfc3704",
@@ -5113,7 +5113,7 @@
   },
   "https://aclanthology.org/W18-3717": {
     "title": "Assessment of an Index for Measuring Pronunciation Difficulty",
-    "abstract": "This study assesses an index for measur-ing the pronunciation difficulty of sen-tences (henceforth, pronounceability) based on the normalized edit distance from a reference sentence to a transcrip-tion of learners' pronunciation. Pro-nounceability should be examined when language teachers use a computer-assisted language learning system for pronunciation learning to maintain the motivation of learners. However, unlike the evaluation of learners' pronunciation performance, previous research did not focus on pronounceability not only for English but also for Asian languages. This study found that the normalized edit distance was reliable but not valid. The lack of validity appeared to be because of an English test used for determining the proficiency of learners",
+    "abstract": "This study assesses an index for measur-ing the pronunciation difficulty of sen-tences (henceforth, pronounceability) based on the normalized edit distance from a reference sentence to a transcrip-tion of learners’ pronunciation. Pro-nounceability should be examined when language teachers use a computer-assisted language learning system for pronunciation learning to maintain the motivation of learners. However, unlike the evaluation of learners’ pronunciation performance, previous research did not focus on pronounceability not only for English but also for Asian languages. This study found that the normalized edit distance was reliable but not valid. The lack of validity appeared to be because of an English test used for determining the proficiency of learners",
     "volume": "workshop",
     "checked": true,
     "id": "60171fc69e3a2921ee1c281e071d96669aa7d98e",
@@ -5197,7 +5197,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "4c9474e435359c0341f065d47cc5ff262e916884",
-    "citation_count": 5
+    "citation_count": 6
   },
   "https://aclanthology.org/W18-3728": {
     "title": "A Hybrid Approach Combining Statistical Knowledge with Conditional Random Fields for Chinese Grammatical Error Detection",
@@ -5213,7 +5213,7 @@
     "volume": "workshop",
     "checked": true,
     "id": "bb86e89e92f8a42a850c16839ef01154eaff3d0f",
-    "citation_count": 6
+    "citation_count": 7
   },
   "https://aclanthology.org/W18-3730": {
     "title": "Detecting Grammatical Errors in the NTOU CGED System by Identifying Frequent Subsentences",
