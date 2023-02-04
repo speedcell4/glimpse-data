@@ -1035,6 +1035,7 @@
     "title": "Large language models are few-shot clinical information extractors",
     "abstract": "A long-running goal of the clinical NLP community is the extraction of important variables trapped in clinical notes. However, roadblocks have included dataset shift from the general domain and a lack of public clinical corpora and annotations. In this work, we show that large language models, such as InstructGPT (Ouyang et al., 2022), perform well at zero- and few-shot information extraction from clinical text despite not being trained specifically for the clinical domain. Whereas text classification and generation performance have already been studied extensively in such models, here we additionally demonstrate how to leverage them to tackle a diverse set of NLP tasks which require more structured outputs, including span identification, token-level sequence classification, and relation extraction. Further, due to the dearth of available data to evaluate these systems, we introduce new datasets for benchmarking few-shot clinical information extraction based on a manual re-annotation of the CASI dataset (Moon et al., 2014) for new tasks. On the clinical extraction tasks we studied, the GPT-3 systems significantly outperform existing zero- and few-shot baselines",
     "volume": "main",
+    "checked": false,
     "id": "686d9ee744fa013cc21cdd86acd864c936e9e456",
     "citation_count": 9
   },
@@ -1178,6 +1179,7 @@
     "title": "When FLUE Meets FLANG: Benchmarks and Large Pretrained Language Model for Financial Domain",
     "abstract": "Pre-trained language models have shown impressive performance on a variety of tasks and domains. Previous research on financial language models usually employs a generic training scheme to train standard model architectures, without completely leveraging the richness of the financial data. We propose a novel domain specific Financial LANGuage model (FLANG) which uses financial keywords and phrases for better masking, together with span boundary objective and in-filing objective. Additionally, the evaluation benchmarks in the field have been limited. To this end, we contribute the Financial Language Understanding Evaluation (FLUE), an open-source comprehensive suite of benchmarks for the financial domain. These include new benchmarks across 5 NLP tasks in financial domain as well as common benchmarks used in the previous research. Experiments on these benchmarks suggest that our model outperforms those in prior literature on a variety of NLP tasks. Our models, code and benchmark data will be made publicly available on Github and Huggingface",
     "volume": "main",
+    "checked": false,
     "id": "0882a2b2787b35dbcc6e341c953d964b77abd4df",
     "citation_count": 0
   },
@@ -1467,7 +1469,7 @@
     "volume": "main",
     "checked": true,
     "id": "22fbef2bfef213a7619ee4f307e8f42d1888e638",
-    "citation_count": 1
+    "citation_count": 2
   },
   "https://aclanthology.org/2022.emnlp-main.185": {
     "title": "PromptEHR: Conditional Electronic Healthcare Records Generation with Prompt Learning",
@@ -1729,8 +1731,9 @@
     "title": "Making Pretrained Language Models Good Long-tailed Learners",
     "abstract": "Prompt-tuning has shown appealing performance in few-shot classification by virtue of its capability in effectively exploiting pre-trained knowledge. This motivates us to check the hypothesis that prompt-tuning is also a promising choice for long-tailed classification, since the tail classes are intuitively few-shot ones. To achieve this aim, we conduct empirical studies to examine the hypothesis. The results demonstrate that prompt-tuning makes pretrained language models at least good long-tailed learners. For intuitions on why prompt-tuning can achieve good performance in long-tailed classification, we carry out in-depth analyses by progressively bridging the gap between prompt-tuning and commonly used finetuning. The summary is that the classifier structure and parameterization form the key to making good long-tailed learners, in comparison with the less important input structure. Finally, we verify the applicability of our finding to few-shot classification",
     "volume": "main",
+    "checked": false,
     "id": "14f1c16a322fb6dfef7bde329648d9e34839c9dd",
-    "citation_count": 0
+    "citation_count": 1
   },
   "https://aclanthology.org/2022.emnlp-main.218": {
     "title": "UniGeo: Unifying Geometry Logical Reasoning via Reformulating Mathematical Expression",
@@ -1896,6 +1899,7 @@
     "title": "That's the Wrong Lung! Evaluating and Improving the Interpretability of Unsupervised Multimodal Encoders for Medical Data",
     "abstract": "Pretraining multimodal models on Electronic Health Records (EHRs) provides a means of learning representations that can transfer to downstream tasks with minimal supervision. Recent multimodal models induce soft local alignments between image regions and sentences. This is of particular interest in the medical domain, where alignments might highlight regions in an image relevant to specific phenomena described in free-text. While past work has suggested that attention “heatmaps” can be interpreted in this manner, there has been little evaluation of such alignments. We compare alignments from a state-of-the-art multimodal (image and text) model for EHR with human annotations that link image regions to sentences. Our main finding is that the text has an often weak or unintuitive influence on attention; alignments do not consistently reflect basic anatomical information. Moreover, synthetic modifications — such as substituting “left” for “right” — do not substantially influence highlights. Simple techniques such as allowing the model to opt out of attending to the image and few-shot finetuning show promise in terms of their ability to improve alignments with very little or no supervision. We make our code and checkpoints open-source",
     "volume": "main",
+    "checked": false,
     "id": "630438537e6260256c15635645e608f0d59e0c5e",
     "citation_count": 0
   },
@@ -1991,43 +1995,57 @@
     "title": "Summarizing Community-based Question-Answer Pairs",
     "abstract": "Community-based Question Answering (CQA), which allows users to acquire their desired information, has increasingly become an essential component of online services in various domains such as E-commerce, travel, and dining. However, an overwhelming number of CQA pairs makes it difficult for users without particular intent to find useful information spread over CQA pairs. To help users quickly digest the key information, we propose the novel CQA summarization task that aims to create a concise summary from CQA pairs. To this end, we first design a multi-stage data annotation process and create a benchmark dataset, COQASUM, based on the Amazon QA corpus. We then compare a collection of extractive and abstractive summarization methods and establish a strong baseline approach DedupLED for the CQA summarization task. Our experiment further confirms two key challenges, sentence-type transfer and deduplication removal, towards the CQA summarization task. Our data and code are publicly available",
     "volume": "main",
+    "checked": true,
+    "id": "3a471f72df08f7714cb84e8fc7513e484ad161a2",
     "citation_count": 0
   },
   "https://aclanthology.org/2022.emnlp-main.251": {
     "title": "Logical Reasoning with Span-Level Predictions for Interpretable and Robust NLI Models",
     "abstract": "Current Natural Language Inference (NLI) models achieve impressive results, sometimes outperforming humans when evaluating on in-distribution test sets. However, as these models are known to learn from annotation artefacts and dataset biases, it is unclear to what extent the models are learning the task of NLI instead of learning from shallow heuristics in their training data.We address this issue by introducing a logical reasoning framework for NLI, creating highly transparent model decisions that are based on logical rules. Unlike prior work, we show that improved interpretability can be achieved without decreasing the predictive accuracy. We almost fully retain performance on SNLI, while also identifying the exact hypothesis spans that are responsible for each model prediction.Using the e-SNLI human explanations, we verify that our model makes sensible decisions at a span level, despite not using any span labels during training. We can further improve model performance and the span-level decisions by using the e-SNLI explanations during training. Finally, our model is more robust in a reduced data setting. When training with only 1,000 examples, out-of-distribution performance improves on the MNLI matched and mismatched validation sets by 13% and 16% relative to the baseline. Training with fewer observations yields further improvements, both in-distribution and out-of-distribution",
     "volume": "main",
+    "checked": true,
+    "id": "20b12e0a6c5e3fb42cc389be6d806dc2fafe523b",
     "citation_count": 0
   },
   "https://aclanthology.org/2022.emnlp-main.252": {
     "title": "How to disagree well: Investigating the dispute tactics used on Wikipedia",
     "abstract": "Disagreements are frequently studied from the perspective of either detecting toxicity or analysing argument structure. We propose a framework of dispute tactics which unifies these two perspectives, as well as other dialogue acts which play a role in resolving disputes, such as asking questions and providing clarification. This framework includes a preferential ordering among rebuttal-type tactics, ranging from ad hominem attacks to refuting the central argument. Using this framework, we annotate 213 disagreements (3,865 utterances) from Wikipedia Talk pages. This allows us to investigate research questions around the tactics used in disagreements; for instance, we provide empirical validation of the approach to disagreement recommended by Wikipedia. We develop models for multilabel prediction of dispute tactics in an utterance, achieving the best performance with a transformer-based label powerset model. Adding an auxiliary task to incorporate the ordering of rebuttal tactics further yields a statistically significant increase. Finally, we show that these annotations can be used to provide useful additional signals to improve performance on the task of predicting escalation",
     "volume": "main",
+    "checked": true,
+    "id": "9353520f5d45ba8831afaa99110f454903cbbc2f",
     "citation_count": 0
   },
   "https://aclanthology.org/2022.emnlp-main.253": {
     "title": "Chapter Ordering in Novels",
     "abstract": "Understanding narrative flow and text coherence in long-form documents (novels) remains an open problem in NLP.To gain insight, we explore the task of chapter ordering, reconstructing the original order of chapters in novel given a random permutation of the text. This can be seen as extending the well-known sentence ordering task to vastly larger documents: our task deals with over 9,000 novels with an average of twenty chapters each, versus standard sentence ordering datasets averaging only 5-8 sentences. We formulate the task of reconstructing order as a constraint solving problem, using minimum feedback arc set and traveling salesman problem optimization criteria, where the weights of the graph are generated based on models for character occurrences and chapter boundary detection, using relational chapter scores derived from RoBERTa. Our best methods yield a Spearman correlation of 0.59 on this novel and challenging task, substantially above baseline",
     "volume": "main",
+    "checked": true,
+    "id": "4949de0080f06327cfba8d41a66f676f1ec95d2d",
     "citation_count": 0
   },
   "https://aclanthology.org/2022.emnlp-main.254": {
     "title": "Open-ended Knowledge Tracing for Computer Science Education",
     "abstract": "In educational applications, knowledge tracing refers to the problem of estimating students’ time-varying concept/skill mastery level from their past responses to questions and predicting their future performance.One key limitation of most existing knowledge tracing methods is that they treat student responses to questions as binary-valued, i.e., whether they are correct or incorrect. Response correctness analysis/prediction is straightforward, but it ignores important information regarding mastery, especially for open-ended questions.In contrast, exact student responses can provide much more information.In this paper, we conduct the first exploration int open-ended knowledge tracing (OKT) by studying the new task of predicting students’ exact open-ended responses to questions.Our work is grounded in the domain of computer science education with programming questions. We develop an initial solution to the OKT problem, a student knowledge-guided code generation approach, that combines program synthesis methods using language models with student knowledge tracing methods. We also conduct a series of quantitative and qualitative experiments on a real-world student code dataset to validate and demonstrate the promise of OKT",
     "volume": "main",
+    "checked": true,
+    "id": "78863000eb70945cc8d791d45d4a3fe8a6521cb6",
     "citation_count": 0
   },
   "https://aclanthology.org/2022.emnlp-main.255": {
     "title": "Logical Neural Networks for Knowledge Base Completion with Embeddings & Rules",
     "abstract": "Knowledge base completion (KBC) has benefitted greatly by learning explainable rules in an human-interpretable dialect such as first-order logic. Rule-based KBC has so far, mainly focussed on learning one of two types of rules: conjunction-of-disjunctions and disjunction-of-conjunctions. We qualitatively show, via examples, that one of these has an advantage over the other when it comes to achieving high quality KBC. To the best of our knowledge, we are the first to propose learning both kinds of rules within a common framework. To this end, we propose to utilize logical neural networks (LNN), a powerful neuro-symbolic AI framework that can express both kinds of rules and learn these end-to-end using gradient-based optimization. Our in-depth experiments show that our LNN-based approach to learning rules for KBC leads to roughly 10% relative improvements, if not more, over SotA rule-based KBC methods. Moreover, by showing how to combine our proposed methods with knowledge graph embeddings we further achieve an additional 7.5% relative improvement",
     "volume": "main",
+    "checked": true,
+    "id": "3b9ca1e2487bacc4147782c528f85724cdc37d09",
     "citation_count": 0
   },
   "https://aclanthology.org/2022.emnlp-main.256": {
     "title": "MedCLIP: Contrastive Learning from Unpaired Medical Images and Text",
     "abstract": "Existing vision-text contrastive learning like CLIP aims to match the paired image and caption embeddings while pushing others apart, which improves representation transferability and supports zero-shot prediction. However, medical image-text datasets are orders of magnitude below the general images and captions from the internet. Moreover, previous methods encounter many false negatives, i.e., images and reports from separate patients probably carry the same semantics but are wrongly treated as negatives. In this paper, we decouple images and texts for multimodal contrastive learning, thus scaling the usable training data in a combinatorial magnitude with low cost. We also propose to replace the InfoNCE loss with semantic matching loss based on medical knowledge to eliminate false negatives in contrastive learning. We prove that MedCLIP is a simple yet effective framework: it outperforms state-of-the-art methods on zero-shot prediction, supervised classification, and image-text retrieval. Surprisingly, we observe that with only 20K pre-training data, MedCLIP wins over the state-of-the-art method (using 200K data). The code is available at https://github.com/RyanWangZf/MedCLIP",
     "volume": "main",
-    "citation_count": 0
+    "checked": true,
+    "id": "cdd9c1d23f9e89d5113f3e31821bb174c6a6afed",
+    "citation_count": 5
   },
   "https://aclanthology.org/2022.emnlp-main.257": {
     "title": "GA-SAM: Gradient-Strength based Adaptive Sharpness-Aware Minimization for Improved Generalization",
