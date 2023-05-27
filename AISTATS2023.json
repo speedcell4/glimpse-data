@@ -579,7 +579,7 @@
     "title": "Alternating Projected SGD for Equality-constrained Bilevel Optimization",
     "abstract": "Bilevel optimization, which captures the inherent nested structure of machine learning problems, is gaining popularity in many recent applications. Existing works on bilevel optimization mostly consider either the unconstrained problems or the constrained upper-level problems. In this context, this paper considers the stochastic bilevel optimization problems with equality constraints in both upper and lower levels. By leveraging the special structure of the equality constraints problem, the paper first presents an alternating projected SGD approach to tackle this problem and establishes the $\\tilde{\\cal O}(\\epsilon^{-2})$ sample and iteration complexity that matches the state-of-the-art complexity of ALSET Chen et al. (2021) for stochastic unconstrained bilevel problems. To further save the cost of projection, the paper presents an alternating projected SGD approach with lazy projection and establishes the $\\tilde{\\cal O}(\\epsilon^{-2}/T)$ upper-level and $\\tilde{\\cal O}(\\epsilon^{-1.5}/T^{\\frac{3}{4}})$ lower-level projection complexity of this new algorithm, where $T$ is the upper-level projection interval. Application to federated bilevel optimization has been presented to showcase the performance of our algorithms. Our results demonstrate that equality-constrained bilevel optimization with strongly-convex lower-level problems can be solved as efficiently as stochastic single-level optimization problems",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "e39ad5120ed5eaa88f8bf6e8c69b17fd1a3e9369",
     "citation_count": 2
   },
@@ -603,7 +603,7 @@
     "title": "Can 5th Generation Local Training Methods Support Client Sampling? Yes!",
     "abstract": "The celebrated FedAvg algorithm of McMahan et al. (2017) is based on three components: client sampling (CS), data sampling (DS) and local training (LT). While the first two are reasonably well understood, the third component, whose role is to reduce the number of communication rounds needed to train the model, resisted all attempts at a satisfactory theoretical explanation. Malinovsky et al. (2022) identified four distinct generations of LT methods based on the quality of the provided theoretical communication complexity guarantees. Despite a lot of progress in this area, none of the existing works were able to show that it is theoretically better to employ multiple local gradient-type steps (i.e., to engage in LT) than to rely on a single local gradient-type step only in the important heterogeneous data regime. In a recent breakthrough embodied in their ProxSkip method and its theoretical analysis, Mishchenko et al. (2022) showed that LT indeed leads to provable communication acceleration for arbitrarily heterogeneous data, thus jump-starting the 5th generation of LT methods. However, while these latest generation LT methods are compatible with DS, none of them support CS. We resolve this open problem in the affirmative. In order to do so, we had to base our algorithmic development on new algorithmic and theoretical foundations",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "4d86e6724f969769517c8f64589eb28d463118ae",
     "citation_count": 6
   },
@@ -779,9 +779,9 @@
     "title": "A Constant-Factor Approximation Algorithm for Reconciliation $k$-Median",
     "abstract": "In the reconciliation $k$-median problem we ask to cluster a set of data points by picking $k$ cluster centers so as to minimize the sum of distances of the data points to their cluster centers plus the sum of pairwise distances between the centers. The problem, which is a variant of classic $k$-median, aims to find a set of cluster centers that are not too far from each other, and it has applications, or example, when selecting a committee to deliberate on a controversial topic. This problem was introduced recently (Ordozgoiti et al., 2019), and it was shown that a local-search-based algorithm is always within a factor $O(k)$ of an optimum solution and performs well in practice. In this paper, we demonstrate a close connection of reconciliation $k$-median to a variant of the $k$-facility location problem, in which each potential cluster center has an individual opening cost and we aim at minimizing the sum of client-center distances and the opening costs. This connection enables us to provide a new algorithm for reconciliation $k$-median that yields a constant-factor approximation (independent of $k$). We also provide a sparsification scheme that reduces the number of potential cluster centers to $O(k)$ in order to substantially speed up approximation algorithms. We empirically compare our new algorithms with the previous local-search approach, showing improved performance and stability. In addition, we show how our sparsification approach helps to reduce computation time without significantly compromising the solution quality",
     "volume": "main",
-    "checked": false,
-    "id": null,
-    "citation_count": 0
+    "checked": true,
+    "id": "bbab51b438a0fb48271dd76aaaa02313017e75d2",
+    "citation_count": 586
   },
   "https://proceedings.mlr.press/v206/holt23a.html": {
     "title": "Neural Laplace Control for Continuous-time Delayed Systems",
@@ -803,7 +803,7 @@
     "title": "Exact Gradient Computation for Spiking Neural Networks via Forward Propagation",
     "abstract": "Spiking neural networks (SNN) have recently emerged as alternatives to traditional neural networks, owing to its energy efficiency benefits and capacity to capture biological neuronal mechanisms. However, the classic backpropagation algorithm for training traditional networks has been notoriously difficult to apply to SNN due to the hard-thresholding and discontinuities at spike times. Therefore, a large majority of prior work believes exact gradients for SNN w.r.t. their weights do not exist and has focused on approximation methods to produce surrogate gradients. In this paper, (1) by applying the implicit function theorem to SNN at the discrete spike times, we prove that, albeit being non-differentiable in time, SNNs have well-defined gradients w.r.t. their weights, and (2) we propose a novel training algorithm, called forward propagation (FP), that computes exact gradients for SNN. FP exploits the causality structure between the spikes and allows us to parallelize computation forward in time. It can be used with other algorithms that simulate the forward pass, and it also provides insights on why other related algorithms such as Hebbian learning and also recently-proposed surrogate gradient methods may perform well",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "a1e01b4dd66bada9524cd2ebd52f9e51859b48b3",
     "citation_count": 0
   },
@@ -1171,7 +1171,7 @@
     "title": "Simulator-Based Inference with WALDO: Confidence Regions by Leveraging Prediction Algorithms and Posterior Estimators for Inverse Problems",
     "abstract": "Prediction algorithms, such as deep neural networks (DNNs), are used in many domain sciences to directly estimate internal parameters of interest in simulator-based models, especially in settings where the observations include images or complex high-dimensional data. In parallel, modern neural density estimators, such as normalizing flows, are becoming increasingly popular for uncertainty quantification, especially when both parameters and observations are high-dimensional. However, parameter inference is an inverse problem and not a prediction task; thus, an open challenge is to construct conditionally valid and precise confidence regions, with a guaranteed probability of covering the true parameters of the data-generating process, no matter what the (unknown) parameter values are, and without relying on large-sample theory. Many simulator-based inference (SBI) methods are indeed known to produce biased or overly confident parameter regions, yielding misleading uncertainty estimates. This paper presents WALDO, a novel method to construct confidence regions with finite-sample conditional validity by leveraging prediction algorithms or posterior estimators that are currently widely adopted in SBI. WALDO reframes the well-known Wald test statistic, and uses a computationally efficient regression-based machinery for classical Neyman inversion of hypothesis tests. We apply our method to a recent high-energy physics problem, where prediction with DNNs has previously led to estimates with prediction bias. We also illustrate how our approach can correct overly confident posterior regions computed with normalizing flows",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "2ec6cb3331db0968aa3ed55348c05d2ff0f57420",
     "citation_count": 0
   },
@@ -1235,7 +1235,7 @@
     "title": "Byzantine-Robust Federated Learning with Optimal Statistical Rates",
     "abstract": "We propose Byzantine-robust federated learning protocols with nearly optimal statistical rates based on recent progress in high dimensional robust statistics. In contrast to prior work, our proposed protocols improve the dimension dependence and achieve a near-optimal statistical rate for strongly convex losses. We also provide statistical lower bound for the problem. For experiments, we benchmark against competing protocols and show the empirical superiority of the proposed protocols",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "594908d1b7e1a15ede77c1b2a103be680ceeec6d",
     "citation_count": 4
   },
@@ -1371,7 +1371,7 @@
     "title": "To Impute or not to Impute? Missing Data in Treatment Effect Estimation",
     "abstract": "Missing data is a systemic problem in practical scenarios that causes noise and bias when estimating treatment effects. This makes treatment effect estimation from data with missingness a particularly tricky endeavour. A key reason for this is that standard assumptions on missingness are rendered insufficient due to the presence of an additional variable, treatment, besides the input (e.g. an individual) and the label (e.g. an outcome). The treatment variable introduces additional complexity with respect to why some variables are missing that is not fully explored by previous work. In our work we introduce mixed confounded missingness (MCM), a new missingness mechanism where some missingness determines treatment selection and other missingness is determined by treatment selection. Given MCM, we show that naively imputing all data leads to poor performing treatment effects models, as the act of imputation effectively removes information necessary to provide unbiased estimates. However, no imputation at all also leads to biased estimates, as missingness determined by treatment introduces bias in covariates. Our solution is selective imputation, where we use insights from MCM to inform precisely which variables should be imputed and which should not. We empirically demonstrate how various learners benefit from selective imputation compared to other solutions for missing data. We highlight that our experiments encompass both average treatment effects and conditional average treatment effects",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "21f7bc1e4d52276946c90efc63a2a68df6af94ec",
     "citation_count": 2
   },
@@ -1499,7 +1499,7 @@
     "title": "The ELBO of Variational Autoencoders Converges to a Sum of Entropies",
     "abstract": "The central objective function of a variational autoencoder (VAE) is its variational lower bound (the ELBO). Here we show that for standard (i.e., Gaussian) VAEs the ELBO converges to a value given by the sum of three entropies: the (negative) entropy of the prior distribution, the expected (negative) entropy of the observable distribution, and the average entropy of the variational distributions (the latter is already part of the ELBO). Our derived analytical results are exact and apply for small as well as for intricate deep networks for encoder and decoder. Furthermore, they apply for finitely and infinitely many data points and at any stationary point (including local maxima and saddle points). The result implies that the ELBO can for standard VAEs often be computed in closed-form at stationary points while the original ELBO requires numerical approximations of integrals. As a main contribution, we provide the proof that the ELBO for VAEs is at stationary points equal to entropy sums. Numerical experiments then show that the obtained analytical results are sufficiently precise also in those vicinities of stationary points that are reached in practice. Furthermore, we discuss how the novel entropy form of the ELBO can be used to analyze and understand learning behavior. More generally, we believe that our contributions can be useful for future theoretical and practical studies on VAE learning as they provide novel information on those points in parameters space that optimization of VAEs converges to",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "58cd25fedda1ae731175cf4406537e1b3d549bf3",
     "citation_count": 0
   },
@@ -1603,7 +1603,7 @@
     "title": "Unsupervised representation learning with recognition-parametrised probabilistic models",
     "abstract": "We introduce a new approach to probabilistic unsupervised learning based on the recognition-parametrised model (RPM): a normalised semi-parametric hypothesis class for joint distributions over observed and latent variables. Under the key assumption that observations are conditionally independent given latents, the RPM combines parametric prior and observation-conditioned latent distributions with non-parametric observation marginals. This approach leads to a flexible learnt recognition model capturing latent dependence between observations, without the need for an explicit, parametric generative model. The RPM admits exact maximum-likelihood learning for discrete latents, even for powerful neural network-based recognition. We develop effective approximations applicable in the continuous latent case. Experiments demonstrate the effectiveness of the RPM on high-dimensional data, learning image classification from weak indirect supervision; direct image-level latent Dirichlet allocation; and Recognition-Parametrised Gaussian Process Factor Analysis (RP-GPFA) applied to multi-factorial spatiotemporal datasets. The RPM provides a powerful framework to discover meaningful latent structure underlying observational data, a function critical to both animal and artificial intelligence",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "8225ebec166115f85035e324c1466ef312e67122",
     "citation_count": 0
   },
@@ -1739,7 +1739,7 @@
     "title": "Nyström Method for Accurate and Scalable Implicit Differentiation",
     "abstract": "The essential difficulty of gradient-based bilevel optimization using implicit differentiation is to estimate the inverse Hessian vector product with respect to neural network parameters. This paper proposes to tackle this problem by the Nyström method and the Woodbury matrix identity, exploiting the low-rankness of the Hessian. Compared to existing methods using iterative approximation, such as conjugate gradient and the Neumann series approximation, the proposed method avoids numerical instability and can be efficiently computed in matrix operations without iterations. As a result, the proposed method works stably in various tasks and is faster than iterative approximations. Throughout experiments including large-scale hyperparameter optimization and meta learning, we demonstrate that the Nyström method consistently achieves comparable or even superior performance to other approaches. The source code is available from https://github.com/moskomule/hypergrad",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "1eaa43021eca45abc249b5cd79b3b91c7afef4e2",
     "citation_count": 0
   },
@@ -1795,7 +1795,7 @@
     "title": "Approximating a RUM from Distributions on $k$-Slates",
     "abstract": "In this work we consider the problem of fitting Random Utility Models (RUMs) to user choices. Given the winner distributions of the subsets of size $k$ of a universe, we obtain a polynomial-time algorithm that finds the RUM that best approximates the given distribution on average. Our algorithm is based on a linear program that we solve using the ellipsoid method. Given that its separation oracle problem is NP-hard, we devise an approximate separation oracle that can be viewed as a generalization of the weighted Feedback Arc Set problem to hypergraphs. Our theoretical result can also be made practical: we obtain a heuristic that scales to real-world datasets",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "191e837b8368f977e0d7e702f26cd8646c96f0a2",
     "citation_count": 0
   },
