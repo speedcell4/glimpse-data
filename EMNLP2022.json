@@ -10931,7 +10931,7 @@
     "title": "Topic-Aware Response Generation in Task-Oriented Dialogue with Unstructured Knowledge Access",
     "abstract": "To alleviate the problem of structured databases’ limited coverage, recent task-oriented dialogue systems incorporate external unstructured knowledge to guide the generation of system responses. However, these usually use word or sentence level similarities to detect the relevant knowledge context, which only partially capture the topical level relevance. In this paper, we examine how to better integrate topical information in knowledge grounded task-oriented dialogue and propose “Topic-Aware Response Generation” (TARG), an end-to-end response generation model. TARG incorporates multiple topic-aware attention mechanisms to derive the importance weighting scheme over dialogue utterances and external knowledge sources towards a better understanding of the dialogue history. Experimental results indicate that TARG achieves state-of-the-art performance in knowledge selection and response generation, outperforming previous state-of-the-art by 3.2, 3.6, and 4.2 points in EM, F1 and BLEU-4 respectively on Doc2Dial, and performing comparably with previous work on DSTC9; both being knowledge-grounded task-oriented dialogue datasets",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "8dbd8cf8d6e37237f58809e5844ee565640aa95a",
     "citation_count": 1
   },
@@ -10939,7 +10939,7 @@
     "title": "Revisiting Transformer-based Models for Long Document Classification",
     "abstract": "The recent literature in text classification is biased towards short text sequences (e.g., sentences or paragraphs). In real-world applications, multi-page multi-paragraph documents are common and they cannot be efficiently encoded by vanilla Transformer-based models. We compare different Transformer-based Long Document Classification (TrLDC) approaches that aim to mitigate the computational overhead of vanilla transformers to encode much longer text, namely sparse attention and hierarchical encoding methods.We examine several aspects of sparse attention (e.g., size of local attention window, use of global attention) and hierarchical (e.g., document splitting strategy) transformers on four document classification datasets covering different domains. We observe a clear benefit from being able to process longer text, and, based on our results, we derive practical advice of applying Transformer-based models on long document classification tasks",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "69ec135064e66bd2c9b278687d8b7fd03391284a",
     "citation_count": 22
   },
@@ -10947,7 +10947,7 @@
     "title": "Time-aware Prompting for Text Generation",
     "abstract": "In this paper, we study the effects of incorporating timestamps, such as document creation dates, into generation systems. Two types of time-aware prompts are investigated: (1) textual prompts that encode document timestamps in natural language sentences; and (2) linear prompts that convert timestamps into continuous vectors. To explore extrapolation to future data points, we further introduce a new data-to-text generation dataset, TempWikiBio, containing more than 4 millions of chronologically ordered revisions of biographical articles from English Wikipedia, each paired with structured personal profiles.Through data-to-text generation on TempWikiBio, text-to-text generation on the content transfer dataset, and summarization on XSum,we show that linear prompts on encoder and textual prompts improve the generation quality on all datasets.Despite having less performance drop when testing on data drawn from a later time, linear prompts focus more on non-temporal information and are less sensitive to the given timestamps, according to human evaluations and sensitivity analyses.Meanwhile, textual prompts establish the association between the given timestamps and the output dates, yielding more factual temporal information in the output",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "c36ab572b5be7a470b725b87e369038295d5e7ab",
     "citation_count": 1
   },
@@ -10955,7 +10955,7 @@
     "title": "Improving Scheduled Sampling with Elastic Weight Consolidation for Neural Machine Translation",
     "abstract": "Despite strong performance in many sequence-to-sequence tasks, autoregressive models trained with maximum likelihood estimation suffer from exposure bias, i.e. the discrepancy between the ground-truth prefixes used during training and the model-generated prefixes used at inference time. Scheduled sampling is a simple and empirically successful approach which addresses this issue by incorporating model-generated prefixes into training. However, it has been argued that it is an inconsistent training objective leading to models ignoring the prefixes altogether. In this paper, we conduct systematic experiments and find that scheduled sampling, while it ameliorates exposure bias by increasing model reliance on the input sequence, worsens performance when the prefix at inference time is correct, a form of catastrophic forgetting. We propose to use Elastic Weight Consolidation to better balance mitigating exposure bias with retaining performance. Experiments on four IWSLT’14 and WMT’14 translation datasets demonstrate that our approach alleviates catastrophic forgetting and significantly outperforms maximum likelihood estimation and scheduled sampling baselines",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "6c2ef65cb0c3d204ca557d83c78b8d17657bdeca",
     "citation_count": 0
   },
@@ -10963,7 +10963,7 @@
     "title": "Ensemble Transformer for Efficient and Accurate Ranking Tasks: an Application to Question Answering Systems",
     "abstract": "Large transformer models can highly improve Answer Sentence Selection (AS2) tasks, but their high computational costs prevent their use in many real-world applications. In this paper, we explore the following research question: How can we make the AS2 models more accurate without significantly increasing their model complexity? To address the question, we propose a Multiple Heads Student architecture (named CERBERUS), an efficient neural network designed to distill an ensemble of large transformers into a single smaller model. CERBERUS consists of two components: a stack of transformer layers that is used to encode inputs, and a set of ranking heads; unlike traditional distillation technique, each of them is trained by distilling a different large transformer architecture in a way that preserves the diversity of the ensemble members. The resulting model captures the knowledge of heterogeneous transformer models by using just a few extra parameters. We show the effectiveness of CERBERUS on three English datasets for AS2; our proposed approach outperforms all single-model distillations we consider, rivaling the state-of-the-art large AS2 models that have 2.7× more parameters and run 2.5× slower. Code for our model is available at https://github.com/amazon-research/wqa-cerberus",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "df36065bbf5041cb06d066591a87e813cb7ade09",
     "citation_count": 3
   },
@@ -10971,7 +10971,7 @@
     "title": "Uncertainty Quantification with Pre-trained Language Models: A Large-Scale Empirical Analysis",
     "abstract": "Pre-trained language models (PLMs) have gained increasing popularity due to their compelling prediction performance in diverse natural language processing (NLP) tasks. When formulating a PLM-based prediction pipeline for NLP tasks, it is also crucial for the pipeline to minimize the calibration error, especially in safety-critical applications. That is, the pipeline should reliably indicate when we can trust its predictions. In particular, there are various considerations behind the pipeline: (1) the choice and (2) the size of PLM, (3) the choice of uncertainty quantifier, (4) the choice of fine-tuning loss, and many more. Although prior work has looked into some of these considerations, they usually draw conclusions based on a limited scope of empirical studies. There still lacks a holistic analysis on how to compose a well-calibrated PLM-based prediction pipeline. To fill this void, we compare a wide range of popular options for each consideration based on three prevalent NLP classification tasks and the setting of domain shift. In response, we recommend the following: (1) use ELECTRA for PLM encoding, (2) use larger PLMs if possible, (3) use Temp Scaling as the uncertainty quantifier, and (4) use Focal Loss for fine-tuning",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "551b05734eb2181c4ca009a411144e8447ed1606",
     "citation_count": 5
   },
@@ -10979,7 +10979,7 @@
     "title": "How to Represent Context Better? An Empirical Study on Context Modeling for Multi-turn Response Selection",
     "abstract": "Building retrieval-based dialogue models that can predict appropriate responses based on the understanding of multi-turn context messages is a challenging problem. Early models usually concatenate all utterances or independently encode each dialogue turn, which may lead to an inadequate understanding of dialogue status. Although a few researchers have noticed the importance of context modeling in multi-turn response prediction, there is no systematic comparison to analyze how to model context effectively and no framework to unify those methods. In this paper, instead of configuring new architectures, we investigate how to improve existing models with a better context modeling method. Specifically, we heuristically summarize three categories of turn-aware context modeling strategies which model the context messages from the perspective of sequential relationship, local relationship, and query-aware manner respectively. A Turn-Aware Context Modeling (TACM) layer is explored to flexibly adapt and unify these context modeling strategies to several advanced response selection models. Evaluation results on three public data sets indicate that employing each individual context modeling strategy or multiple strategies can consistently improve the performance of existing models",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "c541a403facebd93dcf7f18e10a595a35360e845",
     "citation_count": 0
   },
@@ -10987,7 +10987,7 @@
     "title": "CHIA: CHoosing Instances to Annotate for Machine Translation",
     "abstract": "Neural machine translation (MT) systems have been shown to perform poorly on low-resource language pairs, for which large-scale parallel data is unavailable. Making the data annotation process faster and cheaper is therefore important to ensure equitable access to MT systems. To make optimal use of a limited annotation budget, we present CHIA (choosing instances to annotate), a method for selecting instances to annotate for machine translation. Using an existing multi-way parallel dataset of high-resource languages, we first identify instances, based on model training dynamics, that are most informative for training MT models for high-resource languages. We find that there are cross-lingual commonalities in instances that are useful for MT model training, which we use to identify instances that will be useful to train models on a new target language. Evaluating on 20 languages from two corpora, we show that training on instances selected using our method provides an average performance improvement of 1.59 BLEU over training on randomly selected instances of the same size",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "75fbf14e8be711552bd1e7e2eec966fc6874cd54",
     "citation_count": 0
   },
@@ -10995,15 +10995,15 @@
     "title": "Guiding Neural Machine Translation with Semantic Kernels",
     "abstract": "Machine Translation task has made great progress with the help of auto-regressive decoding paradigm and Transformer architecture. In this paradigm, though the encoder can obtain global source representations, the decoder can only use translation history to determine the current word. Previous promising works attempted to address this issue by applying a draft or a fixed-length semantic embedding as target-side global information. However, these methods either degrade model efficiency or show limitations in expressing semantics. Motivated by Functional Equivalence Theory, we extract several semantic kernels from a source sentence, each of which can express one semantic segment of the original sentence. Together, these semantic kernels can capture global semantic information, and we project them into target embedding space to guide target sentence generation. We further force our model to use semantic kernels at each decoding step through an adaptive mask algorithm. Empirical studies on various machine translation benchmarks show that our approach gains approximately an improvement of 1 BLEU score on most benchmarks over the Transformer baseline and about 1.7 times faster than previous works on average at inference time",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "f32eb3cc5ef59516eac23eb8328340f106cda38e",
-    "citation_count": 5
+    "citation_count": 0
   },
   "https://aclanthology.org/2022.findings-emnlp.542": {
     "title": "HiSMatch: Historical Structure Matching based Temporal Knowledge Graph Reasoning",
     "abstract": "A Temporal Knowledge Graph (TKG) is a sequence of KGs with respective timestamps, which adopts quadruples in the form of (subject, relation, object, timestamp) to describe dynamic facts. TKG reasoning has facilitated many real-world applications via answering such queries as (query entity, query relation, ?, future timestamp) about future. This is actually a matching task between a query and candidate entities based on their historical structures, which reflect behavioral trends of the entities at different timestamps. In addition, recent KGs provide background knowledge of all the entities, which is also helpful for the matching. Thus, in this paper, we propose the Historical Structure Matching (HiSMatch) model. It applies two structure encoders to capture the semantic information contained in the historical structures of the query and candidate entities. Besides, it adopts another encoder to integrate the background knowledge into the model. TKG reasoning experiments on six benchmark datasets demonstrate the significant improvement of the proposed HiSMatch model, with up to 5.6% performance improvement in MRR, compared to the state-of-the-art baselines",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "7e17da15c878a448174372385dfd775cf9472e00",
     "citation_count": 3
   },
@@ -11011,7 +11011,7 @@
     "title": "Dependency Parsing via Sequence Generation",
     "abstract": "Dependency parsing aims to extract syntactic dependency structure or semantic dependency structure for sentences.Existing methods for dependency parsing include transition-based method, graph-based method and sequence-to-sequence method.These methods obtain excellent performance and we notice them belong to labeling method.Therefore, it may be very valuable and interesting to explore the possibility of using generative method to implement dependency parsing.In this paper, we propose to achieve Dependency Parsing (DP) via Sequence Generation (SG) by utilizing only the pre-trained language model without any auxiliary structures.We first explore different serialization designing strategies for converting parsing structures into sequences.Then we design dependency units and concatenate these units into the sequence for DPSG.We verify the DPSG is capable of parsing on widely used DP benchmarks, i.e., PTB, UD2.2, SDP15 and SemEval16.In addition, we also investigate the astonishing low-resource applicability of DPSG, which includes unsupervised cross-domain conducted on CODT and few-shot cross-task conducted on SDP15.Our research demonstrates that sequence generation is one of the effective methods to achieve dependency parsing.Our codes are available now",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "bd502fe8bf5a42fbd861329965375c6e91e24601",
     "citation_count": 0
   },
@@ -11019,7 +11019,7 @@
     "title": "Scaling Laws Under the Microscope: Predicting Transformer Performance from Small Scale Experiments",
     "abstract": "Neural scaling laws define a predictable relationship between a model’s parameter count and its performance after training in the form of a power law. However, most research to date has not explicitly investigated whether scaling laws can be used to accelerate model development. In this work, we perform such an empirical investigation across a wide range of language understanding tasks, starting from models with as few as 10K parameters, and evaluate downstream performance across 9 language understanding tasks.We find that scaling laws emerge at finetuning time in some NLP tasks, and that they can also be exploited for debugging convergence when training large models. Moreover, for tasks where scaling laws exist, they can be used to predict the performance of larger models, which enables effective model selection. However, revealing scaling lawsrequires careful hyperparameter tuning and multiple runs for the purpose of uncertainty estimation, which incurs additional overhead, partially offsetting the computational benefits",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "e404bdfaa858b3c25540aa5d2c5dfe20c16ead37",
     "citation_count": 3
   },
@@ -11027,7 +11027,7 @@
     "title": "Analyzing the Limits of Self-Supervision in Handling Bias in Language",
     "abstract": "Prompting inputs with natural language task descriptions has emerged as a popular mechanism to elicit reasonably accurate outputs from large-scale generative language models with little to no in-context supervision. This also helps gain insight into how well language models capture the semantics of a wide range of downstream tasks purely from self-supervised pre-training on massive corpora of unlabeled text. Such models have naturally also been exposed to a lot of undesirable content like racist and sexist language and there is only some work on awareness of models along these dimensions. In this paper, we define and comprehensively evaluate how well such language models capture the semantics of four tasks for bias: diagnosis, identification, extraction and rephrasing. We define three broad classes of task descriptions for these tasks: statement, question, and completion, with numerous lexical variants within each class. We study the efficacy of prompting for each task using these classes and the null task description across several decoding methods and few-shot examples. Our analyses indicate that language models are capable of performing these tasks to widely varying degrees across different bias dimensions, such as gender and political affiliation. We believe our work is an important step towards unbiased language models by quantifying the limits of current self-supervision objectives at accomplishing such sociologically challenging tasks",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "fb2e38502ac66ae09b58e87d7ef25c60e7d49969",
     "citation_count": 0
   },
@@ -11035,15 +11035,15 @@
     "title": "Multiple Instance Learning for Offensive Language Detection",
     "abstract": "Automatic offensive language detection has become a crucial issue in recent years. Existing researches on this topic are usually based on a large amount of data annotated at sentence level to train a robust model. However, sentence-level annotations are expensive in practice as the scenario expands, while there exist a large amount of natural labels from historical information on online platforms such as reports and punishments. Notably, these natural labels are usually in bag-level corresponding to the whole documents (articles, user profiles, conversations, etc.). Therefore, we target at proposing an approach capable of utilizing the bag-level labeled data for offensive language detection in this study. For this purpose, we formalize this task into a multiple instance learning (MIL) problem. We break down the design of existing MIL methods and propose a hybrid fusion MIL model with mutual-attention mechanism. In order to verify the validity of the proposed method, we present two new bag-level labeled datasets for offensive language detection: OLID-bags and MINOR. Experimental results based on the proposed datasets demonstrate the effectiveness of the mutual-attention method at both sentence level and bag level",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "94ae52b2d9367c0d1ac62bd54bc99b32a538ccea",
-    "citation_count": 8
+    "citation_count": 1
   },
   "https://aclanthology.org/2022.findings-emnlp.547": {
     "title": "Grounded Keys-to-Text Generation: Towards Factual Open-Ended Generation",
     "abstract": "Large pre-trained language models have recently enabled open-ended generation frameworks (e.g., prompt-to-text NLG) to tackle a variety of tasks going beyond the traditional data-to-text generation. While this framework is more general, it is under-specified and often leads to a lack of controllability restricting their real-world usage. We propose a new grounded keys-to-text generation task: the task is to generate a factual description about an entity given a set of guiding keys, and grounding passages. To address this task, we introduce a new dataset, called EntDeGen. Inspired by recent QA-based evaluation measures, we propose an automatic metric, MAFE, for factual correctness of generated descriptions. Our EntDescriptor model is equipped with strong rankers to fetch helpful passages and generate entity descriptions. Experimental result shows a good correlation (60.14) between our proposed metric and human judgments of factuality. Our rankers significantly improved the factual correctness of generated descriptions (15.95% and 34.51% relative gains in recall and precision). Finally, our ablation study highlights the benefit of combining keys and groundings",
     "volume": "findings",
-    "checked": false,
+    "checked": true,
     "id": "32b3b990b00e890c44d769ac297889a7c75a394f",
     "citation_count": 1
   },
@@ -11051,7 +11051,7 @@
     "title": "A Minimal Model for Compositional Generalization on gSCAN",
     "abstract": "Whether neural networks are capable of compositional generalization has been a topic of much debate. Most previous studies on this subject investigate the generalization capabilities of state-of-the-art deep learning architectures. We here take a more bottom-up approach and design a minimal model that displays generalization on a compositional benchmark, namely, the gSCAN dataset. The model is a hybrid architecture that combines layers trained with gradient descent and a selective attention mechanism optimized with an evolutionary strategy. The architecture has around 60 times fewer trainable parameters than models previously tested on gSCAN, and achieves comparable accuracies on most test splits, even when trained only on a fraction of the dataset. On adverb to verb generalization accuracy, it outperforms previous approaches by 65 to 86%. Through ablation studies, neuron pruning, and error analyses, we show that weight decay and attention mechanisms facilitate compositional generalization by encouraging sparse representations divorced from irrelevant context. We find that the model’s sample efficiency can mainly be attributed to its selective attention mechanism",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "16da1d05fdb859861d41a311d0460df6f5fe5838",
     "citation_count": 0
   },
@@ -11059,7 +11059,7 @@
     "title": "Sparse Interventions in Language Models with Differentiable Masking",
     "abstract": "There has been a lot of interest in understanding what information is captured by hidden representations of language models (LMs). Typically, interpretation methods i) do not guarantee that the model actually uses the information found to be encoded, and ii) do not discover small subsets of neurons responsible for a considered phenomenon. Inspired by causal mediation analysis, we propose a method that discovers a small subset of neurons within a neural LM responsible for a particular linguistic phenomenon, i.e., subsets causing a change in the corresponding token emission probabilities. We use a differentiable relaxation to approximately search through the combinatorial space. An L0 regularization term ensures that the search converges to discrete and sparse solutions. We apply our method to analyze subject-verb number agreement and gender bias detection in LSTMs. We observe that it is fast and finds better solutions than alternatives such as REINFORCE and Integrated Gradients. Our experiments confirm that each of these phenomena is mediated through a small subset of neurons that do not play any other discernible role",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "62394648facd628a87021a7ef803d0e6efeddee5",
     "citation_count": 11
   },
@@ -11067,7 +11067,7 @@
     "title": "Where's the Learning in Representation Learning for Compositional Semantics and the Case of Thematic Fit",
     "abstract": "Observing that for certain NLP tasks, such as semantic role prediction or thematic fit estimation, random embeddings perform as well as pre-trained embeddings, we explore what settings allow for this, and examine where most of the learning is encoded: the word embeddings, the semantic role embeddings, or “the network”. We find nuanced answers, depending on the task and its relation to the training objective. We examine these representation learning aspects in multi-task learning, where role prediction and role-filling are supervised tasks, while several thematic fit tasks are outside the models’ direct supervision. We observe a non-monotonous relation between some tasks’ quality scores and the training data size. In order to better understand this observation, we analyze these results using easier, per-verb versions of these tasks",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "9e66e8a78b3da148fd747db5a59d234a88591041",
     "citation_count": 0
   },
@@ -11075,7 +11075,7 @@
     "title": "Sentence Ambiguity, Grammaticality and Complexity Probes",
     "abstract": "It is unclear whether, how and where large pre-trained language models capture subtle linguistic traits like ambiguity, grammaticality and sentence complexity. We present results of automatic classification of these traits and compare their viability and patterns across representation types. We demonstrate that template-based datasets with surface-level artifacts should not be used for probing, careful comparisons with baselines should be done and that t-SNE plots should not be used to determine the presence of a feature among dense vectors representations. We also show how features might be highly localized in the layers for these models and get lost in the upper layers",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "a35520a1ac0fd6ac8ad1f406bfafb796830acf81",
     "citation_count": 0
   },
@@ -11083,7 +11083,7 @@
     "title": "Post-Hoc Interpretation of Transformer Hyperparameters with Explainable Boosting Machines",
     "abstract": "Hyperparameter tuning is important for achieving high accuracy in deep learning models, yet little interpretability work has focused on hyperparameters. We propose to use the Explainable Boosting Machine (EBM), a glassbox method, as a post-hoc analysis tool for understanding how hyperparameters influence model accuracy. We present a case study on Transformer models in machine translation to illustrate the kinds of insights that may be gleaned, and perform extensive analysis to test the robustness of EBM under different data conditions",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "3e7cf804e6a57030368e7d01386738dc8852df50",
     "citation_count": 0
   },
@@ -11091,7 +11091,7 @@
     "title": "Revisit Systematic Generalization via Meaningful Learning",
     "abstract": "Humans can systematically generalize to novel compositions of existing concepts. Recent studies argue that neural networks appear inherently ineffective in such cognitive capacity, leading to a pessimistic view and a lack of attention to optimistic results. We revisit this controversial topic from the perspective of meaningful learning, an exceptional capability of humans to learn novel concepts by connecting them with known ones. We reassess the compositional skills of sequence-to-sequence models conditioned on the semantic links between new and old concepts. Our observations suggest that models can successfully one-shot generalize to novel concepts and compositions through semantic linking, either inductively or deductively. We demonstrate that prior knowledge plays a key role as well. In addition to synthetic tests, we further conduct proof-of-concept experiments in machine translation and semantic parsing, showing the benefits of meaningful learning in applications. We hope our positive findings will encourage excavating modern neural networks’ potential in systematic generalization through more advanced learning schemes",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "6f0be1f9bda7530b1fa654cac84d595ca9d53740",
     "citation_count": 0
   },
@@ -11099,7 +11099,7 @@
     "title": "Is It Smaller Than a Tennis Ball? Language Models Play the Game of Twenty Questions",
     "abstract": "Researchers often use games to analyze the abilities of Artificial Intelligence models. In this work, we use the game of Twenty Questions to study the world knowledge of language models. Despite its simplicity for humans, this game requires a broad knowledge of the world to answer yes/no questions. We evaluate several language models on this task and find that only the largest model has enough world knowledge to play it well, although it still has difficulties with the shape and size of objects. We also present a new method to improve the knowledge of smaller models by leveraging external information from the web. Finally, we release our dataset and Twentle, a website to interactively test the knowledge of language models by playing Twenty Questions",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "5c8cb5d39aa8531fcb5962821ac404e4a0e109d1",
     "citation_count": 1
   },
@@ -11107,7 +11107,7 @@
     "title": "Post-hoc analysis of Arabic transformer models",
     "abstract": "Arabic is a Semitic language which is widely spoken with many dialects. Given the success of pre-trained language models, many transformer models trained on Arabic and its dialects have surfaced. While there have been an extrinsic evaluation of these models with respect to downstream NLP tasks, no work has been carried out to analyze and compare their internal representations. We probe how linguistic information is encoded in the transformer models, trained on different Arabic dialects. We perform a layer and neuron analysis on the models using morphological tagging tasks for different dialects of Arabic and a dialectal identification task. Our analysis enlightens interesting findings such as: i) word morphology is learned at the lower and middle layers, ii) while syntactic dependencies are predominantly captured at the higher layers, iii) despite a large overlap in their vocabulary, the MSA-based models fail to capture the nuances of Arabic dialects, iv) we found that neurons in embedding layers are polysemous in nature, while the neurons in middle layers are exclusive to specific properties",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "9a9eff68eacc844b6495779d404faa7251a8cd07",
     "citation_count": 0
   },
@@ -11115,7 +11115,7 @@
     "title": "Universal Evasion Attacks on Summarization Scoring",
     "abstract": "The automatic scoring of summaries is important as it guides the development of summarizers. Scoring is also complex, as it involves multiple aspects such as the fluency, grammar, and even textual entailment with the source text. However, summary scoring has not been considered as a machine learning task to study its accuracy and robustness. In this study, we place automatic scoring in the context of regression machine learning tasks and perform evasion attacks to explore its robustness. Attack systems predict a non-summary string from each input, and these non-summary strings achieve competitive scores with good summarizers on the most popular metrics: ROUGE, METEOR, and BERTScore. Attack systems also “outperform” state-of-the-art summarization methods on ROUGE-1 and ROUGE-L, and score the second-highest on METEOR. Furthermore, a BERTScore backdoor is observed: a simple trigger can score higher than any automatic summarization method. The evasion attacks in this work indicate the low robustness of current scoring systems at the system level. We hope that our highlighting of these proposed attack will facilitate the development of summary scores",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "75a843259ab9a1dd5c8fd0f25c7a74d5327e1bdd",
     "citation_count": 0
   },
@@ -11123,7 +11123,7 @@
     "title": "How (Un)Faithful is Attention?",
     "abstract": "Although attention weights have been commonly used as a means to provide explanations for deep learning models, the approach has been widely criticized due to its lack of faithfulness. In this work, we present a simple approach to compute the newly proposed metric AtteFa, which can quantitatively represent the degree of faithfulness of the attention weights. Using this metric, we further validate the effect of the frequency of informative input elements and the use of contextual vs. non-contextual encoders on the faithfulness of the attention mechanism. Finally, we apply the approach on several real-life binary classification datasets to measure the faithfulness of attention weights in real-life settings",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "e2216806be6e2c300e2333226a553b7bd9783152",
     "citation_count": 0
   },
@@ -11131,7 +11131,7 @@
     "title": "Are Multilingual Sentiment Models Equally Right for the Right Reasons?",
     "abstract": "Multilingual NLP models provide potential solutions to the digital language divide, i.e., cross-language performance disparities. Early analyses of such models have indicated good performance across training languages and good generalization to unseen, related languages. This work examines whether, between related languages, multilingual models are equally right for the right reasons, i.e., if interpretability methods reveal that the models put emphasis on the same words as humans. To this end, we provide a new trilingual, parallel corpus of rationale annotations for English, Danish, and Italian sentiment analysis models and use it to benchmark models and interpretability methods. We propose rank-biased overlap as a better metric for comparing input token attributions to human rationale annotations. Our results show: (i) models generally perform well on the languages they are trained on, and align best with human rationales in these languages; (ii) performance is higher on English, even when not a source language, but this performance is not accompanied by higher alignment with human rationales, which suggests that language models favor English, but do not facilitate successful transfer of rationales",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "02ef976bc4aedceca2a6d7577975113db1e0e26d",
     "citation_count": 1
   },
@@ -11139,7 +11139,7 @@
     "title": "Probing for Understanding of English Verb Classes and Alternations in Large Pre-trained Language Models",
     "abstract": "We investigate the extent to which verb alternation classes, as described by Levin (1993), are encoded in the embeddings of Large Pre-trained Language Models (PLMs) such as BERT, RoBERTa, ELECTRA, and DeBERTa using selectively constructed diagnostic classifiers for word and sentence-level prediction tasks. We follow and expand upon the experiments of Kann et al. (2019), which aim to probe whether static embeddings encode frame-selectional properties of verbs. At both the word and sentence level, we find that contextual embeddings from PLMs not only outperform non-contextual embeddings, but achieve astonishingly high accuracies on tasks across most alternation classes. Additionally, we find evidence that the middle-to-upper layers of PLMs achieve better performance on average than the lower layers across all probing tasks",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "ad34a576900d78e6280a1ac1ecaeea19dbb3ed06",
     "citation_count": 0
   },
@@ -11147,7 +11147,7 @@
     "title": "Analyzing Gender Translation Errors to Identify Information Flows between the Encoder and Decoder of a NMT System",
     "abstract": "Multiple studies have shown that existing NMT systems demonstrate some kind of “gender bias”. As a result, MT output appears to err more often for feminine forms and to amplify social gender misrepresentations, which is potentially harmful to users and practioners of these technologies. This paper continues this line of investigations and reports results obtained with a new test set in strictly controlled conditions. This setting allows us to better understand the multiple inner mechanisms that are causing these biases, which include the linguistic expressions of gender, the unbalanced distribution of masculine and feminine forms in the language, the modelling of morphological variation and the training process dynamics. To counterbalance these effects, we formulate several proposals and notably show that modifying the training loss can effectively mitigate such biases",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "97caab3dfecf6234519d254e250767b62db56f4d",
     "citation_count": 0
   },
@@ -11155,7 +11155,7 @@
     "title": "Human Ratings Do Not Reflect Downstream Utility: A Study of Free-Text Explanations for Model Predictions",
     "abstract": "Models able to generate free-text rationales that explain their output have been proposed as an important step towards interpretable NLP for “reasoning” tasks such as natural language inference and commonsense question answering. However, the relative merits of different architectures and types of rationales are not well understood and hard to measure. In this paper, we contribute two insights to this line of research: First, we find that models trained on gold explanations learn to rely on these but, in the case of the more challenging question answering data set we use, fail when given generated explanations at test time. However, additional fine-tuning on generated explanations teaches the model to distinguish between reliable and unreliable information in explanations. Second, we compare explanations by a generation-only model to those generated by a self-rationalizing model and find that, while the former score higher in terms of validity, factual correctness, and similarity to gold explanations, they are not more useful for downstream classification. We observe that the self-rationalizing model is prone to hallucination, which is punished by most metrics but may add useful context for the classification step",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "d3b6fee3c6d900abc257633ee82ee25b622ca408",
     "citation_count": 1
   },
@@ -11163,7 +11163,7 @@
     "title": "Analyzing the Representational Geometry of Acoustic Word Embeddings",
     "abstract": "Acoustic word embeddings (AWEs) are fixed-dimensionality vector representations in a vector space such that different acoustic exemplars of the same word are projected nearby in the embedding space. In addition to their use in speech technology applications such as spoken term discovery and keyword spotting, AWE models have been adopted as models of spoken-word processing in several cognitively motivated studies and they have shown to exhibit a human-like performance in some auditory processing tasks. Nevertheless, the representation geometry of AWEs remains an under-explored topic that has not been studied in the literature. In this paper, we take a closer analytical look at AWEs and study how the choice of the learning objective and the architecture shapes their representational profile. Our main findings highlight the prominent role of the learning objective on the representational geometry over the architecture",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "55df518e164221619acff2efd8a5356e36076b27",
     "citation_count": 0
   },
@@ -11171,7 +11171,7 @@
     "title": "Understanding Domain Learning in Language Models Through Subpopulation Analysis",
     "abstract": "We investigate how different domains are encoded in modern neural network architectures. We analyze the relationship between natural language domains, model size, and the amount of training data used. The primary analysis tool we develop is based on subpopulation analysis with Singular Vector Canonical Correlation Analysis (SVCCA), which we apply to Transformer-based language models (LMs). We compare the latent representations of such a language model at its different layers from a pair of models: a model trained on multiple domains (an experimental model) and a model trained on a single domain (a control model). Through our method, we find that increasing the model capacity impacts how domain information is stored in upper and lower layers differently. In addition, we show that larger experimental models simultaneously embed domain-specific information as if they were conjoined control models. These findings are confirmed qualitatively, demonstrating the validity of our method",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "18c0751db3689ffe3ea62805c131824773d454c6",
     "citation_count": 1
   },
@@ -11179,7 +11179,7 @@
     "title": "Intermediate Entity-based Sparse Interpretable Representation Learning",
     "abstract": "Interpretable entity representations (IERs) are sparse embeddings that are “human-readable” in that dimensions correspond to fine-grained entity types and values are predicted probabilities that a given entity is of the corresponding type. These methods perform well in zero-shot and low supervision settings. Compared to standard dense neural embeddings, such interpretable representations may permit analysis and debugging. However, while fine-tuning sparse, interpretable representations improves accuracy on downstream tasks, it destroys the semantics of the dimensions which were enforced in pre-training. Can we maintain the interpretable semantics afforded by IERs while improving predictive performance on downstream tasks? Toward this end, we propose Intermediate enTity-based Sparse Interpretable Representation Learning (ItsIRL). ItsIRL realizes improved performance over prior IERs on biomedical tasks, while maintaining “interpretability” generally and their ability to support model debugging specifically. The latter is enabled in part by the ability to perform “counterfactual” fine-grained entity type manipulation, which we explore in this work. Finally, we propose a method to construct entity type based class prototypes for revealing global semantic properties of classes learned by our model. Code for pre-training and experiments will be made publicly available",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "2440c6a399c391106c69af1ed27780f5302d50e6",
     "citation_count": 0
   },
@@ -11187,7 +11187,7 @@
     "title": "Towards Procedural Fairness: Uncovering Biases in How a Toxic Language Classifier Uses Sentiment Information",
     "abstract": "Previous works on the fairness of toxic language classifiers compare the output of models with different identity terms as input features but do not consider the impact of other important concepts present in the context. Here, besides identity terms, we take into account high-level latent features learned by the classifier and investigate the interaction between these features and identity terms. For a multi-class toxic language classifier, we leverage a concept-based explanation framework to calculate the sensitivity of the model to the concept of sentiment, which has been used before as a salient feature for toxic language detection. Our results show that although for some classes, the classifier has learned the sentiment information as expected, this information is outweighed by the influence of identity terms as input features. This work is a step towards evaluating procedural fairness, where unfair processes lead to unfair outcomes. The produced knowledge can guide debiasing techniques to ensure that important concepts besides identity terms are well-represented in training datasets",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "041194726df0a18cc31df3aafe246d94709da2ea",
     "citation_count": 0
   },
@@ -11195,7 +11195,7 @@
     "title": "Investigating the Characteristics of a Transformer in a Few-Shot Setup: Does Freezing Layers in RoBERTa Help?",
     "abstract": "Transformer based language models have been widely adopted by industrial and research organisations in developing machine learning applications in the presence of limited annotated data. While these models show remarkable results, their functioning in few-shot settings is still poorly understood. Hence, we perform an investigative study to understand the characteristics of such models fine-tuned in few-shot setups. Specifically, we compare the intermediate layer representations obtained from a few-shot model and a pre-trained language model. We observe that pre-trained and few-shot models show similar representations over initial layers, whereas the later layers show a stark deviation. Based on these observations, we propose to freeze the initial Transformer layers to fine-tune the model in a constrained text classification setup with K annotated data points per class, where K ranges from 8 to 64. In our experiments across six benchmark sentence classification tasks, we discover that freezing initial 50% Transformer layers not only reduces training time but also surprisingly improves Macro F1 (upto 8%) when compared to fully trainable layers in few-shot setup. We also observe that this idea of layer freezing can very well be generalized to state-of-the-art few-shot text classification techniques, like DNNC and LM-BFF, leading to significant reduction in training time while maintaining comparable performance",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "382826f569fea7778803f141e9db368cb067a0a0",
     "citation_count": 0
   },
@@ -11203,7 +11203,7 @@
     "title": "It Is Not Easy To Detect Paraphrases: Analysing Semantic Similarity With Antonyms and Negation Using the New SemAntoNeg Benchmark",
     "abstract": "We investigate to what extent a hundred publicly available, popular neural language models capture meaning systematically. Sentence embeddings obtained from pretrained or fine-tuned language models can be used to perform particular tasks, such as paraphrase detection, semantic textual similarity assessment or natural language inference. Common to all of these tasks is that paraphrastic sentences, that is, sentences that carry (nearly) the same meaning, should have (nearly) the same embeddings regardless of surface form.We demonstrate that performance varies greatly across different language models when a specific type of meaning-preserving transformation is applied: two sentences should be identified as paraphrastic if one of them contains a negated antonym in relation to the other one, such as “I am not guilty” versus “I am innocent”.We introduce and release SemAntoNeg, a new test suite containing 3152 entries for probing paraphrasticity in sentences incorporating negation and antonyms. Among other things, we show that language models fine-tuned for natural language inference outperform other types of models, especially the ones fine-tuned to produce general-purpose sentence embeddings, on the test suite. Furthermore, we show that most models designed explicitly for paraphrasing are rather mediocre in our task",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "5f58a1c84a4c251ae85f9beab39992c3d76f94c9",
     "citation_count": 0
   },
@@ -11211,7 +11211,7 @@
     "title": "Controlling for Stereotypes in Multimodal Language Model Evaluation",
     "abstract": "We propose a methodology and design two benchmark sets for measuring to what extent language-and-vision language models use the visual signal in the presence or absence of stereotypes. The first benchmark is designed to test for stereotypical colors of common objects, while the second benchmark considers gender stereotypes. The key idea is to compare predictions when the image conforms to the stereotype to predictions when it does not.Our results show that there is significant variation among multimodal models: the recent Transformer-based FLAVA seems to be more sensitive to the choice of image and less affected by stereotypes than older CNN-based models such as VisualBERT and LXMERT. This effect is more discernible in this type of controlled setting than in traditional evaluations where we do not know whether the model relied on the stereotype or the visual signal",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "2b764b71ba02f69b2f4dc3f87c2cc6e41dc0ce3e",
     "citation_count": 0
   },
@@ -11219,7 +11219,7 @@
     "title": "On the Compositional Generalization Gap of In-Context Learning",
     "abstract": "Pretrained large generative language models have shown great performance on many tasks, but exhibit low compositional generalization abilities. Scaling such models has been shown to improve their performance on various NLP tasks even just by conditioning them on a few examples to solve the task without any fine-tuning (also known as in-context learning). In this work, we look at the gap between the in-distribution (ID) and out-of-distribution (OOD) performance of such models in semantic parsing tasks with in-context learning. In the ID settings, the demonstrations are from the same split (test or train) that the model is being evaluated on, and in the OOD settings, they are from the other split. We look at how the relative generalization gap of in-context learning evolves as models are scaled up. We evaluate four model families, OPT, BLOOM, CodeGen and Codex on three semantic parsing datasets, CFQ, SCAN and GeoQuery with different number of exemplars, and observe a trend of decreasing relative generalization gap as models are scaled up",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "95915aa592fdfc73f039c13472a21d3e4220f129",
     "citation_count": 5
   },
@@ -11227,7 +11227,7 @@
     "title": "Explaining Translationese: why are Neural Classifiers Better and what do they Learn?",
     "abstract": "Recent work has shown that neural feature- and representation-learning, e.g. BERT, achieves superior performance over traditional manual feature engineering based approaches, with e.g. SVMs, in translationese classification tasks. Previous research did not show (i) whether the difference is because of the features, the classifiers or both, and (ii) what the neural classifiers actually learn. To address (i), we carefully design experiments that swap features between BERT- and SVM-based classifiers. We show that an SVM fed with BERT representations performs at the level of the best BERT classifiers, while BERT learning and using handcrafted features performs at the level of an SVM using handcrafted features. This shows that the performance differences are due to the features. To address (ii) we use integrated gradients and find that (a) there is indication that information captured by hand-crafted features is only a subset of what BERT learns, and (b) part of BERT’s top performance results are due to BERT learning topic differences and spurious correlations with translationese",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "935fb385a04270904f9ac20f5211b46029f6f04f",
     "citation_count": 0
   },
@@ -11235,7 +11235,7 @@
     "title": "Probing GPT-3's Linguistic Knowledge on Semantic Tasks",
     "abstract": "GPT-3 has attracted much attention from both academia and industry. However, it is still unclear what GPT-3 has understood or learned especially in linguistic knowledge. Some studies have shown linguistic phenomena including negation and tense are hard to be recognized by language models such as BERT. In this study, we conduct probing tasks focusing on semantic information. Specifically, we investigate GPT-3’s linguistic knowledge on semantic tasks to identify tense, the number of subjects, and the number of objects for a given sentence. We also experiment with different prompt designs and temperatures of the decoding method. Our experiment results suggest that GPT-3 has acquired linguistic knowledge to identify certain semantic information in most cases, but still fails when there are some types of disturbance happening in the sentence. We also perform error analysis to summarize some common types of mistakes that GPT-3 has made when dealing with certain semantic information",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "cfa37731c5d269c2ea15eb56cb6c13a008404134",
     "citation_count": 4
   },
@@ -11243,7 +11243,7 @@
     "title": "Garden Path Traversal in GPT-2",
     "abstract": "In recent years, large-scale transformer decoders such as the GPT-x family of models have become increasingly popular. Studies examining the behavior of these models tend to focus only on the output of the language modeling head and avoid analysis of the internal states of the transformer decoder. In this study, we present a collection of methods to analyze the hidden states of GPT-2 and use the model’s navigation of garden path sentences as a case study. To enable this, we compile the largest currently available dataset of garden path sentences. We show that Manhattan distances and cosine similarities provide more reliable insights compared to established surprisal methods that analyze next-token probabilities computed by a language modeling head. Using these methods, we find that negating tokens have minimal impacts on the model’s representations for unambiguous forms of sentences with ambiguity solely over what the object of a verb is, but have a more substantial impact of representations for unambiguous sentences whose ambiguity would stem from the voice of a verb. Further, we find that analyzing the decoder model’s hidden states reveals periods of ambiguity that might conclude in a garden path effect but happen not to, whereas surprisal analyses routinely miss this detail",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "aaef50dfd54bbe89912e1e6144c07eac33bc0f92",
     "citation_count": 1
   },
@@ -11251,7 +11251,7 @@
     "title": "Testing Pre-trained Language Models' Understanding of Distributivity via Causal Mediation Analysis",
     "abstract": "To what extent do pre-trained language models grasp semantic knowledge regarding the phenomenon of distributivity? In this paper, we introduce DistNLI, a new diagnostic dataset for natural language inference that targets the semantic difference arising from distributivity, and employ the causal mediation analysis framework to quantify the model behavior and explore the underlying mechanism in this semantically-related task. We find that the extent of models’ understanding is associated with model size and vocabulary size. We also provide insights into how models encode such high-level semantic knowledge",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "78d88428074f83abf5bec2a015e886665f3deeb8",
     "citation_count": 3
   },
@@ -11259,7 +11259,7 @@
     "title": "Using Roark-Hollingshead Distance to Probe BERT's Syntactic Competence",
     "abstract": "Probing BERT’s general ability to reason about syntax is no simple endeavour, primarily because of the uncertainty surrounding how large language models represent syntactic structure. Many prior accounts of BERT’s agility as a syntactic tool (Clark et al., 2013; Lau et al., 2014; Marvin and Linzen, 2018; Chowdhury and Zamparelli, 2018; Warstadt et al., 2019, 2020; Hu et al., 2020) have therefore confined themselves to studying very specific linguistic phenomena, and there has still been no definitive answer as to whether BERT “knows” syntax.The advent of perturbed masking (Wu et al., 2020) would then seem to be significant, because this is a parameter-free probing method that directly samples syntactic trees from BERT’s embeddings. These sampled trees outperform a right-branching baseline, thus providing preliminary evidence that BERT’s syntactic competence bests a simple baseline. This baseline is underwhelming, however, and our reappraisal below suggests that this result, too, is inconclusive.We propose RH Probe, an encoder-decoder probing architecture that operates on two probing tasks. We find strong empirical evidence confirming the existence of important syntactic information in BERT, but this information alone appears not to be enough to reproduce syntax in its entirety. Our probe makes crucial use of a conjecture made by Roark and Holling-shead (2008) that a particular lexical annotation that we shall call RH distance is a sufficient encoding of unlabelled binary syntactic trees, and we prove this conjecture",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "b85c476fb1218f927aa6edc3e5ceed6512c068f5",
     "citation_count": 0
   },
@@ -11267,7 +11267,7 @@
     "title": "DALLE-2 is Seeing Double: Flaws in Word-to-Concept Mapping in Text2Image Models",
     "abstract": "We study the way DALLE-2 maps symbols (words) in the prompt to their references (entities or properties of entities in the generated image). We show that in stark contrast to the way human process language, DALLE-2 does not follow the constraint that each word has a single role in the interpretation, and sometimes re-use the same symbol for different purposes. We collect a set of stimuli that reflect the phenomenon: we show that DALLE-2 depicts both senses of nouns with multiple senses at once; and that a given word can modify the properties of two distinct entities in the image, or can be depicted as one object and also modify the properties of another object, creating a semantic leakage of properties between entities. Taken together, our study highlights the differences between DALLE-2 and human language processing and opens an avenue for future study on the inductive biases of text-to-image models",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "f638d8027d7db7338b3cb0c521e0aded68f3560c",
     "citation_count": 13
   },
@@ -11275,7 +11275,7 @@
     "title": "Practical Benefits of Feature Feedback Under Distribution Shift",
     "abstract": "In attempts to develop sample-efficient and interpretable algorithms, researcher have explored myriad mechanisms for collecting and exploiting feature feedback, auxiliary annotations provided for training (but not test) instances that highlight salient evidence. Examples include bounding boxes around objects and salient spans in text. Despite its intuitive appeal, feature feedback has not delivered significant gains in practical problems as assessed on iid holdout sets. However, recent works on counterfactually augmented data suggest an alternative benefit of supplemental annotations, beyond interpretability: lessening sensitivity to spurious patterns and consequently delivering gains in out-of-domain evaluations. We speculate that while existing methods for incorporating feature feedback have delivered negligible in-sample performance gains, they may nevertheless provide out-of-domain benefits. Our experiments addressing sentiment analysis, show that feature feedback methods perform significantly better on various natural out-of-domain datasets despite comparable in-domain evaluations. By contrast, performance on natural language inference remains comparable. Finally, we compare those tasks where feature feedback does (and does not) help",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "7f637c8ce8f64d0b83be7bf0b061d8e8f04ca298",
     "citation_count": 2
   },
@@ -11283,7 +11283,7 @@
     "title": "Identifying the Source of Vulnerability in Explanation Discrepancy: A Case Study in Neural Text Classification",
     "abstract": "Some recent works observed the instability of post-hoc explanations when input side perturbations are applied to the model. This raises the interest and concern in the stability of post-hoc explanations. However, the remaining question is: is the instability caused by the neural network model or the post-hoc explanation method? This work explores the potential source that leads to unstable post-hoc explanations. To separate the influence from the model, we propose a simple output probability perturbation method. Compared to prior input side perturbation methods, the output probability perturbation method can circumvent the neural model’s potential effect on the explanations and allow the analysis on the explanation method. We evaluate the proposed method with three widely-used post-hoc explanation methods (LIME (Ribeiro et al., 2016), Kernel Shapley (Lundberg and Lee, 2017a), and Sample Shapley (Strumbelj and Kononenko, 2010)). The results demonstrate that the post-hoc methods are stable, barely producing discrepant explanations under output probability perturbations. The observation suggests that neural network models may be the primary source of fragile explanations",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "8664038c68f12b3e6f6742379c05f115a69d31e7",
     "citation_count": 0
   },
@@ -11291,7 +11291,7 @@
     "title": "Probing Pretrained Models of Source Codes",
     "abstract": "Deep learning models are widely used for solving challenging code processing tasks, such as code generation or code summarization. Traditionally, a specific model architecture was carefully built to solve a particular code processing task. However, recently general pretrained models such as CodeBERT or CodeT5 have been shown to outperform task-specific models in many applications. While pretrained models are known to learn complex patterns from data, they may fail to understand some properties of source code. To test diverse aspects of code understanding, we introduce a set of diagnostic probing tasks. We show that pretrained models of code indeed contain information about code syntactic structure, the notions of identifiers, and namespaces, but they may fail to recognize more complex code properties such as semantic equivalence. We also investigate how probing results are affected by using code-specific pretraining objectives, varying the model size, or finetuning",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "95a2ee5aeccf2883f904ee3fcd7369adeb176359",
     "citation_count": 1
   },
@@ -11299,7 +11299,7 @@
     "title": "Probing the representations of named entities in Transformer-based Language Models",
     "abstract": "In this work we analyze the named entity representations learned by Transformer-based language models. We investigate the role entities play in two tasks: a language modeling task, and a sequence classification task. For this purpose we collect a novel news topic classification dataset with 12 topics called RefNews-12. We perform two complementary methods of analysis. First, we use diagnostic models allowing us to quantify to what degree entity information is present in the hidden representations. Second, we perform entity mention substitution to measure how substitute-entities with different properties impact model performance. By controlling for model uncertainty we are able to show that entities are identified, and depending on the task, play a measurable role in the model’s predictions. Additionally, we show that the entities’ types alone are not enough to account for this. Finally, we find that the the frequency with which entities occur are important for the masked language modeling task, and that the entities’ distributions over topics are important for topic classification",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "0488a5ee7a85ea9ab93f40bb6324dbf8c36a825b",
     "citation_count": 0
   },
@@ -11307,7 +11307,7 @@
     "title": "Decomposing Natural Logic Inferences for Neural NLI",
     "abstract": "In the interest of interpreting neural NLI models and their reasoning strategies, we carry out a systematic probing study which investigates whether these modelscapture the crucial semantic features central to natural logic: monotonicity and concept inclusion.Correctly identifying valid inferences in downward-monotone contexts is a known stumbling block for NLI performance,subsuming linguistic phenomena such as negation scope and generalized quantifiers.To understand this difficulty, we emphasize monotonicity as a property of a context and examine the extent to which models capture relevant monotonicity information in the vector representations which are intermediate to their decision making process.Drawing on the recent advancement of the probing paradigm,we compare the presence of monotonicity features across various models.We find that monotonicity information is notably weak in the representations of popularNLI models which achieve high scores on benchmarks, and observe that previous improvements to these models based on fine-tuning strategies have introduced stronger monotonicity features together with their improved performance on challenge sets",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "6ccf01193ba201656caa0616428d39f800b8ac04",
     "citation_count": 3
   },
@@ -11315,7 +11315,7 @@
     "title": "Probing with Noise: Unpicking the Warp and Weft of Embeddings",
     "abstract": "Improving our understanding of how information is encoded in vector space can yield valuable interpretability insights. Alongside vector dimensions, we argue that it is possible for the vector norm to also carry linguistic information. We develop a method to test this: an extension of the probing framework which allows for relative intrinsic interpretations of probing results. It relies on introducing noise that ablates information encoded in embeddings, grounded in random baselines and confidence intervals. We apply the method to well-established probing tasks and find evidence that confirms the existence of separate information containers in English GloVe and BERT embeddings. Our correlation analysis aligns with the experimental findings that different encoders use the norm to encode different kinds of information: GloVe stores syntactic and sentence length information in the vector norm, while BERT uses it to encode contextual incongruity",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "cb9db3681e86f1f93f51b8bbfd51f3c594dbb926",
     "citation_count": 2
   },
@@ -11323,7 +11323,7 @@
     "title": "Look to the Right: Mitigating Relative Position Bias in Extractive Question Answering",
     "abstract": "Extractive question answering (QA) models tend to exploit spurious correlations to make predictions when a training set has unintended biases.This tendency results in models not being generalizable to examples where the correlations do not hold.Determining the spurious correlations QA models can exploit is crucial in building generalizable QA models in real-world applications; moreover, a method needs to be developed that prevents these models from learning the spurious correlations even when a training set is biased.In this study, we discovered that the relative position of an answer, which is defined as the relative distance from an answer span to the closest question-context overlap word, can be exploited by QA models as superficial cues for making predictions.Specifically, we find that when the relative positions in a training set are biased, the performance on examples with relative positions unseen during training is significantly degraded.To mitigate the performance degradation for unseen relative positions, we propose an ensemble-based debiasing method that does not require prior knowledge about the distribution of relative positions.We demonstrate that the proposed method mitigates the models’ reliance on relative positions using the biased and full SQuAD dataset.We hope that this study can help enhance the generalization ability of QA models in real-world applications",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "fe680e78f6d8f963080150ddccc4c6aa157b63fe",
     "citation_count": 2
   },
@@ -11331,7 +11331,7 @@
     "title": "A Continuum of Generation Tasks for Investigating Length Bias and Degenerate Repetition",
     "abstract": "Language models suffer from various degenerate behaviors. These differ between tasks: machine translation (MT) exhibits length bias, while tasks like story generation exhibit excessive repetition. Recent work has attributed the difference to task constrainedness, but evidence for this claim has always involved many confounding variables. To study this question directly, we introduce a new experimental framework that allows us to smoothly vary task constrainedness, from MT at one end to fully open-ended generation at the other, while keeping all other aspects fixed. We find that: (1) repetition decreases smoothly with constrainedness, explaining the difference in repetition across tasks; (2) length bias surprisingly also decreases with constrainedness, suggesting some other cause for the difference in length bias; (3) across the board, these problems affect the mode, not the whole distribution; (4) the differences cannot be attributed to a change in the entropy of the distribution, since another method of changing the entropy, label smoothing, does not produce the same effect",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "b6d98839dfae708d845ba482665f3e6343f4f173",
     "citation_count": 0
   },
@@ -11339,7 +11339,7 @@
     "title": "Universal and Independent: Multilingual Probing Framework for Exhaustive Model Interpretation and Evaluation",
     "abstract": "Linguistic analysis of language models is one of the ways to explain and describe their reasoning, weaknesses, and limitations. In the probing part of the model interpretability research, studies concern individual languages as well as individual linguistic structures. The question arises: are the detected regularities linguistically coherent, or on the contrary, do they dissonate at the typological scale? Moreover, the majority of studies address the inherent set of languages and linguistic structures, leaving the actual typological diversity knowledge out of scope.In this paper, we present and apply the GUI-assisted framework allowing us to easily probe massive amounts of languages for all the morphosyntactic features present in the Universal Dependencies data. We show that reflecting the anglo-centric trend in NLP over the past years, most of the regularities revealed in the mBERT model are typical for the western-European languages. Our framework can be integrated with the existing probing toolboxes, model cards, and leaderboards, allowing practitioners to use and share their familiar probing methods to interpret multilingual models.Thus we propose a toolkit to systematize the multilingual flaws in multilingual models, providing a reproducible experimental setup for 104 languages and 80 morphosyntactic features",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "a93a11e0b6bb8b01379b8b442780f7aad82540f8",
     "citation_count": 1
   },
@@ -11347,7 +11347,7 @@
     "title": "A Multi-Modal Dataset for Hate Speech Detection on Social Media: Case-study of Russia-Ukraine Conflict",
     "abstract": "This paper presents a new multi-modal dataset for identifying hateful content on social media, consisting of 5,680 text-image pairs collected from Twitter, labeled across two labels. Experimental analysis of the presented dataset has shown that understanding both modalities is essential for detecting these techniques. It is confirmed in our experiments with several state-of-the-art multi-modal models. In future work, we plan to extend the dataset in size. We further plan to develop new multi-modal models tailored explicitly to hate-speech detection, aiming for a deeper understanding of the text and image relation. It would also be interesting to perform experiments in a direction that explores what social entities the given hate speech tweet targets",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "52f924d2889a1343adb1faeea3ff8475978f5992",
     "citation_count": 6
   },
@@ -11355,7 +11355,7 @@
     "title": "EventGraph: Event Extraction as Semantic Graph Parsing",
     "abstract": "Event extraction involves the detection and extraction of both the event triggers and the corresponding arguments. Existing systems often decompose event extraction into multiple subtasks, without considering their possible interactions. In this paper, we propose EventGraph, a joint framework for event extraction, which encodes events as graphs. We represent event triggers and arguments as nodes in a semantic graph. Event extraction therefore becomes a graph parsing problem, which provides the following advantages: 1) performing event detection and argument extraction jointly; 2) detecting and extracting multiple events from a piece of text; 3) capturing the complicated interaction between event arguments and triggers. Experimental results on ACE2005 show that our model is competitive to state-of-the-art systems and has substantially improved the results on argument extraction. Additionally, we create two new datasets from ACE2005 where we keep the entire text spans for event arguments, instead of just the head word(s). Our code and models will be released as open-source",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "7d2b1cd45f96a20ab8f4818ee2d0a2c86ca684c6",
     "citation_count": 2
   },
@@ -11363,7 +11363,7 @@
     "title": "NLP4ITF @ Causal News Corpus 2022: Leveraging Linguistic Information for Event Causality Classification",
     "abstract": "We present our submission to Subtask 1 of theCASE-2022 Shared Task 3: Event CausalityIdentification with Causal News Corpus as partof the 5th Workshop on Challenges and Applicationsof Automated Extraction of SociopoliticalEvents from Text (CASE 2022) (Tanet al., 2022a). The task focuses on causal eventclassification on the sentence level and involvesdifferentiating between sentences that include acause-effect relation and sentences that do not.We approached this as a binary text classificationtask and experimented with multiple trainingsets augmented with additional linguisticinformation. Our best model was generated bytraining roberta-base on a combination ofdata from both Subtasks 1 and 2 with the additionof named entity annotations. During thedevelopment phase we achieved a macro F1 of0.8641 with this model on the development setprovided by the task organizers. When testingthe model on the final test data, we achieved amacro F1 of 0.8516",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "254320b73b10b4cd524dd742273e56568a491190",
     "citation_count": 1
   },
@@ -11371,7 +11371,7 @@
     "title": "A Hybrid Knowledge and Transformer-Based Model for Event Detection with Automatic Self-Attention Threshold, Layer and Head Selection",
     "abstract": "Event and argument role detection are frequently conceived as separate tasks. In this work we conceive both processes as one taskin a hybrid event detection approach. Its main component is based on automatic keyword extraction (AKE) using the self-attention mechanism of a BERT transformer model. As a bottleneck for AKE is defining the threshold of the attention values, we propose a novel method for automatic self-attention thresholdselection. It is fueled by core event information, or simply the verb and its arguments as the backbone of an event. These are outputted by a knowledge-based syntactic parser. In a secondstep the event core is enriched with other semantically salient words provided by the transformer model. Furthermore, we propose an automatic self-attention layer and head selectionmechanism, by analyzing which self-attention cells in the BERT transformer contribute most to the hybrid event detection and which linguistic tasks they represent. This approach was integrated in a pipeline event extraction approachand outperforms three state of the art multi-task event extraction methods",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "0e4e447ead89cbe2d8b627a546166d1843031d08",
     "citation_count": 2
   },
@@ -11379,7 +11379,7 @@
     "title": "Improving Zero-Shot Event Extraction via Sentence Simplification",
     "abstract": "The success of sites such as ACLED and Our World in Data have demonstrated the massive utility of extracting events in structured formats from large volumes of textual data in the formof news, social media, blogs and discussion forums.Event extraction can provide a window into ongoing geopolitical crises and yield actionable intelligence. In this work, we cast socio-political event extraction as a machine reading comprehension (MRC) task. % With the proliferation of large pretrained language models Machine Reading Comprehension (MRC) has emerged as a new paradigm for event extraction in recent times. In this approach, extraction of social-political actors and targets from a sentence is framed as an extractive question-answering problem conditioned on an event type. There are several advantages of using MRC for this task including the ability to leverage large pretrained multilingual language models and their ability to perform zero-shot extraction. Moreover, we find that the problem of long-range dependencies, i.e., large lexical distance between trigger and argument words and the difficulty of processing syntactically complex sentences plague MRC-based approaches.To address this, we present a general approach to improve the performance of MRC-based event extraction by performing unsupervised sentence simplification guided by the MRC model itself. We evaluate our approach on the ICEWS geopolitical event extraction dataset, with specific attention to ‘Actor’ and ‘Target’ argument roles. We show how such context simplification can improve the performance of MRC-based event extraction by more than 5% for actor extraction and more than 10% for target extraction",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "633c38bb5304b059dc2e790a9a7d493feeb2cbe1",
     "citation_count": 4
   },
@@ -11387,7 +11387,7 @@
     "title": "SNU-Causality Lab @ Causal News Corpus 2022: Detecting Causality by Data Augmentation via Part-of-Speech tagging",
     "abstract": "Finding causal relations in texts has been a challenge since it requires methods ranging from defining event ontologies to developing proper algorithmic approaches. In this paper, we developed a framework which classifies whether a given sentence contains a causal event.As our approach, we exploited an external corpus that has causal labels to overcome the small size of the original corpus (Causal News Corpus) provided by task organizers.Further, we employed a data augmentation technique utilizing Part-Of-Speech (POS) based on our observation that some parts of speech are more (or less) relevant to causality. Our approach especially improved the recall of detecting causal events in sentences",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "45144b23ad8614d91a5b970a12b1b4f4c360ca92",
     "citation_count": 1
   },
@@ -11395,7 +11395,7 @@
     "title": "LTRC @ Causal News Corpus 2022: Extracting and Identifying Causal Elements using Adapters",
     "abstract": "Causality detection and identification is centered on identifying semantic and cognitive connections in a sentence. In this paper, we describe the effort of team LTRC for Causal News Corpus - Event Causality Shared Task 2022 at the 5th Workshop on Challenges and Applications of Automated Extraction of Socio-political Events from Text (CASE 2022). The shared task consisted of two subtasks: 1) identifying if a sentence contains a causality relation, and 2) identifying spans of text that correspond to cause, effect and signals. We fine-tuned transformer-based models with adapters for both subtasks. Our best-performing models obtained a binary F1 score of 0.853 on held-out data for subtask 1 and a macro F1 score of 0.032 on held-out data for subtask 2. Our approach is ranked third in subtask 1 and fourth in subtask 2. The paper describes our experiments, solutions, and analysis in detail",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "64a9896316bb9bfe901637b3dd018f4fe3e104ba",
     "citation_count": 1
   },
@@ -11403,7 +11403,7 @@
     "title": "Cross-modal Transfer Between Vision and Language for Protest Detection",
     "abstract": "Most of today’s systems for socio-political event detection are text-based, while an increasing amount of information published on the web is multi-modal. We seek to bridge this gap by proposing a method that utilizes existing annotated unimodal data to perform event detection in another data modality, zero-shot. Specifically, we focus on protest detection in text and images, and show that a pretrained vision-and-language alignment model (CLIP) can be leveraged towards this end. In particular, our results suggest that annotated protest text data can act supplementarily for detecting protests in images, but significant transfer is demonstrated in the opposite direction as well",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "e878d54bc37f0eb6d4542bbbfae3186ea4e5de77",
     "citation_count": 2
   },
@@ -11411,7 +11411,7 @@
     "title": "IDIAPers @ Causal News Corpus 2022: Efficient Causal Relation Identification Through a Prompt-based Few-shot Approach",
     "abstract": "In this paper, we describe our participation in the subtask 1 of CASE-2022, Event Causality Identification with Casual News Corpus. We address the Causal Relation Identification (CRI) task by exploiting a set of simple yet complementary techniques for fine-tuning language models (LMs) on a few annotated examples (i.e., a few-shot configuration).We follow a prompt-based prediction approach for fine-tuning LMs in which the CRI task is treated as a masked language modeling problem (MLM). This approach allows LMs natively pre-trained on MLM tasks to directly generate textual responses to CRI-specific prompts.We compare the performance of this method against ensemble techniques trained on the entire dataset.Our best-performing submission was fine-tuned with only 256 instances per class, 15.7% of the all available data, and yet obtained the second-best precision (0.82), third-best accuracy (0.82), and an F1-score (0.85) very close to what was reported by the winner team (0.86)",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "8c6db6748aa64526b52a207fee455de2d55cef72",
     "citation_count": 0
   },
@@ -11419,7 +11419,7 @@
     "title": "IDIAPers @ Causal News Corpus 2022: Extracting Cause-Effect-Signal Triplets via Pre-trained Autoregressive Language Model",
     "abstract": "In this paper, we describe our shared task submissions for Subtask 2 in CASE-2022, Event Causality Identification with Casual News Corpus. The challenge focused on the automatic detection of all cause-effect-signal spans present in the sentence from news-media. We detect cause-effect-signal spans in a sentence using T5 — a pre-trained autoregressive language model. We iteratively identify all cause-effect-signal span triplets, always conditioning the prediction of the next triplet on the previously predicted ones. To predict the triplet itself, we consider different causal relationships such as cause→effect→signal. Each triplet component is generated via a language model conditioned on the sentence, the previous parts of the current triplet, and previously predicted triplets. Despite training on an extremely small dataset of 160 samples, our approach achieved competitive performance, being placed second in the competition. Furthermore, we show that assuming either cause→effect or effect→cause order achieves similar results",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "064a58c8436fbf73141309b8b8d8aa52b64213b3",
     "citation_count": 2
   },
@@ -11427,7 +11427,7 @@
     "title": "NoisyAnnot@ Causal News Corpus 2022: Causality Detection using Multiple Annotation Decisions",
     "abstract": "The paper describes the work that has been submitted to the 5th workshop on Challenges and Applications of Automated Extraction of socio-political events from text (CASE 2022). The work is associated with Subtask 1 of Shared Task 3 that aims to detect causality in protest news corpus. The authors used different large language models with customized cross-entropy loss functions that exploit annotation information. The experiments showed that bert-based-uncased with refined cross-entropy outperformed the others, achieving a F1 score of 0.8501 on the Causal News Corpus dataset",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "e1da79500d4e61f0a1de1da241c75bd39a8e65b3",
     "citation_count": 1
   },
@@ -11435,7 +11435,7 @@
     "title": "GGNN@Causal News Corpus 2022:Gated Graph Neural Networks for Causal Event Classification from Social-Political News Articles",
     "abstract": "The discovery of causality mentions from text is a core cognitive concept and appears in many natural language processing (NLP) applications. In this paper, we study the task of Event Causality Identification (ECI) from social-political news. The aim of the task is to detect causal relationships between event mention pairs in text.Although deep learning models have recently achieved a state-of-the-art performance on many tasks and applications in NLP, most of them still fail to capture rich semantic and syntactic structures within sentences which is key for causality classification. We present a solution for causal event detection from social-political news that captures semantic and syntactic information based on gated graph neural networks (GGNN) and contextualized language embeddings. Experimental results show that our proposed method outperforms the baseline model (BERT (Bidirectional Embeddings from Transformers) in terms of f1-score and accuracy",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "cddc8c9e09fdc82a1a162ef697c6359f0f3a8f83",
     "citation_count": 1
   },
@@ -11443,7 +11443,7 @@
     "title": "1Cademy @ Causal News Corpus 2022: Leveraging Self-Training in Causality Classification of Socio-Political Event Data",
     "abstract": "This paper details our participation in the Challenges and Applications of Automated Extraction of Socio-political Events from Text (CASE) workshop @ EMNLP 2022, where we take part in Subtask 1 of Shared Task 3 (CITATION). We approach the given task of event causality detection by proposing a self-training pipeline that follows a teacher-student classifier method. More specifically, we initially train a teacher model on the true, original task data, and use that teacher model to self-label data to be used in the training of a separate student model for the final task prediction. We test how restricting the number of positive or negative self-labeled examples in the self-training process affects classification performance. Our final results show that using self-training produces a comprehensive performance improvement across all models and self-labeled training sets tested within the task of event causality sequence classification. On top of that, we find that self-training performance did not diminish even when restricting either positive/negative examples used in training. Our code is be publicly available at https://github.com/Gzhang-umich/1CademyTeamOfCASEhttps://github.com/Gzhang-umich/1CademyTeamOfCASE",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "2c1db2d4dc878625b3c1056bcd8517cb04e7a8bc",
     "citation_count": 2
   },
@@ -11451,7 +11451,7 @@
     "title": "1Cademy @ Causal News Corpus 2022: Enhance Causal Span Detection via Beam-Search-based Position Selector",
     "abstract": "In this paper, we present our approach and empirical observations for Cause-Effect Signal Span Detection—Subtask 2 of Shared task 3 at CASE 2022. The shared task aims to extract the cause, effect, and signal spans from a given causal sentence.We model the task as a reading comprehension (RC) problem and apply a token-level RC-based span prediction paradigm to the task as the baseline.We explore different training objectives to fine-tune the model, as well as data augmentation (DA) tricks based on the language model (LM) for performance improvement.Additionally, we propose an efficient beam-search post-processing strategy to due with the drawbacks of span detection to obtain a further performance gain.Our approach achieves an average F1 score of 54.15 and ranks 1ˆst in the CASE competition. Our code is available at https://github.com/Gzhang-umich/1CademyTeamOfCASE",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4b99a55d77af90cd8f731ad25f0b9958a39c48ec",
     "citation_count": 2
   },
@@ -11459,7 +11459,7 @@
     "title": "Hybrid Knowledge Engineering Leveraging a Robust ML Framework to Produce an Assassination Dataset",
     "abstract": "Social and political researchers require robust event datasets to conduct data-driven analysis, an example being the need for trigger event datasets to analyze under what conditions and in what patterns certain trigger-type events increase the probability of mass killings. Fortunately, NLP and ML can be leveraged to create these robust datasets. In this paper we (i) outline a robust ML framework that prioritizes understandability through visualizations and generalizability through the ability to implement different ML algorithms, (ii) perform a comparative analysis of these ML tools within the framework for the coup trigger, (iii) leverage our ML framework along with a unique combination of NLP tools, such as NER and knowledge graphs, to produce a dataset for the the assassination trigger, and (iv) make this comprehensive, consolidated, and cohesive assassination dataset publicly available to provide temporal data for understanding political violence as well as training data for further socio-political research",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "ba93841878fe9d7bbfc25e279a8be702d631ef25",
     "citation_count": 2
   },
@@ -11467,7 +11467,7 @@
     "title": "Political Event Coding as Text-to-Text Sequence Generation",
     "abstract": "We report on the current status of an effort to produce political event data from unstructured text via a Transformer language model. Compelled by the current lack of publicly available and up-to-date event coding software, we seek to train a model that can produce structured political event records at the sentence level. Our approach differs from previous efforts in that we conceptualize this task as one of text-to-text sequence generation. We motivate this choice by outlining desirable properties of text generation models for the needs of event coding. To overcome the lack of sufficient training data, we also describe a method for generating synthetic text and event record pairs that we use to fit our model",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "f4666ec25c7af298ed359c0eca05295b908bab59",
     "citation_count": 2
   },
@@ -11475,7 +11475,7 @@
     "title": "Zero-Shot Ranking Socio-Political Texts with Transformer Language Models to Reduce Close Reading Time",
     "abstract": "We approach the classification problem as an entailment problem and apply zero-shot ranking to socio-political texts. Documents that are ranked at the top can be considered positively classified documents and this reduces the close reading time for the information extraction process. We use Transformer Language Models to get the entailment probabilities and investigate different types of queries. We find that DeBERTa achieves higher mean average precision scores than RoBERTa and when declarative form of the class label is used as a query, it outperforms dictionary definition of the class label. We show that one can reduce the close reading time by taking some percentage of the ranked documents that the percentage depends on how much recall they want to achieve. However, our findings also show that percentage of the documents that should be read increases as the topic gets broader",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "0a8204a43cb70bea2696d37635ae2fc6a4d82070",
     "citation_count": 2
   },
@@ -11483,7 +11483,7 @@
     "title": "SPOCK @ Causal News Corpus 2022: Cause-Effect-Signal Span Detection Using Span-Based and Sequence Tagging Models",
     "abstract": "Understanding causal relationship is an importance part of natural language processing. We address the causal information extraction problem with different neural models built on top of pre-trained transformer-based language models for identifying Cause, Effect and Signal spans, from news data sets. We use the Causal News Corpus subtask 2 training data set to train span-based and sequence tagging models. Our span-based model based on pre-trained BERT base weights achieves an F1 score of 47.48 on the test set with an accuracy score of 36.87 and obtained 3rd place in the Causal News Corpus 2022 shared task",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "42f64196dfe89c62a9af05f1b3dde625a2b0531b",
     "citation_count": 1
   },
@@ -11491,7 +11491,7 @@
     "title": "CSECU-DSG @ Causal News Corpus 2022: Fusion of RoBERTa Transformers Variants for Causal Event Classification",
     "abstract": "Identifying cause-effect relationships in sentences is one of the formidable tasks to tackle the challenges of inference and understanding of natural language. However, the diversity of word semantics and sentence structure makes it challenging to determine the causal relationship effectively. To address these challenges, CASE-2022 shared task 3 introduced a task focusing on event causality identification with causal news corpus. This paper presents our participation in this task, especially in subtask 1 which is the causal event classification task. To tackle the task challenge, we propose a unified neural model through exploiting two fine-tuned transformer models including RoBERTa and Twitter-RoBERTa. For the score fusion, we combine the prediction scores of each component model using weighted arithmetic mean to generate the probability score for class label identification. The experimental results showed that our proposed method achieved the top performance (ranked 1st) among the participants",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "9f322abbff1154178e132ab86f1df007b6bdc549",
     "citation_count": 2
   },
@@ -11499,7 +11499,7 @@
     "title": "ARGUABLY @ Causal News Corpus 2022: Contextually Augmented Language Models for Event Causality Identification",
     "abstract": "Causal (a cause-effect relationship between two arguments) has become integral to various NLP domains such as question answering, summarization, and event prediction. To understand causality in detail, Event Causality Identification with Causal News Corpus (CASE-2022) has organized shared tasks. This paper defines our participation in Subtask 1, which focuses on classifying event causality. We used sentence-level augmentation based on contextualized word embeddings of distillBERT to construct new data. This data was then trained using two approaches. The first technique used the DeBERTa language model, and the second used the RoBERTa language model in combination with cross-attention. We obtained the second-best F1 score (0.8610) in the competition with the Contextually Augmented DeBERTa model",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "cf10b56dcb512902ca596b113c5605d2cd6bfa50",
     "citation_count": 1
   },
@@ -11507,7 +11507,7 @@
     "title": "ClassBases at the CASE-2022 Multilingual Protest Event Detection Task: Multilingual Protest News Detection and Automatically Replicating Manually Created Event Datasets",
     "abstract": "In this report, we describe our ClassBases submissions to a shared task on multilingual protest event detection. For the multilingual protest news detection, we participated in subtask-1, subtask-2 and subtask-4 which are document classification, sentence classification and token classification. In subtask-1, we compare XLM-RoBERTa-base, mLUKE-base and XLM-RoBERTa-large on finetuning in a sequential classification setting. We always use a combination of the training data from every language provided to train our multilingual models. We found that larger models seem to work better and entity knowledge helps but at a non-negligible cost. For subtask-2, we only submitted an mLUKE-base system for sentence classification. For subtask-4, we only submitted an XLM-RoBERTa-base for token classification system for sequence labeling. For automatically replicating manually created event datasets, we participated in COVID-related protest events from the New York Times news corpus. We created a system to process the crawled data into a dataset of protest events",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "c6c872176d6808a62f3d6549a2c2a45532b08ccd",
     "citation_count": 2
   },
@@ -11515,7 +11515,7 @@
     "title": "EventGraph at CASE 2021 Task 1: A General Graph-based Approach to Protest Event Extraction",
     "abstract": "This paper presents our submission to the 2022 edition of the CASE 2021 shared task 1, subtask 4. The EventGraph system adapts an end-to-end, graph-based semantic parser to the task of Protest Event Extraction and more specifically subtask 4 on event trigger and argument extraction. We experiment with various graphs, encoding the events as either “labeled-edge” or “node-centric” graphs. We show that the “node-centric” approach yields best results overall, performing well across the three languages of the task, namely English, Spanish, and Portuguese. EventGraph is ranked 3rd for English and Portuguese, and 4th for Spanish",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "a1db37d5c7e4fd43edb1e75631f1dcee6509985f",
     "citation_count": 1
   },
@@ -11523,7 +11523,7 @@
     "title": "NSUT-NLP at CASE 2022 Task 1: Multilingual Protest Event Detection using Transformer-based Models",
     "abstract": "Event detection, specifically in the socio-political domain, has posed a long-standing challenge to researchers in the NLP domain. Therefore, the creation of automated techniques that perform classification of the large amounts of accessible data on the Internet becomes imperative. This paper is a summary of the efforts we made in participating in Task 1 of CASE 2022. We use state-of-art multilingual BERT (mBERT) with further fine-tuning to perform document classification in English, Portuguese, Spanish, Urdu, Hindi, Turkish and Mandarin. In the document classification subtask, we were able to achieve F1 scores of 0.8062, 0.6445, 0.7302, 0.5671, 0.6555, 0.7545 and 0.6702 in English, Spanish, Portuguese, Hindi, Urdu, Mandarin and Turkish respectively achieving a rank of 5 in English and 7 on the remaining language tasks",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "afaabfc0e7a55c4e95e3b88d84c3496fdd49a875",
     "citation_count": 1
   },
@@ -11531,7 +11531,7 @@
     "title": "CamPros at CASE 2022 Task 1: Transformer-based Multilingual Protest News Detection",
     "abstract": "Socio-political protests often lead to grave consequences when they occur. The early detection of such protests is very important for taking early precautionary measures. However, the main shortcoming of protest event detection is the scarcity of sufficient training data for specific language categories, which makes it difficult to train data-hungry deep learning models effectively. Therefore, cross-lingual and zero-shot learning models are needed to detect events in various low-resource languages. This paper proposes a multi-lingual cross-document level event detection approach using pre-trained transformer models developed for Shared Task 1 at CASE 2022. The shared task constituted four subtasks for event detection at different granularity levels, i.e., document level to token level, spread over multiple languages (English, Spanish, Portuguese, Turkish, Urdu, and Mandarin). Our system achieves an average F1 score of 0.73 for document-level event detection tasks. Our approach secured 2nd position for the Hindi language in subtask 1 with an F1 score of 0.80. While for Spanish, we secure 4th position with an F1 score of 0.69. Our code is available at https://github.com/nehapspathak/campros/",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "411cd75264b86a0c087e67fe02493dc55a941c62",
     "citation_count": 1
   },
@@ -11539,7 +11539,7 @@
     "title": "ARC-NLP at CASE 2022 Task 1: Ensemble Learning for Multilingual Protest Event Detection",
     "abstract": "Automated socio-political protest event detection is a challenging task when multiple languages are considered. In CASE 2022 Task 1, we propose ensemble learning methods for multilingual protest event detection in four subtasks with different granularity levels from document-level to entity-level. We develop an ensemble of fine-tuned Transformer-based language models, along with a post-processing step to regularize the predictions of our ensembles. Our approach places the first place in 6 out of 16 leaderboards organized in seven languages including English, Mandarin, and Turkish",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "f024008bcd71133bb22b3d385345ee6965719eb0",
     "citation_count": 2
   },
@@ -11547,7 +11547,7 @@
     "title": "CEIA-NLP at CASE 2022 Task 1: Protest News Detection for Portuguese",
     "abstract": "This paper summarizes our work on the document classification subtask of Multilingual protest news detection of the CASE @ ACL-IJCNLP 2022 workshok. In this context, we investigate the performance of monolingual and multilingual transformer-based models in low data resources, taking Portuguese as an example and evaluating language models on document classification. Our approach became the winning solution in Portuguese document classification achieving 0.8007 F1 Score on Test set. The experimental results demonstrate that multilingual models achieve best results in scenarios with few dataset samples of specific language, because we can train models using datasets from other languages of the same task and domain",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "424594a4010a28d985a33f3897c8c41886b12a1e",
     "citation_count": 1
   },
@@ -11555,7 +11555,7 @@
     "title": "SPARTA at CASE 2021 Task 1: Evaluating Different Techniques to Improve Event Extraction",
     "abstract": "We participated in the Shared Task 1 at CASE 2021, Subtask 4 on protest event extraction from news articles and examined different techniques aimed at improving the performance of the winning system from the last competition round. We evaluated in-domain pre-training, task-specific pre-fine-tuning, alternative loss function, translation of the English training dataset into other target languages (i.e., Portuguese, Spanish, and Hindi) for the token classification task, and a simple data augmentation technique by random sentence reordering. This paper summarizes the results, showing that random sentence reordering leads to a consistent improvement of the model performance",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "34c5fc9a09f9ef6074f3e9a3130392d7bba1c669",
     "citation_count": 1
   },
@@ -11563,7 +11563,7 @@
     "title": "Event Causality Identification with Causal News Corpus - Shared Task 3, CASE 2022",
     "abstract": "The Event Causality Identification Shared Task of CASE 2022 involved two subtasks working on the Causal News Corpus. Subtask 1 required participants to predict if a sentence contains a causal relation or not. This is a supervised binary classification task. Subtask 2 required participants to identify the Cause, Effect and Signal spans per causal sentence. This could be seen as a supervised sequence labeling task. For both subtasks, participants uploaded their predictions for a held-out test set, and ranking was done based on binary F1 and macro F1 scores for Subtask 1 and 2, respectively. This paper summarizes the work of the 17 teams that submitted their results to our competition and 12 system description papers that were received. The best F1 scores achieved for Subtask 1 and 2 were 86.19% and 54.15%, respectively. All the top-performing approaches involved pre-trained language models fine-tuned to the targeted task. We further discuss these approaches and analyze errors across participants’ systems in this paper",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "220b915c3f86925c7dc05a59e613f53e485ad87d",
     "citation_count": 19
   },
@@ -11571,7 +11571,7 @@
     "title": "Tracking COVID-19 protest events in the United States. Shared Task 2: Event Database Replication, CASE 2022",
     "abstract": "The goal of Shared Task 2 is evaluating state-of-the-art event detection systems by comparing the spatio-temporal distribution of the events they detect with existing event databases.The task focuses on some usability requirements of event detection systems in real worldscenarios. Namely, it aims to measure the ability of such a system to: (i) detect socio-political event mentions in news and social media, (ii) properly find their geographical locations, (iii) de-duplicate reports extracted from multiple sources referring to the same actual event. Building an annotated corpus for training and evaluating jointly these sub-tasks is highly time consuming. One possible way to indirectly evaluate a system’s output without an annotated corpus available is to measure its correlation with human-curated event data sets.In the last three years, the COVID-19 pandemic became motivation for restrictions and anti-pandemic measures on a world scale. This has triggered a wave of reactions and citizen actions in many countries. Shared Task 2 challenges participants to identify COVID-19 related protest actions from large unstructureddata sources both from mainstream and social media. We assess each system’s ability to model the evolution of protest events both temporally and spatially by using a number of correlation metrics with respect to a comprehensive and validated data set of COVID-related protest events (Raleigh et al., 2010)",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "e521fab50f3fcc68809d55421c247b52247012ae",
     "citation_count": 4
   },
@@ -11579,7 +11579,7 @@
     "title": "Challenges and Applications of Automated Extraction of Socio-political Events from Text (CASE 2022): Workshop and Shared Task Report",
     "abstract": "We provide a summary of the fifth edition of the CASE workshop that is held in the scope of EMNLP 2022. The workshop consists of regular papers, two keynotes, working papers of shared task participants, and task overview papers. This workshop has been bringing together all aspects of event information collection across technical and social science fields. In addition to the progress in depth, the submission and acceptance of multimodal approaches show the widening of this interdisciplinary research topic",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "c8c7660ecea34516c1254566cb862cc7ecaf0c81",
     "citation_count": 5
   },
@@ -11587,7 +11587,7 @@
     "title": "Extended Multilingual Protest News Detection - Shared Task 1, CASE 2021 and 2022",
     "abstract": "We report results of the CASE 2022 Shared Task 1 on Multilingual Protest Event Detection. This task is a continuation of CASE 2021 that consists of four subtasks that are i) document classification, ii) sentence classification, iii) event sentence coreference identification, and iv) event extraction. The CASE 2022 extension consists of expanding the test data with more data in previously available languages, namely, English, Hindi, Portuguese, and Spanish, and adding new test data in Mandarin, Turkish, and Urdu for Sub-task 1, document classification. The training data from CASE 2021 in English, Portuguese and Spanish were utilized. Therefore, predicting document labels in Hindi, Mandarin, Turkish, and Urdu occurs in a zero-shot setting. The CASE 2022 workshop accepts reports on systems developed for predicting test data of CASE 2021 as well. We observe that the best systems submitted by CASE 2022 participants achieve between 79.71 and 84.06 F1-macro for new languages in a zero-shot setting. The winning approaches are mainly ensembling models and merging data in multiple languages. The best two submissions on CASE 2021 data outperform submissions from last year for Subtask 1 and Subtask 2 in all languages. Only the following scenarios were not outperformed by new submissions on CASE 2021: Subtask 3 Portuguese & Subtask 4 English",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "3ffdce5056944cf18f54bfde0f9de5bcfb696540",
     "citation_count": 8
   },
@@ -11595,7 +11595,7 @@
     "title": "A Multilingual Bag-of-Entities Model for Zero-Shot Cross-Lingual Text Classification",
     "abstract": "We present a multilingual bag-of-entities model that effectively boosts the performance of zero-shot cross-lingual text classification by extending a multilingual pre-trained language model (e.g., M-BERT). It leverages the multilingual nature of Wikidata: entities in multiple languages representing the same concept are defined with a unique identifier. This enables entities described in multiple languages to be represented using shared embeddings. A model trained on entity features in a resource-rich language can thus be directly applied to other languages. Our experimental results on cross-lingual topic classification (using the MLDoc and TED-CLDC datasets) and entity typing (using the SHINRA2020-ML dataset) show that the proposed model consistently outperforms state-of-the-art models",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "7c7e7e75eabf8ecde3b5376b60b9212e2ded8d15",
     "citation_count": 1
   },
@@ -11603,7 +11603,7 @@
     "title": "Collateral facilitation in humans and language models",
     "abstract": "Are the predictions of humans and language models affected by similar things? Research suggests that while comprehending language, humans make predictions about upcoming words, with more predictable words being processed more easily. However, evidence also shows that humans display a similar processing advantage for highly anomalous words when these words are semantically related to the preceding context or to the most probable continuation. Using stimuli from 3 psycholinguistic experiments, we find that this is also almost always also the case for 8 contemporary transformer language models (BERT, ALBERT, RoBERTa, XLM-R, GPT-2, GPT-Neo, GPT-J, and XGLM). We then discuss the implications of this phenomenon for our understanding of both human language comprehension and the predictions made by language models",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4061a9941fa0ff106e884272d9ed753650417ec4",
     "citation_count": 3
   },
@@ -11611,7 +11611,7 @@
     "title": "How Hate Speech Varies by Target Identity: A Computational Analysis",
     "abstract": "This paper investigates how hate speech varies in systematic ways according to the identities it targets. Across multiple hate speech datasets annotated for targeted identities, we find that classifiers trained on hate speech targeting specific identity groups struggle to generalize to other targeted identities. This provides empirical evidence for differences in hate speech by target identity; we then investigate which patterns structure this variation. We find that the targeted demographic category (e.g. gender/sexuality or race/ethnicity) appears to have a greater effect on the language of hate speech than does the relative social power of the targeted identity group. We also find that words associated with hate speech targeting specific identities often relate to stereotypes, histories of oppression, current social movements, and other social contexts specific to identities. These experiments suggest the importance of considering targeted identity, as well as the social contexts associated with these identities, in automated hate speech classification",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "5d80dee677cc700fefc25ffef5ebd5efc9f2481b",
     "citation_count": 1
   },
@@ -11619,7 +11619,7 @@
     "title": "Continual Learning for Natural Language Generations with Transformer Calibration",
     "abstract": "Conventional natural language process (NLP) generation models are trained offline with a given dataset for a particular task, which is referred to as isolated learning. Research on sequence-to-sequence language generation aims to study continual learning model to constantly learning from sequentially encountered tasks. However, continual learning studies often suffer from catastrophic forgetting, a persistent challenge for lifelong learning. In this paper, we present a novel NLP transformer model that attempts to mitigate catastrophic forgetting in online continual learning from a new perspective, i.e., attention calibration. We model the attention in the transformer as a calibrated unit in a general formulation, where the attention calibration could give benefits to balance the stability and plasticity of continual learning algorithms through influencing both their forward inference path and backward optimization path. Our empirical experiments, paraphrase generation and dialog response generation, demonstrate that this work outperforms state-of-the-art models by a considerable margin and effectively mitigate the forgetting",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "d2d3cee3342f7c0885a670c6bf53a509fdcd63b2",
     "citation_count": 1
   },
@@ -11627,7 +11627,7 @@
     "title": "That's so cute!: The CARE Dataset for Affective Response Detection",
     "abstract": "Social media plays an increasing role in our communication with friends and family, and in our consumption of entertainment and information. Hence, to design effective ranking functions for posts on social media, it would be useful to predict the affective responses of a post (e.g., whether it is likely to elicit feelings of entertainment, inspiration, or anger). Similar to work on emotion detection (which focuses on the affect of the publisher of the post), the traditional approach to recognizing affective response would involve an expensive investment in human annotation of training data. We create and publicly release CARE DB, a dataset of 230k social media post annotations according to seven affective responses using the Common Affective Response Expression (CARE) method. The CARE method is a means of leveraging the signal that is present in comments that are posted in response to a post, providing high-precision evidence about the affective response to the post without human annotation. Unlike human annotation, the annotation process we describe here can be iterated upon to expand the coverage of the method, particularly for new affective responses. We present experiments that demonstrate that the CARE annotations compare favorably with crowdsourced annotations. Finally, we use CARE DB to train competitive BERT-based models for predicting affective response as well as emotion detection, demonstrating the utility of the dataset for related tasks",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "68be3cdda97d1ec1ad49a07c15a5356353dd4aa8",
     "citation_count": 0
   },
@@ -11635,7 +11635,7 @@
     "title": "A Fine-grained Interpretability Evaluation Benchmark for Neural NLP",
     "abstract": "While there is increasing concern about the interpretability of neural models, the evaluation of interpretability remains an open problem, due to the lack of proper evaluation datasets and metrics. In this paper, we present a novel benchmark to evaluate the interpretability of both neural models and saliency methods. This benchmark covers three representative NLP tasks: sentiment analysis, textual similarity and reading comprehension, each provided with both English and Chinese annotated data. In order to precisely evaluate the interpretability, we provide token-level rationales that are carefully annotated to be sufficient, compact and comprehensive. We also design a new metric, i.e., the consistency between the rationales before and after perturbations, to uniformly evaluate the interpretability on different types of tasks. Based on this benchmark, we conduct experiments on three typical models with three saliency methods, and unveil their strengths and weakness in terms of interpretability. We will release this benchmark (https://www.luge.ai/#/luge/task/taskDetail?taskId=15) and hope it can facilitate the research in building trustworthy systems",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4a3568b47c042f3059d2a11f5e12ca5ce3492d75",
     "citation_count": 8
   },
@@ -11643,7 +11643,7 @@
     "title": "Towards More Natural Artificial Languages",
     "abstract": "A number of papers have recently argued in favor of using artificially generated languages to investigate the inductive biases of linguistic models, or to develop models for low-resource languages with underrepresented typologies. But the promise of artificial languages comes with a caveat: if these artificial languages are not sufficiently reflective of natural language, then using them as a proxy may lead to inaccurate conclusions. In this paper, we take a step towards increasing the realism of artificial language by introducing a variant of indexed grammars that draw their weights from hierarchical Pitman-Yor processes. We show that this framework generates languages that emulate the statistics of natural language corpora better than the current approach of directly formulating weighted context-free grammars",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "a86dd7d1b52943b7072afea3b7deafa5935eaffb",
     "citation_count": 0
   },
@@ -11651,7 +11651,7 @@
     "title": "Causal Analysis of Syntactic Agreement Neurons in Multilingual Language Models",
     "abstract": "Structural probing work has found evidence for latent syntactic information in pre-trained language models. However, much of this analysis has focused on monolingual models, and analyses of multilingual models have employed correlational methods that are confounded by the choice of probing tasks. In this study, we causally probe multilingual language models (XGLM and multilingual BERT) as well as monolingual BERT-based models across various languages; we do this by performing counterfactual perturbations on neuron activations and observing the effect on models’ subject-verb agreement probabilities. We observe where in the model and to what extent syntactic agreement is encoded in each language. We find significant neuron overlap across languages in autoregressive multilingual language models, but not masked language models. We also find two distinct layer-wise effect patterns and two distinct sets of neurons used for syntactic agreement, depending on whether the subject and verb are separated by other tokens. Finally, we find that behavioral analyses of language models are likely underestimating how sensitive masked language models are to syntactic information",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "e886fe33b9cda6e0b0f523d5fbbb7287c23aba2b",
     "citation_count": 3
   },
@@ -11659,7 +11659,7 @@
     "title": "Combining Noisy Semantic Signals with Orthographic Cues: Cognate Induction for the Indic Dialect Continuum",
     "abstract": "We present a novel method for unsupervised cognate/borrowing identification from monolingual corpora designed for low and extremely low resource scenarios, based on combining noisy semantic signals from joint bilingual spaces with orthographic cues modelling sound change. We apply our method to the North Indian dialect continuum, containing several dozens of dialects and languages spoken by more than 100 million people. Many of these languages are zero-resource and therefore natural language processing for them is non-existent. We first collect monolingual data for 26 Indic languages, 16 of which were previously zero-resource, and perform exploratory character, lexical and subword cross-lingual alignment experiments for the first time at this scale on this dialect continuum. We create bilingual evaluation lexicons against Hindi for 20 of the languages. We then apply our cognate identification method on the data, and show that our method outperforms both traditional orthography baselines as well as EM-style learnt edit distance matrices. To the best of our knowledge, this is the first work to combine traditional orthographic cues with noisy bilingual embeddings to tackle unsupervised cognate detection in a (truly) low-resource setup, showing that even noisy bilingual embeddings can act as good guides for this task. We release our multilingual dialect corpus, called HinDialect, as well as our scripts for evaluation data collection and cognate induction",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4c634317136f6ce4fd18e5aa176ddf91ea5be0f1",
     "citation_count": 1
   },
@@ -11667,7 +11667,7 @@
     "title": "Detecting Unintended Social Bias in Toxic Language Datasets",
     "abstract": "With the rise of online hate speech, automatic detection of Hate Speech, Offensive texts as a natural language processing task is getting popular. However, very little research has been done to detect unintended social bias from these toxic language datasets. This paper introduces a new dataset ToxicBias curated from the existing dataset of Kaggle competition named “Jigsaw Unintended Bias in Toxicity Classification”. We aim to detect social biases, their categories, and targeted groups. The dataset contains instances annotated for five different bias categories, viz., gender, race/ethnicity, religion, political, and LGBTQ. We train transformer-based models using our curated datasets and report baseline performance for bias identification, target generation, and bias implications. Model biases and their mitigation are also discussed in detail. Our study motivates a systematic extraction of social bias data from toxic language datasets",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "10ae93c9d40548f85d86a43ab9c3bf715815e7d9",
     "citation_count": 3
   },
@@ -11675,7 +11675,7 @@
     "title": "Incremental Processing of Principle B: Mismatches Between Neural Models and Humans",
     "abstract": "Despite neural language models qualitatively capturing many human linguistic behaviors, recent work has demonstrated that they underestimate the true processing costs of ungrammatical structures. We extend these more fine-grained comparisons between humans and models by investigating the interaction between Principle B and coreference processing. While humans use Principle B to block certain structural positions from affecting their incremental processing, we find that GPT-based language models are influenced by ungrammatical positions. We conclude by relating the mismatch between neural models and humans to properties of training data and suggest that certain aspects of human processing behavior do not directly follow from linguistic data",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4b43bc712cab78ef05d40730ff2db203fdd6c153",
     "citation_count": 0
   },
@@ -11683,7 +11683,7 @@
     "title": "Parsing as Deduction Revisited: Using an Automatic Theorem Prover to Solve an SMT Model of a Minimalist Parser",
     "abstract": "We introduce a constraint-based parser for Minimalist Grammars (MG), implemented as a working computer program, that falls within the long established “Parsing as Deduction” framework. The parser takes as input an MG lexicon and a (partially specified) pairing of sound with meaning - i.e. a word sequence paired with a semantic representation - and, using an axiomatized logic, declaratively deduces syntactic derivations (i.e. parse trees) that comport with the specified interface conditions. The parser is built on the first axiomatization of MGs to use Satisfiability Modulo Theories (SMT), encoding in a constraint-based way the principles of minimalist syntax. The parser operates via a novel solution method: it assembles an SMT model of an MG derivation, translates the inputs into SMT formulae that constrain the model, and then solves the model using the Z3 SMT-solver, a high-performance automatic theorem prover; as the SMT-model has finite size (being bounded by the inputs), it is decidable and thus solvable in finite time. The output derivation is then recovered from the model solution. To demonstrate this, we run the parser on several representative inputs and examine how the output derivations differ when the inputs are partially vs. fully specified. We conclude by discussing the parser’s extensibility and how a linguist can use it to automatically identify: (i) dependencies between input interface conditions and principles of syntax, and (ii) contradictions or redundancies between the model axioms encoding principles of syntax",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "3a722ad92327720b5163689a56eea3508ee48116",
     "citation_count": 0
   },
@@ -11691,7 +11691,7 @@
     "title": "Entailment Semantics Can Be Extracted from an Ideal Language Model",
     "abstract": "Language models are often trained on text alone, without additional grounding. There is debate as to how much of natural language semantics can be inferred from such a procedure. We prove that entailment judgments between sentences can be extracted from an ideal language model that has perfectly learned its target distribution, assuming the training sentences are generated by Gricean agents, i.e., agents who follow fundamental principles of communication from the linguistic theory of pragmatics. We also show entailment judgments can be decoded from the predictions of a language model trained on such Gricean data. Our results reveal a pathway for understanding the semantic information encoded in unlabeled linguistic data and a potential framework for extracting semantics from language models",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "7b0f2ee7c2a5f725308596b90b55a795280fcf69",
     "citation_count": 4
   },
@@ -11699,7 +11699,7 @@
     "title": "On Neurons Invariant to Sentence Structural Changes in Neural Machine Translation",
     "abstract": "We present a methodology that explores how sentence structure is reflected in neural representations of machine translation systems. We demonstrate our model-agnostic approach with the Transformer English-German translation model. We analyze neuron-level correlation of activations between paraphrases while discussing the methodology challenges and the need for confound analysis to isolate the effects of shallow cues. We find that similarity between activation patterns can be mostly accounted for by similarity in word choice and sentence length. Following that, we manipulate neuron activations to control the syntactic form of the output. We show this intervention to be somewhat successful, indicating that deep models capture sentence-structure distinctions, despite finding no such indication at the neuron level. To conduct our experiments, we develop a semi-automatic method to generate meaning-preserving minimal pair paraphrases (active-passive voice and adverbial clause-noun phrase) and compile a corpus of such pairs",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4362580e8dba234d12a5b6ff0833f0a26ea014eb",
     "citation_count": 2
   },
@@ -11707,7 +11707,7 @@
     "title": "Shared knowledge in natural conversations: can entropy metrics shed light on information transfers?",
     "abstract": "The mechanisms underlying human communication have been under investigation for decades, but the answer to how understanding between locutors emerges remains incomplete. Interaction theories suggest the development of a structural alignment between the speakers, allowing for the construction of a shared knowledge base (common ground). In this paper, we propose to apply metrics derived from information theory to quantify the amount of information exchanged between participants, the dynamics of information exchanges, to provide an objective way to measure the common ground instantiation. We focus on a corpus of free conversations augmented with prosodic segmentation and an expert annotation of thematic episodes. We show that during free conversations, the amount of information remains globally constant at the scale of the conversation, but varies depending on the thematic structuring, underlining the role of the speaker introducing the theme. We propose an original methodology applied to uncontrolled material",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "fd5d3e8aad2cafe08a9d0099ead681e4a724d3a7",
     "citation_count": 0
   },
@@ -11715,7 +11715,7 @@
     "title": "Leveraging a New Spanish Corpus for Multilingual and Cross-lingual Metaphor Detection",
     "abstract": "The lack of wide coverage datasets annotated with everyday metaphorical expressions for languages other than English is striking. This means that most research on supervised metaphor detection has been published only for that language. In order to address this issue, this work presents the first corpus annotated with naturally occurring metaphors in Spanish large enough to develop systems to perform metaphor detection. The presented dataset, CoMeta, includes texts from various domains, namely, news, political discourse, Wikipedia and reviews. In order to label CoMeta, we apply the MIPVU method, the guidelines most commonly used to systematically annotate metaphor on real data. We use our newly created dataset to provide competitive baselines by fine-tuning several multilingual and monolingual state-of-the-art large language models. Furthermore, by leveraging the existing VUAM English data in addition to CoMeta, we present the, to the best of our knowledge, first cross-lingual experiments on supervised metaphor detection. Finally, we perform a detailed error analysis that explores the seemingly high transfer of everyday metaphor across these two languages and datasets",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "1b056844e9bd3d05b9752172f35f877b4da7343f",
     "citation_count": 1
   },
@@ -11723,7 +11723,7 @@
     "title": "Cognitive Simplification Operations Improve Text Simplification",
     "abstract": "Text Simplification (TS) is the task of converting a text into a form that is easier to read while maintaining the meaning of the original text. A sub-task of TS is Cognitive Simplification (CS), converting text to a form that is readily understood by people with cognitive disabilities without rendering it childish or simplistic. This sub-task has yet to be explored with neural methods in NLP, and resources for it are scarcely available. In this paper, we present a method for incorporating knowledge from the cognitive accessibility domain into a TS model, by introducing an inductive bias regarding what simplification operations to use. We show that by adding this inductive bias to a TS-trained model, it is able to adapt better to CS without ever seeing CS data, and outperform a baseline model on a traditional TS benchmark. In addition, we provide a novel test dataset for CS, and analyze the differences between CS corpora and existing TS corpora, in terms of how simplification operations are applied",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "9f66471463ea53f5c2da8d3057c43aae20cc7d57",
     "citation_count": 0
   },
@@ -11731,7 +11731,7 @@
     "title": "On Language Spaces, Scales and Cross-Lingual Transfer of UD Parsers",
     "abstract": "Cross-lingual transfer of parsing models has been shown to work well for several closely-related languages, but predicting the success in other cases remains hard. Our study is a comprehensive analysis of the impact of linguistic distance on the transfer of UD parsers. As an alternative to syntactic typological distances extracted from URIEL, we propose three text-based feature spaces and show that they can be more precise predictors, especially on a more local scale, when only shorter distances are taken into account. Our analyses also reveal that the good coverage in typological databases is not among the factors that explain good transfer",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "8929066ce924696f960512c92a720c70bba65586",
     "citation_count": 0
   },
@@ -11739,7 +11739,7 @@
     "title": "Visual Semantic Parsing: From Images to Abstract Meaning Representation",
     "abstract": "The success of scene graphs for visual scene understanding has brought attention to the benefits of abstracting a visual input (e.g., image) into a structured representation, where entities (people and objects) are nodes connected by edges specifying their relations. Building these representations, however, requires expensive manual annotation in the form of images paired with their scene graphs or frames. These formalisms remain limited in the nature of entities and relations they can capture. In this paper, we propose to leverage a widely-used meaning representation in the field of natural language processing, the Abstract Meaning Representation (AMR), to address these shortcomings. Compared to scene graphs, which largely emphasize spatial relationships, our visual AMR graphs are more linguistically informed, with a focus on higher-level semantic concepts extrapolated from visual input. Moreover, they allow us to generate meta-AMR graphs to unify information contained in multiple image descriptions under one representation. Through extensive experimentation and analysis, we demonstrate that we can re-purpose an existing text-to-AMR parser to parse images into AMRs. Our findings point to important future research directions for improved scene understanding",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4d5ac3ecd9b54c258f0f2dac6d812cb9c0f0a8d2",
     "citation_count": 0
   },
@@ -11747,7 +11747,7 @@
     "title": "Syntactic Surprisal From Neural Models Predicts, But Underestimates, Human Processing Difficulty From Syntactic Ambiguities",
     "abstract": "Humans exhibit garden path effects: When reading sentences that are temporarily structurally ambiguous, they slow down when the structure is disambiguated in favor of the less preferred alternative. Surprisal theory (Hale, 2001; Levy, 2008), a prominent explanation of this finding, proposes that these slowdowns are due to the unpredictability of each of the words that occur in these sentences. Challenging this hypothesis, van Schijndel and Linzen (2021) find that estimates of the cost of word predictability derived from language models severely underestimate the magnitude of human garden path effects. In this work, we consider whether this underestimation is due to the fact that humans weight syntactic factors in their predictions more highly than language models do. We propose a method for estimating syntactic predictability from a language model, allowing us to weigh the cost of lexical and syntactic predictability independently. We find that treating syntactic predictability independently from lexical predictability indeed results in larger estimates of garden path. At the same time, even when syntactic predictability is independently weighted, surprisal still greatly underestimate the magnitude of human garden path effects. Our results support the hypothesis that predictability is not the only factor responsible for the processing cost associated with garden path sentences",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "4630e047eaa1d102d7f6a26e8d2a8cf2883c47dd",
     "citation_count": 4
   },
@@ -11755,7 +11755,7 @@
     "title": "OpenStance: Real-world Zero-shot Stance Detection",
     "abstract": "Prior studies of zero-shot stance detection identify the attitude of texts towards unseen topics occurring in the same document corpus. Such task formulation has three limitations: (i) Single domain/dataset. A system is optimized on a particular dataset from a single domain; therefore, the resulting system cannot work well on other datasets; (ii) the model is evaluated on a limited number of unseen topics; (iii) it is assumed that part of the topics has rich annotations, which might be impossible in real-world applications. These drawbacks will lead to an impractical stance detection system that fails to generalize to open domains and open-form topics. This work defines OpenStance: open-domain zero-shot stance detection, aiming to handle stance detection in an open world with neither domain constraints nor topic-specific annotations. The key challenge of OpenStance lies in open-domain generalization: learning a system with fully unspecific supervision but capable of generalizing to any dataset. To solve OpenStance, we propose to combine indirect supervision, from textual entailment datasets, and weak supervision, from data generated automatically by pre-trained Language Models. Our single system, without any topic-specific supervision, outperforms the supervised method on three popular datasets. To our knowledge, this is the first work that studies stance detection under the open-domain zero-shot setting. All data and code will be publicly released",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "a498b3603a20e6dbcaa1dcc44639dedfcdda7c9b",
     "citation_count": 1
   },
@@ -11763,7 +11763,7 @@
     "title": "Optimizing text representations to capture (dis)similarity between political parties",
     "abstract": "Even though fine-tuned neural language models have been pivotal in enabling “deep” automatic text analysis, optimizing text representations for specific applications remains a crucial bottleneck. In this study, we look at this problem in the context of a task from computational social science, namely modeling pairwise similarities between political parties. Our research question is what level of structural information is necessary to create robust text representation, contrasting a strongly informed approach (which uses both claim span and claim category annotations) with approaches that forgo one or both types of annotation with document structure-based heuristics. Evaluating our models on the manifestos of German parties for the 2021 federal election. We find that heuristics that maximize within-party over between-party similarity along with a normalization step lead to reliable party similarity prediction, without the need for manual annotation",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "2a25ef1e1aeac46f9cc15d326214fd53460e7bb2",
     "citation_count": 1
   },
@@ -11771,7 +11771,7 @@
     "title": "Computational cognitive modeling of predictive sentence processing in a second language",
     "abstract": "We propose an ACT-R cue-based retrieval model of the real-time gender predictions displayed by second language (L2) learners. The model extends a previous model of native (L1) speakers according to two central accounts in L2 sentence processing: (i) the Interference Hypothesis, which proposes that retrieval interference is higher in L2 than L1 speakers; (ii) the Lexical Bottleneck Hypothesis, which proposes that problems with gender agreement are due to weak gender representations. We tested the predictions of these accounts using data from two visual world experiments, which found that the gender predictions elicited by German possessive pronouns were delayed and smaller in size in L2 than L1 speakers. The experiments also found a “match effect”, such that when the antecedent and possessee of the pronoun had the same gender, predictions were earlier than when the two genders differed. This match effect was smaller in L2 than L1 speakers. The model implementing the Lexical Bottleneck Hypothesis captured the effects of smaller predictions, smaller match effect and delayed predictions in one of the two conditions. By contrast, the model implementing the Interference Hypothesis captured the smaller prediction effect but it showed an earlier prediction effect and an increased match effect in L2 than L1 speakers. These results provide evidence for the Lexical Bottleneck Hypothesis, and they demonstrate a method for extending computational models of L1 to L2 processing",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "ec5fd6fa32dc834e74db7175dcf29ecf899c9c03",
     "citation_count": 0
   },
@@ -11779,7 +11779,7 @@
     "title": "PIE-QG: Paraphrased Information Extraction for Unsupervised Question Generation from Small Corpora",
     "abstract": "Supervised Question Answering systems (QA systems) rely on domain-specific human-labeled data for training. Unsupervised QA systems generate their own question-answer training pairs, typically using secondary knowledge sources to achieve this outcome. Our approach (called PIE-QG) uses Open Information Extraction (OpenIE) to generate synthetic training questions from paraphrased passages and uses the question-answer pairs as training data for a language model for a state-of-the-art QA system based on BERT. Triples in the form of <subject, predicate, object> are extracted from each passage, and questions are formed with subjects (or objects) and predicates while objects (or subjects) are considered as answers. Experimenting on five extractive QA datasets demonstrates that our technique achieves on-par performance with existing state-of-the-art QA systems with the benefit of being trained on an order of magnitude fewer documents and without any recourse to external reference data sources",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "512919550f259878fc156d15cd1b7621bfe6eca7",
     "citation_count": 1
   },
@@ -11787,7 +11787,7 @@
     "title": "Probing for targeted syntactic knowledge through grammatical error detection",
     "abstract": "Targeted studies testing knowledge of subject-verb agreement (SVA) indicate that pre-trained language models encode syntactic information. We assert that if models robustly encode subject-verb agreement, they should be able to identify when agreement is correct and when it is incorrect. To that end, we propose grammatical error detection as a diagnostic probe to evaluate token-level contextual representations for their knowledge of SVA. We evaluate contextual representations at each layer from five pre-trained English language models: BERT, XLNet, GPT-2, RoBERTa and ELECTRA. We leverage public annotated training data from both English second language learners and Wikipedia edits, and report results on manually crafted stimuli for subject-verb agreement. We find that masked language models linearly encode information relevant to the detection of SVA errors, while the autoregressive models perform on par with our baseline. However, we also observe a divergence in performance when probes are trained on different training sets, and when they are evaluated on different syntactic constructions, suggesting the information pertaining to SVA error detection is not robustly encoded",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "b327db5fa9960dff3eba8de33530e93c6599a976",
     "citation_count": 0
   },
@@ -11795,7 +11795,7 @@
     "title": "An Alignment-based Approach to Text Segmentation Similarity Scoring",
     "abstract": "Text segmentation is a natural language processing task with popular applications, such as topic segmentation, element discourse extraction, and sentence tokenization. Much work has been done to develop accurate segmentation similarity metrics, but even the most advanced metrics used today, B, and WindowDiff, exhibit incorrect behavior due to their evaluation of boundaries in isolation. In this paper, we present a new segment-alignment based approach to segmentation similarity scoring and a new similarity metric A. We show that A does not exhibit the erratic behavior of $ and WindowDiff, quantify the likelihood of B and WindowDiff misbehaving through simulation, and discuss the versatility of alignment-based approaches for segmentation similarity scoring. We make our implementation of A publicly available and encourage the community to explore more sophisticated approaches to text segmentation similarity scoring",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "fb2aea16f51f1978e84cda634de0a268156fbdd2",
     "citation_count": 0
   },
@@ -11803,7 +11803,7 @@
     "title": "Enhancing the Transformer Decoder with Transition-based Syntax",
     "abstract": "Notwithstanding recent advances, syntactic generalization remains a challenge for text decoders. While some studies showed gains from incorporating source-side symbolic syntactic and semantic structure into text generation Transformers, very little work addressed the decoding of such structure. We propose a general approach for tree decoding using a transition-based approach. Examining the challenging test case of incorporating Universal Dependencies syntax into machine translation, we present substantial improvements on test sets that focus on syntactic generalization, while presenting improved or comparable performance on standard MT benchmarks. Further qualitative analysis addresses cases where syntactic generalization in the vanilla Transformer decoder is inadequate and demonstrates the advantages afforded by integrating syntactic information",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "269de1d1e26559613fa4b02320aefc07bb2d556b",
     "citation_count": 1
   },
@@ -11811,7 +11811,7 @@
     "title": "Characterizing Verbatim Short-Term Memory in Neural Language Models",
     "abstract": "When a language model is trained to predict natural language sequences, its prediction at each moment depends on a representation of prior context. What kind of information about the prior context can language models retrieve? We tested whether language models could retrieve the exact words that occurred previously in a text. In our paradigm, language models (transformers and an LSTM) processed English text in which a list of nouns occurred twice. We operationalized retrieval as the reduction in surprisal from the first to the second list. We found that the transformers retrieved both the identity and ordering of nouns from the first list. Further, the transformers’ retrieval was markedly enhanced when they were trained on a larger corpus and with greater model depth. Lastly, their ability to index prior tokens was dependent on learned attention patterns. In contrast, the LSTM exhibited less precise retrieval, which was limited to list-initial tokens and to short intervening texts. The LSTM’s retrieval was not sensitive to the order of nouns and it improved when the list was semantically coherent. We conclude that transformers implemented something akin to a working memory system that could flexibly retrieve individual token representations across arbitrary delays; conversely, the LSTM maintained a coarser and more rapidly-decaying semantic gist of prior tokens, weighted toward the earliest items",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "8a74fb6c8f48ca9a42e55c443672c4f6e06bf0ef",
     "citation_count": 2
   },
@@ -11819,7 +11819,7 @@
     "title": "MLLabs-LIG at TempoWiC 2022: A Generative Approach for Examining Temporal Meaning Shift",
     "abstract": "In this paper, we present our system for the EvoNLP 2022 shared task Temporal Meaning Shift (TempoWiC). Different from the typically used discriminative model, we propose a generative approach based on pre-trained generation models. The basic architecture of our system is a seq2seq model where the input sequence consists of two documents followed by a question asking whether the meaning of target word changed or not, the target output sequence is a declarative sentence describing the meaning of target word changed or not. The experimental results on TempoWiC test set show that our best system (with time information) obtained an accuracy and Marco F-1 score of 68.09% and 62.59% respectively, which ranked 12th among all submitted systems. The results have shown the plausibility of using generation model for WiC tasks, meanwhile also indicate there’s still room for further improvement",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "3da169761815248e56f6956fe297477ef24d5086",
     "citation_count": 1
   },
@@ -11827,7 +11827,7 @@
     "title": "Using Deep Mixture-of-Experts to Detect Word Meaning Shift for TempoWiC",
     "abstract": "This paper mainly describes the dma submission to the TempoWiC task, which achieves a macro-F1 score of 77.05% and attains the first place in this task. We first explore the impact of different pre-trained language models. Then we adopt data cleaning, data augmentation, and adversarial training strategies to enhance the model generalization and robustness. For further improvement, we integrate POS information and word semantic representation using a Mixture-of-Experts (MoE) approach. The experimental results show that MoE can overcome the feature overuse issue and combine the context, POS, and word semantic features well. Additionally, we use a model ensemble method for the final prediction, which has been proven effective by many research works",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "bbd1c0d3b11947447a6e1f1e869e98344de86409",
     "citation_count": 0
   },
@@ -11835,7 +11835,7 @@
     "title": "Using Two Losses and Two Datasets Simultaneously to Improve TempoWiC Accuracy",
     "abstract": "WSD (Word Sense Disambiguation) is the task of identifying which sense of a word is meant in a sentence or other segment of text. Researchers have worked on this task (e.g. Pustejovsky, 2002) for years but it’s still a challenging one even for SOTA (state-of-the-art) LMs (language models). The new dataset, TempoWiC introduced by Loureiro et al. (2022b) focuses on the fact that words change over time. Their best baseline achieves 70.33% macro-F1. In this work, we use two different losses simultaneously. We also improve our model by using another similar dataset to generalize better. Our best configuration beats their best baseline by 4.23%",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "07dd5d7b208ffeb697cd3506ef3ef5799469c198",
     "citation_count": 0
   },
@@ -11843,7 +11843,7 @@
     "title": "Class Incremental Learning for Intent Classification with Limited or No Old Data",
     "abstract": "In this paper, we explore class-incremental learning for intent classification (IC) in a setting with limited old data available. IC is the task of mapping user utterances to their corresponding intents. Even though class-incremental learning without storing the old data yields high potential of reducing human and computational resources in industry NLP model releases, to the best of our knowledge, it hasn’t been studied for NLP classification tasks in the literature before. In this work, we compare several contemporary class-incremental learning methods, i.e., BERT warm start, L2, Elastic Weight Consolidation, RecAdam and Knowledge Distillation within two realistic class-incremental learning scenarios: one where only the previous model is assumed to be available, but no data corresponding to old classes, and one in which limited unlabeled data for old classes is assumed to be available. Our results indicate that among the investigated continual learning methods, Knowledge Distillation worked best for our class-incremental learning tasks, and adding limited unlabeled data helps the model in both adaptability and stability",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "d9e7f6cf2864f1e0558480839d30896873525b4b",
     "citation_count": 0
   },
@@ -11851,7 +11851,7 @@
     "title": "CC-Top: Constrained Clustering for Dynamic Topic Discovery",
     "abstract": "Research on multi-class text classification of short texts mainly focuses on supervised (transfer) learning approaches, requiring a finite set of pre-defined classes which is constant over time. This work explores deep constrained clustering (CC) as an alternative to supervised learning approaches in a setting with a dynamically changing number of classes, a task we introduce as dynamic topic discovery (DTD).We do so by using pairwise similarity constraints instead of instance-level class labels which allow for a flexible number of classes while exhibiting a competitive performance compared to supervised approaches. First, we substantiate this through a series of experiments and show that CC algorithms exhibit a predictive performance similar to state-of-the-art supervised learning algorithms while requiring less annotation effort.Second, we demonstrate the overclustering capabilities of deep CC for detecting topics in short text data sets in the absence of the ground truth class cardinality during model training.Third, we showcase that these capabilities can be leveraged for the DTD setting as a step towards dynamic learning over time and finally, we release our codebase to nurture further research in this area",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "289f569c80757ddfa650710d637cfd8a5cfde107",
     "citation_count": 0
   },
@@ -11859,7 +11859,7 @@
     "title": "HSE at TempoWiC: Detecting Meaning Shift in Social Media with Diachronic Language Models",
     "abstract": "This paper describes our methods for temporal meaning shift detection, implemented during the TempoWiC shared task. We present two systems: with and without time span data usage. Our approaches are based on the language models fine-tuned for Twitter domain. Both systems outperformed all the competition’s baselines except TimeLMs-SIM. Our best submission achieved the macro-F1 score of 70.09% and took the 7th place. This result was achieved by using diachronic language models from the TimeLMs project",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "186d28349b232f279d822e3564e88ad226f95daa",
     "citation_count": 0
   },
@@ -11867,7 +11867,7 @@
     "title": "Leveraging time-dependent lexical features for offensive language detection",
     "abstract": "We present a study on the integration of time-sensitive information in lexicon-based offensive language detection systems. Our focus is on Offenseval sub-task A, aimed at detecting offensive tweets. We apply a semantic change detection algorithm over a short time span of two years to detect words whose semantics has changed and we focus particularly on those words that acquired or lost an offensive meaning between 2019 and 2020. Using the output of this semantic change detection approach, we train an SVM classifier on the Offenseval 2019 training set. We build on the already competitive SINAI system submitted to Offenseval 2019 by adding new lexical features, including those that capture the change in usage of words and their association with emerging offensive usages. We discuss the challenges, opportunities and limitations of integrating semantic change detection in offensive language detection models. Our work draws attention to an often neglected aspect of offensive language, namely that the meanings of words are constantly evolving and that NLP systems that account for this change can achieve good performance even when not trained on the most recent training data",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "bc7688e229b15e4ce585cf5f71cc00bc38618284",
     "citation_count": 0
   },
@@ -11875,7 +11875,7 @@
     "title": "Temporal Word Meaning Disambiguation using TimeLMs",
     "abstract": "Meaning of words constantly change given the events in modern civilization. Large Language Models use word embeddings, which are often static and thus cannot cope with this semantic change. Thus, it is important to resolve ambiguity in word meanings. This paper is an effort in this direction, where we explore methods for word sense disambiguation for the EvoNLP shared task. We conduct rigorous ablations for two solutions to this problem. We see that an approach using time-aware language models helps this task. Furthermore, we explore possible future directions to this problem",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "0fd97ed923a570367fc88668f820b1bf1941432d",
     "citation_count": 1
   },
@@ -11883,7 +11883,7 @@
     "title": "Contextualizing Emerging Trends in Financial News Articles",
     "abstract": "Identifying and exploring emerging trends in news is becoming more essential than ever with many changes occurring around the world due to the global health crises. However, most of the recent research has focused mainly on detecting trends in social media, thus, benefiting from social features (e.g. likes and retweets on Twitter) which helped the task as they can be used to measure the engagement and diffusion rate of content. Yet, formal text data, unlike short social media posts, comes with a longer, less restricted writing format, and thus, more challenging. In this paper, we focus our study on emerging trends detection in financial news articles about Microsoft, collected before and during the start of the COVID-19 pandemic (July 2019 to July 2020). We make the dataset freely available and we also propose a strong baseline (Contextual Leap2Trend) for exploring the dynamics of similarities between pairs of keywords based on topic modeling and term frequency. Finally, we evaluate against a gold standard (Google Trends) and present noteworthy real-world scenarios regarding the influence of the pandemic on Microsoft",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "eb8b81484a1851e28463e7bf1fc3ed4f54d6c701",
     "citation_count": 0
   },
@@ -11891,7 +11891,7 @@
     "title": "AstBERT: Enabling Language Model for Financial Code Understanding with Abstract Syntax Trees",
     "abstract": "Using the pre-trained language models to understand source codes has attracted increasing attention from financial institutions owing to the great potential to uncover financial risks. However, there are several challenges in applying these language models to solve programming language related problems directly. For instance, the shift of domain knowledge between natural language (NL) and programming language (PL) requires understanding the semantic and syntactic information from the data from different perspectives. To this end, we propose the AstBERT model, a pre-trained PL model aiming to better understand the financial codes using the abstract syntax tree (AST). Specifically, we collect a sheer number of source codes (both Java and Python) from the Alipay code repository and incorporate both syntactic and semantic code knowledge into our model through the help of code parsers, in which AST information of the source codes can be interpreted and integrated. We evaluate the performance of the proposed model on three tasks, including code question answering, code clone detection and code refinement. Experiment results show that our AstBERT achieves promising performance on three different downstream tasks",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "2e375d8f4c4dbbf2fdf209f54eda70c9546e4096",
     "citation_count": 1
   },
@@ -11899,7 +11899,7 @@
     "title": "Disentangled Variational Topic Inference for Topic-Accurate Financial Report Generation",
     "abstract": "Automatic generating financial report from a set of news is important but challenging. The financial reports is composed of key points of the news and corresponding inferring and reasoning from specialists in financial domain with professional knowledge. The challenges lie in the effective learning of the extra knowledge that is not well presented in the news, and the misalignment between topic of input news and output knowledge in target reports. In this work, we introduce a disentangled variational topic inference approach to learn two latent variables for news and report, respectively. We use a publicly available dataset to evaluate the proposed approach. The results demonstrate its effectiveness of enhancing the language informativeness and the topic accuracy of the generated financial reports",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "8867cf07cf854a15c8bb6a978463f207995d97ce",
     "citation_count": 0
   },
@@ -11907,7 +11907,7 @@
     "title": "Toward Privacy-preserving Text Embedding Similarity with Homomorphic Encryption",
     "abstract": "Text embedding is an essential component to build efficient natural language applications based on text similarities such as search engines and chatbots. Certain industries like finance and healthcare demand strict privacy-preserving conditions that user’s data should not be exposed to any potential malicious users even including service providers. From a privacy standpoint, text embeddings seem impossible to be interpreted but there is still a privacy risk that they can be recovered to original texts through inversion attacks. To satisfy such privacy requirements, in this paper, we study a Homomorphic Encryption (HE) based text similarity inference. To validate our method, we perform extensive experiments on two vital text similarity tasks. Through text embedding inversion tests, we prove that the benchmark datasets are vulnerable to inversion attacks and another privacy preserving approach, dχ-privacy, a relaxed version of Local Differential Privacy method fails to prevent them. We show that our approach preserves the performance of models compared to that the baseline has degradation up to 10% of scores for the minimum security",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "ea1829559fecc5452bc4c6cdd69eaf33104ca806",
     "citation_count": 1
   },
@@ -11915,7 +11915,7 @@
     "title": "TweetFinSent: A Dataset of Stock Sentiments on Twitter",
     "abstract": "Stock sentiment has strong correlations with the stock market but traditional sentiment analysis task classifies sentiment according to having feelings and emotions of good or bad. This definition of sentiment is not an accurate indicator of public opinion about specific stocks. To bridge this gap, we introduce a new task of stock sentiment analysis and present a new dataset for this task named TweetFinSent. In TweetFinSent, tweets are annotated based on if one gained or expected to gain positive or negative return from a stock. Experiments on TweetFinSent with several sentiment analysis models from lexicon-based to transformer-based have been conducted. Experimental results show that TweetFinSent dataset constitutes a challenging problem and there is ample room for improvement on the stock sentiment analysis task. TweetFinSent is available at https://github.com/jpmcair/tweetfinsent",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "f3189aa8eccb36efc00efcdcb647120d3d197f68",
     "citation_count": 0
   },
@@ -11923,7 +11923,7 @@
     "title": "Stock Price Volatility Prediction: A Case Study with AutoML",
     "abstract": "Accurate prediction of the stock price volatility, the rate at which the price of a stock increases or decreases over a particular period, is an important problem in finance. Inaccurate prediction of stock price volatility might lead to investment risk and financial loss, while accurate prediction might generate significant returns for investors. Several studies investigated stock price volatility prediction in a regression task by using the transcripts of earning calls (quarterly conference calls held by public companies) with Natural Language Processing (NLP) techniques. Existing studies use the entire transcript and this degrades the performance due to noise caused by irrelevant information that might not have a significant impact on stock price volatility. In order to overcome these limitations, by considering stock price volatility prediction as a classification task, we explore several denoising approaches, ranging from general-purpose approaches to techniques specific to finance to remove the noise, and leverage AutoML systems that enable auto-exploration of a wide variety of models. Our preliminary findings indicate that domain-specific denoising approaches provide better results than general-purpose approaches, moreover AutoML systems provide promising results",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "5879273fa8d1dd0bd61d43e0267d28961b660e8e",
     "citation_count": 0
   },
@@ -11931,7 +11931,7 @@
     "title": "DigiCall: A Benchmark for Measuring the Maturity of Digital Strategy through Company Earning Calls",
     "abstract": "Digital transformation reinvents companies, their vision and strategy, organizational structure, processes, capabilities, and culture, and enables the development of new or enhanced products and services delivered to customers more efficiently. Organizations, by formalizing their digital strategy attempt to plan for their digital transformations and accelerate their company growth. Understanding how successful a company is in its digital transformation starts with accurate measurement of its digital maturity levels. However, existing approaches to measuring organizations’ digital strategy have low accuracy levels and this leads to inconsistent results, and also does not provide resources (data) for future research to improve. In order to measure the digital strategy maturity of companies, we leverage the state-of-the-art NLP models on unstructured data (earning call transcripts), and reach the state-of-the-art levels (94%) for this task. We release 3.691 earning call transcripts and also annotated data set, labeled particularly for the digital strategy maturity by linguists. Our work provides an empirical baseline for research in industry and management science",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "3a2e98ca83edf157e6e4b4672d15a979081440f8",
     "citation_count": 0
   },
@@ -11939,7 +11939,7 @@
     "title": "Learning Better Intent Representations for Financial Open Intent Classification",
     "abstract": "With the recent surge of NLP technologies in the financial domain, banks and other financial entities have adopted virtual agents (VA) to assist customers. A challenging problem for VAs in this domain is determining a user’s reason or intent for contacting the VA, especially when the intent was unseen or open during the VA’s training. One method for handling open intents is adaptive decision boundary (ADB) post-processing, which learns tight decision boundaries from intent representations to separate known and open intents. We propose incorporating two methods for supervised pre-training of intent representations: prefix tuning and fine-tuning just the last layer of a large language model (LLM). With this proposal, our accuracy is 1.63% - 2.07% higher than the prior state-of-the-art ADB method for open intent classification on the banking77 benchmark amongst others. Notably, we only supplement the original ADB model with 0.1% additional trainable parameters. Ablation studies also determine that our method yields better results than full fine-tuning the entire model. We hypothesize that our findings could stimulate a new optimal method of downstream tuning that combines parameter efficient tuning modules with fine-tuning a subset of the base model’s layers",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "12c20b14f0652c2953dee2e4fc7da59e46744ff4",
     "citation_count": 1
   },
@@ -11947,7 +11947,7 @@
     "title": "Exploring Robustness of Prefix Tuning in Noisy Data: A Case Study in Financial Sentiment Analysis",
     "abstract": "The invention of transformer-based models such as BERT, GPT, and RoBERTa has enabled researchers and financial companies to finetune these powerful models and use them in different downstream tasks to achieve state-of-the-art performance. Recently, a lightweight alternative (approximately 0.1% - 3% of the original model parameters) to fine-tuning, known as prefix tuning has been introduced. This method freezes the model parameters and only updates the prefix to achieve performance comparable to full fine-tuning. Prefix tuning enables researchers and financial practitioners to achieve similar results with much fewer parameters. In this paper, we explore the robustness of prefix tuning when facing noisy data. Our experiments demonstrate that fine-tuning is more robust to noise than prefix tuning—the latter method faces a significant decrease in performance on most corrupted data sets with increasing noise levels. Furthermore, prefix tuning has high variances on the F1 scores compared to fine-tuning in many corruption methods. We strongly advocate that caution should be carefully taken when applying the state-of-the-art prefix tuning method to noisy data",
     "volume": "workshop",
-    "checked": false,
+    "checked": true,
     "id": "59c9e9221a9d09cc125b47d17cf792bb28287488",
     "citation_count": 0
   },
