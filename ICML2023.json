@@ -7181,7 +7181,7 @@
     "volume": "main",
     "checked": true,
     "id": "41f18a0374e25ad7884c7574a4217bf8da789624",
-    "citation_count": 3
+    "citation_count": 5
   },
   "https://proceedings.mlr.press/v202/liu23s.html": {
     "title": "2D-Shapley: A Framework for Fragmented Data Valuation",
@@ -7195,9 +7195,9 @@
     "title": "Causal Structure Learning for Latent Intervened Non-stationary Data",
     "abstract": "Causal structure learning can reveal the causal mechanism behind natural systems. It is well studied that the multiple domain data consisting of observational and interventional samples benefit causal identifiability. However, for non-stationary time series data, domain indexes are often unavailable, making it difficult to distinguish observational samples from interventional samples. To address these issues, we propose a novel Latent Intervened Non-stationary learning (LIN) method to make the domain indexes recovery process and the causal structure learning process mutually promote each other. We characterize and justify a possible faithfulness condition to guarantee the identifiability of the proposed LIN method. Extensive experiments on both synthetic and real-world datasets demonstrate that our method outperforms the baselines on causal structure learning for latent intervened non-stationary data",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "7201d5656c8af6c1b125cfed2891b005b12781e5",
-    "citation_count": 1
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/liu23u.html": {
     "title": "Structural Re-weighting Improves Graph Domain Adaptation",
@@ -7213,7 +7213,7 @@
     "volume": "main",
     "checked": true,
     "id": "e3dbef43bb8b0d919ef8cf4bb1a3c295ff5297c7",
-    "citation_count": 1
+    "citation_count": 3
   },
   "https://proceedings.mlr.press/v202/liu23w.html": {
     "title": "Oscillation-free Quantization for Low-bit Vision Transformers",
@@ -7265,19 +7265,19 @@
   },
   "https://proceedings.mlr.press/v202/liu23ac.html": {
     "title": "Lazy Agents: A New Perspective on Solving Sparse Reward Problem in Multi-agent Reinforcement Learning",
-    "abstract": "",
+    "abstract": "Sparse reward remains a valuable and challenging problem in multi-agent reinforcement learning (MARL). This paper addresses this issue from a new perspective, i.e., lazy agents. We empirically illustrate how lazy agents damage learning from both exploration and exploitation. Then, we propose a novel MARL framework called Lazy Agents Avoidance through Influencing External States (LAIES). Firstly, we examine the causes and types of lazy agents in MARL using a causal graph of the interaction between agents and their environment. Then, we mathematically define the concept of fully lazy agents and teams by calculating the causal effect of their actions on external states using the do-calculus process. Based on definitions, we provide two intrinsic rewards to motivate agents, i.e., individual diligence intrinsic motivation (IDI) and collaborative diligence intrinsic motivation (CDI). IDI and CDI employ counterfactual reasoning based on the external states transition model (ESTM) we developed. Empirical results demonstrate that our proposed method achieves state-of-the-art performance on various tasks, including the sparse-reward version of StarCraft multi-agent challenge (SMAC) and Google Research Football (GRF). Our code is open-source and available at https://github.com/liuboyin/LAIES",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "db1228a514538be02aec16ddc8dcf7f22fbbfa80",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/liu23ad.html": {
     "title": "RSC: Accelerate Graph Neural Networks Training via Randomized Sparse Computations",
     "abstract": "Training graph neural networks (GNNs) is extremely time consuming because sparse graph-based operations are hard to be accelerated by community hardware. Prior art successfully reduces the computation cost of dense matrix based operations (e.g., convolution and linear) via sampling-based approximation. However, unlike dense matrices, sparse matrices are stored in the irregular data format such that each row/column may have different number of non-zero entries. Thus, compared to the dense counterpart, approximating sparse operations has two unique challenges (1) we cannot directly control the efficiency of approximated sparse operation since the computation is only executed on non-zero entries; (2) sampling sparse matrices is much more inefficient due to the irregular data format. To address the issues, our key idea is to control the accuracy-efficiency trade off by optimizing computation resource allocation layer-wisely and epoch-wisely. For the first challenge, we customize the computation resource to different sparse operations, while limit the total used resource below a certain budget. For the second challenge, we cache previous sampled sparse matrices to reduce the epoch-wise sampling overhead. Finally, we propose a switching mechanisms to improve the generalization of GNNs trained with approximated operations. To this end, we propose Randomized Sparse Computation. In practice, rsc can achieve up to 11.6X speedup for a single sparse operation and 1.6X end-to-end wall-clock time speedup with almost no accuracy drop",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "727a91b687903d02c35e00d3ca94f9e728b4be36",
-    "citation_count": 9
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/liu23ae.html": {
     "title": "Algorithms for bounding contribution for histogram estimation under user-level privacy",
@@ -7317,7 +7317,7 @@
     "volume": "main",
     "checked": false,
     "id": "448a7634e878009dcaf011388e21e889606a0570",
-    "citation_count": 13
+    "citation_count": 15
   },
   "https://proceedings.mlr.press/v202/liu23aj.html": {
     "title": "What can online reinforcement learning with function approximation benefit from general coverage conditions?",
@@ -7345,18 +7345,18 @@
   },
   "https://proceedings.mlr.press/v202/liu23am.html": {
     "title": "Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time",
-    "abstract": "",
+    "abstract": "Large language models (LLMs) with hundreds of billions of parameters have sparked a new wave of exciting AI applications. However, they are computationally expensive at inference time. Sparsity is a natural approach to reduce this cost, but existing methods either require costly retraining, have to forgo LLM’s in-context learning ability, or do not yield wall-clock time speedup on modern hardware. We hypothesize that contextual sparsity, which are small, input-dependent sets of attention heads and MLP parameters that yield approximately the same output as the dense model for a given input, can address these issues. We show that contextual sparsity exists, that it can be accurately predicted, and that we can exploit it to speed up LLM inference in wall-clock time without compromising LLM’s quality or in-context learning ability. Based on these insights, we propose DejaVu, a system that uses a low-cost algorithm to predict contextual sparsity on the fly given inputs to each layer, along with an asynchronous and hardware-aware implementation that speeds up LLM inference. We validate that DejaVu can reduce the inference latency of OPT-175B by over 2$\\times$ compared to the state-of-the-art FasterTransformer, and over 6$\\times$ compared to the widely used Hugging Face implementation, without compromising model quality. The code is available at https://github.com/FMInference/DejaVu",
     "volume": "main",
-    "checked": false,
-    "id": null,
-    "citation_count": 0
+    "checked": true,
+    "id": "95240dda409e28acccdc5cf619ad0c036cf4292d",
+    "citation_count": 5
   },
   "https://proceedings.mlr.press/v202/liu23an.html": {
     "title": "Trapdoor Normalization with Irreversible Ownership Verification",
-    "abstract": "",
+    "abstract": "This paper introduces a deep model watermark with an irreversible ownership verification scheme: Trapdoor Normalization (TdN), inspired by the trapdoor function in traditional cryptography. To protect intellectual property within deep models, the proposed method is able to embed ownership information into normalization layers during training. We argue and empirically validate that relevant methods are vulnerable to ambiguity attacks, where the forged watermarks can cast ambiguity over the ownership verification. The primary trait that distinguishes this work from previous ones, is its design of a bidirectional connection between watermarks and deep models. Thereby, TdN enables an irreversible ownership verification scheme that is difficult for the adversary to compromise. In this way, the proposed TdN can effectively defeat ambiguity attacks. Extensive experiments demonstrate that the proposed method is not only superior to previous state-of-the-art methods in robustness, but also has better efficiency",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "105056f44d03e2898919a58a3bcf9c9620c476cd",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/liu23ao.html": {
@@ -7387,7 +7387,7 @@
     "title": "Revisiting Pseudo-Label for Single-Positive Multi-Label Learning",
     "abstract": "To deal with the challenge of high cost of annotating all relevant labels for each example in multi-label learning, single-positive multi-label learning (SPMLL) has been studied in recent years, where each example is annotated with only one positive label. By adopting pseudo-label generation, i.e., assigning pseudo-label to each example by various strategies, existing methods have empirically validated that SPMLL would significantly reduce the amount of supervision with a tolerable damage in classification performance. However, there is no existing method that can provide a theoretical guarantee for learning from pseudo-label on SPMLL. In this paper, the conditions of the effectiveness of learning from pseudo-label for SPMLL are shown and the learnability of pseudo-label-based methods is proven. Furthermore, based on the theoretical guarantee of pseudo-label for SPMLL, we propose a novel SPMLL method named MIME, i.e., Mutual label enhancement for sIngle-positive Multi-label lEarning and prove that the generated pseudo-label by MIME approximately converges to the fully-supervised case. Experiments on four image datasets and five MLL datasets show the effectiveness of our methods over several existing SPMLL approaches",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "52d4ef25794c2a25729b37d53e2410a2dbe2fac3",
     "citation_count": 0
   },
@@ -7413,7 +7413,7 @@
     "volume": "main",
     "checked": true,
     "id": "b5b157bbbbc5761b8ca08bf91ac0a077aaec3e66",
-    "citation_count": 0
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/liu23av.html": {
     "title": "Active Policy Improvement from Multiple Black-box Oracles",
@@ -7437,7 +7437,7 @@
     "volume": "main",
     "checked": true,
     "id": "abad8a9d39836004bf4b9368f2d4bb81fa2f7ca9",
-    "citation_count": 27
+    "citation_count": 29
   },
   "https://proceedings.mlr.press/v202/liu23ay.html": {
     "title": "Partially Observable Multi-agent RL with (Quasi-)Efficiency: The Blessing of Information Sharing",
@@ -7493,7 +7493,7 @@
     "volume": "main",
     "checked": false,
     "id": "9aa971b2641a4b4b278d9c14e482c890d2abf887",
-    "citation_count": 0
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/liu23bf.html": {
     "title": "Contextual Combinatorial Bandits with Probabilistically Triggered Arms",
@@ -7525,7 +7525,7 @@
     "volume": "main",
     "checked": true,
     "id": "f2b0017ddd77fa38760a18145e63553105a1a236",
-    "citation_count": 96
+    "citation_count": 102
   },
   "https://proceedings.mlr.press/v202/loo23a.html": {
     "title": "Dataset Distillation with Convexified Implicit Gradients",
@@ -7533,7 +7533,7 @@
     "volume": "main",
     "checked": true,
     "id": "3e2f92d2d38952fc21b7c3b74035e4058b4a2b99",
-    "citation_count": 1
+    "citation_count": 3
   },
   "https://proceedings.mlr.press/v202/lou23a.html": {
     "title": "Reflected Diffusion Models",
@@ -7541,23 +7541,23 @@
     "volume": "main",
     "checked": true,
     "id": "ce72a0dd8cead1806bf84ae01985ee2667d38ea9",
-    "citation_count": 6
+    "citation_count": 7
   },
   "https://proceedings.mlr.press/v202/lovell23a.html": {
     "title": "Never mind the metrics---what about the uncertainty? Visualising binary confusion matrix metric distributions to put performance in perspective",
-    "abstract": "",
+    "abstract": "There are strong incentives to build classification systems that show outstanding performance on various datasets and benchmarks. This can encourage a narrow focus on models and the performance metrics used to evaluate and compare them—resulting in a growing body of literature to evaluate and compare metrics. This paper strives for a more balanced perspective on binary classifier performance metrics by showing how uncertainty in these metrics can easily eclipse differences in empirical performance. We emphasise the discrete nature of confusion matrices and show how they can be well represented in a 3D lattice whose cross-sections form the space of receiver operating characteristic (ROC) curves. We develop novel interactive visualisations of performance metric contours within (and beyond) ROC space, showing the discrete probability mass functions of true and false positive rates and how these relate to performance metric distributions. We aim to raise awareness of the substantial uncertainty in performance metric estimates that can arise when classifiers are evaluated on empirical datasets and benchmarks, and that performance claims should be tempered by this understanding",
     "volume": "main",
     "checked": false,
-    "id": null,
+    "id": "70dc3d68d669fc4181f900044512ab0bcdf61558",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/lu23a.html": {
     "title": "Bilevel Optimization with Coupled Decision-Dependent Distributions",
     "abstract": "Bilevel optimization has gained significant popularity in recent years due to its ability to formulate various machine learning problems. For instance, in meta-learning, the upper-level (UL) problem offers a good initialization for the lower-level (LL) model to facilitate adaptation. However, the decision variables can impact data features and outcomes, leading to the phenomenon known as performativity. In this work, we investigate the inclusion of decision-dependent distributions in bilevel optimization. Specifically, we consider the scenarios where the UL data distribution depends on the LL optimization variable, and the LL data distribution also depends on the UL decision variable. We first establish sufficient conditions for the existence of performatively stable (PS) solutions in this class of bilevel problems. Also, we propose efficient stochastic algorithms to find the PS point with theoretical convergence rate analysis and discuss the theoretical optimality of the obtained solution. Our theoretical analysis is corroborated through a series of numerical experiments, wherein we evaluate the performance of the bilevel performative prediction algorithms alongside non-performative counterparts in the context of meta strategic learning problems",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "16134fa29fffe6f16e25570ade78a30467ea354c",
-    "citation_count": 8
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/lu23b.html": {
     "title": "Two-Scale Gradient Descent Ascent Dynamics Finds Mixed Nash Equilibria of Continuous Games: A Mean-Field Perspective",
@@ -7593,10 +7593,10 @@
   },
   "https://proceedings.mlr.press/v202/lu23f.html": {
     "title": "QAS-Bench: Rethinking Quantum Architecture Search and A Benchmark",
-    "abstract": "",
+    "abstract": "Automatic quantum architecture search (QAS) has been widely studied across disciplines with different implications. In this paper, beyond a particular domain, we formulate the QAS problem into two basic (and relatively even ideal) tasks: i) arbitrary quantum circuit (QC) regeneration given a target QC; ii) approximating an arbitrary unitary (oracle). The latter can be connected to the setting of various quantum machine learning tasks and other QAS applications. Based on these two tasks, we generate a public QAS benchmark including 900 random QCs and 400 random unitary matrices which is still missing in the literature. We evaluate six baseline algorithms including brute force search, simulated annealing, genetic algorithm, reinforcement learning, hybrid algorithm, and differentiable algorithm as part of our benchmark. One characteristic of our proposed evaluation protocol on the basic tasks is that it deprives the domain-specific designs and techniques as used in existing QAS literature, making a unified evaluation possible and focusing on the vanilla search methods themselves without coupling with domain prior. In fact, the unitary approximation task could be algorithmically more difficult than the specific problems as it needs to explore the whole matrix space to fit the unitary. While specific tasks often only need to fit a partial observation of the unitary as the objective for search. Data and code are available at https://github.com/Lucky-Lance/QAS-Bench",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "cadfb67000ab868d4c854f4d6888312f526f03a0",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/lu23g.html": {
@@ -7633,10 +7633,10 @@
   },
   "https://proceedings.mlr.press/v202/lundstrom23a.html": {
     "title": "A Unifying Framework to the Analysis of Interaction Methods using Synergy Functions",
-    "abstract": "",
+    "abstract": "Deep learning has revolutionized many areas of machine learning, from computer vision to natural language processing, but these high-performance models are generally “black box.\" Explaining such models would improve transparency and trust in AI-powered decision making and is necessary for understanding other practical needs such as robustness and fairness. A popular means of enhancing model transparency is to quantify how individual inputs contribute to model outputs (called attributions) and the magnitude of interactions between groups of inputs. A growing number of these methods import concepts and results from game theory to produce attributions and interactions. This work presents a unifying framework for game-theory-inspired attribution and $k^\\text{th}$-order interaction methods. We show that, given modest assumptions, a unique full account of interactions between features, called synergies, is possible in the continuous input setting. We identify how various methods are characterized by their policy of distributing synergies. We establish that gradient-based methods are characterized by their actions on monomials, a type of synergy function, and introduce unique gradient-based methods. We show that the combination of various criteria uniquely defines the attribution/interaction methods. Thus, the community needs to identify goals and contexts when developing and employing attribution and interaction methods",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "3c8e46f02b667b9ebcfa23519868c23754ae9810",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/luo23a.html": {
@@ -7653,7 +7653,7 @@
     "volume": "main",
     "checked": true,
     "id": "c9217c50acce84e417bbc13a4ecaa06db0c77026",
-    "citation_count": 13
+    "citation_count": 16
   },
   "https://proceedings.mlr.press/v202/luo23c.html": {
     "title": "Dimensionality Reduction for General KDE Mode Finding",
@@ -7683,7 +7683,7 @@
     "title": "HOPE: High-order Graph ODE For Modeling Interacting Dynamics",
     "abstract": "Leading graph ordinary differential equation (ODE) models have offered generalized strategies to model interacting multi-agent dynamical systems in a data-driven approach. They typically consist of a temporal graph encoder to get the initial states and a neural ODE-based generative model to model the evolution of dynamical systems. However, existing methods have severe deficiencies in capacity and efficiency due to the failure to model high-order correlations in long-term temporal trends. To tackle this, in this paper, we propose a novel model named High-order graph ODE (HOPE) for learning from dynamic interaction data, which can be naturally represented as a graph. It first adopts a twin graph encoder to initialize the latent state representations of nodes and edges, which consists of two branches to capture spatio-temporal correlations in complementary manners. More importantly, our HOPE utilizes a second-order graph ODE function which models the dynamics for both nodes and edges in the latent space respectively, which enables efficient learning of long-term dependencies from complex dynamical systems. Experiment results on a variety of datasets demonstrate both the effectiveness and efficiency of our proposed method",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "bd8a46023e1b7150a74d07c470bd041d2b4bf887",
     "citation_count": 1
   },
@@ -7705,10 +7705,10 @@
   },
   "https://proceedings.mlr.press/v202/lyle23a.html": {
     "title": "DiscoBAX: Discovery of optimal intervention sets in genomic experiment design",
-    "abstract": "",
+    "abstract": "The discovery of therapeutics to treat genetically-driven pathologies relies on identifying genes involved in the underlying disease mechanism. Existing approaches search over the billions of potential interventions to maximize the expected influence on the target phenotype. However, to reduce the risk of failure in future stages of trials, practical experiment design aims to find a set of interventions that maximally change a target phenotype via diverse mechanisms. We propose DiscoBAX - a sample-efficient method for maximizing the rate of significant discoveries per experiment while simultaneously probing for a wide range of diverse mechanisms during a genomic experiment campaign. We provide theoretical guarantees of optimality under standard assumptions, and conduct a comprehensive experimental evaluation covering both synthetic as well as real-world experimental design tasks. DiscoBAX outperforms existing state-of-the-art methods for experimental design, selecting effective and diverse perturbations in biological systems",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "4bbffe968f8743d9a2a80839da0663ac2ed877bb",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/lyle23b.html": {
@@ -7717,14 +7717,14 @@
     "volume": "main",
     "checked": true,
     "id": "aff48202f4fef2e8f6781423f893b60aabbc4e26",
-    "citation_count": 3
+    "citation_count": 5
   },
   "https://proceedings.mlr.press/v202/lyu23a.html": {
     "title": "Bandits with Knapsacks: Advice on Time-Varying Demands",
-    "abstract": "",
+    "abstract": "We consider a non-stationary Bandits with Knapsack problem. The outcome distribution at each time is scaled by a non-stationary quantity that signifies changing demand volumes. Instead of studying settings with limited non-stationarity, we investigate how online predictions on the total demand volume $Q$ allows us to improve our performance guarantees. We show that, without any prediction, any online algorithm incurs a linear-in-$T$ regret. In contrast, with online predictions on $Q$, we propose an online algorithm that judiciously incorporates the predictions, and achieve regret bounds that depends on the accuracy of the predictions. These bounds are shown to be tight in settings when prediction accuracy improves across time. Our theoretical results are corroborated by our numerical findings",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "d54dc4b0659482af8921793232e2cac51ba25693",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/lyu23b.html": {
@@ -7829,15 +7829,15 @@
     "volume": "main",
     "checked": true,
     "id": "65d761cb114b0278446d78ae945b97017e6cfac4",
-    "citation_count": 21
+    "citation_count": 22
   },
   "https://proceedings.mlr.press/v202/maghakian23a.html": {
     "title": "Applied Online Algorithms with Heterogeneous Predictors",
     "abstract": "For many application domains, the integration of machine learning (ML) models into decision making is hindered by the poor explainability and theoretical guarantees of black box models. Although the emerging area of algorithms with predictions offers a way to leverage ML while enjoying worst-case guarantees, existing work usually assumes access to only one predictor. We demonstrate how to more effectively utilize historical datasets and application domain knowledge by intentionally using predictors of different quantities. By leveraging the heterogeneity in our predictors, we are able to achieve improved performance, explainability and computational efficiency over predictor-agnostic methods. Theoretical results are supplemented by large-scale empirical evaluations with production data demonstrating the success of our methods on optimization problems occurring in large distributed computing systems",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "401881cf0f5f14b785202f1a4915c3cdfe8bce4b",
-    "citation_count": 5
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/mai23a.html": {
     "title": "CSP: Self-Supervised Contrastive Spatial Pre-Training for Geospatial-Visual Representations",
@@ -7901,7 +7901,7 @@
     "volume": "main",
     "checked": true,
     "id": "3dfa5b1cc516cb0a8d8f3e435f42edd38c9ae1ad",
-    "citation_count": 3
+    "citation_count": 4
   },
   "https://proceedings.mlr.press/v202/mangold23a.html": {
     "title": "Differential Privacy has Bounded Impact on Fairness in Classification",
@@ -7909,22 +7909,22 @@
     "volume": "main",
     "checked": true,
     "id": "da3d4d06f675a7a40a57aa8e37f6ed0a1a83af4d",
-    "citation_count": 2
+    "citation_count": 3
   },
   "https://proceedings.mlr.press/v202/mansour23a.html": {
     "title": "Random Classification Noise does not defeat All Convex Potential Boosters Irrespective of Model Choice",
-    "abstract": "",
+    "abstract": "A landmark negative result of Long and Servedio has had a considerable impact on research and development in boosting algorithms, around the now famous tagline that \"noise defeats all convex boosters\". In this paper, we appeal to the half-century+ founding theory of losses for class probability estimation, an extension of Long and Servedio’s results and a new general convex booster to demonstrate that the source of their negative result is in fact the model class, linear separators. Losses or algorithms are neither to blame. This leads us to a discussion on an otherwise praised aspect of ML, parameterisation",
     "volume": "main",
-    "checked": false,
-    "id": null,
-    "citation_count": 0
+    "checked": true,
+    "id": "cb629b54e69d4e5b3cfee8feb4a3bcb784501f84",
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/mao23a.html": {
     "title": "$H$-Consistency Bounds for Pairwise Misranking Loss Surrogates",
-    "abstract": "",
+    "abstract": "We present a detailed study of $H$-consistency bounds for score-based ranking. These are upper bounds on the target loss estimation error of a predictor in a hypothesis set $H$, expressed in terms of the surrogate loss estimation error of that predictor. We will show that both in the general pairwise ranking scenario and in the bipartite ranking scenario, there are no meaningful $H$-consistency bounds for most hypothesis sets used in practice including the family of linear models and that of the neural networks, which satisfy the equicontinuous property with respect to the input. To come up with ranking surrogate losses with theoretical guarantees, we show that a natural solution consists of resorting to a pairwise abstention loss in the general pairwise ranking scenario, and similarly, a bipartite abstention loss in the bipartite ranking scenario, to abstain from making predictions at some limited cost $c$. For surrogate losses of these abstention loss functions, we give a series of $H$-consistency bounds for both the family of linear functions and that of neural networks with one hidden-layer. Our experimental results illustrate the effectiveness of ranking with abstention",
     "volume": "main",
     "checked": false,
-    "id": null,
+    "id": "52f43ed48cb584b5da9af7572061f6c149d7ea03",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/mao23b.html": {
@@ -7997,7 +7997,7 @@
     "volume": "main",
     "checked": true,
     "id": "1b2872204387fe0e54de21650a4b104eb973ef9c",
-    "citation_count": 1
+    "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/markov23a.html": {
     "title": "Quantized Distributed Training of Large Models with Convergence Guarantees",
@@ -8013,7 +8013,7 @@
     "volume": "main",
     "checked": true,
     "id": "b04722d9b9627f3c5d2bd91c82a5c82ab1d56d48",
-    "citation_count": 1
+    "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/marro23a.html": {
     "title": "Computational Asymmetries in Robust Classification",
@@ -8083,9 +8083,9 @@
     "title": "Robustness in Multimodal Learning under Train-Test Modality Mismatch",
     "abstract": "Multimodal learning is defined as learning over multiple heterogeneous input modalities such as video, audio, and text. In this work, we are concerned with understanding how models behave as the type of modalities differ between training and deployment, a situation that naturally arises in many applications of multimodal learning to hardware platforms. We present a multimodal robustness framework to provide a systematic analysis of common multimodal representation learning methods. Further, we identify robustness short-comings of these approaches and propose two intervention techniques leading to $1.5\\times$-$4\\times$ robustness improvements on three datasets, AudioSet, Kinetics-400 and ImageNet-Captions. Finally, we demonstrate that these interventions better utilize additional modalities, if present, to achieve competitive results of $44.2$ mAP on AudioSet 20K",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "fa268408245b0c8121121ba8074e512dfe617923",
-    "citation_count": 0
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/mehrabi23a.html": {
     "title": "A Model-free Closeness-of-influence Test for Features in Supervised Learning",
@@ -8097,10 +8097,10 @@
   },
   "https://proceedings.mlr.press/v202/mei23a.html": {
     "title": "Stochastic Gradient Succeeds for Bandits",
-    "abstract": "",
+    "abstract": "We show that the stochastic gradient bandit algorithm converges to a globally optimal policy at an $O(1/t)$ rate, even with a constant step size. Remarkably, global convergence of the stochastic gradient bandit algorithm has not been previously established, even though it is an old algorithm known to be applicable to bandits. The new result is achieved by establishing two novel technical findings: first, the noise of the stochastic updates in the gradient bandit algorithm satisfies a strong “growth condition” property, where the variance diminishes whenever progress becomes small, implying that additional noise control via diminishing step sizes is unnecessary; second, a form of “weak exploration” is automatically achieved through the stochastic gradient updates, since they prevent the action probabilities from decaying faster than $O(1/t)$, thus ensuring that every action is sampled infinitely often with probability $1$. These two findings can be used to show that the stochastic gradient update is already “sufficient” for bandits in the sense that exploration versus exploitation is automatically balanced in a manner that ensures almost sure convergence to a global optimum. These novel theoretical findings are further verified by experimental results",
     "volume": "main",
-    "checked": false,
-    "id": null,
+    "checked": true,
+    "id": "476345b621e90c307c0e9e0b4c19122f0517dd97",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/melnychuk23a.html": {
@@ -8155,9 +8155,9 @@
     "title": "Quantile Credit Assignment",
     "abstract": "In reinforcement learning, the credit assignment problem is to distinguish luck from skill, that is, separate the inherent randomness in the environment from the controllable effects of the agent’s actions. This paper proposes two novel algorithms, Quantile Credit Assignment (QCA) and Hindsight QCA (HQCA), which incorporate distributional value estimation to perform credit assignment. QCA uses a network that predicts the quantiles of the return distribution, whereas HQCA additionally incorporates information about the future. Both QCA and HQCA have the appealing interpretation of leveraging an estimate of the quantile level of the return (interpreted as the level of \"luck\") in order to derive a \"luck-dependent\" baseline for policy gradient methods. We show theoretically that this approach gives an unbiased policy gradient estimate that can yield significant variance reductions over a standard value estimate baseline. QCA and HQCA significantly outperform prior state-of-the-art methods on a range of extremely difficult credit assignment problems",
     "volume": "main",
-    "checked": false,
+    "checked": true,
     "id": "b877d25296cf390cc6b63b0e477d8febb5a81e09",
-    "citation_count": 45
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/metelev23a.html": {
     "title": "Is Consensus Acceleration Possible in Decentralized Optimization over Slowly Time-Varying Networks?",
