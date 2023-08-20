@@ -16034,7 +16034,7 @@
     "abstract": "Natural agents can effectively learn from multiple data sources that differ in size, quality, and types of measurements. We study this heterogeneity in the context of offline reinforcement learning (RL) by introducing a new, practically motivated semi-supervised setting. Here, an agent has access to two sets of trajectories: labelled trajectories containing state, action and reward triplets at every timestep, along with unlabelled trajectories that contain only state and reward information. For this setting, we develop and study a simple meta-algorithmic pipeline that learns an inverse dynamics model on the labelled data to obtain proxy-labels for the unlabelled data, followed by the use of any offline RL algorithm on the true and proxy-labelled trajectories. Empirically, we find this simple pipeline to be highly successful — on several D4RL benchmarks (Fu et al., 2020), certain offline RL algorithms can match the performance of variants trained on a fully labelled dataset even when we label only 10% of trajectories which are highly suboptimal. To strengthen our understanding, we perform a large-scale controlled empirical study investigating the interplay of data-centric properties of the labelled and unlabelled datasets, with algorithmic design choices (e.g., choice of inverse dynamics, offline RL algorithm) to identify general trends and best practices for training RL agents on semi-supervised offline datasets",
     "checked": true,
     "id": "3aea4d8765e5677ce38d5d35b35b5ef82b7e5277",
-    "semantic_title": "",
+    "semantic_title": "semi-supervised offline reinforcement learning with action-free trajectories",
     "citation_count": 5
   },
   "https://proceedings.mlr.press/v202/zheng23c.html": {
@@ -16043,7 +16043,7 @@
     "abstract": "Diffusion models have exhibited excellent performance in various domains. The probability flow ordinary differential equation (ODE) of diffusion models (i.e., diffusion ODEs) is a particular case of continuous normalizing flows (CNFs), which enables deterministic inference and exact likelihood evaluation. However, the likelihood estimation results by diffusion ODEs are still far from those of the state-of-the-art likelihood-based generative models. In this work, we propose several improved techniques for maximum likelihood estimation for diffusion ODEs, including both training and evaluation perspectives. For training, we propose velocity parameterization and explore variance reduction techniques for faster convergence. We also derive an error-bounded high-order flow matching objective for finetuning, which improves the ODE likelihood and smooths its trajectory. For evaluation, we propose a novel training-free truncated-normal dequantization to fill the training-evaluation gap commonly existing in diffusion ODEs. Building upon these techniques, we achieve state-of-the-art likelihood estimation results on image datasets (2.56 on CIFAR-10, 3.43/3.69 on ImageNet-32) without variational dequantization or data augmentation",
     "checked": true,
     "id": "af74ef7a0d27156c0c0937e5ff6d4cf3767c048f",
-    "semantic_title": "",
+    "semantic_title": "improved techniques for maximum likelihood estimation for diffusion odes",
     "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/zheng23d.html": {
@@ -16052,7 +16052,7 @@
     "abstract": "Diffusion models have found widespread adoption in various areas. However, their sampling process is slow because it requires hundreds to thousands of network evaluations to emulate a continuous process defined by differential equations. In this work, we use neural operators, an efficient method to solve the probability flow differential equations, to accelerate the sampling process of diffusion models. Compared to other fast sampling methods that have a sequential nature, we are the first to propose a parallel decoding method that generates images with only one model forward pass. We propose diffusion model sampling with neural operator (DSNO) that maps the initial condition, i.e., Gaussian distribution, to the continuous-time solution trajectory of the reverse diffusion process. To model the temporal correlations along the trajectory, we introduce temporal convolution layers that are parameterized in the Fourier space into the given diffusion model backbone. We show our method achieves state-of-the-art FID of 3.78 for CIFAR-10 and 7.83 for ImageNet-64 in the one-model-evaluation setting",
     "checked": true,
     "id": "7f908fb67c6d4089fd00a35595337feaa13d56a8",
-    "semantic_title": "",
+    "semantic_title": "fast sampling of diffusion models via operator learning",
     "citation_count": 13
   },
   "https://proceedings.mlr.press/v202/zheng23e.html": {
@@ -16061,34 +16061,34 @@
     "abstract": "For a complicated algorithm, its implementation by a human programmer usually starts with outlining a rough control flow followed by iterative enrichments, eventually yielding carefully generated syntactic structures and variables in a hierarchy. However, state-of-the-art large language models generate codes in a single pass, without intermediate warm-ups to reflect the structured thought process of \"outline-then-detail\". Inspired by the recent success of chain-of-thought prompting, we propose ChainCoder, a program synthesis language model that generates Python code progressively, i.e. from coarse to fine in multiple passes. We first decompose source code into layout frame components and accessory components via abstract syntax tree parsing to construct a hierarchical representation. We then reform our prediction target into a multi-pass objective, each pass generates a subsequence, which is concatenated in the hierarchy. Finally, a tailored transformer architecture is leveraged to jointly encode the natural language descriptions and syntactically aligned I/O data samples. Extensive evaluations show that ChainCoder outperforms state-of-the-arts, demonstrating that our progressive generation eases the reasoning procedure and guides the language model to generate higher-quality solutions. Our codes are available at: https://github.com/VITA-Group/ChainCoder",
     "checked": true,
     "id": "19ea368b7f88279899c40813a797dda7adc50c07",
-    "semantic_title": "",
+    "semantic_title": "outline, then details: syntactically guided coarse-to-fine code generation",
     "citation_count": 4
   },
   "https://proceedings.mlr.press/v202/zheng23f.html": {
     "title": "Revisiting Discriminative vs. Generative Classifiers: Theory and Implications",
     "volume": "main",
-    "abstract": "A large-scale deep model pre-trained on massive labeled or unlabeled data transfers well to downstream tasks. Linear evaluation freezes parameters in the pre-trained model and trains a linear classifier separately, which is efficient and attractive for transfer. However, little work has investigated the classifier in linear evaluation except for the default logistic regression. Inspired by the statistical efficiency of naive Bayes, the paper revisits the classical topic on discriminative vs. generative classifiers. Theoretically, the paper considers the surrogate loss instead of the zero-one loss in analyses and generalizes the classical results from binary cases to multiclass ones. We show that, under mild assumptions, multiclass naive Bayes requires $O(\\log n)$ samples to approach its asymptotic error while the corresponding multiclass logistic regression requires $O(n)$ samples, where $n$ is the feature dimension. To establish it, we present a multiclass $\\mathcal{H}$-consistency bound framework and an explicit bound for logistic loss, which are of independent interests. Simulation results on a mixture of Gaussian validate our theoretical findings. Experiments on various pre-trained deep vision models show that naive Bayes consistently converges faster as the number of data increases. Besides, naive Bayes shows promise in few-shot cases and we observe the \"two regimes” phenomenon in pre-trained supervised models. Our code is available at https://github.com/ML-GSAI/Revisiting-Dis-vs-Gen-Classifiers",
+    "abstract": "A large-scale deep model pre-trained on massive labeled or unlabeled data transfers well to downstream tasks. Linear evaluation freezes parameters in the pre-trained model and trains a linear classifier separately, which is efficient and attractive for transfer. However, little work has investigated the classifier in linear evaluation except for the default logistic regression. Inspired by the statistical efficiency of naive Bayes, the paper revisits the classical topic on discriminative vs. generative classifiers. Theoretically, the paper considers the surrogate loss instead of the zero-one loss in analyses and generalizes the classical results from binary cases to multiclass ones. We show that, under mild assumptions, multiclass naive Bayes requires $O(\\log n)$ samples to approach its asymptotic error while the corresponding multiclass logistic regression requires $O(n)$ samples, where $n$ is the feature dimension. To establish it, we present a multiclass $\\mathcal{H}$-consistency bound framework and an explicit bound for logistic loss, which are of independent interests. Simulation results on a mixture of Gaussian validate our theoretical findings. Experiments on various pre-trained deep vision models show that naive Bayes consistently converges faster as the number of data increases. Besides, naive Bayes shows promise in few-shot cases and we observe the \"two regimes\" phenomenon in pre-trained supervised models. Our code is available at https://github.com/ML-GSAI/Revisiting-Dis-vs-Gen-Classifiers",
     "checked": true,
     "id": "ea04174766c2cb2ab8a5ef3a424912a0dd0a4d51",
-    "semantic_title": "",
+    "semantic_title": "revisiting discriminative vs. generative classifiers: theory and implications",
     "citation_count": 3
   },
   "https://proceedings.mlr.press/v202/zheng23g.html": {
     "title": "Evidential Interactive Learning for Medical Image Captioning",
     "volume": "main",
-    "abstract": "Medical image captioning alleviates the burden of physicians and possibly reduces medical errors by automatically generating text descriptions to describe image contents and convey findings. It is more challenging than conventional image captioning due to the complexity of medical images and the difficulty of aligning image regions with medical terms. In this paper, we propose an evidential interactive learning framework that leverages evidence-based uncertainty estimation and interactive machine learning to improve image captioning with limited labeled data. The interactive learning process involves three stages: keyword prediction, caption generation, and model retraining. First, the model predicts a list of keywords with evidence-based uncertainty and selects the most informative keywords to seek user feedback. Second, user-approved keywords are used as model input to guide the model to generate satisfactory captions. Third, the model is updated based on user-approved keywords and captions, where evidence-based uncertainty is used to allocate different weights to different data instances. Experiments on two medical image datasets illustrate that the proposed framework can effectively learn from human feedback and improve the model’s performance in the future",
-    "checked": false,
-    "id": "95c3de903e7a725b913548fd22a32ccabe374abe",
-    "semantic_title": "",
-    "citation_count": 118
+    "abstract": "Medical image captioning alleviates the burden of physicians and possibly reduces medical errors by automatically generating text descriptions to describe image contents and convey findings. It is more challenging than conventional image captioning due to the complexity of medical images and the difficulty of aligning image regions with medical terms. In this paper, we propose an evidential interactive learning framework that leverages evidence-based uncertainty estimation and interactive machine learning to improve image captioning with limited labeled data. The interactive learning process involves three stages: keyword prediction, caption generation, and model retraining. First, the model predicts a list of keywords with evidence-based uncertainty and selects the most informative keywords to seek user feedback. Second, user-approved keywords are used as model input to guide the model to generate satisfactory captions. Third, the model is updated based on user-approved keywords and captions, where evidence-based uncertainty is used to allocate different weights to different data instances. Experiments on two medical image datasets illustrate that the proposed framework can effectively learn from human feedback and improve the model's performance in the future",
+    "checked": true,
+    "id": "d922c317fbad1912b0b512d3f3d42e02d2d56287",
+    "semantic_title": "evidential interactive learning for medical image captioning",
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zheng23h.html": {
     "title": "Finding the Missing-half: Graph Complementary Learning for Homophily-prone and Heterophily-prone Graphs",
     "volume": "main",
-    "abstract": "Real-world graphs generally have only one kind of tendency in their connections. These connections are either homophilic-prone or heterophily-prone. While graphs with homophily-prone edges tend to connect nodes with the same class (i.e., intra-class nodes), heterophily-prone edges tend to build relationships between nodes with different classes (i.e., inter-class nodes). Existing GNNs only take the original graph as input during training. The problem with this approach is that it forgets to take into consideration the ”missing-half” structural information, that is, heterophily-prone topology for homophily-prone graphs and homophily-prone topology for heterophily-prone graphs. In our paper, we introduce Graph cOmplementAry Learning, namely GOAL, which consists of two components: graph complementation and complemented graph convolution. The first component finds the missing-half structural information for a given graph to complement it. The complemented graph has two sets of graphs including both homophily- and heterophily-prone topology. In the latter component, to handle complemented graphs, we design a new graph convolution from the perspective of optimisation. The experiment results show that GOAL consistently outperforms all baselines in eight real-world datasets",
+    "abstract": "Real-world graphs generally have only one kind of tendency in their connections. These connections are either homophilic-prone or heterophily-prone. While graphs with homophily-prone edges tend to connect nodes with the same class (i.e., intra-class nodes), heterophily-prone edges tend to build relationships between nodes with different classes (i.e., inter-class nodes). Existing GNNs only take the original graph as input during training. The problem with this approach is that it forgets to take into consideration the \"missing-half\" structural information, that is, heterophily-prone topology for homophily-prone graphs and homophily-prone topology for heterophily-prone graphs. In our paper, we introduce Graph cOmplementAry Learning, namely GOAL, which consists of two components: graph complementation and complemented graph convolution. The first component finds the missing-half structural information for a given graph to complement it. The complemented graph has two sets of graphs including both homophily- and heterophily-prone topology. In the latter component, to handle complemented graphs, we design a new graph convolution from the perspective of optimisation. The experiment results show that GOAL consistently outperforms all baselines in eight real-world datasets",
     "checked": true,
     "id": "459f7110dc6381b70c354b79857a1a717887be5c",
-    "semantic_title": "",
+    "semantic_title": "finding the missing-half: graph complementary learning for homophily-prone and heterophily-prone graphs",
     "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/zhou23a.html": {
@@ -16097,16 +16097,16 @@
     "abstract": "We consider the problem of fairly allocating a sequence of indivisible items that arrive online in an arbitrary order to a group of $n$ agents with additive normalized valuation functions, we consider the allocation of goods and chores separately and propose algorithms for approximating maximin share (MMS) allocations for both settings. When agents have identical valuation functions the problem coincides with the semi-online machine covering problem (when items are goods) and load balancing problem (when items are chores), for both of which optimal competitive ratios have been achieved. In this paper we consider the case when agents have general additive valuation functions. For the allocation of goods we show that no competitive algorithm exists even when there are only three agents and propose an optimal $0.5$-competitive algorithm for the case of two agents. For the allocation of chores we propose a $(2-1/n)$-competitive algorithm for $n\\geq 3$ agents and a $\\sqrt{2}\\approx 1.414$-competitive algorithm for two agents. Additionally, we show that no algorithm can do better than $15/11\\approx 1.364$-competitive for two agents",
     "checked": true,
     "id": "6be3e75e1d4af8c26a14ec96962d62af035bf9db",
-    "semantic_title": "",
+    "semantic_title": "multi-agent online scheduling: mms allocations for indivisible items",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23b.html": {
     "title": "Eliminating Adversarial Noise via Information Discard and Robust Representation Restoration",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Deep neural networks (DNNs) are vulnerable to adversarial noise. Denoising model-based defense is a major protection strategy. However, denoising models may fail and induce negative effects in fully white-box scenarios. In this work, we start from the latent inherent properties of adversarial samples to break the limitations. Unlike solely learning a mapping from adversarial samples to natural samples, we aim to achieve denoising by destroying the spatial characteristics of adversarial noise and preserving the robust features of natural information. Motivated by this, we propose a defense based on information discard and robust representation restoration. Our method utilize complementary masks to disrupt adversarial noise and guided denoising models to restore robust-predictive representations from masked samples. Experimental results show that our method has competitive performance against white-box attacks and effectively reverses the negative effect of denoising models",
+    "checked": true,
+    "id": "7aaf25cdc7636e57e500b6de5b36c853cd25aad0",
+    "semantic_title": "eliminating adversarial noise via information discard and robust representation restoration",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23c.html": {
@@ -16115,7 +16115,7 @@
     "abstract": "Transformers are central to recent successes in natural language processing and computer vision. Transformers have a mostly uniform backbone where layers alternate between feed-forward and self-attention in order to build a deep network. Here we investigate this design choice and find that more complex blocks that have different permutations of layer primitives can be more efficient. Using this insight, we develop a complex block, named Brainformer, that consists of a diverse sets of layers such as sparsely gated feed-forward layers, dense feed-forward layers, attention layers, and various forms of layer normalization and activation functions. Brainformer consistently outperforms the state-of-the-art dense and sparse Transformers, in terms of both quality and efficiency. A Brainformer model with 8 billion activated parameters per token demonstrates 2x faster training convergence and 5x faster step time compared to its GLaM counterpart. In downstream task evaluation, Brainformer also demonstrates a 3% higher SuperGLUE score with fine-tuning compared to GLaM with a similar number of activated parameters. Finally, Brainformer largely outperforms a Primer dense model derived with NAS with similar computation per token on fewshot evaluations",
     "checked": true,
     "id": "4b5cbb924f06763a3c785d0ccfb3bc8bd765f4a5",
-    "semantic_title": "",
+    "semantic_title": "brainformers: trading simplicity for efficiency",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhou23d.html": {
@@ -16124,25 +16124,25 @@
     "abstract": "In deep learning, often the training process finds an interpolator (a solution with 0 training loss), but the test loss is still low. This phenomenon, known as benign overfitting, is a major mystery that received a lot of recent attention. One common mechanism for benign overfitting is implicit regularization, where the training process leads to additional properties for the interpolator, often characterized by minimizing certain norms. However, even for a simple sparse linear regression problem $y = \\beta^{\\ast\\top} x +\\xi$ with sparse $\\beta^{\\ast}$, neither minimum $\\ell_1$ or $\\ell_2$ norm interpolator gives the optimal test loss. In this work, we give a different parametrization of the model which leads to a new implicit regularization effect that combines the benefit of $\\ell_1$ and $\\ell_2$ interpolators. We show that training our new model via gradient descent leads to an interpolator with near-optimal test loss. Our result is based on careful analysis of the training dynamics and provides another example of implicit regularization effect that goes beyond norm minimization",
     "checked": true,
     "id": "fb6e9ad2fbd0aa086c029fe939d4d2548de3ad5d",
-    "semantic_title": "",
+    "semantic_title": "implicit regularization leads to benign overfitting for sparse linear regression",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23e.html": {
     "title": "ODS: Test-Time Adaptation in the Presence of Open-World Data Shift",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Test-time adaptation (TTA) adapts a source model to the distribution shift in testing data without using any source data. There have been plenty of algorithms concentrated on covariate shift in the last decade, i.e., $\\mathcal{D}_t(X)$, the distribution of the test data is different from the source data. Nonetheless, in real application scenarios, it is necessary to consider the influence of label distribution shift, i.e., both $\\mathcal{D}_t(X)$ and $\\mathcal{D}_t(Y)$ are shifted, which has not been sufficiently explored yet. To remedy this, we study a new problem setup, namely, TTA with Open-world Data Shift (AODS). The goal of AODS is simultaneously adapting a model to covariate and label distribution shifts in the test phase. In this paper, we first analyze the relationship between classification error and distribution shifts. Motivated by this, we hence propose a new framework, namely ODS, which decouples the mixed distribution shift and then addresses covariate and label distribution shifts accordingly. We conduct experiments on multiple benchmarks with different types of shifts, and the results demonstrate the superior performance of our method against the state of the arts. Moreover, ODS is suitable for many TTA algorithms",
+    "checked": true,
+    "id": "062ae12ea71edcf9f277af7eb8151bc519c5d4e7",
+    "semantic_title": "ods: test-time adaptation in the presence of open-world data shift",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23f.html": {
     "title": "Fourmer: An Efficient Global Modeling Paradigm for Image Restoration",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Global modeling-based image restoration frameworks have become popular. However, they often require a high memory footprint and do not consider task-specific degradation. Our work presents an alternative approach to global modeling that is more efficient for image restoration. The key insights which motivate our study are two-fold: 1) Fourier transform is capable of disentangling image degradation and content component to a certain extent, serving as the image degradation prior, and 2) Fourier domain innately embraces global properties, where each pixel in the Fourier space is involved with all spatial pixels. While adhering to the \"spatial interaction + channel evolution\" rule of previous studies, we customize the core designs with Fourier spatial interaction modeling and Fourier channel evolution. Our paradigm, Fourmer, achieves competitive performance on common image restoration tasks such as image de-raining, image enhancement, image dehazing, and guided image super-resolution, while requiring fewer computational resources. The code for Fourmer will be made publicly available",
+    "checked": true,
+    "id": "4b688c486f2b223212682fd2b3f72cc0caa94b1b",
+    "semantic_title": "fourmer: an efficient global modeling paradigm for image restoration",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23g.html": {
@@ -16151,8 +16151,8 @@
     "abstract": "Large language models can be prompted to pro- duce fluent output for a wide range of tasks without being specifically trained to do so. Nevertheless, it is notoriously difficult to control their generation in such a way that it satisfies user-specified constraints. In this paper, we present InstructCTG, a simple controlled text generation framework that incorporates different constraints by verbalizing them as natural language instructions. We annotate natural texts through a combination of off-the-shelf NLP tools and simple heuristics with the linguistic and extra-linguistic constraints they satisfy. Then, we verbalize the constraints into natural language instructions to form weakly supervised training data, i.e., we prepend the natural language verbalizations of the constraints in front of their corresponding natural language sentences. Next, we fine-tune a pre-trained language model on the augmented corpus. Compared to existing methods, InstructCTG is more flexible in terms of the types of constraints it allows the practitioner to use. It also does not require any modification of the decoding procedure. Finally, InstructCTG allows the model to adapt to new constraints without re-training through the use of in-context learning",
     "checked": true,
     "id": "48f4f65df8eb4c435dcb14851f876c270ce2cfd5",
-    "semantic_title": "",
-    "citation_count": 3
+    "semantic_title": "controlled text generation with natural language instructions",
+    "citation_count": 4
   },
   "https://proceedings.mlr.press/v202/zhou23h.html": {
     "title": "NNSplitter: An Active Defense Solution for DNN Model via Automated Weight Obfuscation",
@@ -16160,7 +16160,7 @@
     "abstract": "As a type of valuable intellectual property (IP), deep neural network (DNN) models have been protected by techniques like watermarking. However, such passive model protection cannot fully prevent model abuse. In this work, we propose an active model IP protection scheme, namely NNSplitter, which actively protects the model by splitting it into two parts: the obfuscated model that performs poorly due to weight obfuscation, and the model secrets consisting of the indexes and original values of the obfuscated weights, which can only be accessed by authorized users with the support of the trusted execution environment. Experimental results demonstrate the effectiveness of NNSplitter, e.g., by only modifying 275 out of over 11 million (i.e., 0.002%) weights, the accuracy of the obfuscated ResNet-18 model on CIFAR-10 can drop to 10%. Moreover, NNSplitter is stealthy and resilient against norm clipping and fine-tuning attacks, making it an appealing solution for DNN model protection. The code is available at: https://github.com/Tongzhou0101/NNSplitter",
     "checked": false,
     "id": "cc427fd186ff139abcbc8336311229703f634295",
-    "semantic_title": "",
+    "semantic_title": "nnsplitter: an active defense solution to dnn model via automated weight obfuscation",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23i.html": {
@@ -16169,17 +16169,17 @@
     "abstract": "Methods based on ordinary differential equations (ODEs) are widely used to build generative models of time-series. In addition to high computational overhead due to explicitly computing hidden states recurrence, existing ODE-based models fall short in learning sequence data with sharp transitions - common in many real-world systems - due to numerical challenges during optimization. In this work, we propose LS4, a generative model for sequences with latent variables evolving according to a state space ODE to increase modeling capacity. Inspired by recent deep state space models (S4), we achieve speedups by leveraging a convolutional representation of LS4 which bypasses the explicit evaluation of hidden states. We show that LS4 significantly outperforms previous continuous-time generative models in terms of marginal distribution, classification, and prediction scores on real-world datasets in the Monash Forecasting Repository, and is capable of modeling highly stochastic data with sharp temporal transitions. LS4 sets state-of-the-art for continuous-time latent generative models, with significant improvement of mean squared error and tighter variational lower bounds on irregularly-sampled datasets, while also being x100 faster than other baselines on long sequences",
     "checked": true,
     "id": "31b27d90c2d5732386dd3a46a7d8336c0555c6fe",
-    "semantic_title": "",
-    "citation_count": 3
+    "semantic_title": "deep latent state space models for time-series generation",
+    "citation_count": 4
   },
   "https://proceedings.mlr.press/v202/zhou23j.html": {
     "title": "SlotGAT: Slot-based Message Passing for Heterogeneous Graphs",
     "volume": "main",
-    "abstract": "Heterogeneous graphs are ubiquitous to model complex data. There are urgent needs on powerful heterogeneous graph neural networks to effectively support important applications. We identify a potential semantic mixing issue in existing message passing processes, where the representations of the neighbors of a node v are forced to be transformed to the feature space of v for aggregation, though the neighbors are in different types. That is, the semantics in different node types are entangled together into node v’s representation. To address the issue, we propose SlotGAT with separate message passing processes in slots, one for each node type, to maintain the representations in their own node-type feature spaces. Moreover, in a slot-based message passing layer, we design an attention mechanism for effective slot-wise message aggregation. Further, we develop a slot attention technique after the last layer of SlotGAT, to learn the importance of different slots in downstream tasks. Our analysis indicates that the slots in SlotGAT can preserve different semantics in various feature spaces. The superiority of SlotGAT is evaluated against 13 baselines on 6 datasets for node classification and link prediction. Our code is at https://github.com/scottjiao/SlotGAT_ICML23/",
-    "checked": false,
-    "id": "83f4b1382001643aac58e8b15b54d9147661cf4c",
-    "semantic_title": "",
-    "citation_count": 25
+    "abstract": "Heterogeneous graphs are ubiquitous to model complex data. There are urgent needs on powerful heterogeneous graph neural networks to effectively support important applications. We identify a potential semantic mixing issue in existing message passing processes, where the representations of the neighbors of a node v are forced to be transformed to the feature space of v for aggregation, though the neighbors are in different types. That is, the semantics in different node types are entangled together into node v's representation. To address the issue, we propose SlotGAT with separate message passing processes in slots, one for each node type, to maintain the representations in their own node-type feature spaces. Moreover, in a slot-based message passing layer, we design an attention mechanism for effective slot-wise message aggregation. Further, we develop a slot attention technique after the last layer of SlotGAT, to learn the importance of different slots in downstream tasks. Our analysis indicates that the slots in SlotGAT can preserve different semantics in various feature spaces. The superiority of SlotGAT is evaluated against 13 baselines on 6 datasets for node classification and link prediction. Our code is at https://github.com/scottjiao/SlotGAT_ICML23/",
+    "checked": true,
+    "id": "e860f0df8f725144c43e1d1ee9cd5ba150d8cab4",
+    "semantic_title": "slotgat: slot-based message passing for heterogeneous graphs",
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23k.html": {
     "title": "Fast Online Node Labeling for Very Large Graphs",
@@ -16187,7 +16187,7 @@
     "abstract": "This paper studies the online node classification problem under a transductive learning setting. Current methods either invert a graph kernel matrix with $\\mathcal{O}(n^3)$ runtime and $\\mathcal{O}(n^2)$ space complexity or sample a large volume of random spanning trees, thus are difficult to scale to large graphs. In this work, we propose an improvement based on the online relaxation technique introduced by a series of works (Rakhlin et al., 2012; Rakhlin & Sridharan, 2015; 2017). We first prove an effective regret $\\mathcal{O}(\\sqrt{n^{1+\\gamma}})$ when suitable parameterized graph kernels are chosen, then propose an approximate algorithm FastONL enjoying $\\mathcal{O}(k\\sqrt{n^{1+\\gamma}})$ regret based on this relaxation. The key of FastONL is a generalized local push method that effectively approximates inverse matrix columns and applies to a series of popular kernels. Furthermore, the per-prediction cost is $\\mathcal{O}(\\operatorname{vol}{\\mathcal{S}}\\log 1/\\epsilon)$ locally dependent on the graph with linear memory cost. Experiments show that our scalable method enjoys a better tradeoff between local and global consistency",
     "checked": true,
     "id": "0385dbb508f02866a3450fffe941b463df876b55",
-    "semantic_title": "",
+    "semantic_title": "fast online node labeling for very large graphs",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23l.html": {
@@ -16196,17 +16196,17 @@
     "abstract": "We study regret minimization for reinforcement learning (RL) in Latent Markov Decision Processes (LMDPs) with context in hindsight. We design a novel model-based algorithmic framework which can be instantiated with both a model-optimistic and a value-optimistic solver. We prove an $\\tilde{O}(\\sqrt{\\mathsf{Var}^\\star M \\Gamma S A K})$ regret bound where $\\tilde{O}$ hides logarithm factors, $M$ is the number of contexts, $S$ is the number of states, $A$ is the number of actions, $K$ is the number of episodes, $\\Gamma \\le S$ is the maximum transition degree of any state-action pair, and $\\mathsf{Var}^\\star$ is a variance quantity describing the determinism of the LMDP. The regret bound only scales logarithmically with the planning horizon, thus yielding the first (nearly) horizon-free regret bound for LMDP. This is also the first problem-dependent regret bound for LMDP. Key in our proof is an analysis of the total variance of alpha vectors (a generalization of value functions), which is handled with a truncation method. We complement our positive result with a novel $\\Omega(\\sqrt{\\mathsf{Var}^\\star M S A K})$ regret lower bound with $\\Gamma = 2$, which shows our upper bound minimax optimal when $\\Gamma$ is a constant for the class of variance-bounded LMDPs. Our lower bound relies on new constructions of hard instances and an argument inspired by the symmetrization technique from theoretical computer science, both of which are technically different from existing lower bound proof for MDPs, and thus can be of independent interest",
     "checked": true,
     "id": "504605b87d49d75744298382d02d481578567771",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "horizon-free and variance-dependent reinforcement learning for latent markov decision processes",
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhou23m.html": {
     "title": "Phase-aware Adversarial Defense for Improving Adversarial Robustness",
     "volume": "main",
     "abstract": "Deep neural networks have been found to be vulnerable to adversarial noise. Recent works show that exploring the impact of adversarial noise on intrinsic components of data can help improve adversarial robustness. However, the pattern closely related to human perception has not been deeply studied. In this paper, inspired by the cognitive science, we investigate the interference of adversarial noise from the perspective of image phase, and find ordinarily-trained models lack enough robustness against phase-level perturbations. Motivated by this, we propose a joint adversarial defense method: a phase-level adversarial training mechanism to enhance the adversarial robustness on the phase pattern; an amplitude-based pre-processing operation to mitigate the adversarial perturbation in the amplitude pattern. Experimental results show that the proposed method can significantly improve the robust accuracy against multiple attacks and even adaptive attacks. In addition, ablation studies demonstrate the effectiveness of our defense strategy",
-    "checked": false,
-    "id": "c22a0b2ac67b55ef9711ca2476abf0cf090ccc4c",
-    "semantic_title": "",
-    "citation_count": 3
+    "checked": true,
+    "id": "94e3b22566ba78f3c6894eae3082f46317ab9bbb",
+    "semantic_title": "phase-aware adversarial defense for improving adversarial robustness",
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23n.html": {
     "title": "From Relational Pooling to Subgraph GNNs: A Universal Framework for More Expressive Graph Neural Networks",
@@ -16214,7 +16214,7 @@
     "abstract": "Relational pooling is a framework for building more expressive and permutation-invariant graph neural networks. However, there is limited understanding of the exact enhancement in the expressivity of RP and its connection with the Weisfeiler-Lehman hierarchy. Starting from RP, we propose to explicitly assign labels to nodes as additional features to improve graph isomorphism distinguishing power of message passing neural networks. The method is then extended to higher-dimensional WL, leading to a novel $k,l$-WL algorithm, a more general framework than $k$-WL. We further introduce the subgraph concept into our hierarchy and propose a localized $k,l$-WL framework, incorporating a wide range of existing work, including many subgraph GNNs. Theoretically, we analyze the expressivity of $k,l$-WL w.r.t. $k$ and $l$ and compare it with the traditional $k$-WL. Complexity reduction methods are also systematically discussed to build powerful and practical $k,l$-GNN instances. We theoretically and experimentally prove that our method is universally compatible and capable of improving the expressivity of any base GNN model. Our $k,l$-GNNs achieve superior performance on many synthetic and real-world datasets, which verifies the effectiveness of our framework",
     "checked": true,
     "id": "403c2114a18457d4c2b4453336d301f554458265",
-    "semantic_title": "",
+    "semantic_title": "from relational pooling to subgraph gnns: a universal framework for more expressive graph neural networks",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhou23o.html": {
@@ -16223,7 +16223,7 @@
     "abstract": "Learning heuristics for vehicle routing problems (VRPs) has gained much attention due to the less reliance on hand-crafted rules. However, existing methods are typically trained and tested on the same task with a fixed size and distribution (of nodes), and hence suffer from limited generalization performance. This paper studies a challenging yet realistic setting, which considers generalization across both size and distribution in VRPs. We propose a generic meta-learning framework, which enables effective training of an initialized model with the capability of fast adaptation to new tasks during inference. We further develop a simple yet efficient approximation method to reduce the training overhead. Extensive experiments on both synthetic and benchmark instances of the traveling salesman problem (TSP) and capacitated vehicle routing problem (CVRP) demonstrate the effectiveness of our method. The code is available at: https://github.com/RoyalSkye/Omni-VRP",
     "checked": true,
     "id": "fe148a4498dafb494257fc22867ab48e2cadf3db",
-    "semantic_title": "",
+    "semantic_title": "towards omni-generalizable neural methods for vehicle routing problems",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23p.html": {
@@ -16232,7 +16232,7 @@
     "abstract": "Recent work has highlighted the complex influence training hyperparameters, e.g., the number of training epochs, can have on the prunability of machine learning models. Perhaps surprisingly, a systematic approach to predict precisely how adjusting a specific hyperparameter will affect prunability remains elusive. To address this gap, we introduce a phenomenological model grounded in the statistical mechanics of learning. Our approach uses temperature-like and load-like parameters to model the impact of neural network (NN) training hyperparameters on pruning performance. A key empirical result we identify is a sharp transition phenomenon: depending on the value of a load-like parameter in the pruned model, increasing the value of a temperature-like parameter in the pre-pruned model may either enhance or impair subsequent pruning performance. Based on this transition, we build a three-regime model by taxonomizing the global structure of the pruned NN loss landscape. Our model reveals that the dichotomous effect of high temperature is associated with transitions between distinct types of global structures in the post-pruned model. Based on our results, we present three case-studies: 1) determining whether to increase or decrease a hyperparameter for improved pruning; 2) selecting the best model to prune from a family of models; and 3) tuning the hyperparameter of the Sharpness Aware Minimization method for better pruning performance",
     "checked": true,
     "id": "ae3fe0f334a1dd969047be1a725cd85bfe20d3d0",
-    "semantic_title": "",
+    "semantic_title": "a three-regime model of network pruning",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23q.html": {
@@ -16241,7 +16241,7 @@
     "abstract": "A complex system with cluttered observations may be a coupled mixture of multiple simple sub-systems corresponding to latent entities. Such sub-systems may hold distinct dynamics in the continuous-time domain; therein, complicated interactions between sub-systems also evolve over time. This setting is fairly common in the real world but has been less considered. In this paper, we propose a sequential learning approach under this setting by decoupling a complex system for handling irregularly sampled and cluttered sequential observations. Such decoupling brings about not only subsystems describing the dynamics of each latent entity but also a meta-system capturing the interaction between entities over time. Specifically, we argue that the meta-system evolving within a simplex is governed by projected differential equations (ProjDEs). We further analyze and provide neural-friendly projection operators in the context of Bregman divergence. Experimental results on synthetic and real-world datasets show the advantages of our approach when facing complex and cluttered sequential data compared to the state-of-the-art",
     "checked": true,
     "id": "e3fff535370062c122aa26bb77c4195b59ca7d07",
-    "semantic_title": "",
+    "semantic_title": "learning to decouple complex systems",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23r.html": {
@@ -16250,7 +16250,7 @@
     "abstract": "The ability to accurately locate and navigate to a specific object is a crucial capability for embodied agents that operate in the real world and interact with objects to complete tasks. Such object navigation tasks usually require large-scale training in visual environments with labeled objects, which generalizes poorly to novel objects in unknown environments. In this work, we present a novel zero-shot object navigation method, Exploration with Soft Commonsense constraints (ESC), that transfers commonsense knowledge in pre-trained models to open-world object navigation without any navigation experience nor any other training on the visual environments. First, ESC leverages a pre-trained vision and language model for open-world prompt-based grounding and a pre-trained commonsense language model for room and object reasoning. Then ESC converts commonsense knowledge into navigation actions by modeling it as soft logic predicates for efficient exploration. Extensive experiments on MP3D, HM3D, and RoboTHOR benchmarks show that our ESC method improves significantly over baselines, and achieves new state-of-the-art results for zero-shot object navigation (e.g., 288% relative Success Rate improvement than CoW on MP3D)",
     "checked": true,
     "id": "6710e66648fe6846397ccecf72478effb44d7bc1",
-    "semantic_title": "",
+    "semantic_title": "esc: exploration with soft commonsense constraints for zero-shot object navigation",
     "citation_count": 3
   },
   "https://proceedings.mlr.press/v202/zhou23s.html": {
@@ -16259,7 +16259,7 @@
     "abstract": "Although powerful graph neural networks (GNNs) have boosted numerous real-world applications, the potential privacy risk is still underexplored. To close this gap, we perform the first comprehensive study of graph reconstruction attack that aims to reconstruct the adjacency of nodes. We show that a range of factors in GNNs can lead to the surprising leakage of private links. Especially by taking GNNs as a Markov chain and attacking GNNs via a flexible chain approximation, we systematically explore the underneath principles of graph reconstruction attack, and propose two information theory-guided mechanisms: (1) the chain-based attack method with adaptive designs for extracting more private information; (2) the chain-based defense method that sharply reduces the attack fidelity with moderate accuracy loss. Such two objectives disclose a critical belief that to recover better in attack, you must extract more multi-aspect knowledge from the trained GNN; while to learn safer for defense, you must forget more link-sensitive information in training GNNs. Empirically, we achieve state-of-the-art results on six datasets and three common GNNs. The code is publicly available at: https://github.com/tmlr-group/MC-GRA",
     "checked": true,
     "id": "ee58936260fafcebc6a85d6d75bdb8e4931b7bbe",
-    "semantic_title": "",
+    "semantic_title": "on strengthening and defending graph reconstruction attack with markov chain approximation",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhou23t.html": {
@@ -16268,16 +16268,16 @@
     "abstract": "We study variance-dependent regret bounds for Markov decision processes (MDPs). Algorithms with variance-dependent regret guarantees can automatically exploit environments with low variance (e.g., enjoying constant regret on deterministic MDPs). The existing algorithms are either variance-independent or suboptimal. We first propose two new environment norms to characterize the fine-grained variance properties of the environment. For model-based methods, we design a variant of the MVP algorithm (Zhang et al., 2021a). We apply new analysis techniques to demonstrate that this algorithm enjoys variance-dependent bounds with respect to the norms we propose. In particular, this bound is simultaneously minimax optimal for both stochastic and deterministic MDPs, the first result of its kind. We further initiate the study on model-free algorithms with variance-dependent regret bounds by designing a reference-function-based algorithm with a novel capped-doubling reference update schedule. Lastly, we also provide lower bounds to complement our upper bounds",
     "checked": true,
     "id": "ac97c8e14033741627dad9f33f0212dbea9c4821",
-    "semantic_title": "",
-    "citation_count": 3
+    "semantic_title": "sharp variance-dependent bounds in reinforcement learning: best of both worlds in stochastic and deterministic environments",
+    "citation_count": 4
   },
   "https://proceedings.mlr.press/v202/zhu23a.html": {
     "title": "Learning Unforeseen Robustness from Out-of-distribution Data Using Equivariant Domain Translator",
     "volume": "main",
-    "abstract": "Current approaches for training robust models are typically tailored to scenarios where data variations are accessible in the training set. While shown effective in achieving robustness to these foreseen variations, these approaches are ineffective in learning unforeseen robustness, i.e., robustness to data variations without known characterization or training examples reflecting them. In this work, we learn unforeseen robustness by harnessing the variations in the abundant out-of-distribution data. To overcome the main challenge of using such data, the domain gap, we use a domain translator to bridge it and bound the unforeseen robustness on the target distribution. As implied by our analysis, we propose a two-step algorithm that first trains an equivariant domain translator to map out-of-distribution data to the target distribution while preserving the considered variation, and then regularizes a model’s output consistency on the domain-translated data to improve its robustness. We empirically show the effectiveness of our approach in improving unforeseen and foreseen robustness compared to existing approaches. Additionally, we show that training the equivariant domain translator serves as an effective criterion for source data selection",
-    "checked": false,
-    "id": "536915fca8427b99439e18d7d0bfde1fbc60857e",
-    "semantic_title": "",
+    "abstract": "Current approaches for training robust models are typically tailored to scenarios where data variations are accessible in the training set. While shown effective in achieving robustness to these foreseen variations, these approaches are ineffective in learning unforeseen robustness, i.e., robustness to data variations without known characterization or training examples reflecting them. In this work, we learn unforeseen robustness by harnessing the variations in the abundant out-of-distribution data. To overcome the main challenge of using such data, the domain gap, we use a domain translator to bridge it and bound the unforeseen robustness on the target distribution. As implied by our analysis, we propose a two-step algorithm that first trains an equivariant domain translator to map out-of-distribution data to the target distribution while preserving the considered variation, and then regularizes a model's output consistency on the domain-translated data to improve its robustness. We empirically show the effectiveness of our approach in improving unforeseen and foreseen robustness compared to existing approaches. Additionally, we show that training the equivariant domain translator serves as an effective criterion for source data selection",
+    "checked": true,
+    "id": "ffb8cff88c0efb205f14a4e578d147e9ae36b2a4",
+    "semantic_title": "learning unforeseen robustness from out-of-distribution data using equivariant domain translator",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23b.html": {
@@ -16286,7 +16286,7 @@
     "abstract": "Sequential VAEs have been successfully considered for many high-dimensional time series modelling problems, with many variant models relying on discrete-time mechanisms such as recurrent neural networks (RNNs). On the other hand, continuous-time methods have recently gained attraction, especially in the context of irregularly-sampled time series, where they can better handle the data than discrete-time methods. One such class are Gaussian process variational autoencoders (GPVAEs), where the VAE prior is set as a Gaussian process (GP). However, a major limitation of GPVAEs is that it inherits the cubic computational cost as GPs, making it unattractive to practioners. In this work, we leverage the equivalent discrete state space representation of Markovian GPs to enable linear time GPVAE training via Kalman filtering and smoothing. For our model, Markovian GPVAE (MGPVAE), we show on a variety of high-dimensional temporal and spatiotemporal tasks that our method performs favourably compared to existing approaches whilst being computationally highly scalable",
     "checked": true,
     "id": "40abb51b49660bfdd91f986af8ce5d5d46eba0c2",
-    "semantic_title": "",
+    "semantic_title": "markovian gaussian process variational autoencoders",
     "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/zhu23c.html": {
@@ -16295,7 +16295,7 @@
     "abstract": "The task of mixture proportion estimation (MPE) is to estimate the weight of a component distribution in a mixture, given observations from both the component and mixture. Previous work on MPE adopts the irreducibility assumption, which ensures identifiablity of the mixture proportion. In this paper, we propose a more general sufficient condition that accommodates several settings of interest where irreducibility does not hold. We further present a resampling-based meta-algorithm that takes any existing MPE algorithm designed to work under irreducibility and adapts it to work under our more general condition. Our approach empirically exhibits improved estimation performance relative to baseline methods and to a recently proposed regrouping-based algorithm",
     "checked": true,
     "id": "74a875e4c6b3adf050d6d895c51e895f8b0d7755",
-    "semantic_title": "",
+    "semantic_title": "mixture proportion estimation beyond irreducibility",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23d.html": {
@@ -16304,7 +16304,7 @@
     "abstract": "Adversarial poisoning attacks pose huge threats to various machine learning applications. Especially, the recent accumulative poisoning attacks show that it is possible to achieve irreparable harm on models via a sequence of imperceptible attacks followed by a trigger batch. Due to the limited data-level discrepancy in real-time data streaming, current defensive methods are indiscriminate in handling the poison and clean samples. In this paper, we dive into the perspective of model dynamics and propose a novel information measure, namely, Memorization Discrepancy, to explore the defense via the model-level information. By implicitly transferring the changes in the data manipulation to that in the model outputs, Memorization Discrepancy can discover the imperceptible poison samples based on their distinct dynamics from the clean samples. We thoroughly explore its properties and propose Discrepancy-aware Sample Correction (DSC) to defend against accumulative poisoning attacks. Extensive experiments comprehensively characterized Memorization Discrepancy and verified its effectiveness. The code is publicly available at: https://github.com/tmlr-group/Memorization-Discrepancy",
     "checked": true,
     "id": "9fb73a71cd78856d65ebde100a0dcc7f3e69ddd5",
-    "semantic_title": "",
+    "semantic_title": "exploring model dynamics for accumulative poisoning discovery",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23e.html": {
@@ -16312,9 +16312,9 @@
     "volume": "main",
     "abstract": "Decentralized stochastic gradient descent (D-SGD) allows collaborative learning on massive devices simultaneously without the control of a central server. However, existing theories claim that decentralization invariably undermines generalization. In this paper, we challenge the conventional belief and present a completely new perspective for understanding decentralized learning. We prove that D-SGD implicitly minimizes the loss function of an average-direction Sharpness-aware minimization (SAM) algorithm under general non-convex non-$\\beta$-smooth settings. This surprising asymptotic equivalence reveals an intrinsic regularization-optimization trade-off and three advantages of decentralization: (1) there exists a free uncertainty evaluation mechanism in D-SGD to improve posterior estimation; (2) D-SGD exhibits a gradient smoothing effect; and (3) the sharpness regularization effect of D-SGD does not decrease as total batch size increases, which justifies the potential generalization benefit of D-SGD over centralized SGD (C-SGD) in large-batch scenarios",
     "checked": true,
-    "id": "d2a01620acf1f5aabd143856c67e3fea66c63b07",
-    "semantic_title": "",
-    "citation_count": 0
+    "id": "57b3491dd7b2faacde921f5f7051c2c591682ea0",
+    "semantic_title": "decentralized sgd and average-direction sam are asymptotically equivalent",
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhu23f.html": {
     "title": "Principled Reinforcement Learning with Human Feedback from Pairwise or K-wise Comparisons",
@@ -16322,7 +16322,7 @@
     "abstract": "We provide a theoretical framework for Reinforcement Learning with Human Feedback (RLHF). We show that when the underlying true reward is linear, under both Bradley-Terry-Luce (BTL) model (pairwise comparison) and Plackett-Luce (PL) model ($K$-wise comparison), MLE converges under certain semi-norm for the family of linear reward. On the other hand, when training a policy based on the learned reward model, we show that MLE fails while a pessimistic MLE provides policies with good performance under certain coverage assumption. We also show that under the PL model, both the true MLE and a different MLE which splits the $K$-wise comparison into pairwise comparisons converge, while the true MLE is asymptotically more efficient. Our results validate the empirical success of the existing RLHF algorithms, and provide new insights for algorithm design. Our analysis can also be applied for the problem of online RLHF and inverse reinforcement learning",
     "checked": true,
     "id": "4f16e5f4793cdf2a184ae9259ea0f0c04b889eb4",
-    "semantic_title": "",
+    "semantic_title": "principled reinforcement learning with human feedback from pairwise or k-wise comparisons",
     "citation_count": 18
   },
   "https://proceedings.mlr.press/v202/zhu23g.html": {
@@ -16331,7 +16331,7 @@
     "abstract": "Out-of-distribution (OOD) detection is an indispensable aspect of secure AI when deploying machine learning models in real-world applications. Previous paradigms either explore better scoring functions or utilize the knowledge of outliers to equip the models with the ability of OOD detection. However, few of them pay attention to the intrinsic OOD detection capability of the given model. In this work, we generally discover the existence of an intermediate stage of a model trained on in-distribution (ID) data having higher OOD detection performance than that of its final stage across different settings, and further identify one critical data-level attribution to be learning with the atypical samples. Based on such insights, we propose a novel method, Unleashing Mask, which aims to restore the OOD discriminative capabilities of the well-trained model with ID data. Our method utilizes a mask to figure out the memorized atypical samples, and then finetune the model or prune it with the introduced mask to forget them. Extensive experiments and analysis demonstrate the effectiveness of our method. The code is available at: https://github.com/tmlr-group/Unleashing-Mask",
     "checked": true,
     "id": "8505cb57677d296351a1b86d15c843410778daca",
-    "semantic_title": "",
+    "semantic_title": "unleashing mask: explore the intrinsic out-of-distribution detection capability",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhu23h.html": {
@@ -16340,25 +16340,25 @@
     "abstract": "This paper focuses on over-parameterized deep neural networks (DNNs) with ReLU activation functions and proves that when the data distribution is well-separated, DNNs can achieve Bayes-optimal test error for classification while obtaining (nearly) zero-training error under the lazy training regime. For this purpose, we unify three interrelated concepts of overparameterization, benign overfitting, and the Lipschitz constant of DNNs. Our results indicate that interpolating with smoother functions leads to better generalization. Furthermore, we investigate the special case where interpolating smooth ground-truth functions is performed by DNNs under the Neural Tangent Kernel (NTK) regime for generalization. Our result demonstrates that the generalization error converges to a constant order that only depends on label noise and initialization noise, which theoretically verifies benign overfitting. Our analysis provides a tight lower bound on the normalized margin under non-smooth activation functions, as well as the minimum eigenvalue of NTK under high-dimensional settings, which has its own interest in learning theory",
     "checked": true,
     "id": "04169819fe10918fef03fcc5c9c0c9eca79ff56e",
-    "semantic_title": "",
+    "semantic_title": "benign overfitting in deep neural networks under lazy training",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23i.html": {
     "title": "Interpolation for Robust Learning: Data Augmentation on Wasserstein Geodesics",
     "volume": "main",
-    "abstract": "We propose to study and promote the robustness of a model as per its performance on a continuous geodesic interpolation of subpopulations, e.g., a class of samples in a classification problem. Specifically, (1) we augment the data by finding the worst-case Wasserstein barycenter on the geodesic connecting subpopulation distributions. (2) we regularize the model for smoother performance on the continuous geodesic path connecting subpopulation distributions. (3) Additionally, we provide a theoretical guarantee of robustness improvement and investigate how the geodesic location and the sample size contribute, respectively. Experimental validations of the proposed strategy on four datasets including CIFAR-100 and ImageNet, establish the efficacy of our method, e.g., our method improves the baselines’ certifiable robustness on CIFAR10 upto 7.7%, with 16.8% on empirical robustness on CIFAR-100. Our work provides a new perspective of model robustness through the lens of Wasserstein geodesic-based interpolation with a practical off-the-shelf strategy that can be combined with existing robust training methods",
-    "checked": false,
-    "id": "00474bfec99c5b6852de1ac5190a1243b7a5fa91",
-    "semantic_title": "",
-    "citation_count": 2
+    "abstract": "We propose to study and promote the robustness of a model as per its performance on a continuous geodesic interpolation of subpopulations, e.g., a class of samples in a classification problem. Specifically, (1) we augment the data by finding the worst-case Wasserstein barycenter on the geodesic connecting subpopulation distributions. (2) we regularize the model for smoother performance on the continuous geodesic path connecting subpopulation distributions. (3) Additionally, we provide a theoretical guarantee of robustness improvement and investigate how the geodesic location and the sample size contribute, respectively. Experimental validations of the proposed strategy on four datasets including CIFAR-100 and ImageNet, establish the efficacy of our method, e.g., our method improves the baselines' certifiable robustness on CIFAR10 upto 7.7%, with 16.8% on empirical robustness on CIFAR-100. Our work provides a new perspective of model robustness through the lens of Wasserstein geodesic-based interpolation with a practical off-the-shelf strategy that can be combined with existing robust training methods",
+    "checked": true,
+    "id": "7862fe84160c96884911df140c5604e308429469",
+    "semantic_title": "interpolation for robust learning: data augmentation on wasserstein geodesics",
+    "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23j.html": {
     "title": "LeadFL: Client Self-Defense against Model Poisoning in Federated Learning",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Federated Learning is highly susceptible to backdoor and targeted attacks as participants can manipulate their data and models locally without any oversight on whether they follow the correct process. There are a number of server-side defenses that mitigate the attacks by modifying or rejecting local updates submitted by clients. However, we find that bursty adversarial patterns with a high variance in the number of malicious clients can circumvent the existing defenses. We propose a client-self defense, LeadFL, that is combined with existing server-side defenses to thwart backdoor and targeted attacks. The core idea of LeadFL is a novel regularization term in local model training such that the Hessian matrix of local gradients is nullified. We provide the convergence analysis of LeadFL and its robustness guarantee in terms of certified radius. Our empirical evaluation shows that LeadFL is able to mitigate bursty adversarial patterns for both iid and non-iid data distributions. It frequently reduces the backdoor accuracy from more than 75% for state-of-the-art defenses to less than 10% while its impact on the main task accuracy is always less than for other client-side defenses",
+    "checked": true,
+    "id": "9dd417ab2cd12f0825f1650c2dde77191b490ba1",
+    "semantic_title": "leadfl: client self-defense against model poisoning in federated learning",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23k.html": {
@@ -16367,7 +16367,7 @@
     "abstract": "The success of self-supervised learning in computer vision and natural language processing has motivated pretraining methods on tabular data. However, most existing tabular self-supervised learning models fail to leverage information across multiple data tables and cannot generalize to new tables. In this work, we introduce XTab, a framework for cross-table pretraining of tabular transformers on datasets from various domains. We address the challenge of inconsistent column types and quantities among tables by utilizing independent featurizers and using federated learning to pretrain the shared component. Tested on 84 tabular prediction tasks from the OpenML-AutoML Benchmark (AMLB), we show that (1) XTab consistently boosts the generalizability, learning speed, and performance of multiple tabular transformers, (2) by pretraining FT-Transformer via XTab, we achieve superior performance than other state-of-the-art tabular deep learning models on various tasks such as regression, binary, and multiclass classification",
     "checked": true,
     "id": "fd27c08b7105da3412f3b285ea23b3a6dd92409b",
-    "semantic_title": "",
+    "semantic_title": "xtab: cross-table pretraining for tabular transformers",
     "citation_count": 0
   },
   "https://proceedings.mlr.press/v202/zhu23l.html": {
@@ -16376,7 +16376,7 @@
     "abstract": "This paper considers a novel application of deep AUC maximization (DAM) for multi-instance learning (MIL), in which a single class label is assigned to a bag of instances (e.g., multiple 2D slices of a CT scan for a patient). We address a neglected yet non-negligible computational challenge of MIL in the context of DAM, i.e., bag size is too large to be loaded into GPU memory for backpropagation, which is required by the standard pooling methods of MIL. To tackle this challenge, we propose variance-reduced stochastic pooling methods in the spirit of stochastic optimization by formulating the loss function over the pooled prediction as a multi-level compositional function. By synthesizing techniques from stochastic compositional optimization and non-convex min-max optimization, we propose a unified and provable muli-instance DAM (MIDAM) algorithm with stochastic smoothed-max pooling or stochastic attention-based pooling, which only samples a few instances for each bag to compute a stochastic gradient estimator and to update the model parameter. We establish a similar convergence rate of the proposed MIDAM algorithm as the state-of-the-art DAM algorithms. Our extensive experiments on conventional MIL datasets and medical datasets demonstrate the superiority of our MIDAM algorithm. The method is open-sourced at https://libauc.org/",
     "checked": true,
     "id": "7dab17d2ec1efb27f29419f6472caac474f40ff6",
-    "semantic_title": "",
+    "semantic_title": "provable multi-instance deep auc maximization with stochastic pooling",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhu23m.html": {
@@ -16385,8 +16385,8 @@
     "abstract": "In Federated Learning (FL) and many other distributed training frameworks, collaborators can hold their private data locally and only share the network weights trained with the local data after multiple iterations. Gradient inversion is a family of privacy attacks that recovers data from its generated gradients. Seemingly, FL can provide a degree of protection against gradient inversion attacks on weight updates, since the gradient of a single step is concealed by the accumulation of gradients over multiple local iterations. In this work, we propose a principled way to extend gradient inversion attacks to weight updates in FL, thereby better exposing weaknesses in the presumed privacy protection inherent in FL. In particular, we propose a surrogate model method based on the characteristic of two-dimensional gradient flow and low-rank property of local updates. Our method largely boosts the ability of gradient inversion attacks on weight updates containing many iterations and achieves state-of-the-art (SOTA) performance. Additionally, our method runs up to $100\\times$ faster than the SOTA baseline in the common FL scenario. Our work re-evaluates and highlights the privacy risk of sharing network weights. Our code is available at https://github.com/JunyiZhu-AI/surrogate_model_extension",
     "checked": true,
     "id": "1cd605dd8b39554a1d48f816544e4cf9fb49b31b",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "surrogate model extension (sme): a fast and accurate weight update attack on federated learning",
+    "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhu23n.html": {
     "title": "Weak Proxies are Sufficient and Preferable for Fairness with Missing Sensitive Attributes",
@@ -16394,8 +16394,8 @@
     "abstract": "Evaluating fairness can be challenging in practice because the sensitive attributes of data are often inaccessible due to privacy constraints. The go-to approach that the industry frequently adopts is using off-the-shelf proxy models to predict the missing sensitive attributes, e.g. Meta (Alao et al., 2021) and Twitter (Belli et al., 2022). Despite its popularity, there are three important questions unanswered: (1) Is directly using proxies efficacious in measuring fairness? (2) If not, is it possible to accurately evaluate fairness using proxies only? (3) Given the ethical controversy over infer-ring user private information, is it possible to only use weak (i.e. inaccurate) proxies in order to protect privacy? Our theoretical analyses show that directly using proxy models can give a false sense of (un)fairness. Second, we develop an algorithm that is able to measure fairness (provably) accurately with only three properly identified proxies. Third, we show that our algorithm allows the use of only weak proxies (e.g. with only 68.85% accuracy on COMPAS), adding an extra layer of protection on user privacy. Experiments validate our theoretical analyses and show our algorithm can effectively measure and mitigate bias. Our results imply a set of practical guidelines for prac-titioners on how to use proxies properly. Code is available at https://github.com/UCSC-REAL/fair-eval",
     "checked": true,
     "id": "d809103bcd81641fd1d6ecda72fe6518f042a771",
-    "semantic_title": "",
-    "citation_count": 1
+    "semantic_title": "weak proxies are sufficient and preferable for fairness with missing sensitive attributes",
+    "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/zhu23o.html": {
     "title": "Label Distributionally Robust Losses for Multi-class Classification: Consistency, Robustness and Adaptivity",
@@ -16403,7 +16403,7 @@
     "abstract": "We study a family of loss functions named label-distributionally robust (LDR) losses for multi-class classification that are formulated from distributionally robust optimization (DRO) perspective, where the uncertainty in the given label information are modeled and captured by taking the worse case of distributional weights. The benefits of this perspective are several fold: (i) it provides a unified framework to explain the classical cross-entropy (CE) loss and SVM loss and their variants, (ii) it includes a special family corresponding to the temperature-scaled CE loss, which is widely adopted but poorly understood; (iii) it allows us to achieve adaptivity to the uncertainty degree of label information at an instance level. Our contributions include: (1) we study both consistency and robustness by establishing top-$k$ ($\\forall k\\geq 1$) consistency of LDR losses for multi-class classification, and a negative result that a top-$1$ consistent and symmetric robust loss cannot achieve top-$k$ consistency simultaneously for all $k\\geq 2$; (2) we propose a new adaptive LDR loss that automatically adapts the individualized temperature parameter to the noise degree of class label of each instance; (3) we demonstrate stable and competitive performance for the proposed adaptive LDR loss on 7 benchmark datasets under 6 noisy label and 1 clean settings against 13 loss functions, and on one real-world noisy dataset. The method is open-sourced at https://github.com/Optimization-AI/ICML2023_LDR",
     "checked": true,
     "id": "f5bf7fccfd66c22702ea32b5526f49e35ede303f",
-    "semantic_title": "",
+    "semantic_title": "label distributionally robust losses for multi-class classification: consistency, robustness and adaptivity",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zhuang23a.html": {
@@ -16412,7 +16412,7 @@
     "abstract": "Clustering is a widely deployed unsupervised learning tool. Model-based clustering is a flexible framework to tackle data heterogeneity when the clusters have different shapes. Likelihood-based inference for mixture distributions often involves non-convex and high-dimensional objective functions, imposing difficult computational and statistical challenges. The classic expectation-maximization (EM) algorithm is a computationally thrifty iterative method that maximizes a surrogate function minorizing the log-likelihood of observed data in each iteration, which however suffers from bad local maxima even in the special case of the standard Gaussian mixture model with common isotropic covariance matrices. On the other hand, recent studies reveal that the unique global solution of a semidefinite programming (SDP) relaxed $K$-means achieves the information-theoretically sharp threshold for perfectly recovering the cluster labels under the standard Gaussian mixture model. In this paper, we extend the SDP approach to a general setting by integrating cluster labels as model parameters and propose an iterative likelihood adjusted SDP (iLA-SDP) method that directly maximizes the exact observed likelihood in the presence of data heterogeneity. By lifting the cluster assignment to group-specific membership matrices, iLA-SDP avoids centroids estimation – a key feature that allows exact recovery under well-separateness of centroids without being trapped by their adversarial configurations. Thus iLA-SDP is less sensitive than EM to initialization and more stable on high-dimensional data. Our numeric experiments demonstrate that iLA-SDP can achieve lower mis-clustering errors over several widely used clustering methods including $K$-means, SDP and EM algorithms",
     "checked": true,
     "id": "ede6322c2c0e7c89db1c673f673334ae283b1c85",
-    "semantic_title": "",
+    "semantic_title": "likelihood adjusted semidefinite programs for clustering heterogeneous data",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/ziomek23a.html": {
@@ -16421,7 +16421,7 @@
     "abstract": "Learning decompositions of expensive-to-evaluate black-box functions promises to scale Bayesian optimisation (BO) to high-dimensional problems. However, the success of these techniques depends on finding proper decompositions that accurately represent the black-box. While previous works learn those decompositions based on data, we investigate data-independent decomposition sampling rules in this paper. We find that data-driven learners of decompositions can be easily misled towards local decompositions that do not hold globally across the search space. Then, we formally show that a random tree-based decomposition sampler exhibits favourable theoretical guarantees that effectively trade off maximal information gain and functional mismatch between the actual black-box and its surrogate as provided by the decomposition. Those results motivate the development of the random decomposition upper-confidence bound algorithm (RDUCB) that is straightforward to implement - (almost) plug-and-play - and, surprisingly, yields significant empirical gains compared to the previous state-of-the-art on a comprehensive set of benchmarks. We also confirm the plug-and-play nature of our modelling component by integrating our method with HEBO, showing improved practical gains in the highest dimensional tasks from Bayesmark problem suite",
     "checked": true,
     "id": "20a93646a95156b07f1212932d4aa5ad34ad8ad6",
-    "semantic_title": "",
+    "semantic_title": "are random decompositions all we need in high dimensional bayesian optimisation?",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/zitovsky23a.html": {
@@ -16430,17 +16430,17 @@
     "abstract": "Offline model selection (OMS), that is, choosing the best policy from a set of many policies given only logged data, is crucial for applying offline RL in real-world settings. One idea that has been extensively explored is to select policies based on the mean squared Bellman error (MSBE) of the associated Q-functions. However, previous work has struggled to obtain adequate OMS performance with Bellman errors, leading many researchers to abandon the idea. To this end, we elucidate why previous work has seen pessimistic results with Bellman errors and identify conditions under which OMS algorithms based on Bellman errors will perform well. Moreover, we develop a new estimator of the MSBE that is more accurate than prior methods. Our estimator obtains impressive OMS performance on diverse discrete control tasks, including Atari games",
     "checked": true,
     "id": "8b53c5204c3ec592460ccd27cef1d0e8d930400e",
-    "semantic_title": "",
+    "semantic_title": "revisiting bellman errors for offline model selection",
     "citation_count": 1
   },
   "https://proceedings.mlr.press/v202/ziyin23a.html": {
     "title": "spred: Solving L1 Penalty with SGD",
     "volume": "main",
-    "abstract": "We propose to minimize a generic differentiable objective with $L_1$ constraint using a simple reparametrization and straightforward stochastic gradient descent. Our proposal is the direct generalization of previous ideas that the $L_1$ penalty may be equivalent to a differentiable reparametrization with weight decay. We prove that the proposed method, spred, is an exact differentiable solver of $L_1$ and that the reparametrization trick is completely “benign\" for a generic nonconvex function. Practically, we demonstrate the usefulness of the method in (1) training sparse neural networks to perform gene selection tasks, which involves finding relevant features in a very high dimensional space, and (2) neural network compression task, to which previous attempts at applying the $L_1$-penalty have been unsuccessful. Conceptually, our result bridges the gap between the sparsity in deep learning and conventional statistical learning",
-    "checked": false,
+    "abstract": "We propose to minimize a generic differentiable objective with $L_1$ constraint using a simple reparametrization and straightforward stochastic gradient descent. Our proposal is the direct generalization of previous ideas that the $L_1$ penalty may be equivalent to a differentiable reparametrization with weight decay. We prove that the proposed method, spred, is an exact differentiable solver of $L_1$ and that the reparametrization trick is completely \"benign\" for a generic nonconvex function. Practically, we demonstrate the usefulness of the method in (1) training sparse neural networks to perform gene selection tasks, which involves finding relevant features in a very high dimensional space, and (2) neural network compression task, to which previous attempts at applying the $L_1$-penalty have been unsuccessful. Conceptually, our result bridges the gap between the sparsity in deep learning and conventional statistical learning",
+    "checked": true,
     "id": "cff1ca3253d1b14438e87dcd9ebf6422ed7b7afc",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "spred: solving l1 penalty with sgd",
+    "citation_count": 2
   },
   "https://proceedings.mlr.press/v202/zou23a.html": {
     "title": "The Benefits of Mixup for Feature Learning",
@@ -16448,7 +16448,7 @@
     "abstract": "Mixup, a simple data augmentation method that randomly mixes two data points via linear interpolation, has been extensively applied in various deep learning applications to gain better generalization. However, its theoretical explanation remains largely unclear. In this work, we aim to seek a fundamental understanding of the benefits of Mixup. We first show that Mixup using different linear interpolation parameters for features and labels can still achieve similar performance as standard Mixup. This indicates that the intuitive linearity explanation in Zhang et al., (2018) may not fully explain the success of Mixup. Then, we perform a theoretical study of Mixup from the feature learning perspective. We consider a feature-noise data model and show that Mixup training can effectively learn the rare features (appearing in a small fraction of data) from its mixture with the common features (appearing in a large fraction of data). In contrast, standard training can only learn the common features but fails to learn the rare features, thus suffering from bad generalization performance. Moreover, our theoretical analysis also shows that the benefits of Mixup for feature learning are mostly gained in the early training phase, based on which we propose to apply early stopping in Mixup. Experimental results verify our theoretical findings and demonstrate the effectiveness of the early-stopped Mixup training",
     "checked": true,
     "id": "4327428a2e70c2e98650bd793f88c38b47e2a66e",
-    "semantic_title": "",
-    "citation_count": 4
+    "semantic_title": "the benefits of mixup for feature learning",
+    "citation_count": 5
   }
 }

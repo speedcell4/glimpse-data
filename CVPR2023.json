@@ -3,87 +3,87 @@
     "title": "GFPose: Learning 3D Human Pose Prior With Gradient Fields",
     "volume": "main",
     "abstract": "Learning 3D human pose prior is essential to human-centered AI. Here, we present GFPose, a versatile framework to model plausible 3D human poses for various applications. At the core of GFPose is a time-dependent score network, which estimates the gradient on each body joint and progressively denoises the perturbed 3D human pose to match a given task specification. During the denoising process, GFPose implicitly incorporates pose priors in gradients and unifies various discriminative and generative tasks in an elegant framework. Despite the simplicity, GFPose demonstrates great potential in several downstream tasks. Our experiments empirically show that 1) as a multi-hypothesis pose estimator, GFPose outperforms existing SOTAs by 20% on Human3.6M dataset. 2) as a single-hypothesis pose estimator, GFPose achieves comparable results to deterministic SOTAs, even with a vanilla backbone. 3) GFPose is able to produce diverse and realistic samples in pose denoising, completion and generation tasks",
-    "checked": false,
+    "checked": true,
     "id": "a1495979b7105d5f329e6a52342825f19dc5bf1d",
-    "semantic_title": "",
+    "semantic_title": "gfpose: learning 3d human pose prior with gradient fields",
     "citation_count": 6
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Xu_CXTrack_Improving_3D_Point_Cloud_Tracking_With_Contextual_Information_CVPR_2023_paper.html": {
     "title": "CXTrack: Improving 3D Point Cloud Tracking With Contextual Information",
     "volume": "main",
     "abstract": "3D single object tracking plays an essential role in many applications, such as autonomous driving. It remains a challenging problem due to the large appearance variation and the sparsity of points caused by occlusion and limited sensor capabilities. Therefore, contextual information across two consecutive frames is crucial for effective object tracking. However, points containing such useful information are often overlooked and cropped out in existing methods, leading to insufficient use of important contextual knowledge. To address this issue, we propose CXTrack, a novel transformer-based network for 3D object tracking, which exploits ConteXtual information to improve the tracking results. Specifically, we design a target-centric transformer network that directly takes point features from two consecutive frames and the previous bounding box as input to explore contextual information and implicitly propagate target cues. To achieve accurate localization for objects of all sizes, we propose a transformer-based localization head with a novel center embedding module to distinguish the target from distractors. Extensive experiments on three large-scale datasets, KITTI, nuScenes and Waymo Open Dataset, show that CXTrack achieves state-of-the-art tracking performance while running at 34 FPS",
-    "checked": false,
+    "checked": true,
     "id": "5ee775484fcdab1013e1f644b2626832e15057ea",
-    "semantic_title": "",
+    "semantic_title": "cxtrack: improving 3d point cloud tracking with contextual information",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Lin_Deep_Frequency_Filtering_for_Domain_Generalization_CVPR_2023_paper.html": {
     "title": "Deep Frequency Filtering for Domain Generalization",
     "volume": "main",
     "abstract": "Improving the generalization ability of Deep Neural Networks (DNNs) is critical for their practical uses, which has been a longstanding challenge. Some theoretical studies have uncovered that DNNs have preferences for some frequency components in the learning process and indicated that this may affect the robustness of learned features. In this paper, we propose Deep Frequency Filtering (DFF) for learning domain-generalizable features, which is the first endeavour to explicitly modulate the frequency components of different transfer difficulties across domains in the latent space during training. To achieve this, we perform Fast Fourier Transform (FFT) for the feature maps at different layers, then adopt a light-weight module to learn attention masks from the frequency representations after FFT to enhance transferable components while suppressing the components not conducive to generalization. Further, we empirically compare the effectiveness of adopting different types of attention designs for implementing DFF. Extensive experiments demonstrate the effectiveness of our proposed DFF and show that applying our DFF on a plain baseline outperforms the state-of-the-art methods on different domain generalization tasks, including close-set classification and open-set retrieval",
-    "checked": false,
+    "checked": true,
     "id": "995015ce6f70120397c1838ba74b9d6e7799a7a4",
-    "semantic_title": "",
+    "semantic_title": "deep frequency filtering for domain generalization",
     "citation_count": 4
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Frame_Flexible_Network_CVPR_2023_paper.html": {
     "title": "Frame Flexible Network",
     "volume": "main",
     "abstract": "Existing video recognition algorithms always conduct different training pipelines for inputs with different frame numbers, which requires repetitive training operations and multiplying storage costs. If we evaluate the model using other frames which are not used in training, we observe the performance will drop significantly (see Fig.1, which is summarized as Temporal Frequency Deviation phenomenon. To fix this issue, we propose a general framework, named Frame Flexible Network (FFN), which not only enables the model to be evaluated at different frames to adjust its computation, but also reduces the memory costs of storing multiple models significantly. Concretely, FFN integrates several sets of training sequences, involves Multi-Frequency Alignment (MFAL) to learn temporal frequency invariant representations, and leverages Multi-Frequency Adaptation (MFAD) to further strengthen the representation abilities. Comprehensive empirical validations using various architectures and popular benchmarks solidly demonstrate the effectiveness and generalization of FFN (e.g., 7.08/5.15/2.17% performance gain at Frame 4/8/16 on Something-Something V1 dataset over Uniformer). Code is available at https://github.com/BeSpontaneous/FFN",
-    "checked": false,
+    "checked": true,
     "id": "3acca2ff4e8a808c524261cff4acc8bc21b16eea",
-    "semantic_title": "",
+    "semantic_title": "frame flexible network",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhou_Unsupervised_Cumulative_Domain_Adaptation_for_Foggy_Scene_Optical_Flow_CVPR_2023_paper.html": {
     "title": "Unsupervised Cumulative Domain Adaptation for Foggy Scene Optical Flow",
     "volume": "main",
     "abstract": "Optical flow has achieved great success under clean scenes, but suffers from restricted performance under foggy scenes. To bridge the clean-to-foggy domain gap, the existing methods typically adopt the domain adaptation to transfer the motion knowledge from clean to synthetic foggy domain. However, these methods unexpectedly neglect the synthetic-to-real domain gap, and thus are erroneous when applied to real-world scenes. To handle the practical optical flow under real foggy scenes, in this work, we propose a novel unsupervised cumulative domain adaptation optical flow (UCDA-Flow) framework: depth-association motion adaptation and correlation-alignment motion adaptation. Specifically, we discover that depth is a key ingredient to influence the optical flow: the deeper depth, the inferior optical flow, which motivates us to design a depth-association motion adaptation module to bridge the clean-to-foggy domain gap. Moreover, we figure out that the cost volume correlation shares similar distribution of the synthetic and real foggy images, which enlightens us to devise a correlation-alignment motion adaptation module to distill motion knowledge of the synthetic foggy domain to the real foggy domain. Note that synthetic fog is designed as the intermediate domain. Under this unified framework, the proposed cumulative adaptation progressively transfers knowledge from clean scenes to real foggy scenes. Extensive experiments have been performed to verify the superiority of the proposed method",
-    "checked": false,
+    "checked": true,
     "id": "76426c2017fca426fe974ae7a1237d37f7428b33",
-    "semantic_title": "",
+    "semantic_title": "unsupervised cumulative domain adaptation for foggy scene optical flow",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Rangwani_NoisyTwins_Class-Consistent_and_Diverse_Image_Generation_Through_StyleGANs_CVPR_2023_paper.html": {
     "title": "NoisyTwins: Class-Consistent and Diverse Image Generation Through StyleGANs",
     "volume": "main",
-    "abstract": "StyleGANs are at the forefront of controllable image generation as they produce a latent space that is semantically disentangled, making it suitable for image editing and manipulation. However, the performance of StyleGANs severely degrades when trained via class-conditioning on large-scale long-tailed datasets. We find that one reason for degradation is the collapse of latents for each class in the W latent space. With NoisyTwins, we first introduce an effective and inexpensive augmentation strategy for class embeddings, which then decorrelates the latents based on self-supervision in the W space. This decorrelation mitigates collapse, ensuring that our method preserves intra-class diversity with class-consistency in image generation. We show the effectiveness of our approach on large-scale real-world long-tailed datasets of ImageNet-LT and iNaturalist 2019, where our method outperforms other methods by   19% on FID, establishing a new state-of-the-art",
-    "checked": false,
+    "abstract": "StyleGANs are at the forefront of controllable image generation as they produce a latent space that is semantically disentangled, making it suitable for image editing and manipulation. However, the performance of StyleGANs severely degrades when trained via class-conditioning on large-scale long-tailed datasets. We find that one reason for degradation is the collapse of latents for each class in the W latent space. With NoisyTwins, we first introduce an effective and inexpensive augmentation strategy for class embeddings, which then decorrelates the latents based on self-supervision in the W space. This decorrelation mitigates collapse, ensuring that our method preserves intra-class diversity with class-consistency in image generation. We show the effectiveness of our approach on large-scale real-world long-tailed datasets of ImageNet-LT and iNaturalist 2019, where our method outperforms other methods by 19% on FID, establishing a new state-of-the-art",
+    "checked": true,
     "id": "9209ff89f3e579a104aba3206300dc0c1f5c0afd",
-    "semantic_title": "",
+    "semantic_title": "noisytwins: class-consistent and diverse image generation through stylegans",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Xu_DisCoScene_Spatially_Disentangled_Generative_Radiance_Fields_for_Controllable_3D-Aware_Scene_CVPR_2023_paper.html": {
     "title": "DisCoScene: Spatially Disentangled Generative Radiance Fields for Controllable 3D-Aware Scene Synthesis",
     "volume": "main",
     "abstract": "Existing 3D-aware image synthesis approaches mainly focus on generating a single canonical object and show limited capacity in composing a complex scene containing a variety of objects. This work presents DisCoScene: a 3D-aware generative model for high-quality and controllable scene synthesis. The key ingredient of our method is a very abstract object-level representation (i.e., 3D bounding boxes without semantic annotation) as the scene layout prior, which is simple to obtain, general to describe various scene contents, and yet informative to disentangle objects and background. Moreover, it serves as an intuitive user control for scene editing. Based on such a prior, the proposed model spatially disentangles the whole scene into object-centric generative radiance fields by learning on only 2D images with the global-local discrimination. Our model obtains the generation fidelity and editing flexibility of individual objects while being able to efficiently compose objects and the background into a complete scene. We demonstrate state-of-the-art performance on many scene datasets, including the challenging Waymo outdoor dataset. Our code will be made publicly available",
-    "checked": false,
+    "checked": true,
     "id": "e70e5370be1e575b8b0b18e195a3496f24b4a475",
-    "semantic_title": "",
-    "citation_count": 13
+    "semantic_title": "discoscene: spatially disentangled generative radiance fields for controllable 3d-aware scene synthesis",
+    "citation_count": 15
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Lee_Revisiting_Self-Similarity_Structural_Embedding_for_Image_Retrieval_CVPR_2023_paper.html": {
     "title": "Revisiting Self-Similarity: Structural Embedding for Image Retrieval",
     "volume": "main",
     "abstract": "Despite advances in global image representation, existing image retrieval approaches rarely consider geometric structure during the global retrieval stage. In this work, we revisit the conventional self-similarity descriptor from a convolutional perspective, to encode both the visual and structural cues of the image to global image representation. Our proposed network, named Structural Embedding Network (SENet), captures the internal structure of the images and gradually compresses them into dense self-similarity descriptors while learning diverse structures from various images. These self-similarity descriptors and original image features are fused and then pooled into global embedding, so that global embedding can represent both geometric and visual cues of the image. Along with this novel structural embedding, our proposed network sets new state-of-the-art performances on several image retrieval benchmarks, convincing its robustness to look-alike distractors. The code and models are available: https://github.com/sungonce/SENet",
-    "checked": false,
-    "id": "1480b40975ad1bc4da79b45690046e5fb8a77764",
-    "semantic_title": "",
+    "checked": true,
+    "id": "ee32fe5945d43b91214642953460c94101348ffe",
+    "semantic_title": "revisiting self-similarity: structural embedding for image retrieval",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Du_Minimizing_the_Accumulated_Trajectory_Error_To_Improve_Dataset_Distillation_CVPR_2023_paper.html": {
     "title": "Minimizing the Accumulated Trajectory Error To Improve Dataset Distillation",
     "volume": "main",
     "abstract": "Model-based deep learning has achieved astounding successes due in part to the availability of large-scale real-world data. However, processing such massive amounts of data comes at a considerable cost in terms of computations, storage, training and the search for good neural architectures. Dataset distillation has thus recently come to the fore. This paradigm involves distilling information from large real-world datasets into tiny and compact synthetic datasets such that processing the latter yields similar performances as the former. State-of-the-art methods primarily rely on learning the synthetic dataset by matching the gradients obtained during training between the real and synthetic data. However, these gradient-matching methods suffer from the accumulated trajectory error caused by the discrepancy between the distillation and subsequent evaluation. To alleviate the adverse impact of this accumulated trajectory error, we propose a novel approach that encourages the optimization algorithm to seek a flat trajectory. We show that the weights trained on synthetic data are robust against the accumulated errors perturbations with the regularization towards the flat trajectory. Our method, called Flat Trajectory Distillation (FTD), is shown to boost the performance of gradient-matching methods by up to 4.7% on a subset of images of the ImageNet dataset with higher resolution images. We also validate the effectiveness and generalizability of our method with datasets of different resolutions and demonstrate its applicability to neural architecture search",
-    "checked": false,
+    "checked": true,
     "id": "16372310d94e8a0a533c01c0a0f396fb06ee3a21",
-    "semantic_title": "",
-    "citation_count": 4
+    "semantic_title": "minimizing the accumulated trajectory error to improve dataset distillation",
+    "citation_count": 6
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wang_Decoupling-and-Aggregating_for_Image_Exposure_Correction_CVPR_2023_paper.html": {
     "title": "Decoupling-and-Aggregating for Image Exposure Correction",
     "volume": "main",
-    "abstract": "",
+    "abstract": "The images captured under improper exposure conditions often suffer from contrast degradation and detail distortion. Contrast degradation will destroy the statistical properties of low-frequency components, while detail distortion will disturb the structural properties of high-frequency components, leading to the low-frequency and high-frequency components being mixed and inseparable. This will limit the statistical and structural modeling capacity for exposure correction. To address this issue, this paper proposes to decouple the contrast enhancement and detail restoration within each convolution process. It is based on the observation that, in the local regions covered by convolution kernels, the feature response of low-/high-frequency can be decoupled by addition/difference operation. To this end, we inject the addition/difference operation into the convolution process and devise a Contrast Aware (CA) unit and a Detail Aware (DA) unit to facilitate the statistical and structural regularities modeling. The proposed CA and DA can be plugged into existing CNN-based exposure correction networks to substitute the Traditional Convolution (TConv) to improve the performance. Furthermore, to maintain the computational costs of the network without changing, we aggregate two units into a single TConv kernel using structural re-parameterization. Evaluations of nine methods and five benchmark datasets demonstrate that our proposed method can comprehensively improve the performance of existing methods without introducing extra computational costs compared with the original networks. The codes will be publicly available",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -93,63 +93,63 @@
     "title": "Implicit Occupancy Flow Fields for Perception and Prediction in Self-Driving",
     "volume": "main",
     "abstract": "A self-driving vehicle (SDV) must be able to perceive its surroundings and predict the future behavior of other traffic participants. Existing works either perform object detection followed by trajectory forecasting of the detected objects, or predict dense occupancy and flow grids for the whole scene. The former poses a safety concern as the number of detections needs to be kept low for efficiency reasons, sacrificing object recall. The latter is computationally expensive due to the high-dimensionality of the output grid, and suffers from the limited receptive field inherent to fully convolutional networks. Furthermore, both approaches employ many computational resources predicting areas or objects that might never be queried by the motion planner. This motivates our unified approach to perception and future prediction that implicitly represents occupancy and flow over time with a single neural network. Our method avoids unnecessary computation, as it can be directly queried by the motion planner at continuous spatio-temporal locations. Moreover, we design an architecture that overcomes the limited receptive field of previous explicit occupancy prediction methods by adding an efficient yet effective global attention mechanism. Through extensive experiments in both urban and highway settings, we demonstrate that our implicit model outperforms the current state-of-the-art. For more information, visit the project website: https://waabi.ai/research/implicito",
-    "checked": false,
+    "checked": true,
     "id": "66395b329a2d522023ae60df2421e881fdb6c0ae",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "implicit occupancy flow fields for perception and prediction in self-driving",
+    "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Bhatia_CCuantuMM_Cycle-Consistent_Quantum-Hybrid_Matching_of_Multiple_Shapes_CVPR_2023_paper.html": {
     "title": "CCuantuMM: Cycle-Consistent Quantum-Hybrid Matching of Multiple Shapes",
     "volume": "main",
     "abstract": "Jointly matching multiple, non-rigidly deformed 3D shapes is a challenging, NP-hard problem. A perfect matching is necessarily cycle-consistent: Following the pairwise point correspondences along several shapes must end up at the starting vertex of the original shape. Unfortunately, existing quantum shape-matching methods do not support multiple shapes and even less cycle consistency. This paper addresses the open challenges and introduces the first quantum-hybrid approach for 3D shape multi-matching; in addition, it is also cycle-consistent. Its iterative formulation is admissible to modern adiabatic quantum hardware and scales linearly with the total number of input shapes. Both these characteristics are achieved by reducing the N-shape case to a sequence of three-shape matchings, the derivation of which is our main technical contribution. Thanks to quantum annealing, high-quality solutions with low energy are retrieved for the intermediate NP-hard objectives. On benchmark datasets, the proposed approach significantly outperforms extensions to multi-shape matching of a previous quantum-hybrid two-shape matching method and is on-par with classical multi-matching methods. Our source code is available at 4dqv.mpi-inf.mpg.de/CCuantuMM/",
-    "checked": false,
+    "checked": true,
     "id": "ece0631047949b16fbefcc7573d6548b1223d12e",
-    "semantic_title": "",
+    "semantic_title": "ccuantumm: cycle-consistent quantum-hybrid matching of multiple shapes",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zheng_TrojViT_Trojan_Insertion_in_Vision_Transformers_CVPR_2023_paper.html": {
     "title": "TrojViT: Trojan Insertion in Vision Transformers",
     "volume": "main",
     "abstract": "Vision Transformers (ViTs) have demonstrated the state-of-the-art performance in various vision-related tasks. The success of ViTs motivates adversaries to perform backdoor attacks on ViTs. Although the vulnerability of traditional CNNs to backdoor attacks is well-known, backdoor attacks on ViTs are seldom-studied. Compared to CNNs capturing pixel-wise local features by convolutions, ViTs extract global context information through patches and attentions. Naively transplanting CNN-specific backdoor attacks to ViTs yields only a low clean data accuracy and a low attack success rate. In this paper, we propose a stealth and practical ViT-specific backdoor attack TrojViT. Rather than an area-wise trigger used by CNN-specific backdoor attacks, TrojViT generates a patch-wise trigger designed to build a Trojan composed of some vulnerable bits on the parameters of a ViT stored in DRAM memory through patch salience ranking and attention-target loss. TrojViT further uses parameter distillation to reduce the bit number of the Trojan. Once the attacker inserts the Trojan into the ViT model by flipping the vulnerable bits, the ViT model still produces normal inference accuracy with benign inputs. But when the attacker embeds a trigger into an input, the ViT model is forced to classify the input to a predefined target class. We show that flipping only few vulnerable bits identified by TrojViT on a ViT model using the well-known RowHammer can transform the model into a backdoored one. We perform extensive experiments of multiple datasets on various ViT models. TrojViT can classify 99.64% of test images to a target class by flipping 345 bits on a ViT for ImageNet",
-    "checked": false,
+    "checked": true,
     "id": "89b59789b98219d08209e7864486241ee36050a6",
-    "semantic_title": "",
-    "citation_count": 6
+    "semantic_title": "trojvit: trojan insertion in vision transformers",
+    "citation_count": 7
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Liu_MarS3D_A_Plug-and-Play_Motion-Aware_Model_for_Semantic_Segmentation_on_Multi-Scan_CVPR_2023_paper.html": {
     "title": "MarS3D: A Plug-and-Play Motion-Aware Model for Semantic Segmentation on Multi-Scan 3D Point Clouds",
     "volume": "main",
     "abstract": "3D semantic segmentation on multi-scan large-scale point clouds plays an important role in autonomous systems. Unlike the single-scan-based semantic segmentation task, this task requires distinguishing the motion states of points in addition to their semantic categories. However, methods designed for single-scan-based segmentation tasks perform poorly on the multi-scan task due to the lacking of an effective way to integrate temporal information. We propose MarS3D, a plug-and-play motion-aware model for semantic segmentation on multi-scan 3D point clouds. This module can be flexibly combined with single-scan models to allow them to have multi-scan perception abilities. The model encompasses two key designs: the Cross-Frame Feature Embedding module for enriching representation learning and the Motion-Aware Feature Learning module for enhancing motion awareness. Extensive experiments show that MarS3D can improve the performance of the baseline model by a large margin. The code is available at https://github.com/CVMI-Lab/MarS3D",
-    "checked": false,
+    "checked": true,
     "id": "e87fe75ca69a14241634063f1f350dd0456d0113",
-    "semantic_title": "",
+    "semantic_title": "mars3d: a plug-and-play motion-aware model for semantic segmentation on multi-scan 3d point clouds",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Chahine_An_Image_Quality_Assessment_Dataset_for_Portraits_CVPR_2023_paper.html": {
     "title": "An Image Quality Assessment Dataset for Portraits",
     "volume": "main",
     "abstract": "Year after year, the demand for ever-better smartphone photos continues to grow, in particular in the domain of portrait photography. Manufacturers thus use perceptual quality criteria throughout the development of smartphone cameras. This costly procedure can be partially replaced by automated learning-based methods for image quality assessment (IQA). Due to its subjective nature, it is necessary to estimate and guarantee the consistency of the IQA process, a characteristic lacking in the mean opinion scores (MOS) widely used for crowdsourcing IQA. In addition, existing blind IQA (BIQA) datasets pay little attention to the difficulty of cross-content assessment, which may degrade the quality of annotations. This paper introduces PIQ23, a portrait-specific IQA dataset of 5116 images of 50 predefined scenarios acquired by 100 smartphones, covering a high variety of brands, models, and use cases. The dataset includes individuals of various genders and ethnicities who have given explicit and informed consent for their photographs to be used in public research. It is annotated by pairwise comparisons (PWC) collected from over 30 image quality experts for three image attributes: face detail preservation, face target exposure, and overall image quality. An in-depth statistical analysis of these annotations allows us to evaluate their consistency over PIQ23. Finally, we show through an extensive comparison with existing baselines that semantic information (image context) can be used to improve IQA predictions",
-    "checked": false,
+    "checked": true,
     "id": "eee690ef1ab360b155bd356eb39b713fdbaa5310",
-    "semantic_title": "",
+    "semantic_title": "an image quality assessment dataset for portraits",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Li_MSeg3D_Multi-Modal_3D_Semantic_Segmentation_for_Autonomous_Driving_CVPR_2023_paper.html": {
     "title": "MSeg3D: Multi-Modal 3D Semantic Segmentation for Autonomous Driving",
     "volume": "main",
     "abstract": "LiDAR and camera are two modalities available for 3D semantic segmentation in autonomous driving. The popular LiDAR-only methods severely suffer from inferior segmentation on small and distant objects due to insufficient laser points, while the robust multi-modal solution is under-explored, where we investigate three crucial inherent difficulties: modality heterogeneity, limited sensor field of view intersection, and multi-modal data augmentation. We propose a multi-modal 3D semantic segmentation model (MSeg3D) with joint intra-modal feature extraction and inter-modal feature fusion to mitigate the modality heterogeneity. The multi-modal fusion in MSeg3D consists of geometry-based feature fusion GF-Phase, cross-modal feature completion, and semantic-based feature fusion SF-Phase on all visible points. The multi-modal data augmentation is reinvigorated by applying asymmetric transformations on LiDAR point cloud and multi-camera images individually, which benefits the model training with diversified augmentation transformations. MSeg3D achieves state-of-the-art results on nuScenes, Waymo, and SemanticKITTI datasets. Under the malfunctioning multi-camera input and the multi-frame point clouds input, MSeg3D still shows robustness and improves the LiDAR-only baseline. Our code is publicly available at https://github.com/jialeli1/lidarseg3d",
-    "checked": false,
+    "checked": true,
     "id": "0c2fb6f568ece453248f39e48bf58fc33fce5537",
-    "semantic_title": "",
+    "semantic_title": "mseg3d: multi-modal 3d semantic segmentation for autonomous driving",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Jiang_Robust_Outlier_Rejection_for_3D_Registration_With_Variational_Bayes_CVPR_2023_paper.html": {
     "title": "Robust Outlier Rejection for 3D Registration With Variational Bayes",
     "volume": "main",
     "abstract": "Learning-based outlier (mismatched correspondence) rejection for robust 3D registration generally formulates the outlier removal as an inlier/outlier classification problem. The core for this to be successful is to learn the discriminative inlier/outlier feature representations. In this paper, we develop a novel variational non-local network-based outlier rejection framework for robust alignment. By reformulating the non-local feature learning with variational Bayesian inference, the Bayesian-driven long-range dependencies can be modeled to aggregate discriminative geometric context information for inlier/outlier distinction. Specifically, to achieve such Bayesian-driven contextual dependencies, each query/key/value component in our non-local network predicts a prior feature distribution and a posterior one. Embedded with the inlier/outlier label, the posterior feature distribution is label-dependent and discriminative. Thus, pushing the prior to be close to the discriminative posterior in the training step enables the features sampled from this prior at test time to model high-quality long-range dependencies. Notably, to achieve effective posterior feature guidance, a specific probabilistic graphical model is designed over our non-local model, which lets us derive a variational low bound as our optimization objective for model training. Finally, we propose a voting-based inlier searching strategy to cluster the high-quality hypothetical inliers for transformation estimation. Extensive experiments on 3DMatch, 3DLoMatch, and KITTI datasets verify the effectiveness of our method",
-    "checked": false,
+    "checked": true,
     "id": "0ca0e913994197200337fb06d4164677a82b43f5",
-    "semantic_title": "",
+    "semantic_title": "robust outlier rejection for 3d registration with variational bayes",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wang_Dynamically_Instance-Guided_Adaptation_A_Backward-Free_Approach_for_Test-Time_Domain_Adaptive_CVPR_2023_paper.html": {
@@ -158,43 +158,43 @@
     "abstract": "In this paper, we study the application of Test-time domain adaptation in semantic segmentation (TTDA-Seg) where both efficiency and effectiveness are crucial. Existing methods either have low efficiency (e.g., backward optimization) or ignore semantic adaptation (e.g., distribution alignment). Besides, they would suffer from the accumulated errors caused by unstable optimization and abnormal distributions. To solve these problems, we propose a novel backward-free approach for TTDA-Seg, called Dynamically Instance-Guided Adaptation (DIGA). Our principle is utilizing each instance to dynamically guide its own adaptation in a non-parametric way, which avoids the error accumulation issue and expensive optimizing cost. Specifically, DIGA is composed of a distribution adaptation module (DAM) and a semantic adaptation module (SAM), enabling us to jointly adapt the model in two indispensable aspects. DAM mixes the instance and source BN statistics to encourage the model to capture robust representation. SAM combines the historical prototypes with instance-level prototypes to adjust semantic predictions, which can be associated with the parametric classifier to mutually benefit the final results. Extensive experiments evaluated on five target domains demonstrate the effectiveness and efficiency of the proposed method. Our DIGA establishes new state-of-the-art performance in TTDA-Seg",
     "checked": false,
     "id": "fe60946a0eabcd46f4a49ec599dbf36375b215d7",
-    "semantic_title": "",
+    "semantic_title": "dynamically instance-guided adaptation: a backward-free approach for test-time domain adaptive semantic segmentation (supplementary material)",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Painting_3D_Nature_in_2D_View_Synthesis_of_Natural_Scenes_CVPR_2023_paper.html": {
     "title": "Painting 3D Nature in 2D: View Synthesis of Natural Scenes From a Single Semantic Mask",
     "volume": "main",
     "abstract": "We introduce a novel approach that takes a single semantic mask as input to synthesize multi-view consistent color images of natural scenes, trained with a collection of single images from the Internet. Prior works on 3D-aware image synthesis either require multi-view supervision or learning category-level prior for specific classes of objects, which are inapplicable to natural scenes. Our key idea to solve this challenge is to use a semantic field as the intermediate representation, which is easier to reconstruct from an input semantic mask and then translated to a radiance field with the assistance of off-the-shelf semantic image synthesis models. Experiments show that our method outperforms baseline methods and produces photorealistic and multi-view consistent videos of a variety of natural scenes. The project website is https://zju3dv.github.io/paintingnature/",
-    "checked": false,
+    "checked": true,
     "id": "8e3f8a966b024c54c14050d8cc566998ba077718",
-    "semantic_title": "",
-    "citation_count": 1
+    "semantic_title": "painting 3d nature in 2d: view synthesis of natural scenes from a single semantic mask",
+    "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Park_LANIT_Language-Driven_Image-to-Image_Translation_for_Unlabeled_Data_CVPR_2023_paper.html": {
     "title": "LANIT: Language-Driven Image-to-Image Translation for Unlabeled Data",
     "volume": "main",
     "abstract": "Existing techniques for image-to-image translation commonly have suffered from two critical problems: heavy reliance on per-sample domain annotation and/or inability to handle multiple attributes per image. Recent truly-unsupervised methods adopt clustering approaches to easily provide per-sample one-hot domain labels. However, they cannot account for the real-world setting: one sample may have multiple attributes. In addition, the semantics of the clusters are not easily coupled to human understanding. To overcome these, we present LANguage-driven Image-to-image Translation model, dubbed LANIT. We leverage easy-to-obtain candidate attributes given in texts for a dataset: the similarity between images and attributes indicates per-sample domain labels. This formulation naturally enables multi-hot labels so that users can specify the target domain with a set of attributes in language. To account for the case that the initial prompts are inaccurate, we also present prompt learning. We further present domain regularization loss that enforces translated images to be mapped to the corresponding domain. Experiments on several standard benchmarks demonstrate that LANIT achieves comparable or superior performance to existing models. The code is available at github.com/KU-CVLAB/LANIT",
-    "checked": false,
+    "checked": true,
     "id": "b1754d37749e43ba4e7ed786c528de59122d5d63",
-    "semantic_title": "",
+    "semantic_title": "lanit: language-driven image-to-image translation for unlabeled data",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wang_MoLo_Motion-Augmented_Long-Short_Contrastive_Learning_for_Few-Shot_Action_Recognition_CVPR_2023_paper.html": {
     "title": "MoLo: Motion-Augmented Long-Short Contrastive Learning for Few-Shot Action Recognition",
     "volume": "main",
     "abstract": "Current state-of-the-art approaches for few-shot action recognition achieve promising performance by conducting frame-level matching on learned visual features. However, they generally suffer from two limitations: i) the matching procedure between local frames tends to be inaccurate due to the lack of guidance to force long-range temporal perception; ii) explicit motion learning is usually ignored, leading to partial information loss. To address these issues, we develop a Motion-augmented Long-short Contrastive Learning (MoLo) method that contains two crucial components, including a long-short contrastive objective and a motion autodecoder. Specifically, the long-short contrastive objective is to endow local frame features with long-form temporal awareness by maximizing their agreement with the global token of videos belonging to the same class. The motion autodecoder is a lightweight architecture to reconstruct pixel motions from the differential features, which explicitly embeds the network with motion dynamics. By this means, MoLo can simultaneously learn long-range temporal context and motion cues for comprehensive few-shot matching. To demonstrate the effectiveness, we evaluate MoLo on five standard benchmarks, and the results show that MoLo favorably outperforms recent advanced methods. The source code is available at https://github.com/alibaba-mmai-research/MoLo",
-    "checked": false,
+    "checked": true,
     "id": "1b5813dc183818457bb25b90c67d9544b50b01a7",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "molo: motion-augmented long-short contrastive learning for few-shot action recognition",
+    "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wu_Fast_Point_Cloud_Generation_With_Straight_Flows_CVPR_2023_paper.html": {
     "title": "Fast Point Cloud Generation With Straight Flows",
     "volume": "main",
     "abstract": "Diffusion models have emerged as a powerful tool for point cloud generation. A key component that drives the impressive performance for generating high-quality samples from noise is iteratively denoise for thousands of steps. While beneficial, the complexity of learning steps has limited its applications to many 3D real-world. To address this limitation, we propose Point Straight Flow (PSF), a model that exhibits impressive performance using one step. Our idea is based on the reformulation of the standard diffusion model, which optimizes the curvy learning trajectory into a straight path. Further, we develop a distillation strategy to shorten the straight path into one step without a performance loss, enabling applications to 3D real-world with latency constraints. We perform evaluations on multiple 3D tasks and find that our PSF performs comparably to the standard diffusion model, outperforming other efficient 3D point cloud generation methods. On real-world applications such as point cloud completion and training-free text-guided generation in a low-latency setup, PSF performs favorably",
-    "checked": false,
+    "checked": true,
     "id": "524889248251669b110adf86c4380444ec5448f4",
-    "semantic_title": "",
+    "semantic_title": "fast point cloud generation with straight flows",
     "citation_count": 3
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wei_Text-Guided_Unsupervised_Latent_Transformation_for_Multi-Attribute_Image_Manipulation_CVPR_2023_paper.html": {
@@ -210,105 +210,105 @@
     "title": "Achieving a Better Stability-Plasticity Trade-Off via Auxiliary Networks in Continual Learning",
     "volume": "main",
     "abstract": "In contrast to the natural capabilities of humans to learn new tasks in a sequential fashion, neural networks are known to suffer from catastrophic forgetting, where the model's performances on old tasks drop dramatically after being optimized for a new task. Since then, the continual learning (CL) community has proposed several solutions aiming to equip the neural network with the ability to learn the current task (plasticity) while still achieving high accuracy on the previous tasks (stability). Despite remarkable improvements, the plasticity-stability trade-off is still far from being solved, and its underlying mechanism is poorly understood. In this work, we propose Auxiliary Network Continual Learning (ANCL), a novel method that applies an additional auxiliary network which promotes plasticity to the continually learned model which mainly focuses on stability. More concretely, the proposed framework materializes in a regularizer that naturally interpolates between plasticity and stability, surpassing strong baselines on task incremental and class incremental scenarios. Through extensive analyses on ANCL solutions, we identify some essential principles beneath the stability-plasticity trade-off",
-    "checked": false,
+    "checked": true,
     "id": "4820e3d82fc107948d3103f3859c4db82f4ffcdb",
-    "semantic_title": "",
+    "semantic_title": "achieving a better stability-plasticity trade-off via auxiliary networks in continual learning",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Weber_Power_Bundle_Adjustment_for_Large-Scale_3D_Reconstruction_CVPR_2023_paper.html": {
     "title": "Power Bundle Adjustment for Large-Scale 3D Reconstruction",
     "volume": "main",
     "abstract": "We introduce Power Bundle Adjustment as an expansion type algorithm for solving large-scale bundle adjustment problems. It is based on the power series expansion of the inverse Schur complement and constitutes a new family of solvers that we call inverse expansion methods. We theoretically justify the use of power series and we prove the convergence of our approach. Using the real-world BAL dataset we show that the proposed solver challenges the state-of-the-art iterative methods and significantly accelerates the solution of the normal equation, even for reaching a very high accuracy. This easy-to-implement solver can also complement a recently presented distributed bundle adjustment framework. We demonstrate that employing the proposed Power Bundle Adjustment as a sub-problem solver significantly improves speed and accuracy of the distributed optimization",
-    "checked": false,
+    "checked": true,
     "id": "948006cd2428672dce0b2b01cfb459f4b36c3527",
-    "semantic_title": "",
+    "semantic_title": "power bundle adjustment for large-scale 3d reconstruction",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Koley_Picture_That_Sketch_Photorealistic_Image_Generation_From_Abstract_Sketches_CVPR_2023_paper.html": {
     "title": "Picture That Sketch: Photorealistic Image Generation From Abstract Sketches",
     "volume": "main",
     "abstract": "Given an abstract, deformed, ordinary sketch from untrained amateurs like you and me, this paper turns it into a photorealistic image - just like those shown in Fig. 1(a), all non-cherry-picked. We differ significantly from prior art in that we do not dictate an edgemap-like sketch to start with, but aim to work with abstract free-hand human sketches. In doing so, we essentially democratise the sketch-to-photo pipeline, \"picturing\" a sketch regardless of how good you sketch. Our contribution at the outset is a decoupled encoder-decoder training paradigm, where the decoder is a StyleGAN trained on photos only. This importantly ensures that generated results are always photorealistic. The rest is then all centred around how best to deal with the abstraction gap between sketch and photo. For that, we propose an autoregressive sketch mapper trained on sketch-photo pairs that maps a sketch to the StyleGAN latent space. We further introduce specific designs to tackle the abstract nature of human sketches, including a fine-grained discriminative loss on the back of a trained sketch-photo retrieval model, and a partial-aware sketch augmentation strategy. Finally, we showcase a few downstream tasks our generation model enables, amongst them is showing how fine-grained sketch-based image retrieval, a well-studied problem in the sketch community, can be reduced to an image (generated) to image retrieval task, surpassing state-of-the-arts. We put forward generated results in the supplementary for everyone to scrutinise. Project page: https://subhadeepkoley.github.io/PictureThatSketch",
-    "checked": false,
+    "checked": true,
     "id": "f0843db1ec57d5766ae098716aa6f07d70732216",
-    "semantic_title": "",
+    "semantic_title": "picture that sketch: photorealistic image generation from abstract sketches",
     "citation_count": 5
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Huang_Contrastive_Semi-Supervised_Learning_for_Underwater_Image_Restoration_via_Reliable_Bank_CVPR_2023_paper.html": {
     "title": "Contrastive Semi-Supervised Learning for Underwater Image Restoration via Reliable Bank",
     "volume": "main",
     "abstract": "Despite the remarkable achievement of recent underwater image restoration techniques, the lack of labeled data has become a major hurdle for further progress. In this work, we propose a mean-teacher based Semi-supervised Underwater Image Restoration (Semi-UIR) framework to incorporate the unlabeled data into network training. However, the naive mean-teacher method suffers from two main problems: (1) The consistency loss used in training might become ineffective when the teacher's prediction is wrong. (2) Using L1 distance may cause the network to overfit wrong labels, resulting in confirmation bias. To address the above problems, we first introduce a reliable bank to store the \"best-ever\" outputs as pseudo ground truth. To assess the quality of outputs, we conduct an empirical analysis based on the monotonicity property to select the most trustworthy NR-IQA method. Besides, in view of the confirmation bias problem, we incorporate contrastive regularization to prevent the overfitting on wrong labels. Experimental results on both full-reference and non-reference underwater benchmarks demonstrate that our algorithm has obvious improvement over SOTA methods quantitatively and qualitatively. Code has been released at https://github.com/Huang-ShiRui/Semi-UIR",
-    "checked": false,
+    "checked": true,
     "id": "1791c6b9b8c0a6eaf1b4b951040c5b9c5cb4d4ef",
-    "semantic_title": "",
-    "citation_count": 2
+    "semantic_title": "contrastive semi-supervised learning for underwater image restoration via reliable bank",
+    "citation_count": 4
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Yang_Video_Event_Restoration_Based_on_Keyframes_for_Video_Anomaly_Detection_CVPR_2023_paper.html": {
     "title": "Video Event Restoration Based on Keyframes for Video Anomaly Detection",
     "volume": "main",
     "abstract": "Video anomaly detection (VAD) is a significant computer vision problem. Existing deep neural network (DNN) based VAD methods mostly follow the route of frame reconstruction or frame prediction. However, the lack of mining and learning of higher-level visual features and temporal context relationships in videos limits the further performance of these two approaches. Inspired by video codec theory, we introduce a brand-new VAD paradigm to break through these limitations: First, we propose a new task of video event restoration based on keyframes. Encouraging DNN to infer missing multiple frames based on video keyframes so as to restore a video event, which can more effectively motivate DNN to mine and learn potential higher-level visual features and comprehensive temporal context relationships in the video. To this end, we propose a novel U-shaped Swin Transformer Network with Dual Skip Connections (USTN-DSC) for video event restoration, where a cross-attention and a temporal upsampling residual skip connection are introduced to further assist in restoring complex static and dynamic motion object features in the video. In addition, we propose a simple and effective adjacent frame difference loss to constrain the motion consistency of the video sequence. Extensive experiments on benchmarks demonstrate that USTN-DSC outperforms most existing methods, validating the effectiveness of our method",
-    "checked": false,
+    "checked": true,
     "id": "173cc12234e34d65ee4e9a53d3cddedde7b4b544",
-    "semantic_title": "",
+    "semantic_title": "video event restoration based on keyframes for video anomaly detection",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Song_EcoTTA_Memory-Efficient_Continual_Test-Time_Adaptation_via_Self-Distilled_Regularization_CVPR_2023_paper.html": {
     "title": "EcoTTA: Memory-Efficient Continual Test-Time Adaptation via Self-Distilled Regularization",
     "volume": "main",
     "abstract": "This paper presents a simple yet effective approach that improves continual test-time adaptation (TTA) in a memory-efficient manner. TTA may primarily be conducted on edge devices with limited memory, so reducing memory is crucial but has been overlooked in previous TTA studies. In addition, long-term adaptation often leads to catastrophic forgetting and error accumulation, which hinders applying TTA in real-world deployments. Our approach consists of two components to address these issues. First, we present lightweight meta networks that can adapt the frozen original networks to the target domain. This novel architecture minimizes memory consumption by decreasing the size of intermediate activations required for backpropagation. Second, our novel self-distilled regularization controls the output of the meta networks not to deviate significantly from the output of the frozen original networks, thereby preserving well-trained knowledge from the source domain. Without additional memory, this regularization prevents error accumulation and catastrophic forgetting, resulting in stable performance even in long-term test-time adaptation. We demonstrate that our simple yet effective strategy outperforms other state-of-the-art methods on various benchmarks for image classification and semantic segmentation tasks. Notably, our proposed method with ResNet-50 and WideResNet-40 takes 86% and 80% less memory than the recent state-of-the-art method, CoTTA",
-    "checked": false,
+    "checked": true,
     "id": "f37fae71760834924f287b71ad8f7bbd026ee95b",
-    "semantic_title": "",
-    "citation_count": 5
+    "semantic_title": "ecotta: memory-efficient continual test-time adaptation via self-distilled regularization",
+    "citation_count": 8
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_3D-Aware_Object_Goal_Navigation_via_Simultaneous_Exploration_and_Identification_CVPR_2023_paper.html": {
     "title": "3D-Aware Object Goal Navigation via Simultaneous Exploration and Identification",
     "volume": "main",
     "abstract": "Object goal navigation (ObjectNav) in unseen environments is a fundamental task for Embodied AI. Agents in existing works learn ObjectNav policies based on 2D maps, scene graphs, or image sequences. Considering this task happens in 3D space, a 3D-aware agent can advance its ObjectNav capability via learning from fine-grained spatial information. However, leveraging 3D scene representation can be prohibitively unpractical for policy learning in this floor-level task, due to low sample efficiency and expensive computational cost. In this work, we propose a framework for the challenging 3D-aware ObjectNav based on two straightforward sub-policies. The two sub-polices, namely corner-guided exploration policy and category-aware identification policy, simultaneously perform by utilizing online fused 3D points as observation. Through extensive experiments, we show that this framework can dramatically improve the performance in ObjectNav through learning from 3D scene representation. Our framework achieves the best performance among all modular-based methods on the Matterport3D and Gibson datasets while requiring (up to30x) less computational cost for training. The code will be released to benefit the community",
-    "checked": false,
+    "checked": true,
     "id": "13f5d3bad54ad29ebf4b18939a5f1358807d7de6",
-    "semantic_title": "",
+    "semantic_title": "3d-aware object goal navigation via simultaneous exploration and identification",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Huang_Tri-Perspective_View_for_Vision-Based_3D_Semantic_Occupancy_Prediction_CVPR_2023_paper.html": {
     "title": "Tri-Perspective View for Vision-Based 3D Semantic Occupancy Prediction",
     "volume": "main",
     "abstract": "Modern methods for vision-centric autonomous driving perception widely adopt the bird's-eye-view (BEV) representation to describe a 3D scene. Despite its better efficiency than voxel representation, it has difficulty describing the fine-grained 3D structure of a scene with a single plane. To address this, we propose a tri-perspective view (TPV) representation which accompanies BEV with two additional perpendicular planes. We model each point in the 3D space by summing its projected features on the three planes. To lift image features to the 3D TPV space, we further propose a transformer-based TPV encoder (TPVFormer) to obtain the TPV features effectively. We employ the attention mechanism to aggregate the image features corresponding to each query in each TPV plane. Experiments show that our model trained with sparse supervision effectively predicts the semantic occupancy for all voxels. We demonstrate for the first time that using only camera inputs can achieve comparable performance with LiDAR-based methods on the LiDAR segmentation task on nuScenes. Code: https://github.com/wzzheng/TPVFormer",
-    "checked": false,
+    "checked": true,
     "id": "ea3cfdce04d7f6b2dc99a47ec9d33ba30dd5c39d",
-    "semantic_title": "",
-    "citation_count": 22
+    "semantic_title": "tri-perspective view for vision-based 3d semantic occupancy prediction",
+    "citation_count": 25
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/You_Castling-ViT_Compressing_Self-Attention_via_Switching_Towards_Linear-Angular_Attention_at_Vision_CVPR_2023_paper.html": {
     "title": "Castling-ViT: Compressing Self-Attention via Switching Towards Linear-Angular Attention at Vision Transformer Inference",
     "volume": "main",
     "abstract": "Vision Transformers (ViTs) have shown impressive performance but still require a high computation cost as compared to convolutional neural networks (CNNs), one reason is that ViTs' attention measures global similarities and thus has a quadratic complexity with the number of input tokens. Existing efficient ViTs adopt local attention or linear attention, which sacrifice ViTs' capabilities of capturing either global or local context. In this work, we ask an important research question: Can ViTs learn both global and local context while being more efficient during inference? To this end, we propose a framework called Castling-ViT, which trains ViTs using both linear-angular attention and masked softmax-based quadratic attention, but then switches to having only linear-angular attention during inference. Our Castling-ViT leverages angular kernels to measure the similarities between queries and keys via spectral angles. And we further simplify it with two techniques: (1) a novel linear-angular attention mechanism: we decompose the angular kernels into linear terms and high-order residuals, and only keep the linear terms; and (2) we adopt two parameterized modules to approximate high-order residuals: a depthwise convolution and an auxiliary masked softmax attention to help learn global and local information, where the masks for softmax attention are regularized to gradually become zeros and thus incur no overhead during inference. Extensive experiments validate the effectiveness of our Castling-ViT, e.g., achieving up to a 1.8% higher accuracy or 40% MACs reduction on classification and 1.2 higher mAP on detection under comparable FLOPs, as compared to ViTs with vanilla softmax-based attentions. Project page is available at https://www.haoranyou.com/castling-vit",
     "checked": false,
-    "id": "041735f794d54d8de2c752895dc5374b2a8cec13",
-    "semantic_title": "",
-    "citation_count": 1
+    "id": "977351c92f156db27592e88b14dee2c22d4b312a",
+    "semantic_title": "castling-vit: compressing self-attention via switching towards linear-angular attention during vision transformer inference",
+    "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Pavllo_Shape_Pose_and_Appearance_From_a_Single_Image_via_Bootstrapped_CVPR_2023_paper.html": {
     "title": "Shape, Pose, and Appearance From a Single Image via Bootstrapped Radiance Field Inversion",
     "volume": "main",
     "abstract": "Neural Radiance Fields (NeRF) coupled with GANs represent a promising direction in the area of 3D reconstruction from a single view, owing to their ability to efficiently model arbitrary topologies. Recent work in this area, however, has mostly focused on synthetic datasets where exact ground-truth poses are known, and has overlooked pose estimation, which is important for certain downstream applications such as augmented reality (AR) and robotics. We introduce a principled end-to-end reconstruction framework for natural images, where accurate ground-truth poses are not available. Our approach recovers an SDF-parameterized 3D shape, pose, and appearance from a single image of an object, without exploiting multiple views during training. More specifically, we leverage an unconditional 3D-aware generator, to which we apply a hybrid inversion scheme where a model produces a first guess of the solution which is then refined via optimization. Our framework can de-render an image in as few as 10 steps, enabling its use in practical scenarios. We demonstrate state-of-the-art results on a variety of real and synthetic benchmarks",
-    "checked": false,
+    "checked": true,
     "id": "1baddf76e8e86cd466e0cd82c1d4aa8268f0d247",
-    "semantic_title": "",
+    "semantic_title": "shape, pose, and appearance from a single image via bootstrapped radiance field inversion",
     "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Unlearnable_Clusters_Towards_Label-Agnostic_Unlearnable_Examples_CVPR_2023_paper.html": {
     "title": "Unlearnable Clusters: Towards Label-Agnostic Unlearnable Examples",
     "volume": "main",
     "abstract": "There is a growing interest in developing unlearnable examples (UEs) against visual privacy leaks on the Internet. UEs are training samples added with invisible but unlearnable noise, which have been found can prevent unauthorized training of machine learning models. UEs typically are generated via a bilevel optimization framework with a surrogate model to remove (minimize) errors from the original samples, and then applied to protect the data against unknown target models. However, existing UE generation methods all rely on an ideal assumption called labelconsistency, where the hackers and protectors are assumed to hold the same label for a given sample. In this work, we propose and promote a more practical label-agnostic setting, where the hackers may exploit the protected data quite differently from the protectors. E.g., a m-class unlearnable dataset held by the protector may be exploited by the hacker as a n-class dataset. Existing UE generation methods are rendered ineffective in this challenging setting. To tackle this challenge, we present a novel technique called Unlearnable Clusters (UCs) to generate label-agnostic unlearnable examples with cluster-wise perturbations. Furthermore, we propose to leverage Vision-and-Language Pretrained Models (VLPMs) like CLIP as the surrogate model to improve the transferability of the crafted UCs to diverse domains. We empirically verify the effectiveness of our proposed approach under a variety of settings with different datasets, target models, and even commercial platforms Microsoft Azure and Baidu PaddlePaddle. Code is available at https://github.com/jiamingzhang94/ Unlearnable-Clusters",
-    "checked": false,
+    "checked": true,
     "id": "8e8bce055cb1cbf688a43b5cfe598159294ce39c",
-    "semantic_title": "",
+    "semantic_title": "unlearnable clusters: towards label-agnostic unlearnable examples",
     "citation_count": 4
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Huang_Rethinking_Federated_Learning_With_Domain_Shift_A_Prototype_View_CVPR_2023_paper.html": {
     "title": "Rethinking Federated Learning With Domain Shift: A Prototype View",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Federated learning shows a bright promise as a privacy-preserving collaborative learning technique. However, prevalent solutions mainly focus on all private data sampled from the same domain. An important challenge is that when distributed data are derived from diverse domains. The private model presents degenerative performance on other domains (with domain shift). Therefore, we expect that the global model optimized after the federated learning process stably provides generalizability performance on multiple domains. In this paper, we propose Federated Prototypes Learning (FPL) for federated learning under domain shift. The core idea is to construct cluster prototypes and unbiased prototypes, providing fruitful domain knowledge and a fair convergent target. On the one hand, we pull the sample embedding closer to cluster prototypes belonging to the same semantics than cluster prototypes from distinct classes. On the other hand, we introduce consistency regularization to align the local instance with the respective unbiased prototype. Empirical results on Digits and Office Caltech tasks demonstrate the effectiveness of the proposed solution and the efficiency of crucial modules",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -318,231 +318,231 @@
     "title": "NoPe-NeRF: Optimising Neural Radiance Field With No Pose Prior",
     "volume": "main",
     "abstract": "Training a Neural Radiance Field (NeRF) without pre-computed camera poses is challenging. Recent advances in this direction demonstrate the possibility of jointly optimising a NeRF and camera poses in forward-facing scenes. However, these methods still face difficulties during dramatic camera movement. We tackle this challenging problem by incorporating undistorted monocular depth priors. These priors are generated by correcting scale and shift parameters during training, with which we are then able to constrain the relative poses between consecutive frames. This constraint is achieved using our proposed novel loss functions. Experiments on real-world indoor and outdoor scenes show that our method can handle challenging camera trajectories and outperforms existing methods in terms of novel view rendering quality and pose estimation accuracy. Our project page is https://nope-nerf.active.vision",
-    "checked": false,
+    "checked": true,
     "id": "9a1646e96ae3bda9f528ca747a3c7f591735f2c0",
-    "semantic_title": "",
-    "citation_count": 12
+    "semantic_title": "nope-nerf: optimising neural radiance field with no pose prior",
+    "citation_count": 14
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Ding_HGFormer_Hierarchical_Grouping_Transformer_for_Domain_Generalized_Semantic_Segmentation_CVPR_2023_paper.html": {
     "title": "HGFormer: Hierarchical Grouping Transformer for Domain Generalized Semantic Segmentation",
     "volume": "main",
     "abstract": "Current semantic segmentation models have achieved great success under the independent and identically distributed (i.i.d.) condition. However, in real-world applications, test data might come from a different domain than training data. Therefore, it is important to improve model robustness against domain differences. This work studies semantic segmentation under the domain generalization setting, where a model is trained only on the source domain and tested on the unseen target domain. Existing works show that Vision Transformers are more robust than CNNs and show that this is related to the visual grouping property of self-attention. In this work, we propose a novel hierarchical grouping transformer (HGFormer) to explicitly group pixels to form part-level masks and then whole-level masks. The masks at different scales aim to segment out both parts and a whole of classes. HGFormer combines mask classification results at both scales for class label prediction. We assemble multiple interesting cross-domain settings by using seven public semantic segmentation datasets. Experiments show that HGFormer yields more robust semantic segmentation results than per-pixel classification methods and flat-grouping transformers, and outperforms previous methods significantly. Code will be available at https://github.com/dingjiansw101/HGFormer",
-    "checked": false,
+    "checked": true,
     "id": "725a9efd4c992c920400283f6f5fb779fe880ce7",
-    "semantic_title": "",
+    "semantic_title": "hgformer: hierarchical grouping transformer for domain generalized semantic segmentation",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Ju_Distilling_Vision-Language_Pre-Training_To_Collaborate_With_Weakly-Supervised_Temporal_Action_Localization_CVPR_2023_paper.html": {
     "title": "Distilling Vision-Language Pre-Training To Collaborate With Weakly-Supervised Temporal Action Localization",
     "volume": "main",
     "abstract": "Weakly-supervised temporal action localization (WTAL) learns to detect and classify action instances with only category labels. Most methods widely adopt the off-the-shelf Classification-Based Pre-training (CBP) to generate video features for action localization. However, the different optimization objectives between classification and localization, make temporally localized results suffer from the serious incomplete issue. To tackle this issue without additional annotations, this paper considers to distill free action knowledge from Vision-Language Pre-training (VLP), as we surprisingly observe that the localization results of vanilla VLP have an over-complete issue, which is just complementary to the CBP results. To fuse such complementarity, we propose a novel distillation-collaboration framework with two branches acting as CBP and VLP respectively. The framework is optimized through a dual-branch alternate training strategy. Specifically, during the B step, we distill the confident background pseudo-labels from the CBP branch; while during the F step, the confident foreground pseudo-labels are distilled from the VLP branch. As a result, the dual-branch complementarity is effectively fused to promote one strong alliance. Extensive experiments and ablation studies on THUMOS14 and ActivityNet1.2 reveal that our method significantly outperforms state-of-the-art methods",
-    "checked": false,
+    "checked": true,
     "id": "d3a5ece29a3ec968b1a784e1661d1aa96da878e9",
-    "semantic_title": "",
+    "semantic_title": "distilling vision-language pre-training to collaborate with weakly-supervised temporal action localization",
     "citation_count": 3
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Augmentation_Matters_A_Simple-Yet-Effective_Approach_to_Semi-Supervised_Semantic_Segmentation_CVPR_2023_paper.html": {
     "title": "Augmentation Matters: A Simple-Yet-Effective Approach to Semi-Supervised Semantic Segmentation",
     "volume": "main",
     "abstract": "Recent studies on semi-supervised semantic segmentation (SSS) have seen fast progress. Despite their promising performance, current state-of-the-art methods tend to increasingly complex designs at the cost of introducing more network components and additional training procedures. Differently, in this work, we follow a standard teacher-student framework and propose AugSeg, a simple and clean approach that focuses mainly on data perturbations to boost the SSS performance. We argue that various data augmentations should be adjusted to better adapt to the semi-supervised scenarios instead of directly applying these techniques from supervised learning. Specifically, we adopt a simplified intensity-based augmentation that selects a random number of data transformations with uniformly sampling distortion strengths from a continuous space. Based on the estimated confidence of the model on different unlabeled samples, we also randomly inject labelled information to augment the unlabeled samples in an adaptive manner. Without bells and whistles, our simple AugSeg can readily achieve new state-of-the-art performance on SSS benchmarks under different partition protocols",
-    "checked": false,
+    "checked": true,
     "id": "69e607d6d82438bbf424f6eea5ae43a95ced5a55",
-    "semantic_title": "",
-    "citation_count": 2
+    "semantic_title": "augmentation matters: a simple-yet-effective approach to semi-supervised semantic segmentation",
+    "citation_count": 3
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Luo_SIEDOB_Semantic_Image_Editing_by_Disentangling_Object_and_Background_CVPR_2023_paper.html": {
     "title": "SIEDOB: Semantic Image Editing by Disentangling Object and Background",
     "volume": "main",
     "abstract": "Semantic image editing provides users with a flexible tool to modify a given image guided by a corresponding segmentation map. In this task, the features of the foreground objects and the backgrounds are quite different. However, all previous methods handle backgrounds and objects as a whole using a monolithic model. Consequently, they remain limited in processing content-rich images and suffer from generating unrealistic objects and texture-inconsistent backgrounds. To address this issue, we propose a novel paradigm, Semantic Image Editing by Disentangling Object and Background (SIEDOB), the core idea of which is to explicitly leverages several heterogeneous subnetworks for objects and backgrounds. First, SIEDOB disassembles the edited input into background regions and instance-level objects. Then, we feed them into the dedicated generators. Finally, all synthesized parts are embedded in their original locations and utilize a fusion network to obtain a harmonized result. Moreover, to produce high-quality edited images, we propose some innovative designs, including Semantic-Aware Self-Propagation Module, Boundary-Anchored Patch Discriminator, and Style-Diversity Object Generator, and integrate them into SIEDOB. We conduct extensive experiments on Cityscapes and ADE20K-Room datasets and exhibit that our method remarkably outperforms the baselines, especially in synthesizing realistic and diverse objects and texture-consistent backgrounds",
-    "checked": false,
+    "checked": true,
     "id": "8f54576b02470a1d23d1e572137cb5388f1e58a1",
-    "semantic_title": "",
+    "semantic_title": "siedob: semantic image editing by disentangling object and background",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Pathiraja_Multiclass_Confidence_and_Localization_Calibration_for_Object_Detection_CVPR_2023_paper.html": {
     "title": "Multiclass Confidence and Localization Calibration for Object Detection",
     "volume": "main",
     "abstract": "Albeit achieving high predictive accuracy across many challenging computer vision problems, recent studies suggest that deep neural networks (DNNs) tend to make overconfident predictions, rendering them poorly calibrated. Most of the existing attempts for improving DNN calibration are limited to classification tasks and restricted to calibrating in-domain predictions. Surprisingly, very little to no attempts have been made in studying the calibration of object detection methods, which occupy a pivotal space in vision-based security-sensitive, and safety-critical applications. In this paper, we propose a new train-time technique for calibrating modern object detection methods. It is capable of jointly calibrating multiclass confidence and box localization by leveraging their predictive uncertainties. We perform extensive experiments on several in-domain and out-of-domain detection benchmarks. Results demonstrate that our proposed train-time calibration method consistently outperforms several baselines in reducing calibration error for both in-domain and out-of-domain predictions. Our code and models are available at https://github.com/bimsarapathiraja/MCCL",
-    "checked": false,
-    "id": "74f4ba7ece64f316533b2619ce16fde3fab68278",
-    "semantic_title": "",
+    "checked": true,
+    "id": "a6139b35623e43ffa7591fb7e561071d11f7d8e6",
+    "semantic_title": "multiclass confidence and localization calibration for object detection",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Moon_Query-Dependent_Video_Representation_for_Moment_Retrieval_and_Highlight_Detection_CVPR_2023_paper.html": {
     "title": "Query-Dependent Video Representation for Moment Retrieval and Highlight Detection",
     "volume": "main",
     "abstract": "Recently, video moment retrieval and highlight detection (MR/HD) are being spotlighted as the demand for video understanding is drastically increased. The key objective of MR/HD is to localize the moment and estimate clip-wise accordance level, i.e., saliency score, to the given text query. Although the recent transformer-based models brought some advances, we found that these methods do not fully exploit the information of a given query. For example, the relevance between text query and video contents is sometimes neglected when predicting the moment and its saliency. To tackle this issue, we introduce Query-Dependent DETR (QD-DETR), a detection transformer tailored for MR/HD. As we observe the insignificant role of a given query in transformer architectures, our encoding module starts with cross-attention layers to explicitly inject the context of text query into video representation. Then, to enhance the model's capability of exploiting the query information, we manipulate the video-query pairs to produce irrelevant pairs. Such negative (irrelevant) video-query pairs are trained to yield low saliency scores, which in turn, encourages the model to estimate precise accordance between query-video pairs. Lastly, we present an input-adaptive saliency predictor which adaptively defines the criterion of saliency scores for the given video-query pairs. Our extensive studies verify the importance of building the query-dependent representation for MR/HD. Specifically, QD-DETR outperforms state-of-the-art methods on QVHighlights, TVSum, and Charades-STA datasets. Codes are available at github.com/wjun0830/QD-DETR",
-    "checked": false,
+    "checked": true,
     "id": "06741a6fe27657aa06ef66f0ed106587712a815c",
-    "semantic_title": "",
-    "citation_count": 1
+    "semantic_title": "query-dependent video representation for moment retrieval and highlight detection",
+    "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Qin_Robust_3D_Shape_Classification_via_Non-Local_Graph_Attention_Network_CVPR_2023_paper.html": {
     "title": "Robust 3D Shape Classification via Non-Local Graph Attention Network",
     "volume": "main",
     "abstract": "We introduce a non-local graph attention network (NLGAT), which generates a novel global descriptor through two sub-networks for robust 3D shape classification. In the first sub-network, we capture the global relationships between points (i.e., point-point features) by designing a global relationship network (GRN). In the second sub-network, we enhance the local features with a geometric shape attention map obtained from a global structure network (GSN). To keep rotation invariant and extract more information from sparse point clouds, all sub-networks use the Gram matrices with different dimensions as input for working with robust classification. Additionally, GRN effectively preserves the low-frequency features and improves the classification results. Experimental results on various datasets exhibit that the classification effect of the NLGAT model is better than other state-of-the-art models. Especially, in the case of sparse point clouds (64 points) with noise under arbitrary SO(3) rotation, the classification result (85.4%) of NLGAT is improved by 39.4% compared with the best development of other methods",
     "checked": false,
-    "id": "8f21cf3c438cb2654a5eb91895b0191118350376",
-    "semantic_title": "",
+    "id": "c4fecb185bcd992db47bb2deea0ff98376411d22",
+    "semantic_title": "supplementary materials for robust 3d shape classiﬁcation via non-local graph attention network",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Boosting_Verified_Training_for_Robust_Image_Classifications_via_Abstraction_CVPR_2023_paper.html": {
     "title": "Boosting Verified Training for Robust Image Classifications via Abstraction",
     "volume": "main",
     "abstract": "This paper proposes a novel, abstraction-based, certified training method for robust image classifiers. Via abstraction, all perturbed images are mapped into intervals before feeding into neural networks for training. By training on intervals, all the perturbed images that are mapped to the same interval are classified as the same label, rendering the variance of training sets to be small and the loss landscape of the models to be smooth. Consequently, our approach significantly improves the robustness of trained models. For the abstraction, our training method also enables a sound and complete black-box verification approach, which is orthogonal and scalable to arbitrary types of neural networks regardless of their sizes and architectures. We evaluate our method on a wide range of benchmarks in different scales. The experimental results show that our method outperforms state of the art by (i) reducing the verified errors of trained models up to 95.64%; (ii) totally achieving up to 602.50x speedup; and (iii) scaling up to larger models with up to 138 million trainable parameters. The demo is available at https://github.com/zhangzhaodi233/ABSCERT.git",
-    "checked": false,
+    "checked": true,
     "id": "db8540ecfbbedced15fb9ca2b4042183a84b3cc8",
-    "semantic_title": "",
+    "semantic_title": "boosting verified training for robust image classifications via abstraction",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Ding_Exploring_Structured_Semantic_Prior_for_Multi_Label_Recognition_With_Incomplete_CVPR_2023_paper.html": {
     "title": "Exploring Structured Semantic Prior for Multi Label Recognition With Incomplete Labels",
     "volume": "main",
     "abstract": "Multi-label recognition (MLR) with incomplete labels is very challenging. Recent works strive to explore the image-to-label correspondence in the vision-language model, i.e., CLIP, to compensate for insufficient annotations. In spite of promising performance, they generally overlook the valuable prior about the label-to-label correspondence. In this paper, we advocate remedying the deficiency of label supervision for the MLR with incomplete labels by deriving a structured semantic prior about the label-to-label correspondence via a semantic prior prompter. We then present a novel Semantic Correspondence Prompt Network (SCPNet), which can thoroughly explore the structured semantic prior. A Prior-Enhanced Self-Supervised Learning method is further introduced to enhance the use of the prior. Comprehensive experiments and analyses on several widely used benchmark datasets show that our method significantly outperforms existing methods on all datasets, well demonstrating the effectiveness and the superiority of our method. Our code will be available at https://github.com/jameslahm/SCPNet",
-    "checked": false,
+    "checked": true,
     "id": "2bf1b31ea96d69ca4836a64a09443438083a99ed",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "exploring structured semantic prior for multi label recognition with incomplete labels",
+    "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Instance-Specific_and_Model-Adaptive_Supervision_for_Semi-Supervised_Semantic_Segmentation_CVPR_2023_paper.html": {
     "title": "Instance-Specific and Model-Adaptive Supervision for Semi-Supervised Semantic Segmentation",
     "volume": "main",
     "abstract": "Recently, semi-supervised semantic segmentation has achieved promising performance with a small fraction of labeled data. However, most existing studies treat all unlabeled data equally and barely consider the differences and training difficulties among unlabeled instances. Differentiating unlabeled instances can promote instance-specific supervision to adapt to the model's evolution dynamically. In this paper, we emphasize the cruciality of instance differences and propose an instance-specific and model-adaptive supervision for semi-supervised semantic segmentation, named iMAS. Relying on the model's performance, iMAS employs a class-weighted symmetric intersection-over-union to evaluate quantitative hardness of each unlabeled instance and supervises the training on unlabeled data in a model-adaptive manner. Specifically, iMAS learns from unlabeled instances progressively by weighing their corresponding consistency losses based on the evaluated hardness. Besides, iMAS dynamically adjusts the augmentation for each instance such that the distortion degree of augmented instances is adapted to the model's generalization capability across the training course. Not integrating additional losses and training procedures, iMAS can obtain remarkable performance gains against current state-of-the-art approaches on segmentation benchmarks under different semi-supervised partition protocols",
-    "checked": false,
+    "checked": true,
     "id": "6dc692fb1b028105094bb39fb347e777002bde0c",
-    "semantic_title": "",
+    "semantic_title": "instance-specific and model-adaptive supervision for semi-supervised semantic segmentation",
     "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Ilett_3D_Shape_Reconstruction_of_Semi-Transparent_Worms_CVPR_2023_paper.html": {
     "title": "3D Shape Reconstruction of Semi-Transparent Worms",
     "volume": "main",
     "abstract": "3D shape reconstruction typically requires identifying object features or textures in multiple images of a subject. This approach is not viable when the subject is semi-transparent and moving in and out of focus. Here we overcome these challenges by rendering a candidate shape with adaptive blurring and transparency for comparison with the images. We use the microscopic nematode Caenorhabditis elegans as a case study as it freely explores a 3D complex fluid with constantly changing optical properties. We model the slender worm as a 3D curve using an intrinsic parametrisation that naturally admits biologically-informed constraints and regularisation. To account for the changing optics we develop a novel differentiable renderer to construct images from 2D projections and compare against raw images to generate a pixel-wise error to jointly update the curve, camera and renderer parameters using gradient descent. The method is robust to interference such as bubbles and dirt trapped in the fluid, stays consistent through complex sequences of postures, recovers reliable estimates from blurry images and provides a significant improvement on previous attempts to track C. elegans in 3D. Our results demonstrate the potential of direct approaches to shape estimation in complex physical environments in the absence of ground-truth data",
-    "checked": false,
+    "checked": true,
     "id": "1573dff03dc85cda2f056828ee105cb94c65a2f2",
-    "semantic_title": "",
+    "semantic_title": "3d shape reconstruction of semi-transparent worms",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Ying_Mapping_Degeneration_Meets_Label_Evolution_Learning_Infrared_Small_Target_Detection_CVPR_2023_paper.html": {
     "title": "Mapping Degeneration Meets Label Evolution: Learning Infrared Small Target Detection With Single Point Supervision",
     "volume": "main",
     "abstract": "Training a convolutional neural network (CNN) to detect infrared small targets in a fully supervised manner has gained remarkable research interests in recent years, but is highly labor expensive since a large number of per-pixel annotations are required. To handle this problem, in this paper, we make the first attempt to achieve infrared small target detection with point-level supervision. Interestingly, during the training phase supervised by point labels, we discover that CNNs first learn to segment a cluster of pixels near the targets, and then gradually converge to predict groundtruth point labels. Motivated by this \"mapping degeneration\" phenomenon, we propose a label evolution framework named label evolution with single point supervision (LESPS) to progressively expand the point label by leveraging the intermediate predictions of CNNs. In this way, the network predictions can finally approximate the updated pseudo labels, and a pixel-level target mask can be obtained to train CNNs in an end-to-end manner. We conduct extensive experiments with insightful visualizations to validate the effectiveness of our method. Experimental results show that CNNs equipped with LESPS can well recover the target masks from corresponding point labels, and can achieve over 70% and 95% of their fully supervised performance in terms of pixel-level intersection over union (IoU) and object-level probability of detection (Pd), respectively. Code is available at https://github.com/XinyiYing/LESPS",
-    "checked": false,
+    "checked": true,
     "id": "da6fe00718aeba584b6d0b3cecea3ed17000ab8d",
-    "semantic_title": "",
+    "semantic_title": "mapping degeneration meets label evolution: learning infrared small target detection with single point supervision",
     "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Kotwal_Swept-Angle_Synthetic_Wavelength_Interferometry_CVPR_2023_paper.html": {
     "title": "Swept-Angle Synthetic Wavelength Interferometry",
     "volume": "main",
     "abstract": "We present a new imaging technique, swept-angle synthetic wavelength interferometry, for full-field micron-scale 3D sensing. As in conventional synthetic wavelength interferometry, our technique uses light consisting of two narrowly-separated optical wavelengths, resulting in per-pixel interferometric measurements whose phase encodes scene depth. Our technique additionally uses a new type of light source that, by emulating spatially-incoherent illumination, makes interferometric measurements insensitive to aberrations and (sub)surface scattering, effects that corrupt phase measurements. The resulting technique combines the robustness to such corruptions of scanning interferometric setups, with the speed of full-field interferometric setups. Overall, our technique can recover full-frame depth at a lateral and axial resolution of 5 microns, at frame rates of 5 Hz, even under strong ambient light. We build an experimental prototype, and use it to demonstrate these capabilities by scanning a variety of objects, including objects representative of applications in inspection and fabrication, and objects that contain challenging light scattering effects",
-    "checked": false,
+    "checked": true,
     "id": "25af7c70183ec60fb99f7986f46158648f1174b7",
-    "semantic_title": "",
+    "semantic_title": "swept-angle synthetic wavelength interferometry",
     "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Liu_Delving_Into_Shape-Aware_Zero-Shot_Semantic_Segmentation_CVPR_2023_paper.html": {
     "title": "Delving Into Shape-Aware Zero-Shot Semantic Segmentation",
     "volume": "main",
     "abstract": "Thanks to the impressive progress of large-scale vision-language pretraining, recent recognition models can classify arbitrary objects in a zero-shot and open-set manner, with a surprisingly high accuracy. However, translating this success to semantic segmentation is not trivial, because this dense prediction task requires not only accurate semantic understanding but also fine shape delineation and existing vision-language models are trained with image-level language descriptions. To bridge this gap, we pursue shape-aware zero-shot semantic segmentation in this study. Inspired by classical spectral methods in the image segmentation literature, we propose to leverage the eigen vectors of Laplacian matrices constructed with self-supervised pixel-wise features to promote shape-awareness. Despite that this simple and effective technique does not make use of the masks of seen classes at all, we demonstrate that it out-performs a state-of-the-art shape-aware formulation that aligns ground truth and predicted edges during training. We also delve into the performance gains achieved on different datasets using different backbones and draw several interesting and conclusive observations: the benefits of promoting shape-awareness highly relates to mask compactness and language embedding locality. Finally, our method sets new state-of-the-art performance for zero-shot semantic segmentation on both Pascal and COCO, with significant margins. Code and models will be accessed at https://github.com/Liuxinyv/SAZS",
-    "checked": false,
+    "checked": true,
     "id": "25d0d032c76b9c09613faa35e25f2997aac261a5",
-    "semantic_title": "",
-    "citation_count": 1
+    "semantic_title": "delving into shape-aware zero-shot semantic segmentation",
+    "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Shang_Post-Training_Quantization_on_Diffusion_Models_CVPR_2023_paper.html": {
     "title": "Post-Training Quantization on Diffusion Models",
     "volume": "main",
     "abstract": "Denoising diffusion (score-based) generative models have recently achieved significant accomplishments in generating realistic and diverse data. These approaches define a forward diffusion process for transforming data into noise and a backward denoising process for sampling data from noise. Unfortunately, the generation process of current denoising diffusion models is notoriously slow due to the lengthy iterative noise estimations, which rely on cumbersome neural networks. It prevents the diffusion models from being widely deployed, especially on edge devices. Previous works accelerate the generation process of diffusion model (DM) via finding shorter yet effective sampling trajectories. However, they overlook the cost of noise estimation with a heavy network in every iteration. In this work, we accelerate generation from the perspective of compressing the noise estimation network. Due to the difficulty of retraining DMs, we exclude mainstream training-aware compression paradigms and introduce post-training quantization (PTQ) into DM acceleration. However, the output distributions of noise estimation networks change with time-step, making previous PTQ methods fail in DMs since they are designed for single-time step scenarios. To devise a DM-specific PTQ method, we explore PTQ on DM in three aspects: quantized operations, calibration dataset, and calibration metric. We summarize and use several observations derived from all-inclusive investigations to formulate our method, which especially targets the unique multi-time-step structure of DMs. Experimentally, our method can directly quantize full-precision DMs into 8-bit models while maintaining or even improving their performance in a training-free manner. Importantly, our method can serve as a plug-and-play module on other fast-sampling methods, such as DDIM",
-    "checked": false,
+    "checked": true,
     "id": "d5e0ee741e953d857263f70787449e4a57fc1c8d",
-    "semantic_title": "",
+    "semantic_title": "post-training quantization on diffusion models",
     "citation_count": 6
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Nunes_Adaptive_Global_Decay_Process_for_Event_Cameras_CVPR_2023_paper.html": {
     "title": "Adaptive Global Decay Process for Event Cameras",
     "volume": "main",
     "abstract": "In virtually all event-based vision problems, there is the need to select the most recent events, which are assumed to carry the most relevant information content. To achieve this, at least one of three main strategies is applied, namely: 1) constant temporal decay or fixed time window, 2) constant number of events, and 3) flow-based lifetime of events. However, these strategies suffer from at least one major limitation each. We instead propose a novel decay process for event cameras that adapts to the global scene dynamics and whose latency is in the order of nanoseconds. The main idea is to construct an adaptive quantity that encodes the global scene dynamics, denoted by event activity. The proposed method is evaluated in several event-based vision problems and datasets, consistently improving the corresponding baseline methods' performance. We thus believe it can have a significant widespread impact on event-based research. Code available: https://github.com/neuromorphic-paris/event_batch",
-    "checked": false,
-    "id": "02fd24881fe28838c3a791a4f8f23d62fe1ed27b",
-    "semantic_title": "",
+    "checked": true,
+    "id": "cf7b53c4341952bab76656cb0e6bd7130460124e",
+    "semantic_title": "adaptive global decay process for event cameras",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Yin_Multi-Space_Neural_Radiance_Fields_CVPR_2023_paper.html": {
     "title": "Multi-Space Neural Radiance Fields",
     "volume": "main",
     "abstract": "Neural Radiance Fields (NeRF) and its variants have reached state-of-the-art performance in many novel-view-synthesis-related tasks. However, current NeRF-based methods still suffer from the existence of reflective objects, often resulting in blurry or distorted rendering. Instead of calculating a single radiance field, we propose a multispace neural radiance field (MS-NeRF) that represents the scene using a group of feature fields in parallel sub-spaces, which leads to a better understanding of the neural network toward the existence of reflective and refractive objects. Our multi-space scheme works as an enhancement to existing NeRF methods, with only small computational overheads needed for training and inferring the extra-space outputs. We demonstrate the superiority and compatibility of our approach using three representative NeRF-based models, i.e., NeRF, Mip-NeRF, and Mip-NeRF 360. Comparisons are performed on a novelly constructed dataset consisting of 25 synthetic scenes and 7 real captured scenes with complex reflection and refraction, all having 360-degree viewpoints. Extensive experiments show that our approach significantly outperforms the existing single-space NeRF methods for rendering high-quality scenes concerned with complex light paths through mirror-like objects",
-    "checked": false,
+    "checked": true,
     "id": "77245db0365edbeb7d5902ebc3e67cb8151ed1b0",
-    "semantic_title": "",
+    "semantic_title": "multi-space neural radiance fields",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Bucarelli_Leveraging_Inter-Rater_Agreement_for_Classification_in_the_Presence_of_Noisy_CVPR_2023_paper.html": {
     "title": "Leveraging Inter-Rater Agreement for Classification in the Presence of Noisy Labels",
     "volume": "main",
     "abstract": "In practical settings, classification datasets are obtained through a labelling process that is usually done by humans. Labels can be noisy as they are obtained by aggregating the different individual labels assigned to the same sample by multiple, and possibly disagreeing, annotators. The inter-rater agreement on these datasets can be measured while the underlying noise distribution to which the labels are subject is assumed to be unknown. In this work, we: (i) show how to leverage the inter-annotator statistics to estimate the noise distribution to which labels are subject; (ii) introduce methods that use the estimate of the noise distribution to learn from the noisy dataset; and (iii) establish generalization bounds in the empirical risk minimization framework that depend on the estimated quantities. We conclude the paper by providing experiments that illustrate our findings",
-    "checked": false,
+    "checked": true,
     "id": "49e5a11759a6735a9a8dea819fb4b5f04c7928b8",
-    "semantic_title": "",
+    "semantic_title": "leveraging inter-rater agreement for classification in the presence of noisy labels",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Liu_Bitstream-Corrupted_JPEG_Images_Are_Restorable_Two-Stage_Compensation_and_Alignment_Framework_CVPR_2023_paper.html": {
     "title": "Bitstream-Corrupted JPEG Images Are Restorable: Two-Stage Compensation and Alignment Framework for Image Restoration",
     "volume": "main",
     "abstract": "In this paper, we study a real-world JPEG image restoration problem with bit errors on the encrypted bitstream. The bit errors bring unpredictable color casts and block shifts on decoded image contents, which cannot be trivially resolved by existing image restoration methods mainly relying on pre-defined degradation models in the pixel domain. To address these challenges, we propose a robust JPEG decoder, followed by a two-stage compensation and alignment framework to restore bitstream-corrupted JPEG images. Specifically, the robust JPEG decoder adopts an error-resilient mechanism to decode the corrupted JPEG bitstream. The two-stage framework is composed of the self-compensation and alignment (SCA) stage and the guided-compensation and alignment (GCA) stage. The SCA adaptively performs block-wise image color compensation and alignment based on the estimated color and block offsets via image content similarity. The GCA leverages the extracted low-resolution thumbnail from the JPEG header to guide full-resolution pixel-wise image restoration in a coarse-to-fine manner. It is achieved by a coarse-guided pix2pix network and a refine-guided bi-directional Laplacian pyramid fusion network. We conduct experiments on three benchmarks with varying degrees of bit error rates. Experimental results and ablation studies demonstrate the superiority of our proposed method. The code will be released at https://github.com/wenyang001/Two-ACIR",
-    "checked": false,
+    "checked": true,
     "id": "9e501f9547656ce8fe94af17c7ecfe4b9035b082",
-    "semantic_title": "",
+    "semantic_title": "bitstream-corrupted jpeg images are restorable: two-stage compensation and alignment framework for image restoration",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_Analyzing_Physical_Impacts_Using_Transient_Surface_Wave_Imaging_CVPR_2023_paper.html": {
     "title": "Analyzing Physical Impacts Using Transient Surface Wave Imaging",
     "volume": "main",
     "abstract": "The subtle vibrations on an object's surface contain information about the object's physical properties and its interaction with the environment. Prior works imaged surface vibration to recover the object's material properties via modal analysis, which discards the transient vibrations propagating immediately after the object is disturbed. Conversely, prior works that captured transient vibrations focused on recovering localized signals (e.g., recording nearby sound sources), neglecting the spatiotemporal relationship between vibrations at different object points. In this paper, we extract information from the transient surface vibrations simultaneously measured at a sparse set of object points using the dual-shutter camera described by Sheinin[31]. We model the geometry of an elastic wave generated shortly after an object's surface is disturbed (e.g., a knock or a footstep), and use the model to localize the disturbance source for various materials (e.g., wood, plastic, tile). We also show that transient object vibrations contain additional cues about the impact force and the impacting object's material properties. We demonstrate our approach in applications like localizing the strikes of a ping-pong ball on a table mid-play and recovering the footsteps' locations by imaging the floor vibrations they create",
-    "checked": false,
-    "id": "86e3b5818171e96eec9e9806347ca32ba1898a1f",
-    "semantic_title": "",
+    "checked": true,
+    "id": "1bf89e8e50a02ca29d9f6bff23df0a00bf5c0de5",
+    "semantic_title": "analyzing physical impacts using transient surface wave imaging",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Yu_X-Pruner_eXplainable_Pruning_for_Vision_Transformers_CVPR_2023_paper.html": {
     "title": "X-Pruner: eXplainable Pruning for Vision Transformers",
     "volume": "main",
     "abstract": "Recently vision transformer models have become prominent models for a range of tasks. These models, however, usually suffer from intensive computational costs and heavy memory requirements, making them impractical for deployment on edge platforms. Recent studies have proposed to prune transformers in an unexplainable manner, which overlook the relationship between internal units of the model and the target class, thereby leading to inferior performance. To alleviate this problem, we propose a novel explainable pruning framework dubbed X-Pruner, which is designed by considering the explainability of the pruning criterion. Specifically, to measure each prunable unit's contribution to predicting each target class, a novel explainability-aware mask is proposed and learned in an end-to-end manner. Then, to preserve the most informative units and learn the layer-wise pruning rate, we adaptively search the layer-wise threshold that differentiates between unpruned and pruned units based on their explainability-aware mask values. To verify and evaluate our method, we apply the X-Pruner on representative transformer models including the DeiT and Swin Transformer. Comprehensive simulation results demonstrate that the proposed X-Pruner outperforms the state-of-the-art black-box methods with significantly reduced computational costs and slight performance degradation",
-    "checked": false,
-    "id": "49546a53a14a7d091310c8bd0142d27accd3b35c",
-    "semantic_title": "",
+    "checked": true,
+    "id": "e60b6836b45ad0ae02a5fa663c8c31119f0c0a94",
+    "semantic_title": "x-pruner: explainable pruning for vision transformers",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Li_Hard_Sample_Matters_a_Lot_in_Zero-Shot_Quantization_CVPR_2023_paper.html": {
     "title": "Hard Sample Matters a Lot in Zero-Shot Quantization",
     "volume": "main",
     "abstract": "Zero-shot quantization (ZSQ) is promising for compressing and accelerating deep neural networks when the data for training full-precision models are inaccessible. In ZSQ, network quantization is performed using synthetic samples, thus, the performance of quantized models depends heavily on the quality of synthetic samples. Nonetheless, we find that the synthetic samples constructed in existing ZSQ methods can be easily fitted by models. Accordingly, quantized models obtained by these methods suffer from significant performance degradation on hard samples. To address this issue, we propose HArd sample Synthesizing and Training (HAST). Specifically, HAST pays more attention to hard samples when synthesizing samples and makes synthetic samples hard to fit when training quantized models. HAST aligns features extracted by full-precision and quantized models to ensure the similarity between features extracted by these two models. Extensive experiments show that HAST significantly outperforms existing ZSQ methods, achieving performance comparable to models that are quantized with real data",
-    "checked": false,
+    "checked": true,
     "id": "a3b05082ff206c40cc9a9a843556f9a70281fbb4",
-    "semantic_title": "",
+    "semantic_title": "hard sample matters a lot in zero-shot quantization",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Xu_Meta_Compositional_Referring_Expression_Segmentation_CVPR_2023_paper.html": {
     "title": "Meta Compositional Referring Expression Segmentation",
     "volume": "main",
     "abstract": "Referring expression segmentation aims to segment an object described by a language expression from an image. Despite the recent progress on this task, existing models tackling this task may not be able to fully capture semantics and visual representations of individual concepts, which limits their generalization capability, especially when handling novel compositions of learned concepts. In this work, through the lens of meta learning, we propose a Meta Compositional Referring Expression Segmentation (MCRES) framework to enhance model compositional generalization performance. Specifically, to handle various levels of novel compositions, our framework first uses training data to construct a virtual training set and multiple virtual testing sets, where data samples in each virtual testing set contain a level of novel compositions w.r.t. the support set. Then, following a novel meta optimization scheme to optimize the model to obtain good testing performance on the virtual testing sets after training on the virtual training set, our framework can effectively drive the model to better capture semantics and visual representations of individual concepts, and thus obtain robust generalization performance even when handling novel compositions. Extensive experiments on three benchmark datasets demonstrate the effectiveness of our framework",
-    "checked": false,
+    "checked": true,
     "id": "03d07b12408a61d701944b6e3180ab4cc2a18b83",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "meta compositional referring expression segmentation",
+    "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Chan_Histopathology_Whole_Slide_Image_Analysis_With_Heterogeneous_Graph_Representation_Learning_CVPR_2023_paper.html": {
     "title": "Histopathology Whole Slide Image Analysis With Heterogeneous Graph Representation Learning",
     "volume": "main",
     "abstract": "Graph-based methods have been extensively applied to whole slide histopathology image (WSI) analysis due to the advantage of modeling the spatial relationships among different entities. However, most of the existing methods focus on modeling WSIs with homogeneous graphs (e.g., with homogeneous node type). Despite their successes, these works are incapable of mining the complex structural relations between biological entities (e.g., the diverse interaction among different cell types) in the WSI. We propose a novel heterogeneous graph-based framework to leverage the inter-relationships among different types of nuclei for WSI analysis. Specifically, we formulate the WSI as a heterogeneous graph with \"nucleus-type\" attribute to each node and a semantic similarity attribute to each edge. We then present a new heterogeneous-graph edge attribute transformer (HEAT) to take advantage of the edge and node heterogeneity during massage aggregating. Further, we design a new pseudo-label-based semantic-consistent pooling mechanism to obtain graph-level features, which can mitigate the over-parameterization issue of conventional cluster-based pooling. Additionally, observing the limitations of existing association-based localization methods, we propose a causal-driven approach attributing the contribution of each node to improve the interpretability of our framework. Extensive experiments on three public TCGA benchmark datasets demonstrate that our framework outperforms the state-of-the-art methods with considerable margins on various tasks. Our codes are available at https://github.com/HKU-MedAI/WSI-HGNN",
-    "checked": false,
-    "id": "b1ef7a10061c97c4771fc7da0ff1915dbeec06e2",
-    "semantic_title": "",
+    "checked": true,
+    "id": "2270ea2a710f37fcd07a0014357238f71622176b",
+    "semantic_title": "histopathology whole slide image analysis with heterogeneous graph representation learning",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Sui_ScanDMM_A_Deep_Markov_Model_of_Scanpath_Prediction_for_360deg_CVPR_2023_paper.html": {
     "title": "ScanDMM: A Deep Markov Model of Scanpath Prediction for 360deg Images",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Scanpath prediction for 360deg images aims to produce dynamic gaze behaviors based on the human visual perception mechanism. Most existing scanpath prediction methods for 360deg images do not give a complete treatment of the time-dependency when predicting human scanpath, resulting in inferior performance and poor generalizability. In this paper, we present a scanpath prediction method for 360deg images by designing a novel Deep Markov Model (DMM) architecture, namely ScanDMM. We propose a semantics-guided transition function to learn the nonlinear dynamics of time-dependent attentional landscape. Moreover, a state initialization strategy is proposed by considering the starting point of viewing, enabling the model to learn the dynamics with the correct \"launcher\". We further demonstrate that our model achieves state-of-the-art performance on four 360deg image databases, and exhibit its generalizability by presenting two applications of applying scanpath prediction models to other visual tasks - saliency detection and image quality assessment, expecting to provide profound insights into these fields",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -552,90 +552,90 @@
     "title": "Towards All-in-One Pre-Training via Maximizing Multi-Modal Mutual Information",
     "volume": "main",
     "abstract": "To effectively exploit the potential of large-scale models, various pre-training strategies supported by massive data from different sources are proposed, including supervised pre-training, weakly-supervised pre-training, and self-supervised pre-training. It has been proved that combining multiple pre-training strategies and data from various modalities/sources can greatly boost the training of large-scale models. However, current works adopt a multi-stage pre-training system, where the complex pipeline may increase the uncertainty and instability of the pre-training. It is thus desirable that these strategies can be integrated in a single-stage manner. In this paper, we first propose a general multi-modal mutual information formula as a unified optimization target and demonstrate that all mainstream approaches are special cases of our framework. Under this unified perspective, we propose an all-in-one single-stage pre-training approach, named Maximizing Multi-modal Mutual Information Pre-training (M3I Pre-training). Our approach achieves better performance than previous pre-training methods on various vision benchmarks, including ImageNet classification, COCO object detection, LVIS long-tailed object detection, and ADE20k semantic segmentation. Notably, we successfully pre-train a billion-level parameter image backbone and achieve state-of-the-art performance on various benchmarks under public data setting. Code shall be released at https://github.com/OpenGVLab/M3I-Pretraining",
-    "checked": false,
+    "checked": true,
     "id": "ee96ec926f06ff2f3ce3d131cffcbfe63af39f0c",
-    "semantic_title": "",
-    "citation_count": 8
+    "semantic_title": "towards all-in-one pre-training via maximizing multi-modal mutual information",
+    "citation_count": 9
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wu_Aligning_Bag_of_Regions_for_Open-Vocabulary_Object_Detection_CVPR_2023_paper.html": {
     "title": "Aligning Bag of Regions for Open-Vocabulary Object Detection",
     "volume": "main",
     "abstract": "Pre-trained vision-language models (VLMs) learn to align vision and language representations on large-scale datasets, where each image-text pair usually contains a bag of semantic concepts. However, existing open-vocabulary object detectors only align region embeddings individually with the corresponding features extracted from the VLMs. Such a design leaves the compositional structure of semantic concepts in a scene under-exploited, although the structure may be implicitly learned by the VLMs. In this work, we propose to align the embedding of bag of regions beyond individual regions. The proposed method groups contextually interrelated regions as a bag. The embeddings of regions in a bag are treated as embeddings of words in a sentence, and they are sent to the text encoder of a VLM to obtain the bag-of-regions embedding, which is learned to be aligned to the corresponding features extracted by a frozen VLM. Applied to the commonly used Faster R-CNN, our approach surpasses the previous best results by 4.6 box AP 50 and 2.8 mask AP on novel categories of open-vocabulary COCO and LVIS benchmarks, respectively. Code and models are available at https://github.com/wusize/ovdet",
-    "checked": false,
+    "checked": true,
     "id": "bce29cc829fab288c41ae5678e1bb5b95bf218d4",
-    "semantic_title": "",
-    "citation_count": 5
+    "semantic_title": "aligning bag of regions for open-vocabulary object detection",
+    "citation_count": 6
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Barroso-Laguna_Two-View_Geometry_Scoring_Without_Correspondences_CVPR_2023_paper.html": {
     "title": "Two-View Geometry Scoring Without Correspondences",
     "volume": "main",
     "abstract": "Camera pose estimation for two-view geometry traditionally relies on RANSAC. Normally, a multitude of image correspondences leads to a pool of proposed hypotheses, which are then scored to find a winning model. The inlier count is generally regarded as a reliable indicator of \"consensus\". We examine this scoring heuristic, and find that it favors disappointing models under certain circumstances. As a remedy, we propose the Fundamental Scoring Network (FSNet), which infers a score for a pair of overlapping images and any proposed fundamental matrix. It does not rely on sparse correspondences, but rather embodies a two-view geometry model through an epipolar attention mechanism that predicts the pose error of the two images. FSNet can be incorporated into traditional RANSAC loops. We evaluate FSNet on fundamental and essential matrix estimation on indoor and outdoor datasets, and establish that FSNet can successfully identify good poses for pairs of images with few or unreliable correspondences. Besides, we show that naively combining FSNet with MAGSAC++ scoring approach achieves state of the art results",
-    "checked": false,
-    "id": "784b1525cfd385aec7ff4522f06f2bbfe31bece2",
-    "semantic_title": "",
+    "checked": true,
+    "id": "2619c8ace3f481b1661e695e4494ad81cf9d7436",
+    "semantic_title": "two-view geometry scoring without correspondences",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Ma_Annealing-Based_Label-Transfer_Learning_for_Open_World_Object_Detection_CVPR_2023_paper.html": {
     "title": "Annealing-Based Label-Transfer Learning for Open World Object Detection",
     "volume": "main",
     "abstract": "Open world object detection (OWOD) has attracted extensive attention due to its practicability in the real world. Previous OWOD works manually designed unknown-discover strategies to select unknown proposals from the background, suffering from uncertainties without appropriate priors. In this paper, we claim the learning of object detection could be seen as an object-level feature-entanglement process, where unknown traits are propagated to the known proposals through convolutional operations and could be distilled to benefit unknown recognition without manual selection. Therefore, we propose a simple yet effective Annealing-based Label-Transfer framework, which sufficiently explores the known proposals to alleviate the uncertainties. Specifically, a Label-Transfer Learning paradigm is introduced to decouple the known and unknown features, while a Sawtooth Annealing Scheduling strategy is further employed to rebuild the decision boundaries of the known and unknown classes, thus promoting both known and unknown recognition. Moreover, previous OWOD works neglected the trade-off of known and unknown performance, and we thus introduce a metric called Equilibrium Index to comprehensively evaluate the effectiveness of the OWOD models. To the best of our knowledge, this is the first OWOD work without manual unknown selection. Extensive experiments conducted on the common-used benchmark validate that our model achieves superior detection performance (200% unknown mAP improvement with the even higher known detection performance) compared to other state-of-the-art methods. Our code is available at https://github.com/DIG-Beihang/ALLOW.git",
-    "checked": false,
-    "id": "ee301715607f618d22f21cb51c2c63ca85a4340c",
-    "semantic_title": "",
-    "citation_count": 5
+    "checked": true,
+    "id": "5e44774b2143152b0f5021a700a1c746314bee44",
+    "semantic_title": "annealing-based label-transfer learning for open world object detection",
+    "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Continual_Semantic_Segmentation_With_Automatic_Memory_Sample_Selection_CVPR_2023_paper.html": {
     "title": "Continual Semantic Segmentation With Automatic Memory Sample Selection",
     "volume": "main",
     "abstract": "Continual Semantic Segmentation (CSS) extends static semantic segmentation by incrementally introducing new classes for training. To alleviate the catastrophic forgetting issue in CSS, a memory buffer that stores a small number of samples from the previous classes is constructed for replay. However, existing methods select the memory samples either randomly or based on a single-factor-driven hand-crafted strategy, which has no guarantee to be optimal. In this work, we propose a novel memory sample selection mechanism that selects informative samples for effective replay in a fully automatic way by considering comprehensive factors including sample diversity and class performance. Our mechanism regards the selection operation as a decision-making process and learns an optimal selection policy that directly maximizes the validation performance on a reward set. To facilitate the selection decision, we design a novel state representation and a dual-stage action space. Our extensive experiments on Pascal-VOC 2012 and ADE 20K datasets demonstrate the effectiveness of our approach with state-of-the-art (SOTA) performance achieved, outperforming the second-place one by 12.54% for the 6-stage setting on Pascal-VOC 2012",
-    "checked": false,
+    "checked": true,
     "id": "3bb5b2b342f9ce6df10691054df415ddb0babea4",
-    "semantic_title": "",
-    "citation_count": 2
+    "semantic_title": "continual semantic segmentation with automatic memory sample selection",
+    "citation_count": 5
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Demirel_Meta-Tuning_Loss_Functions_and_Data_Augmentation_for_Few-Shot_Object_Detection_CVPR_2023_paper.html": {
     "title": "Meta-Tuning Loss Functions and Data Augmentation for Few-Shot Object Detection",
     "volume": "main",
     "abstract": "Few-shot object detection, the problem of modelling novel object detection categories with few training instances, is an emerging topic in the area of few-shot learning and object detection. Contemporary techniques can be divided into two groups: fine-tuning based and meta-learning based approaches. While meta-learning approaches aim to learn dedicated meta-models for mapping samples to novel class models, fine-tuning approaches tackle few-shot detection in a simpler manner, by adapting the detection model to novel classes through gradient based optimization. Despite their simplicity, fine-tuning based approaches typically yield competitive detection results. Based on this observation, we focus on the role of loss functions and augmentations as the force driving the fine-tuning process, and propose to tune their dynamics through meta-learning principles. The proposed training scheme, therefore, allows learning inductive biases that can boost few-shot detection, while keeping the advantages of fine-tuning based approaches. In addition, the proposed approach yields interpretable loss functions, as opposed to highly parametric and complex few-shot meta-models. The experimental results highlight the merits of the proposed scheme, with significant improvements over the strong fine-tuning based few-shot detection baselines on benchmark Pascal VOC and MS-COCO datasets, in terms of both standard and generalized few-shot performance metrics",
-    "checked": false,
+    "checked": true,
     "id": "19cf89caa9254bddad7503c76d946438751aefd5",
-    "semantic_title": "",
+    "semantic_title": "meta-tuning loss functions and data augmentation for few-shot object detection",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Liao_A_Light_Weight_Model_for_Active_Speaker_Detection_CVPR_2023_paper.html": {
     "title": "A Light Weight Model for Active Speaker Detection",
     "volume": "main",
     "abstract": "Active speaker detection is a challenging task in audio-visual scenarios, with the aim to detect who is speaking in one or more speaker scenarios. This task has received considerable attention because it is crucial in many applications. Existing studies have attempted to improve the performance by inputting multiple candidate information and designing complex models. Although these methods have achieved excellent performance, their high memory and computational power consumption render their application to resource-limited scenarios difficult. Therefore, in this study, a lightweight active speaker detection architecture is constructed by reducing the number of input candidates, splitting 2D and 3D convolutions for audio-visual feature extraction, and applying gated recurrent units with low computational complexity for cross-modal modeling. Experimental results on the AVA-ActiveSpeaker dataset reveal that the proposed framework achieves competitive mAP performance (94.1% vs. 94.2%), while the resource costs are significantly lower than the state-of-the-art method, particularly in model parameters (1.0M vs. 22.5M, approximately 23x) and FLOPs (0.6G vs. 2.6G, approximately 4x). Additionally, the proposed framework also performs well on the Columbia dataset, thus demonstrating good robustness. The code and model weights are available at https://github.com/Junhua-Liao/Light-ASD",
-    "checked": false,
+    "checked": true,
     "id": "3856061231c298f77477f08f9c314e9e594ed485",
-    "semantic_title": "",
+    "semantic_title": "a light weight model for active speaker detection",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Feng_Self-Supervised_Video_Forensics_by_Audio-Visual_Anomaly_Detection_CVPR_2023_paper.html": {
     "title": "Self-Supervised Video Forensics by Audio-Visual Anomaly Detection",
     "volume": "main",
     "abstract": "Manipulated videos often contain subtle inconsistencies between their visual and audio signals. We propose a video forensics method, based on anomaly detection, that can identify these inconsistencies, and that can be trained solely using real, unlabeled data. We train an autoregressive model to generate sequences of audio-visual features, using feature sets that capture the temporal synchronization between video frames and sound. At test time, we then flag videos that the model assigns low probability. Despite being trained entirely on real videos, our model obtains strong performance on the task of detecting manipulated speech videos. Project site: https://cfeng16.github.io/audio-visual-forensics",
-    "checked": false,
+    "checked": true,
     "id": "53b09951e13f6e23af65db5bdc08f7bf4a2def9a",
-    "semantic_title": "",
+    "semantic_title": "self-supervised video forensics by audio-visual anomaly detection",
     "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Chen_CLIP2Scene_Towards_Label-Efficient_3D_Scene_Understanding_by_CLIP_CVPR_2023_paper.html": {
     "title": "CLIP2Scene: Towards Label-Efficient 3D Scene Understanding by CLIP",
     "volume": "main",
     "abstract": "Contrastive Language-Image Pre-training (CLIP) achieves promising results in 2D zero-shot and few-shot learning. Despite the impressive performance in 2D, applying CLIP to help the learning in 3D scene understanding has yet to be explored. In this paper, we make the first attempt to investigate how CLIP knowledge benefits 3D scene understanding. We propose CLIP2Scene, a simple yet effective framework that transfers CLIP knowledge from 2D image-text pre-trained models to a 3D point cloud network. We show that the pre-trained 3D network yields impressive performance on various downstream tasks, i.e., annotation-free and fine-tuning with labelled data for semantic segmentation. Specifically, built upon CLIP, we design a Semantic-driven Cross-modal Contrastive Learning framework that pre-trains a 3D network via semantic and spatial-temporal consistency regularization. For the former, we first leverage CLIP's text semantics to select the positive and negative point samples and then employ the contrastive loss to train the 3D network. In terms of the latter, we force the consistency between the temporally coherent point cloud features and their corresponding image features. We conduct experiments on SemanticKITTI, nuScenes, and ScanNet. For the first time, our pre-trained network achieves annotation-free 3D semantic segmentation with 20.8% and 25.08% mIoU on nuScenes and ScanNet, respectively. When fine-tuned with 1% or 100% labelled data, our method significantly outperforms other self-supervised methods, with improvements of 8% and 1% mIoU, respectively. Furthermore, we demonstrate the generalizability for handling cross-domain datasets. Code is publicly available",
-    "checked": false,
+    "checked": true,
     "id": "0c17326565266c40a02b230fac3b405a4d3220b9",
-    "semantic_title": "",
-    "citation_count": 10
+    "semantic_title": "clip2scene: towards label-efficient 3d scene understanding by clip",
+    "citation_count": 12
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Yan_GCFAgg_Global_and_Cross-View_Feature_Aggregation_for_Multi-View_Clustering_CVPR_2023_paper.html": {
     "title": "GCFAgg: Global and Cross-View Feature Aggregation for Multi-View Clustering",
     "volume": "main",
     "abstract": "Multi-view clustering can partition data samples into their categories by learning a consensus representation in unsupervised way and has received more and more attention in recent years. However, most existing deep clustering methods learn consensus representation or view-specific representations from multiple views via view-wise aggregation way, where they ignore structure relationship of all samples. In this paper, we propose a novel multi-view clustering network to address these problems, called Global and Cross-view Feature Aggregation for Multi-View Clustering (GCFAggMVC). Specifically, the consensus data presentation from multiple views is obtained via cross-sample and cross-view feature aggregation, which fully explores the complementary of similar samples. Moreover, we align the consensus representation and the view-specific representation by the structure-guided contrastive learning module, which makes the view-specific representations from different samples with high structure relationship similar. The proposed module is a flexible multi-view data representation module, which can be also embedded to the incomplete multi-view data clustering task via plugging our module into other frameworks. Extensive experiments show that the proposed method achieves excellent performance in both complete multi-view data clustering tasks and incomplete multi-view data clustering tasks",
-    "checked": false,
+    "checked": true,
     "id": "f50c55600d1a9993a13d0c496fdc600de277c907",
-    "semantic_title": "",
+    "semantic_title": "gcfagg: global and cross-view feature aggregation for multi-view clustering",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Li_Class_Balanced_Adaptive_Pseudo_Labeling_for_Federated_Semi-Supervised_Learning_CVPR_2023_paper.html": {
@@ -643,89 +643,89 @@
     "volume": "main",
     "abstract": "This paper focuses on federated semi-supervised learning (FSSL), assuming that few clients have fully labeled data (labeled clients) and the training datasets in other clients are fully unlabeled (unlabeled clients). Existing methods attempt to deal with the challenges caused by not independent and identically distributed data (Non-IID) setting. Though methods such as sub-consensus models have been proposed, they usually adopt standard pseudo labeling or consistency regularization on unlabeled clients which can be easily influenced by imbalanced class distribution. Thus, problems in FSSL are still yet to be solved. To seek for a fundamental solution to this problem, we present Class Balanced Adaptive Pseudo Labeling (CBAFed), to study FSSL from the perspective of pseudo labeling. In CBAFed, the first key element is a fixed pseudo labeling strategy to handle the catastrophic forgetting problem, where we keep a fixed set by letting pass information of unlabeled data at the beginning of the unlabeled client training in each communication round. The second key element is that we design class balanced adaptive thresholds via considering the empirical distribution of all training data in local clients, to encourage a balanced training process. To make the model reach a better optimum, we further propose a residual weight connection in local supervised training and global model aggregation. Extensive experiments on five datasets demonstrate the superiority of CBAFed. Code will be released",
     "checked": false,
-    "id": "a653808f6f529b13193902f63865e7a8cb61bf0d",
-    "semantic_title": "",
-    "citation_count": 17
+    "id": "79f464bcbb4f9e04904b29dcfbffeb5dc2fadd02",
+    "semantic_title": "supplementary material for \"class balanced adaptive pseudo labeling for federated semi-supervised learning",
+    "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Li_Rethinking_Out-of-Distribution_OOD_Detection_Masked_Image_Modeling_Is_All_You_CVPR_2023_paper.html": {
     "title": "Rethinking Out-of-Distribution (OOD) Detection: Masked Image Modeling Is All You Need",
     "volume": "main",
     "abstract": "The core of out-of-distribution (OOD) detection is to learn the in-distribution (ID) representation, which is distinguishable from OOD samples. Previous work applied recognition-based methods to learn the ID features, which tend to learn shortcuts instead of comprehensive representations. In this work, we find surprisingly that simply using reconstruction-based methods could boost the performance of OOD detection significantly. We deeply explore the main contributors of OOD detection and find that reconstruction-based pretext tasks have the potential to provide a generally applicable and efficacious prior, which benefits the model in learning intrinsic data distributions of the ID dataset. Specifically, we take Masked Image Modeling as a pretext task for our OOD detection framework (MOOD). Without bells and whistles, MOOD outperforms previous SOTA of one-class OOD detection by 5.7%, multi-class OOD detection by 3.0%, and near-distribution OOD detection by 2.1%. It even defeats the 10-shot-per-class outlier exposure OOD detection, although we do not include any OOD samples for our detection",
-    "checked": false,
+    "checked": true,
     "id": "0efa4d128dd140a2d3ad36b9f452fc3b80223667",
-    "semantic_title": "",
+    "semantic_title": "rethinking out-of-distribution (ood) detection: masked image modeling is all you need",
     "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Tyagi_DeGPR_Deep_Guided_Posterior_Regularization_for_Multi-Class_Cell_Detection_and_CVPR_2023_paper.html": {
     "title": "DeGPR: Deep Guided Posterior Regularization for Multi-Class Cell Detection and Counting",
     "volume": "main",
     "abstract": "Multi-class cell detection and counting is an essential task for many pathological diagnoses. Manual counting is tedious and often leads to inter-observer variations among pathologists. While there exist multiple, general-purpose, deep learning-based object detection and counting methods, they may not readily transfer to detecting and counting cells in medical images, due to the limited data, presence of tiny overlapping objects, multiple cell types, severe class-imbalance, minute differences in size/shape of cells, etc. In response, we propose guided posterior regularization DeGPR, which assists an object detector by guiding it to exploit discriminative features among cells. The features may be pathologist-provided or inferred directly from visual data. We validate our model on two publicly available datasets (CoNSeP and MoNuSAC), and on MuCeD, a novel dataset that we contribute. MuCeD consists of 55 biopsy images of the human duodenum for predicting celiac disease. We perform extensive experimentation with three object detection baselines on three datasets to show that DeGPR is model-agnostic, and consistently improves baselines obtaining up to 9% (absolute) mAP gains",
-    "checked": false,
+    "checked": true,
     "id": "60028821c452b8fed118fe4b27b6770193cee11e",
-    "semantic_title": "",
+    "semantic_title": "degpr: deep guided posterior regularization for multi-class cell detection and counting",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Wu_Masked_Scene_Contrast_A_Scalable_Framework_for_Unsupervised_3D_Representation_CVPR_2023_paper.html": {
     "title": "Masked Scene Contrast: A Scalable Framework for Unsupervised 3D Representation Learning",
     "volume": "main",
     "abstract": "As a pioneering work, PointContrast conducts unsupervised 3D representation learning via leveraging contrastive learning over raw RGB-D frames and proves its effectiveness on various downstream tasks. However, the trend of large-scale unsupervised learning in 3D has yet to emerge due to two stumbling blocks: the inefficiency of matching RGB-D frames as contrastive views and the annoying mode collapse phenomenon mentioned in previous works. Turning the two stumbling blocks into empirical stepping stones, we first propose an efficient and effective contrastive learning framework, which generates contrastive views directly on scene-level point clouds by a well-curated data augmentation pipeline and a practical view mixing strategy. Second, we introduce reconstructive learning on the contrastive learning framework with an exquisite design of contrastive cross masks, which targets the reconstruction of point color and surfel normal. Our Masked Scene Contrast (MSC) framework is capable of extracting comprehensive 3D representations more efficiently and effectively. It accelerates the pre-training procedure by at least 3x and still achieves an uncompromised performance compared with previous work. Besides, MSC also enables large-scale 3D pre-training across multiple datasets, which further boosts the performance and achieves state-of-the-art fine-tuning results on several downstream tasks, e.g., 75.5% mIoU on ScanNet semantic segmentation validation set",
-    "checked": false,
+    "checked": true,
     "id": "0ca3852a9b2df57db93b1efe8fdd78cd89f4159a",
-    "semantic_title": "",
-    "citation_count": 0
+    "semantic_title": "masked scene contrast: a scalable framework for unsupervised 3d representation learning",
+    "citation_count": 1
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Singh_Multi_Domain_Learning_for_Motion_Magnification_CVPR_2023_paper.html": {
     "title": "Multi Domain Learning for Motion Magnification",
     "volume": "main",
-    "abstract": "Video motion magnification makes subtle invisible motions visible, such as small chest movements while breathing, subtle vibrations in the moving objects etc. But small motions are prone to noise, illumination changes, large motions, etc. making the task difficult. Most state-of-the-art methods use hand-crafted concepts which result in small magnification, ringing artifacts etc. The deep learning based approach has higher magnification but is prone to severe artifacts in some scenarios. We propose a new phase based deep network for video motion magnification that operates in both domains (frequency and spatial) to address this issue. It generates motion magnification from frequency domain phase fluctuations and then improves its quality in the spatial domain. The proposed models are lightweight networks with fewer parameters (  0.11M and   0.05M). Further, the proposed networks performance is compared to the SOTA approaches and evaluated on real-world and synthetic videos. Finally, an ablation study is also conducted to show the impact of different parts of the network",
-    "checked": false,
-    "id": "2477c15ab53b9976fe9506fcf128f478c4f2d084",
-    "semantic_title": "",
+    "abstract": "Video motion magnification makes subtle invisible motions visible, such as small chest movements while breathing, subtle vibrations in the moving objects etc. But small motions are prone to noise, illumination changes, large motions, etc. making the task difficult. Most state-of-the-art methods use hand-crafted concepts which result in small magnification, ringing artifacts etc. The deep learning based approach has higher magnification but is prone to severe artifacts in some scenarios. We propose a new phase based deep network for video motion magnification that operates in both domains (frequency and spatial) to address this issue. It generates motion magnification from frequency domain phase fluctuations and then improves its quality in the spatial domain. The proposed models are lightweight networks with fewer parameters ( 0.11M and 0.05M). Further, the proposed networks performance is compared to the SOTA approaches and evaluated on real-world and synthetic videos. Finally, an ablation study is also conducted to show the impact of different parts of the network",
+    "checked": true,
+    "id": "071d4e98d7089982851dba0a0671fddf0291642b",
+    "semantic_title": "multi domain learning for motion magnification",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Zhang_LOGO_A_Long-Form_Video_Dataset_for_Group_Action_Quality_Assessment_CVPR_2023_paper.html": {
     "title": "LOGO: A Long-Form Video Dataset for Group Action Quality Assessment",
     "volume": "main",
     "abstract": "Action quality assessment (AQA) has become an emerging topic since it can be extensively applied in numerous scenarios. However, most existing methods and datasets focus on single-person short-sequence scenes, hindering the application of AQA in more complex situations. To address this issue, we construct a new multi-person long-form video dataset for action quality assessment named LOGO. Distinguished in scenario complexity, our dataset contains 200 videos from 26 artistic swimming events with 8 athletes in each sample along with an average duration of 204.2 seconds. As for richness in annotations, LOGO includes formation labels to depict group information of multiple athletes and detailed annotations on action procedures. Furthermore, we propose a simple yet effective method to model relations among athletes and reason about the potential temporal logic in long-form videos. Specifically, we design a group-aware attention module, which can be easily plugged into existing AQA methods, to enrich the clip-wise representations based on contextual group information. To benchmark LOGO, we systematically conduct investigations on the performance of several popular methods in AQA and action segmentation. The results reveal the challenges our dataset brings. Extensive experiments also show that our approach achieves state-of-the-art on the LOGO dataset. The dataset and code will be released at https://github.com/shiyi-zh0408/LOGO",
-    "checked": false,
-    "id": "dfc531805dee025b44331667f6a565fd04380d6b",
-    "semantic_title": "",
-    "citation_count": 1
+    "checked": true,
+    "id": "d9c8045b97e3921f250f2952598d026cffcb171a",
+    "semantic_title": "logo: a long-form video dataset for group action quality assessment",
+    "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Li_A_Simple_Baseline_for_Video_Restoration_With_Grouped_Spatial-Temporal_Shift_CVPR_2023_paper.html": {
     "title": "A Simple Baseline for Video Restoration With Grouped Spatial-Temporal Shift",
     "volume": "main",
     "abstract": "Video restoration, which aims to restore clear frames from degraded videos, has numerous important applications. The key to video restoration depends on utilizing inter-frame information. However, existing deep learning methods often rely on complicated network architectures, such as optical flow estimation, deformable convolution, and cross-frame self-attention layers, resulting in high computational costs. In this study, we propose a simple yet effective framework for video restoration. Our approach is based on grouped spatial-temporal shift, which is a lightweight and straightforward technique that can implicitly capture inter-frame correspondences for multi-frame aggregation. By introducing grouped spatial shift, we attain expansive effective receptive fields. Combined with basic 2D convolution, this simple framework can effectively aggregate inter-frame information. Extensive experiments demonstrate that our framework outperforms the previous state-of-the-art method, while using less than a quarter of its computational cost, on both video deblurring and video denoising tasks. These results indicate the potential for our approach to significantly reduce computational overhead while maintaining high-quality results. Code is avaliable at https://github.com/dasongli1/Shift-Net",
-    "checked": false,
+    "checked": true,
     "id": "cafc054d73b4e45d8255f9035229ff3a5a29c9c0",
-    "semantic_title": "",
+    "semantic_title": "a simple baseline for video restoration with grouped spatial-temporal shift",
     "citation_count": 0
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Yang_UniSim_A_Neural_Closed-Loop_Sensor_Simulator_CVPR_2023_paper.html": {
     "title": "UniSim: A Neural Closed-Loop Sensor Simulator",
     "volume": "main",
     "abstract": "Rigorously testing autonomy systems is essential for making safe self-driving vehicles (SDV) a reality. It requires one to generate safety critical scenarios beyond what can be collected safely in the world, as many scenarios happen rarely on our roads. To accurately evaluate performance, we need to test the SDV on these scenarios in closed-loop, where the SDV and other actors interact with each other at each timestep. Previously recorded driving logs provide a rich resource to build these new scenarios from, but for closed loop evaluation, we need to modify the sensor data based on the new scene configuration and the SDV's decisions, as actors might be added or removed and the trajectories of existing actors and the SDV will differ from the original log. In this paper, we present UniSim, a neural sensor simulator that takes a single recorded log captured by a sensor-equipped vehicle and converts it into a realistic closed-loop multi-sensor simulation. UniSim builds neural feature grids to reconstruct both the static background and dynamic actors in the scene, and composites them together to simulate LiDAR and camera data at new viewpoints, with actors added or removed and at new placements. To better handle extrapolated views, we incorporate learnable priors for dynamic objects, and leverage a convolutional network to complete unseen regions. Our experiments show UniSim can simulate realistic sensor data with small domain gap on downstream tasks. With UniSim, we demonstrate, for the first time, closed-loop evaluation of an autonomy system on safety-critical scenarios as if it were in the real world",
-    "checked": false,
-    "id": "bb44b8909a1f7356afec8f2f078676a5e4036772",
-    "semantic_title": "",
-    "citation_count": 2
+    "checked": true,
+    "id": "330c2304c1f64843b885a7b8eb698d37c1adc40b",
+    "semantic_title": "unisim: a neural closed-loop sensor simulator",
+    "citation_count": 7
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Cho_itKD_Interchange_Transfer-Based_Knowledge_Distillation_for_3D_Object_Detection_CVPR_2023_paper.html": {
     "title": "itKD: Interchange Transfer-Based Knowledge Distillation for 3D Object Detection",
     "volume": "main",
     "abstract": "Point-cloud based 3D object detectors recently have achieved remarkable progress. However, most studies are limited to the development of network architectures for improving only their accuracy without consideration of the computational efficiency. In this paper, we first propose an autoencoder-style framework comprising channel-wise compression and decompression via interchange transfer-based knowledge distillation. To learn the map-view feature of a teacher network, the features from teacher and student networks are independently passed through the shared autoencoder; here, we use a compressed representation loss that binds the channel-wised compression knowledge from both student and teacher networks as a kind of regularization. The decompressed features are transferred in opposite directions to reduce the gap in the interchange reconstructions. Lastly, we present an head attention loss to match the 3D object detection information drawn by the multi-head self-attention mechanism. Through extensive experiments, we verify that our method can train the lightweight model that is well-aligned with the 3D point cloud detection task and we demonstrate its superiority using the well-known public datasets; e.g., Waymo and nuScenes",
-    "checked": false,
+    "checked": true,
     "id": "3f4593faf301a52d23caca83d24cb314cbe2aaa9",
-    "semantic_title": "",
+    "semantic_title": "itkd: interchange transfer-based knowledge distillation for 3d object detection",
     "citation_count": 4
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Lentsch_SliceMatch_Geometry-Guided_Aggregation_for_Cross-View_Pose_Estimation_CVPR_2023_paper.html": {
     "title": "SliceMatch: Geometry-Guided Aggregation for Cross-View Pose Estimation",
     "volume": "main",
     "abstract": "This work addresses cross-view camera pose estimation, i.e., determining the 3-Degrees-of-Freedom camera pose of a given ground-level image w.r.t. an aerial image of the local area. We propose SliceMatch, which consists of ground and aerial feature extractors, feature aggregators, and a pose predictor. The feature extractors extract dense features from the ground and aerial images. Given a set of candidate camera poses, the feature aggregators construct a single ground descriptor and a set of pose-dependent aerial descriptors. Notably, our novel aerial feature aggregator has a cross-view attention module for ground-view guided aerial feature selection and utilizes the geometric projection of the ground camera's viewing frustum on the aerial image to pool features. The efficient construction of aerial descriptors is achieved using precomputed masks. SliceMatch is trained using contrastive learning and pose estimation is formulated as a similarity comparison between the ground descriptor and the aerial descriptors. Compared to the state-of-the-art, SliceMatch achieves a 19% lower median localization error on the VIGOR benchmark using the same VGG16 backbone at 150 frames per second, and a 50% lower error when using a ResNet50 backbone",
-    "checked": false,
+    "checked": true,
     "id": "7a3a1e4f24b7cd01233619ec04b9e58d18ab0356",
-    "semantic_title": "",
+    "semantic_title": "slicematch: geometry-guided aggregation for cross-view pose estimation",
     "citation_count": 2
   },
   "https://openaccess.thecvf.com/content/CVPR2023/html/Kennerley_2PCNet_Two-Phase_Consistency_Training_for_Day-to-Night_Unsupervised_Domain_Adaptive_Object_CVPR_2023_paper.html": {
