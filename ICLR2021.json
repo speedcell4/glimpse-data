@@ -687,7 +687,7 @@
     "title": "Learning a Latent Simplex in Input Sparsity Time",
     "volume": "spotlight",
     "abstract": "We consider the problem of learning a latent $k$-vertex simplex $K\\in\\mathbb{R}^d$, given $\\mathbf{A}\\in\\mathbb{R}^{d\\times n}$, which can be viewed as $n$ data points that are formed by randomly perturbing some latent points in $K$, possibly beyond $K$. A large class of latent variable models, such as adversarial clustering, mixed membership stochastic block models, and topic models can be cast in this view of learning a latent simplex. Bhattacharyya and Kannan (SODA 2020) give an algorithm for learning such a $k$-vertex latent simplex in time roughly $O(k\\cdot\\text{nnz}(\\mathbf{A}))$, where $\\text{nnz}(\\mathbf{A})$ is the number of non-zeros in $\\mathbf{A}$. We show that the dependence on $k$ in the running time is unnecessary given a natural assumption about the mass of the top $k$ singular values of $\\mathbf{A}$, which holds in many of these applications. Further, we show this assumption is necessary, as otherwise an algorithm for learning a latent simplex would imply a better low rank approximation algorithm than what is known. We obtain a spectral low-rank approximation to $\\mathbf{A}$ in input-sparsity time and show that the column space thus obtained has small $\\sin\\Theta$ (angular) distance to the right top-$k$ singular space of $\\mathbf{A}$. Our algorithm then selects $k$ points in the low-rank subspace with the largest inner product (in absolute value) with $k$ carefully chosen random vectors. By working in the low-rank subspace, we avoid reading the entire matrix in each iteration and thus circumvent the $\\Theta(k\\cdot\\text{nnz}(\\mathbf{A}))$ running time",
-    "checked": false,
+    "checked": true,
     "id": "71d0156086aa83f7c4249c17d6df23fe9abae30d",
     "semantic_title": "learning a latent simplex in input-sparsity time",
     "citation_count": 7
@@ -1083,7 +1083,7 @@
     "title": "BUSTLE: Bottom-Up Program Synthesis Through Learning-Guided Exploration",
     "volume": "spotlight",
     "abstract": "Program synthesis is challenging largely because of the difficulty of search in a large space of programs. Human programmers routinely tackle the task of writing complex programs by writing sub-programs and then analyzing their intermediate results to compose them in appropriate ways. Motivated by this intuition, we present a new synthesis approach that leverages learning to guide a bottom-up search over programs. In particular, we train a model to prioritize compositions of intermediate values during search conditioned on a given set of input-output examples. This is a powerful combination because of several emergent properties. First, in bottom-up search, intermediate programs can be executed, providing semantic information to the neural network. Second, given the concrete values from those executions, we can exploit rich features based on recent work on property signatures. Finally, bottom-up search allows the system substantial flexibility in what order to generate the solution, allowing the synthesizer to build up a program from multiple smaller sub-programs. Overall, our empirical evaluation finds that the combination of learning and bottom-up search is remarkably effective, even with simple supervised learning approaches. We demonstrate the effectiveness of our technique on two datasets, one from the SyGuS competition and one of our own creation",
-    "checked": false,
+    "checked": true,
     "id": "30a156f17ca8f54aa14d01d32c2315c11fcbe723",
     "semantic_title": "bustle: bottom-up program-synthesis through learning-guided exploration",
     "citation_count": 32
@@ -1137,7 +1137,7 @@
     "title": "How Benign is Benign Overfitting ?",
     "volume": "spotlight",
     "abstract": "We investigate two causes for adversarial vulnerability in deep neural networks: bad data and (poorly) trained models. When trained with SGD, deep neural networks essentially achieve zero training error, even in the presence of label noise, while also exhibiting good generalization on natural test data, something referred to as benign overfitting (Bartlett et al., 2020; Chatterji & Long, 2020). However, these models are vulnerable to adversarial attacks. We identify label noise as one of the causes for adversarial vulnerability, and provide theoretical and empirical evidence in support of this. Surprisingly, we find several instances of label noise in datasets such as MNIST and CIFAR, and that robustly trained models incur training error on some of these, i.e. they don't fit the noise. However, removing noisy labels alone does not suffice to achieve adversarial robustness. We conjecture that in part sub-optimal representation learning is also responsible for adversarial vulnerability. By means of simple theoretical setups, we show how the choice of representation can drastically affect adversarial robustness",
-    "checked": false,
+    "checked": true,
     "id": "dfb6250ae1c8f4d0ec3e28ed84596f77704485ab",
     "semantic_title": "how benign is benign overfitting?",
     "citation_count": 40
@@ -1173,7 +1173,7 @@
     "title": "DDPNOpt: Differential Dynamic Programming Neural Optimizer",
     "volume": "spotlight",
     "abstract": "Interpretation of Deep Neural Networks (DNNs) training as an optimal control problem with nonlinear dynamical systems has received considerable attention recently, yet the algorithmic development remains relatively limited. In this work, we make an attempt along this line by reformulating the training procedure from the trajectory optimization perspective. We first show that most widely-used algorithms for training DNNs can be linked to the Differential Dynamic Programming (DDP), a celebrated second-order method rooted in the Approximate Dynamic Programming. In this vein, we propose a new class of optimizer, DDP Neural Optimizer (DDPNOpt), for training feedforward and convolution networks. DDPNOpt features layer-wise feedback policies which improve convergence and reduce sensitivity to hyper-parameter over existing methods. It outperforms other optimal-control inspired training methods in both convergence and complexity, and is competitive against state-of-the-art first and second order methods. We also observe DDPNOpt has surprising benefit in preventing gradient vanishing. Our work opens up new avenues for principled algorithmic design built upon the optimal control theory",
-    "checked": false,
+    "checked": true,
     "id": "925e6e1e9dec14569c3fe06d238f961443b3b48e",
     "semantic_title": "differential dynamic programming neural optimizer",
     "citation_count": 8
@@ -1191,7 +1191,7 @@
     "title": "Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1 / n Parameters",
     "volume": "spotlight",
     "abstract": "Recent works have demonstrated reasonable success of representation learning in hypercomplex space. Specifically, \"fully-connected layers with quaternions\" (quaternions are 4D hypercomplex numbers), which replace real-valued matrix multiplications in fully-connected layers with Hamilton products of quaternions, both enjoy parameter savings with only 1/4 learnable parameters and achieve comparable performance in various applications. However, one key caveat is that hypercomplex space only exists at very few predefined dimensions (4D, 8D, and 16D). This restricts the flexibility of models that leverage hypercomplex multiplications. To this end, we propose parameterizing hypercomplex multiplications, allowing models to learn multiplication rules from data regardless of whether such rules are predefined. As a result, our method not only subsumes the Hamilton product, but also learns to operate on any arbitrary $n$D hypercomplex space, providing more architectural flexibility using arbitrarily $1/n$ learnable parameters compared with the fully-connected layer counterpart. Experiments of applications to the LSTM and transformer models on natural language inference, machine translation, text style transfer, and subject verb agreement demonstrate architectural flexibility and effectiveness of the proposed approach",
-    "checked": false,
+    "checked": true,
     "id": "1d5f5df837139d4ae8af23e3634295594c5b85db",
     "semantic_title": "beyond fully-connected layers with quaternions: parameterization of hypercomplex multiplications with 1/n parameters",
     "citation_count": 57
@@ -1299,7 +1299,7 @@
     "title": "GAN \"Steerability\" without optimization",
     "volume": "spotlight",
     "abstract": "Recent research has shown remarkable success in revealing \"steering\" directions in the latent spaces of pre-trained GANs. These directions correspond to semantically meaningful image transformations (e.g., shift, zoom, color manipulations), and have the same interpretable effect across all categories that the GAN can generate. Some methods focus on user-specified transformations, while others discover transformations in an unsupervised manner. However, all existing techniques rely on an optimization procedure to expose those directions, and offer no control over the degree of allowed interaction between different transformations. In this paper, we show that \"steering\" trajectories can be computed in closed form directly from the generator's weights without any form of training or optimization. This applies to user-prescribed geometric transformations, as well as to unsupervised discovery of more complex effects. Our approach allows determining both linear and nonlinear trajectories, and has many advantages over previous methods. In particular, we can control whether one transformation is allowed to come on the expense of another (e.g., zoom-in with or without allowing translation to keep the object centered). Moreover, we can determine the natural end-point of the trajectory, which corresponds to the largest extent to which a transformation can be applied without incurring degradation. Finally, we show how transferring attributes between images can be achieved without optimization, even across different categories",
-    "checked": false,
+    "checked": true,
     "id": "bfbb573504d446d32a85c9182db4a9d2edbbcdd6",
     "semantic_title": "gan steerability without optimization",
     "citation_count": 48
@@ -1398,7 +1398,7 @@
     "title": "Multivariate Probabilistic Time Series Forecasting via Conditioned Normalizing Flows",
     "volume": "spotlight",
     "abstract": "Time series forecasting is often fundamental to scientific and engineering problems and enables decision making. With ever increasing data set sizes, a trivial solution to scale up predictions is to assume independence between interacting time series. However, modeling statistical dependencies can improve accuracy and enable analysis of interaction effects. Deep learning methods are well suited for this problem, but multi-variate models often assume a simple parametric distribution and do not scale to high dimensions. In this work we model the multi-variate temporal dynamics of time series via an autoregressive deep learning model, where the data distribution is represented by a conditioned normalizing flow. This combination retains the power of autoregressive models, such as good performance in extrapolation into the future, with the flexibility of flows as a general purpose high-dimensional distribution model, while remaining computationally tractable. We show that it improves over the state-of-the-art for standard metrics on many real-world data sets with several thousand interacting time-series",
-    "checked": false,
+    "checked": true,
     "id": "5c6addaeed14ac145e37a9a4fc0bc3004e61e55c",
     "semantic_title": "multi-variate probabilistic time series forecasting via conditioned normalizing flows",
     "citation_count": 98
@@ -1488,7 +1488,7 @@
     "title": "Mind the Pad -- CNNs Can Develop Blind Spots",
     "volume": "spotlight",
     "abstract": "We show how feature maps in convolutional networks are susceptible to spatial bias. Due to a combination of architectural choices, the activation at certain locations is systematically elevated or weakened. The major source of this bias is the padding mechanism. Depending on several aspects of convolution arithmetic, this mechanism can apply the padding unevenly, leading to asymmetries in the learned weights. We demonstrate how such bias can be detrimental to certain tasks such as small object detection: the activation is suppressed if the stimulus lies in the impacted area, leading to blind spots and misdetection. We explore alternative padding methods and propose solutions for analyzing and mitigating spatial bias",
-    "checked": false,
+    "checked": true,
     "id": "e239cb7f75af3a7a53a1c7da371a53059d0bc706",
     "semantic_title": "mind the pad - cnns can develop blind spots",
     "citation_count": 0
@@ -1929,7 +1929,7 @@
     "title": "Temporally-Extended ε-Greedy Exploration",
     "volume": "poster",
     "abstract": "Recent work on exploration in reinforcement learning (RL) has led to a series of increasingly complex solutions to the problem. This increase in complexity often comes at the expense of generality. Recent empirical studies suggest that, when applied to a broader set of domains, some sophisticated exploration methods are outperformed by simpler counterparts, such as ε-greedy. In this paper we propose an exploration algorithm that retains the simplicity of ε-greedy while reducing dithering. We build on a simple hypothesis: the main limitation of ε-greedy exploration is its lack of temporal persistence, which limits its ability to escape local optima. We propose a temporally extended form of ε-greedy that simply repeats the sampled action for a random duration. It turns out that, for many duration distributions, this suffices to improve exploration on a large set of domains. Interestingly, a class of distributions inspired by ecological models of animal foraging behaviour yields particularly strong performance",
-    "checked": false,
+    "checked": true,
     "id": "5de6d8b4436f6598f5bcba00bc07d864e962f1fb",
     "semantic_title": "temporally-extended {\\epsilon}-greedy exploration",
     "citation_count": 45
@@ -2352,7 +2352,7 @@
     "title": "Spatially Structured Recurrent Modules",
     "volume": "poster",
     "abstract": "Capturing the structure of a data-generating process by means of appropriate inductive biases can help in learning models that generalise well and are robust to changes in the input distribution. While methods that harness spatial and temporal structures find broad application, recent work has demonstrated the potential of models that leverage sparse and modular structure using an ensemble of sparingly interacting modules. In this work, we take a step towards dynamic models that are capable of simultaneously exploiting both modular and spatiotemporal structures. To this end, we model the dynamical system as a collection of autonomous but sparsely interacting sub-systems that interact according to a learned topology which is informed by the spatial structure of the underlying system. This gives rise to a class of models that are well suited for capturing the dynamics of systems that only offer local views into their state, along with corresponding spatial locations of those views. On the tasks of video prediction from cropped frames and multi-agent world modelling from partial observations in the challenging Starcraft2 domain, we find our models to be more robust to the number of available views and better capable of generalisation to novel tasks without additional training than strong baselines that perform equally well or better on the training distribution",
-    "checked": false,
+    "checked": true,
     "id": "ffcea46f57ef1f5f65686e2424976e1af8689e78",
     "semantic_title": "s2rms: spatially structured recurrent modules",
     "citation_count": 11
@@ -2784,7 +2784,7 @@
     "title": "Explaining the Efficacy of Counterfactually Augmented Data",
     "volume": "poster",
     "abstract": "In attempts to produce machine learning models less reliant on spurious patterns in NLP datasets, researchers have recently proposed curating counterfactually augmented data (CAD) via a human-in-the-loop process in which given some documents and their (initial) labels, humans must revise the text to make a counterfactual label applicable. Importantly, edits that are not necessary to flip the applicable label are prohibited. Models trained on the augmented (original and revised) data appear, empirically, to rely less on semantically irrelevant words and to generalize better out of domain. While this work draws loosely on causal thinking, the underlying causal model (even at an abstract level) and the principles underlying the observed out-of-domain improvements remain unclear. In this paper, we introduce a toy analog based on linear Gaussian models, observing interesting relationships between causal models, measurement noise, out-of-domain generalization, and reliance on spurious signals. Our analysis provides some insights that help to explain the efficacy of CAD. Moreover, we develop the hypothesis that while adding noise to causal features should degrade both in-domain and out-of-domain performance, adding noise to non-causal features should lead to relative improvements in out-of-domain performance. This idea inspires a speculative test for determining whether a feature attribution technique has identified the causal spans. If adding noise (e.g., by random word flips) to the highlighted spans degrades both in-domain and out-of-domain performance on a battery of challenge datasets, but adding noise to the complement gives improvements out-of-domain, this suggests we have identified causal spans. Thus, we present a large scale empirical study comparing spans edited to create CAD to those selected by attention and saliency maps. Across numerous challenge domains and models, we find that the hypothesized phenomenon is pronounced for CAD",
-    "checked": false,
+    "checked": true,
     "id": "24fcdaf969089e6a411f7cebc9274bbc53c25e42",
     "semantic_title": "explaining the efficacy of counterfactually-augmented data",
     "citation_count": 61
@@ -3297,7 +3297,7 @@
     "title": "CompOFA – Compound Once-For-All Networks for Faster Multi-Platform Deployment",
     "volume": "poster",
     "abstract": "The emergence of CNNs in mainstream deployment has necessitated methods to design and train efficient architectures tailored to maximize the accuracy under diverse hardware and latency constraints. To scale these resource-intensive tasks with an increasing number of deployment targets, Once-For-All (OFA) proposed an approach to jointly train several models at once with a constant training cost. However, this cost remains as high as 40-50 GPU days and also suffers from a combinatorial explosion of sub-optimal model configurations. We seek to reduce this search space -- and hence the training budget -- by constraining search to models close to the accuracy-latency Pareto frontier. We incorporate insights of compound relationships between model dimensions to build CompOFA, a design space smaller by several orders of magnitude. Through experiments on ImageNet, we demonstrate that even with simple heuristics we can achieve a 2x reduction in training time and 216x speedup in model search/extraction time compared to the state of the art, without loss of Pareto optimality! We also show that this smaller design space is dense enough to support equally accurate models for a similar diversity of hardware and latency targets, while also reducing the complexity of the training and subsequent extraction algorithms. Our source code is available at https://github.com/gatech-sysml/CompOFA",
-    "checked": false,
+    "checked": true,
     "id": "17820d356a6441183c954d1b0d5ca5ceb1ff0045",
     "semantic_title": "compofa: compound once-for-all networks for faster multi-platform deployment",
     "citation_count": 19
@@ -3477,7 +3477,7 @@
     "title": "Improved Estimation of Concentration Under ℓ p -Norm Distance Metrics Using Half Spaces",
     "volume": "poster",
     "abstract": "Concentration of measure has been argued to be the fundamental cause of adversarial vulnerability. Mahloujifar et al. (2019) presented an empirical way to measure the concentration of a data distribution using samples, and employed it to find lower bounds on intrinsic robustness for several benchmark datasets. However, it remains unclear whether these lower bounds are tight enough to provide a useful approximation for the intrinsic robustness of a dataset. To gain a deeper understanding of the concentration of measure phenomenon, we first extend the Gaussian Isoperimetric Inequality to non-spherical Gaussian measures and arbitrary $\\ell_p$-norms ($p \\geq 2$). We leverage these theoretical insights to design a method that uses half-spaces to estimate the concentration of any empirical dataset under $\\ell_p$-norm distance metrics. Our proposed algorithm is more efficient than Mahloujifar et al. (2019)'s, and experiments on synthetic datasets and image benchmarks demonstrate that it is able to find much tighter intrinsic robustness bounds. These tighter estimates provide further evidence that rules out intrinsic dataset concentration as a possible explanation for the adversarial vulnerability of state-of-the-art classifiers",
-    "checked": false,
+    "checked": true,
     "id": "ba8d84deb3633076a135e6b885da609eb7b1c7e0",
     "semantic_title": "improved estimation of concentration under $\\ell_p$-norm distance metrics using half spaces",
     "citation_count": 5
@@ -3756,10 +3756,10 @@
     "title": "Understanding Over-parameterization in Generative Adversarial Networks",
     "volume": "poster",
     "abstract": "A broad class of unsupervised deep learning methods such as Generative Adversarial Networks (GANs) involve training of overparameterized models where the number of parameters of the model exceeds a certain threshold. Indeed, most successful GANs used in practice are trained using overparameterized generator and discriminator networks, both in terms of depth and width. A large body of work in supervised learning have shown the importance of model overparameterization in the convergence of the gradient descent (GD) to globally optimal solutions. In contrast, the unsupervised setting and GANs in particular involve non-convex concave mini-max optimization problems that are often trained using Gradient Descent/Ascent (GDA). The role and benefits of model overparameterization in the convergence of GDA to a global saddle point in non-convex concave problems is far less understood. In this work, we present a comprehensive analysis of the importance of model overparameterization in GANs both theoretically and empirically. We theoretically show that in an overparameterized GAN model with a $1$-layer neural network generator and a linear discriminator, GDA converges to a global saddle point of the underlying non-convex concave min-max problem. To the best of our knowledge, this is the first result for global convergence of GDA in such settings. Our theory is based on a more general result that holds for a broader class of nonlinear generators and discriminators that obey certain assumptions (including deeper generators and random feature discriminators). Our theory utilizes and builds upon a novel connection with the convergence analysis of linear time-varying dynamical systems which may have broader implications for understanding the convergence behavior of GDA for non-convex concave problems involving overparameterized models. We also empirically study the role of model overparameterization in GANs using several large-scale experiments on CIFAR-10 and Celeb-A datasets. Our experiments show that overparameterization improves the quality of generated samples across various model architectures and datasets. Remarkably, we observe that overparameterization leads to faster and more stable convergence behavior of GDA across the board",
-    "checked": false,
-    "id": "6f585a16bf7744f0788f803da0549bd555c87ea3",
-    "semantic_title": "understanding estimation and generalization error of generative adversarial networks",
-    "citation_count": 4
+    "checked": true,
+    "id": "0e88d281745088151f4812df91f9be850bec97f8",
+    "semantic_title": "Understanding Overparameterization in Generative Adversarial Networks",
+    "citation_count": 19
   },
   "https://openreview.net/forum?id=A2gNouoXE7": {
     "title": "Filtered Inner Product Projection for Crosslingual Embedding Alignment",
@@ -3774,7 +3774,7 @@
     "title": "Deep Partition Aggregation: Provable Defenses against General Poisoning Attacks",
     "volume": "poster",
     "abstract": "Adversarial poisoning attacks distort training data in order to corrupt the test-time behavior of a classifier. A provable defense provides a certificate for each test sample, which is a lower bound on the magnitude of any adversarial distortion of the training set that can corrupt the test sample's classification. We propose two novel provable defenses against poisoning attacks: (i) Deep Partition Aggregation (DPA), a certified defense against a general poisoning threat model, defined as the insertion or deletion of a bounded number of samples to the training set --- by implication, this threat model also includes arbitrary distortions to a bounded number of images and/or labels; and (ii) Semi-Supervised DPA (SS-DPA), a certified defense against label-flipping poisoning attacks. DPA is an ensemble method where base models are trained on partitions of the training set determined by a hash function. DPA is related to both subset aggregation, a well-studied ensemble method in classical machine learning, as well as to randomized smoothing, a popular provable defense against evasion (inference) attacks. Our defense against label-flipping poison attacks, SS-DPA, uses a semi-supervised learning algorithm as its base classifier model: each base classifier is trained using the entire unlabeled training set in addition to the labels for a partition. SS-DPA significantly outperforms the existing certified defense for label-flipping attacks (Rosenfeld et al., 2020) on both MNIST and CIFAR-10: provably tolerating, for at least half of test images, over 600 label flips (vs. < 200 label flips) on MNIST and over 300 label flips (vs. 175 label flips) on CIFAR-10. Against general poisoning attacks where no prior certified defenses exists, DPA can certify $\\geq$ 50% of test images against over 500 poison image insertions on MNIST, and nine insertions on CIFAR-10. These results establish new state-of-the-art provable defenses against general and label-flipping poison attacks. Code is available at https://github.com/alevine0/DPA",
-    "checked": false,
+    "checked": true,
     "id": "6cf1116dc8b431b2471bb5407d9a8be0eb067c2d",
     "semantic_title": "deep partition aggregation: provable defense against general poisoning attacks",
     "citation_count": 84
@@ -4539,7 +4539,7 @@
     "title": "Multi-Level Local SGD: Distributed SGD for Heterogeneous Hierarchical Networks",
     "volume": "poster",
     "abstract": "We propose Multi-Level Local SGD, a distributed stochastic gradient method for learning a smooth, non-convex objective in a multi-level communication network with heterogeneous workers. Our network model consists of a set of disjoint sub-networks, with a single hub and multiple workers; further, workers may have different operating rates. The hubs exchange information with one another via a connected, but not necessarily complete communication network. In our algorithm, sub-networks execute a distributed SGD algorithm, using a hub-and-spoke paradigm, and the hubs periodically average their models with neighboring hubs. We first provide a unified mathematical framework that describes the Multi-Level Local SGD algorithm. We then present a theoretical analysis of the algorithm; our analysis shows the dependence of the convergence error on the worker node heterogeneity, hub network topology, and the number of local, sub-network, and global iterations. We illustrate the effectiveness of our algorithm in a multi-level network with slow workers via simulation-based experiments",
-    "checked": false,
+    "checked": true,
     "id": "b97d07c6dc6132dbcbddf203d4a3f2d2a803f414",
     "semantic_title": "multi-level local sgd for heterogeneous hierarchical networks",
     "citation_count": 25
@@ -4890,7 +4890,7 @@
     "title": "Long Range Arena : A Benchmark for Efficient Transformers",
     "volume": "poster",
     "abstract": "Transformers do not scale very well to long sequence lengths largely because of quadratic self-attention complexity. In the recent months, a wide spectrum of efficient, fast Transformers have been proposed to tackle this problem, more often than not claiming superior or comparable model quality to vanilla Transformer models. To this date, there is no well-established consensus on how to evaluate this class of models. Moreover, inconsistent benchmarking on a wide spectrum of tasks and datasets makes it difficult to assess relative model quality amongst many models. This paper proposes a systematic and unified benchmark, Long Range Arena, specifically focused on evaluating model quality under long-context scenarios. Our benchmark is a suite of tasks consisting of sequences ranging from $1K$ to $16K$ tokens, encompassing a wide range of data types and modalities such as text, natural, synthetic images, and mathematical expressions requiring similarity, structural, and visual-spatial reasoning. We systematically evaluate ten well-established long-range Transformer models (Reformers, Linformers, Linear Transformers, Sinkhorn Transformers, Performers, Synthesizers, Sparse Transformers, and Longformers) on our newly proposed benchmark suite. Long Range Arena paves the way towards better understanding this class of efficient Transformer models, facilitates more research in this direction, and presents new challenging tasks to tackle",
-    "checked": false,
+    "checked": true,
     "id": "7e9ff94476f41041c75e253e84f487db00e9c861",
     "semantic_title": "long range arena: a benchmark for efficient transformers",
     "citation_count": 352
@@ -5187,7 +5187,7 @@
     "title": "When Optimizing f -Divergence is Robust with Label Noise",
     "volume": "poster",
     "abstract": "We show when maximizing a properly defined $f$-divergence measure with respect to a classifier's predictions and the supervised labels is robust with label noise. Leveraging its variational form, we derive a nice decoupling property for a family of $f$-divergence measures when label noise presents, where the divergence is shown to be a linear combination of the variational difference defined on the clean distribution and a bias term introduced due to the noise. The above derivation helps us analyze the robustness of different $f$-divergence functions. With established robustness, this family of $f$-divergence functions arises as useful metrics for the problem of learning with noisy labels, which do not require the specification of the labels' noise rate. When they are possibly not robust, we propose fixes to make them so. In addition to the analytical results, we present thorough experimental evidence. Our code is available at https://github.com/UCSC-REAL/Robust-f-divergence-measures",
-    "checked": false,
+    "checked": true,
     "id": "0abff557bf1c38a1fbbbeaa01dea66cd1ac5e988",
     "semantic_title": "when optimizing f-divergence is robust with label noise",
     "citation_count": 40
@@ -5340,7 +5340,7 @@
     "title": "Direction Matters: On the Implicit Bias of Stochastic Gradient Descent with Moderate Learning Rate",
     "volume": "poster",
     "abstract": "Understanding the algorithmic bias of stochastic gradient descent (SGD) is one of the key challenges in modern machine learning and deep learning theory. Most of the existing works, however, focus on very small or even infinitesimal learning rate regime, and fail to cover practical scenarios where the learning rate is moderate and annealing. In this paper, we make an initial attempt to characterize the particular regularization effect of SGD in the moderate learning rate regime by studying its behavior for optimizing an overparameterized linear regression problem. In this case, SGD and GD are known to converge to the unique minimum-norm solution; however, with the moderate and annealing learning rate, we show that they exhibit different directional bias: SGD converges along the large eigenvalue directions of the data matrix, while GD goes after the small eigenvalue directions. Furthermore, we show that such directional bias does matter when early stopping is adopted, where the SGD output is nearly optimal but the GD output is suboptimal. Finally, our theory explains several folk arts in practice used for SGD hyperparameter tuning, such as (1) linearly scaling the initial learning rate with batch size; and (2) overrunning SGD with high learning rate even when the loss stops decreasing",
-    "checked": false,
+    "checked": true,
     "id": "89cd1a37012317393ad230ef3b93a286978649f0",
     "semantic_title": "direction matters: on the implicit regularization effect of stochastic gradient descent with moderate learning rate",
     "citation_count": 22
@@ -6483,7 +6483,7 @@
     "title": "i -Mix: A Domain-Agnostic Strategy for Contrastive Representation Learning",
     "volume": "poster",
     "abstract": "Contrastive representation learning has shown to be effective to learn representations from unlabeled data. However, much progress has been made in vision domains relying on data augmentations carefully designed using domain knowledge. In this work, we propose i-Mix, a simple yet effective domain-agnostic regularization strategy for improving contrastive representation learning. We cast contrastive learning as training a non-parametric classifier by assigning a unique virtual class to each data in a batch. Then, data instances are mixed in both the input and virtual label spaces, providing more augmented data during training. In experiments, we demonstrate that i-Mix consistently improves the quality of learned representations across domains, including image, speech, and tabular data. Furthermore, we confirm its regularization effect via extensive ablation studies across model and dataset sizes. The code is available at https://github.com/kibok90/imix",
-    "checked": false,
+    "checked": true,
     "id": "c709a3ac669aa334d6a0e9544f9191c5516da8a2",
     "semantic_title": "i-mix: a domain-agnostic strategy for contrastive representation learning",
     "citation_count": 79
@@ -6627,7 +6627,7 @@
     "title": "Partitioned Learned Bloom Filters",
     "volume": "poster",
     "abstract": "Bloom filters are space-efficient probabilistic data structures that are used to test whether an element is a member of a set, and may return false positives. Recently, variations referred to as learned Bloom filters were developed that can provide improved performance in terms of the rate of false positives, by using a learned model for the represented set. However, previous methods for learned Bloom filters do not take full advantage of the learned model. Here we show how to frame the problem of optimal model utilization as an optimization problem, and using our framework derive algorithms that can achieve near-optimal performance in many cases",
-    "checked": false,
+    "checked": true,
     "id": "e7a7ce163a286bc826bd9a10cdbca3777b4fe149",
     "semantic_title": "partitioned learned bloom filter",
     "citation_count": 37
@@ -6762,7 +6762,7 @@
     "title": "Conformation-Guided Molecular Representation with Hamiltonian Neural Networks",
     "volume": "poster",
     "abstract": "Well-designed molecular representations (fingerprints) are vital to combine medical chemistry and deep learning. Whereas incorporating 3D geometry of molecules (i.e. conformations) in their representations seems beneficial, current 3D algorithms are still in infancy. In this paper, we propose a novel molecular representation algorithm which preserves 3D conformations of molecules with a Molecular Hamiltonian Network (HamNet). In HamNet, implicit positions and momentums of atoms in a molecule interact in the Hamiltonian Engine following the discretized Hamiltonian equations. These implicit coordinations are supervised with real conformations with translation- & rotation-invariant losses, and further used as inputs to the Fingerprint Generator, a message-passing neural network. Experiments show that the Hamiltonian Engine can well preserve molecular conformations, and that the fingerprints generated by HamNet achieve state-of-the-art performances on MoleculeNet, a standard molecular machine learning benchmark",
-    "checked": false,
+    "checked": true,
     "id": "69bab843432803a8f69ffa7c33779f205e843841",
     "semantic_title": "hamnet: conformation-guided molecular representation with hamiltonian neural networks",
     "citation_count": 19
@@ -7599,7 +7599,7 @@
     "title": "Rethinking Soft Labels for Knowledge Distillation: A Bias–Variance Tradeoff Perspective",
     "volume": "poster",
     "abstract": "Knowledge distillation is an effective approach to leverage a well-trained network or an ensemble of them, named as the teacher, to guide the training of a student network. The outputs from the teacher network are used as soft labels for supervising the training of a new network. Recent studies (M ̈uller et al., 2019; Yuan et al., 2020) revealed an intriguing property of the soft labels that making labels soft serves as a good regularization to the student network. From the perspective of statistical learning, regularization aims to reduce the variance, however how bias and variance change is not clear for training with soft labels. In this paper, we investigate the bias-variance tradeoff brought by distillation with soft labels. Specifically, we observe that during training the bias-variance tradeoff varies sample-wisely. Further, under the same distillation temperature setting, we observe that the distillation performance is negatively associated with the number of some specific samples, which are named as regularization samples since these samples lead to bias increasing and variance decreasing. Nevertheless, we empirically find that completely filtering out regularization samples also deteriorates distillation performance. Our discoveries inspired us to propose the novel weighted soft labels to help the network adaptively handle the sample-wise bias-variance tradeoff. Experiments on standard evaluation benchmarks validate the effectiveness of our method. Our code is available in the supplementary",
-    "checked": false,
+    "checked": true,
     "id": "be51e9141ae2af4daf3a1ba745ad3ff66a5990f3",
     "semantic_title": "rethinking soft labels for knowledge distillation: a bias-variance tradeoff perspective",
     "citation_count": 80
@@ -7734,19 +7734,19 @@
     "title": "Geometry encoding for numerical simulations",
     "volume": "workshop",
     "abstract": "We present a notion of geometry encoding suitable for machine learning-based numerical simulation. In particular, we delineate how this notion of encoding is different than other encoding algorithms commonly used in other disciplines such as computer vision and computer graphics. We also present a model comprised of multiple neural networks including a processor, a compressor and an evaluator. These parts each satisfy a particular requirement of our encoding. We compare our encoding model with the analogous models in the literature",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
+    "checked": true,
+    "id": "42f873766100a884a19a6cd4db5518fcec47c5d2",
+    "semantic_title": "Geometry encoding for numerical simulations",
+    "citation_count": 2
   },
   "https://openreview.net/forum?id=RZgbB-O3w6Z": {
     "title": "Weisfeiler and Lehman Go Topological: Message Passing Simplicial Networks",
     "volume": "workshop",
     "abstract": "The pairwise interaction paradigm of graph machine learning has predominantly governed the modelling of relational systems. However, graphs alone cannot capture the multi-level interactions present in many complex systems and the expressive power of such schemes was proven to be limited. To overcome these limitations, we propose Message Passing Simplicial Networks (MPSNs), a class of models that perform message passing on simplicial complexes (SCs) -- topological objects generalising graphs to higher dimensions. To theoretically analyse the expressivity of our model we introduce a Simplicial Weisfeiler-Lehman (SWL) colouring procedure for distinguishing non-isomorphic SCs. We relate the power of SWL to the problem of distinguishing non-isomorphic graphs and show that SWL and MPSNs are strictly more powerful than the WL test and not less powerful than the 3-WL test. We deepen the analysis by comparing our model with traditional graph neural networks with ReLU activations in terms of the number of linear regions of the functions they can represent. We empirically support our theoretical claims by showing that MPSNs can distinguish challenging strongly regular graphs for which GNNs fail and, when equipped with orientation equivariant layers, they can improve classification accuracy in oriented SCs compared to a GNN baseline. Our model also attains competitive results on real-world graph classification datasets, with best performance on those tasks with a more prominent number of higher-order interactions. Additionally, we implement a library for neural message passing on simplicial complexes that we envision to release in due course",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
+    "checked": true,
+    "id": "758294483c308d9d6028321f0741b6e4617c9ab9",
+    "semantic_title": "Weisfeiler and Lehman Go Topological: Message Passing Simplicial Networks",
+    "citation_count": 144
   },
   "https://openreview.net/forum?id=SL9w_9M-kSj": {
     "title": "On Linear Interpolation in the Latent Space of Deep Generative Models",
@@ -7779,9 +7779,9 @@
     "title": "Simplicial Regularization",
     "volume": "workshop",
     "abstract": "Inspired by the fuzzy topological representation of a dataset employed in UMAP (McInnes et al., 2018), we propose a regularization principle for supervised learning based on the preservation of the simplicial complex structure of the data. We analyze the behavior of our proposal in contrast with the mixup (Zhang et al., 2018) framework on dimensionality reduction and classification tasks. Our experiments show how simplicial regularization induces more appropriate learning biases and alleviates some of the shortcomings of state-of-the art methods for regularization based on data augmentation",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "checked": true,
+    "id": "ce1bd7ce700ba29c653c99b7516e44afb6a7e403",
+    "semantic_title": "SIMPLICIAL REGULARIZATION",
     "citation_count": 0
   },
   "https://openreview.net/forum?id=zyRPy5KrN6": {
@@ -8355,7 +8355,7 @@
     "title": "Neural data compression for physics plasma simulation",
     "volume": "workshop",
     "abstract": "We present a VAE-based data compression method, called VAe Physics Optimized Reduction (VAPOR), to compress scientific data while preserving physics constraints. VAPOR is based on Vector Quantized Variational Auto Encoder (VQ-VAE) and extended with physics-informed optimization functions and refinement layers, focusing on compressing and reconstructing scientific data with minimum loss of information under physics constraints. We demonstrate VAPOR by using outputs from XGC, a massively parallel fusion simulation code running on the largest supercomputers. Key features of VAPOR are three-fold; i) find a reduced representation of physics data, ii) reconstruct the data with a minimum loss, iii) preserve physics information (e.g., mass, energy, moment conservation). We discuss challenges in XGC 5D data reconstruction and present our initial experiences and results on how we construct Deep Neural Network (DNN) of VAPOR to optimize the reconstruction quality of XGC data and integrate XGC's physics constraints",
-    "checked": false,
+    "checked": true,
     "id": "41a1046011493e736974212ac49f63fbb193f42d",
     "semantic_title": "n eural data compression for physics plasma simulation",
     "citation_count": 4
