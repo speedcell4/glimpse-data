@@ -165,7 +165,7 @@
     "title": "Katyusha X: Simple Momentum Method for Stochastic Sum-of-Nonconvex Optimization",
     "volume": "main",
     "abstract": "The problem of minimizing sum-of-nonconvex functions (i.e., convex functions that are average of non-convex ones) is becoming increasing important in machine learning, and is the core machinery for PCA, SVD, regularized Newton's method, accelerated non-convex optimization, and more. We show how to provably obtain an accelerated stochastic algorithm for minimizing sum-of-nonconvex functions, by adding one additional line to the well-known SVRG method. This line corresponds to momentum, and shows how to directly apply momentum to the finite-sum stochastic minimization of sum-of-nonconvex functions. As a side result, our method enjoys linear parallel speed-up using mini-batch",
-    "checked": false,
+    "checked": true,
     "id": "faec298384f1c8fcfab8ae84df4cdb9d026487bc",
     "semantic_title": "katyusha x: practical momentum method for stochastic sum-of-nonconvex optimization",
     "citation_count": 44
@@ -282,7 +282,7 @@
     "title": "Greed is Still Good: Maximizing Monotone Submodular+Supermodular (BP) Functions",
     "volume": "main",
     "abstract": "We analyze the performance of the greedy algorithm, and also a discrete semi-gradient based algorithm, for maximizing the sum of a suBmodular and suPermodular (BP) function (both of which are non-negative monotone non-decreasing) under two types of constraints, either a cardinality constraint or $p\\geq 1$ matroid independence constraints. These problems occur naturally in several real-world applications in data science, machine learning, and artificial intelligence. The problems are ordinarily inapproximable to any factor. Using the curvature $\\curv_f$ of the submodular term, and introducing $\\curv^g$ for the supermodular term (a natural dual curvature for supermodular functions), however, both of which are computable in linear time, we show that BP maximization can be efficiently approximated by both the greedy and the semi-gradient based algorithm. The algorithms yield multiplicative guarantees of $\\frac{1}{\\curv_f}\\left[1-e^{-(1-\\curv^g)\\curv_f}\\right]$ and $\\frac{1-\\curv^g}{(1-\\curv^g)\\curv_f + p}$ for the two types of constraints respectively. For pure monotone supermodular constrained maximization, these yield $1-\\curvg$ and $(1-\\curvg)/p$ for the two types of constraints respectively. We also analyze the hardness of BP maximization and show that our guarantees match hardness by a constant factor and by $O(\\ln(p))$ respectively. Computational experiments are also provided supporting our analysis",
-    "checked": false,
+    "checked": true,
     "id": "3076aa03e4f5516e8fd50cc3e2b849d83f9ccc45",
     "semantic_title": "greed is still good: maximizing monotone submodular+supermodular functions",
     "citation_count": 44
@@ -480,7 +480,7 @@
     "title": "Gradient descent with identity initialization efficiently learns positive definite linear transformations by deep residual networks",
     "volume": "main",
     "abstract": "We analyze algorithms for approximating a function $f(x) = \\Phi x$ mapping $\\Re^d$ to $\\Re^d$ using deep linear neural networks, i.e. that learn a function $h$ parameterized by matrices $\\Theta_1,...,\\Theta_L$ and defined by $h(x) = \\Theta_L \\Theta_{L-1} ... \\Theta_1 x$. We focus on algorithms that learn through gradient descent on the population quadratic loss in the case that the distribution over the inputs is isotropic. We provide polynomial bounds on the number of iterations for gradient descent to approximate the least squares matrix $\\Phi$, in the case where the initial hypothesis $\\Theta_1 = ... = \\Theta_L = I$ has excess loss bounded by a small enough constant. On the other hand, we show that gradient descent fails to converge for $\\Phi$ whose distance from the identity is a larger constant, and we show that some forms of regularization toward the identity in each layer do not help. If $\\Phi$ is symmetric positive definite, we show that an algorithm that initializes $\\Theta_i = I$ learns an $\\epsilon$-approximation of $f$ using a number of updates polynomial in $L$, the condition number of $\\Phi$, and $\\log(d/\\epsilon)$. In contrast, we show that if the least squares matrix $\\Phi$ is symmetric and has a negative eigenvalue, then all members of a class of algorithms that perform gradient descent with identity initialization, and optionally regularize toward the identity in each layer, fail to converge. We analyze an algorithm for the case that $\\Phi$ satisfies $u^{\\top} \\Phi u > 0$ for all $u$, but may not be symmetric. This algorithm uses two regularizers: one that maintains the invariant $u^{\\top} \\Theta_L \\Theta_{L-1} ... \\Theta_1 u > 0$ for all $u$, and another that \"balances\" $\\Theta_1, ..., \\Theta_L$ so that they have the same singular values",
-    "checked": false,
+    "checked": true,
     "id": "63ae7e196430fe250e65b65fdef261d357921d28",
     "semantic_title": "gradient descent with identity initialization efficiently learns positive-definite linear transformations by deep residual networks",
     "citation_count": 106
@@ -768,7 +768,7 @@
     "title": "Scalable Bilinear Pi Learning Using State and Action Features",
     "volume": "main",
     "abstract": "Approximate linear programming (ALP) represents one of the major algorithmic families to solve large-scale Markov decision processes (MDP). In this work, we study a primal-dual formulation of the ALP, and develop a scalable, model-free algorithm called bilinear $\\pi$ learning for reinforcement learning when a sampling oracle is provided. This algorithm enjoys a number of advantages. First, it adopts linear and bilinear models to represent the high-dimensional value function and state-action distributions, respectively, using given state and action features. Its run-time complexity depends on the number of features, not the size of the underlying MDPs. Second, it operates in a fully online fashion without having to store any sample, thus having minimal memory footprint. Third, we prove that it is sample-efficient, solving for the optimal policy to high precision with a sample complexity linear in the dimension of the parameter space",
-    "checked": false,
+    "checked": true,
     "id": "53a61a580b2d491858cd9f9928a03ebf434b55ec",
     "semantic_title": "scalable bilinear π learning using state and action features",
     "citation_count": 47
@@ -786,7 +786,7 @@
     "title": "Learning K-way D-dimensional Discrete Codes for Compact Embedding Representations",
     "volume": "main",
     "abstract": "Conventional embedding methods directly associate each symbol with a continuous embedding vector, which is equivalent to applying a linear transformation based on a \"one-hot\" encoding of the discrete symbols. Despite its simplicity, such approach yields the number of parameters that grows linearly with the vocabulary size and can lead to overfitting. In this work, we propose a much more compact K-way D-dimensional discrete encoding scheme to replace the \"one-hot\" encoding. In the proposed \"KD encoding\", each symbol is represented by a $D$-dimensional code with a cardinality of $K$, and the final symbol embedding vector is generated by composing the code embedding vectors. To end-to-end learn semantically meaningful codes, we derive a relaxed discrete optimization approach based on stochastic gradient descent, which can be generally applied to any differentiable computational graph with an embedding layer. In our experiments with various applications from natural language processing to graph convolutional networks, the total size of the embedding layer can be reduced up to 98% while achieving similar or better performance",
-    "checked": false,
+    "checked": true,
     "id": "30aebd4ada05f737f45f29229ca40155bd909cfb",
     "semantic_title": "learning k-way d-dimensional discrete code for compact embedding representations",
     "citation_count": 69
@@ -822,7 +822,7 @@
     "title": "Variational Inference and Model Selection with Generalized Evidence Bounds",
     "volume": "main",
     "abstract": "Recent advances on the scalability and flexibility of variational inference have made it successful at unravelling hidden patterns in complex data. In this work we propose a new variational bound formulation, yielding an estimator that extends beyond the conventional variational bound. It naturally subsumes the importance-weighted and Renyi bounds as special cases, and it is provably sharper than these counterparts. We also present an improved estimator for variational learning, and advocate a novel high signal-to-variance ratio update rule for the variational parameters. We discuss model-selection issues associated with existing evidence-lower-bound-based variational inference procedures, and show how to leverage the flexibility of our new formulation to address them. Empirical evidence is provided to validate our claims",
-    "checked": false,
+    "checked": true,
     "id": "1b1719e7799c44aad6ff58eb0fd2ee1129478c4a",
     "semantic_title": "supplementary material for \" variational inference and model selection with generalized evidence bounds",
     "citation_count": 33
@@ -849,7 +849,7 @@
     "title": "Covariate Adjusted Precision Matrix Estimation via Nonconvex Optimization",
     "volume": "main",
     "abstract": "We propose a nonconvex estimator for the covariate adjusted precision matrix estimation problem in the high dimensional regime, under sparsity constraints. To solve this estimator, we propose an alternating gradient descent algorithm with hard thresholding. Compared with existing methods along this line of research, which lack theoretical guarantees in optimization error and/or statistical error, the proposed algorithm not only is computationally much more efficient with a linear rate of convergence, but also attains the optimal statistical rate up to a logarithmic factor. Thorough experiments on both synthetic and real data support our theory",
-    "checked": false,
+    "checked": true,
     "id": "075aacea15992a57c912d62a67983c0761aafc99",
     "semantic_title": "better and faster: covariate adjusted precision matrix estimation via nonconvex optimization",
     "citation_count": 11
@@ -1002,7 +1002,7 @@
     "title": "Mix & Match Agent Curricula for Reinforcement Learning",
     "volume": "main",
     "abstract": "We introduce Mix and match (M&M) – a training framework designed to facilitate rapid and effective learning in RL agents that would be too slow or too challenging to train otherwise.The key innovation is a procedure that allows us to automatically form a curriculum over agents. Through such a curriculum we can progressively train more complex agents by, effectively, bootstrapping from solutions found by simpler agents.In contradistinction to typical curriculum learning approaches, we do not gradually modify the tasks or environments presented, but instead use a process to gradually alter how the policy is represented internally.We show the broad applicability of our method by demonstrating significant performance gains in three different experimental setups: (1) We train an agent able to control more than 700 actions in a challenging 3D first-person task; using our method to progress through an action-space curriculum we achieve both faster training and better final performance than one obtains using traditional methods.(2) We further show that M&M can be used successfully to progress through a curriculum of architectural variants defining an agents internal state. (3) Finally, we illustrate how a variant of our method can be used to improve agent performance in a multitask setting",
-    "checked": false,
+    "checked": true,
     "id": "a102ccbe6ccffa59cf4db4984bc95a6172c7da91",
     "semantic_title": "mix&match - agent curricula for reinforcement learning",
     "citation_count": 58
@@ -1056,7 +1056,7 @@
     "title": "Asynchronous Byzantine Machine Learning (the case of SGD)",
     "volume": "main",
     "abstract": "Asynchronous distributed machine learning solutions have proven very effective so far, but always assuming perfectly functioning workers. In practice, some of the workers can however exhibit Byzantine behavior, caused by hardware failures, software bugs, corrupt data, or even malicious attacks. We introduce Kardam, the first distributed asynchronous stochastic gradient descent (SGD) algorithm that copes with Byzantine workers. Kardam consists of two complementary components: a filtering and a dampening component. The first is scalar-based and ensures resilience against 1/3 Byzantine workers. Essentially, this filter leverages the Lipschitzness of cost functions and acts as a self-stabilizer against Byzantine workers that would attempt to corrupt the progress of SGD. The dampening component bounds the convergence rate by adjusting to stale information through a generic gradient weighting scheme. We prove that Kardam guarantees almost sure convergence in the presence of asynchrony and Byzantine behavior, and we derive its convergence rate. We evaluate Kardam on the CIFAR100 and EMNIST datasets and measure its overhead with respect to non Byzantine-resilient solutions. We empirically show that Kardam does not introduce additional noise to the learning procedure but does induce a slowdown (the cost of Byzantine resilience) that we both theoretically and empirically show to be less than f/n, where f is the number of Byzantine failures tolerated and n the total number of workers. Interestingly, we also empirically observe that the dampening component is interesting in its own right for it enables to build an SGD algorithm that outperforms alternative staleness-aware asynchronous competitors in environments with honest workers",
-    "checked": false,
+    "checked": true,
     "id": "9e18f56bfee171cd53702ad028a1be957683eeaa",
     "semantic_title": "asynchronous byzantine machine learning ( the case of sgd ) supplementary material",
     "citation_count": 17
@@ -1146,7 +1146,7 @@
     "title": "Leveraging Well-Conditioned Bases: Streaming and Distributed Summaries in Minkowski $p$-Norms",
     "volume": "main",
     "abstract": "Work on approximate linear algebra has led to efficient distributed and streaming algorithms for problems such as approximate matrix multiplication, low rank approximation, and regression, primarily for the Euclidean norm $\\ell_2$. We study other $\\ell_p$ norms, which are more robust for $p < 2$, and can be used to find outliers for $p > 2$. Unlike previous algorithms for such norms, we give algorithms that are (1) deterministic, (2) work simultaneously for every $p \\geq 1$, including $p = \\infty$, and (3) can be implemented in both distributed and streaming environments. We study $\\ell_p$-regression, entrywise $\\ell_p$-low rank approximation, and versions of approximate matrix multiplication",
-    "checked": false,
+    "checked": true,
     "id": "922034bf76536e70f2cc2b59fa4a1fd8e4b14c16",
     "semantic_title": "leveraging well-conditioned bases: streaming and distributed summaries in minkowski p-norms",
     "citation_count": 10
@@ -1281,7 +1281,7 @@
     "title": "Beyond the One-Step Greedy Approach in Reinforcement Learning",
     "volume": "main",
     "abstract": "The famous Policy Iteration algorithm alternates between policy improvement and policy evaluation. Implementations of this algorithm with several variants of the latter evaluation stage, e.g, n-step and trace-based returns, have been analyzed in previous works. However, the case of multiple-step lookahead policy improvement, despite the recent increase in empirical evidence of its strength, has to our knowledge not been carefully analyzed yet. In this work, we introduce the first such analysis. Namely, we formulate variants of multiple-step policy improvement, derive new algorithms using these definitions and prove their convergence. Moreover, we show that recent prominent Reinforcement Learning algorithms are, in fact, instances of our framework. We thus shed light on their empirical success and give a recipe for deriving new algorithms for future study",
-    "checked": false,
+    "checked": true,
     "id": "af3b940a174611e010720505d672e283f29716ed",
     "semantic_title": "beyond the one step greedy approach in reinforcement learning",
     "citation_count": 39
@@ -1407,7 +1407,7 @@
     "title": "DiCE: The Infinitely Differentiable Monte Carlo Estimator",
     "volume": "main",
     "abstract": "The score function estimator is widely used for estimating gradients of stochastic objectives in stochastic computation graphs (SCG), eg., in reinforcement learning and meta-learning. While deriving the first-order gradient estimators by differentiating a surrogate loss (SL) objective is computationally and conceptually simple, using the same approach for higher-order derivatives is more challenging. Firstly, analytically deriving and implementing such estimators is laborious and not compliant with automatic differentiation. Secondly, repeatedly applying SL to construct new objectives for each order derivative involves increasingly cumbersome graph manipulations. Lastly, to match the first-order gradient under differentiation, SL treats part of the cost as a fixed sample, which we show leads to missing and wrong terms for estimators of higher-order derivatives. To address all these shortcomings in a unified way, we introduce DiCE, which provides a single objective that can be differentiated repeatedly, generating correct estimators of derivatives of any order in SCGs. Unlike SL, DiCE relies on automatic differentiation for performing the requisite graph manipulations. We verify the correctness of DiCE both through a proof and numerical evaluation of the DiCE derivative estimates. We also use DiCE to propose and evaluate a novel approach for multi-agent learning. Our code is available at https://github.com/alshedivat/lola",
-    "checked": false,
+    "checked": true,
     "id": "c43cb828e05c23e78ac05a870ace8c2eb323e501",
     "semantic_title": "dice: the infinitely differentiable monte-carlo estimator",
     "citation_count": 74
@@ -1740,7 +1740,7 @@
     "title": "Candidates vs. Noises Estimation for Large Multi-Class Classification Problem",
     "volume": "main",
     "abstract": "This paper proposes a method for multi-class classification problems, where the number of classes K is large. The method, referred to as Candidates vs. Noises Estimation (CANE), selects a small subset of candidate classes and samples the remaining classes. We show that CANE is always consistent and computationally efficient. Moreover, the resulting estimator has low statistical variance approaching that of the maximum likelihood estimator, when the observed label belongs to the selected candidates with high probability. In practice, we use a tree structure with leaves as classes to promote fast beam search for candidate selection. We further apply the CANE method to estimate word probabilities in learning large neural language models. Extensive experimental results show that CANE achieves better prediction accuracy over the Noise-Contrastive Estimation (NCE), its variants and a number of the state-of-the-art tree classifiers, while it gains significant speedup compared to standard O(K) methods",
-    "checked": false,
+    "checked": true,
     "id": "44b509deb7ce8f0346491c575b2223be9f950f19",
     "semantic_title": "candidates v.s. noises estimation for large multi-class classification problem",
     "citation_count": 3
@@ -1866,7 +1866,7 @@
     "title": "Does Distributionally Robust Supervised Learning Give Robust Classifiers?",
     "volume": "main",
     "abstract": "Distributionally Robust Supervised Learning (DRSL) is necessary for building reliable machine learning systems. When machine learning is deployed in the real world, its performance can be significantly degraded because test data may follow a different distribution from training data. DRSL with f-divergences explicitly considers the worst-case distribution shift by minimizing the adversarially reweighted training loss. In this paper, we analyze this DRSL, focusing on the classification scenario. Since the DRSL is explicitly formulated for a distribution shift scenario, we naturally expect it to give a robust classifier that can aggressively handle shifted distributions. However, surprisingly, we prove that the DRSL just ends up giving a classifier that exactly fits the given training distribution, which is too pessimistic. This pessimism comes from two sources: the particular losses used in classification and the fact that the variety of distributions to which the DRSL tries to be robust is too wide. Motivated by our analysis, we propose simple DRSL that overcomes this pessimism and empirically demonstrate its effectiveness",
-    "checked": false,
+    "checked": true,
     "id": "07b5093aace8e485e7d23b83edb6351618138127",
     "semantic_title": "revisiting distributionally robust supervised learning in classification",
     "citation_count": 174
@@ -1902,7 +1902,7 @@
     "title": "Learning Hidden Markov Models from Pairwise Co-occurrences with Application to Topic Modeling",
     "volume": "main",
     "abstract": "We present a new algorithm for identifying the transition and emission probabilities of a hidden Markov model (HMM) from the emitted data. Expectation-maximization becomes computationally prohibitive for long observation records, which are often required for identification. The new algorithm is particularly suitable for cases where the available sample size is large enough to accurately estimate second-order output probabilities, but not higher-order ones. We show that if one is only able to obtain a reliable estimate of the pairwise co-occurrence probabilities of the emissions, it is still possible to uniquely identify the HMM if the emission probability is sufficiently scattered. We apply our method to hidden topic Markov modeling, and demonstrate that we can learn topics with higher quality if documents are modeled as observations of HMMs sharing the same emission (topic) probability, compared to the simple but widely used bag-of-words model",
-    "checked": false,
+    "checked": true,
     "id": "1406ea915bb313c85604583c8705715dd3d0693b",
     "semantic_title": "learning hidden markov models from pairwise co-occurrences with applications to topic modeling",
     "citation_count": 20
@@ -2037,7 +2037,7 @@
     "title": "Differentially Private Matrix Completion Revisited",
     "volume": "main",
     "abstract": "We provide the first provably joint differentially private algorithm with formal utility guarantees for the problem of user-level privacy-preserving collaborative filtering. Our algorithm is based on the Frank-Wolfe method, and it consistently estimates the underlying preference matrix as long as the number of users $m$ is $\\omega(n^{5/4})$, where $n$ is the number of items, and each user provides her preference for at least $\\sqrt{n}$ randomly selected items. Along the way, we provide an optimal differentially private algorithm for singular vector computation, based on the celebrated Oja's method, that provides significant savings in terms of space and time while operating on sparse matrices. We also empirically evaluate our algorithm on a suite of datasets, and show that it consistently outperforms the state-of-the-art private algorithms",
-    "checked": false,
+    "checked": true,
     "id": "0c90acbe5114ded9fa3c5978fab5de9dc0b0e523",
     "semantic_title": "differentially private matrix completion, revisited",
     "citation_count": 26
@@ -2091,7 +2091,7 @@
     "title": "Exploring Hidden Dimensions in Accelerating Convolutional Neural Networks",
     "volume": "main",
     "abstract": "The past few years have witnessed growth in the computational requirements for training deep convolutional neural networks. Current approaches parallelize training onto multiple devices by applying a single parallelization strategy (e.g., data or model parallelism) to all layers in a network. Although easy to reason about, these approaches result in suboptimal runtime performance in large-scale distributed training, since different layers in a network may prefer different parallelization strategies. In this paper, we propose layer-wise parallelism that allows each layer in a network to use an individual parallelization strategy. We jointly optimize how each layer is parallelized by solving a graph search problem. Our evaluation shows that layer-wise parallelism outperforms state-of-the-art approaches by increasing training throughput, reducing communication costs, achieving better scalability to multiple GPUs, while maintaining original network accuracy",
-    "checked": false,
+    "checked": true,
     "id": "f1c5dacd324d5d764432d7d331f1d0091ce35ddb",
     "semantic_title": "exploring the hidden dimension in accelerating convolutional neural networks",
     "citation_count": 10
@@ -2433,7 +2433,7 @@
     "title": "Markov Modulated Gaussian Cox Processes for Semi-Stationary Intensity Modeling of Events Data",
     "volume": "main",
     "abstract": "The Cox process is a flexible event model that can account for uncertainty of the intensity function in the Poisson process. However, previous approaches make strong assumptions in terms of time stationarity, potentially failing to generalize when the data do not conform to the assumed stationarity conditions. In this paper we bring up two most popular Cox models representing two extremes, and propose a novel semi-stationary Cox process model that can take benefits from both models. Our model has a set of Gaussian process latent functions governed by a latent stationary Markov process where we provide analytic derivations for the variational inference. Empirical evaluations on several synthetic and real-world events data including the football shot attempts and daily earthquakes, demonstrate that the proposed model is promising, can yield improved generalization performance over existing approaches",
-    "checked": false,
+    "checked": true,
     "id": "54877880b71821005bc4b19c74c45a2eca1861b2",
     "semantic_title": "( supplemental material ) appendix : markov modulated gaussian cox processes for semi-stationary intensity modeling of events data",
     "citation_count": 2
@@ -2793,7 +2793,7 @@
     "title": "The Well-Tempered Lasso",
     "volume": "main",
     "abstract": "We study the complexity of the entire regularization path for least squares regression with 1-norm penalty, known as the Lasso. Every regression parameter in the Lasso changes linearly as a function of the regularization value. The number of changes is regarded as the Lasso's complexity. Experimental results using exact path following exhibit polynomial complexity of the Lasso in the problem size. Alas, the path complexity of the Lasso on artificially designed regression problems is exponential We use smoothed analysis as a mechanism for bridging the gap between worst case settings and the de facto low complexity. Our analysis assumes that the observed data has a tiny amount of intrinsic noise. We then prove that the Lasso's complexity is polynomial in the problem size",
-    "checked": false,
+    "checked": true,
     "id": "8c7070616aa82b461a709bbc148a2fdbca44d6ec",
     "semantic_title": "the well tempered lasso",
     "citation_count": 7
@@ -2946,7 +2946,7 @@
     "title": "Fast Stochastic AUC Maximization with $O(1/n)$-Convergence Rate",
     "volume": "main",
     "abstract": "In this paper, we consider statistical learning with AUC (area under ROC curve) maximization in the classical stochastic setting where one random data drawn from an unknown distribution is revealed at each iteration for updating the model. Although consistent convex surrogate losses for AUC maximization have been proposed to make the problem tractable, it remains an challenging problem to design fast optimization algorithms in the classical stochastic setting due to that the convex surrogate loss depends on random pairs of examples from positive and negative classes. Building on a saddle point formulation for a consistent square loss, this paper proposes a novel stochastic algorithm to improve the standard $O(1/\\sqrt{n})$ convergence rate to $\\widetilde O(1/n)$ convergence rate without strong convexity assumption or any favorable statistical assumptions (e.g., low noise), where $n$ is the number of random samples. To the best of our knowledge, this is the first stochastic algorithm for AUC maximization with a statistical convergence rate as fast as $O(1/n)$ up to a logarithmic factor. Extensive experiments on eight large-scale benchmark data sets demonstrate the superior performance of the proposed algorithm comparing with existing stochastic or online algorithms for AUC maximization",
-    "checked": false,
+    "checked": true,
     "id": "076640ac71435176b70d59d8dc03f64312dbc2ad",
     "semantic_title": "fast stochastic auc maximization with o(1/n)-convergence rate",
     "citation_count": 58
@@ -3153,7 +3153,7 @@
     "title": "Streaming Principal Component Analysis in Noisy Setting",
     "volume": "main",
     "abstract": "We study streaming algorithms for principal component analysis (PCA) in noisy settings. We present computationally efficient algorithms with sub-linear regret bounds for PCA in the presence of noise, missing data, and gross outliers",
-    "checked": false,
+    "checked": true,
     "id": "c3eef6960c6f5132a55140ed166d2c937b6d5fb5",
     "semantic_title": "streaming principal component analysis in noisy settings",
     "citation_count": 16
@@ -3243,7 +3243,7 @@
     "title": "Pseudo-task Augmentation: From Deep Multitask Learning to Intratask Sharing—and Back",
     "volume": "main",
     "abstract": "Deep multitask learning boosts performance by sharing learned structure across related tasks. This paper adapts ideas from deep multitask learning to the setting where only a single task is available. The method is formalized as pseudo-task augmentation, in which models are trained with multiple decoders for each task. Pseudo-tasks simulate the effect of training towards closely-related tasks drawn from the same universe. In a suite of experiments, pseudo-task augmentation is shown to improve performance on single-task learning problems. When combined with multitask learning, further improvements are achieved, including state-of-the-art performance on the CelebA dataset, showing that pseudo-task augmentation and multitask learning have complementary value. All in all, pseudo-task augmentation is a broadly applicable and efficient way to boost performance in deep learning systems",
-    "checked": false,
+    "checked": true,
     "id": "52b210cd2812d36075a174dc8d2df5ca6f515ff1",
     "semantic_title": "pseudo-task augmentation: from deep multitask learning to intratask sharing - and back",
     "citation_count": 41
@@ -3567,10 +3567,10 @@
     "title": "Learning in Reproducing Kernel Kreı̆n Spaces",
     "volume": "main",
     "abstract": "We formulate a novel regularized risk minimization problem for learning in reproducing kernel Kre{ı̆}n spaces and show that the strong representer theorem applies to it. As a result of the latter, the learning problem can be expressed as the minimization of a quadratic form over a hypersphere of constant radius. We present an algorithm that can find a globally optimal solution to this non-convex optimization problem in time cubic in the number of instances. Moreover, we derive the gradient of the solution with respect to its hyperparameters and, in this way, provide means for efficient hyperparameter tuning. The approach comes with a generalization bound expressed in terms of the Rademacher complexity of the corresponding hypothesis space. The major advantage over standard kernel methods is the ability to learn with various domain specific similarity measures for which positive definiteness does not hold or is difficult to establish. The approach is evaluated empirically using indefinite kernels defined on structured as well as vectorial data. The empirical results demonstrate a superior performance of our approach over the state-of-the-art baselines",
-    "checked": false,
-    "id": "9b9e09b49c6b59aa1264098ad5e99d09b75b1e87",
-    "semantic_title": "scalable learning in reproducing kernel krein spaces",
-    "citation_count": 25
+    "checked": true,
+    "id": "0913938acd3e98f29bbef85cd850a82ad7415bf9",
+    "semantic_title": "Learning in Reproducing Kernel Krein Spaces",
+    "citation_count": 26
   },
   "https://proceedings.mlr.press/v80/oh18a.html": {
     "title": "BOCK : Bayesian Optimization with Cylindrical Kernels",
@@ -3783,7 +3783,7 @@
     "title": "Efficient Neural Architecture Search via Parameters Sharing",
     "volume": "main",
     "abstract": "We propose Efficient Neural Architecture Search (ENAS), a fast and inexpensive approach for automatic model design. ENAS constructs a large computational graph, where each subgraph represents a neural network architecture, hence forcing all architectures to share their parameters. A controller is trained with policy gradient to search for a subgraph that maximizes the expected reward on a validation set. Meanwhile a model corresponding to the selected subgraph is trained to minimize a canonical cross entropy loss. Sharing parameters among child models allows ENAS to deliver strong empirical performances, whilst using much fewer GPU-hours than existing automatic model design approaches, and notably, 1000x less expensive than standard Neural Architecture Search. On Penn Treebank, ENAS discovers a novel architecture that achieves a test perplexity of 56.3, on par with the existing state-of-the-art among all methods without post-training processing. On CIFAR-10, ENAS finds a novel architecture that achieves 2.89% test error, which is on par with the 2.65% test error of NASNet (Zoph et al., 2018)",
-    "checked": false,
+    "checked": true,
     "id": "fe9b8aac9fa3bfd9724db5a881a578e471e612d7",
     "semantic_title": "efficient neural architecture search via parameter sharing",
     "citation_count": 2285
@@ -4017,7 +4017,7 @@
     "title": "Learning by Playing Solving Sparse Reward Tasks from Scratch",
     "volume": "main",
     "abstract": "We propose Scheduled Auxiliary Control (SAC-X), a new learning paradigm in the context of Reinforcement Learning (RL). SAC-X enables learning of complex behaviors - from scratch - in the presence of multiple sparse reward signals. To this end, the agent is equipped with a set of general auxiliary tasks, that it attempts to learn simultaneously via off-policy RL. The key idea behind our method is that active (learned) scheduling and execution of auxiliary policies allows the agent to efficiently explore its environment - enabling it to excel at sparse reward RL. Our experiments in several challenging robotic manipulation settings demonstrate the power of our approach",
-    "checked": false,
+    "checked": true,
     "id": "cab81775baae7ba2d056ebbc60437f2e03358ca3",
     "semantic_title": "learning by playing - solving sparse reward tasks from scratch",
     "citation_count": 361
@@ -4377,10 +4377,10 @@
     "title": "Universal Planning Networks: Learning Generalizable Representations for Visuomotor Control",
     "volume": "main",
     "abstract": "A key challenge in complex visuomotor control is learning abstract representations that are effective for specifying goals, planning, and generalization. To this end, we introduce universal planning networks (UPN). UPNs embed differentiable planning within a goal-directed policy. This planning computation unrolls a forward model in a latent space and infers an optimal action plan through gradient descent trajectory optimization. The plan-by-gradient-descent process and its underlying representations are learned end-to-end to directly optimize a supervised imitation learning objective. We find that the representations learned are not only effective for goal-directed visual imitation via gradient-based trajectory optimization, but can also provide a metric for specifying goals using images. The learned representations can be leveraged to specify distance-based rewards to reach new target states for model-free reinforcement learning, resulting in substantially more effective learning when solving new tasks described via image based goals. We were able to achieve successful transfer of visuomotor planning strategies across robots with significantly different morphologies and actuation capabilities. Visit https://sites.google. com/view/upn-public/home for video highlights",
-    "checked": false,
-    "id": "42d5c5ff783e80455475cc23e62f852d49ca10ea",
-    "semantic_title": "universal planning networks-long version + supplementary",
-    "citation_count": 0
+    "checked": true,
+    "id": "b53a4e3bcc7bca42009f1752437267976c968bae",
+    "semantic_title": "Universal Planning Networks",
+    "citation_count": 139
   },
   "https://proceedings.mlr.press/v80/srouji18a.html": {
     "title": "Structured Control Nets for Deep Reinforcement Learning",
@@ -4485,7 +4485,7 @@
     "title": "$D^2$: Decentralized Training over Decentralized Data",
     "volume": "main",
     "abstract": "While training a machine learning model using multiple workers, each of which collects data from its own data source, it would be useful when the data collected from different workers are unique and different. Ironically, recent analysis of decentralized parallel stochastic gradient descent (D-PSGD) relies on the assumption that the data hosted on different workers are not too different. In this paper, we ask the question: Can we design a decentralized parallel stochastic gradient descent algorithm that is less sensitive to the data variance across workers? In this paper, we present D$^2$, a novel decentralized parallel stochastic gradient descent algorithm designed for large data variance \\xr{among workers} (imprecisely, \"decentralized\" data). The core of D$^2$ is a variance reduction extension of D-PSGD. It improves the convergence rate from $O\\left({\\sigma \\over \\sqrt{nT}} + {(n\\zeta^2)^{\\frac{1}{3}} \\over T^{2/3}}\\right)$ to $O\\left({\\sigma \\over \\sqrt{nT}}\\right)$ where $\\zeta^{2}$ denotes the variance among data on different workers. As a result, D$^2$ is robust to data variance among workers. We empirically evaluated D$^2$ on image classification tasks, where each worker has access to only the data of a limited set of labels, and find that D$^2$ significantly outperforms D-PSGD",
-    "checked": false,
+    "checked": true,
     "id": "42f7bd35df5a280ccd47115a30901afab9f0776b",
     "semantic_title": "d2: decentralized training over decentralized data",
     "citation_count": 260
@@ -4584,7 +4584,7 @@
     "title": "Convergent Tree Backup and Retrace with Function Approximation",
     "volume": "main",
     "abstract": "Off-policy learning is key to scaling up reinforcement learning as it allows to learn about a target policy from the experience generated by a different behavior policy. Unfortunately, it has been challenging to combine off-policy learning with function approximation and multi-step bootstrapping in a way that leads to both stable and efficient algorithms. In this work, we show that the Tree Backup and Retrace algorithms are unstable with linear function approximation, both in theory and in practice with specific examples. Based on our analysis, we then derive stable and efficient gradient-based algorithms using a quadratic convex-concave saddle-point formulation. By exploiting the problem structure proper to these algorithms, we are able to provide convergence guarantees and finite-sample bounds. The applicability of our new analysis also goes beyond Tree Backup and Retrace and allows us to provide new convergence rates for the GTD and GTD2 algorithms without having recourse to projections or Polyak averaging",
-    "checked": false,
+    "checked": true,
     "id": "46f066d2e1e45228728af614b97edf842d923c4a",
     "semantic_title": "convergent tree-backup and retrace with function approximation",
     "citation_count": 38
@@ -4809,7 +4809,7 @@
     "title": "Minimax Concave Penalized Multi-Armed Bandit Model with High-Dimensional Covariates",
     "volume": "main",
     "abstract": "In this paper, we propose a Minimax Concave Penalized Multi-Armed Bandit (MCP-Bandit) algorithm for a decision-maker facing high-dimensional data with latent sparse structure in an online learning and decision-making process. We demonstrate that the MCP-Bandit algorithm asymptotically achieves the optimal cumulative regret in sample size T, O(log T), and further attains a tighter bound in both covariates dimension d and the number of significant covariates s, O(s^2 (s + log d). In addition, we develop a linear approximation method, the 2-step Weighted Lasso procedure, to identify the MCP estimator for the MCP-Bandit algorithm under non-i.i.d. samples. Using this procedure, the MCP estimator matches the oracle estimator with high probability. Finally, we present two experiments to benchmark our proposed the MCP-Bandit algorithm to other bandit algorithms. Both experiments demonstrate that the MCP-Bandit algorithm performs favorably over other benchmark algorithms, especially when there is a high level of data sparsity or when the sample size is not too small",
-    "checked": false,
+    "checked": true,
     "id": "ffdc943125a3ae400fae466545fd601fd8b4d151",
     "semantic_title": "minimax concave penalized multi-armed bandit model with high-dimensional convariates",
     "citation_count": 31
@@ -4989,7 +4989,7 @@
     "title": "Dynamical Isometry and a Mean Field Theory of CNNs: How to Train 10,000-Layer Vanilla Convolutional Neural Networks",
     "volume": "main",
     "abstract": "In recent years, state-of-the-art methods in computer vision have utilized increasingly deep convolutional neural network architectures (CNNs), with some of the most successful models employing hundreds or even thousands of layers. A variety of pathologies such as vanishing/exploding gradients make training such deep networks challenging. While residual connections and batch normalization do enable training at these depths, it has remained unclear whether such specialized architecture designs are truly necessary to train deep CNNs. In this work, we demonstrate that it is possible to train vanilla CNNs with ten thousand layers or more simply by using an appropriate initialization scheme. We derive this initialization scheme theoretically by developing a mean field theory for signal propagation and by characterizing the conditions for dynamical isometry, the equilibration of singular values of the input-output Jacobian matrix. These conditions require that the convolution operator be an orthogonal transformation in the sense that it is norm-preserving. We present an algorithm for generating such random initial orthogonal convolution kernels and demonstrate empirically that they enable efficient training of extremely deep architectures",
-    "checked": false,
+    "checked": true,
     "id": "ad6309d1ea001098189425f54d069ef12abcb583",
     "semantic_title": "dynamical isometry and a mean field theory of cnns: how to train 10, 000-layer vanilla convolutional neural networks",
     "citation_count": 293
@@ -5178,7 +5178,7 @@
     "title": "Massively Parallel Algorithms and Hardness for Single-Linkage Clustering under $\\ell_p$ Distances",
     "volume": "main",
     "abstract": "We present first massively parallel (MPC) algorithms and hardness of approximation results for computing Single-Linkage Clustering of n input d-dimensional vectors under Hamming, $\\ell_1, \\ell_2$ and $\\ell_\\infty$ distances. All our algorithms run in O(log n) rounds of MPC for any fixed d and achieve (1+\\epsilon)-approximation for all distances (except Hamming for which we show an exact algorithm). We also show constant-factor inapproximability results for o(\\log n)-round algorithms under standard MPC hardness assumptions (for sufficiently large dimension depending on the distance used). Efficiency of implementation of our algorithms in Apache Spark is demonstrated through experiments on the largest available vector datasets from the UCI machine learning repository exhibiting speedups of several orders of magnitude",
-    "checked": false,
+    "checked": true,
     "id": "13a68174c5db7b1d514fa22dec73ae4f1620ae0a",
     "semantic_title": "massively parallel algorithms and hardness for single-linkage clustering under $\\ell_p$-distances",
     "citation_count": 49
@@ -5529,7 +5529,7 @@
     "title": "Stochastic Variance-Reduced Cubic Regularized Newton Methods",
     "volume": "main",
     "abstract": "We propose a stochastic variance-reduced cubic regularized Newton method (SVRC) for non-convex optimization. At the core of our algorithm is a novel semi-stochastic gradient along with a semi-stochastic Hessian, which are specifically designed for cubic regularization method. We show that our algorithm is guaranteed to converge to an $(\\epsilon,\\sqrt{\\epsilon})$-approximate local minimum within $\\tilde{O}(n^{4/5}/\\epsilon^{3/2})$ second-order oracle calls, which outperforms the state-of-the-art cubic regularization algorithms including subsampled cubic regularization. Our work also sheds light on the application of variance reduction technique to high-order non-convex optimization methods. Thorough experiments on various non-convex optimization problems support our theory",
-    "checked": false,
+    "checked": true,
     "id": "114c0d9600f422494de9e95aac1ca3a5f7420389",
     "semantic_title": "stochastic variance-reduced cubic regularized newton method",
     "citation_count": 39
