@@ -669,7 +669,7 @@
     "title": "Learning-Augmented k -means Clustering",
     "volume": "spotlight",
     "abstract": "$k$-means clustering is a well-studied problem due to its wide applicability. Unfortunately, there exist strong theoretical limits on the performance of any algorithm for the $k$-means problem on worst-case inputs. To overcome this barrier, we consider a scenario where ``advice'' is provided to help perform clustering. Specifically, we consider the $k$-means problem augmented with a predictor that, given any point, returns its cluster label in an approximately optimal clustering up to some, possibly adversarial, error. We present an algorithm whose performance improves along with the accuracy of the predictor, even though na\\\"{i}vely following the accurate predictor can still lead to a high clustering cost. Thus if the predictor is sufficiently accurate, we can retrieve a close to optimal clustering with nearly optimal runtime, breaking known computational barriers for algorithms that do not have access to such advice. We evaluate our algorithms on real datasets and show significant improvements in the quality of clustering",
-    "checked": false,
+    "checked": true,
     "id": "0d352c530dd041a4c7a525e8b3f0e94f60c8fb34",
     "semantic_title": "learning-augmented k-means clustering",
     "citation_count": 12
@@ -1146,7 +1146,7 @@
     "title": "What Happens after SGD Reaches Zero Loss? --A Mathematical Framework",
     "volume": "spotlight",
     "abstract": "Understanding the implicit bias of Stochastic Gradient Descent (SGD) is one of the key challenges in deep learning, especially for overparametrized models, where the local minimizers of the loss function $L$ can form a manifold. Intuitively, with a sufficiently small learning rate $\\eta$, SGD tracks Gradient Descent (GD) until it gets close to such manifold, where the gradient noise prevents further convergence. In such regime, Blanc et al. (2020) proved that SGD with label noise locally decreases a regularizer-like term, the sharpness of loss, $\\text{tr}[\\nabla^2 L]$. The current paper gives a general framework for such analysis by adapting ideas from Katzenberger (1991). It allows in principle a complete characterization for the regularization effect of SGD around such manifold---i.e., the \"implicit bias\"---using a stochastic differential equation (SDE) describing the limiting dynamics of the parameters, which is determined jointly by the loss function and the noise covariance. This yields some new results: (1) a *global* analysis of the implicit bias valid for $\\eta^{-2}$ steps, in contrast to the local analysis of Blanc et al. (2020) that is only valid for $\\eta^{-1.6}$ steps and (2) allowing *arbitrary* noise covariance. As an application, we show with arbitrary large initialization, label noise SGD can always escape the kernel regime and only requires $O(\\kappa\\ln d)$ samples for learning an $\\kappa$-sparse overparametrized linear model in $\\mathbb{R}^d$ (Woodworth et al., 2020), while GD initialized in the kernel regime requires $\\Omega(d)$ samples. This upper bound is minimax optimal and improves the previous $\\widetilde{O}(\\kappa^2)$ upper bound (HaoChen et al., 2020)",
-    "checked": false,
+    "checked": true,
     "id": "40c115c43adee6bc7a00ffd444ee9c045360d97d",
     "semantic_title": "what happens after sgd reaches zero loss? -a mathematical framework",
     "citation_count": 43
@@ -1263,7 +1263,7 @@
     "title": "$\\mathrm{SO}(2)$-Equivariant Reinforcement Learning",
     "volume": "spotlight",
     "abstract": "Equivariant neural networks enforce symmetry within the structure of their convolutional layers, resulting in a substantial improvement in sample efficiency when learning an equivariant or invariant function. Such models are applicable to robotic manipulation learning which can often be formulated as a rotationally symmetric problem. This paper studies equivariant model architectures in the context of $Q$-learning and actor-critic reinforcement learning. We identify equivariant and invariant characteristics of the optimal $Q$-function and the optimal policy and propose equivariant DQN and SAC algorithms that leverage this structure. We present experiments that demonstrate that our equivariant versions of DQN and SAC can be significantly more sample efficient than competing algorithms on an important class of robotic manipulation problems",
-    "checked": false,
+    "checked": true,
     "id": "347131d36cda1c921158bb6928a488ab13bd26e5",
     "semantic_title": "so(2)-equivariant reinforcement learning",
     "citation_count": 34
@@ -1758,7 +1758,7 @@
     "title": "When Vision Transformers Outperform ResNets without Pre-training or Strong Data Augmentations",
     "volume": "spotlight",
     "abstract": "Vision Transformers (ViTs) and MLPs signal further efforts on replacing hand-wired features or inductive biases with general-purpose neural architectures. Existing works empower the models by massive data, such as large-scale pre-training and/or repeated strong data augmentations, and still report optimization-related problems (e.g., sensitivity to initialization and learning rates). Hence, this paper investigates ViTs and MLP-Mixers from the lens of loss geometry, intending to improve the models' data efficiency at training and generalization at inference. Visualization and Hessian reveal extremely sharp local minima of converged models. By promoting smoothness with a recently proposed sharpness-aware optimizer, we substantially improve the accuracy and robustness of ViTs and MLP-Mixers on various tasks spanning supervised, adversarial, contrastive, and transfer learning (e.g., +5.3\\% and +11.0\\% top-1 accuracy on ImageNet for ViT-B/16 and Mixer-B/16, respectively, with the simple Inception-style preprocessing). We show that the improved smoothness attributes to sparser active neurons in the first few layers. The resultant ViTs outperform ResNets of similar size and throughput when trained from scratch on ImageNet without large-scale pre-training or strong data augmentations. Model checkpoints are available at \\url{https://github.com/google-research/vision_transformer}",
-    "checked": false,
+    "checked": true,
     "id": "42a7015e48a1e00b70ebb442a82afb4b10017c0b",
     "semantic_title": "when vision transformers outperform resnets without pretraining or strong data augmentations",
     "citation_count": 200
@@ -1803,7 +1803,7 @@
     "title": "Progressive Distillation for Fast Sampling of Diffusion Models",
     "volume": "spotlight",
     "abstract": "Diffusion models have recently shown great promise for generative modeling, outperforming GANs on perceptual quality and autoregressive models at density estimation. A remaining downside is their slow sampling time: generating high quality samples takes many hundreds or thousands of model evaluations. Here we make two contributions to help eliminate this downside: First, we present new parameterizations of diffusion models that provide increased stability when using few sampling steps, compared to models in the literature. Second, we present a method to distill a trained deterministic diffusion sampler, using many steps, into a new diffusion model that takes half as many sampling steps. We then keep progressively applying this distillation procedure to our model, halving the number of required sampling steps each time. On standard image generation benchmarks like CIFAR-10, ImageNet, and LSUN, we start out with (near) state-of-the-art samplers taking 1024 or 8192 steps, and are able to distill down to models taking as little as 4 steps without losing much perceptual quality; achieving, for example, a FID of 3.0 on CIFAR-10 in 4 steps. Finally, we show that the full progressive distillation procedure does not take more time than it takes to train the original model, thus representing an efficient solution for generative modeling using diffusion at both train and test time",
-    "checked": false,
+    "checked": true,
     "id": "625d57bd52c60cd79aa4add6c4420dc2ad3b808a",
     "semantic_title": "on distillation of guided diffusion models",
     "citation_count": 79
@@ -2010,7 +2010,7 @@
     "title": "Equivariant Transformers for Neural Network based Molecular Potentials",
     "volume": "spotlight",
     "abstract": "The prediction of quantum mechanical properties is historically plagued by a trade-off between accuracy and speed. Machine learning potentials have previously shown great success in this domain, reaching increasingly better accuracy while maintaining computational efficiency comparable with classical force fields. In this work we propose TorchMD-NET, a novel equivariant Transformer (ET) architecture, outperforming state-of-the-art on MD17, ANI-1, and many QM9 targets in both accuracy and computational efficiency. Through an extensive attention weight analysis, we gain valuable insights into the black box predictor and show differences in the learned representation of conformers versus conformations sampled from molecular dynamics or normal modes. Furthermore, we highlight the importance of datasets including off-equilibrium conformations for the evaluation of molecular potentials",
-    "checked": false,
+    "checked": true,
     "id": "383eb0c99826381a9623b58670b5c85d79fd6a87",
     "semantic_title": "torchmd-net: equivariant transformers for neural network based molecular potentials",
     "citation_count": 62
@@ -2352,7 +2352,7 @@
     "title": "It Takes Four to Tango: Multiagent Self Play for Automatic Curriculum Generation",
     "volume": "poster",
     "abstract": "We are interested in training general-purpose reinforcement learning agents that can solve a wide variety of goals. Training such agents efficiently requires automatic generation of a goal curriculum. This is challenging as it requires (a) exploring goals of increasing difficulty, while ensuring that the agent (b) is exposed to a diverse set of goals in a sample efficient manner and (c) does not catastrophically forget previously solved goals. We propose Curriculum Self Play (CuSP), an automated goal generation framework that seeks to satisfy these desiderata by virtue of a multi-player game with 4 agents. We extend the asymmetric curricula learning in PAIRED (Dennis et al., 2020) to a symmetrized game that carefully balances cooperation and competition between two off-policy student learners and two regret-maximizing teachers. CuSP additionally introduces entropic goal coverage and accounts for the non-stationary nature of the students, allowing us to automatically induce a curriculum that balances progressive exploration with anti-catastrophic exploitation. We demonstrate that our method succeeds at generating an effective curricula of goals for a range of control tasks, outperforming other methods at zero-shot test-time generalization to novel out-of-distribution goals",
-    "checked": false,
+    "checked": true,
     "id": "9fc6b6d3fead719cdc95263e62209548223576d1",
     "semantic_title": "it takes four to tango: multiagent selfplay for automatic curriculum generation",
     "citation_count": 8
@@ -2622,7 +2622,7 @@
     "title": "Exposing the Implicit Energy Networks behind Masked Language Models via Metropolis--Hastings",
     "volume": "poster",
     "abstract": "While recent work has shown that scores from models trained by the ubiquitous masked language modeling (MLM) objective effectively discriminate probable from improbable sequences, it is still an open question if these MLMs specify a principled probability distribution over the space of possible sequences. In this paper, we interpret MLMs as energy-based sequence models and propose two energy parametrizations derivable from the trained MLMs. In order to draw samples correctly from these models, we develop a tractable sampling scheme based on the Metropolis--Hastings Monte Carlo algorithm. In our approach, samples are proposed from the same masked conditionals used for training the masked language models, and they are accepted or rejected based on their energy values according to the target distribution. We validate the effectiveness of the proposed parametrizations by exploring the quality of samples drawn from these energy-based models for both open-ended unconditional generation and a conditional generation task of machine translation. We theoretically and empirically justify our sampling algorithm by showing that the masked conditionals on their own do not yield a Markov chain whose stationary distribution is that of our target distribution, and our approach generates higher quality samples than other recently proposed undirected generation approaches (Wang et al., 2019, Ghazvininejad et al., 2019)",
-    "checked": false,
+    "checked": true,
     "id": "f71d0c4cae964a71c8a2f2c0919075d3bb18ca63",
     "semantic_title": "exposing the implicit energy networks behind masked language models via metropolis-hastings",
     "citation_count": 25
@@ -7383,7 +7383,7 @@
     "title": "Measuring CLEVRness: Black-box Testing of Visual Reasoning Models",
     "volume": "poster",
     "abstract": "How can we measure the reasoning capabilities of intelligence systems? Visual question answering provides a convenient framework for testing the model's abilities by interrogating the model through questions about the scene. However, despite scores of various visual QA datasets and architectures, which sometimes yield even a super-human performance, the question of whether those architectures can actually reason remains open to debate. To answer this, we extend the visual question answering framework and propose the following behavioral test in the form of a two-player game. We consider black-box neural models of CLEVR. These models are trained on a diagnostic dataset benchmarking reasoning. Next, we train an adversarial player that re-configures the scene to fool the CLEVR model. We show that CLEVR models, which otherwise could perform at a ``human-level'', can easily be fooled by our agent. Our results put in doubt whether data-driven approaches can do reasoning without exploiting the numerous biases that are often present in those datasets. Finally, we also propose a controlled experiment measuring the efficiency of such models to learn and perform reasoning",
-    "checked": false,
+    "checked": true,
     "id": "6847e2ba6796b8a786b3b6d8d8a2d922a6c7c31d",
     "semantic_title": "measuring clevrness: blackbox testing of visual reasoning models",
     "citation_count": 2
@@ -7941,7 +7941,7 @@
     "title": "Auto-Transfer: Learning to Route Transferable Representations",
     "volume": "poster",
     "abstract": "Knowledge transfer between heterogeneous source and target networks and tasks has received a lot of attention in recent times as large amounts of quality labeled data can be difficult to obtain in many applications. Existing approaches typically constrain the target deep neural network (DNN) feature representations to be close to the source DNNs feature representations, which can be limiting. We, in this paper, propose a novel adversarial multi-armed bandit approach that automatically learns to route source representations to appropriate target representations following which they are combined in meaningful ways to produce accurate target models. We see upwards of 5\\% accuracy improvements compared with the state-of-the-art knowledge transfer methods on four benchmark (target) image datasets CUB200, Stanford Dogs, MIT67, and Stanford40 where the source dataset is ImageNet. We qualitatively analyze the goodness of our transfer scheme by showing individual examples of the important features focused on by our target network at different layers compared with the (closest) competitors. We also observe that our improvement over other methods is higher for smaller target datasets making it an effective tool for small data applications that may benefit from transfer learning",
-    "checked": false,
+    "checked": true,
     "id": "15e437c7be0f9eca8a74c92bafeeb9de892d02b4",
     "semantic_title": "auto-transfer: learning to route transferrable representations",
     "citation_count": 4
@@ -9138,7 +9138,7 @@
     "title": "Trivial or Impossible --- dichotomous data difficulty masks model differences (on ImageNet and beyond)",
     "volume": "poster",
     "abstract": "The power of a generalization system follows directly from its biases\" (Mitchell 1980). Today, CNNs are incredibly powerful generalisation systems---but to what degree have we understood how their inductive bias influences model decisions? We here attempt to disentangle the various aspects that determine how a model decides. In particular, we ask: what makes one model decide differently from another? In a meticulously controlled setting, we find that (1.) irrespective of the network architecture or objective (e.g. self-supervised, semi-supervised, vision transformers, recurrent models) all models end up with a similar decision boundary. (2.) To understand these findings, we analysed model decisions on the ImageNet validation set from epoch to epoch and image by image. We find that the ImageNet validation set, among others, suffers from dichotomous data difficulty (DDD): For the range of investigated models and their accuracies, it is dominated by 46.0% \"trivial\" and 11.5% \"impossible\" images (beyond label errors). Only 42.5% of the images could possibly be responsible for the differences between two models' decision boundaries. (3.) Only removing the \"impossible\" and \"trivial\" images allows us to see pronounced differences between models. (4.) Humans are highly accurate at predicting which images are \"trivial\" and \"impossible\" for CNNs (81.4%). This implies that in future comparisons of brains, machines and behaviour, much may be gained from investigating the decisive role of images and the distribution of their difficulties",
-    "checked": false,
+    "checked": true,
     "id": "68aca52dc55878a345420f9c32eaaec77794481b",
     "semantic_title": "trivial or impossible - dichotomous data difficulty masks model differences (on imagenet and beyond)",
     "citation_count": 13
@@ -9183,7 +9183,7 @@
     "title": "Towards Better Understanding and Better Generalization of Low-shot Classification in Histology Images with Contrastive Learning",
     "volume": "poster",
     "abstract": "Few-shot learning is an established topic in natural images for years, but few work is attended to histology images, which is of high clinical value since well-labeled datasets and rare abnormal samples are expensive to collect. Here, we facilitate the study of few-shot learning in histology images by setting up three cross-domain tasks that simulate real clinics problems. To enable label-efficient learning and better generalizability, we propose to incorporate contrastive learning (CL) with latent augmentation (LA) to build a few-shot system. CL learns useful representations without manual labels, while LA transfers semantic variations of the base dataset in an unsupervised way. These two components fully exploit unlabeled training data and can scale gracefully to other label-hungry problems. In experiments, we find i) models learned by CL generalize better than supervised learning for histology images in unseen classes, and ii) LA brings consistent gains over baselines. Prior studies of self-supervised learning mainly focus on ImageNet-like images, which only present a dominant object in their centers. Recent attention has been paid to images with multi-objects and multi-textures. Histology images are a natural choice for such a study. We show the superiority of CL over supervised learning in terms of generalization for such data and provide our empirical understanding for this observation. The findings in this work could contribute to understanding how the model generalizes in the context of both representation learning and histological image analysis. Code is available",
-    "checked": false,
+    "checked": true,
     "id": "620611fb99f47be149ff2b4b2f5f73432dda5557",
     "semantic_title": "towards better understanding and better generalization of few-shot classification in histology images with contrastive learning",
     "citation_count": 7
@@ -9345,7 +9345,7 @@
     "title": "$\\beta$-Intact-VAE: Identifying and Estimating Causal Effects under Limited Overlap",
     "volume": "poster",
     "abstract": "As an important problem in causal inference, we discuss the identification and estimation of treatment effects (TEs) under limited overlap; that is, when subjects with certain features belong to a single treatment group. We use a latent variable to model a prognostic score which is widely used in biostatistics and sufficient for TEs; i.e., we build a generative prognostic model. We prove that the latent variable recovers a prognostic score, and the model identifies individualized treatment effects. The model is then learned as $\\beta$-Intact-VAE––a new type of variational autoencoder (VAE). We derive the TE error bounds that enable representations balanced for treatment groups conditioned on individualized features. The proposed method is compared with recent methods using (semi-)synthetic datasets",
-    "checked": false,
+    "checked": true,
     "id": "9beafe78796e475c1ef2990f7873ffd9bc3f2962",
     "semantic_title": "β-intact-vae: identifying and estimating causal effects under limited overlap",
     "citation_count": 8
@@ -9844,779 +9844,5 @@
     "id": "c7e110d392a19387ac8cda76343e256ce6add4ce",
     "semantic_title": "learning efficient image super-resolution networks via structure-regularized pruning",
     "citation_count": 18
-  },
-  "https://openreview.net/forum?id=HVxMCn4uP-c": {
-    "title": "Semi-Discrete Normalizing Flows through Differentiable Voronoi Tessellation",
-    "volume": "workshop",
-    "abstract": "Mapping between discrete and continuous distributions is a difficult task and many have had to resort to approximate or heuristical approaches. We propose a tessellation-based approach that directly learns quantization boundaries on a continuous space, complete with exact likelihood evaluations. This is done through constructing normalizing flows on convex polytopes defined via a differentiable tessellation. Using a simple homeomorphism with an efficient log determinant Jacobian, we can then cheaply parameterize distributions on bounded domains. We explore this approach in two application settings, mapping from discrete to continuous and vice versa. Firstly, a Voronoi dequantization allows automatically learning quantization boundaries in a multidimensional space. The location of boundaries and distances between regions can encode useful structural relations between the quantized discrete values. Secondly, a Voronoi mixture model has constant computation cost for likelihood evaluation regardless of the number of mixture components. Empirically, we show improvements over existing methods across a range of structured data modalities",
-    "checked": false,
-    "id": "dfc37c3cc218121279bbd9c644391c098f0715f9",
-    "semantic_title": "s emi -d iscrete n ormalizing f lows through d if ferentiable v oronoi t essellation",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=H4xxa2NuP-9": {
-    "title": "Bayesian Structure Learning with Generative Flow Networks",
-    "volume": "workshop",
-    "abstract": "In Bayesian structure learning, we are interested in inferring a distribution over the directed acyclic graph (DAG) structure of Bayesian networks, from data. Defining such a distribution is very challenging, due to the combinatorially large sample space, and approximations based on MCMC are often required. Recently, a novel class of probabilistic models, called Generative Flow Networks (GFlowNets), have been introduced as a general framework for generative modeling of discrete and composite objects, such as graphs. In this work, we propose to use a GFlowNet as an alternative to MCMC for approximating the posterior distribution over the structure of Bayesian networks, given a dataset of observations. Generating a sample DAG from this approximate distribution is viewed as a sequential decision problem, where the graph is constructed one edge at a time, based on learned transition probabilities. Through evaluation on both simulated and real data, we show that our approach, called DAG-GFlowNet, provides an accurate approximation of the posterior over DAGs, and it compares favorably against other methods based on MCMC or variational inference",
-    "checked": true,
-    "id": "cdf4a982bf6dc373eb6463263ab5fd147c61c8ca",
-    "semantic_title": "bayesian structure learning with generative flow networks",
-    "citation_count": 53
-  },
-  "https://openreview.net/forum?id=SBgNnnVuwbc": {
-    "title": "Torsional Diffusion for Molecular Conformer Generation",
-    "volume": "workshop",
-    "abstract": "Diffusion-based generative models generate samples by mapping noise to data via the reversal of a diffusion process that typically consists of independent Gaussian noise in every data coordinate. This diffusion process is, however, not well suited to the fundamental task of molecular conformer generation where the degrees of freedom differentiating conformers lie mostly in torsion angles. We, therefore, propose Torsional Diffusion that generates conformers by leveraging the definition of a diffusion process over the space $\\mathbb{T}^m$, a high dimensional torus representing torsion angles, and a $SE(3)$ equivariant model capable of accurately predicting the score over this process. Empirically, we demonstrate that our model outperforms state-of-the-art methods in terms of both diversity and accuracy of generated conformers, reducing the mean minimum RMSD by respectively 32% and 17%. When compared to Gaussian diffusion models, torsional diffusion enables significantly more accurate generation while performing two orders of magnitude fewer inference time-steps",
-    "checked": true,
-    "id": "d0c5fea7fa6d98e026583450c01ec745673ba230",
-    "semantic_title": "torsional diffusion for molecular conformer generation",
-    "citation_count": 93
-  },
-  "https://openreview.net/forum?id=BExXihVOvWq": {
-    "title": "Denoising Diffusion Restoration Models",
-    "volume": "workshop",
-    "abstract": "Many interesting tasks in image restoration can be cast as linear inverse problems. A recent family of approaches for solving these problems uses stochastic algorithms that sample from the posterior distribution of natural images given the measurements. However, efficient solutions often require problem-specific supervised training to model the posterior, whereas unsupervised methods that are not problem-specific typically rely on inefficient iterative methods. This work addresses these issues by introducing Denoising Diffusion Restoration Models (DDRM), an efficient, unsupervised posterior sampling method. Motivated by variational inference, DDRM takes advantage of a pre-trained denoising diffusion generative model for solving any linear inverse problem. We demonstrate DDRM's versatility on several image datasets for super-resolution, deblurring, inpainting, and colorization under various amounts of measurement noise. DDRM outperforms the current leading unsupervised methods on the diverse ImageNet dataset in reconstruction quality, perceptual quality, and runtime, being $5\\times$ faster than the nearest competitor. DDRM also generalizes well for natural images out of the distribution of the observed ImageNet training set",
-    "checked": true,
-    "id": "3d3c5fcbc40aadccceda58d3d9c5cd00588ea0b7",
-    "semantic_title": "denoising diffusion restoration models",
-    "citation_count": 205
-  },
-  "https://openreview.net/forum?id=HrlGx64uvZq": {
-    "title": "Meta-FAVAE: Toward Fast and Diverse Few-shot Image Generation via Meta-Learning and Feedback Augmented Adversarial VAE",
-    "volume": "workshop",
-    "abstract": "Learning to synthesis realistic images of new categories based on just one or a few examples is a challenge task for deep generative models, which usually require to train with a large amount of data. In this work, we propose a data efficient meta-learning framework for fast adapting to few-shot image generation task with an adversarial variational auto-encoder and feedback augmentation strategy. By training the model as a meta-learner, our method can adapt faster to the new task with significant reduction of model parameters. We designed a novel feedback augmented adversarial variational auto-encoder. This model learns to synthesize new samples for an unseen category just by seeing few examples from it and the generated interpolated samples are then used in feedback loop to expand the inputs for encoder to train the model, which can effectively increase the diversity of decoder output and prevent the model collapse. Additionally, this method can also generalize to adapt to more complex color image generation tasks",
-    "checked": false,
-    "id": "92c6a8dd54a70befc3449d21a7f3603d9a0cf26b",
-    "semantic_title": "m eta -favae: t oward f ast and d iverse f ew shot i mage g eneration via m eta -l earning and f eedback a ugmented a dversarial vae",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SHeglTNdDb5": {
-    "title": "UNCONDITIONAL IMAGE-TEXT PAIR GENERATION WITH MULTIMODAL CROSS QUANTIZER",
-    "volume": "workshop",
-    "abstract": "Though deep generative models have gained a lot of attention, most of the existing works are designed for the unimodal generation task. In this paper, we explore a new method for unconditional image-text pair generation. We propose MXQ-VAE, a vector quantization method for multimodal image-text representation. MXQ-VAE accepts a paired image and text as input, and learns a joint quantized representation space, so that the image-text pair can be converted to a sequence of unified indices. Then we can use autoregressive generative models to model the joint image-text representation, and even perform unconditional image-text pair generation. Extensive experimental results demonstrate that our approach effectively generates semantically consistent image-text pair and also enhances meaningful alignment between image and text",
-    "checked": true,
-    "id": "7a8da0a187507681df78e9138a25b6cf4a239801",
-    "semantic_title": "unconditional image-text pair generation with multimodal cross quantizer",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=B42UJTVdDZ5": {
-    "title": "MMVAE+: Enhancing the Generative Quality of Multimodal VAEs without Compromises",
-    "volume": "workshop",
-    "abstract": "Multimodal VAEs have recently gained attention as efficient models for weakly-supervised generative learning with a large number of modalities. However, all existing variants of multimodal VAEs are affected by a non-trivial trade-off between generative quality and generative coherence. We focus on the mixture-of-experts multimodal VAE (MMVAE), which achieves good coherence only at the expense of sample diversity and a resulting lack of generative quality. We present a novel variant of the MMVAE that improves its generative quality, while maintaining high semantic coherence. For this, shared and modality-specific information is modelled in separate latent subspaces. In contrast to previous approaches with separate subspaces, our model is robust to changes in latent dimensionality and regularization hyperparameters. We show that our model achieves both good generative coherence and high generative quality in challenging experiments, including more complex multimodal datasets than those used in previous works",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=BEnN1TVdvW9": {
-    "title": "Can GANs Recover Faults in Electrical Motor Sensors?",
-    "volume": "workshop",
-    "abstract": "Electrical motors in industrial and emerging applications such as electrical automotive require high dynamic performance, robustness against parameter variation, and reliability. Recent advances in neural network-based estimators and fault detection techniques rely heavily on accurate sensor information. Due to the extreme operating conditions of electrical motors, there is always a chance of sensor failure which might lead to poor performance in downstream tasks using neural networks. This paper introduces the problem of identifying and recovering sensor faults using generative adversarial networks. We consider sensors monitoring various quantities like currents, voltages, speed, torque, temperature, and vibrations. We introduce fault model for these sensors to simulate training datasets. We use existing GAN based data imputation methods as baseline solutions. Project Page: https://sagarverma.github.io/sensors.html",
-    "checked": false,
-    "id": "083ad68c0020e24b46dbe548ede82cbe0e4ba339",
-    "semantic_title": "nonlinear observers and applications 1st edition",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SE3Gy6E_PWq": {
-    "title": "Meta-GAN for Few-Shot Image Generation",
-    "volume": "workshop",
-    "abstract": "While Generative Adversarial Networks (GANs) have rapidly advanced the state of the art in deep generative modeling, they require a large amount of diverse datapoints to adequately train, limiting their potential in domains where data is constrained. In this study, we explore the potential of few-shot image generation, enabling GANs to rapidly adapt to a small support set of datapoints from an unseen target domain and generate novel, high-quality examples from that domain. To do so, we adapt two common meta-learning algorithms from few-shot classification--Model-Agnostic Meta-Learning (MAML) and Reptile--to GANs, meta-training the generator and discriminator to learn an optimal weight initialization such that fine-tuning on a new task is rapid. Empirically, we demonstrate how our MAML and Reptile meta-learning algorithms, meta-trained on tasks from the MNIST and SVHN datasets, rapidly adapt at test time to unseen tasks and generate high-quality, photorealistic samples from these domains given only tens of support examples. In fact, we show that the generated image quality of these few-shot adapted models is on par with that of a baseline model vanilla-trained on thousands of samples from the same domain. Intriguingly, meta-training also takes substantially less time to converge compared to baseline training, indicating the power and efficiency of our approach. We also demonstrate the generalizability of our algorithms, working with both CNN- and Transformer-parametrized GANs. Overall, we present our MAML and Reptile meta-learning algorithms as effective strategies to enable few-shot image generation, improving the feasibility of deep generative models in practice",
-    "checked": false,
-    "id": "3c236da7e0f3753de851d6517105e1df0e8b85d2",
-    "semantic_title": "m eta -gan for f ew -s hot i mage g eneration",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SNhlyT4uPbq": {
-    "title": "An Exploration of Learnt Representations of W Jets",
-    "volume": "workshop",
-    "abstract": "I present a Variational Autoencoder (VAE) trained on collider physics data (specifically boosted $W$ jets), with reconstruction error given by an approximation to the Earth Movers Distance (EMD) between input and output jets. This VAE learns a concrete representation of the data manifold, with semantically meaningful and interpretable latent space directions which are hierarchically organized in terms of their relation to physical EMD scales in the underlying physical generative process. The variation of the latent space structure with a resolution hyperparameter provides insight into scale dependent structure of the dataset and its information complexity. I introduce two measures of the dimensionality of the learnt representation that are calculated from this scaling",
-    "checked": true,
-    "id": "4c52643792fb0e17400321ac01dee858f97cda94",
-    "semantic_title": "an exploration of learnt representations of w jets",
-    "citation_count": 7
-  },
-  "https://openreview.net/forum?id=BBelR2NdDZ5": {
-    "title": "Video Diffusion Models",
-    "volume": "workshop",
-    "abstract": "Generating temporally coherent high fidelity video is an important milestone in generative modeling research. We make progress towards this milestone by proposing a diffusion model for video generation that shows very promising initial results. Our model is a natural extension of the standard image diffusion architecture, and it enables jointly training from image and video data, which we find to reduce the variance of minibatch gradients and speed up optimization. To generate long and higher resolution videos we introduce a new conditional sampling technique for spatial and temporal video extension that performs better than previously proposed methods. We present the first results on a large text-conditioned video generation task, as well as state-of-the-art results on an established unconditional video generation benchmark. Supplementary material is available at https://video-diffusion.github.io",
-    "checked": true,
-    "id": "3b2a675bb617ae1a920e8e29d535cdf27826e999",
-    "semantic_title": "video diffusion models",
-    "citation_count": 380
-  },
-  "https://openreview.net/forum?id=SNeLAhVuDZ9": {
-    "title": "Score-Based Generative Models for Wireless Channel Modeling and Estimation",
-    "volume": "workshop",
-    "abstract": "In this work, we investigate score-based models for learning the distribution of multiple-input multiple-output (MIMO) wireless channels in structured stochastic environments, using either clean or corrupted (noisy) data for training. We find that score-based models are capable of generating high-quality synthetic channels, and have robust downstream estimation performance, sometimes surpassing strong baselines by up to $10$ dB in estimation error, when the inverse problem is ill-posed. Our preliminary results on training with corrupted data show improved performance against simple baselines, and introduce a very promising future research direction. Code will be made publicly available upon paper acceptance",
-    "checked": false,
-    "id": "a349f672f0fa660c013d53c70e2e1f3498dd224b",
-    "semantic_title": "score-based generative models for robust channel estimation",
-    "citation_count": 3
-  },
-  "https://openreview.net/forum?id=rNh4AhVdPW5": {
-    "title": "Oracle Guided Image Synthesis with Relative Queries",
-    "volume": "workshop",
-    "abstract": "Isolating and controlling specific features in the outputs of generative models in a user-friendly way is a difficult and open-ended problem. We develop techniques that allow a user to generate an image they are envisioning in their head by answering a sequence of relative queries of the form \\textit{``do you prefer image $a$ or image $b$?''} Our framework consists of a Conditional VAE that uses the collected relative queries to partition the latent space into preference-relevant features and non-preference-relevant features. We then use the user's responses to relative queries to determine the preference-relevant features that correspond to their envisioned output image. Additionally, we develop techniques for modeling the uncertainty in images' predicted preference-relevant features, allowing our framework to generalize to scenarios in which the relative query training set contains noise",
-    "checked": true,
-    "id": "a3e4de2336f2541f89759fe6807c794c20d550c3",
-    "semantic_title": "oracle guided image synthesis with relative queries",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rEnGR3VdDW5": {
-    "title": "Scalable Computation of Monge Maps with General Costs",
-    "volume": "workshop",
-    "abstract": "Monge map refers to the optimal transport map between two probability distributions and provides a principled approach to transform one distribution to another. In spite of the rapid developments of the numerical methods for optimal transport problems, computing the Monge maps remains challenging, especially for high dimensional problems. In this paper, we present a scalable algorithm for computing the Monge map between two probability distributions. Our algorithm is based on a weak form of the optimal transport problem, thus it only requires samples from the marginals instead of their analytic expressions, and can accommodate optimal transport between two distributions with different dimensions. Our algorithm is suitable for general cost functions, compared with other existing methods for estimating Monge maps using samples, which are usually for quadratic costs. The performance of our algorithms is demonstrated through a series of experiments with both synthetic and realistic data",
-    "checked": true,
-    "id": "2007e37f901b4a269a7046ef122ab7b7c8067194",
-    "semantic_title": "scalable computation of monge maps with general costs",
-    "citation_count": 23
-  },
-  "https://openreview.net/forum?id=BEhxCh4dvW5": {
-    "title": "Causal-TGAN: Modeling Tabular Data Using Causally-Aware GAN",
-    "volume": "workshop",
-    "abstract": "Generative adversarial net (GAN)-based tabular data generation has recently received significant attention for its power for data augmentation when available data is limited. Most prior works have applied generic GAN frameworks for tabular data generation without explicitly considering inter-variable relationships, which is important for modeling tabular data distribution. In this work, we design Causal-TGAN, a causally-aware generator architecture that can capture the relationships among variables (continuous-type, discrete-type, and mixed-type) by explicitly modeling the pre-defined inter-variable causal relationships. The flexibility of Causal-TGAN is its capability to support different degrees of subject matter expert domain knowledge (e.g., complete or partial) about the inter-variable causal relations. Extensive experimental results on both simulated and real-world datasets demonstrate that exploiting causal relations in deep generative models could improve the generated tabular data quality compared to the state-of-the-art. Code is available at \\url{https://github.com/BiggyBing/Causal-TGAN-Public}",
-    "checked": false,
-    "id": "59b594bbeacf18e31bc46268bf5fa71fbaf8a4bb",
-    "semantic_title": "c ausal -tgan: m odeling t abular d ata u sing c ausally -a ware gan",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=r4geC2VdP-5": {
-    "title": "Implicit Neural Video Compression",
-    "volume": "workshop",
-    "abstract": "We propose a method to compress full-resolution video sequences with implicit neural representations. Each frame is represented as a neural network that maps coordinate positions to pixel values. We use a separate implicit network to modulate the coordinate inputs, which enables efficient motion compensation between frames. Together with a small residual network, this allows us to efficiently compress P-frames relative to the previous frame. We further lower the bitrate by storing the network weights with learned integer quantization. Our method offers several simplifications over established neural video codecs: it does not require the receiver to have access to a pretrained neural network, does not use expensive interpolation-based warping operations, and does not require a separate training dataset",
-    "checked": true,
-    "id": "885fe5937c94bd2891fd6eaeb79acb855de4ece3",
-    "semantic_title": "implicit neural video compression",
-    "citation_count": 28
-  },
-  "https://openreview.net/forum?id=HVlG62EdvWc": {
-    "title": "Semantic Image Synthesis with Semantically Coupled VQ-Model",
-    "volume": "workshop",
-    "abstract": "Semantic image synthesis enables control over unconditional image generation by allowing guidance on what is being generated. We conditionally synthesize the latent space from a vector quantized model (VQ-model) pre-trained to autoencode images. Instead of training an autoregressive Transformer on separately learned conditioning latents and image latents, we find that jointly learning the conditioning and image latents significantly improves the modeling capabilities of the Transformer model. While our jointly trained VQ-model achieves a similar reconstruction performance to a vanilla VQ-model for both semantic and image latents, tying the two modalities at the autoencoding stage proves to be an important ingredient to improve autoregressive modeling performance. We show that our model improves semantic image synthesis using autoregressive models on popular semantic image datasets ADE20k, Cityscapes and COCO-Stuff",
-    "checked": true,
-    "id": "2bd983eb332f31cddaad8ec8beb0bbc87ed50aa1",
-    "semantic_title": "semantic image synthesis with semantically coupled vq-model",
-    "citation_count": 2
-  },
-  "https://openreview.net/forum?id=H43MpnN_vZ9": {
-    "title": "Annealed Importance Sampling meets Score Matching",
-    "volume": "workshop",
-    "abstract": "Annealed Importance Sampling (AIS) is one of the most effective methods for marginal likelihood estimation. It relies on a sequence of distributions interpolating between a tractable initial distribution and the posterior of interest which we simulate from approximately using a non-homogeneous Markov chain. To obtain an importance sampling (IS) estimate of the marginal likelihood, AIS introduces an extended target distribution to reweight the Markov chain proposal. While much effort has been devoted to improving the proposal distribution used by AIS by changing the intermediate distributions and corresponding Markov kernels, an underappreciated issue is that AIS uses an convenient but suboptimal extended target distribution which can hinder its performance. We leverage here recent progress in score-based generative modeling to learn the optimal extended target distribution for a given AIS proposal using score matching ideas. We demonstrate this novel differentiable AIS procedure on a number of synthetic benchmark distributions and a normalizing flow target",
-    "checked": true,
-    "id": "8d0d32c9afcf1a95e42214e2a1a21613ea714560",
-    "semantic_title": "annealed importance sampling meets score matching",
-    "citation_count": 5
-  },
-  "https://openreview.net/forum?id=S4he63E_PZq": {
-    "title": "From Points to Functions: Infinite-dimensional Representations in Diffusion Models",
-    "volume": "workshop",
-    "abstract": "Diffusion-based generative models learn to iteratively transfer unstructured noise to a complex target distribution as opposed to Generative Adversarial Networks (GANs) or the decoder of Variational Autoencoders (VAEs) which produce samples from the target distribution in a single step. Thus, in diffusion models every sample is naturally connected to a random trajectory which is a solution to a learned stochastic differential equation (SDE). Generative models are only concerned with the final state of this trajectory that delivers samples from the desired distribution. \\cite{abstreiter2021diffusion} showed that these stochastic trajectories can be seen as continuous filters that wash out information along the way. Consequently, there is an intermediate time step at which the preserved information is optimal for a given downstream task. In this work, we show that a combination of information content from different time steps gives a strictly better representation for the downstream task. We introduce an attention and recurrence based modules that ``learn to mix'' information content of various time-steps such that the resultant representation leads to superior performance in downstream tasks",
-    "checked": true,
-    "id": "c689a7a787a7494c0f5e0b51713ba2d2e76c2a70",
-    "semantic_title": "from points to functions: infinite-dimensional representations in diffusion models",
-    "citation_count": 5
-  },
-  "https://openreview.net/forum?id=rrexanVuPW5": {
-    "title": "Simulate Time-integrated Coarse-grained Molecular Dynamics with Geometric Machine Learning",
-    "volume": "workshop",
-    "abstract": "Molecular dynamics (MD) simulation is the workhorse of various scientific domains but is limited by high computational cost. Learning-based force fields have made major progress in accelerating ab-initio MD simulation but are still not fast enough for many real-world applications that require long-time MD simulation. In this paper, we adopt a different machine learning approach where we coarse-grain a physical system using graph clustering and model the system evolution with a very large time-integration step using graph neural networks. A novel score-based GNN refinement module resolves the long-standing challenge of long-time simulation instability. Despite only being trained with short MD trajectory data, our learned simulator can generalize to unseen novel systems, and simulate for much longer than the training trajectories. Properties requiring 10-100 ns level long-time dynamics can be accurately recovered at several orders of magnitude higher speed than classical force fields. We demonstrate the effectiveness of our method on two realistic complex systems: (1) single-chain coarse-grained polymers in implicit solvent; (2) multi-component Li-ion polymer electrolyte systems",
-    "checked": true,
-    "id": "7562e5747ce73b36b57f51d53f7e25d6875ab57a",
-    "semantic_title": "simulate time-integrated coarse-grained molecular dynamics with geometric machine learning",
-    "citation_count": 7
-  },
-  "https://openreview.net/forum?id=ruWeThEOwb9": {
-    "title": "Zero-Shot Recommender Systems",
-    "volume": "workshop",
-    "abstract": "Performance of recommender systems (RecSys) relies heavily on the amount of training data available. This poses a chicken-and-egg problem for early-stage products, whose amount of data, in turn, relies on the performance of their RecSys. In this paper, we explore the possibility of zero-shot learning in RecSys, to enable generalization from an old dataset to an entirely new dataset. We develop, to the best of our knowledge, the first deep generative model, dubbed ZEro-Shot Recommenders (ZESRec), that is trained on an old dataset and generalize to a new one where there areneither overlapping users nor overlapping items, a setting that contrasts typical cross-domain RecSys that has either overlapping users or items. We study three pairs of real-world datasets and demonstrate that ZESRec can successfully enable such zero-shot recommendations, opening up new opportunities for resolving the chicken-and-egg problem for data-scarce startups or early-stage products",
-    "checked": true,
-    "id": "872719ef003ff5f9320ff338b1fbd540b4080051",
-    "semantic_title": "zero-shot recommender systems",
-    "citation_count": 24
-  },
-  "https://openreview.net/forum?id=HHlL2nVOwZc": {
-    "title": "SIReN-VAE: Leveraging Flows and Amortized Inference for Bayesian Networks",
-    "volume": "workshop",
-    "abstract": "Initial work on variational autoencoders assumed independent latent variables with simple distributions. Subsequent work has explored incorporating more complex distributions and dependency structures: including normalizing flows in the encoder network allows latent variables to entangle non-linearly, creating a richer class of distributions for the approximate posterior, and stacking layers of latent variables allows more complex priors to be specified for the generative model. This work explores incorporating arbitrary dependency structures, as specified by Bayesian networks, into VAEs. This is achieved by extending both the prior and inference network with graphical residual flows—residual flows that encode conditional independence by masking the weight matrices of the flow's residual blocks. We compare our model's performance on several synthetic datasets and show its potential in data-sparse settings",
-    "checked": true,
-    "id": "104fd05515f7e07fcdd849699d788f1d77884320",
-    "semantic_title": "siren-vae: leveraging flows and amortized inference for bayesian networks",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=BV3Nn3VdDZ9": {
-    "title": "Improved Image Generation via Sparsity",
-    "volume": "workshop",
-    "abstract": "The interest of the deep learning community in image synthesis has grown massively in recent years. Nowadays, deep generative methods, and specifically Generative Adversarial Networks (GANs), are leading to state-of-the-art performance, capable of synthesizing images that appear realistic. While the efforts for improving the quality of the generated images are extensive, most attempts still consider the generator part as an uncorroborated \"black-box\". In this paper, we aim to provide a better understanding of the image generation process. We interpret existing generators as implicitly relying on sparsity-inspired models. More specifically, we show that generators can be viewed as manifestations of the Convolutional Sparse Coding (CSC) and its Multi-Layered version (ML-CSC) synthesis processes. We leverage this observation by explicitly enforcing a sparsifying regularization on appropriately chosen activation layers in the generator and demonstrate that this leads to improved image synthesis. Furthermore, we show that the same rationale and benefits apply to generators serving inverse problems, demonstrated on the Deep Image Prior (DIP) method",
-    "checked": false,
-    "id": "047bd273286f23304391add7b42b2be922ed14fb",
-    "semantic_title": "improved image generation via sparse modeling",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=BNhf2nNdD-c": {
-    "title": "Graphical Residual Flows",
-    "volume": "workshop",
-    "abstract": "Graphical flows add further structure to normalizing flows by encoding non-trivial variable dependencies. Previous graphical flow models have focused primarily on a single flow direction: the normalizing direction for density estimation, or the generative direction for inference. However, to use a single flow to perform tasks in both directions, the model must exhibit stable and efficient flow inversion. This work introduces graphical residual flows, a graphical flow based on invertible residual networks. Our approach to incorporating dependency information in the flow, means that we are able to calculate the Jacobian determinant of these flows exactly. Our experiments confirm that graphical residual flows provide stable and accurate inversion that is also more time-efficient than alternative flows with similar task performance. Furthermore, our model provides performance competitive with other graphical flows for both density estimation and inference tasks",
-    "checked": true,
-    "id": "d25133df3bb143edd0463782be6dc8af21e43eaa",
-    "semantic_title": "graphical residual flows",
-    "citation_count": 2
-  },
-  "https://openreview.net/forum?id=BSllnh4uDZq": {
-    "title": "Inkorrect: Digital Ink Spelling Correction",
-    "volume": "workshop",
-    "abstract": "We introduce Inkorrect, a digital ink (online handwriting) spelling correction approach. We show that existing metrics don't capture the quality of spelling correction, and propose a new one. Our approach outperforms previous work in automated and human evaluation, while also being more data- and label-efficient",
-    "checked": false,
-    "id": "400235f8ef03574a987d3771dd57a31deaf8a76e",
-    "semantic_title": "inkorrect: online handwriting spelling correction",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=BBxeo2Vuvbq": {
-    "title": "Conditional Generative Quantile Networks via Optimal Transport",
-    "volume": "workshop",
-    "abstract": "Quantile regression has a natural extension to generative modelling by leveraging a stronger pointwise convergence than in distribution. While the pinball quantile loss works well in the scalar case, it cannot be readily extended to the vector case. In this work, we propose a multivariate quantile approach for generative modelling using optimal transport with provable guarantees. Specifically, we suggest that by optimizing smooth functions parameterized by neural networks with respect to the dual of the correlation maximization problem, the function uniformly converges to the optimal convex potential. Thus, we construct a Brenier map as our generative quantile network. Furthermore, we introduce conditioning by approximating the convex potential using a first-order approximation with respect to the covariates. Through extensive experiments on synthetic and real datasets for conditional generative and probabilistic time-series forecasting tasks, we demonstrate the efficacy and versatility of our theoretically motivated model as a distribution estimator and probabilistic forecaster",
-    "checked": false,
-    "id": "e04bffd84e5e9266f98720778ad3cff417a8d905",
-    "semantic_title": "differentially private generative models through optimal transport",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=SEe-shVOPbc": {
-    "title": "Benchmarking Generative Latent Variable Models for Speech",
-    "volume": "workshop",
-    "abstract": "Stochastic latent variable models (LVMs) achieve state-of-the-art performance on natural image generation but are still inferior to deterministic models on speech. In this paper, we develop a speech benchmark of popular temporal LVMs and compare them against state-of-the-art deterministic models. We report the likelihood, which is a much used metric in the image domain, but rarely, or incomparably, reported for speech models. To assess the quality of the learned representations, we also compare their usefulness for phoneme recognition. Finally, we adapt the Clockwork VAE, a state-of-the-art temporal LVM for video generation, to the speech domain. Despite being autoregressive only in latent space, we find that the Clockwork VAE can outperform previous LVMs and reduce the gap to deterministic models by using a hierarchy of latent variables",
-    "checked": true,
-    "id": "44d9629415911b7f76a411f90535140edb96c317",
-    "semantic_title": "benchmarking generative latent variable models for speech",
-    "citation_count": 2
-  },
-  "https://openreview.net/forum?id=rV3Gon4dD-5": {
-    "title": "Object Representations as Fixed Points: Training Iterative Inference Algorithms with Implicit Differentiation",
-    "volume": "workshop",
-    "abstract": "Deep generative models, particularly those that aim to factorize the observations into discrete entities (such as objects), must often use iterative inference procedures that break symmetries among equally plausible explanations for the data. Such inference procedures include variants of the expectation-maximization algorithm and structurally resemble clustering algorithms in a latent space. However, combining such methods with deep neural networks necessitates differentiating through the inference process, which can make optimization exceptionally challenging. In this work, we observe that such iterative inference methods can be made differentiable by means of the implicit function theorem, and develop an implicit differentiation approach that improves the stability and tractability of training such models by decoupling the forward and backward passes. This connection enables us to apply recent advances in optimizing implicit layers to not only improve the stability and optimization of the slot attention module in SLATE, a state-of-the-art method for learning entity representations, but do so with constant space and time complexity in backpropagation and only one additional line of code",
-    "checked": false,
-    "id": "b67c812cc4c9a96e73e228ead44cb9939d356a68",
-    "semantic_title": "object representations as fixed points: training iterative refinement algorithms with implicit differentiation",
-    "citation_count": 17
-  },
-  "https://openreview.net/forum?id=rMUccG4LZq": {
-    "title": "IGBOSUM1500 - INTRODUCING THE IGBO TEXT SUMMARIZATION DATASET",
-    "volume": "workshop",
-    "abstract": "Igbo, along with Hausa and Yor`ub´a, is one of the three prominent indigenous Nigerian languages. It is spoken by the Igbos of southeastern Nigeria with over 30 million speakers resident in Nigeria and many more abroad. In NLP terms, Igbo is still considered to be acutely under-resourced and ‘scraping-by' according to Joshi et al. (2020). Currently, efforts are ongoing in developing IgboNLP e.g. part-of-speech tagging (Onyenwe et al., 2019), diacritic restoration (Ezeani et al.,2016), embedding based analogy and similarity (Ezeani et al., 2018), machine translation (Ezeani et al., 2020), (Nekoto et al., 2020), and named-entity recognition (Adelani et al., 2021). However, these efforts need to be sustained by creating more resources and expanding the scope of coverage of common downstream NLP tasks in Igbo, and one of such tasks is text summarization",
-    "checked": false,
-    "id": "d3930740314fd88afd0d3189656c2b94f8e20118",
-    "semantic_title": "i gbo s um 1500 - i ntroducing the i gbo t ext s ummarization d ataset",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SYbV9qzNLZ9": {
-    "title": "A Comparison of Topic Modeling and Classification Machine Learning Algorithms on Luganda Data",
-    "volume": "workshop",
-    "abstract": "Extracting functional themes and topics from a large text corpus manually is usually infeasible. There is a need to build text mining techniques such as topic modeling, which provide a mechanism to infer topics from a corpus of text automatically. This paper discusses topic modeling and topic classification models on Luganda text data. For topic modeling, we considered a Non-negative matrix factorization (NMF) which is an unsupervised machine learning algorithm that extracts hidden patterns from unlabeled text data to create latent topics, and for topic classification, we considered classic approaches, neural networks, and pretrained algorithms. The Bidirectional Encoder Representations from Transformers(BERT), a pretrained model that uses an attention mechanism that learns contextual relations between words (or sub-words) in a text, and a Support Vector Machine (SVM) algorithm, a classic model which analyzes particular properties of learning within text data, record the best results for topic classification. Our results indicate that topic modeling and topic classification algorithms produce relatively similar results when topic classification algorithms are trained on a balanced dataset",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SO-U99z4U-q": {
-    "title": "Building Text and Speech Datasets for Low Resourced Languages: A Case of Languages in East Africa",
-    "volume": "workshop",
-    "abstract": "Africa has over 2000 languages; however, those languages are not well represented in the existing Natural Language Processing ecosystem. African languages lack essential digital resources to be engaged effectively in the advancing language technologies. This growing gap has attracted researchers to empower and build resources for African languages to transfer the various Natural Language Processing methods to African languages. This paper discusses the process we took to create, curate and annotate language text and speech datasets for low-resourced languages in East Africa. This paper focuses on five languages. Four of the languages: Luganda, Runyankore-Rukiga, Acholi, and Lumasaaba, are majorly spoken in Uganda, and Kiswahili which is a majorly spoken language across East Africa. We have run baseline: machine translation models on the English - Luganda dataset in the parallel text corpora and Automatic Speech Recognition (ASR) models on the Luganda speech dataset. We recorded a BiLingual Evaluation Understudy (BLEU) score of 37 for the English-Luganda model and a BLEU score of 36.8 for the Luganda-English model. For the ASR experiments, we obtained a Word Error Rate (WER) of 33%",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=BMVq5MELb9": {
-    "title": "Goud.ma: a News Article Dataset for Summarization in Moroccan Darija",
-    "volume": "workshop",
-    "abstract": "Moroccan Darija is a vernacular spoken by over 30 million people primarily in Morocco. Despite a high number of speakers, it remains a low-resource language. In this paper, we introduce Goud.ma: a dataset of over 158k news articles for automatic summarization in code-switched Moroccan Darija. We analyze the dataset and find that it requires a high level of abstractive reasoning. We fine-tune the Arabic-language BERT (AraBERT), and the language models for the Moroccan (DarijaBERT), and Algerian (DziriBERT) national vernaculars for summarization on Goud.ma. The results show that Goud.ma is a challenging summarization benchmark dataset. We release our dataset publicly in an effort to encourage the diversity of evaluation tasks to improve language modeling in Moroccan Darija",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=BK-z5qzEU-9": {
-    "title": "Machine Translation For African Languages: Community Creation Of Datasets And Models In Uganda",
-    "volume": "workshop",
-    "abstract": "Reliable machine translation systems are only available for a small proportion of the world's languages, the key limitation being a shortage of training and evaluation data. We provide a case study in the creation of such resources by NLP teams who are local to the communities in which these languages are spoken. A parallel text corpus, SALT, was created for five Ugandan languages (Luganda, Runyankole, Acholi, Lugbara and Ateso) and various methods were explored to train and evaluate translation models. The resulting models were found to be effective for practical translation applications, even for those languages with no previous NLP data available, achieving mean BLEU score of 26.2 for translations to English, and 19.9 from English. The SALT dataset and models described are publicly available at https://github.com/SunbirdAI/salt",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=BFbg59zVUZc": {
-    "title": "Participatory Translations of Oshiwambo: Towards Sustainable Culture Preservation with Language Technology",
-    "volume": "workshop",
-    "abstract": "In this paper, we describe a participatory, collaborative, and cost-effective process for creating translations in Oshiwambo, the most widely African language spoken in Namibia. We aim to (1) build a resource for language technology development, (2) bridge generational gaps in cultural and language knowledge, and at the same time (3) provide socio-economic opportunities through language preservation. The created data spans diverse topics of cultural importance, and comprises over 5,000 sentences written in the Oshindonga dialect and translated to English, the largest parallel corpus for Oshiwambo to-date. We show that it is very effective for machine translation, especially when combined with transfer learning",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=ruW4c9fNLZ5": {
-    "title": "NECAT-CLWE: A Simple But Efficient Parallel Data Generation Approach for Unsupervised and Semi-Supervised Neural Machine Translation",
-    "volume": "workshop",
-    "abstract": "Many languages lack sufficient data to train qualitative translation systems, particularly those based on the cutting-edge neural machine translation architectures. Recently, it has been demonstrated that using an exact copy of the monolingual target data as the source data improves the quality of translation systems, allowing them to benefit from proper nouns and such similar words that do not require translation. However, using an exact copy of the target data contaminates the source data with terms in the target language that needs translation. As a result, we describe in this paper a similar but more effective parallel data generation approach for improving low-resource neural machine translation using named entity copying and approximate translations using cross-lingual word embedding (NECAT-CLWE). The work will be evaluated on the low resource English-Hausa neural machine translation",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SpMeq5M48W9": {
-    "title": "Effect of Tokenisation Strategies for Low-Resourced Southern African Languages",
-    "volume": "workshop",
-    "abstract": "Research into machine translation for African languages is very limited and low- resourced in terms of datasets and model evaluations. This work aims to add to the field of neural machine translation research, for four low-resourced Southern African languages. The effect of two byte pair encoding tokenisation algorithms (subword nmt and SentencePiece), with various parameters, are evaluated. The paper builds upon previous research in the field for comparison, using an opti- mised transformer architecture and pre-cleaned data to translate English to North- ern Sotho, Setswana, Xitsonga and isiZulu. The results obtained show improve- ments in the previous BLEU scores obtained for Setswana and isiZulu",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=B0GEqcGV8-5": {
-    "title": "The African Stopwords Project: Curating Stopwords for African Languages",
-    "volume": "workshop",
-    "abstract": "Stopwords are fundamental in Natural Language Processing (NLP) techniques for information retrieval. One of the common tasks in preprocessing of text data is the removal of stopwords. Currently, while high-resource languages like English benefit from the availability of several stopwords, low-resource languages, such as those found in the African continent, have none that are standardized and available to use in NLP packages. Stopwords in the context of African languages are understudied and can reveal information about the crossover between languages. The African Stopwords project aims to study and curate stopwords for African languages. In this paper, we present our current progress on ten African languages as well as future plans for the project",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=HAzG99MV8-5": {
-    "title": "Dialogue Pidgin Text Adaptation via Contrastive Fine-Tuning",
-    "volume": "workshop",
-    "abstract": "The surging demand for multilingual dialogue systems often requires a costly labeling process for each language addition. For low resource languages, human annotators are continuously tasked with the adaptation of resource-rich language utterances for each new domain. However, this prohibitive and impractical process can often be a bottleneck for low resource languages that are still without proper translation systems nor parallel corpus. In particular, it is difficult to obtain task-specific low resource language annotations for the English-derived creoles (e.g. Nigerian and Cameroonian Pidgin). To address this issue, we utilize the pretrained language models i.e. BART which has shown great potential in language generation/understanding – we propose to finetune the BART model to generate utterances in Pidgin by leveraging the proximity of the source and target languages, and utilizing positive and negative examples in contrastive training objectives. We collected and released the first parallel Pidgin-English conversation corpus in two dialogue domains and showed that this simple and effective technique is sufficient to yield impressive results for English-to-Pidgin generation, which are two closely-related languages",
-    "checked": false,
-    "id": "b1f69004b3c7d409d55fea21441b1e3a4e8940dd",
-    "semantic_title": "few-shot pidgin text adaptation via contrastive fine-tuning",
-    "citation_count": 2
-  },
-  "https://openreview.net/forum?id=rRzx5qzVIb9": {
-    "title": "YOSM: A NEW YORUBA SENTIMENT CORPUS FOR MOVIE REVIEWS",
-    "volume": "workshop",
-    "abstract": "People's opinions and judgments regarding a particular movie differ. A movie that is thoroughly enjoyed and recommended by an individual might be hated by another. One characteristic of humans is the ability to have positive or negative feelings. To automatically classify and study human feelings, an aspect of natural language processing, sentiment analysis was designed to understand human feelings regarding several issues which could affect a product, social media platforms, government, societal discussions, or even movies. Due to the scarcity of datasets and linguistic architectures that will suit low resource languages, African languages \"low resource languages\" have not been fully explored when it comes to tackling natural language processing tasks. Several works on sentiment analysis have been done on high resource languages while low resources languages like Yoruba and other African languages have received little attention. For this reason, our attention is placed on Yoruba to explore sentiment analysis on reviews of Nigerian movies. The data comprised 1500 movie reviews that were sourced from IMDB, Rotten Tomatoes, Letterboxd, Cinemapointer, and Nollyrated. We develop sentiment classification models using state-of-the-art pre-trained language models like mBERT and AfriBERTa to classify the movie reviews",
-    "checked": true,
-    "id": "c3cfcd42b76ec6a18376f3975198c76e964b664f",
-    "semantic_title": "yosm: a new yoruba sentiment corpus for movie reviews",
-    "citation_count": 13
-  },
-  "https://openreview.net/forum?id=BuZgccGE8-q": {
-    "title": "Task-Adaptive Pre-Training for Boosting Learning With Noisy Labels: A Study on Text Classification for African Languages",
-    "volume": "workshop",
-    "abstract": "For high-resource languages like English, text classification is a well-studied task. The performance of modern NLP models easily achieves an accuracy of more than 90\\% in many standard datasets for text classification in English \\citep{xie2019unsupervised, Yang2019, Zaheer2020}. However, text classification in low-resource languages is still challenging due to the lack of annotated data. Although methods like weak supervision and crowdsourcing can help ease the annotation bottleneck, the annotations obtained by these methods contain label noise. Models trained with label noise may not generalize well. To this end, a variety of noise-handling techniques have been proposed to alleviate the negative impact caused by the errors in the annotations (for extensive surveys see \\citep{hedderich-etal-2021-survey, DBLP:journals/kbs/AlganU21}). In this work, we experiment with a group of standard noisy-handling methods on text classification tasks with noisy labels. We study both simulated noise and realistic noise induced by weak supervision. Moreover, we find task-adaptive pre-training techniques \\citep{DBLP:conf/acl/GururanganMSLBD20} are beneficial for learning with noisy labels",
-    "checked": true,
-    "id": "09bbcaf6cc1d3102359061ae7321b583be21a5b5",
-    "semantic_title": "task-adaptive pre-training for boosting learning with noisy labels: a study on text classification for african languages",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=HKW4Kqf4I-9": {
-    "title": "Multilingual language model Adaptive Fine-Tuning: A Study on African Languages",
-    "volume": "workshop",
-    "abstract": "Multilingual pre-trained language models (PLMs) have demonstrated impressive performance on several downstream tasks on both high-resourced and low-resourced languages. However, there is still a large performance drop for languages unseen during pre-training, especially African languages. One of the most effective approaches to adapt to a new language is language adaptive fine-tuning (LAFT) — fine-tuning a multilingual PLM on monolingual texts using the pre-training objective. However, African languages with large monolingual texts are few, and adapting to each of them individually takes large disk space and limits the cross-lingual transfer abilities of the resulting models because they have been specialized for a single language. In this paper, we perform multilingual adaptive fine-tuning (MAFT) on 17 most-resourced African languages and three other high-resource languages widely spoken on the continent – English, French, and Arabic to encourage cross-lingual transfer learning. Additionally, to further specialize the multilingual PLM, we removed vocabulary tokens from the embedding layer that corresponds to non-African writing scripts before MAFT, thus reducing the model size by 50%. Our evaluation on two multilingual PLMs (AfriBERTa and XLM-R) and three NLP tasks (NER, news topic classification, and sentiment classification) shows that our approach is competitive to applying LAFT on individual languages while requiring significantly less disk space",
-    "checked": true,
-    "id": "02dae5f4d413f4764a240616b0eba0bf124e3b3e",
-    "semantic_title": "multilingual language model adaptive fine-tuning: a study on african languages",
-    "citation_count": 5
-  },
-  "https://openreview.net/forum?id=r_-PYcf4LZc": {
-    "title": "TCNSpeech: A Community-Curated Speech Corpus for Sermons",
-    "volume": "workshop",
-    "abstract": "In this work we present TCNSpeech, a community-curated multispeaker sermon corpus for speech recognition tasks. It contains a total of 24 hours of English audio data recording, chunked and transcribed. The context of the dataset is domain-specific for sermons in Nigerian English accent and a use case for community data curation. The dataset will be made publicly available",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SAGNK9ME8Wc": {
-    "title": "True Bilingual NMT",
-    "volume": "workshop",
-    "abstract": "Bilingual machine translation permits training a single model that translates monolingual sentences from one language to another. However, a model is not truly bilingual unless it can translate back and forth in both language directions it was trained on, along with translating code-switched sentences to either language. We propose a true bilingual model trained on WMT14 English-French (En-Fr) dataset. For better use of parallel data, we generated synthetic code-switched (CSW) data along with an alignment loss on the encoder to align representations across languages. Our model strongly outperforms bilingual baselines on CSW translation while maintaining quality for non-code switched data",
-    "checked": false,
-    "id": "d220b0bda5e41b3436757fae3423fa81561ceba8",
-    "semantic_title": "t rue b ilingual nmt",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=HKWMFqfN8b5": {
-    "title": "Analysing the effects of transfer learning on low-resourced named entity recognition performance",
-    "volume": "workshop",
-    "abstract": "Transfer learning has led to large gains in performance for nearly all NLP tasks while making downstream models easier and faster to train. This has also been extended to low-resourced languages, with some success. We investigate the properties of transfer learning between 10 low-resourced languages, from the perspective of a named entity recognition task, specifically how much adaptive fine-tuning improves performance, the efficacy of zero-shot transfer as well as the effect of learning on the contextual embeddings computed from the model. Our results give some insight into zero-shot performance as well as the impact of different training schemes and data overlap between the training and testing languages. Particularly, we find that models with the best generalisation to other languages suffer in individual language performance, while models that perform well on a single language often do so at the expense of generalising to others. In the interest of reproducibility, we publicly release our source code and models",
-    "checked": false,
-    "id": "6ebc377d17507e0a8a8046b81eb7904f0e69b5a4",
-    "semantic_title": "on the use of external data for spoken named entity recognition",
-    "citation_count": 10
-  },
-  "https://openreview.net/forum?id=SCzGtqGVL-q": {
-    "title": "EDUSTT: In-Domain Speech Recognition for Nigerian Accented Educational Contents in English",
-    "volume": "workshop",
-    "abstract": "English Automatic Speech Recognition systems are trained on regular speech, therefore they may struggle to perform well on accented and domain-specific speech. For broader applications of ASR systems, such as in education, where there is synchronous learning, it is important to have a reliable system - a specialized system that recognises terms used in school subjects and spoken by accented teachers. English is our official language in Nigeria, and it is the major language used to teach in schools. However, our teachers hail from different parts of the country, where their mother-tongue affects the way they pronounce certain words. The aim of this paper is to propose an ASR system for education in Nigerian accent. Our experiment leveraged on fine tuning NeMo's QuartzNet15x5 English model on our accented educational data. This process yielded a WER of 27\\%",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=HOZmF9MV8Wc": {
-    "title": "An Exploration of Vocabulary Size and Transfer Effects in Multilingual Language Models for African Languages",
-    "volume": "workshop",
-    "abstract": "Multilingual pretrained language models have been shown to work well on many languages, even those they were not originally pretrained on. Despite their empirical success in downstream tasks, there is still a gap in understanding of \"what makes them tick''. In this paper, we try to understand the effects of sharing a vocabulary space on the cross-lingual abilities of a multilingual model. We train multiple monolingual and multilingual models and compare their effectiveness on downstream tasks. In monolingual models, a single language occupies the entire vocabulary space, limiting possible cross-lingual transfer. Whereas in a multilingual setting, the model benefits from cross-lingual transfer with a trade-off of having to split the vocabulary space between multiple languages. We present a comprehensive study of the effects of a shared vocabulary space, cross-script pretraining, and high-resource transfer on the cross-lingual abilities of multilingual models in zero- and few-shot settings. From our study, we observe that scaling the number of languages is beneficial for cross-lingual transfer in low-resource multilingual models up until a point, after which transfer effects saturate. We find that there is not much benefit from pretraining low-resource multilingual models with a high-resource language, and that cross-lingual transfer is possible even when the languages belong to different scripts. This empirical study is conducted in the context of three linguistically different low-resource African languages---Amharic, Hausa, and Swahili---and evaluation was performed on two different tasks, text classification and named entity recognition. During the course of our experiments, we also performed an audit of the quality of two common low-resource language corpora (Common Crawl and BBC News data)",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=BtZlF5M4Lb9": {
-    "title": "Ìtàkúròso: Exploiting Cross-Lingual Transferability for Natural Language Generation of Dialogues in Low-Resource, African Languages",
-    "volume": "workshop",
-    "abstract": "In this study, we investigate the possibility of cross-lingual transfer from a state-of-the-art (SotA) deep monolingual model DialoGPT to 6 African languages and compare with 2 other baselines (BlenderBot 90M, another SotA and a simple seq2seq). The languages are Swahili, Wolof, Hausa, Nigerian Pidgin English, Kinyarwanda & Yoruba. Natural language generation (NLG) of dialogues is known to be a challenging task for many reasons. It becomes more challenging for African languages which are low-resource in terms of data. We translate and train on a small portion of the multi-domain MultiWOZ dataset for the languages. Besides intrinsic evaluation (i.e. perplexity), we conduct human evaluation of single-turn conversations using majority voting and measure inter-annotator agreement (IAA) using Fleiss Kappa and credibility tests. The results show that the hypothesis that deep monolingual models learn some abstractions that generalise across languages holds. We observe human-like conversations in 5 out of the 6 languages. It, however, applies to different degrees in different languages, which is expected. The language with the most transferable properties is the Nigerian Pidgin English, with a human-likeness score of 78.1\\%, of which 35.5\\% are unanimous. Its credibility IAA unanimous score is 66.7\\%. The main contributions of this paper include the representation of under-represented African languages and demonstrating the cross-lingual transferability hypothesis. We also provide the datasets and host the model checkpoints/demos on the HuggingFace hub for public access",
-    "checked": true,
-    "id": "3df820fdac427cd6d60753a2878d812f57b3b972",
-    "semantic_title": "ìtàkúròso: exploiting cross-lingual transferability for natural language generation of dialogues in low-resource, african languages",
-    "citation_count": 5
-  },
-  "https://openreview.net/forum?id=rd-G1nO-Jbq": {
-    "title": "CodeBPE: Investigating Subtokenization Options for Large Language Model Pretraining on Source Code",
-    "volume": "workshop",
-    "abstract": "Recent works has widely adopted large language model pretraining for source code, suggested source code-specific pretraining objectives and investigated the applicability of various Transformer-based language model architectures for source code. This work investigates another important aspect of such models, the effect of different subtokenization options, and aims at identifying most effective and length-efficient subtokenizations, taking into account source code specifics. We propose subtokenziation that reduces average length by 17--40% without downstream performance drop, and show that a carefully chosen subtokenization may significantly improve quality by 0.5-2%, possibly with some length increase",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rubeJ2ObyWc": {
-    "title": "NS3: Neuro-Symbolic Semantic Code Search",
-    "volume": "workshop",
-    "abstract": "Semantic code search is the task of retrieving a code snippet given a textual description of its functionality. Recent work has been focused on using similarity metrics between neural embeddings of text and code. However, current language models are known to struggle with longer, compositional sentences, and multi-step reasoning. To overcome this limitation, we propose supplementing the query sentence with a layout of its semantic structure. The semantic layout is used to break down the final reasoning decision into a series of lower-level decisions. We use a Neural Module Network architecture to implement this idea. We compare our model - $NS^3$ (Neuro-Symbolic Semantic Search) - to a number of baselines, including state-of-the-art semantic code retrieval methods, such as CodeBERT, CuBERT and GraphCodeBERT, and evaluate on two datasets - Code Search Net (CSN) and Code Search and Question Answering (CoSQA). On these datasets, we demonstrate that our approach results in higher performance. We also perform additional studies to show the effectiveness of our modular design when handling compositional queries",
-    "checked": true,
-    "id": "ebc08a933e053e57bc2102848efa1119c0ce2bd9",
-    "semantic_title": "ns3: neuro-symbolic semantic code search",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=H8q40ouZJWc": {
-    "title": "Learning to Superoptimize Real-World Programs",
-    "volume": "workshop",
-    "abstract": "Program optimization is the process of modifying software to execute more efficiently. Superoptimizers attempt to find the optimal program by employing significantly more expensive search and constraint solving techniques. Generally, these methods do not scale well to programs in real development scenarios, and as a result superoptimization has largely been confined to small-scale, domain-specific, and/or synthetic program benchmarks. In this paper, we propose a framework to learn to superoptimize real-world programs by using neural sequence-to-sequence models. We created a dataset consisting of over 25K real-world x86-64 assembly functions mined from open-source projects and propose an approach, Self Imitation Learning for Optimization (SILO) that is easy to implement and outperforms a standard policy gradient learning approach on our dataset. Our method, SILO, superoptimizes 5.9% of our test set when compared with the gcc version 10.3 compiler's aggressive optimization level -O3. We also report that SILO's rate of superoptimization on our test set is over five times that of a standard policy gradient approach and a model pre-trained on compiler optimization demonstration",
-    "checked": true,
-    "id": "6c2d43e71e240e354b5790a38da78a291ceffe7c",
-    "semantic_title": "learning to superoptimize real-world programs",
-    "citation_count": 5
-  },
-  "https://openreview.net/forum?id=razGTV6E1Zc": {
-    "title": "Know Thyself: Transferable Visual Control Policies Through Robot-Awareness",
-    "volume": "workshop",
-    "abstract": "Note: This submission is published in ICLR'22. Training visual control policies from scratch on a new robot typically requires generating large amounts of robot-specific data. Could we leverage data previously collected on another robot to reduce or even completely remove this need for robot-specific data? We propose a \"robot-aware control\" paradigm that achieves this by exploiting readily available knowledge about the robot. We then instantiate this in a robot-aware model-based RL policy by training modular dynamics models that couple a transferable, robot-agnostic world dynamics module with a robot-specific, potentially analytical, robot dynamics module. This also enables us to set up visual planning costs that separately consider the robot agent and the world. Our experiments on tabletop manipulation tasks with simulated and real robots demonstrate that these plug-in improvements dramatically boost the transferability of visual model-based RL policies, even permitting zero-shot transfer of visual manipulation skills onto new robots. Project website: https://www.seas.upenn.edu/~hued/rac",
-    "checked": true,
-    "id": "93882706a1c92316c9c930e268d09d8a40e3e6e2",
-    "semantic_title": "know thyself: transferable visual control policies through robot-awareness",
-    "citation_count": 3
-  },
-  "https://openreview.net/forum?id=BtZx3NT41b9": {
-    "title": "Sim-to-Lab-to-Real: Safe RL with Shielding and Generalization Guarantees",
-    "volume": "workshop",
-    "abstract": "Safety is a critical component of autonomous systems and remains a challenge for learning-based policies to be utilized in the real world. In this paper, we propose Sim-to-Lab-to-Real to safely close the reality gap. To improve safety, we apply a dual policy setup where a performance policy is trained using the cumulative task reward and a backup (safety) policy is trained by solving the safety Bellman Equation based on Hamilton-Jacobi reachability analysis. In Sim-to-Lab transfer, we apply a supervisory control scheme to shield unsafe actions during exploration; in Lab-to-Real transfer, we leverage the Probably Approximately Correct (PAC)-Bayes framework to provide lower bounds on the expected performance and safety of policies in unseen environments. We empirically study the proposed framework for ego-vision navigation in two types of indoor environments including a photo-realistic one. We also demonstrate strong generalization performance through hardware experiments in real indoor spaces with a quadrupedal robot (See https://tinyurl.com/2p9hbyf7 for video of representative trials of Real deployment)",
-    "checked": false,
-    "id": "4d9c9d5e5afc3313bfbcf5e69e49ec32f4ec49d4",
-    "semantic_title": "sim-to-lab-to-real: safe reinforcement learning with shielding and generalization guarantees",
-    "citation_count": 6
-  },
-  "https://openreview.net/forum?id=rE3OCN6Vk-c": {
-    "title": "Imitation Learning for Generalizable Self-driving Policy with Sim-to-real Transfer",
-    "volume": "workshop",
-    "abstract": "Imitation Learning uses the demonstrations of an expert to uncover the optimal policy and it is suitable for real-world robotics tasks as well. In this case, however, the training of the agent is carried out in a simulation environment due to safety, economic and time constraints. Later, the agent is applied in the real-life domain using sim-to-real methods. In this paper, we apply Imitation Learning methods that solve a robotics task in a simulated environment and use transfer learning to apply these solutions in the real-world environment. Our task is set in the Duckietown environment, where the robotic agent has to follow the right lane based on the input images of a single forward-facing camera. We present three Imitation Learning and two sim-to-real methods capable of achieving this task. A detailed comparison is provided on these techniques to highlight their advantages and disadvantages",
-    "checked": true,
-    "id": "074da07a76f95299ac40cdc9a9c5c588c8a25667",
-    "semantic_title": "imitation learning for generalizable self-driving policy with sim-to-real transfer",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rt-c0N6Vk-9": {
-    "title": "Towards Flexible Inference in Sequential Decision Problems via Bidirectional Transformers",
-    "volume": "workshop",
-    "abstract": "Randomly masking and predicting word tokens has been a successful approach in pre-training language models for a variety of downstream tasks. In this work, we observe that the same idea also applies naturally to sequential decision making, where many well-studied tasks like behavior cloning, offline RL, inverse dynamics, and waypoint conditioning correspond to different sequence maskings over a sequence of states, actions, and returns. We introduce the FlexiBiT framework, which provides a unified way to specify models which can be trained on many different sequential decision making tasks. We show that a single FlexiBiT model is simultaneously capable of carrying out many tasks with performance similar to or better than specialized models. Additionally, we show that performance can be further improved by fine-tuning our general model on specific tasks of interest",
-    "checked": true,
-    "id": "56bc06be82c087348e638506174fa99956ef666c",
-    "semantic_title": "towards flexible inference in sequential decision problems via bidirectional transformers",
-    "citation_count": 6
-  },
-  "https://openreview.net/forum?id=SNnLCV6NyW9": {
-    "title": "Learning Category-Level Generalizable Object Manipulation Policy via Generative Adversarial Self-Imitation Learning from Demonstrations",
-    "volume": "workshop",
-    "abstract": "Generalizable object manipulation skills are critical for intelligent and multi-functional robots to work in real-world complex scenes. Despite the recent progress in reinforcement learning, it is still very challenging to learn a generalizable manipulation policy that can handle a category of geometrically diverse articulated objects. In this work, we tackle this category-level object manipulation policy learning problem via imitation learning in a task-agnostic manner, where we assume no handcrafted dense rewards but only a terminal reward. Given this novel and challenging generalizable policy learning problem, we identify several key issues that can fail the previous imitation learning algorithms and hinder the generalization to unseen instances. We then propose several general but critical techniques, including generative adversarial self-imitation learning from demonstrations, progressive growing of discriminator, and instance-balancing for expert buffer, that accurately pinpoints and tackles these issues and can benefit category-level manipulation policy learning regardless of the tasks. Our experiments on ManiSkill benchmarks demonstrate a remarkable improvement on all tasks and our ablation studies further validate the contribution of each proposed technique",
-    "checked": true,
-    "id": "9a47b85b97a12538605475e8b83bf71292ef435f",
-    "semantic_title": "learning category-level generalizable object manipulation policy via generative adversarial self-imitation learning from demonstrations",
-    "citation_count": 9
-  },
-  "https://openreview.net/forum?id=rtWOANa41W5": {
-    "title": "A Study of Off-Policy Learning in Environments with Procedural Content Generation",
-    "volume": "workshop",
-    "abstract": "Environments with procedural content generation (PCG environments) are useful for assessing the generalization capacity of Reinforcement Learning (RL) agents. A growing body of work focuses on generalization in RL in PCG environments, with many methods being built on top of on-policy algorithms. On the other hand, off-policy methods have received less attention. Motivated by this discrepancy, we examine how Deep Q Networks (Mnih et al., 2013) perform on the Procgen benchmark (Cobbe et al., 2020), and look at the impact of various additions to DQN on performance. We find that some popular techniques that have improved DQN on benchmarks like the Arcade Learning Environment (Bellemare et al., 2015, ALE) do not carry over to Procgen, implying that some research has overfit to tasks that lack diversity, and fails to consider the importance of generalization",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=StZUCEaV1Zc": {
-    "title": "Planning to Practice: Efficient Online Fine-Tuning by Composing Goals in Latent Space",
-    "volume": "workshop",
-    "abstract": "General-purpose robots in real-world settings require diverse repertoires of behaviors to complete challenging tasks in unstructured environments. To address this problem, goal-conditioned reinforcement learning aims to train policies that can reach configurable goals for a wide range of tasks on command. However, such goal-conditioned policies are notoriously difficult and time-consuming to train from scratch. In this paper, we propose Planning to Practice (PTP), a method that makes it practical to train goal-conditioned policies for long-horizon tasks that require multiple distinct types of interactions to solve. Our approach is based on two key ideas. First, we decompose the goal-reaching problem hierarchically, with a high-level planner that sets intermediate subgoals using conditional subgoal generators in the latent space for a low-level model-free policy. Second, we propose a hybrid offline reinforcement learning approach with online fine-tuning, which uses previously collected data to pre-train both the conditional subgoal generator and the policy, and then fine-tune the policy via online exploration. This fine-tuning process is itself facilitated by the planned subgoals, which break down the original target task into short-horizon goal-reaching tasks that are significantly easier to learn. We conduct experiments in both the simulation and real world, in which the policy is pre-trained on demonstrations of short primitive behaviors and fine-tuned for temporally extended tasks that are unseen in the offline data. Our experimental results show that PTP can generate feasible sequences of subgoals that enable the policy to efficiently solve the target tasks",
-    "checked": true,
-    "id": "3b51a29424b619ec5ce29125c4b88d8e24a09328",
-    "semantic_title": "planning to practice: efficient online fine-tuning by composing goals in latent space",
-    "citation_count": 6
-  },
-  "https://openreview.net/forum?id=HE3NA4aNJbq": {
-    "title": "Learning Transferable Policies By Inferring Agent Morphology",
-    "volume": "workshop",
-    "abstract": "The prototypical approach to reinforcement learning involves training policies tailored to a particular agent from scratch for every new morphology. Recent work aims to eliminate the re-training of policies by investigating whether a morphology-agnostic policy, trained on a diverse set of agents with similar task objectives, can be transferred to new agents with unseen morphologies without re-training. This is a challenging problem that required previous approaches to use hand-designed descriptions of the new agent's morphology. Instead of hand-designing this description, we propose a data-driven method that learns a representation of morphology directly from the reinforcement learning objective. Ours is the first reinforcement learning algorithm that can train a policy to generalize to new agent morphologies without requiring a description of the agent's morphology in advance. We evaluate our approach on a standard benchmark for agent-agnostic control, and improve over the state of the art in zero-shot generalization. Importantly, our method attains good performance \\textit{without} an explicit description of morphology",
-    "checked": false,
-    "id": "a2e854772c31a927ed3decf87ba63a45c88a0370",
-    "semantic_title": "l earning t ransferable p olicies b y i nferring a gent m orphology",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SVhMCN6V1W9": {
-    "title": "Using Deep Learning to Bootstrap Abstractions for Robot Planning",
-    "volume": "workshop",
-    "abstract": "This paper addresses the problem of learning abstractions that boost robot planning performance while providing strong guarantees of reliability. Although state-of-the-art hierarchical robot planning algorithms allow robots to efficiently compute long-horizon motion plans for achieving user desired tasks, these methods typically rely upon environment-dependent state and action abstractions that need to be hand-designed by experts. We present a new approach for bootstrapping the entire hierarchical planning process. This allows us to compute abstract states and actions for new environments automatically using the critical regions predicted by a deep neural network with an auto-generated robot-specific architecture. We show that the learned abstractions can be used with a novel multi-source bi-directional hierarchical robot planning algorithm that is sound and probabilistically complete. An extensive empirical evaluation on twenty different settings using holonomic and non-holonomic robots shows that (a) our learned abstractions provide the information necessary for efficient multi-source hierarchical planning; and that (b) this approach of learning, abstractions, and planning outperforms state-of-the-art baselines by nearly a factor of ten in terms of planning time on test environments not seen during training",
-    "checked": false,
-    "id": "37d6a8398ba7986fe89a667770f623db9f6e0678",
-    "semantic_title": "using deep learning to bootstrap abstractions for hierarchical robot planning",
-    "citation_count": 9
-  },
-  "https://openreview.net/forum?id=HtbfC4pNJbc": {
-    "title": "Don't Freeze Your Embedding: Lessons from Policy Finetuning in Environment Transfer",
-    "volume": "workshop",
-    "abstract": "A common occurrence in reinforcement learning (RL) research is making use of a pretrained vision stack that converts image observations to latent vectors. Using a visual embedding in this way leaves open questions, though: should the vision stack be updated with the policy? In this work, we evaluate the effectiveness of such decisions in RL transfer settings. We introduce policy update formulations for use after pretraining in a different environment and analyze the performance of such formulations. Through this evaluation, we also detail emergent metrics of benchmark suites and present results on Atari and AndroidEnv",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SV3x0NTNJ-q": {
-    "title": "Safer Autonomous Driving in a Stochastic, Partially-Observable Environment by Hierarchical Contingency Planning",
-    "volume": "workshop",
-    "abstract": "When learning to act in a stochastic, partially observable environment, an intelligent agent should be prepared to anticipate a change in its belief of the environment state, and be capable of adapting its actions on-the-fly to changing conditions. As humans, we are able to form contingency plans when learning a task with the explicit aim of being able to correct errors in the initial control, and hence prove useful if ever there is a sudden change in our perception of the environment which requires immediate corrective action. This is especially the case for autonomous vehicles (AVs) navigating real-world situations where safety is paramount, and a strong ability to react to a changing belief about the environment is truly needed. In this paper we explore an end-to-end approach, from training to execution, for learning robust contingency plans and combining them with a hierarchical planner to obtain a robust agent policy in an autonomous navigation task where other vehicles' behaviours are unknown, and the agent's belief about these behaviours is subject to sudden, last-second change. We show that our approach results in robust, safe behaviour in a partially observable, stochastic environment, generalizing well over environment dynamics not seen during training",
-    "checked": true,
-    "id": "55339ccac3b67ccccb34124dc28540f6a7b693b0",
-    "semantic_title": "safer autonomous driving in a stochastic, partially-observable environment by hierarchical contingency planning",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=SKZlRN6V1Zc": {
-    "title": "Separating the World and Ego Models for Self-Driving",
-    "volume": "workshop",
-    "abstract": "Training self-driving systems to be robust to the long-tail of driving scenarios is a critical problem. Model-based approaches leverage simulation to emulate a wide range of scenarios without putting users at risk in the real world. One promising path to faithful simulation is to train a forward model of the world to predict the future states of both the environment and the ego-vehicle given past states and a sequence of actions. In this paper, we argue that it is beneficial to model the state of the ego-vehicle, which often has simple, predictable and deterministic behavior, separately from the rest of the environment, which is much more complex and highly multimodal. We propose to model the ego-vehicle using a simple and differentiable kinematic model, while training a stochastic convolutional forward model on raster representations of the state to predict the behavior of the rest of the environment. We explore several configurations of such decoupled models, and evaluate their performance both with Model Predictive Control (MPC) and direct policy learning. We test our methods on the task of highway driving and demonstrate lower crash rates and better stability",
-    "checked": true,
-    "id": "06103ec8b82b705d674df3432bbaa5dcfffcceb0",
-    "semantic_title": "separating the world and ego models for self-driving",
-    "citation_count": 5
-  },
-  "https://openreview.net/forum?id=S_WcT4TVkZ9": {
-    "title": "Multi-objective evolution for Generalizable Policy Gradient Algorithms",
-    "volume": "workshop",
-    "abstract": "Performance, generalizability, and stability are three Reinforcement Learning (RL) challenges relevant to many practical applications in which they present themselves in combination. Still, state-of-the-art RL algorithms fall short when addressing multiple RL objectives simultaneously and current human-driven design practices might not be well-suited for multi-objective RL. In this paper we present MetaPG, an evolutionary method that discovers new RL algorithms represented as graphs, following a multi-objective search criteria in which different RL objectives are encoded in separate fitness scores. Our findings show that, when using a graph-based implementation of Soft Actor-Critic (SAC) to initialize the population, our method is able to find new algorithms that improve upon SAC's performance and generalizability by 3% and 17%, respectively, and reduce instability up to 65%. In addition, we analyze the graph structure of the best algorithms in the population and offer an interpretation of specific elements that help trading performance for generalizability and vice versa. We validate our findings in three different continuous control tasks: RWRL Cartpole, RWRL Walker, and Gym Pendulum",
-    "checked": true,
-    "id": "e374c418ee7e24bdba7b54cb0cf580f3b22fb7c3",
-    "semantic_title": "multi-objective evolution for generalizable policy gradient algorithms",
-    "citation_count": 2
-  },
-  "https://openreview.net/forum?id=SNnE64aV1Wc": {
-    "title": "ShiftNorm: On Data Efficiency in Reinforcement Learning with Shift Normalization",
-    "volume": "workshop",
-    "abstract": "We propose ShiftNorm, a simple yet promising data augmentation that can be applied to standard model-free algorithms to improve sample-efficiency in high-dimensional image-based reinforcement learning (RL).Concretely, the differentiable ShiftNorm leverages original samples with reparameterized virtual samples, and hasten the image encoder to generate invariant representations. Our approach demonstrates certify substantial advances, enabling it to outperform the new state-of-the-art on 8 of 9 tasks on the DeepMind Control Suite at 500k steps",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SdWOpNTVJZc": {
-    "title": "Improving performance on the ManiSkill Challenge via Super-convergence and Multi-Task Learning",
-    "volume": "workshop",
-    "abstract": "We present key aspects of our approach to the ManiSkill Challenge, where we used Imitation Learning on the provided demonstration dataset to let a robot learn how to manipulate interactive objects. We present what is to our knowledge the first application of super-convergence via learning rate scheduling to Imitation Learning and robotics, enabling better policy performance with a training time reduced by almost an order of magnitude. We also present how we used Multi-task Learning to reach a top score on unseen object of 1 task of the challenge. It shows that the strategy can unlock generalization performance on some tasks, corroborating other work in the field. We also show that simple data augmentation strategies can help push the model performance further",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rV2zaEpNybc": {
-    "title": "Multi-task Reinforcement Learning with Task Representation Method",
-    "volume": "workshop",
-    "abstract": "Multi-task reinforcement learning (RL) algorithms can train agents to acquire generalized skills across various tasks. However, jointly learning with multiple tasks can induce negative transfer between different tasks, resulting in unstable training. In this paper, we newly propose a task representation method that prevents negative transfer in policy learning. The proposed method for multi-task RL adopts a task embedding network in addition to a policy network, where the policy network takes the output of the task embedding network and states as inputs. Furthermore, we propose a measure of negative transfer and design an overall update method that can minimize the suggested measure. In addition, we raise an issue of the negative effect on soft Q-function learning resulting in unstable Q learning and introduce the clipping method to reduce this issue. The proposed multi-task algorithm is evaluated on various robotics manipulation tasks. Numerical results show that the proposed multi-task RL algorithm effectively minimizes negative transfer and achieves better performance than previous state-of-the-art multi-task RL algorithms",
-    "checked": false,
-    "id": "704263cf8142d3e9b1e8ce6d5c8faf07f8118e48",
-    "semantic_title": "m ulti - task r einforcement l earning with t ask r epresentation m ethod",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rF-fT4pN1Wc": {
-    "title": "Deep Sequenced Linear Dynamical Systems for Manipulation Policy Learning",
-    "volume": "workshop",
-    "abstract": "In policy learning for robotic manipulation tasks, action parameterization can have a major impact on the final performance and sample efficiency of a policy. Unlike highly-dynamic continuous-control tasks, many manipulation tasks can be efficiently performed by a sequence of simple, smooth end-effector motions. Building on this intuition, we present a new class of policies built on top of differentiable Linear Dynamical System (dLDS) units, our differentiable formulation of the classical LDS. Constructing policies using dLDS units yields several advantageous properties, including trajectory coherence across timesteps, stability, and invariance under translation and scaling. Inspired by the sequenced LDS approach proposed by \\citet{lds_dixon}, we propose a deep neural-network policy parameterization based on sequenced dLDS units, and we integrate this policy class into standard on-policy reinforcement learning settings. We conduct extensive experiments on Metaworld environments and show a notable improvement in performance and sample efficiency compared to other state-of-the-art algorithms. Additional visualizations and code can be found at \\url{https://sites.google.com/view/deep-sequenced-lds}",
-    "checked": false,
-    "id": "f08b57993f63392379cb3ffa1145ae14ac8682c2",
-    "semantic_title": "d eep s equenced l inear d ynamical s ystems for m anipulation p olicy l earning",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rdZIp4aEkb5": {
-    "title": "Learning Robust Task Context with Hypothetical Analogy-Making",
-    "volume": "workshop",
-    "abstract": "Learning compact state representations from high dimensional and noisy observations is the cornerstone of reinforcement learning (RL). However, these representations are often biased toward the current task context and overfitted to context-irrelevant features, making it hard to generalize to other tasks. Inspired by the human analogy-making process, we propose a novel representation learning framework called Hypothetical Analogy-Making (HAM) for learning robust task contexts and generalizable policy for RL. It consists of task context and background encoding, hypothetical observation generation, and analogy-making between the original and hypothetical observations. Our model introduces an auxiliary objective that maximizes the mutual information between the generated observation and existing labels of codes used to generate the observation. Experiments on various challenging RL environments showed that our model helps the RL agent's learned policy generalize by revealing a robust task context space",
-    "checked": false,
-    "id": "3a520de0e6998c4543c41ac1ae0dc08b28686361",
-    "semantic_title": "l earning r obust t ask c ontext with h ypotheti cal a nalogy -m aking",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rNhxaETVybc": {
-    "title": "Silver-Bullet-3D at ManiSkill 2021: Learning-from-Demonstrations and Heuristic Rule-based Methods for Object Manipulation",
-    "volume": "workshop",
-    "abstract": "This paper presents an overview and comparative analysis of our systems designed for the following two tracks in SAPIEN ManiSkill Challenge 2021 {\\url{https://sapien.ucsd.edu/challenges/maniskill2021/}}: No Interaction Track: The No Interaction track targets for learning policies from pre-collected demonstration trajectories. We investigate both imitation learning-based approach, \\emph{i.e.}, imitating the observed behavior using classical supervised learning techniques, and offline reinforcement learning-based approaches, for this track. Moreover, the geometry and texture structures of objects and robotic arms are exploited via Transformer-based networks to facilitate imitation learning. No Restriction Track: In this track, we design a Heuristic Rule-based Method (HRM) to trigger high-quality object manipulation by decomposing the task into a series of sub-tasks. For each sub-task, the simple rule-based controlling strategies are adopted to predict actions that can be applied to robotic arms. To ease the implementations of our systems, all the source codes and pre-trained models are available at \\url{https://github.com/caiqi/Silver-Bullet-3D/}",
-    "checked": true,
-    "id": "74e5c58560cfcc078eb9c9969f6fe8f60ac1a424",
-    "semantic_title": "silver-bullet-3d at maniskill 2021: learning-from-demonstrations and heuristic rule-based methods for object manipulation",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=BxZxTN6Ek-9": {
-    "title": "Zero-Shot Reward Specification via Grounded Natural Language",
-    "volume": "workshop",
-    "abstract": "Reward signals in reinforcement learning are expensive to design and often require access to the true state which is not available in the real world. Common alternatives are usually demonstrations or goal images which can be labor-intensive to collect. On the other hand, text descriptions provide a general, natural, and low-effort way of communicating the desired task. However, prior works in learning text-conditioned policies still rely on rewards that are defined using either true state or labeled expert demonstrations. We use recent developments in building large-scale visuolanguage models like CLIP to devise a framework that generates the task reward signal just from goal text description and raw pixel observations which is then used to learn the task policy. We evaluate the proposed framework on control and robotic manipulation tasks. Finally, we distill the individual task policies into a single goal text conditioned policy that can generalize in a zero-shot manner to new tasks with unseen objects and unseen goal text descriptions",
-    "checked": true,
-    "id": "a09560239e398fe8aea05856823b46219a7dc539",
-    "semantic_title": "zero-shot reward specification via grounded natural language",
-    "citation_count": 15
-  },
-  "https://openreview.net/forum?id=Bt-gaVaVJ-9": {
-    "title": "Reinforcement Learning for Location-Aware Warehouse Scheduling",
-    "volume": "workshop",
-    "abstract": "Recent techniques in dynamical scheduling and resource management have found applications in warehouse environments due to their ability to organize and prioritize tasks in a higher temporal resolution. The rise of deep reinforcement learning, as a learning paradigm, has enabled decentralized agent populations to discover complex coordination strategies. However, training multiple agents simultaneously introduce many obstacles in training as observation and action spaces become exponentially large. In our work, we experimentally quantify how various aspects of the warehouse environment (e.g., floor plan complexity, information about agents' live location, level of task parallelizability) affect performance and execution priority. To achieve efficiency, we propose a compact representation of the state and action space for location-aware multi-agent systems, wherein each agent has knowledge of only self and task coordinates, hence only partial observability of the underlying Markov Decision Process. Finally, we show how agents trained in certain environments maintain performance in completely unseen settings and also correlate performance degradation with floor plan geometry",
-    "checked": false,
-    "id": "264cbb03ab2351ae49927923e92220f4d4f4b794",
-    "semantic_title": "r einforcement l earning for l ocation -a ware w arehouse s cheduling",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=rO-Ep4a4Jb5": {
-    "title": "A Probabilistic Perspective on Reinforcement Learning via Supervised Learning",
-    "volume": "workshop",
-    "abstract": "Reinforcement Learning via Supervised Learning (RvS) only uses supervised techniques to learn desirable behaviors from large datasets. RvS has attracted much attention lately due to its simplicity and ability to leverage diverse trajectories. We introduce Density to Decision (D2D), a new framework, to unify a myriad of RvS algorithms. The Density to Decision framework formulates RvS as a two-step process: i) density estimation via supervised learning and ii) decision making via exponential tilting of the density. Using our framework, we categorise popular RvS algorithms and show how they are different by the design choices in their implementation. We then introduce a novel algorithm, Implicit RvS, leveraging powerful density estimation techniques that can easily be tilted to produce desirable behaviors. We compare the performance of a suite of RvS algorithms on the D4RL benchmark. Finally, we highlight the limitations of current RvS algorithms in comparison with traditional RL ones",
-    "checked": false,
-    "id": "68f59299b92eb81f45bde0bef503376be9acd987",
-    "semantic_title": "research in data science and artificial intelligence applied",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=Spf4TE6NkWq": {
-    "title": "Prompts and Pre-Trained Language Models for Offline Reinforcement Learning",
-    "volume": "workshop",
-    "abstract": "In this preliminary study, we introduce a simple way to leverage pre-trained language models in deep offline RL settings that are not naturally suited for textual representation. We propose using a state transformation into a human-readable text and a minimal fine-tuning of the pre-trained language model when training with deep offline RL algorithms. This approach shows consistent performance gains on the NeoRL MuJoCo datasets. Our experiments suggest that LM fine-tuning is crucial for good performance on robotics tasks. However, we also show that it is not necessary when working with finance environments in order to retain significant improvement in the final performance",
-    "checked": true,
-    "id": "08335bb56ee4e66a97c896a44f2ccf43f7ebe52e",
-    "semantic_title": "prompts and pre-trained language models for offline reinforcement learning",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=Su-G6VpE1W5": {
-    "title": "Compositional Multi-Object Reinforcement Learning with Linear Relation Networks",
-    "volume": "workshop",
-    "abstract": "Although reinforcement learning has seen remarkable progress over the last years, solving robust dexterous object-manipulation tasks in multi-object settings remains a challenge. In this paper, we focus on models that can learn manipulation tasks in fixed multi-object settings \\emph{and} extrapolate this skill zero-shot without any drop in performance when the number of objects changes. We consider the generic task of bringing a specific cube out of a set to a goal position. We find that previous approaches, which primarily leverage attention and graph neural network-based architectures, do not generalize their skills when the number of input objects changes while scaling as $K^2$. We propose an alternative plug-and-play module based on relational inductive biases to overcome these limitations. Besides exceeding performances in their training environment, we show that our approach, which scales linearly in $K$, allows agents to extrapolate and generalize zero-shot to any new object number",
-    "checked": true,
-    "id": "d2f01779af664b67359a97214c8cf15d73c1a569",
-    "semantic_title": "compositional multi-object reinforcement learning with linear relation networks",
-    "citation_count": 10
-  },
-  "https://openreview.net/forum?id=rhzlp4pNyZ9": {
-    "title": "Density Estimation For Conservative Q-Learning",
-    "volume": "workshop",
-    "abstract": "Batch Reinforcement Learning algorithms aim at learning the best policy from a batch of data without interacting with the environment. Within this setting, one difficulty is to correctly assess the value of state-action pairs far from the data set. Indeed, the lack of information may provoke an overestimation of the value function, leading to non-desirable behaviours. A compromise between enhancing the performance of the behaviour policy and staying close to it must be found. To alleviate this issue, most existing approaches introduce a regularization term to favor state-action pairs from the data set. In this paper, we refine this idea by estimating the density of these state-action pairs to distinguish neighbourhoods. The resulting regularization guides the policy toward meaningful unseen regions, improving the learning process. We hence introduce Density Conservative Q-Learning (D-CQL), a sound batch RL algorithm that carefully penalizes the value function based on the information collected in the state-action space. The performance of our approach is outlined on many classical benchmark in batch RL",
-    "checked": false,
-    "id": "efd5e5c3a34c65bef9f8cbcb8f9c3d07d1fa20e5",
-    "semantic_title": "d ensity e stimation f or c onservative q-l earning",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=Hpzg6ETVJb5": {
-    "title": "PAnDR: Fast Adaptation to New Environments from Offline Experiences via Decoupling Policy and Environment Representations",
-    "volume": "workshop",
-    "abstract": "Deep Reinforcement Learning (DRL) has been a promising solution to many complex decision-making problems. Nevertheless, the notorious weakness in generalization among environments prevent widespread application of DRL agents in real-world scenarios. Although advances have been made recently, most prior works assume sufficient online interaction on training environments, which can be costly in practical cases. To this end, we focus on an offline-training-online-adaptation setting, in which the agent first learns from offline experiences collected in environments with different dynamics and then performs online policy adaptation in environments with new dynamics. In this paper, we propose Policy Adaptation with Decoupled Representations (PAnDR) for fast policy adaptation. In offline training phase, the environment representation and policy representation are learned through contrastive learning and policy recovery, respectively. The representations are further refined by mutual information optimization to make them more decoupled and complete. With learned representations, a Policy-Dynamics Value Function (PDVF) network is trained to approximate the values for different combinations of policies and environments. In online adaptation phase, with the environment context inferred from few experiences collected in new environments, the policy is optimized by gradient ascent with respect to the PDVF. Our experiments show that PAnDR outperforms existing algorithms in several representative policy adaptation problems",
-    "checked": true,
-    "id": "795a8750758eebb586f7fb53636292150f9e362c",
-    "semantic_title": "pandr: fast adaptation to new environments from offline experiences via decoupling policy and environment representations",
-    "citation_count": 4
-  },
-  "https://openreview.net/forum?id=S_WepVpVy-9": {
-    "title": "Control of Two-way Coupled Fluid Systems with Differentiable Solvers",
-    "volume": "workshop",
-    "abstract": "We investigate the use of deep neural networks to control complex nonlinear dynamical systems, specifically the movement of a rigid body immersed in a fluid. We solve the Navier Stokes equations with two way coupling, which gives rise to nonlinear perturbations that make the control task very challenging. Neural networks are trained to act as controllers with desired characteristics through a process of learning from a differentiable simulator. Here we introduce a set of physically interpretable loss terms to let the networks learn robust and stable interactions. We demonstrate that controllers trained in a canonical setting with quiescent initial conditions reliably generalize to varied and challenging environments such as previously unseen inflow conditions and forcing. Further, we show that controllers trained with our approach outperform a variety of classical and learned alternatives in terms of evaluation metrics and generalizing capabilities",
-    "checked": true,
-    "id": "bfeb8b4a0ea2f3617a9a11aaae2adcface7d2a26",
-    "semantic_title": "control of two-way coupled fluid systems with differentiable solvers",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SOb834a4k-9": {
-    "title": "One-Shot Imitation with Skill Chaining using a Goal-Conditioned Policy in Long-Horizon Control",
-    "volume": "workshop",
-    "abstract": "Recent advances in skill learning from a task-agnostic offline dataset enable the agent to acquire various skills that can be used as primitives to perform long-horizon imitation. However, most work implicitly assumes that the offline dataset covers the entire distribution of target demonstrations. If the dataset only contains subtask-local trajectories, existing methods fail to imitate the transitions between subtasks without a sufficient amount of target demonstrations, significantly limiting the scalability of these methods. In this work, we show that a simple goal-conditioned policy can imitate the missing transitions using only the target demonstrations. We combine it with a policy-switching strategy that uses the skills when they are applicable. Furthermore, we present multiple choices that can effectively evaluate the applicability of skills. Our new method successfully performs one-shot imitation with skills learned from a subtask-local offline dataset. We experimentally show that it outperforms other one-shot imitation methods in a challenging kitchen environment, and we also qualitatively analyze how each policy-switching strategy works during imitation",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=B42rnNpNyWq": {
-    "title": "Versatile Offline Imitation Learning via State-Occupancy Matching",
-    "volume": "workshop",
-    "abstract": "We propose State Matching Offline DIstribution Correction Estimation (SMODICE), a novel and versatile algorithm for offline imitation learning (IL) via state-occupancy matching. Without requiring access to expert actions, SMODICE can be effectively applied to three offline IL settings: (i) imitation from observations (IfO), (ii) IfO with dynamics or morphologically mismatched expert, and (iii) example-based reinforcement learning, which we show can be formulated as a state-occupancy matching problem. We show that the SMODICE objective admits a simple optimization procedure through an application of Fenchel duality, reducing a nested optimization problem to a sequence of stable supervised learning problems. We extensively evaluate SMODICE on both gridworld environments as well as on high-dimensional offline benchmarks. Our results demonstrate that SMODICE is effective for all three problem settings and significantly outperforms prior state-of-art",
-    "checked": false,
-    "id": "dcc28a076ab4b0af03a4b13881069b18c4aa1a00",
-    "semantic_title": "smodice: versatile offline imitation learning via state occupancy matching",
-    "citation_count": 14
-  },
-  "https://openreview.net/forum?id=SObVnEp4yb9": {
-    "title": "Let's Handle It: Generalizable Manipulation of Articulated Objects",
-    "volume": "workshop",
-    "abstract": "In this project we present a framework for building generalizable manipulation controller policies that map from raw input point clouds and segmentation masks to joint velocities. We took a traditional robotics approach, using point cloud processing, end-effector trajectory calculation, inverse kinematics, closed-loop position controllers, and behavior trees. We demonstrate our framework on four manipulation skills on common household objects that comprise the SAPIEN ManiSkill Manipulation challenge",
-    "checked": true,
-    "id": "47372037756b92d12706a979f81b31c42d8bc6a1",
-    "semantic_title": "let's handle it: generalizable manipulation of articulated objects",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=SNhXhN6Nkbq": {
-    "title": "Revisiting Model-based Value Expansion",
-    "volume": "workshop",
-    "abstract": "Model-based value expansion methods promise to improve the quality of value function targets and, thereby, the effectiveness of value function learning. However, to date, these methods are being outperformed by Dyna-style algorithms with conceptually simpler 1-step value function targets. This shows that in practice, the theoretical justification of value expansion does not seem to hold. We provide a thorough empirical study to shed light on the causes of failure of value expansion methods in practice which is believed to be the compounding model error. By leveraging GPU based physics simulators, we are able to efficiently use the true dynamics for analysis inside the model-based reinforcement learning loop. Performing extensive comparisons between true and learned dynamics sheds light into this black box. This paper provides a better understanding of the actual problems in value expansion. We provide future directions of research by empirically testing the maximum theoretical performance of current approaches",
-    "checked": true,
-    "id": "a07e30a42ed114d353aed2eac62e2b23fb749bc9",
-    "semantic_title": "revisiting model-based value expansion",
-    "citation_count": 1
-  },
-  "https://openreview.net/forum?id=STfl2VTNy-9": {
-    "title": "An Empirical Study and Analysis of Learning Generalizable Manipulation Skill in the SAPIEN Simulator",
-    "volume": "workshop",
-    "abstract": "This paper provides a brief overview of our submission to the no interaction track of SAPIEN ManiSkill Challenge 2021. Our approach follows an end-to-end pipeline which mainly consists of two steps: first, we extract the point cloud features of multiple objects; then we adopt these features to predict the action score of the robot simulators through a deep and wide transformer-based network. More specially, %to give guidance for future work, open up avenues for exploitation of learning manipulation skill tasks, we present an empirical study that includes a bag of tricks and abortive attempts. Finally, our method achieves a promising ranking on the leaderboard. All code of our solution is available at https://github.com/liu666666/bigfish_codes",
-    "checked": true,
-    "id": "6242c3137286d344696788863b86adfe3e4d19e7",
-    "semantic_title": "an empirical study and analysis of learning generalizable manipulation skill in the sapien simulator",
-    "citation_count": 0
-  },
-  "https://openreview.net/forum?id=Su-zh4a41Z5": {
-    "title": "Don't Change the Algorithm, Change the Data: Exploratory Data for Offline Reinforcement Learning",
-    "volume": "workshop",
-    "abstract": "Recent progress in deep learning has relied on access to large and diverse datasets. Such data-driven progress has been less evident in offline reinforcement learning (RL), because offline RL data is usually collected to optimize specific target tasks limiting the data's diversity. In this work, we propose Exploratory data for Offline RL (ExORL), a data-centric approach to offline RL. ExORL first generates data with unsupervised reward-free exploration, then relabels this data with a downstream reward before training a policy with offline RL. We find that exploratory data allows vanilla off-policy RL algorithms, without any offline-specific modifications, to outperform or match state-of-the-art offline RL algorithms on downstream tasks. Our findings suggest that data generation is as important as algorithmic advances for offline RL and hence requires careful consideration from the community",
-    "checked": true,
-    "id": "56a35ffb3ca0d820155e5655b527a74bf8e7b13a",
-    "semantic_title": "don't change the algorithm, change the data: exploratory data for offline reinforcement learning",
-    "citation_count": 42
-  },
-  "https://openreview.net/forum?id=Su-lnV6V1-9": {
-    "title": "Learning Generalizable Dexterous Manipulation from Human Grasp Affordance",
-    "volume": "workshop",
-    "abstract": "Dexterous manipulation with a multi-finger hand is one of the most challenging problems in robotics. While recent progress in imitation learning has largely improved the sample efficiency compared to Reinforcement Learning, the learned policy can hardly generalize to manipulate novel objects, given limited expert demonstrations. In this paper, we propose to learn dexterous manipulation using large-scale demonstrations with diverse 3D objects in a category, which are generated from a human grasp affordance model. This generalizes the policy to novel object instances within the same category. To train the policy, we propose a novel imitation learning objective jointly with a geometric representation learning objective using our demonstrations. By experimenting with relocating diverse objects in simulation, we show that our approach outperforms baselines with a large margin when manipulating novel objects. We also ablate the importance on 3D object representation learning for manipulation",
-    "checked": true,
-    "id": "3d5caf82df5eda0b872dd2e64be4a821f8fcbe23",
-    "semantic_title": "learning generalizable dexterous manipulation from human grasp affordance",
-    "citation_count": 24
-  },
-  "https://openreview.net/forum?id=BtbG3NT4y-c": {
-    "title": "Continuous Control on Time",
-    "volume": "workshop",
-    "abstract": "The physical world evolves continuously in time. Most prior works on reinforcement learning cast continuous-time environments into a discrete-time Markov Decision Process (MDP), by discretizing time into constant-width decision intervals. In this work, we propose Continuous-Time-Controlled MDPs (CTC-MDP), a continuous-time decision process that permits the agent to decide how long each action will last in the physical time of the environment. However, reinforcement learning in vanilla CTC-MDP may result in agents learning to take infinitesimally small time scales for each action. To prevent such degeneration and allow users to control the computation budget, we further propose CTC-MDPs with a constraint on the average time scale over a given threshold. We hypothesize that constrained CTC-MDPs will allow agents to \"budget\" fine-grained time scales to states where it may need to adjust actions quickly, and coarse-grained time scales to states where it can get away with a single decision. We evaluate our new CTC-MDP framework (with and without constraint) on the standard MuJoCo benchmark",
-    "checked": false,
-    "id": "f162abb9f391401df15d7cde9bf52f8da624dfb6",
-    "semantic_title": "efficient continuous control with double actors and regularized critics",
-    "citation_count": 16
-  },
-  "https://openreview.net/forum?id=BN3b2VpE1Wc": {
-    "title": "A Minimalist Ensemble Method for Generalizable Offline Deep Reinforcement Learning",
-    "volume": "workshop",
-    "abstract": "Deep Reinforcement Learning (DRL) has achieved awesome performance in a variety of applications. However, most existing DRL methods require massive active interactions with the environments, which is not practical in real-world scenarios. Moreover, most current evaluation environments are exactly the same as the training environments, leading to the negligence of the generalization ability of the agent. To fulfill the potential of DRL, an ideal policy should have 1) the ability to learn from a previously collected dataset (i.e., offline DRL) and 2) the generalization ability for the unseen scenarios and objects in the testing environments. Given the expert demonstrations collected from the training environments, the goal is to enhance the performance of the model in both the training and testing environments without any more interaction. In this paper, we proposed a minimalist ensemble imitation learning-based method that trains a bundle of agents with simple modifications on network architecture and hyperparameter tuning and combines them as an ensemble model. To verify our method, we took part in the No Interaction Track of the SAPIEN Manipulation Skill (ManiSkill) Challenge and conducted extensive experiments on the ManiSkill Benchmark. The challenge rank and experimental results well demonstrated the effectiveness of our method",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0
   }
 }
