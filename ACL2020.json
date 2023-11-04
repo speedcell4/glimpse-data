@@ -5858,8 +5858,8 @@
     "abstract": "By introducing a small set of additional parameters, a probe learns to solve specific linguistic tasks (e.g., dependency parsing) in a supervised manner using feature representations (e.g., contextualized embeddings). The effectiveness of such probing tasks is taken as evidence that the pre-trained model encodes linguistic knowledge. However, this approach of evaluating a language model is undermined by the uncertainty of the amount of knowledge that is learned by the probe itself. Complementary to those works, we propose a parameter-free probing technique for analyzing pre-trained language models (e.g., BERT). Our method does not require direct supervision from the probing tasks, nor do we introduce additional parameters to the probing process. Our experiments on BERT show that syntactic trees recovered from BERT using our method are significantly better than linguistically-uninformed baselines. We further feed the empirically induced dependency structures into a downstream sentiment classification task and find its improvement compatible with or even superior to a human-designed dependency schema",
     "checked": true,
     "id": "3aaa8aaad5ef36550a6b47d6ee000f0b346a5a1f",
-    "semantic_title": "",
-    "citation_count": 102,
+    "semantic_title": "perturbed masking: parameter-free probing for analyzing and interpreting bert",
+    "citation_count": 127,
     "authors": [
       "Zhiyong Wu",
       "Yun Chen",
@@ -5873,8 +5873,8 @@
     "abstract": "Language models keep track of complex information about the preceding context – including, e.g., syntactic relations in a sentence. We investigate whether they also capture information beneficial for resolving pronominal anaphora in English. We analyze two state of the art models with LSTM and Transformer architectures, via probe tasks and analysis on a coreference annotated corpus. The Transformer outperforms the LSTM in all analyses. Our results suggest that language models are more successful at learning grammatical constraints than they are at learning truly referential information, in the sense of capturing the fact that we use language to refer to entities in the world. However, we find traces of the latter aspect, too",
     "checked": true,
     "id": "bb429a17280c2df86ac34789df880a4f728009ae",
-    "semantic_title": "",
-    "citation_count": 23,
+    "semantic_title": "probing for referential information in language models",
+    "citation_count": 25,
     "authors": [
       "Ionut-Teodor Sorodoc",
       "Kristina Gulordava",
@@ -5884,11 +5884,11 @@
   "https://aclanthology.org/2020.acl-main.385": {
     "title": "Quantifying Attention Flow in Transformers",
     "volume": "main",
-    "abstract": "In the Transformer model, “self-attention” combines information from attended embeddings into the representation of the focal embedding in the next layer. Thus, across layers of the Transformer, information originating from different tokens gets increasingly mixed. This makes attention weights unreliable as explanations probes. In this paper, we consider the problem of quantifying this flow of information through self-attention. We propose two methods for approximating the attention to input tokens given attention weights, attention rollout and attention flow, as post hoc methods when we use attention weights as the relative relevance of the input tokens. We show that these methods give complementary views on the flow of information, and compared to raw attention, both yield higher correlations with importance scores of input tokens obtained using an ablation method and input gradients",
+    "abstract": "In the Transformer model, \"self-attention\" combines information from attended embeddings into the representation of the focal embedding in the next layer. Thus, across layers of the Transformer, information originating from different tokens gets increasingly mixed. This makes attention weights unreliable as explanations probes. In this paper, we consider the problem of quantifying this flow of information through self-attention. We propose two methods for approximating the attention to input tokens given attention weights, attention rollout and attention flow, as post hoc methods when we use attention weights as the relative relevance of the input tokens. We show that these methods give complementary views on the flow of information, and compared to raw attention, both yield higher correlations with importance scores of input tokens obtained using an ablation method and input gradients",
     "checked": true,
     "id": "76a9f336481b39515d6cea2920696f11fb686451",
-    "semantic_title": "",
-    "citation_count": 312,
+    "semantic_title": "quantifying attention flow in transformers",
+    "citation_count": 410,
     "authors": [
       "Samira Abnar",
       "Willem Zuidema"
@@ -5897,11 +5897,11 @@
   "https://aclanthology.org/2020.acl-main.386": {
     "title": "Towards Faithfully Interpretable NLP Systems: How Should We Define and Evaluate Faithfulness?",
     "volume": "main",
-    "abstract": "With the growing popularity of deep-learning based NLP models, comes a need for interpretable systems. But what is interpretability, and what constitutes a high-quality interpretation? In this opinion piece we reflect on the current state of interpretability evaluation research. We call for more clearly differentiating between different desired criteria an interpretation should satisfy, and focus on the faithfulness criteria. We survey the literature with respect to faithfulness evaluation, and arrange the current approaches around three assumptions, providing an explicit form to how faithfulness is “defined” by the community. We provide concrete guidelines on how evaluation of interpretation methods should and should not be conducted. Finally, we claim that the current binary definition for faithfulness sets a potentially unrealistic bar for being considered faithful. We call for discarding the binary notion of faithfulness in favor of a more graded one, which we believe will be of greater practical utility",
+    "abstract": "With the growing popularity of deep-learning based NLP models, comes a need for interpretable systems. But what is interpretability, and what constitutes a high-quality interpretation? In this opinion piece we reflect on the current state of interpretability evaluation research. We call for more clearly differentiating between different desired criteria an interpretation should satisfy, and focus on the faithfulness criteria. We survey the literature with respect to faithfulness evaluation, and arrange the current approaches around three assumptions, providing an explicit form to how faithfulness is \"defined\" by the community. We provide concrete guidelines on how evaluation of interpretation methods should and should not be conducted. Finally, we claim that the current binary definition for faithfulness sets a potentially unrealistic bar for being considered faithful. We call for discarding the binary notion of faithfulness in favor of a more graded one, which we believe will be of greater practical utility",
     "checked": true,
     "id": "579476d19566efc842929ea6bdd18ab760c8cfa2",
-    "semantic_title": "",
-    "citation_count": 284,
+    "semantic_title": "towards faithfully interpretable nlp systems: how should we define and evaluate faithfulness?",
+    "citation_count": 362,
     "authors": [
       "Alon Jacovi",
       "Yoav Goldberg"
@@ -5910,11 +5910,11 @@
   "https://aclanthology.org/2020.acl-main.387": {
     "title": "Towards Transparent and Explainable Attention Models",
     "volume": "main",
-    "abstract": "Recent studies on interpretability of attention distributions have led to notions of faithful and plausible explanations for a model’s predictions. Attention distributions can be considered a faithful explanation if a higher attention weight implies a greater impact on the model’s prediction. They can be considered a plausible explanation if they provide a human-understandable justification for the model’s predictions. In this work, we first explain why current attention mechanisms in LSTM based encoders can neither provide a faithful nor a plausible explanation of the model’s predictions. We observe that in LSTM based encoders the hidden representations at different time-steps are very similar to each other (high conicity) and attention weights in these situations do not carry much meaning because even a random permutation of the attention weights does not affect the model’s predictions. Based on experiments on a wide variety of tasks and datasets, we observe attention distributions often attribute the model’s predictions to unimportant words such as punctuation and fail to offer a plausible explanation for the predictions. To make attention mechanisms more faithful and plausible, we propose a modified LSTM cell with a diversity-driven training objective that ensures that the hidden representations learned at different time steps are diverse. We show that the resulting attention distributions offer more transparency as they (i) provide a more precise importance ranking of the hidden states (ii) are better indicative of words important for the model’s predictions (iii) correlate better with gradient-based attribution methods. Human evaluations indicate that the attention distributions learned by our model offer a plausible explanation of the model’s predictions. Our code has been made publicly available at https://github.com/akashkm99/Interpretable-Attention",
+    "abstract": "Recent studies on interpretability of attention distributions have led to notions of faithful and plausible explanations for a model's predictions. Attention distributions can be considered a faithful explanation if a higher attention weight implies a greater impact on the model's prediction. They can be considered a plausible explanation if they provide a human-understandable justification for the model's predictions. In this work, we first explain why current attention mechanisms in LSTM based encoders can neither provide a faithful nor a plausible explanation of the model's predictions. We observe that in LSTM based encoders the hidden representations at different time-steps are very similar to each other (high conicity) and attention weights in these situations do not carry much meaning because even a random permutation of the attention weights does not affect the model's predictions. Based on experiments on a wide variety of tasks and datasets, we observe attention distributions often attribute the model's predictions to unimportant words such as punctuation and fail to offer a plausible explanation for the predictions. To make attention mechanisms more faithful and plausible, we propose a modified LSTM cell with a diversity-driven training objective that ensures that the hidden representations learned at different time steps are diverse. We show that the resulting attention distributions offer more transparency as they (i) provide a more precise importance ranking of the hidden states (ii) are better indicative of words important for the model's predictions (iii) correlate better with gradient-based attribution methods. Human evaluations indicate that the attention distributions learned by our model offer a plausible explanation of the model's predictions. Our code has been made publicly available at https://github.com/akashkm99/Interpretable-Attention",
     "checked": true,
     "id": "3d61a34611c6171f203286119f76ec52f8016580",
-    "semantic_title": "",
-    "citation_count": 60,
+    "semantic_title": "towards transparent and explainable attention models",
+    "citation_count": 74,
     "authors": [
       "Akash Kumar Mohankumar",
       "Preksha Nema",
@@ -5930,8 +5930,8 @@
     "abstract": "Multi-task Learning methods have achieved great progress in text classification. However, existing methods assume that multi-task text classification problems are convex multiobjective optimization problems, which is unrealistic in real-world applications. To address this issue, this paper presents a novel Tchebycheff procedure to optimize the multi-task classification problems without convex assumption. The extensive experiments back up our theoretical analysis and validate the superiority of our proposals",
     "checked": true,
     "id": "71b554589d131880170f1c96c68bf3b69e014eb1",
-    "semantic_title": "",
-    "citation_count": 9,
+    "semantic_title": "tchebycheff procedure for multi-task text classification",
+    "citation_count": 16,
     "authors": [
       "Yuren Mao",
       "Shuang Yun",
@@ -5945,7 +5945,7 @@
     "abstract": "This paper studies strategies to model word formation in NMT using rich linguistic information, namely a word segmentation approach that goes beyond splitting into substrings by considering fusional morphology. Our linguistically sound segmentation is combined with a method for target-side inflection to accommodate modeling word formation. The best system variants employ source-side morphological analysis and model complex target-side words, improving over a standard system",
     "checked": true,
     "id": "1e0a14db59c5a1a18c83dfbeb17eb5be9e67623d",
-    "semantic_title": "",
+    "semantic_title": "modeling word formation in english–german neural machine translation",
     "citation_count": 10,
     "authors": [
       "Marion Weller-Di Marco",
@@ -5958,8 +5958,8 @@
     "abstract": "Existing approaches to active learning maximize the system performance by sampling unlabeled instances for annotation that yield the most efficient training. However, when active learning is integrated with an end-user application, this can lead to frustration for participating users, as they spend time labeling instances that they would not otherwise be interested in reading. In this paper, we propose a new active learning approach that jointly optimizes the seemingly counteracting objectives of the active learning system (training efficiently) and the user (receiving useful instances). We study our approach in an educational application, which particularly benefits from this technique as the system needs to rapidly learn to predict the appropriateness of an exercise to a particular user, while the users should receive only exercises that match their skills. We evaluate multiple learning strategies and user types with data from real users and find that our joint approach better satisfies both objectives when alternative methods lead to many unsuitable exercises for end users",
     "checked": true,
     "id": "5333cf58dc9c4e43725e49ae90433842f9ffb53c",
-    "semantic_title": "",
-    "citation_count": 7,
+    "semantic_title": "empowering active learning to jointly optimize system and user demands",
+    "citation_count": 6,
     "authors": [
       "Ji-Ung Lee",
       "Christian M. Meyer",
@@ -5972,8 +5972,8 @@
     "abstract": "This paper investigates how to effectively incorporate a pre-trained masked language model (MLM), such as BERT, into an encoder-decoder (EncDec) model for grammatical error correction (GEC). The answer to this question is not as straightforward as one might expect because the previous common methods for incorporating a MLM into an EncDec model have potential drawbacks when applied to GEC. For example, the distribution of the inputs to a GEC model can be considerably different (erroneous, clumsy, etc.) from that of the corpora used for pre-training MLMs; however, this issue is not addressed in the previous methods. Our experiments show that our proposed method, where we first fine-tune a MLM with a given GEC corpus and then use the output of the fine-tuned MLM as additional features in the GEC model, maximizes the benefit of the MLM. The best-performing model achieves state-of-the-art performances on the BEA-2019 and CoNLL-2014 benchmarks. Our code is publicly available at: https://github.com/kanekomasahiro/bert-gec",
     "checked": true,
     "id": "5714c48293bf77e399fd1ba8ad62e74e252fdb9e",
-    "semantic_title": "",
-    "citation_count": 86,
+    "semantic_title": "encoder-decoder models can benefit from pre-trained masked language models in grammatical error correction",
+    "citation_count": 108,
     "authors": [
       "Masahiro Kaneko",
       "Masato Mita",
@@ -5985,11 +5985,11 @@
   "https://aclanthology.org/2020.acl-main.392": {
     "title": "Graph Neural News Recommendation with Unsupervised Preference Disentanglement",
     "volume": "main",
-    "abstract": "With the explosion of news information, personalized news recommendation has become very important for users to quickly find their interested contents. Most existing methods usually learn the representations of users and news from news contents for recommendation. However, they seldom consider high-order connectivity underlying the user-news interactions. Moreover, existing methods failed to disentangle a user’s latent preference factors which cause her clicks on different news. In this paper, we model the user-news interactions as a bipartite graph and propose a novel Graph Neural News Recommendation model with Unsupervised Preference Disentanglement, named GNUD. Our model can encode high-order relationships into user and news representations by information propagation along the graph. Furthermore, the learned representations are disentangled with latent preference factors by a neighborhood routing algorithm, which can enhance expressiveness and interpretability. A preference regularizer is also designed to force each disentangled subspace to independently reflect an isolated preference, improving the quality of the disentangled representations. Experimental results on real-world news datasets demonstrate that our proposed model can effectively improve the performance of news recommendation and outperform state-of-the-art news recommendation methods",
+    "abstract": "With the explosion of news information, personalized news recommendation has become very important for users to quickly find their interested contents. Most existing methods usually learn the representations of users and news from news contents for recommendation. However, they seldom consider high-order connectivity underlying the user-news interactions. Moreover, existing methods failed to disentangle a user's latent preference factors which cause her clicks on different news. In this paper, we model the user-news interactions as a bipartite graph and propose a novel Graph Neural News Recommendation model with Unsupervised Preference Disentanglement, named GNUD. Our model can encode high-order relationships into user and news representations by information propagation along the graph. Furthermore, the learned representations are disentangled with latent preference factors by a neighborhood routing algorithm, which can enhance expressiveness and interpretability. A preference regularizer is also designed to force each disentangled subspace to independently reflect an isolated preference, improving the quality of the disentangled representations. Experimental results on real-world news datasets demonstrate that our proposed model can effectively improve the performance of news recommendation and outperform state-of-the-art news recommendation methods",
     "checked": true,
     "id": "1eed0659d561354d5c471a723cf3381430561d04",
-    "semantic_title": "",
-    "citation_count": 82,
+    "semantic_title": "graph neural news recommendation with unsupervised preference disentanglement",
+    "citation_count": 96,
     "authors": [
       "Linmei Hu",
       "Siyong Xu",
@@ -6004,10 +6004,10 @@
   "https://aclanthology.org/2020.acl-main.393": {
     "title": "Identifying Principals and Accessories in a Complex Case based on the Comprehension of Fact Description",
     "volume": "main",
-    "abstract": "In this paper, we study the problem of identifying the principals and accessories from the fact description with multiple defendants in a criminal case. We treat the fact descriptions as narrative texts and the defendants as roles over the narrative story. We propose to model the defendants with behavioral semantic information and statistical characteristics, then learning the importances of defendants within a learning-to-rank framework. Experimental results on a real-world dataset demonstrate the behavior analysis can effectively model the defendants’ impacts in a complex case",
+    "abstract": "In this paper, we study the problem of identifying the principals and accessories from the fact description with multiple defendants in a criminal case. We treat the fact descriptions as narrative texts and the defendants as roles over the narrative story. We propose to model the defendants with behavioral semantic information and statistical characteristics, then learning the importances of defendants within a learning-to-rank framework. Experimental results on a real-world dataset demonstrate the behavior analysis can effectively model the defendants' impacts in a complex case",
     "checked": true,
     "id": "fdbde15bd93395a166ad6cb914105dc47817ad91",
-    "semantic_title": "",
+    "semantic_title": "identifying principals and accessories in a complex case based on the comprehension of fact description",
     "citation_count": 1,
     "authors": [
       "Yakun Hu",
@@ -6021,8 +6021,8 @@
     "abstract": "The rise of online communication platforms has been accompanied by some undesirable effects, such as the proliferation of aggressive and abusive behaviour online. Aiming to tackle this problem, the natural language processing (NLP) community has experimented with a range of techniques for abuse detection. While achieving substantial success, these methods have so far only focused on modelling the linguistic properties of the comments and the online communities of users, disregarding the emotional state of the users and how this might affect their language. The latter is, however, inextricably linked to abusive behaviour. In this paper, we present the first joint model of emotion and abusive language detection, experimenting in a multi-task learning framework that allows one task to inform the other. Our results demonstrate that incorporating affective features leads to significant improvements in abuse detection performance across datasets",
     "checked": true,
     "id": "ad21aa6e4e0d70ac093ff9071d6fb832507c8f47",
-    "semantic_title": "",
-    "citation_count": 39,
+    "semantic_title": "joint modelling of emotion and abusive language detection",
+    "citation_count": 43,
     "authors": [
       "Santhosh Rajamanickam",
       "Pushkar Mishra",
@@ -6036,8 +6036,8 @@
     "abstract": "The key to effortless end-user programming is natural language. We examine how to teach intelligent systems new functions, expressed in natural language. As a first step, we collected 3168 samples of teaching efforts in plain English. Then we built fuSE, a novel system that translates English function descriptions into code. Our approach is three-tiered and each task is evaluated separately. We first classify whether an intent to teach new functionality is present in the utterance (accuracy: 97.7% using BERT). Then we analyze the linguistic structure and construct a semantic model (accuracy: 97.6% using a BiLSTM). Finally, we synthesize the signature of the method, map the intermediate steps (instructions in the method body) to API calls and inject control structures (F1: 67.0% with information retrieval and knowledge-based methods). In an end-to-end evaluation on an unseen dataset fuSE synthesized 84.6% of the method signatures and 79.2% of the API calls correctly",
     "checked": true,
     "id": "89fdb0555f6643b18c0094bcce66eaea701bef85",
-    "semantic_title": "",
-    "citation_count": 6,
+    "semantic_title": "programming in natural language with fuse: synthesizing methods from spoken utterances using deep natural language understanding",
+    "citation_count": 7,
     "authors": [
       "Sebastian Weigelt",
       "Vanessa Steurer",
@@ -6048,11 +6048,11 @@
   "https://aclanthology.org/2020.acl-main.396": {
     "title": "Toxicity Detection: Does Context Really Matter?",
     "volume": "main",
-    "abstract": "Moderation is crucial to promoting healthy online discussions. Although several ‘toxicity’ detection datasets and models have been published, most of them ignore the context of the posts, implicitly assuming that comments may be judged independently. We investigate this assumption by focusing on two questions: (a) does context affect the human judgement, and (b) does conditioning on context improve performance of toxicity detection systems? We experiment with Wikipedia conversations, limiting the notion of context to the previous post in the thread and the discussion title. We find that context can both amplify or mitigate the perceived toxicity of posts. Moreover, a small but significant subset of manually labeled posts (5% in one of our experiments) end up having the opposite toxicity labels if the annotators are not provided with context. Surprisingly, we also find no evidence that context actually improves the performance of toxicity classifiers, having tried a range of classifiers and mechanisms to make them context aware. This points to the need for larger datasets of comments annotated in context. We make our code and data publicly available",
+    "abstract": "Moderation is crucial to promoting healthy online discussions. Although several ‘toxicity' detection datasets and models have been published, most of them ignore the context of the posts, implicitly assuming that comments may be judged independently. We investigate this assumption by focusing on two questions: (a) does context affect the human judgement, and (b) does conditioning on context improve performance of toxicity detection systems? We experiment with Wikipedia conversations, limiting the notion of context to the previous post in the thread and the discussion title. We find that context can both amplify or mitigate the perceived toxicity of posts. Moreover, a small but significant subset of manually labeled posts (5% in one of our experiments) end up having the opposite toxicity labels if the annotators are not provided with context. Surprisingly, we also find no evidence that context actually improves the performance of toxicity classifiers, having tried a range of classifiers and mechanisms to make them context aware. This points to the need for larger datasets of comments annotated in context. We make our code and data publicly available",
     "checked": true,
     "id": "8c72389d79157324271b9bd13d61e7dcad22e382",
-    "semantic_title": "",
-    "citation_count": 70,
+    "semantic_title": "toxicity detection: does context really matter?",
+    "citation_count": 94,
     "authors": [
       "John Pavlopoulos",
       "Jeffrey Sorensen",
@@ -6067,8 +6067,8 @@
     "abstract": "Abstract Meaning Representations (AMRs) capture sentence-level semantics structural representations to broad-coverage natural sentences. We investigate parsing AMR with explicit dependency structures and interpretable latent structures. We generate the latent soft structure without additional annotations, and fuse both dependency and latent structure via an extended graph neural networks. The fused structural information helps our experiments results to achieve the best reported results on both AMR 2.0 (77.5% Smatch F1 on LDC2017T10) and AMR 1.0 ((71.8% Smatch F1 on LDC2014T12)",
     "checked": true,
     "id": "2f455f19260d1243cd03afd641450f5fae31066d",
-    "semantic_title": "",
-    "citation_count": 23,
+    "semantic_title": "amr parsing with latent structural information",
+    "citation_count": 24,
     "authors": [
       "Qiji Zhou",
       "Yue Zhang",
