@@ -1,0 +1,1834 @@
+{
+  "http://arxiv.org/abs/2311.13581": {
+    "title": "PaSS: Parallel Speculative Sampling",
+    "volume": "Nov",
+    "abstract": "Scaling the size of language models to tens of billions of parameters has led to impressive performance on a wide range of tasks. At generation, these models are used auto-regressively, requiring a forward pass for each generated token, and thus reading the full set of parameters from memory. This memory access forms the primary bottleneck for generation and it worsens as the model size increases. Moreover, executing a forward pass for multiple tokens in parallel often takes nearly the same time as it does for just one token. These two observations lead to the development of speculative sampling, where a second smaller model is used to draft a few tokens, that are then validated or rejected using a single forward pass of the large model. Unfortunately, this method requires two models that share the same tokenizer and thus limits its adoption. As an alternative, we propose to use parallel decoding as a way to draft multiple tokens from a single model with no computational cost, nor the need for a second model. Our approach only requires an additional input token that marks the words that will be generated simultaneously. We show promising performance (up to $30\\%$ speed-up) while requiring only as few as $O(d_{emb})$ additional parameters",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Giovanni Monea",
+      "Armand Joulin",
+      "Edouard Grave"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13565": {
+    "title": "Drilling Down into the Discourse Structure with LLMs for Long Document Question Answering",
+    "volume": "Nov",
+    "abstract": "We address the task of evidence retrieval for long document question answering, which involves locating relevant paragraphs within a document to answer a question. We aim to assess the applicability of large language models (LLMs) in the task of zero-shot long document evidence retrieval, owing to their unprecedented performance across various NLP tasks. However, currently the LLMs can consume limited context lengths as input, thus providing document chunks as inputs might overlook the global context while missing out on capturing the inter-segment dependencies. Moreover, directly feeding the large input sets can incur significant computational costs, particularly when processing the entire document (and potentially incurring monetary expenses with enterprise APIs like OpenAI's GPT variants). To address these challenges, we propose a suite of techniques that exploit the discourse structure commonly found in documents. By utilizing this structure, we create a condensed representation of the document, enabling a more comprehensive understanding and analysis of relationships between different parts. We retain $99.6\\%$ of the best zero-shot approach's performance, while processing only $26\\%$ of the total tokens used by the best approach in the information seeking evidence retrieval setup. We also show how our approach can be combined with \\textit{self-ask} reasoning agent to achieve best zero-shot performance in complex multi-hop question answering, just $\\approx 4\\%$ short of zero-shot performance using gold evidence",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Inderjeet Nair",
+      "Shwetha Somasundaram",
+      "Apoorv Saxena",
+      "Koustava Goswami"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13534": {
+    "title": "LM-Cocktail: Resilient Tuning of Language Models via Model Merging",
+    "volume": "Nov",
+    "abstract": "The pre-trained language models are continually fine-tuned to better support downstream applications. However, this operation may result in significant performance degeneration on general tasks beyond the targeted domain. To overcome this problem, we propose a novel method which enables the fine-tuned model to stay resilient in general perspectives. Our method is conducted in the form of model merging (namely LM-Cocktail), where the fine-tuned language model is merged with the pre-trained base model or the peer models from other domains through weighted average. Despite simplicity, LM-Cocktail is surprisingly effective: the resulted model is able to achieve a strong empirical performance in the whole scope of general tasks while preserving a superior capacity in its targeted domain. We conduct comprehensive experiments with LLama and BGE model on popular benchmarks, including FLAN, MMLU, MTEB, whose results validate the efficacy of our proposed method. The code and checkpoints are available at https://github.com/FlagOpen/FlagEmbedding",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shitao Xiao",
+      "Zheng Liu",
+      "Peitian Zhang",
+      "Xingrun Xing"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13495": {
+    "title": "Current Topological and Machine Learning Applications for Bias Detection in Text",
+    "volume": "Nov",
+    "abstract": "Institutional bias can impact patient outcomes, educational attainment, and legal system navigation. Written records often reflect bias, and once bias is identified; it is possible to refer individuals for training to reduce bias. Many machine learning tools exist to explore text data and create predictive models that can search written records to identify real-time bias. However, few previous studies investigate large language model embeddings and geometric models of biased text data to understand geometry's impact on bias modeling accuracy. To overcome this issue, this study utilizes the RedditBias database to analyze textual biases. Four transformer models, including BERT and RoBERTa variants, were explored. Post-embedding, t-SNE allowed two-dimensional visualization of data. KNN classifiers differentiated bias types, with lower k-values proving more effective. Findings suggest BERT, particularly mini BERT, excels in bias classification, while multilingual models lag. The recommendation emphasizes refining monolingual models and exploring domain-specific biases",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Colleen Farrelly",
+      "Yashbir Singh",
+      "Quincy A. Hathaway",
+      "Gunnar Carlsson",
+      "Ashok Choudhary",
+      "Rahul Paul",
+      "Gianfranco Doretto",
+      "Yassine Himeur",
+      "Shadi Atalls",
+      "Wathiq Mansoor"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13475": {
+    "title": "Machine Translation to Control Formality Features in the Target Language",
+    "volume": "Nov",
+    "abstract": "Formality plays a significant role in language communication, especially in low-resource languages such as Hindi, Japanese and Korean. These languages utilise formal and informal expressions to convey messages based on social contexts and relationships. When a language translation technique is used to translate from a source language that does not pertain the formality (e.g. English) to a target language that does, there is a missing information on formality that could be a challenge in producing an accurate outcome. This research explores how this issue should be resolved when machine learning methods are used to translate from English to languages with formality, using Hindi as the example data. This was done by training a bilingual model in a formality-controlled setting and comparing its performance with a pre-trained multilingual model in a similar setting. Since there are not a lot of training data with ground truth, automated annotation techniques were employed to increase the data size. The primary modeling approach involved leveraging transformer models, which have demonstrated effectiveness in various natural language processing tasks. We evaluate the official formality accuracy(ACC) by comparing the predicted masked tokens with the ground truth. This metric provides a quantitative measure of how well the translations align with the desired outputs. Our study showcases a versatile translation strategy that considers the nuances of formality in the target language, catering to diverse language communication needs and scenarios",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Harshita Tyagi",
+      "Prashasta Jung",
+      "Hyowon Lee"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13472": {
+    "title": "Complexity-Guided Curriculum Learning for Text Graphs",
+    "volume": "Nov",
+    "abstract": "Curriculum learning provides a systematic approach to training. It refines training progressively, tailors training to task requirements, and improves generalization through exposure to diverse examples. We present a curriculum learning approach that builds on existing knowledge about text and graph complexity formalisms for training with text graph data. The core part of our approach is a novel data scheduler, which employs \"spaced repetition\" and complexity formalisms to guide the training process. We demonstrate the effectiveness of the proposed approach on several text graph tasks and graph neural network architectures. The proposed model gains more and uses less data; consistently prefers text over graph complexity indices throughout training, while the best curricula derived from text and graph complexity indices are equally effective; and it learns transferable curricula across GNN models and datasets. In addition, we find that both node-level (local) and graph-level (global) graph complexity indices, as well as shallow and traditional text complexity indices play a crucial role in effective curriculum learning",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nidhi Vakil",
+      "Hadi Amiri"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13455": {
+    "title": "Generation of Explanations for Logic Reasoning",
+    "volume": "Nov",
+    "abstract": "This thesis delves into a fortiori arguments in deductive reasoning, underscoring their relevance in various domains such as law, philosophy, and artificial intelligence. The research is centred on employing GPT-3.5-turbo to automate the analysis of these arguments, with a focus on understanding intricate reasoning processes, generating clear and coherent explanations, and creating novel arguments. The methodology encompasses a series of tasks including detailed reasoning, interpretation, and the augmentation of a fortiori arguments. It involves meticulously identifying these arguments in diverse contexts, differentiating comparative elements, and categorizing them based on their logical structure. Extensive experiments reveals the challenges encountered by GPT-3.5-turbo in accurately detecting and classifying a fortiori arguments. Nevertheless, the model demonstrates a performance that rivals specialized models, particularly in extracting key components and interpreting underlying properties. The integration of external information into the model's processing significantly elevates the quality of the generated explanations. Additionally, the model exhibits a noteworthy capability in augmenting arguments, thus contributing to the enrichment of the data set. Despite facing certain limitations, this thesis makes significant contributions to the fields of artificial intelligence and logical reasoning. It introduces novel methodologies, establishes a rigorous evaluation framework, and provides deep insights that set the stage for future advancements in automated logical reasoning. The findings and methodologies presented herein not only underscore the potential of AI in complex reasoning tasks but also highlight areas for future research and development",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yanyi Pu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13350": {
+    "title": "Fact-based Court Judgment Prediction",
+    "volume": "Nov",
+    "abstract": "This extended abstract extends the research presented in \"ILDC for CJPE: Indian Legal Documents Corpus for Court Judgment Prediction and Explanation\" \\cite{malik-etal-2021-ildc}, focusing on fact-based judgment prediction within the context of Indian legal documents. We introduce two distinct problem variations: one based solely on facts, and another combining facts with rulings from lower courts (RLC). Our research aims to enhance early-phase case outcome prediction, offering significant benefits to legal professionals and the general public. The results, however, indicated a performance decline compared to the original ILDC for CJPE study, even after implementing various weightage schemes in our DELSumm algorithm. Additionally, using only facts for legal judgment prediction with different transformer models yielded results inferior to the state-of-the-art outcomes reported in the \"ILDC for CJPE\" study",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shubham Kumar Nigam",
+      "Aniket Deroy"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13314": {
+    "title": "Mitigating Large Language Model Hallucinations via Autonomous Knowledge Graph-based Retrofitting",
+    "volume": "Nov",
+    "abstract": "Incorporating factual knowledge in knowledge graph is regarded as a promising approach for mitigating the hallucination of large language models (LLMs). Existing methods usually only use the user's input to query the knowledge graph, thus failing to address the factual hallucination generated by LLMs during its reasoning process. To address this problem, this paper proposes Knowledge Graph-based Retrofitting (KGR), a new framework that incorporates LLMs with KGs to mitigate factual hallucination during the reasoning process by retrofitting the initial draft responses of LLMs based on the factual knowledge stored in KGs. Specifically, KGR leverages LLMs to extract, select, validate, and retrofit factual statements within the model-generated responses, which enables an autonomous knowledge verifying and refining procedure without any additional manual efforts. Experiments show that KGR can significantly improve the performance of LLMs on factual QA benchmarks especially when involving complex reasoning processes, which demonstrates the necessity and effectiveness of KGR in mitigating hallucination and enhancing the reliability of LLMs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xinyan Guan",
+      "Yanjiang Liu",
+      "Hongyu Lin",
+      "Yaojie Lu",
+      "Ben He",
+      "Xianpei Han",
+      "Le Sun"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13307": {
+    "title": "Rethinking Radiology Report Generation via Causal Reasoning and Counterfactual Augmentation",
+    "volume": "Nov",
+    "abstract": "Radiology Report Generation (RRG) draws attention as an interaction between vision and language fields. Previous works inherited the ideology of vision-to-language generation tasks,aiming to generate paragraphs with high consistency as reports. However, one unique characteristic of RRG, the independence between diseases, was neglected, leading to the injection of the spurious confounder, i.e., the disease co-occurrence. Unfortunately, this confounder confuses the process of report generation worse because of the biased RRG data distribution. In this paper, to rethink this issue thoroughly, we reason about its causes and effects from a novel perspective of statistics and causality, where the Joint Vision Coupling and the Conditional Sentence Coherence Coupling are two aspects prone to implicitly decrease the accuracy of reports. Then, a counterfactual augmentation strategy that contains the Counterfactual Sample Synthesis and the Counterfactual Report Reconstruction sub-methods is proposed to break these two aspects of spurious effects. Experimental results and further analyses on two widely used datasets justify our reasoning and proposed methods",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xiao Song",
+      "Jiafan Liu",
+      "Yun Li",
+      "Wenbin Lei",
+      "Ruxin Wang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13281": {
+    "title": "Intention and Context Elicitation with Large Language Models in the Legal Aid Intake Process",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) and chatbots show significant promise in streamlining the legal intake process. This advancement can greatly reduce the workload and costs for legal aid organizations, improving availability while making legal assistance more accessible to a broader audience. However, a key challenge with current LLMs is their tendency to overconfidently deliver an immediate 'best guess' to a client's question based on the output distribution learned over the training data. This approach often overlooks the client's actual intentions or the specifics of their legal situation. As a result, clients may not realize the importance of providing essential additional context or expressing their underlying intentions, which are crucial for their legal cases. Traditionally, logic based decision trees have been used to automate intake for specific access to justice issues, such as immigration and eviction. But those solutions lack scalability. We demonstrate a proof-of-concept using LLMs to elicit and infer clients' underlying intentions and specific legal circumstances through free-form, language-based interactions. We also propose future research directions to use supervised fine-tuning or offline reinforcement learning to automatically incorporate intention and context elicitation in chatbots without explicit prompting",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nick Goodson",
+      "Rongfei Lu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13274": {
+    "title": "Enhancing Summarization Performance through Transformer-Based Prompt Engineering in Automated Medical Reporting",
+    "volume": "Nov",
+    "abstract": "Customized medical prompts enable Large Language Models (LLM) to effectively address medical dialogue summarization. The process of medical reporting is often time-consuming for healthcare professionals. Implementing medical dialogue summarization techniques presents a viable solution to alleviate this time constraint by generating automated medical reports. The effectiveness of LLMs in this process is significantly influenced by the formulation of the prompt, which plays a crucial role in determining the quality and relevance of the generated reports. In this research, we used a combination of two distinct prompting strategies, known as shot prompting and pattern prompting to enhance the performance of automated medical reporting. The evaluation of the automated medical reports is carried out using the ROUGE score and a human evaluation with the help of an expert panel. The two-shot prompting approach in combination with scope and domain context outperforms other methods and achieves the highest score when compared to the human reference set by a general practitioner. However, the automated reports are approximately twice as long as the human references, due to the addition of both redundant and relevant statements that are added to the report",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Daphne van Zandvoort",
+      "Laura Wiersema",
+      "Tom Huibers",
+      "Sandra van Dulmen",
+      "Sjaak Brinkkemper"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13273": {
+    "title": "Comparative Experimentation of Accuracy Metrics in Automated Medical Reporting: The Case of Otitis Consultations",
+    "volume": "Nov",
+    "abstract": "Generative Artificial Intelligence (AI) can be used to automatically generate medical reports based on transcripts of medical consultations. The aim is to reduce the administrative burden that healthcare professionals face. The accuracy of the generated reports needs to be established to ensure their correctness and usefulness. There are several metrics for measuring the accuracy of AI generated reports, but little work has been done towards the application of these metrics in medical reporting. A comparative experimentation of 10 accuracy metrics has been performed on AI generated medical reports against their corresponding General Practitioner's (GP) medical reports concerning Otitis consultations. The number of missing, incorrect, and additional statements of the generated reports have been correlated with the metric scores. In addition, we introduce and define a Composite Accuracy Score which produces a single score for comparing the metrics within the field of automated medical reporting. Findings show that based on the correlation study and the Composite Accuracy Score, the ROUGE-L and Word Mover's Distance metrics are the preferred metrics, which is not in line with previous work. These findings help determine the accuracy of an AI generated medical report, which aids the development of systems that generate medical reports for GPs to reduce the administrative burden",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Wouter Faber",
+      "Renske Eline Bootsma",
+      "Tom Huibers",
+      "Sandra van Dulmen",
+      "Sjaak Brinkkemper"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13258": {
+    "title": "ViStruct: Visual Structural Knowledge Extraction via Curriculum Guided Code-Vision Representation",
+    "volume": "Nov",
+    "abstract": "State-of-the-art vision-language models (VLMs) still have limited performance in structural knowledge extraction, such as relations between objects. In this work, we present ViStruct, a training framework to learn VLMs for effective visual structural knowledge extraction. Two novel designs are incorporated. First, we propose to leverage the inherent structure of programming language to depict visual structural information. This approach enables explicit and consistent representation of visual structural information of multiple granularities, such as concepts, relations, and events, in a well-organized structured format. Second, we introduce curriculum-based learning for VLMs to progressively comprehend visual structures, from fundamental visual concepts to intricate event structures. Our intuition is that lower-level knowledge may contribute to complex visual structure understanding. Furthermore, we compile and release a collection of datasets tailored for visual structural knowledge extraction. We adopt a weakly-supervised approach to directly generate visual event structures from captions for ViStruct training, capitalizing on abundant image-caption pairs from the web. In experiments, we evaluate ViStruct on visual structure prediction tasks, demonstrating its effectiveness in improving the understanding of visual structures. The code is public at \\url{https://github.com/Yangyi-Chen/vi-struct}",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yangyi Chen",
+      "Xingyao Wang",
+      "Manling Li",
+      "Derek Hoiem",
+      "Heng Ji"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13246": {
+    "title": "Automatic Instruction Optimization for Open-source LLM Instruction Tuning",
+    "volume": "Nov",
+    "abstract": "Instruction tuning is crucial for enabling Language Learning Models (LLMs) in responding to human instructions. The quality of instruction pairs used for tuning greatly affects the performance of LLMs. However, the manual creation of high-quality instruction datasets is costly, leading to the adoption of automatic generation of instruction pairs by LLMs as a popular alternative in the training of open-source LLMs. To ensure the high quality of LLM-generated instruction datasets, several approaches have been proposed. Nevertheless, existing methods either compromise dataset integrity by filtering a large proportion of samples, or are unsuitable for industrial applications. In this paper, instead of discarding low-quality samples, we propose CoachLM, a novel approach to enhance the quality of instruction datasets through automatic revisions on samples in the dataset. CoachLM is trained from the samples revised by human experts and significantly increases the proportion of high-quality samples in the dataset from 17.7% to 78.9%. The effectiveness of CoachLM is further assessed on various real-world instruction test sets. The results show that CoachLM improves the instruction-following capabilities of the instruction-tuned LLM by an average of 29.9%, which even surpasses larger LLMs with nearly twice the number of parameters. Furthermore, CoachLM is successfully deployed in a data management system for LLMs at Huawei, resulting in an efficiency improvement of up to 20% in the cleaning of 40k real-world instruction pairs. We release the training data and code of CoachLM (https://github.com/lunyiliu/CoachLM)",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yilun Liu",
+      "Shimin Tao",
+      "Xiaofeng Zhao",
+      "Ming Zhu",
+      "Wenbing Ma",
+      "Junhao Zhu",
+      "Chang Su",
+      "Yutai Hou",
+      "Miao Zhang",
+      "Min Zhang",
+      "Hongxia Ma",
+      "Li Zhang",
+      "Hao Yang",
+      "Yanfei Jiang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13240": {
+    "title": "On the Calibration of Large Language Models and Alignment",
+    "volume": "Nov",
+    "abstract": "As large language models attract increasing attention and find widespread application, concurrent challenges of reliability also arise at the same time. Confidence calibration, an effective analysis method for gauging the reliability of deep models, serves as a crucial tool for assessing and improving their reliability. However, such investigation has been comparatively underexplored. In this work, we conduct a systematic examination of the calibration of aligned language models throughout the entire construction process, including pretraining and alignment training. At each stage, we investigate how different training settings, such as parameter scales and training data, affect model calibration. To thoroughly assess model calibration, we evaluate models on three most concerned aspects: generation, factuality and understanding. Our work sheds light on whether popular LLMs are well-calibrated and how the training process influences model calibration",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Chiwei Zhu",
+      "Benfeng Xu",
+      "Quan Wang",
+      "Yongdong Zhang",
+      "Zhendong Mao"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13230": {
+    "title": "Enhancing Uncertainty-Based Hallucination Detection with Stronger Focus",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) have gained significant popularity for their impressive performance across diverse fields. However, LLMs are prone to hallucinate untruthful or nonsensical outputs that fail to meet user expectations in many real-world applications. Existing works for detecting hallucinations in LLMs either rely on external knowledge for reference retrieval or require sampling multiple responses from the LLM for consistency verification, making these methods costly and inefficient. In this paper, we propose a novel reference-free, uncertainty-based method for detecting hallucinations in LLMs. Our approach imitates human focus in factuality checking from three aspects: 1) focus on the most informative and important keywords in the given text; 2) focus on the unreliable tokens in historical context which may lead to a cascade of hallucinations; and 3) focus on the token properties such as token type and token frequency. Experimental results on relevant datasets demonstrate the effectiveness of our proposed method, which achieves state-of-the-art performance across all the evaluation metrics and eliminates the need for additional information",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Tianhang Zhang",
+      "Lin Qiu",
+      "Qipeng Guo",
+      "Cheng Deng",
+      "Yue Zhang",
+      "Zheng Zhang",
+      "Chenghu Zhou",
+      "Xinbing Wang",
+      "Luoyi Fu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13184": {
+    "title": "AS-LLM: When Algorithm Selection Meets Large Language Model",
+    "volume": "Nov",
+    "abstract": "Algorithm selection aims to identify the most suitable algorithm for solving a specific problem before execution, which has become a critical process of the AutoML. Current mainstream algorithm selection techniques rely heavily on feature representations of various problems and employ the performance of each algorithm as supervised information. However, there is a significant research gap concerning the consideration of algorithm features. This gap is primarily attributed to the inherent complexity of algorithms, making it particularly challenging to find a universally effective feature extraction method that is applicable across a diverse range of algorithms. Unfortunately, neglecting this aspect undoubtedly impacts the accuracy of algorithm selection and indirectly necessitates an increased volume of problem data for training purposes. This paper takes a significant stride towards addressing this gap by proposing an approach that integrates algorithm representation into the algorithm selection process. Specifically, our proposed model employs distinct modules to extract representations of both problems and algorithms, where the algorithm representation leverages the capabilities of pre-trained LLMs in the realm of code comprehension. Following the extraction of embedding vectors for both algorithms and problems, the most suitable algorithm is determined through calculations of matching degrees. Our experiments not only validate the effectiveness of the proposed model but also showcase the performance of different embedded pre-trained LLMs, which suggests that the proposed algorithm selection framework holds the potential to serve as a baseline task for evaluating the code representation capabilities of LLMs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xingyu Wu",
+      "Yan Zhong",
+      "Jibin Wu",
+      "Kay Chen Tan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13171": {
+    "title": "ComPEFT: Compression for Communicating Parameter Efficient Updates via Sparsification and Quantization",
+    "volume": "Nov",
+    "abstract": "Parameter-efficient fine-tuning (PEFT) techniques make it possible to efficiently adapt a language model to create \"expert\" models that specialize to new tasks or domains. Recent techniques in model merging and compositional generalization leverage these expert models by dynamically composing modules to improve zero/few-shot generalization. Despite the efficiency of PEFT methods, the size of expert models can make it onerous to retrieve expert models per query over high-latency networks like the Internet or serve multiple experts on a single GPU. To address these issues, we present ComPEFT, a novel method for compressing fine-tuning residuals (task vectors) of PEFT based models. ComPEFT employs sparsification and ternary quantization to reduce the size of the PEFT module without performing any additional retraining while preserving or enhancing model performance. In extensive evaluation across T5, T0, and LLaMA-based models with 200M - 65B parameters, ComPEFT achieves compression ratios of 8x - 50x. In particular, we show that ComPEFT improves with scale - stronger models exhibit higher compressibility and better performance. For example, we show that ComPEFT applied to LLaMA outperforms QLoRA by 4.16% on MMLU with a storage size reduction of up to 26x. In addition, we show that the compressed experts produced by ComPEFT maintain few-shot compositional generalization capabilities, facilitate efficient communication and computation, and exhibit enhanced performance when merged. Lastly, we provide an analysis of different method components, compare it with other PEFT methods, and test ComPEFT's efficacy for compressing the residual of full-finetuning. Our code is available at https://github.com/prateeky2806/compeft",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Prateek Yadav",
+      "Leshem Choshen",
+      "Colin Raffel",
+      "Mohit Bansal"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13133": {
+    "title": "LIMIT: Less Is More for Instruction Tuning Across Evaluation Paradigms",
+    "volume": "Nov",
+    "abstract": "Large Language Models are traditionally finetuned on large instruction datasets. However recent studies suggest that small, high-quality datasets can suffice for general purpose instruction following. This lack of consensus surrounding finetuning best practices is in part due to rapidly diverging approaches to LLM evaluation. In this study, we ask whether a small amount of diverse finetuning samples can improve performance on both traditional perplexity-based NLP benchmarks, and on open-ended, model-based evaluation. We finetune open-source MPT-7B and MPT-30B models on instruction finetuning datasets of various sizes ranging from 1k to 60k samples. We find that subsets of 1k-6k instruction finetuning samples are sufficient to achieve good performance on both (1) traditional NLP benchmarks and (2) model-based evaluation. Finally, we show that mixing textbook-style and open-ended QA finetuning datasets optimizes performance on both evaluation paradigms",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aditi Jha",
+      "Sam Havens",
+      "Jeremey Dohmann",
+      "Alex Trott",
+      "Jacob Portes"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13126": {
+    "title": "Towards Better Parameter-Efficient Fine-Tuning for Large Language Models: A Position Paper",
+    "volume": "Nov",
+    "abstract": "This paper delves into the pressing need in Parameter-Efficient Fine-Tuning (PEFT) for Large Language Models (LLMs). While LLMs possess remarkable capabilities, their extensive parameter requirements and associated computational demands hinder their practicality and scalability for real-world applications. Our position paper highlights current states and the necessity of further studying into the topic, and recognizes significant challenges and open issues that must be addressed to fully harness the powerful abilities of LLMs. These challenges encompass novel efficient PEFT architectures, PEFT for different learning settings, PEFT combined with model compression techniques, and the exploration of PEFT for multi-modal LLMs. By presenting this position paper, we aim to stimulate further research and foster discussions surrounding more efficient and accessible PEFT for LLMs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Chengyu Wang",
+      "Junbing Yan",
+      "Wei Zhang",
+      "Jun Huang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13118": {
+    "title": "Combatting Human Trafficking in the Cyberspace: A Natural Language Processing-Based Methodology to Analyze the Language in Online Advertisements",
+    "volume": "Nov",
+    "abstract": "This project tackles the pressing issue of human trafficking in online C2C marketplaces through advanced Natural Language Processing (NLP) techniques. We introduce a novel methodology for generating pseudo-labeled datasets with minimal supervision, serving as a rich resource for training state-of-the-art NLP models. Focusing on tasks like Human Trafficking Risk Prediction (HTRP) and Organized Activity Detection (OAD), we employ cutting-edge Transformer models for analysis. A key contribution is the implementation of an interpretability framework using Integrated Gradients, providing explainable insights crucial for law enforcement. This work not only fills a critical gap in the literature but also offers a scalable, machine learning-driven approach to combat human exploitation online. It serves as a foundation for future research and practical applications, emphasizing the role of machine learning in addressing complex social issues",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Alejandro Rodriguez Perez",
+      "Pablo Rivas"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13110": {
+    "title": "White-Box Transformers via Sparse Rate Reduction: Compression Is All There Is?",
+    "volume": "Nov",
+    "abstract": "In this paper, we contend that a natural objective of representation learning is to compress and transform the distribution of the data, say sets of tokens, towards a low-dimensional Gaussian mixture supported on incoherent subspaces. The goodness of such a representation can be evaluated by a principled measure, called sparse rate reduction, that simultaneously maximizes the intrinsic information gain and extrinsic sparsity of the learned representation. From this perspective, popular deep network architectures, including transformers, can be viewed as realizing iterative schemes to optimize this measure. Particularly, we derive a transformer block from alternating optimization on parts of this objective: the multi-head self-attention operator compresses the representation by implementing an approximate gradient descent step on the coding rate of the features, and the subsequent multi-layer perceptron sparsifies the features. This leads to a family of white-box transformer-like deep network architectures, named CRATE, which are mathematically fully interpretable. We show, by way of a novel connection between denoising and compression, that the inverse to the aforementioned compressive encoding can be realized by the same class of CRATE architectures. Thus, the so-derived white-box architectures are universal to both encoders and decoders. Experiments show that these networks, despite their simplicity, indeed learn to compress and sparsify representations of large-scale real-world image and text datasets, and achieve performance very close to highly engineered transformer-based models: ViT, MAE, DINO, BERT, and GPT2. We believe the proposed computational framework demonstrates great potential in bridging the gap between theory and practice of deep learning, from a unified perspective of data compression. Code is available at: https://ma-lab-berkeley.github.io/CRATE",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yaodong Yu",
+      "Sam Buchanan",
+      "Druv Pai",
+      "Tianzhe Chu",
+      "Ziyang Wu",
+      "Shengbang Tong",
+      "Hao Bai",
+      "Yuexiang Zhai",
+      "Benjamin D. Haeffele",
+      "Yi Ma"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13105": {
+    "title": "Perceptual Structure in the Absence of Grounding for LLMs: The Impact of Abstractedness and Subjectivity in Color Language",
+    "volume": "Nov",
+    "abstract": "The need for grounding in language understanding is an active research topic. Previous work has suggested that color perception and color language appear as a suitable test bed to empirically study the problem, given its cognitive significance and showing that there is considerable alignment between a defined color space and the feature space defined by a language model. To further study this issue, we collect a large scale source of colors and their descriptions, containing almost a 1 million examples , and perform an empirical analysis to compare two kinds of alignments: (i) inter-space, by learning a mapping between embedding space and color space, and (ii) intra-space, by means of prompting comparatives between color descriptions. Our results show that while color space alignment holds for monolexemic, highly pragmatic color descriptions, this alignment drops considerably in the presence of examples that exhibit elements of real linguistic usage such as subjectivity and abstractedness, suggesting that grounding may be required in such cases",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Pablo Loyola",
+      "Edison Marrese-Taylor",
+      "Andres Hoyos-Idobro"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13102": {
+    "title": "Detecting out-of-distribution text using topological features of transformer-based language models",
+    "volume": "Nov",
+    "abstract": "We attempt to detect out-of-distribution (OOD) text samples though applying Topological Data Analysis (TDA) to attention maps in transformer-based language models. We evaluate our proposed TDA-based approach for out-of-distribution detection on BERT, a transformer-based language model, and compare the to a more traditional OOD approach based on BERT CLS embeddings. We found that our TDA approach outperforms the CLS embedding approach at distinguishing in-distribution data (politics and entertainment news articles from HuffPost) from far out-of-domain samples (IMDB reviews), but its effectiveness deteriorates with near out-of-domain (CNN/Dailymail) or same-domain (business news articles from HuffPost) datasets",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Andres Pollano",
+      "Anupam Chaudhuri",
+      "Anj Simmons"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13095": {
+    "title": "Enhancing Logical Reasoning in Large Language Models to Facilitate Legal Applications",
+    "volume": "Nov",
+    "abstract": "Language serves as a vehicle for conveying thought, enabling communication among individuals. The ability to distinguish between diverse concepts, identify fairness and injustice, and comprehend a range of legal notions fundamentally relies on logical reasoning. Large Language Models (LLMs) attempt to emulate human language understanding and generation, but their competency in logical reasoning remains limited. This paper seeks to address the philosophical question: How can we effectively teach logical reasoning to LLMs while maintaining a deep understanding of the intricate relationship between language and logic? By focusing on bolstering LLMs' capabilities in logical reasoning, we aim to expand their applicability in law and other logic-intensive disciplines. To this end, we propose a Reinforcement Learning from Logical Feedback (RLLF) approach, which serves as a potential framework for refining LLMs' reasoning capacities. Through RLLF and a revised evaluation methodology, we explore new avenues for research in this domain and contribute to the development of LLMs capable of handling complex legal reasoning tasks while acknowledging the fundamental connection between language and logic",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ha-Thanh Nguyen",
+      "Wachara Fungwacharakorn",
+      "Ken Satoh"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13061": {
+    "title": "Attribution and Alignment: Effects of Local Context Repetition on Utterance Production and Comprehension in Dialogue",
+    "volume": "Nov",
+    "abstract": "Language models are often used as the backbone of modern dialogue systems. These models are pre-trained on large amounts of written fluent language. Repetition is typically penalised when evaluating language model generations. However, it is a key component of dialogue. Humans use local and partner specific repetitions; these are preferred by human users and lead to more successful communication in dialogue. In this study, we evaluate (a) whether language models produce human-like levels of repetition in dialogue, and (b) what are the processing mechanisms related to lexical re-use they use during comprehension. We believe that such joint analysis of model production and comprehension behaviour can inform the development of cognitively inspired dialogue generation systems",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aron Molnar",
+      "Jaap Jumelet",
+      "Mario Giulianelli",
+      "Arabella Sinclair"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13053": {
+    "title": "Beyond Text: Unveiling Multimodal Proficiency of Large Language Models with MultiAPI Benchmark",
+    "volume": "Nov",
+    "abstract": "The proliferation of Large Language Models like ChatGPT has significantly advanced language understanding and generation, impacting a broad spectrum of applications. However, these models predominantly excel in text-based tasks, overlooking the complexity of real-world multimodal information. This study introduces MultiAPI, a pioneering comprehensive large-scale API benchmark dataset aimed at expanding LLMs' proficiency in multimodal contexts. Developed collaboratively through ChatGPT, MultiAPI consists of 235 diverse API calls and 2,038 contextual prompts, offering a unique platform evaluation of tool-augmented LLMs handling multimodal tasks. Through comprehensive experiments, our findings reveal that while LLMs demonstrate proficiency in API call decision-making, they face challenges in domain identification, function selection, and argument generation. What's more, we surprisingly notice that auxiliary context can actually impair the performance. An in-depth error analysis paves the way for a new paradigm to address these challenges, suggesting a potential direction for future LLM research",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xiao Liu",
+      "Jianfeng Lin",
+      "Jiawei Zhang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13029": {
+    "title": "Systematic word meta-sense extension",
+    "volume": "Nov",
+    "abstract": "The meaning of polysemous words often varies in a highly productive yet predictable way. Generalizing the regularity between conventional senses to derive novel word meaning is crucial for automated processing of non-literal language uses such as figurative expressions. We introduce a novel task called systematic word meta-sense extension (SWORME) to test and improve language models' ability to extend word meaning to denote new semantic domains (also called meta-senses) that bear regular semantic relations with existing senses. We found that language models prefer incremental lexical semantic change toward conceptually similar meta-senses such as logical metonymy, and are much worse at predicting highly non-literal meaning extensions such as metaphors. We propose a novel analogy-based method of word meaning extension, and show that it effectively improves language model systematicity in making both gradual and radical types of meta-sense extension. We further demonstrate that learning systematic meta-sense extensions benefits language models on multiple benchmarks of figurative language understanding",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lei Yu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12986": {
+    "title": "Unsupervised Graph Attention Autoencoder for Attributed Networks using K-means Loss",
+    "volume": "Nov",
+    "abstract": "Multimodal Sentiment Analysis (MSA) has recently become a centric research direction for many real-world applications. This proliferation is due to the fact that opinions are central to almost all human activities and are key influencers of our behaviors. In addition, the recent deployment of Deep Learning-based (DL) models has proven their high efficiency for a wide range of Western languages. In contrast, Arabic DL-based multimodal sentiment analysis (MSA) is still in its infantile stage due, mainly, to the lack of standard datasets. % The contribution In this paper, our investigation is twofold. First, we design a pipeline that helps building our Arabic Multimodal dataset leveraging both state-of-the-art transformers and feature extraction tools within word alignment techniques. Thereafter, we validate our dataset using state-of-the-art transformer-based model dealing with multimodality. Despite the small size of the outcome dataset, experiments show that Arabic multimodality is very promising",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Abdelfateh Bekkaira",
+      "Slimane Bellaouar",
+      "Slimane Oulad-Naoui"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12983": {
+    "title": "GAIA: a benchmark for General AI Assistants",
+    "volume": "Nov",
+    "abstract": "We introduce GAIA, a benchmark for General AI Assistants that, if solved, would represent a milestone in AI research. GAIA proposes real-world questions that require a set of fundamental abilities such as reasoning, multi-modality handling, web browsing, and generally tool-use proficiency. GAIA questions are conceptually simple for humans yet challenging for most advanced AIs: we show that human respondents obtain 92\\% vs. 15\\% for GPT-4 equipped with plugins. This notable performance disparity contrasts with the recent trend of LLMs outperforming humans on tasks requiring professional skills in e.g. law or chemistry. GAIA's philosophy departs from the current trend in AI benchmarks suggesting to target tasks that are ever more difficult for humans. We posit that the advent of Artificial General Intelligence (AGI) hinges on a system's capability to exhibit similar robustness as the average human does on such questions. Using GAIA's methodology, we devise 466 questions and their answer. We release our questions while retaining answers to 300 of them to power a leader-board available at https://huggingface.co/gaia-benchmark",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Grégoire Mialon",
+      "Clémentine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun",
+      "Thomas Scialom"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12735": {
+    "title": "LowResource at BLP-2023 Task 2: Leveraging BanglaBert for Low Resource Sentiment Analysis of Bangla Language",
+    "volume": "Nov",
+    "abstract": "This paper describes the system of the LowResource Team for Task 2 of BLP-2023, which involves conducting sentiment analysis on a dataset composed of public posts and comments from diverse social media platforms. Our primary aim is to utilize BanglaBert, a BERT model pre-trained on a large Bangla corpus, using various strategies including fine-tuning, dropping random tokens, and using several external datasets. Our final model is an ensemble of the three best BanglaBert variations. Our system has achieved overall 3rd in the Test Set among 30 participating teams with a score of 0.718. Additionally, we discuss the promising systems that didn't perform well namely task-adaptive pertaining and paraphrasing using BanglaT5. Training codes and external datasets which are used for our system are publicly available at https://github.com/Aunabil4602/bnlp-workshop-task2-2023",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aunabil Chakma",
+      "Masum Hasan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12727": {
+    "title": "Soft Random Sampling: A Theoretical and Empirical Analysis",
+    "volume": "Nov",
+    "abstract": "Soft random sampling (SRS) is a simple yet effective approach for efficient training of large-scale deep neural networks when dealing with massive data. SRS selects a subset uniformly at random with replacement from the full data set in each epoch. In this paper, we conduct a theoretical and empirical analysis of SRS. First, we analyze its sampling dynamics including data coverage and occupancy. Next, we investigate its convergence with non-convex objective functions and give the convergence rate. Finally, we provide its generalization performance. We empirically evaluate SRS for image recognition on CIFAR10 and automatic speech recognition on Librispeech and an in-house payload dataset to demonstrate its effectiveness. Compared to existing coreset-based data selection methods, SRS offers a better accuracy-efficiency trade-off. Especially on real-world industrial scale data sets, it is shown to be a powerful training strategy with significant speedup and competitive performance with almost no additional computing cost",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xiaodong Cui",
+      "Ashish Mittal",
+      "Songtao Lu",
+      "Wei Zhang",
+      "George Saon",
+      "Brian Kingsbury"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12707": {
+    "title": "Keeping Users Engaged During Repeated Administration of the Same Questionnaire: Using Large Language Models to Reliably Diversify Questions",
+    "volume": "Nov",
+    "abstract": "Standardized, validated questionnaires are vital tools in HCI research and healthcare, offering dependable self-report data. However, their repeated use in longitudinal or pre-post studies can induce respondent fatigue, impacting data quality via response biases and decreased response rates. We propose utilizing large language models (LLMs) to generate diverse questionnaire versions while retaining good psychometric properties. In a longitudinal study, participants engaged with our agent system and responded daily for two weeks to either a standardized depression questionnaire or one of two LLM-generated questionnaire variants, alongside a validated depression questionnaire. Psychometric testing revealed consistent covariation between the external criterion and the focal measure administered across the three conditions, demonstrating the reliability and validity of the LLM-generated variants. Participants found the repeated administration of the standardized questionnaire significantly more repetitive compared to the variants. Our findings highlight the potential of LLM-generated variants to invigorate questionnaires, fostering engagement and interest without compromising validity",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hye Sun Yun",
+      "Mehdi Arjmand",
+      "Phillip Raymond Sherlock",
+      "Michael Paasche-Orlow",
+      "James W. Griffith",
+      "Timothy Bickmore"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12699": {
+    "title": "Can Large Language Models Understand Content and Propagation for Misinformation Detection: An Empirical Study",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) have garnered significant attention for their powerful ability in natural language understanding and reasoning. In this paper, we present a comprehensive empirical study to explore the performance of LLMs on misinformation detection tasks. This study stands as the pioneering investigation into the understanding capabilities of multiple LLMs regarding both content and propagation across social media platforms. Our empirical studies on five misinformation detection datasets show that LLMs with diverse prompts achieve comparable performance in text-based misinformation detection but exhibit notably constrained capabilities in comprehending propagation structure compared to existing models in propagation-based misinformation detection. Besides, we further design four instruction-tuned strategies to enhance LLMs for both content and propagation-based misinformation detection. These strategies boost LLMs to actively learn effective features from multiple instances or hard instances, and eliminate irrelevant propagation structures, thereby achieving better detection performance. Extensive experiments further demonstrate LLMs would play a better capacity in content and propagation structure under these proposed strategies and achieve promising detection performance. These findings highlight the potential ability of LLMs to detect misinformation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Mengyang Chen",
+      "Lingwei Wei",
+      "Han Cao",
+      "Wei Zhou",
+      "Songlin Hu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12689": {
+    "title": "Fair Text Classification with Wasserstein Independence",
+    "volume": "Nov",
+    "abstract": "Group fairness is a central research topic in text classification, where reaching fair treatment between sensitive groups (e.g. women vs. men) remains an open challenge. This paper presents a novel method for mitigating biases in neural text classification, agnostic to the model architecture. Considering the difficulty to distinguish fair from unfair information in a text encoder, we take inspiration from adversarial training to induce Wasserstein independence between representations learned to predict our target label and the ones learned to predict some sensitive attribute. Our approach provides two significant advantages. Firstly, it does not require annotations of sensitive attributes in both testing and training data. This is more suitable for real-life scenarios compared to existing methods that require annotations of sensitive attributes at train time. Second, our approach exhibits a comparable or better fairness-accuracy trade-off compared to existing methods",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Thibaud Leteno",
+      "Antoine Gourru",
+      "Charlotte Laclau",
+      "Rémi Emonet",
+      "Christophe Gravier"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12664": {
+    "title": "The DURel Annotation Tool: Human and Computational Measurement of Semantic Proximity, Sense Clusters and Semantic Change",
+    "volume": "Nov",
+    "abstract": "We present the DURel tool that implements the annotation of semantic proximity between uses of words into an online, open source interface. The tool supports standardized human annotation as well as computational annotation, building on recent advances with Word-in-Context models. Annotator judgments are clustered with automatic graph clustering techniques and visualized for analysis. This allows to measure word senses with simple and intuitive micro-task judgments between use pairs, requiring minimal preparation efforts. The tool offers additional functionalities to compare the agreement between annotators to guarantee the inter-subjectivity of the obtained judgments and to calculate summary statistics giving insights into sense frequency distributions, semantic variation or changes of senses over time",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Dominik Schlechtweg",
+      "Shafqat Mumtaz Virk",
+      "Pauline Sander",
+      "Emma Sköldberg",
+      "Lukas Theuer Linke",
+      "Tuo Zhang",
+      "Nina Tahmasebi",
+      "Jonas Kuhn",
+      "Sabine Schulte im Walde"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12649": {
+    "title": "MathGloss: Building mathematical glossaries from text",
+    "volume": "Nov",
+    "abstract": "MathGloss is a project to create a knowledge graph (KG) for undergraduate mathematics from text, automatically, using modern natural language processing (NLP) tools and resources already available on the web. MathGloss is a linked database of undergraduate concepts in mathematics. So far, it combines five resources: (i) Wikidata, a collaboratively edited, multilingual knowledge graph hosted by the Wikimedia Foundation, (ii) terms covered in mathematics courses at the University of Chicago, (iii) the syllabus of the French undergraduate mathematics curriculum which includes hyperlinks to the automated theorem prover Lean 4, (iv) MuLiMa, a multilingual dictionary of mathematics curated by mathematicians, and (v) the nLab, a wiki for category theory also curated by mathematicians. MathGloss's goal is to bring together resources for learning mathematics and to allow every mathematician to tailor their learning to their own preferences. Moreover, by organizing different resources for learning undergraduate mathematics alongside those for learning formal mathematics, we hope to make it easier for mathematicians and formal tools (theorem provers, computer algebra systems, etc) experts to \"understand\" each other and break down some of the barriers to formal math",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lucy Horowitz",
+      "Valeria de Paiva"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12574": {
+    "title": "IMGTB: A Framework for Machine-Generated Text Detection Benchmarking",
+    "volume": "Nov",
+    "abstract": "In the era of large language models generating high quality texts, it is a necessity to develop methods for detection of machine-generated text to avoid harmful use or simply due to annotation purposes. It is, however, also important to properly evaluate and compare such developed methods. Recently, a few benchmarks have been proposed for this purpose; however, integration of newest detection methods is rather challenging, since new methods appear each month and provide slightly different evaluation pipelines. In this paper, we present the IMGTB framework, which simplifies the benchmarking of machine-generated text detection methods by easy integration of custom (new) methods and evaluation datasets. Its configurability and flexibility makes research and development of new detection methods easier, especially their comparison to the existing state-of-the-art detectors. The default set of analyses, metrics and visualizations offered by the tool follows the established practices of machine-generated text detection benchmarking found in state-of-the-art literature",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Michal Spiegel",
+      "Dominik Macko"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12538": {
+    "title": "In-Context Learning Functions with Varying Number of Minima",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) have proven effective at In-Context Learning (ICL), an ability that allows them to create predictors from labeled examples. Few studies have explored the interplay between ICL and specific properties of functions it attempts to approximate. In our study, we use a formal framework to explore ICL and propose a new task of approximating functions with varying number of minima. We implement a method that allows for producing functions with given inputs as minima. We find that increasing the number of minima degrades ICL performance. At the same time, our evaluation shows that ICL outperforms 2-layer Neural Network (2NN) model. Furthermore, ICL learns faster than 2NN in all settings. We validate the findings through a set of few-shot experiments across various hyperparameter configurations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Oniani",
+      "Yanshan Wang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12537": {
+    "title": "Oasis: Data Curation and Assessment System for Pretraining of Large Language Models",
+    "volume": "Nov",
+    "abstract": "Data is one of the most critical elements in building a large language model. However, existing systems either fail to customize a corpus curation pipeline or neglect to leverage comprehensive corpus assessment for iterative optimization of the curation. To this end, we present a pretraining corpus curation and assessment platform called Oasis -- a one-stop system for data quality improvement and quantification with user-friendly interactive interfaces. Specifically, the interactive modular rule filter module can devise customized rules according to explicit feedback. The debiased neural filter module builds the quality classification dataset in a negative-centric manner to remove the undesired bias. The adaptive document deduplication module could execute large-scale deduplication with limited memory resources. These three parts constitute the customized data curation module. And in the holistic data assessment module, a corpus can be assessed in local and global views, with three evaluation means including human, GPT-4, and heuristic metrics. We exhibit a complete process to use Oasis for the curation and assessment of pretraining data. In addition, an 800GB bilingual corpus curated by Oasis is publicly released",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Tong Zhou",
+      "Yubo Chen",
+      "Pengfei Cao",
+      "Kang Liu",
+      "Jun Zhao",
+      "Shengping Liu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12534": {
+    "title": "Evaluation Metrics of Language Generation Models for Synthetic Traffic Generation Tasks",
+    "volume": "Nov",
+    "abstract": "Many Natural Language Generation (NLG) tasks aim to generate a single output text given an input prompt. Other settings require the generation of multiple texts, e.g., for Synthetic Traffic Generation (STG). This generation task is crucial for training and evaluating QA systems as well as conversational agents, where the goal is to generate multiple questions or utterances resembling the linguistic variability of real users. In this paper, we show that common NLG metrics, like BLEU, are not suitable for evaluating STG. We propose and evaluate several metrics designed to compare the generated traffic to the distribution of real user texts. We validate our metrics with an automatic procedure to verify whether they capture different types of quality issues of generated data; we also run human annotations to verify the correlation with human judgements. Experiments on three tasks, i.e., Shopping Utterance Generation, Product Question Generation and Query Auto Completion, demonstrate that our metrics are effective for evaluating STG tasks, and improve the agreement with human judgement up to 20% with respect to common NLG metrics. We believe these findings can pave the way towards better solutions for estimating the representativeness of synthetic text data",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Simone Filice",
+      "Jason Ingyu Choi",
+      "Giuseppe Castellucci",
+      "Eugene Agichtein",
+      "Oleg Rokhlenko"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12489": {
+    "title": "Multilingual Word Embeddings for Low-Resource Languages using Anchors and a Chain of Related Languages",
+    "volume": "Nov",
+    "abstract": "Very low-resource languages, having only a few million tokens worth of data, are not well-supported by multilingual NLP approaches due to poor quality cross-lingual word representations. Recent work showed that good cross-lingual performance can be achieved if a source language is related to the low-resource target language. However, not all language pairs are related. In this paper, we propose to build multilingual word embeddings (MWEs) via a novel language chain-based approach, that incorporates intermediate related languages to bridge the gap between the distant source and target. We build MWEs one language at a time by starting from the resource rich source and sequentially adding each language in the chain till we reach the target. We extend a semi-joint bilingual approach to multiple languages in order to eliminate the main weakness of previous works, i.e., independently trained monolingual embeddings, by anchoring the target language around the multilingual space. We evaluate our method on bilingual lexicon induction for 4 language families, involving 4 very low-resource (<5M tokens) and 4 moderately low-resource (<50M) target languages, showing improved performance in both categories. Additionally, our analysis reveals the importance of good quality embeddings for intermediate languages as well as the importance of leveraging anchor points from all languages in the multilingual space",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Viktor Hangya",
+      "Silvia Severini",
+      "Radoslav Ralev",
+      "Alexander Fraser",
+      "Hinrich Schütze"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12480": {
+    "title": "Speaker-Adapted End-to-End Visual Speech Recognition for Continuous Spanish",
+    "volume": "Nov",
+    "abstract": "Different studies have shown the importance of visual cues throughout the speech perception process. In fact, the development of audiovisual approaches has led to advances in the field of speech technologies. However, although noticeable results have recently been achieved, visual speech recognition remains an open research problem. It is a task in which, by dispensing with the auditory sense, challenges such as visual ambiguities and the complexity of modeling silence must be faced. Nonetheless, some of these challenges can be alleviated when the problem is approached from a speaker-dependent perspective. Thus, this paper studies, using the Spanish LIP-RTVE database, how the estimation of specialized end-to-end systems for a specific person could affect the quality of speech recognition. First, different adaptation strategies based on the fine-tuning technique were proposed. Then, a pre-trained CTC/Attention architecture was used as a baseline throughout our experiments. Our findings showed that a two-step fine-tuning process, where the VSR system is first adapted to the task domain, provided significant improvements when the speaker adaptation was addressed. Furthermore, results comparable to the current state of the art were reached even when only a limited amount of data was available",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Gimeno-Gómez",
+      "Carlos-D. Martínez-Hinarejos"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12475": {
+    "title": "PhayaThaiBERT: Enhancing a Pretrained Thai Language Model with Unassimilated Loanwords",
+    "volume": "Nov",
+    "abstract": "While WangchanBERTa has become the de facto standard in transformer-based Thai language modeling, it still has shortcomings in regard to the understanding of foreign words, most notably English words, which are often borrowed without orthographic assimilation into Thai in many contexts. We identify the lack of foreign vocabulary in WangchanBERTa's tokenizer as the main source of these shortcomings. We then expand WangchanBERTa's vocabulary via vocabulary transfer from XLM-R's pretrained tokenizer and pretrain a new model using the expanded tokenizer, starting from WangchanBERTa's checkpoint, on a new dataset that is larger than the one used to train WangchanBERTa. Our results show that our new pretrained model, PhayaThaiBERT, outperforms WangchanBERTa in many downstream tasks and datasets",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Panyut Sriwirote",
+      "Jalinee Thapiang",
+      "Vasan Timtong",
+      "Attapol T. Rutherford"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12474": {
+    "title": "CSMeD: Bridging the Dataset Gap in Automated Citation Screening for Systematic Literature Reviews",
+    "volume": "Nov",
+    "abstract": "Systematic literature reviews (SLRs) play an essential role in summarising, synthesising and validating scientific evidence. In recent years, there has been a growing interest in using machine learning techniques to automate the identification of relevant studies for SLRs. However, the lack of standardised evaluation datasets makes comparing the performance of such automated literature screening systems difficult. In this paper, we analyse the citation screening evaluation datasets, revealing that many of the available datasets are either too small, suffer from data leakage or have limited applicability to systems treating automated literature screening as a classification task, as opposed to, for example, a retrieval or question-answering task. To address these challenges, we introduce CSMeD, a meta-dataset consolidating nine publicly released collections, providing unified access to 325 SLRs from the fields of medicine and computer science. CSMeD serves as a comprehensive resource for training and evaluating the performance of automated citation screening models. Additionally, we introduce CSMeD-FT, a new dataset designed explicitly for evaluating the full text publication screening task. To demonstrate the utility of CSMeD, we conduct experiments and establish baselines on new datasets",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Wojciech Kusa",
+      "Oscar E. Mendoza",
+      "Matthias Samwald",
+      "Petr Knoth",
+      "Allan Hanbury"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12468": {
+    "title": "Analysis of Visual Features for Continuous Lipreading in Spanish",
+    "volume": "Nov",
+    "abstract": "During a conversation, our brain is responsible for combining information obtained from multiple senses in order to improve our ability to understand the message we are perceiving. Different studies have shown the importance of presenting visual information in these situations. Nevertheless, lipreading is a complex task whose objective is to interpret speech when audio is not available. By dispensing with a sense as crucial as hearing, it will be necessary to be aware of the challenge that this lack presents. In this paper, we propose an analysis of different speech visual features with the intention of identifying which of them is the best approach to capture the nature of lip movements for natural Spanish and, in this way, dealing with the automatic visual speech recognition task. In order to estimate our system, we present an audiovisual corpus compiled from a subset of the RTVE database, which has been used in the Albayz\\'in evaluations. We employ a traditional system based on Hidden Markov Models with Gaussian Mixture Models. Results show that, although the task is difficult, in restricted conditions we obtain recognition results which determine that using eigenlips in combination with deep features is the best visual approach",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Gimeno-Gómez",
+      "Carlos-D. Martínez-Hinarejos"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12457": {
+    "title": "LIP-RTVE: An Audiovisual Database for Continuous Spanish in the Wild",
+    "volume": "Nov",
+    "abstract": "Speech is considered as a multi-modal process where hearing and vision are two fundamentals pillars. In fact, several studies have demonstrated that the robustness of Automatic Speech Recognition systems can be improved when audio and visual cues are combined to represent the nature of speech. In addition, Visual Speech Recognition, an open research problem whose purpose is to interpret speech by reading the lips of the speaker, has been a focus of interest in the last decades. Nevertheless, in order to estimate these systems in the currently Deep Learning era, large-scale databases are required. On the other hand, while most of these databases are dedicated to English, other languages lack sufficient resources. Thus, this paper presents a semi-automatically annotated audiovisual database to deal with unconstrained natural Spanish, providing 13 hours of data extracted from Spanish television. Furthermore, baseline results for both speaker-dependent and speaker-independent scenarios are reported using Hidden Markov Models, a traditional paradigm that has been widely used in the field of Speech Technologies",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Gimeno-Gómez",
+      "Carlos-D. Martínez-Hinarejos"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12420": {
+    "title": "How Far Have We Gone in Vulnerability Detection Using Large Language Models",
+    "volume": "Nov",
+    "abstract": "As software becomes increasingly complex and prone to vulnerabilities, automated vulnerability detection is critically important, yet challenging. Given the significant successes of Large Language Models (LLMs) in various tasks, there is growing anticipation of their efficacy in vulnerability detection. However, a quantitative understanding of their potential in vulnerability detection is still missing. To bridge this gap, we introduce a comprehensive vulnerability benchmark VulBench. This benchmark aggregates high-quality data from a wide range of CTF (Capture-the-Flag) challenges and real-world applications, with annotations for each vulnerable function detailing the vulnerability type and its root cause. Through our experiments encompassing 16 LLMs and 6 state-of-the-art (SOTA) deep learning-based models and static analyzers, we find that several LLMs outperform traditional deep learning approaches in vulnerability detection, revealing an untapped potential in LLMs. This work contributes to the understanding and utilization of LLMs for enhanced software security",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zeyu Gao",
+      "Hao Wang",
+      "Yuchen Zhou",
+      "Wenyu Zhu",
+      "Chao Zhang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12418": {
+    "title": "Visual Analytics for Generative Transformer Models",
+    "volume": "Nov",
+    "abstract": "While transformer-based models have achieved state-of-the-art results in a variety of classification and generation tasks, their black-box nature makes them challenging for interpretability. In this work, we present a novel visual analytical framework to support the analysis of transformer-based generative networks. In contrast to previous work, which has mainly focused on encoder-based models, our framework is one of the first dedicated to supporting the analysis of transformer-based encoder-decoder models and decoder-only models for generative and classification tasks. Hence, we offer an intuitive overview that allows the user to explore different facets of the model through interactive visualization. To demonstrate the feasibility and usefulness of our framework, we present three detailed case studies based on real-world NLP research problems",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Raymond Li",
+      "Ruixin Yang",
+      "Wen Xiao",
+      "Ahmed AbuRaed",
+      "Gabriel Murray",
+      "Giuseppe Carenini"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12410": {
+    "title": "nach0: Multimodal Natural and Chemical Languages Foundation Model",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) have substantially driven scientific progress in various domains, and many papers have demonstrated their ability to tackle complex problems with creative solutions. Our paper introduces a new foundation model, nach0, capable of solving various chemical and biological tasks: biomedical question answering, named entity recognition, molecular generation, molecular synthesis, attributes prediction, and others. nach0 is a multi-domain and multi-task encoder-decoder LLM pre-trained on unlabeled text from scientific literature, patents, and molecule strings to incorporate a range of chemical and linguistic knowledge. We employed instruction tuning, where specific task-related instructions are utilized to fine-tune nach0 for the final set of tasks. To train nach0 effectively, we leverage the NeMo framework, enabling efficient parallel optimization of both base and large model versions. Extensive experiments demonstrate that our model outperforms state-of-the-art baselines on single-domain and cross-domain tasks. Furthermore, it can generate high-quality outputs in molecular and textual formats, showcasing its effectiveness in multi-domain setups",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Micha Livne",
+      "Zulfat Miftahutdinov",
+      "Elena Tutubalina",
+      "Maksim Kuznetsov",
+      "Daniil Polykovskiy",
+      "Annika Brundyn",
+      "Aastha Jhunjhunwala",
+      "Anthony Costa",
+      "Alex Aliper",
+      "Alex Zhavoronkov"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12405": {
+    "title": "IndoRobusta: Towards Robustness Against Diverse Code-Mixed Indonesian Local Languages",
+    "volume": "Nov",
+    "abstract": "Significant progress has been made on Indonesian NLP. Nevertheless, exploration of the code-mixing phenomenon in Indonesian is limited, despite many languages being frequently mixed with Indonesian in daily conversation. In this work, we explore code-mixing in Indonesian with four embedded languages, i.e., English, Sundanese, Javanese, and Malay; and introduce IndoRobusta, a framework to evaluate and improve the code-mixing robustness. Our analysis shows that the pre-training corpus bias affects the model's ability to better handle Indonesian-English code-mixing when compared to other local languages, despite having higher language diversity",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Muhammad Farid Adilazuarda",
+      "Samuel Cahyawijaya",
+      "Genta Indra Winata",
+      "Pascale Fung",
+      "Ayu Purwarianti"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12404": {
+    "title": "InterPrompt: Interpretable Prompting for Interrelated Interpersonal Risk Factors in Reddit Posts",
+    "volume": "Nov",
+    "abstract": "Mental health professionals and clinicians have observed the upsurge of mental disorders due to Interpersonal Risk Factors (IRFs). To simulate the human-in-the-loop triaging scenario for early detection of mental health disorders, we recognized textual indications to ascertain these IRFs : Thwarted Belongingness (TBe) and Perceived Burdensomeness (PBu) within personal narratives. In light of this, we use N-shot learning with GPT-3 model on the IRF dataset, and underscored the importance of fine-tuning GPT-3 model to incorporate the context-specific sensitivity and the interconnectedness of textual cues that represent both IRFs. In this paper, we introduce an Interpretable Prompting (InterPrompt)} method to boost the attention mechanism by fine-tuning the GPT-3 model. This allows a more sophisticated level of language modification by adjusting the pre-trained weights. Our model learns to detect usual patterns and underlying connections across both the IRFs, which leads to better system-level explainability and trustworthiness. The results of our research demonstrate that all four variants of GPT-3 model, when fine-tuned with InterPrompt, perform considerably better as compared to the baseline methods, both in terms of classification and explanation generation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "MSVPJ Sathvik",
+      "Surjodeep Sarkar",
+      "Chandni Saxena",
+      "Sunghwan Sohn",
+      "Muskan Garg"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12399": {
+    "title": "A Survey of Graph Meets Large Language Model: Progress and Future Directions",
+    "volume": "Nov",
+    "abstract": "Graph plays a significant role in representing and analyzing complex relationships in real-world applications such as citation networks, social networks, and biological data. Recently, Large Language Models (LLMs), which have achieved tremendous success in various domains, have also been leveraged in graph-related tasks to surpass traditional Graph Neural Networks (GNNs) based methods and yield state-of-the-art performance. In this survey, we first present a comprehensive review and analysis of existing methods that integrate LLMs with graphs. First of all, we propose a new taxonomy, which organizes existing methods into three categories based on the role (i.e., enhancer, predictor, and alignment component) played by LLMs in graph-related tasks. Then we systematically survey the representative methods along the three categories of the taxonomy. Finally, we discuss the remaining limitations of existing studies and highlight promising avenues for future research. The relevant papers are summarized and will be consistently updated at: https://github.com/yhLeeee/Awesome-LLMs-in-Graph-tasks",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yuhan Li",
+      "Zhixun Li",
+      "Peisong Wang",
+      "Jia Li",
+      "Xiangguo Sun",
+      "Hong Cheng",
+      "Jeffrey Xu Yu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12395": {
+    "title": "Problems of Non-equivalent Words in Technical Translation",
+    "volume": "Nov",
+    "abstract": "Translating words which do not have equivalent in target language is not easy and finding proper equivalent of those words are very important to render correctly and understandably, the article defines some thoughts and ideas of scientists on the common problems of non-equivalent words from English to Russian language and includes English and Russian examples and ideas of certain scientist. The English language is worldwide spoken and there are 1.35 billion English speakers and over 258 million Russian speakers according to the 2021s statistics. Inevitably, these billions of speakers around the world have connection and they may have deal in different criteria. In order to understand one another they need to have a pure and fully-understood language. These pure languages understanding directly relates to translation knowledge where linguists and translators need to work and research to eradicate misunderstanding. Misunderstandings mostly appear in non-equivalent words because there are different local and internal words like food, garment, cultural and traditional words and others in every notion. Truly, most of these words do not have equivalent in the target language and these words need to be worked and find their equivalent in the target language to fully understand the both languages. However, some of these non-equivalent words are already professionally rendered to the target language but still there many other words to be rendered. Hence, this research paper includes different ways and rules of rendering non-equivalent words from source language to the target language",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Mohammad Ibrahim Qani"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12375": {
+    "title": "The Obscure Limitation of Modular Multilingual Language Models",
+    "volume": "Nov",
+    "abstract": "We expose the limitation of modular multilingual language models (MLMs) in multilingual inference scenarios with unknown languages. Existing evaluations of modular MLMs exclude the involvement of language identification (LID) modules, which obscures the performance of real-case multilingual scenarios of modular MLMs. In this work, we showcase the effect of adding LID on the multilingual evaluation of modular MLMs and provide discussions for closing the performance gap of caused by the pipelined approach of LID and modular MLMs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Muhammad Farid Adilazuarda",
+      "Samuel Cahyawijaya",
+      "Ayu Purwarianti"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12373": {
+    "title": "Beyond Turing: A Comparative Analysis of Approaches for Detecting Machine-Generated Text",
+    "volume": "Nov",
+    "abstract": "Significant progress has been made on text generation by pre-trained language models (PLMs), yet distinguishing between human and machine-generated text poses an escalating challenge. This paper offers an in-depth evaluation of three distinct methods used to address this task: traditional shallow learning, Language Model (LM) fine-tuning, and Multilingual Model fine-tuning. These approaches are rigorously tested on a wide range of machine-generated texts, providing a benchmark of their competence in distinguishing between human-authored and machine-authored linguistic constructs. The results reveal considerable differences in performance across methods, thus emphasizing the continued need for advancement in this crucial area of NLP. This study offers valuable insights and paves the way for future research aimed at creating robust and highly discriminative models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Muhammad Farid Adilazuarda",
+      "Nikolaos Nektarios Arkoulis",
+      "Oleksii Chumakov"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12355": {
+    "title": "Utilizing Language Models for Tour Itinerary Recommendation",
+    "volume": "Nov",
+    "abstract": "Tour itinerary recommendation involves planning a sequence of relevant Point-of-Interest (POIs), which combines challenges from the fields of both Operations Research (OR) and Recommendation Systems (RS). As an OR problem, there is the need to maximize a certain utility (e.g., popularity of POIs in the tour) while adhering to some constraints (e.g., maximum time for the tour). As a RS problem, it is heavily related to problem or filtering or ranking a subset of POIs that are relevant to a user and recommending it as part of an itinerary. In this paper, we explore the use of language models for the task of tour itinerary recommendation and planning. This task has the unique requirement of recommending personalized POIs relevant to users and planning these POIs as an itinerary that satisfies various constraints. We discuss some approaches in this area, such as using word embedding techniques like Word2Vec and GloVe for learning POI embeddings and transformer-based techniques like BERT for generating itineraries",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ngai Lam Ho",
+      "Kwan Hui Lim"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12351": {
+    "title": "Advancing Transformer Architecture in Long-Context Large Language Models: A Comprehensive Survey",
+    "volume": "Nov",
+    "abstract": "With the bomb ignited by ChatGPT, Transformer-based Large Language Models (LLMs) have paved a revolutionary path toward Artificial General Intelligence (AGI) and have been applied in diverse areas as knowledge bases, human interfaces, and dynamic agents. However, a prevailing limitation exists: many current LLMs, constrained by resources, are primarily pre-trained on shorter texts, rendering them less effective for longer-context prompts, commonly encountered in real-world settings. In this paper, we present a comprehensive survey focusing on the advancement of model architecture in Transformer-based LLMs to optimize long-context capabilities across all stages from pre-training to inference. We firstly delineate and analyze the problems of handling long-context input and output with the current Transformer-based models. Then, we mainly offer a holistic taxonomy to navigate the landscape of Transformer upgrades on architecture to solve these problems. Afterward, we provide the investigation on wildly used evaluation necessities tailored for long-context LLMs, including datasets, metrics, and baseline models, as well as some amazing optimization toolkits like libraries, systems, and compilers to augment LLMs' efficiency and efficacy across different stages. Finally, we further discuss the predominant challenges and potential avenues for future research in this domain. Additionally, we have established a repository where we curate relevant literature with real-time updates at https://github.com/Strivin0311/long-llms-learning",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yunpeng Huang",
+      "Jingwei Xu",
+      "Zixu Jiang",
+      "Junyu Lai",
+      "Zenan Li",
+      "Yuan Yao",
+      "Taolue Chen",
+      "Lijuan Yang",
+      "Zhou Xin",
+      "Xiaoxing Ma"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12337": {
+    "title": "Do Smaller Language Models Answer Contextualised Questions Through Memorisation Or Generalisation?",
+    "volume": "Nov",
+    "abstract": "A distinction is often drawn between a model's ability to predict a label for an evaluation sample that is directly memorised from highly similar training samples versus an ability to predict the label via some method of generalisation. In the context of using Language Models for question-answering, discussion continues to occur as to the extent to which questions are answered through memorisation. We consider this issue for questions that would ideally be answered through reasoning over an associated context. We propose a method of identifying evaluation samples for which it is very unlikely our model would have memorised the answers. Our method is based on semantic similarity of input tokens and label tokens between training and evaluation samples. We show that our method offers advantages upon some prior approaches in that it is able to surface evaluation-train pairs that have overlap in either contiguous or discontiguous sequences of tokens. We use this method to identify unmemorisable subsets of our evaluation datasets. We train two Language Models in a multitask fashion whereby the second model differs from the first only in that it has two additional datasets added to the training regime that are designed to impart simple numerical reasoning strategies of a sort known to improve performance on some of our evaluation datasets but not on others. We then show that there is performance improvement between the two models on the unmemorisable subsets of the evaluation datasets that were expected to benefit from the additional training datasets. Specifically, performance on unmemorisable subsets of two of our evaluation datasets, DROP and ROPES significantly improves by 9.0%, and 25.7% respectively while other evaluation datasets have no significant change in performance",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Tim Hartill",
+      "Joshua Bensemann",
+      "Michael Witbrock",
+      "Patricia J. Riddle"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12323": {
+    "title": "Modeling Political Orientation of Social Media Posts: An Extended Analysis",
+    "volume": "Nov",
+    "abstract": "Developing machine learning models to characterize political polarization on online social media presents significant challenges. These challenges mainly stem from various factors such as the lack of annotated data, presence of noise in social media datasets, and the sheer volume of data. The common research practice typically examines the biased structure of online user communities for a given topic or qualitatively measuring the impacts of polarized topics on social media. However, there is limited work focusing on analyzing polarization at the ground-level, specifically in the social media posts themselves. Such existing analysis heavily relies on annotated data, which often requires laborious human labeling, offers labels only to specific problems, and lacks the ability to determine the near-future bias state of a social media conversations. Understanding the degree of political orientation conveyed in social media posts is crucial for quantifying the bias of online user communities and investigating the spread of polarized content. In this work, we first introduce two heuristic methods that leverage on news media bias and post content to label social media posts. Next, we compare the efficacy and quality of heuristically labeled dataset with a randomly sampled human-annotated dataset. Additionally, we demonstrate that current machine learning models can exhibit improved performance in predicting political orientation of social media posts, employing both traditional supervised learning and few-shot learning setups. We conduct experiments using the proposed heuristic methods and machine learning approaches to predict the political orientation of posts collected from two social media forums with diverse political ideologies: Gab and Twitter",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sadia Kamal",
+      "Brenner Little",
+      "Jade Gullic",
+      "Trevor Harms",
+      "Kristin Olofsson",
+      "Arunkumar Bagavathi"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12315": {
+    "title": "AcademicGPT: Empowering Academic Research",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) have demonstrated exceptional capabilities across various natural language processing tasks. Yet, many of these advanced LLMs are tailored for broad, general-purpose applications. In this technical report, we introduce AcademicGPT, designed specifically to empower academic research. AcademicGPT is a continual training model derived from LLaMA2-70B. Our training corpus mainly consists of academic papers, thesis, content from some academic domain, high-quality Chinese data and others. While it may not be extensive in data scale, AcademicGPT marks our initial venture into a domain-specific GPT tailored for research area. We evaluate AcademicGPT on several established public benchmarks such as MMLU and CEval, as well as on some specialized academic benchmarks like PubMedQA, SCIEval, and our newly-created ComputerScienceQA, to demonstrate its ability from general knowledge ability, to Chinese ability, and to academic ability. Building upon AcademicGPT's foundation model, we also developed several applications catered to the academic area, including General Academic Question Answering, AI-assisted Paper Reading, Paper Review, and AI-assisted Title and Abstract Generation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shufa Wei",
+      "Xiaolong Xu",
+      "Xianbiao Qi",
+      "Xi Yin",
+      "Jun Xia",
+      "Jingyi Ren",
+      "Peijun Tang",
+      "Yuxiang Zhong",
+      "Yihao Chen",
+      "Xiaoqin Ren",
+      "Yuxin Liang",
+      "Liankai Huang",
+      "Kai Xie",
+      "Weikang Gui",
+      "Wei Tan",
+      "Shuanglong Sun",
+      "Yongquan Hu",
+      "Qinxian Liu",
+      "Nanjin Li",
+      "Chihao Dai",
+      "Lihua Wang",
+      "Xiaohui Liu",
+      "Lei Zhang",
+      "Yutao Xie"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12298": {
+    "title": "Noise in Relation Classification Dataset TACRED: Characterization and Reduction",
+    "volume": "Nov",
+    "abstract": "The overarching objective of this paper is two-fold. First, to explore model-based approaches to characterize the primary cause of the noise. in the RE dataset TACRED Second, to identify the potentially noisy instances. Towards the first objective, we analyze predictions and performance of state-of-the-art (SOTA) models to identify the root cause of noise in the dataset. Our analysis of TACRED shows that the majority of the noise in the dataset originates from the instances labeled as no-relation which are negative examples. For the second objective, we explore two nearest-neighbor-based strategies to automatically identify potentially noisy examples for elimination and reannotation. Our first strategy, referred to as Intrinsic Strategy (IS), is based on the assumption that positive examples are clean. Thus, we have used false-negative predictions to identify noisy negative examples. Whereas, our second approach, referred to as Extrinsic Strategy, is based on using a clean subset of the dataset to identify potentially noisy negative examples. Finally, we retrained the SOTA models on the eliminated and reannotated dataset. Our empirical results based on two SOTA models trained on TACRED-E following the IS show an average 4% F1-score improvement, whereas reannotation (TACRED-R) does not improve the original results. However, following ES, SOTA models show the average F1-score improvement of 3.8% and 4.4% when trained on respective eliminated (TACRED-EN) and reannotated (TACRED-RN) datasets respectively. We further extended the ES for cleaning positive examples as well, which resulted in an average performance improvement of 5.8% and 5.6% for the eliminated (TACRED-ENP) and reannotated (TACRED-RNP) datasets respectively",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Akshay Parekh",
+      "Ashish Anand",
+      "Amit Awekar"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12289": {
+    "title": "ATLANTIC: Structure-Aware Retrieval-Augmented Language Model for Interdisciplinary Science",
+    "volume": "Nov",
+    "abstract": "Large language models record impressive performance on many natural language processing tasks. However, their knowledge capacity is limited to the pretraining corpus. Retrieval augmentation offers an effective solution by retrieving context from external knowledge sources to complement the language model. However, existing retrieval augmentation techniques ignore the structural relationships between these documents. Furthermore, retrieval models are not explored much in scientific tasks, especially in regard to the faithfulness of retrieved documents. In this paper, we propose a novel structure-aware retrieval augmented language model that accommodates document structure during retrieval augmentation. We create a heterogeneous document graph capturing multiple types of relationships (e.g., citation, co-authorship, etc.) that connect documents from more than 15 scientific disciplines (e.g., Physics, Medicine, Chemistry, etc.). We train a graph neural network on the curated document graph to act as a structural encoder for the corresponding passages retrieved during the model pretraining. Particularly, along with text embeddings of the retrieved passages, we obtain structural embeddings of the documents (passages) and fuse them together before feeding them to the language model. We evaluate our model extensively on various scientific benchmarks that include science question-answering and scientific document classification tasks. Experimental results demonstrate that structure-aware retrieval improves retrieving more coherent, faithful and contextually relevant passages, while showing a comparable performance in the overall accuracy",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sai Munikoti",
+      "Anurag Acharya",
+      "Sridevi Wagle",
+      "Sameera Horawalavithana"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12275": {
+    "title": "Enabling On-Device Large Language Model Personalization with Self-Supervised Data Selection and Synthesis",
+    "volume": "Nov",
+    "abstract": "After a large language model (LLM) is deployed on edge devices, it is desirable for these devices to learn from user-generated conversation data to generate user-specific and personalized responses in real-time. However, user-generated data usually contains sensitive and private information, and uploading such data to the cloud for annotation is not preferred if not prohibited. While it is possible to obtain annotation locally by directly asking users to provide preferred responses, such annotations have to be sparse to not affect user experience. In addition, the storage of edge devices is usually too limited to enable large-scale fine-tuning with full user-generated data. It remains an open question how to enable on-device LLM personalization, considering sparse annotation and limited on-device storage. In this paper, we propose a novel framework to select and store the most representative data online in a self-supervised way. Such data has a small memory footprint and allows infrequent requests of user annotations for further fine-tuning. To enhance fine-tuning quality, multiple semantically similar pairs of question texts and expected responses are generated using the LLM. Our experiments show that the proposed framework achieves the best user-specific content-generating capability (accuracy) and fine-tuning speed (performance) compared with vanilla baselines. To the best of our knowledge, this is the very first on-device LLM personalization framework",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ruiyang Qin",
+      "Jun Xia",
+      "Zhenge Jia",
+      "Meng Jiang",
+      "Ahmed Abbasi",
+      "Peipei Zhou",
+      "Jingtong Hu",
+      "Yiyu Shi"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12233": {
+    "title": "Unifying Corroborative and Contributive Attributions in Large Language Models",
+    "volume": "Nov",
+    "abstract": "As businesses, products, and services spring up around large language models, the trustworthiness of these models hinges on the verifiability of their outputs. However, methods for explaining language model outputs largely fall across two distinct fields of study which both use the term \"attribution\" to refer to entirely separate techniques: citation generation and training data attribution. In many modern applications, such as legal document generation and medical question answering, both types of attributions are important. In this work, we argue for and present a unified framework of large language model attributions. We show how existing methods of different types of attribution fall under the unified framework. We also use the framework to discuss real-world use cases where one or both types of attributions are required. We believe that this unified framework will guide the use case driven development of systems that leverage both types of attribution, as well as the standardization of their evaluation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Theodora Worledge",
+      "Judy Hanwen Shen",
+      "Nicole Meister",
+      "Caleb Winston",
+      "Carlos Guestrin"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12179": {
+    "title": "Leveraging Closed-Access Multilingual Embedding for Automatic Sentence Alignment in Low Resource Languages",
+    "volume": "Nov",
+    "abstract": "The importance of qualitative parallel data in machine translation has long been determined but it has always been very difficult to obtain such in sufficient quantity for the majority of world languages, mainly because of the associated cost and also the lack of accessibility to these languages. Despite the potential for obtaining parallel datasets from online articles using automatic approaches, forensic investigations have found a lot of quality-related issues such as misalignment, and wrong language codes. In this work, we present a simple but qualitative parallel sentence aligner that carefully leveraged the closed-access Cohere multilingual embedding, a solution that ranked second in the just concluded #CoHereAIHack 2023 Challenge (see https://ai6lagos.devpost.com). The proposed approach achieved $94.96$ and $54.83$ f1 scores on FLORES and MAFAND-MT, compared to $3.64$ and $0.64$ of LASER respectively. Our method also achieved an improvement of more than 5 BLEU scores over LASER, when the resulting datasets were used with MAFAND-MT dataset to train translation models. Our code and data are available for research purposes here (https://github.com/abumafrim/Cohere-Align)",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Idris Abdulmumin",
+      "Auwal Abubakar Khalid",
+      "Shamsuddeen Hassan Muhammad",
+      "Ibrahim Said Ahmad",
+      "Lukman Jibril Aliyu",
+      "Babangida Sani",
+      "Bala Mairiga Abduljalil",
+      "Sani Ahmad Hassan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12131": {
+    "title": "Human Learning by Model Feedback: The Dynamics of Iterative Prompting with Midjourney",
+    "volume": "Nov",
+    "abstract": "Generating images with a Text-to-Image model often requires multiple trials, where human users iteratively update their prompt based on feedback, namely the output image. Taking inspiration from cognitive work on reference games and dialogue alignment, this paper analyzes the dynamics of the user prompts along such iterations. We compile a dataset of iterative interactions of human users with Midjourney. Our analysis then reveals that prompts predictably converge toward specific traits along these iterations. We further study whether this convergence is due to human users, realizing they missed important details, or due to adaptation to the model's ``preferences'', producing better images for a specific language style. We show initial evidence that both possibilities are at play. The possibility that users adapt to the model's preference raises concerns about reusing user data for further training. The prompts may be biased towards the preferences of a specific model, rather than align with human intentions and natural manner of expression",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shachar Don-Yehiya",
+      "Leshem Choshen",
+      "Omri Abend"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12023": {
+    "title": "LQ-LoRA: Low-rank Plus Quantized Matrix Decomposition for Efficient Language Model Finetuning",
+    "volume": "Nov",
+    "abstract": "We propose a simple approach for memory-efficient adaptation of pretrained language models. Our approach uses an iterative algorithm to decompose each pretrained matrix into a high-precision low-rank component and a memory-efficient quantized component. During finetuning, the quantized component remains fixed and only the low-rank component is updated. We present an integer linear programming formulation of the quantization component which enables dynamic configuration of quantization parameters (e.g., bit-width, block size) for each matrix given an overall target memory budget. We further explore a data-aware version of the algorithm which uses an approximation of the Fisher information matrix to weight the reconstruction objective during matrix decomposition. Experiments on adapting RoBERTa and LLaMA-2 (7B and 70B) demonstrate that our low-rank plus quantized matrix decomposition approach (LQ-LoRA) outperforms strong QLoRA and GPTQ-LoRA baselines and moreover enables more aggressive quantization. For example, on the OpenAssistant benchmark LQ-LoRA is able to learn a 2.5-bit LLaMA-2 model that is competitive with a model finetuned with 4-bit QLoRA. When finetuned on a language modeling calibration dataset, LQ-LoRA can also be used for model compression; in this setting our 2.75-bit LLaMA-2-70B model (which has 2.85 bits on average when including the low-rank components and requires 27GB of GPU memory) is competitive with the original model in full precision",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Han Guo",
+      "Philip Greengard",
+      "Eric P. Xing",
+      "Yoon Kim"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12022": {
+    "title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+    "volume": "Nov",
+    "abstract": "We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. We ensure that the questions are high-quality and extremely difficult: experts who have or are pursuing PhDs in the corresponding domains reach 65% accuracy (74% when discounting clear mistakes the experts identified in retrospect), while highly skilled non-expert validators only reach 34% accuracy, despite spending on average over 30 minutes with unrestricted access to the web (i.e., the questions are \"Google-proof\"). The questions are also difficult for state-of-the-art AI systems, with our strongest GPT-4 based baseline achieving 39% accuracy. If we are to use future AI systems to help us answer very hard questions, for example, when developing new scientific knowledge, we need to develop scalable oversight methods that enable humans to supervise their outputs, which may be difficult even if the supervisors are themselves skilled and knowledgeable. The difficulty of GPQA both for skilled non-experts and frontier AI systems should enable realistic scalable oversight experiments, which we hope can help devise ways for human experts to reliably get truthful information from AI systems that surpass human capabilities",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Rein",
+      "Betty Li Hou",
+      "Asa Cooper Stickland",
+      "Jackson Petty",
+      "Richard Yuanzhe Pang",
+      "Julien Dirani",
+      "Julian Michael",
+      "Samuel R. Bowman"
+    ]
+  },
+  "http://arxiv.org/abs/2311.12015": {
+    "title": "GPT-4V(ision) for Robotics: Multimodal Task Planning from Human Demonstration",
+    "volume": "Nov",
+    "abstract": "We introduce a pipeline that enhances a general-purpose Vision Language Model, GPT-4V(ision), by integrating observations of human actions to facilitate robotic manipulation. This system analyzes videos of humans performing tasks and creates executable robot programs that incorporate affordance insights. The computation starts by analyzing the videos with GPT-4V to convert environmental and action details into text, followed by a GPT-4-empowered task planner. In the following analyses, vision systems reanalyze the video with the task plan. Object names are grounded using an open-vocabulary object detector, while focus on the hand-object relation helps to detect the moment of grasping and releasing. This spatiotemporal grounding allows the vision systems to further gather affordance data (e.g., grasp type, way points, and body postures). Experiments across various scenarios demonstrate this method's efficacy in achieving real robots' operations from human demonstrations in a zero-shot manner. The prompts of GPT-4V/GPT-4 are available at this project page: https://microsoft.github.io/GPT4Vision-Robot-Manipulation-Prompts/",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Naoki Wake",
+      "Atsushi Kanehira",
+      "Kazuhiro Sasabuchi",
+      "Jun Takamatsu",
+      "Katsushi Ikeuchi"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11981": {
+    "title": "H-COAL: Human Correction of AI-Generated Labels for Biomedical Named Entity Recognition",
+    "volume": "Nov",
+    "abstract": "With the rapid advancement of machine learning models for NLP tasks, collecting high-fidelity labels from AI models is a realistic possibility. Firms now make AI available to customers via predictions as a service (PaaS). This includes PaaS products for healthcare. It is unclear whether these labels can be used for training a local model without expensive annotation checking by in-house experts. In this work, we propose a new framework for Human Correction of AI-Generated Labels (H-COAL). By ranking AI-generated outputs, one can selectively correct labels and approach gold standard performance (100% human labeling) with significantly less human effort. We show that correcting 5% of labels can close the AI-human performance gap by up to 64% relative improvement, and correcting 20% of labels can close the performance gap by up to 86% relative improvement",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xiaojing Duan",
+      "John P. Lalor"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11979": {
+    "title": "On the Potential and Limitations of Few-Shot In-Context Learning to Generate Metamorphic Specifications for Tax Preparation Software",
+    "volume": "Nov",
+    "abstract": "Due to the ever-increasing complexity of income tax laws in the United States, the number of US taxpayers filing their taxes using tax preparation software (henceforth, tax software) continues to increase. According to the U.S. Internal Revenue Service (IRS), in FY22, nearly 50% of taxpayers filed their individual income taxes using tax software. Given the legal consequences of incorrectly filing taxes for the taxpayer, ensuring the correctness of tax software is of paramount importance. Metamorphic testing has emerged as a leading solution to test and debug legal-critical tax software due to the absence of correctness requirements and trustworthy datasets. The key idea behind metamorphic testing is to express the properties of a system in terms of the relationship between one input and its slightly metamorphosed twinned input. Extracting metamorphic properties from IRS tax publications is a tedious and time-consuming process. As a response, this paper formulates the task of generating metamorphic specifications as a translation task between properties extracted from tax documents - expressed in natural language - to a contrastive first-order logic form. We perform a systematic analysis on the potential and limitations of in-context learning with Large Language Models(LLMs) for this task, and outline a research agenda towards automating the generation of metamorphic specifications for tax preparation software",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Dananjay Srinivas",
+      "Rohan Das",
+      "Saeid Tizpaz-Niari",
+      "Ashutosh Trivedi",
+      "Maria Leonor Pacheco"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11976": {
+    "title": "Context-aware Neural Machine Translation for English-Japanese Business Scene Dialogues",
+    "volume": "Nov",
+    "abstract": "Despite the remarkable advancements in machine translation, the current sentence-level paradigm faces challenges when dealing with highly-contextual languages like Japanese. In this paper, we explore how context-awareness can improve the performance of the current Neural Machine Translation (NMT) models for English-Japanese business dialogues translation, and what kind of context provides meaningful information to improve translation. As business dialogue involves complex discourse phenomena but offers scarce training resources, we adapted a pretrained mBART model, finetuning on multi-sentence dialogue data, which allows us to experiment with different contexts. We investigate the impact of larger context sizes and propose novel context tokens encoding extra-sentential information, such as speaker turn and scene type. We make use of Conditional Cross-Mutual Information (CXMI) to explore how much of the context the model uses and generalise CXMI to study the impact of the extra-sentential context. Overall, we find that models leverage both preceding sentences and extra-sentential context (with CXMI increasing with context size) and we provide a more focused analysis on honorifics translation. Regarding translation quality, increased source-side context paired with scene and speaker information improves the model performance compared to previous work and our context-agnostic baselines, measured in BLEU and COMET metrics",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sumire Honda",
+      "Patrick Fernandes",
+      "Chrysoula Zerva"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11973": {
+    "title": "Adaptive Training Distributions with Scalable Online Bilevel Optimization",
+    "volume": "Nov",
+    "abstract": "Large neural networks pretrained on web-scale corpora are central to modern machine learning. In this paradigm, the distribution of the large, heterogeneous pretraining data rarely matches that of the application domain. This work considers modifying the pretraining distribution in the case where one has a small sample of data reflecting the targeted test conditions. We propose an algorithm motivated by a recent formulation of this setting as an online, bilevel optimization problem. With scalability in mind, our algorithm prioritizes computing gradients at training points which are likely to most improve the loss on the targeted distribution. Empirically, we show that in some cases this approach is beneficial over existing strategies from the domain adaptation literature but may not succeed in other cases. We propose a simple test to evaluate when our approach can be expected to work well and point towards further research to address current limitations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Grangier",
+      "Pierre Ablin",
+      "Awni Hannun"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11967": {
+    "title": "Automatic Analysis of Substantiation in Scientific Peer Reviews",
+    "volume": "Nov",
+    "abstract": "With the increasing amount of problematic peer reviews in top AI conferences, the community is urgently in need of automatic quality control measures. In this paper, we restrict our attention to substantiation -- one popular quality aspect indicating whether the claims in a review are sufficiently supported by evidence -- and provide a solution automatizing this evaluation process. To achieve this goal, we first formulate the problem as claim-evidence pair extraction in scientific peer reviews, and collect SubstanReview, the first annotated dataset for this task. SubstanReview consists of 550 reviews from NLP conferences annotated by domain experts. On the basis of this dataset, we train an argument mining system to automatically analyze the level of substantiation in peer reviews. We also perform data analysis on the SubstanReview dataset to obtain meaningful insights on peer reviewing quality in NLP conferences over recent years",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yanzhu Guo",
+      "Guokan Shang",
+      "Virgile Rennard",
+      "Michalis Vazirgiannis",
+      "Chloé Clavel"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11944": {
+    "title": "FinanceBench: A New Benchmark for Financial Question Answering",
+    "volume": "Nov",
+    "abstract": "FinanceBench is a first-of-its-kind test suite for evaluating the performance of LLMs on open book financial question answering (QA). It comprises 10,231 questions about publicly traded companies, with corresponding answers and evidence strings. The questions in FinanceBench are ecologically valid and cover a diverse set of scenarios. They are intended to be clear-cut and straightforward to answer to serve as a minimum performance standard. We test 16 state of the art model configurations (including GPT-4-Turbo, Llama2 and Claude2, with vector stores and long context prompts) on a sample of 150 cases from FinanceBench, and manually review their answers (n=2,400). The cases are available open-source. We show that existing LLMs have clear limitations for financial QA. Notably, GPT-4-Turbo used with a retrieval system incorrectly answered or refused to answer 81% of questions. While augmentation techniques such as using longer context window to feed in relevant evidence improve performance, they are unrealistic for enterprise settings due to increased latency and cannot support larger financial documents. We find that all models examined exhibit weaknesses, such as hallucinations, that limit their suitability for use by enterprises",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Pranab Islam",
+      "Anand Kannappan",
+      "Douwe Kiela",
+      "Rebecca Qian",
+      "Nino Scherrer",
+      "Bertie Vidgen"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11904": {
+    "title": "LLMs as Visual Explainers: Advancing Image Classification with Evolving Visual Descriptions",
+    "volume": "Nov",
+    "abstract": "Vision-language models (VLMs) offer a promising paradigm for image classification by comparing the similarity between images and class embeddings. A critical challenge lies in crafting precise textual representations for class names. While previous studies have leveraged recent advancements in large language models (LLMs) to enhance these descriptors, their outputs often suffer from ambiguity and inaccuracy. We identify two primary causes: 1) The prevalent reliance on textual interactions with LLMs, leading to a mismatch between the generated text and the visual content in VLMs' latent space - a phenomenon we term the \"explain without seeing\" dilemma. 2) The oversight of the inter-class relationships, resulting in descriptors that fail to differentiate similar classes effectively. To address these issues, we propose a novel image classification framework combining VLMs with LLMs, named Iterative Optimization with Visual Feedback. In particular, our method develops an LLM-based agent, employing an evolutionary optimization strategy to refine class descriptors. Crucially, we incorporate visual feedback from VLM classification metrics, thereby guiding the optimization process with concrete visual data. Our method leads to improving accuracy on a wide range of image classification benchmarks, with 3.47\\% average gains over state-of-the-art methods. We also highlight the resulting descriptions serve as explainable and robust features that can consistently improve the performance across various backbone models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Songhao Han",
+      "Le Zhuo",
+      "Yue Liao",
+      "Si Liu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11861": {
+    "title": "Generating Valid and Natural Adversarial Examples with Large Language Models",
+    "volume": "Nov",
+    "abstract": "Deep learning-based natural language processing (NLP) models, particularly pre-trained language models (PLMs), have been revealed to be vulnerable to adversarial attacks. However, the adversarial examples generated by many mainstream word-level adversarial attack models are neither valid nor natural, leading to the loss of semantic maintenance, grammaticality, and human imperceptibility. Based on the exceptional capacity of language understanding and generation of large language models (LLMs), we propose LLM-Attack, which aims at generating both valid and natural adversarial examples with LLMs. The method consists of two stages: word importance ranking (which searches for the most vulnerable words) and word synonym replacement (which substitutes them with their synonyms obtained from LLMs). Experimental results on the Movie Review (MR), IMDB, and Yelp Review Polarity datasets against the baseline adversarial attack models illustrate the effectiveness of LLM-Attack, and it outperforms the baselines in human and GPT-4 evaluation by a significant margin. The model can generate adversarial examples that are typically valid and natural, with the preservation of semantic meaning, grammaticality, and human imperceptibility",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zimu Wang",
+      "Wei Wang",
+      "Qi Chen",
+      "Qiufeng Wang",
+      "Anh Nguyen"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11855": {
+    "title": "Evil Geniuses: Delving into the Safety of LLM-based Agents",
+    "volume": "Nov",
+    "abstract": "The rapid advancements in large language models (LLMs) have led to a resurgence in LLM-based agents, which demonstrate impressive human-like behaviors and cooperative capabilities in various interactions and strategy formulations. However, evaluating the safety of LLM-based agents remains a complex challenge. This paper elaborately conducts a series of manual jailbreak prompts along with a virtual chat-powered evil plan development team, dubbed Evil Geniuses, to thoroughly probe the safety aspects of these agents. Our investigation reveals three notable phenomena: 1) LLM-based agents exhibit reduced robustness against malicious attacks. 2) the attacked agents could provide more nuanced responses. 3) the detection of the produced improper responses is more challenging. These insights prompt us to question the effectiveness of LLM-based attacks on agents, highlighting vulnerabilities at various levels and within different role specializations within the system/agent of LLM-based agents. Extensive evaluation and discussion reveal that LLM-based agents face significant challenges in safety and yield insights for future research. Our code is available at https://github.com/T1aNS1R/Evil-Geniuses",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yu Tian",
+      "Xiao Yang",
+      "Jingyuan Zhang",
+      "Yinpeng Dong",
+      "Hang Su"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11846": {
+    "title": "Deepparse : An Extendable, and Fine-Tunable State-Of-The-Art Library for Parsing Multinational Street Addresses",
+    "volume": "Nov",
+    "abstract": "Segmenting an address into meaningful components, also known as address parsing, is an essential step in many applications from record linkage to geocoding and package delivery. Consequently, a lot of work has been dedicated to develop accurate address parsing techniques, with machine learning and neural network methods leading the state-of-the-art scoreboard. However, most of the work on address parsing has been confined to academic endeavours with little availability of free and easy-to-use open-source solutions. This paper presents Deepparse, a Python open-source, extendable, fine-tunable address parsing solution under LGPL-3.0 licence to parse multinational addresses using state-of-the-art deep learning algorithms and evaluated on over 60 countries. It can parse addresses written in any language and use any address standard. The pre-trained model achieves average $99~\\%$ parsing accuracies on the countries used for training with no pre-processing nor post-processing needed. Moreover, the library supports fine-tuning with new data to generate a custom address parser",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "David Beauchemin",
+      "Marouane Yassine"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11844": {
+    "title": "How to Use Large Language Models for Text Coding: The Case of Fatherhood Roles in Public Policy Documents",
+    "volume": "Nov",
+    "abstract": "Recent advances in large language models (LLMs) like GPT-3 and GPT-4 have opened up new opportunities for text analysis in political science. They promise automation with better results and less programming. In this study, we evaluate LLMs on three original coding tasks of non-English political science texts, and we provide a detailed description of a general workflow for using LLMs for text coding in political science research. Our use case offers a practical guide for researchers looking to incorporate LLMs into their research on text analysis. We find that, when provided with detailed label definitions and coding examples, an LLM can be as good as or even better than a human annotator while being much faster (up to hundreds of times), considerably cheaper (costing up to 60% less than human coding), and much easier to scale to large amounts of text. Overall, LLMs present a viable option for most text coding projects",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lorenzo Lupo",
+      "Oscar Magnusson",
+      "Dirk Hovy",
+      "Elin Naurin",
+      "Lena Wängnerud"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11829": {
+    "title": "System 2 Attention (is something you might need too)",
+    "volume": "Nov",
+    "abstract": "Soft attention in Transformer-based Large Language Models (LLMs) is susceptible to incorporating irrelevant information from the context into its latent representations, which adversely affects next token generations. To help rectify these issues, we introduce System 2 Attention (S2A), which leverages the ability of LLMs to reason in natural language and follow instructions in order to decide what to attend to. S2A regenerates the input context to only include the relevant portions, before attending to the regenerated context to elicit the final response. In experiments, S2A outperforms standard attention-based LLMs on three tasks containing opinion or irrelevant information, QA, math word problems and longform generation, where S2A increases factuality and objectivity, and decreases sycophancy",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jason Weston",
+      "Sainbayar Sukhbaatar"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11813": {
+    "title": "Efficient Grammatical Error Correction Via Multi-Task Training and Optimized Training Schedule",
+    "volume": "Nov",
+    "abstract": "Progress in neural grammatical error correction (GEC) is hindered by the lack of annotated training data. Sufficient amounts of high-quality manually annotated data are not available, so recent research has relied on generating synthetic data, pretraining on it, and then fine-tuning on real datasets; performance gains have been achieved either by ensembling or by using huge pretrained models such as XXL-T5 as the backbone. In this work, we explore an orthogonal direction: how to use available data more efficiently. First, we propose auxiliary tasks that exploit the alignment between the original and corrected sentences, such as predicting a sequence of corrections. We formulate each task as a sequence-to-sequence problem and perform multi-task training. Second, we discover that the order of datasets used for training and even individual instances within a dataset may have important effects on the final performance, so we set out to find the best training schedule. Together, these two ideas lead to significant improvements, producing results that improve state of the art with much smaller models; in particular, we outperform the best models based on T5-XXL (11B parameters) with a BART-based model (400M parameters)",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Andrey Bout",
+      "Alexander Podolskiy",
+      "Sergey Nikolenko",
+      "Irina Piontkovskaya"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11797": {
+    "title": "Igniting Language Intelligence: The Hitchhiker's Guide From Chain-of-Thought Reasoning to Language Agents",
+    "volume": "Nov",
+    "abstract": "Large language models (LLMs) have dramatically enhanced the field of language intelligence, as demonstrably evidenced by their formidable empirical performance across a spectrum of complex reasoning tasks. Additionally, theoretical proofs have illuminated their emergent reasoning capabilities, providing a compelling showcase of their advanced cognitive abilities in linguistic contexts. Critical to their remarkable efficacy in handling complex reasoning tasks, LLMs leverage the intriguing chain-of-thought (CoT) reasoning techniques, obliging them to formulate intermediate steps en route to deriving an answer. The CoT reasoning approach has not only exhibited proficiency in amplifying reasoning performance but also in enhancing interpretability, controllability, and flexibility. In light of these merits, recent research endeavors have extended CoT reasoning methodologies to nurture the development of autonomous language agents, which adeptly adhere to language instructions and execute actions within varied environments. This survey paper orchestrates a thorough discourse, penetrating vital research dimensions, encompassing: (i) the foundational mechanics of CoT techniques, with a focus on elucidating the circumstances and justification behind its efficacy; (ii) the paradigm shift in CoT; and (iii) the burgeoning of language agents fortified by CoT approaches. Prospective research avenues envelop explorations into generalization, efficiency, customization, scaling, and safety. This paper caters to a wide audience, including beginners seeking comprehensive knowledge of CoT reasoning and language agents, as well as experienced researchers interested in foundational mechanics and engaging in cutting-edge discussions on these topics. A repository for the related papers is available at https://github.com/Zoeyyao27/CoT-Igniting-Agent",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhuosheng Zhang",
+      "Yao Yao",
+      "Aston Zhang",
+      "Xiangru Tang",
+      "Xinbei Ma",
+      "Zhiwei He",
+      "Yiming Wang",
+      "Mark Gerstein",
+      "Rui Wang",
+      "Gongshen Liu",
+      "Hai Zhao"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11796": {
+    "title": "Beyond Boundaries: A Comprehensive Survey of Transferable Attacks on AI Systems",
+    "volume": "Nov",
+    "abstract": "Artificial Intelligence (AI) systems such as autonomous vehicles, facial recognition, and speech recognition systems are increasingly integrated into our daily lives. However, despite their utility, these AI systems are vulnerable to a wide range of attacks such as adversarial, backdoor, data poisoning, membership inference, model inversion, and model stealing attacks. In particular, numerous attacks are designed to target a particular model or system, yet their effects can spread to additional targets, referred to as transferable attacks. Although considerable efforts have been directed toward developing transferable attacks, a holistic understanding of the advancements in transferable attacks remains elusive. In this paper, we comprehensively explore learning-based attacks from the perspective of transferability, particularly within the context of cyber-physical security. We delve into different domains -- the image, text, graph, audio, and video domains -- to highlight the ubiquitous and pervasive nature of transferable attacks. This paper categorizes and reviews the architecture of existing attacks from various viewpoints: data, process, model, and system. We further examine the implications of transferable attacks in practical scenarios such as autonomous driving, speech recognition, and large language models (LLMs). Additionally, we outline the potential research directions to encourage efforts in exploring the landscape of transferable attacks. This survey offers a holistic understanding of the prevailing transferable attacks and their impacts across different domains",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Guangjing Wang",
+      "Ce Zhou",
+      "Yuanda Wang",
+      "Bocheng Chen",
+      "Hanqing Guo",
+      "Qiben Yan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11745": {
+    "title": "Encoding Speaker-Specific Latent Speech Feature for Speech Synthesis",
+    "volume": "Nov",
+    "abstract": "In this work, we propose a novel method for modeling numerous speakers, which enables expressing the overall characteristics of speakers in detail like a trained multi-speaker model without additional training on the target speaker's dataset. Although various works with similar purposes have been actively studied, their performance has not yet reached that of trained multi-speaker models due to their fundamental limitations. To overcome previous limitations, we propose effective methods for feature learning and representing target speakers' speech characteristics by discretizing the features and conditioning them to a speech synthesis model. Our method obtained a significantly higher similarity mean opinion score (SMOS) in subjective similarity evaluation than seen speakers of a best-performing multi-speaker model, even with unseen speakers. The proposed method also outperforms a zero-shot method by significant margins. Furthermore, our method shows remarkable performance in generating new artificial speakers. In addition, we demonstrate that the encoded latent features are sufficiently informative to reconstruct an original speaker's speech completely. It implies that our method can be used as a general methodology to encode and reconstruct speakers' characteristics in various tasks",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jungil Kong",
+      "Junmo Lee",
+      "Jeongmin Kim",
+      "Beomjeong Kim",
+      "Jihoon Park",
+      "Dohee Kong",
+      "Changheon Lee",
+      "Sangjin Kim"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11701": {
+    "title": "Control in Hybrid Chatbots",
+    "volume": "Nov",
+    "abstract": "Customer data typically is held in database systems, which can be seen as rule-based knowledge base, whereas businesses increasingly want to benefit from the capabilities of large, pre-trained language models. In this technical report, we describe a case study of how a commercial rule engine and an integrated neural chatbot may be integrated, and what level of control that particular integration mode leads to. We also discuss alternative ways (including past ways realized in other systems) how researchers strive to maintain control and avoid what has recently been called model \"hallucination\"",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Thomas Rüdel",
+      "Jochen L. Leidner"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11696": {
+    "title": "Sparse Low-rank Adaptation of Pre-trained Language Models",
+    "volume": "Nov",
+    "abstract": "Fine-tuning pre-trained large language models in a parameter-efficient manner is widely studied for its effectiveness and efficiency. The popular method of low-rank adaptation (LoRA) offers a notable approach, hypothesizing that the adaptation process is intrinsically low-dimensional. Although LoRA has demonstrated commendable performance, it is implemented with a fixed and unalterable intrinsic rank that might not always be the ideal choice. Recognizing the need for more flexible adaptation, we extend the methodology of LoRA to an innovative approach we call sparse low-rank adaptation (SoRA) that enables dynamic adjustments to the intrinsic rank during the adaptation process. We achieve this through the incorporation of a gate unit optimized with proximal gradient method in the training stage, controlling the cardinality of rank under the sparsity of the gate. In the subsequent inference stage, we eliminate the parameter blocks corresponding to the zeroed-out ranks, to reduce each SoRA module back to a concise yet rank-optimal LoRA. Our approach strengthens the representation power of LoRA by initializing it with a higher rank, while efficiently taming a temporarily increased number of parameters via updating in a sparse way. We further introduce a sparsifying scheduler for SoRA, aiming to examine the impact of the number of non-zero parameters on the model's memorization and generalization. Our experimental results demonstrate that SoRA can outperform other baselines even with 70% retained parameters and 70% training time",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ning Ding",
+      "Xingtai Lv",
+      "Qiaosen Wang",
+      "Yulin Chen",
+      "Bowen Zhou",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11690": {
+    "title": "Refactoring Programs Using Large Language Models with Few-Shot Examples",
+    "volume": "Nov",
+    "abstract": "A less complex and more straightforward program is a crucial factor that enhances its maintainability and makes writing secure and bug-free programs easier. However, due to its heavy workload and the risks of breaking the working programs, programmers are reluctant to do code refactoring, and thus, it also causes the loss of potential learning experiences. To mitigate this, we demonstrate the application of using a large language model (LLM), GPT-3.5, to suggest less complex versions of the user-written Python program, aiming to encourage users to learn how to write better programs. We propose a method to leverage the prompting with few-shot examples of the LLM by selecting the best-suited code refactoring examples for each target programming problem based on the prior evaluation of prompting with the one-shot example. The quantitative evaluation shows that 95.68% of programs can be refactored by generating 10 candidates each, resulting in a 17.35% reduction in the average cyclomatic complexity and a 25.84% decrease in the average number of lines after filtering only generated programs that are semantically correct. Furthermore, the qualitative evaluation shows outstanding capability in code formatting, while unnecessary behaviors such as deleting or translating comments are also observed",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Atsushi Shirafuji",
+      "Yusuke Oda",
+      "Jun Suzuki",
+      "Makoto Morishita",
+      "Yutaka Watanobe"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11608": {
+    "title": "Taiyi: A Bilingual Fine-Tuned Large Language Model for Diverse Biomedical Tasks",
+    "volume": "Nov",
+    "abstract": "Recent advancements in large language models (LLMs) have shown promising results across a variety of natural language processing (NLP) tasks. The application of LLMs to specific domains, such as biomedicine, has achieved increased attention. However, most biomedical LLMs focus on enhancing performance in monolingual biomedical question answering and conversation tasks. To further investigate the effectiveness of the LLMs on diverse biomedical NLP tasks in different languages, we present Taiyi, a bilingual (English and Chinese) fine-tuned LLM for diverse biomedical tasks. In this work, we first curated a comprehensive collection of 140 existing biomedical text mining datasets across over 10 task types. Subsequently, a two-stage strategy is proposed for supervised fine-tuning to optimize the model performance across varied tasks. Experimental results on 13 test sets covering named entity recognition, relation extraction, text classification, question answering tasks demonstrate Taiyi achieves superior performance compared to general LLMs. The case study involving additional biomedical NLP tasks further shows Taiyi's considerable potential for bilingual biomedical multi-tasking. The source code, datasets, and model for Taiyi are freely available at https://github.com/DUTIR-BioNLP/Taiyi-LLM",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ling Luo",
+      "Jinzhong Ning",
+      "Yingwen Zhao",
+      "Zhijun Wang",
+      "Zeyuan Ding",
+      "Peng Chen",
+      "Weiru Fu",
+      "Qinyu Han",
+      "Guangtao Xu",
+      "Yunzhi Qiu",
+      "Dinghao Pan",
+      "Jiru Li",
+      "Hao Li",
+      "Wenduo Feng",
+      "Senbo Tu",
+      "Yuqi Liu",
+      "Zhihao Yang",
+      "Jian Wang",
+      "Yuanyuan Sun",
+      "Hongfei Lin"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11601": {
+    "title": "Addressing the Length Bias Problem in Document-Level Neural Machine Translation",
+    "volume": "Nov",
+    "abstract": "Document-level neural machine translation (DNMT) has shown promising results by incorporating more context information. However, this approach also introduces a length bias problem, whereby DNMT suffers from significant translation quality degradation when decoding documents that are much shorter or longer than the maximum sequence length during training. %i.e., the length bias problem. To solve the length bias problem, we propose to improve the DNMT model in training method, attention mechanism, and decoding strategy. Firstly, we propose to sample the training data dynamically to ensure a more uniform distribution across different sequence lengths. Then, we introduce a length-normalized attention mechanism to aid the model in focusing on target information, mitigating the issue of attention divergence when processing longer sequences. Lastly, we propose a sliding window strategy during decoding that integrates as much context information as possible without exceeding the maximum sequence length. The experimental results indicate that our method can bring significant improvements on several open datasets, and further analysis shows that our method can significantly alleviate the length bias problem",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhuocheng Zhang",
+      "Shuhao Gu",
+      "Min Zhang",
+      "Yang Feng"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11598": {
+    "title": "Filling the Image Information Gap for VQA: Prompting Large Language Models to Proactively Ask Questions",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) demonstrate impressive reasoning ability and the maintenance of world knowledge not only in natural language tasks, but also in some vision-language tasks such as open-domain knowledge-based visual question answering (OK-VQA). As images are invisible to LLMs, researchers convert images to text to engage LLMs into the visual question reasoning procedure. This leads to discrepancies between images and their textual representations presented to LLMs, which consequently impedes final reasoning performance. To fill the information gap and better leverage the reasoning capability, we design a framework that enables LLMs to proactively ask relevant questions to unveil more details in the image, along with filters for refining the generated information. We validate our idea on OK-VQA and A-OKVQA. Our method continuously boosts the performance of baselines methods by an average gain of 2.15% on OK-VQA, and achieves consistent improvements across different LLMs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ziyue Wang",
+      "Chi Chen",
+      "Peng Li",
+      "Yang Liu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11583": {
+    "title": "How well ChatGPT understand Malaysian English? An Evaluation on Named Entity Recognition and Relation Extraction",
+    "volume": "Nov",
+    "abstract": "Recently, ChatGPT has attracted a lot of interest from both researchers and the general public. While the performance of ChatGPT in named entity recognition and relation extraction from Standard English texts is satisfactory, it remains to be seen if it can perform similarly for Malaysian English. Malaysian English is unique as it exhibits morphosyntactic and semantical adaptation from local contexts. In this study, we assess ChatGPT's capability in extracting entities and relations from the Malaysian English News (MEN) dataset. We propose a three-step methodology referred to as \\textbf{\\textit{educate-predict-evaluate}}. The performance of ChatGPT is assessed using F1-Score across 18 unique prompt settings, which were carefully engineered for a comprehensive review. From our evaluation, we found that ChatGPT does not perform well in extracting entities from Malaysian English news articles, with the highest F1-Score of 0.497. Further analysis shows that the morphosyntactic adaptation in Malaysian English caused the limitation. However, interestingly, this morphosyntactic adaptation does not impact the performance of ChatGPT for relation extraction",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Mohan Raj Chanthran",
+      "Lay-Ki Soon",
+      "Huey Fang Ong",
+      "Bhawani Selvaretnam"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11564": {
+    "title": "KBioXLM: A Knowledge-anchored Biomedical Multilingual Pretrained Language Model",
+    "volume": "Nov",
+    "abstract": "Most biomedical pretrained language models are monolingual and cannot handle the growing cross-lingual requirements. The scarcity of non-English domain corpora, not to mention parallel data, poses a significant hurdle in training multilingual biomedical models. Since knowledge forms the core of domain-specific corpora and can be translated into various languages accurately, we propose a model called KBioXLM, which transforms the multilingual pretrained model XLM-R into the biomedical domain using a knowledge-anchored approach. We achieve a biomedical multilingual corpus by incorporating three granularity knowledge alignments (entity, fact, and passage levels) into monolingual corpora. Then we design three corresponding training tasks (entity masking, relation masking, and passage relation prediction) and continue training on top of the XLM-R model to enhance its domain cross-lingual ability. To validate the effectiveness of our model, we translate the English benchmarks of multiple tasks into Chinese. Experimental results demonstrate that our model significantly outperforms monolingual and multilingual pretrained models in cross-lingual zero-shot and few-shot scenarios, achieving improvements of up to 10+ points. Our code is publicly available at https://github.com/ngwlh-gl/KBioXLM",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lei Geng",
+      "Xu Yan",
+      "Ziqiang Cao",
+      "Juntao Li",
+      "Wenjie Li",
+      "Sujian Li",
+      "Xinjie Zhou",
+      "Yang Yang",
+      "Jun Zhang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11552": {
+    "title": "Exploring Prompting Large Language Models as Explainable Metrics",
+    "volume": "Nov",
+    "abstract": "This paper describes the IUST NLP Lab submission to the Prompting Large Language Models as Explainable Metrics Shared Task at the Eval4NLP 2023 Workshop on Evaluation & Comparison of NLP Systems. We have proposed a zero-shot prompt-based strategy for explainable evaluation of the summarization task using Large Language Models (LLMs). The conducted experiments demonstrate the promising potential of LLMs as evaluation metrics in Natural Language Processing (NLP), particularly in the field of summarization. Both few-shot and zero-shot approaches are employed in these experiments. The performance of our best provided prompts achieved a Kendall correlation of 0.477 with human evaluations in the text summarization task on the test data. Code and results are publicly available on GitHub",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ghazaleh Mahmoudi"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11551": {
+    "title": "Adapt in Contexts: Retrieval-Augmented Domain Adaptation via In-Context Learning",
+    "volume": "Nov",
+    "abstract": "Large language models (LLMs) have showcased their capability with few-shot inference known as in-context learning. However, in-domain demonstrations are not always readily available in real scenarios, leading to cross-domain in-context learning. Besides, LLMs are still facing challenges in long-tail knowledge in unseen and unfamiliar domains. The above limitations demonstrate the necessity of Unsupervised Domain Adaptation (UDA). In this paper, we study the UDA problem under an in-context learning setting to adapt language models from the source domain to the target domain without any target labels. The core idea is to retrieve a subset of cross-domain elements that are the most similar to the query, and elicit language model to adapt in an in-context manner by learning both target domain distribution and the discriminative task signal simultaneously with the augmented cross-domain in-context examples. We devise different prompting and training strategies, accounting for different LM architectures to learn the target distribution via language modeling. With extensive experiments on Sentiment Analysis (SA) and Named Entity Recognition (NER) tasks, we thoroughly study the effectiveness of ICL for domain transfer and demonstrate significant improvements over baseline models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Quanyu Long",
+      "Wenya Wang",
+      "Sinno Jialin Pan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11518": {
+    "title": "Multi-teacher Distillation for Multilingual Spelling Correction",
+    "volume": "Nov",
+    "abstract": "Accurate spelling correction is a critical step in modern search interfaces, especially in an era of mobile devices and speech-to-text interfaces. For services that are deployed around the world, this poses a significant challenge for multilingual NLP: spelling errors need to be caught and corrected in all languages, and even in queries that use multiple languages. In this paper, we tackle this challenge using multi-teacher distillation. On our approach, a monolingual teacher model is trained for each language/locale, and these individual models are distilled into a single multilingual student model intended to serve all languages/locales. In experiments using open-source data as well as user data from a worldwide search service, we show that this leads to highly effective spelling correction models that can meet the tight latency requirements of deployed services",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jingfen Zhang",
+      "Xuan Guo",
+      "Sravan Bodapati",
+      "Christopher Potts"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11516": {
+    "title": "GPT in Data Science: A Practical Exploration of Model Selection",
+    "volume": "Nov",
+    "abstract": "There is an increasing interest in leveraging Large Language Models (LLMs) for managing structured data and enhancing data science processes. Despite the potential benefits, this integration poses significant questions regarding their reliability and decision-making methodologies. It highlights the importance of various factors in the model selection process, including the nature of the data, problem type, performance metrics, computational resources, interpretability vs accuracy, assumptions about data, and ethical considerations. Our objective is to elucidate and express the factors and assumptions guiding GPT-4's model selection recommendations. We employ a variability model to depict these factors and use toy datasets to evaluate both the model and the implementation of the identified heuristics. By contrasting these outcomes with heuristics from other platforms, our aim is to determine the effectiveness and distinctiveness of GPT-4's methodology. This research is committed to advancing our comprehension of AI decision-making processes, especially in the realm of model selection within data science. Our efforts are directed towards creating AI systems that are more transparent and comprehensible, contributing to a more responsible and efficient practice in data science",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nathalia Nascimento",
+      "Cristina Tavares",
+      "Paulo Alencar",
+      "Donald Cowan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11509": {
+    "title": "Token-Level Adversarial Prompt Detection Based on Perplexity Measures and Contextual Information",
+    "volume": "Nov",
+    "abstract": "In recent years, Large Language Models (LLM) have emerged as pivotal tools in various applications. However, these models are susceptible to adversarial prompt attacks, where attackers can carefully curate input strings that lead to undesirable outputs. The inherent vulnerability of LLMs stems from their input-output mechanisms, especially when presented with intensely out-of-distribution (OOD) inputs. This paper proposes a token-level detection method to identify adversarial prompts, leveraging the LLM's capability to predict the next token's probability. We measure the degree of the model's perplexity and incorporate neighboring token information to encourage the detection of contiguous adversarial prompt sequences. As a result, we propose two methods: one that identifies each token as either being part of an adversarial prompt or not, and another that estimates the probability of each token being part of an adversarial prompt",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhengmian Hu",
+      "Gang Wu",
+      "Saayan Mitra",
+      "Ruiyi Zhang",
+      "Tong Sun",
+      "Heng Huang",
+      "Vishy Swaminathan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11482": {
+    "title": "Meta Prompting for AGI Systems",
+    "volume": "Nov",
+    "abstract": "This paper presents an in-depth exploration of Meta Prompting, a novel technique that revolutionizes the way large language models (LLMs), multi-modal foundation models, and AI systems approach problem-solving and data interpretation. Meta Prompting, rooted in type theory and category theory, prioritizes the structure and syntax of information, providing a unique framework that transcends traditional content-focused methods. We delve into the formal definitions of Meta Prompting, contrasting it with Few-Shot Prompting, and highlight its applicability and superiority in various AI applications. Key to this exploration is the expansion of Meta Prompting into the realm of complex reasoning. Here, we demonstrate how this technique adeptly breaks down intricate problems into manageable sub-problems, facilitating a step-by-step, detailed approach to problem-solving. This method proves especially advantageous in terms of token efficiency and offering a fair comparison in problem-solving scenarios, standing out against few-shot example approaches. Furthermore, the paper breaks new ground by extending Meta Prompting into multi-modal foundation model settings. This extension addresses the integration of diverse data types, such as images, audio, and video, within the structured framework of Meta Prompting, highlighting both the challenges and the vast potential of this approach in handling complex, multi-faceted data (The code is available at https://github.com/meta-prompting/meta-prompting)",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yifan Zhang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11477": {
+    "title": "What's left can't be right -- The remaining positional incompetence of contrastive vision-language models",
+    "volume": "Nov",
+    "abstract": "Contrastive vision-language models like CLIP have been found to lack spatial understanding capabilities. In this paper we discuss the possible causes of this phenomenon by analysing both datasets and embedding space. By focusing on simple left-right positional relations, we show that this behaviour is entirely predictable, even with large-scale datasets, demonstrate that these relations can be taught using synthetic data and show that this approach can generalise well to natural images - improving the performance on left-right relations on Visual Genome Relations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nils Hoehing",
+      "Ellen Rushe",
+      "Anthony Ventresque"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11462": {
+    "title": "LLM aided semi-supervision for Extractive Dialog Summarization",
+    "volume": "Nov",
+    "abstract": "Generating high-quality summaries for chat dialogs often requires large labeled datasets. We propose a method to efficiently use unlabeled data for extractive summarization of customer-agent dialogs. In our method, we frame summarization as a question-answering problem and use state-of-the-art large language models (LLMs) to generate pseudo-labels for a dialog. We then use these pseudo-labels to fine-tune a chat summarization model, effectively transferring knowledge from the large LLM into a smaller specialized model. We demonstrate our method on the \\tweetsumm dataset, and show that using 10\\% of the original labelled data set we can achieve 65.9/57.0/61.0 ROUGE-1/-2/-L, whereas the current state-of-the-art trained on the entire training data set obtains 65.16/55.81/64.37 ROUGE-1/-2/-L. In other words, in the worst case (i.e., ROUGE-L) we still effectively retain 94.7% of the performance while using only 10% of the data",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nishant Mishra",
+      "Gaurav Sahu",
+      "Iacer Calixto",
+      "Ameen Abu-Hanna",
+      "Issam H. Laradji"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11441": {
+    "title": "Spot the Bot: Distinguishing Human-Written and Bot-Generated Texts Using Clustering and Information Theory Techniques",
+    "volume": "Nov",
+    "abstract": "With the development of generative models like GPT-3, it is increasingly more challenging to differentiate generated texts from human-written ones. There is a large number of studies that have demonstrated good results in bot identification. However, the majority of such works depend on supervised learning methods that require labelled data and/or prior knowledge about the bot-model architecture. In this work, we propose a bot identification algorithm that is based on unsupervised learning techniques and does not depend on a large amount of labelled data. By combining findings in semantic analysis by clustering (crisp and fuzzy) and information techniques, we construct a robust model that detects a generated text for different types of bot. We find that the generated texts tend to be more chaotic while literary works are more complex. We also demonstrate that the clustering of human texts results in fuzzier clusters in comparison to the more compact and well-separated clusters of bot-generated texts",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Vasilii Gromov",
+      "Quynh Nhu Dang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11435": {
+    "title": "Unveiling Public Perceptions: Machine Learning-Based Sentiment Analysis of COVID-19 Vaccines in India",
+    "volume": "Nov",
+    "abstract": "In March 2020, the World Health Organisation declared COVID-19 a global pandemic as it spread to nearly every country. By mid-2021, India had introduced three vaccines: Covishield, Covaxin, and Sputnik. To ensure successful vaccination in a densely populated country like India, understanding public sentiment was crucial. Social media, particularly Reddit with over 430 million users, played a vital role in disseminating information. This study employs data mining techniques to analyze Reddit data and gauge Indian sentiments towards COVID-19 vaccines. Using Python's Text Blob library, comments are annotated to assess general sentiments. Results show that most Reddit users in India expressed neutrality about vaccination, posing a challenge for the Indian government's efforts to vaccinate a significant portion of the population",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Milind Gupta",
+      "Abhishek Kaushik"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11415": {
+    "title": "A Security Risk Taxonomy for Large Language Models",
+    "volume": "Nov",
+    "abstract": "As large language models (LLMs) permeate more and more applications, an assessment of their associated security risks becomes increasingly necessary. The potential for exploitation by malicious actors, ranging from disinformation to data breaches and reputation damage, is substantial. This paper addresses a gap in current research by focusing on the security risks posed by LLMs, which extends beyond the widely covered ethical and societal implications. Our work proposes a taxonomy of security risks along the user-model communication pipeline, explicitly focusing on prompt-based attacks on LLMs. We categorize the attacks by target and attack type within a prompt-based interaction scheme. The taxonomy is reinforced with specific attack examples to showcase the real-world impact of these risks. Through this taxonomy, we aim to inform the development of robust and secure LLM applications, enhancing their safety and trustworthiness",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Erik Derner",
+      "Kristina Batistič",
+      "Jan Zahálka",
+      "Robert Babuška"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11375": {
+    "title": "ML-LMCL: Mutual Learning and Large-Margin Contrastive Learning for Improving ASR Robustness in Spoken Language Understanding",
+    "volume": "Nov",
+    "abstract": "Spoken language understanding (SLU) is a fundamental task in the task-oriented dialogue systems. However, the inevitable errors from automatic speech recognition (ASR) usually impair the understanding performance and lead to error propagation. Although there are some attempts to address this problem through contrastive learning, they (1) treat clean manual transcripts and ASR transcripts equally without discrimination in fine-tuning; (2) neglect the fact that the semantically similar pairs are still pushed away when applying contrastive learning; (3) suffer from the problem of Kullback-Leibler (KL) vanishing. In this paper, we propose Mutual Learning and Large-Margin Contrastive Learning (ML-LMCL), a novel framework for improving ASR robustness in SLU. Specifically, in fine-tuning, we apply mutual learning and train two SLU models on the manual transcripts and the ASR transcripts, respectively, aiming to iteratively share knowledge between these two models. We also introduce a distance polarization regularizer to avoid pushing away the intra-cluster pairs as much as possible. Moreover, we use a cyclical annealing schedule to mitigate KL vanishing issue. Experiments on three datasets show that ML-LMCL outperforms existing models and achieves new state-of-the-art performance",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xuxin Cheng",
+      "Bowen Cao",
+      "Qichen Ye",
+      "Zhihong Zhu",
+      "Hongxiang Li",
+      "Yuexian Zou"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11331": {
+    "title": "Portuguese FAQ for Financial Services",
+    "volume": "Nov",
+    "abstract": "Scarcity of domain-specific data in the Portuguese financial domain has disfavored the development of Natural Language Processing (NLP) applications. To address this limitation, the present study advocates for the utilization of synthetic data generated through data augmentation techniques. The investigation focuses on the augmentation of a dataset sourced from the Central Bank of Brazil FAQ, employing techniques that vary in semantic similarity. Supervised and unsupervised tasks are conducted to evaluate the impact of augmented data on both low and high semantic similarity scenarios. Additionally, the resultant dataset will be publicly disseminated on the Hugging Face Datasets platform, thereby enhancing accessibility and fostering broader engagement within the NLP research community",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Paulo Finardi",
+      "Wanderley M. Melo",
+      "Edgard D. Medeiros Neto",
+      "Alex F. Mansano",
+      "Pablo B. Costa",
+      "Vinicius F. Caridá"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11301": {
+    "title": "CHAMP: Efficient Annotation and Consolidation of Cluster Hierarchies",
+    "volume": "Nov",
+    "abstract": "Various NLP tasks require a complex hierarchical structure over nodes, where each node is a cluster of items. Examples include generating entailment graphs, hierarchical cross-document coreference resolution, annotating event and subevent relations, etc. To enable efficient annotation of such hierarchical structures, we release CHAMP, an open source tool allowing to incrementally construct both clusters and hierarchy simultaneously over any type of texts. This incremental approach significantly reduces annotation time compared to the common pairwise annotation approach and also guarantees maintaining transitivity at the cluster and hierarchy levels. Furthermore, CHAMP includes a consolidation mode, where an adjudicator can easily compare multiple cluster hierarchy annotations and resolve disagreements",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Arie Cattan",
+      "Tom Hope",
+      "Doug Downey",
+      "Roy Bar-Haim",
+      "Lilach Eden",
+      "Yoav Kantor",
+      "Ido Dagan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11271": {
+    "title": "A Cross-Attention Augmented Model for Event-Triggered Context-Aware Story Generation",
+    "volume": "Nov",
+    "abstract": "Despite recent advancements, existing story generation systems continue to encounter difficulties in effectively incorporating contextual and event features, which greatly influence the quality of generated narratives. To tackle these challenges, we introduce a novel neural generation model, EtriCA, that enhances the relevance and coherence of generated stories by employing a cross-attention mechanism to map context features onto event sequences through residual mapping. This feature capturing mechanism enables our model to exploit logical relationships between events more effectively during the story generation process. To further enhance our proposed model, we employ a post-training framework for knowledge enhancement (KeEtriCA) on a large-scale book corpus. This allows EtriCA to adapt to a wider range of data samples. This results in approximately 5\\% improvement in automatic metrics and over 10\\% improvement in human evaluation. We conduct extensive experiments, including comparisons with state-of-the-art (SOTA) baseline models, to evaluate the performance of our framework on story generation. The experimental results, encompassing both automated metrics and human assessments, demonstrate the superiority of our model over existing state-of-the-art baselines. These results underscore the effectiveness of our model in leveraging context and event features to improve the quality of generated narratives",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Chen Tang",
+      "Tyler Loakman",
+      "Chenghua Lin"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11268": {
+    "title": "Towards Real-World Writing Assistance: A Chinese Character Checking Benchmark with Faked and Misspelled Characters",
+    "volume": "Nov",
+    "abstract": "Writing assistance is an application closely related to human life and is also a fundamental Natural Language Processing (NLP) research field. Its aim is to improve the correctness and quality of input texts, with character checking being crucial in detecting and correcting wrong characters. From the perspective of the real world where handwriting occupies the vast majority, characters that humans get wrong include faked characters (i.e., untrue characters created due to writing errors) and misspelled characters (i.e., true characters used incorrectly due to spelling errors). However, existing datasets and related studies only focus on misspelled characters mainly caused by phonological or visual confusion, thereby ignoring faked characters which are more common and difficult. To break through this dilemma, we present Visual-C$^3$, a human-annotated Visual Chinese Character Checking dataset with faked and misspelled Chinese characters. To the best of our knowledge, Visual-C$^3$ is the first real-world visual and the largest human-crafted dataset for the Chinese character checking scenario. Additionally, we also propose and evaluate novel baseline methods on Visual-C$^3$. Extensive empirical results and analyses show that Visual-C$^3$ is high-quality yet challenging. The Visual-C$^3$ dataset and the baseline methods will be publicly available to facilitate further research in the community",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yinghui Li",
+      "Zishan Xu",
+      "Shaoshen Chen",
+      "Haojing Huang",
+      "Yangning Li",
+      "Yong Jiang",
+      "Zhongli Li",
+      "Qingyu Zhou",
+      "Hai-Tao Zheng",
+      "Ying Shen"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11267": {
+    "title": "Rethinking Large Language Models in Mental Health Applications",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) have become valuable assets in mental health, showing promise in both classification tasks and counseling applications. This paper offers a perspective on using LLMs in mental health applications. It discusses the instability of generative models for prediction and the potential for generating hallucinatory outputs, underscoring the need for ongoing audits and evaluations to maintain their reliability and dependability. The paper also distinguishes between the often interchangeable terms ``explainability'' and ``interpretability'', advocating for developing inherently interpretable methods instead of relying on potentially hallucinated self-explanations generated by LLMs. Despite the advancements in LLMs, human counselors' empathetic understanding, nuanced interpretation, and contextual awareness remain irreplaceable in the sensitive and complex realm of mental health counseling. The use of LLMs should be approached with a judicious and considerate mindset, viewing them as tools that complement human expertise rather than seeking to replace it",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shaoxiong Ji",
+      "Tianlin Zhang",
+      "Kailai Yang",
+      "Sophia Ananiadou",
+      "Erik Cambria"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11229": {
+    "title": "Causal ATE Mitigates Unintended Bias in Controlled Text Generation",
+    "volume": "Nov",
+    "abstract": "We study attribute control in language models through the method of Causal Average Treatment Effect (Causal ATE). Existing methods for the attribute control task in Language Models (LMs) check for the co-occurrence of words in a sentence with the attribute of interest, and control for them. However, spurious correlation of the words with the attribute in the training dataset, can cause models to hallucinate the presence of the attribute when presented with the spurious correlate during inference. We show that the simple perturbation-based method of Causal ATE removes this unintended effect. Additionally, we offer a theoretical foundation for investigating Causal ATE in the classification task, and prove that it reduces the number of false positives -- thereby mitigating the issue of unintended bias. Specifically, we ground it in the problem of toxicity mitigation, where a significant challenge lies in the inadvertent bias that often emerges towards protected groups post detoxification. We show that this unintended bias can be solved by the use of the Causal ATE metric",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Rahul Madhavan",
+      "Kahini Wadhawan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11215": {
+    "title": "SPLAIN: Augmenting CybersecurityWarnings with Reasons and Data",
+    "volume": "Nov",
+    "abstract": "Effective cyber threat recognition and prevention demand comprehensible forecasting systems, as prior approaches commonly offer limited and, ultimately, unconvincing information. We introduce Simplified Plaintext Language (SPLAIN), a natural language generator that converts warning data into user-friendly cyber threat explanations. SPLAIN is designed to generate clear, actionable outputs, incorporating hierarchically organized explanatory details about input data and system functionality. Given the inputs of individual sensor-induced forecasting signals and an overall warning from a fusion module, SPLAIN queries each signal for information on contributing sensors and data signals. This collected data is processed into a coherent English explanation, encompassing forecasting, sensing, and data elements for user review. SPLAIN's template-based approach ensures consistent warning structure and vocabulary. SPLAIN's hierarchical output structure allows each threat and its components to be expanded to reveal underlying explanations on demand. Our conclusions emphasize the need for designers to specify the \"how\" and \"why\" behind cyber warnings, advocate for simple structured templates in generating consistent explanations, and recognize that direct causal links in Machine Learning approaches may not always be identifiable, requiring some explanations to focus on general methodologies, such as model and training data",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Vera A. Kazakova",
+      "Jena D. Hwang",
+      "Bonnie J. Dorr",
+      "Yorick Wilks",
+      "J. Blake Gage",
+      "Alex Memory",
+      "Mark A. Clark"
+    ]
+  },
+  "http://arxiv.org/abs/2311.11202": {
+    "title": "Unmasking and Improving Data Credibility: A Study with Datasets for Training Harmless Language Models",
+    "volume": "Nov",
+    "abstract": "Language models have shown promise in various tasks but can be affected by undesired data during training, fine-tuning, or alignment. For example, if some unsafe conversations are wrongly annotated as safe ones, the model fine-tuned on these samples may be harmful. Therefore, the correctness of annotations, i.e., the credibility of the dataset, is important. This study focuses on the credibility of real-world datasets, including the popular benchmarks Jigsaw Civil Comments, Anthropic Harmless & Red Team, PKU BeaverTails & SafeRLHF, that can be used for training a harmless language model. Given the cost and difficulty of cleaning these datasets by humans, we introduce a systematic framework for evaluating the credibility of datasets, identifying label errors, and evaluating the influence of noisy labels in the curated language data, specifically focusing on unsafe comments and conversation classification. With the framework, we find and fix an average of 6.16% label errors in 11 datasets constructed from the above benchmarks. The data credibility and downstream learning performance can be remarkably improved by directly fixing label errors, indicating the significance of cleaning existing real-world datasets. Open-source: https://github.com/Docta-ai/docta",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhaowei Zhu",
+      "Jialu Wang",
+      "Hao Cheng",
+      "Yang Liu"
+    ]
+  }
+}
