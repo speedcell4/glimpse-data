@@ -1,4 +1,759 @@
 {
+  "http://arxiv.org/abs/2311.14652": {
+    "title": "One Pass Streaming Algorithm for Super Long Token Attention Approximation in Sublinear Space",
+    "volume": "Nov",
+    "abstract": "Deploying Large Language Models (LLMs) in streaming applications that involve long contexts, particularly for extended dialogues and text analysis, is of paramount importance but presents two significant challenges. Firstly, the memory consumption is substantial during the decoding phase due to the caching of Key and Value states (KV) of previous tokens. Secondly, attention computation is time-consuming with a time complexity of $O(n^2)$ for the generation of each token. In recent OpenAI DevDay (Nov 6, 2023), OpenAI released a new model that is able to support a 128K-long document, in our paper, we focus on the memory-efficient issue when context length $n$ is much greater than 128K ($n \\gg 2^d$). Considering a single-layer self-attention with Query, Key, and Value matrices $Q, K, V \\in \\mathbb{R}^{n \\times d}$, the polynomial method approximates the attention output $T \\in \\mathbb{R}^{n \\times d}$. It accomplishes this by constructing $U_1, U_2 \\in \\mathbb{R}^{n \\times t}$ to expedite attention ${\\sf Attn}(Q, K, V)$ computation within $n^{1+o(1)}$ time executions. Despite this, storing the Key and Value matrices $K, V \\in \\mathbb{R}^{n \\times d}$ still necessitates $O( n d)$ space, leading to significant memory usage. In response to these challenges, we introduce a new algorithm that only reads one pass of the data in streaming fashion. This method employs sublinear space $o(n)$ to store three sketch matrices, alleviating the need for exact $K, V$ storage. Notably, our algorithm exhibits exceptional memory-efficient performance with super-long tokens. As the token length $n$ increases, our error guarantee diminishes while the memory usage remains nearly constant. This unique attribute underscores the potential of our technique in efficiently handling LLMs in streaming applications",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Raghav Addanki",
+      "Chenyang Li",
+      "Zhao Song",
+      "Chiwun Yang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14648": {
+    "title": "Calibrated Language Models Must Hallucinate",
+    "volume": "Nov",
+    "abstract": "Recent language models have a mysterious tendency to generate false but plausible-sounding text. Such \"hallucinations\" are an obstacle to the usability of language-based AI systems and can harm people who rely upon their outputs. This work shows shows that there is an inherent statistical reason that pretrained language models hallucinate certain types of facts, having nothing to do with the transformer LM architecture or data quality. For \"arbitrary\" facts whose veracity cannot be determined from the training data, we show that hallucination is necessary for language models that satisfy a statistical calibration condition appropriate for generative language models. Specifically, if the maximum probability of any fact is bounded, we show that the probability of generating a hallucination is close to the fraction of facts that occur exactly once in the training data (a \"Good-Turing\" estimate), even assuming ideal training data without errors. One conclusion is that models pretrained to be sufficiently good predictors (i.e., calibrated) may require post-training to mitigate hallucinations on the type of arbitrary facts that tend to appear once in the training set. However, our analysis also suggests that there is no statistical reason that pretraining will lead to hallucination on facts that tend to appear more than once in the training data (like references to publications such as articles and books, whose hallucinations have been particularly notable and problematic) or on systematic facts (like arithmetic calculations). Therefore, different architectures and learning algorithms may mitigate these latter types of hallucinations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Adam Tauman Kalai",
+      "Santosh S. Vempala"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14583": {
+    "title": "GPT Struct Me: Probing GPT Models on Narrative Entity Extraction",
+    "volume": "Nov",
+    "abstract": "The importance of systems that can extract structured information from textual data becomes increasingly pronounced given the ever-increasing volume of text produced on a daily basis. Having a system that can effectively extract such information in an interoperable manner would be an asset for several domains, be it finance, health, or legal. Recent developments in natural language processing led to the production of powerful language models that can, to some degree, mimic human intelligence. Such effectiveness raises a pertinent question: Can these models be leveraged for the extraction of structured information? In this work, we address this question by evaluating the capabilities of two state-of-the-art language models -- GPT-3 and GPT-3.5, commonly known as ChatGPT -- in the extraction of narrative entities, namely events, participants, and temporal expressions. This study is conducted on the Text2Story Lusa dataset, a collection of 119 Portuguese news articles whose annotation framework includes a set of entity structures along with several tags and attribute values. We first select the best prompt template through an ablation study over prompt components that provide varying degrees of information on a subset of documents of the dataset. Subsequently, we use the best templates to evaluate the effectiveness of the models on the remaining documents. The results obtained indicate that GPT models are competitive with out-of-the-box baseline systems, presenting an all-in-one alternative for practitioners with limited resources. By studying the strengths and limitations of these models in the context of information extraction, we offer insights that can guide future improvements and avenues to explore in this field",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hugo Sousa",
+      "Nuno Guimarães",
+      "Alípio Jorge",
+      "Ricardo Campos"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14543": {
+    "title": "Data-Efficient Alignment of Large Language Models with Human Feedback Through Natural Language",
+    "volume": "Nov",
+    "abstract": "Learning from human feedback is a prominent technique to align the output of large language models (LLMs) with human expectations. Reinforcement learning from human feedback (RLHF) leverages human preference signals that are in the form of ranking of response pairs to perform this alignment. However, human preference on LLM outputs can come in much richer forms including natural language, which may provide detailed feedback on strengths and weaknesses of a given response. In this work we investigate data efficiency of modeling human feedback that is in natural language. Specifically, we fine-tune an open-source LLM, e.g., Falcon-40B-Instruct, on a relatively small amount (1000 records or even less) of human feedback in natural language in the form of critiques and revisions of responses. We show that this model is able to improve the quality of responses from even some of the strongest LLMs such as ChatGPT, BARD, and Vicuna, through critique and revision of those responses. For instance, through one iteration of revision of ChatGPT responses, the revised responses have 56.6% win rate over the original ones, and this win rate can be further improved to 65.9% after applying the revision for five iterations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Di Jin",
+      "Shikib Mehri",
+      "Devamanyu Hazarika",
+      "Aishwarya Padmakumar",
+      "Sungjin Lee",
+      "Yang Liu",
+      "Mahdi Namazifar"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14539": {
+    "title": "CMed-GPT: Prompt Tuning for Entity-Aware Chinese Medical Dialogue Generation",
+    "volume": "Nov",
+    "abstract": "Medical dialogue generation relies on natural language generation techniques to enable online medical consultations. Recently, the widespread adoption of large-scale models in the field of natural language processing has facilitated rapid advancements in this technology. Existing medical dialogue models are mostly based on BERT and pre-trained on English corpora, but there is a lack of high-performing models on the task of Chinese medical dialogue generation. To solve the above problem, this paper proposes CMed-GPT, which is the GPT pre-training language model based on Chinese medical domain text. The model is available in two versions, namely, base and large, with corresponding perplexity values of 8.64 and 8.01. Additionally, we incorporate lexical and entity embeddings into the dialogue text in a uniform manner to meet the requirements of downstream dialogue generation tasks. By applying both fine-tuning and p-tuning to CMed-GPT, we lowered the PPL from 8.44 to 7.35. This study not only confirms the exceptional performance of the CMed-GPT model in generating Chinese biomedical text but also highlights the advantages of p-tuning over traditional fine-tuning with prefix prompts. Furthermore, we validate the significance of incorporating external information in medical dialogue generation, which enhances the quality of dialogue generation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhijie Qu",
+      "Juan Li",
+      "Zerui Ma",
+      "Jianqiang Li"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14530": {
+    "title": "Machine Translation for Ge'ez Language",
+    "volume": "Nov",
+    "abstract": "Machine translation (MT) for low-resource languages such as Ge'ez, an ancient language that is no longer spoken in daily life, faces challenges such as out-of-vocabulary words, domain mismatches, and lack of sufficient labeled training data. In this work, we explore various methods to improve Ge'ez MT, including transfer-learning from related languages, optimizing shared vocabulary and token segmentation approaches, finetuning large pre-trained models, and using large language models (LLMs) for few-shot translation with fuzzy matches. We develop a multilingual neural machine translation (MNMT) model based on languages relatedness, which brings an average performance improvement of about 4 BLEU compared to standard bilingual models. We also attempt to finetune the NLLB-200 model, one of the most advanced translation models available today, but find that it performs poorly with only 4k training samples for Ge'ez. Furthermore, we experiment with using GPT-3.5, a state-of-the-art LLM, for few-shot translation with fuzzy matches, which leverages embedding similarity-based retrieval to find context examples from a parallel corpus. We observe that GPT-3.5 achieves a remarkable BLEU score of 9.2 with no initial knowledge of Ge'ez, but still lower than the MNMT baseline of 15.2. Our work provides insights into the potential and limitations of different approaches for low-resource and ancient language MT",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aman Kassahun Wassie"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14517": {
+    "title": "tinyCLAP: Distilling Constrastive Language-Audio Pretrained Models",
+    "volume": "Nov",
+    "abstract": "Contrastive Language-Audio Pretraining (CLAP) became of crucial importance in the field of audio and speech processing. Its employment ranges from sound event detection to text-to-audio generation. However, one of the main limitations is the considerable amount of data required in the training process and the overall computational complexity during inference. This paper investigates how we can reduce the complexity of contrastive language-audio pre-trained models, yielding an efficient model that we call tinyCLAP. We derive an unimodal distillation loss from first principles and explore how the dimensionality of the shared, multimodal latent space can be reduced via pruning. TinyCLAP uses only 6% of the original Microsoft CLAP parameters with a minimal reduction (less than 5%) in zero-shot classification performance across the three sound event detection datasets on which it was tested",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Francesco Paissan",
+      "Elisabetta Farella"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14505": {
+    "title": "Analysing the Impact of Removing Infrequent Words on Topic Quality in LDA Models",
+    "volume": "Nov",
+    "abstract": "An initial procedure in text-as-data applications is text preprocessing. One of the typical steps, which can substantially facilitate computations, consists in removing infrequent words believed to provide limited information about the corpus. Despite popularity of vocabulary pruning, not many guidelines on how to implement it are available in the literature. The aim of the paper is to fill this gap by examining the effects of removing infrequent words for the quality of topics estimated using Latent Dirichlet Allocation. The analysis is based on Monte Carlo experiments taking into account different criteria for infrequent terms removal and various evaluation metrics. The results indicate that pruning is beneficial and that the share of vocabulary which might be eliminated can be quite considerable",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Victor Bystrov",
+      "Viktoriia Naboka-Krell",
+      "Anna Staszewska-Bystrova",
+      "Peter Winker"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14495": {
+    "title": "StableSSM: Alleviating the Curse of Memory in State-space Models through Stable Reparameterization",
+    "volume": "Nov",
+    "abstract": "In this paper, we investigate the long-term memory learning capabilities of state-space models (SSMs) from the perspective of parameterization. We prove that state-space models without any reparameterization exhibit a memory limitation similar to that of traditional RNNs: the target relationships that can be stably approximated by state-space models must have an exponential decaying memory. Our analysis identifies this \"curse of memory\" as a result of the recurrent weights converging to a stability boundary, suggesting that a reparameterization technique can be effective. To this end, we introduce a class of reparameterization techniques for SSMs that effectively lift its memory limitations. Besides improving approximation capabilities, we further illustrate that a principled choice of reparameterization scheme can also enhance optimization stability. We validate our findings using synthetic datasets and language models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shida Wang",
+      "Qianxiao Li"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14483": {
+    "title": "SER_AMPEL: A multi-source dataset for SER of Italian older adults",
+    "volume": "Nov",
+    "abstract": "In this paper, SER_AMPEL, a multi-source dataset for speech emotion recognition (SER) is presented. The peculiarity of the dataset is that it is collected with the aim of providing a reference for speech emotion recognition in case of Italian older adults. The dataset is collected following different protocols, in particular considering acted conversations, extracted from movies and TV series, and recording natural conversations where the emotions are elicited by proper questions. The evidence of the need for such a dataset emerges from the analysis of the state of the art. Preliminary considerations on the critical issues of SER are reported analyzing the classification results on a subset of the proposed dataset",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Alessandra Grossi",
+      "Francesca Gasparini"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14479": {
+    "title": "Controlled Text Generation via Language Model Arithmetic",
+    "volume": "Nov",
+    "abstract": "As Large Language Models (LLMs) are deployed more widely, customization with respect to vocabulary, style and character becomes more important. In this work we introduce model arithmetic, a novel inference framework for composing and biasing LLMs without the need for model (re)training or highly specific datasets. In addition, the framework allows for more precise control of generated text than direct prompting and prior controlled text generation (CTG) techniques. Using model arithmetic, we can express prior CTG techniques as simple formulas and naturally extend them to new and more effective formulations. Further, we show that speculative sampling, a technique for efficient LLM sampling, extends to our setting. This enables highly efficient text generation with multiple composed models with only marginal overhead over a single model. Our empirical evaluation demonstrates that model arithmetic allows fine-grained control of generated text while outperforming state-of-the-art on the task of toxicity reduction",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jasper Dekoninck",
+      "Marc Fischer",
+      "Luca Beurer-Kellner",
+      "Martin Vechev"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14465": {
+    "title": "DP-NMT: Scalable Differentially-Private Machine Translation",
+    "volume": "Nov",
+    "abstract": "Neural machine translation (NMT) is a widely popular text generation task, yet there is a considerable research gap in the development of privacy-preserving NMT models, despite significant data privacy concerns for NMT systems. Differentially private stochastic gradient descent (DP-SGD) is a popular method for training machine learning models with concrete privacy guarantees; however, the implementation specifics of training a model with DP-SGD are not always clarified in existing models, with differing software libraries used and code bases not always being public, leading to reproducibility issues. To tackle this, we introduce DP-NMT, an open-source framework for carrying out research on privacy-preserving NMT with DP-SGD, bringing together numerous models, datasets, and evaluation metrics in one systematic software package. Our goal is to provide a platform for researchers to advance the development of privacy-preserving NMT systems, keeping the specific details of the DP-SGD algorithm transparent and intuitive to implement. We run a set of experiments on datasets from both general and privacy-related domains to demonstrate our framework in use. We make our framework publicly available and welcome feedback from the community",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Timour Igamberdiev",
+      "Doan Nam Long Vu",
+      "Felix Künnecke",
+      "Zhuo Yu",
+      "Jannik Holmer",
+      "Ivan Habernal"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14455": {
+    "title": "Universal Jailbreak Backdoors from Poisoned Human Feedback",
+    "volume": "Nov",
+    "abstract": "Reinforcement Learning from Human Feedback (RLHF) is used to align large language models to produce helpful and harmless responses. Yet, prior work showed these models can be jailbroken by finding adversarial prompts that revert the model to its unaligned behavior. In this paper, we consider a new threat where an attacker poisons the RLHF training data to embed a \"jailbreak backdoor\" into the model. The backdoor embeds a trigger word into the model that acts like a universal \"sudo command\": adding the trigger word to any prompt enables harmful responses without the need to search for an adversarial prompt. Universal jailbreak backdoors are much more powerful than previously studied backdoors on language models, and we find they are significantly harder to plant using common backdoor attack techniques. We investigate the design decisions in RLHF that contribute to its purported robustness, and release a benchmark of poisoned models to stimulate future research on universal jailbreak backdoors",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Javier Rando",
+      "Florian Tramèr"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14391": {
+    "title": "ÚFAL CorPipe at CRAC 2023: Larger Context Improves Multilingual Coreference Resolution",
+    "volume": "Nov",
+    "abstract": "We present CorPipe, the winning entry to the CRAC 2023 Shared Task on Multilingual Coreference Resolution. Our system is an improved version of our earlier multilingual coreference pipeline, and it surpasses other participants by a large margin of 4.5 percent points. CorPipe first performs mention detection, followed by coreference linking via an antecedent-maximization approach on the retrieved spans. Both tasks are trained jointly on all available corpora using a shared pretrained language model. Our main improvements comprise inputs larger than 512 subwords and changing the mention decoding to support ensembling. The source code is available at https://github.com/ufal/crac2023-corpipe",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Milan Straka"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14353": {
+    "title": "Average Token Delay: A Duration-aware Latency Metric for Simultaneous Translation",
+    "volume": "Nov",
+    "abstract": "Simultaneous translation is a task in which the translation begins before the end of an input speech segment. Its evaluation should be conducted based on latency in addition to quality, and for users, the smallest possible amount of latency is preferable. Most existing metrics measure latency based on the start timings of partial translations and ignore their duration. This means such metrics do not penalize the latency caused by long translation output, which delays the comprehension of users and subsequent translations. In this work, we propose a novel latency evaluation metric for simultaneous translation called \\emph{Average Token Delay} (ATD) that focuses on the duration of partial translations. We demonstrate its effectiveness through analyses simulating user-side latency based on Ear-Voice Span (EVS). In our experiment, ATD had the highest correlation with EVS among baseline latency metrics under most conditions",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yasumasa Kano",
+      "Katsuhito Sudoh",
+      "Satoshi Nakamura"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14324": {
+    "title": "Large Language Models as Topological Structure Enhancers for Text-Attributed Graphs",
+    "volume": "Nov",
+    "abstract": "The latest advancements in large language models (LLMs) have revolutionized the field of natural language processing (NLP). Inspired by the success of LLMs in NLP tasks, some recent work has begun investigating the potential of applying LLMs in graph learning tasks. However, most of the existing work focuses on utilizing LLMs as powerful node feature augmenters, leaving employing LLMs to enhance graph topological structures an understudied problem. In this work, we explore how to leverage the information retrieval and text generation capabilities of LLMs to refine/enhance the topological structure of text-attributed graphs (TAGs) under the node classification setting. First, we propose using LLMs to help remove unreliable edges and add reliable ones in the TAG. Specifically, we first let the LLM output the semantic similarity between node attributes through delicate prompt designs, and then perform edge deletion and edge addition based on the similarity. Second, we propose using pseudo-labels generated by the LLM to improve graph topology, that is, we introduce the pseudo-label propagation as a regularization to guide the graph neural network (GNN) in learning proper edge weights. Finally, we incorporate the two aforementioned LLM-based methods for graph topological refinement into the process of GNN training, and perform extensive experiments on four real-world datasets. The experimental results demonstrate the effectiveness of LLM-based graph topology refinement (achieving a 0.15%--2.47% performance gain on public benchmarks)",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shengyin Sun",
+      "Yuxiang Ren",
+      "Chen Ma",
+      "Xuecang Zhang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14212": {
+    "title": "Annotation Sensitivity: Training Data Collection Methods Affect Model Performance",
+    "volume": "Nov",
+    "abstract": "When training data are collected from human annotators, the design of the annotation instrument, the instructions given to annotators, the characteristics of the annotators, and their interactions can impact training data. This study demonstrates that design choices made when creating an annotation instrument also impact the models trained on the resulting annotations. We introduce the term annotation sensitivity to refer to the impact of annotation data collection methods on the annotations themselves and on downstream model performance and predictions. We collect annotations of hate speech and offensive language in five experimental conditions of an annotation instrument, randomly assigning annotators to conditions. We then fine-tune BERT models on each of the five resulting datasets and evaluate model performance on a holdout portion of each condition. We find considerable differences between the conditions for 1) the share of hate speech/offensive language annotations, 2) model performance, 3) model predictions, and 4) model learning curves. Our results emphasize the crucial role played by the annotation instrument which has received little attention in the machine learning literature. We call for additional research into how and why the instrument impacts the annotations to inform the development of best practices in instrument design",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Christoph Kern",
+      "Stephanie Eckman",
+      "Jacob Beck",
+      "Rob Chew",
+      "Bolei Ma",
+      "Frauke Kreuter"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14199": {
+    "title": "A Systematic Review of Deep Learning-based Research on Radiology Report Generation",
+    "volume": "Nov",
+    "abstract": "Radiology report generation (RRG) aims to automatically generate free-text descriptions from clinical radiographs, e.g., chest X-Ray images. RRG plays an essential role in promoting clinical automation and presents significant help to provide practical assistance for inexperienced doctors and alleviate radiologists' workloads. Therefore, consider these meaningful potentials, research on RRG is experiencing explosive growth in the past half-decade, especially with the rapid development of deep learning approaches. Existing studies perform RRG from the perspective of enhancing different modalities, provide insights on optimizing the report generation process with elaborated features from both visual and textual information, and further facilitate RRG with the cross-modal interactions among them. In this paper, we present a comprehensive review of deep learning-based RRG from various perspectives. Specifically, we firstly cover pivotal RRG approaches based on the task-specific features of radiographs, reports, and the cross-modal relations between them, and then illustrate the benchmark datasets conventionally used for this task with evaluation metrics, subsequently analyze the performance of different approaches and finally offer our summary on the challenges and the trends in future directions. Overall, the goal of this paper is to serve as a tool for understanding existing literature and inspiring potential valuable research in the field of RRG",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Chang Liu",
+      "Yuanhe Tian",
+      "Yan Song"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14169": {
+    "title": "Evaluating GPT-4's Vision Capabilities on Brazilian University Admission Exams",
+    "volume": "Nov",
+    "abstract": "Recent advancements in language models have showcased human-comparable performance in academic entrance exams. However, existing studies often overlook questions that require the integration of visual comprehension, thus compromising the full spectrum and complexity inherent in real-world scenarios. To address this gap, we present a comprehensive framework to evaluate language models on entrance exams, which incorporates both textual and visual elements. We evaluate the two most recent editions of Exame Nacional do Ensino M\\'edio (ENEM), the main standardized entrance examination adopted by Brazilian universities. Our study not only reaffirms the capabilities of GPT-4 as the state of the art for handling complex multidisciplinary questions, but also pioneers in offering a realistic assessment of multimodal language models on Portuguese examinations. One of the highlights is that text captions transcribing visual content outperform the direct use of images, suggesting that the vision model has room for improvement. Yet, despite improvements afforded by images or captions, mathematical questions remain a challenge for these state-of-the-art models. The code and data used on experiments are available at https://github.com/piresramon/gpt-4-enem",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ramon Pires",
+      "Thales Sales Almeida",
+      "Hugo Abonizio",
+      "Rodrigo Nogueira"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14126": {
+    "title": "Towards Auditing Large Language Models: Improving Text-based Stereotype Detection",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLM) have made significant advances in the recent past becoming more mainstream in Artificial Intelligence (AI) enabled human-facing applications. However, LLMs often generate stereotypical output inherited from historical data, amplifying societal biases and raising ethical concerns. This work introduces i) the Multi-Grain Stereotype Dataset, which includes 52,751 instances of gender, race, profession and religion stereotypic text and ii) a novel stereotype classifier for English text. We design several experiments to rigorously test the proposed model trained on the novel dataset. Our experiments show that training the model in a multi-class setting can outperform the one-vs-all binary counterpart. Consistent feature importance signals from different eXplainable AI tools demonstrate that the new model exploits relevant text features. We utilise the newly created model to assess the stereotypic behaviour of the popular GPT family of models and observe the reduction of bias over time. In summary, our work establishes a robust and practical framework for auditing and evaluating the stereotypic bias in LLM",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Wu Zekun",
+      "Sahan Bulathwela",
+      "Adriano Soares Koshiyama"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14115": {
+    "title": "A density estimation perspective on learning from pairwise human preferences",
+    "volume": "Nov",
+    "abstract": "Learning from human feedback (LHF) -- and in particular learning from pairwise preferences -- has recently become a crucial ingredient in training large language models (LLMs), and has been the subject of much research. Most recent works frame it as a reinforcement learning problem, where a reward function is learned from pairwise preference data and the LLM is treated as a policy which is adapted to maximize the rewards, often under additional regularization constraints. We propose an alternative interpretation which centers on the generative process for pairwise preferences and treats LHF as a density estimation problem. We provide theoretical and empirical results showing that for a family of generative processes defined via preference behavior distribution equations, training a reward function on pairwise preferences effectively models an annotator's implicit preference distribution. Finally, we discuss and present findings on \"annotator misspecification\" -- failure cases where wrong modeling assumptions are made about annotator behavior, resulting in poorly-adapted models -- suggesting that approaches that learn from pairwise human preferences could have trouble learning from a population of annotators with diverse viewpoints",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Vincent Dumoulin",
+      "Daniel D. Johnson",
+      "Pablo Samuel Castro",
+      "Hugo Larochelle",
+      "Yann Dauphin"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14096": {
+    "title": "Auditing and Mitigating Cultural Bias in LLMs",
+    "volume": "Nov",
+    "abstract": "Culture fundamentally shapes people's reasoning, behavior, and communication. Generative artificial intelligence (AI) technologies may cause a shift towards a dominant culture. As people increasingly use AI to expedite and even automate various professional and personal tasks, cultural values embedded in AI models may bias authentic expression. We audit large language models for cultural bias, comparing their responses to nationally representative survey data, and evaluate country-specific prompting as a mitigation strategy. We find that GPT-4, 3.5 and 3 exhibit cultural values resembling English-speaking and Protestant European countries. Our mitigation strategy reduces cultural bias in recent models but not for all countries/territories. To avoid cultural bias in generative AI, especially in high-stakes contexts, we suggest using culture matching and ongoing cultural audits",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yan Tao",
+      "Olga Viberg",
+      "Ryan S. Baker",
+      "Rene F. Kizilcec"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14087": {
+    "title": "Question Answering in Natural Language: the Special Case of Temporal Expressions",
+    "volume": "Nov",
+    "abstract": "Although general question answering has been well explored in recent years, temporal question answering is a task which has not received as much focus. Our work aims to leverage a popular approach used for general question answering, answer extraction, in order to find answers to temporal questions within a paragraph. To train our model, we propose a new dataset, inspired by SQuAD, specifically tailored to provide rich temporal information. We chose to adapt the corpus WikiWars, which contains several documents on history's greatest conflicts. Our evaluation shows that a deep learning model trained to perform pattern matching, often used in general question answering, can be adapted to temporal question answering, if we accept to ask questions whose answers must be directly present within a text",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Armand Stricker"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14076": {
+    "title": "Searching for Snippets of Open-Domain Dialogue in Task-Oriented Dialogue Datasets",
+    "volume": "Nov",
+    "abstract": "Most existing dialogue corpora and models have been designed to fit into 2 predominant categories : task-oriented dialogues portray functional goals, such as making a restaurant reservation or booking a plane ticket, while chit-chat/open-domain dialogues focus on holding a socially engaging talk with a user. However, humans tend to seamlessly switch between modes and even use chitchat to enhance task-oriented conversations. To bridge this gap, new datasets have recently been created, blending both communication modes into conversation examples. The approaches used tend to rely on adding chit-chat snippets to pre-existing, human-generated task-oriented datasets. Given the tendencies observed in humans, we wonder however if the latter do not \\textit{already} hold chit-chat sequences. By using topic modeling and searching for topics which are most similar to a set of keywords related to social talk, we explore the training sets of Schema-Guided Dialogues and MultiWOZ. Our study shows that sequences related to social talk are indeed naturally present, motivating further research on ways chitchat is combined into task-oriented dialogues",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Armand Stricker",
+      "Patrick Paroubek"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14067": {
+    "title": "Enhancing Task-Oriented Dialogues with Chitchat: a Comparative Study Based on Lexical Diversity and Divergence",
+    "volume": "Nov",
+    "abstract": "As a recent development, task-oriented dialogues (TODs) have been enriched with chitchat in an effort to make dialogues more diverse and engaging. This enhancement is particularly valuable as TODs are often confined to narrow domains, making the mitigation of repetitive and predictable responses a significant challenge. This paper presents a comparative analysis of three chitchat enhancements, aiming to identify the most effective approach in terms of diversity. Additionally, we quantify the divergence between the added chitchat, the original task-oriented language, and chitchat typically found in chitchat datasets, highlighting the top 20 divergent keywords for each comparison. Our findings drive a discussion on future enhancements for augmenting TODs, emphasizing the importance of grounding dialogues beyond the task to achieve more diverse and natural exchanges",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Armand Stricker",
+      "Patrick Paroubek"
+    ]
+  },
+  "http://arxiv.org/abs/2311.14063": {
+    "title": "Do VSR Models Generalize Beyond LRS3?",
+    "volume": "Nov",
+    "abstract": "The Lip Reading Sentences-3 (LRS3) benchmark has primarily been the focus of intense research in visual speech recognition (VSR) during the last few years. As a result, there is an increased risk of overfitting to its excessively used test set, which is only one hour duration. To alleviate this issue, we build a new VSR test set named WildVSR, by closely following the LRS3 dataset creation processes. We then evaluate and analyse the extent to which the current VSR models generalize to the new test data. We evaluate a broad range of publicly available VSR models and find significant drops in performance on our test set, compared to their corresponding LRS3 results. Our results suggest that the increase in word error rates is caused by the models inability to generalize to slightly harder and in the wild lip sequences than those found in the LRS3 test set. Our new test benchmark is made public in order to enable future research towards more robust VSR models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yasser Abdelaziz Dahou Djilali",
+      "Sanath Narayan",
+      "Eustache Le Bihan",
+      "Haithem Boussaid",
+      "Ebtessam Almazrouei",
+      "Merouane Debbah"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13987": {
+    "title": "Jam-ALT: A Formatting-Aware Lyrics Transcription Benchmark",
+    "volume": "Nov",
+    "abstract": "Current automatic lyrics transcription (ALT) benchmarks focus exclusively on word content and ignore the finer nuances of written lyrics including formatting and punctuation, which leads to a potential misalignment with the creative products of musicians and songwriters as well as listeners' experiences. For example, line breaks are important in conveying information about rhythm, emotional emphasis, rhyme, and high-level structure. To address this issue, we introduce Jam-ALT, a new lyrics transcription benchmark based on the JamendoLyrics dataset. Our contribution is twofold. Firstly, a complete revision of the transcripts, geared specifically towards ALT evaluation by following a newly created annotation guide that unifies the music industry's guidelines, covering aspects such as punctuation, line breaks, spelling, background vocals, and non-word sounds. Secondly, a suite of evaluation metrics designed, unlike the traditional word error rate, to capture such phenomena. We hope that the proposed benchmark contributes to the ALT task, enabling more precise and reliable assessments of transcription systems and enhancing the user experience in lyrics applications such as subtitle renderings for live captioning or karaoke",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ondřej Cífka",
+      "Constantinos Dimitriou",
+      "Cheng-i Wang",
+      "Hendrik Schreiber",
+      "Luke Miner",
+      "Fabian-Robert Stöter"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13982": {
+    "title": "Probabilistic Tree-of-thought Reasoning for Answering Knowledge-intensive Complex Questions",
+    "volume": "Nov",
+    "abstract": "Large language models (LLMs) are capable of answering knowledge-intensive complex questions with chain-of-thought (CoT) reasoning. However, they tend to generate factually incorrect reasoning steps when the required knowledge is not available or up-to-date in models' parameters. Recent works turn to retrieving external knowledge to augment CoT reasoning. Despite being promising, these chain-based methods suffer from: 1) Negative retrieval. Unnecessary or incorrect retrieval may mislead the reasoning; 2) Limited sight. Lacking the ability to look backward or forward, a local error in one step will propagate along the chain. In this paper, we propose a novel approach: Probabilistic Tree-of-thought Reasoning (ProbTree). First, LLMs translate a complex question into a query tree, in which each non-root node denotes a sub-question of its parent node. Then, probabilistic reasoning is conducted over the tree, by solving questions from leaf to root considering the confidence of both question decomposing and answering. During reasoning, for leaf nodes, LLMs choose a more confident answer from Closed-book QA that employs parametric knowledge and Open-book QA that employs retrieved external knowledge, thus eliminating the negative retrieval problem. For non-leaf nodes, with the hierarchical structure, LLMs have broader sights and are able to globally reason with the information from child nodes, thus recovering from local errors. The experiments on three Complex QA datasets under the open-domain setting show that our approach outperforms SOTA methods significantly, demonstrating the effect of probabilistic tree-of-thought reasoning",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shulin Cao",
+      "Jiajie Zhang",
+      "Jiaxin Shi",
+      "Xin Lv",
+      "Zijun Yao",
+      "Qi Tian",
+      "Juanzi Li",
+      "Lei Hou"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13957": {
+    "title": "Efficient Trigger Word Insertion",
+    "volume": "Nov",
+    "abstract": "With the boom in the natural language processing (NLP) field these years, backdoor attacks pose immense threats against deep neural network models. However, previous works hardly consider the effect of the poisoning rate. In this paper, our main objective is to reduce the number of poisoned samples while still achieving a satisfactory Attack Success Rate (ASR) in text backdoor attacks. To accomplish this, we propose an efficient trigger word insertion strategy in terms of trigger word optimization and poisoned sample selection. Extensive experiments on different datasets and models demonstrate that our proposed method can significantly improve attack effectiveness in text classification tasks. Remarkably, our approach achieves an ASR of over 90% with only 10 poisoned samples in the dirty-label setting and requires merely 1.5% of the training data in the clean-label setting",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yueqi Zeng",
+      "Ziqiang Li",
+      "Pengfei Xia",
+      "Lei Liu",
+      "Bin Li"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13951": {
+    "title": "MLLM-Bench, Evaluating Multi-modal LLMs using GPT-4V",
+    "volume": "Nov",
+    "abstract": "In the pursuit of Artificial General Intelligence (AGI), the integration of vision in language models has marked a significant milestone. The advent of vision-language models (MLLMs) like GPT-4V have expanded AI applications, aligning with the multi-modal capabilities of the human brain. However, evaluating the efficacy of MLLMs poses a substantial challenge due to the subjective nature of tasks that lack definitive answers. Existing automatic evaluation methodologies on multi-modal large language models rely on objective queries that have standard answers, inadequately addressing the nuances of creative and associative multi-modal tasks. To address this, we introduce MLLM-Bench, an innovative benchmark inspired by Vicuna, spanning a diverse array of scenarios, including Perception, Understanding, Applying, Analyzing, Evaluating, and Creation along with the ethical consideration. MLLM-Bench is designed to reflect user experience more accurately and provide a more holistic assessment of model performance. Comparative evaluations indicate a significant performance gap between existing open-source models and GPT-4V. We posit that MLLM-Bench will catalyze progress in the open-source community towards developing user-centric vision-language models that meet a broad spectrum of real-world applications. See online leaderboard in \\url{https://mllm-bench.llmzoo.com}",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Wentao Ge",
+      "Shunian Chen",
+      "Guiming Chen",
+      "Junying Chen",
+      "Zhihong Chen",
+      "Shuo Yan",
+      "Chenghao Zhu",
+      "Ziyue Lin",
+      "Wenya Xie",
+      "Xidong Wang",
+      "Anningzhe Gao",
+      "Zhiyi Zhang",
+      "Jianquan Li",
+      "Xiang Wan",
+      "Benyou Wang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13937": {
+    "title": "Exploring Methods for Cross-lingual Text Style Transfer: The Case of Text Detoxification",
+    "volume": "Nov",
+    "abstract": "Text detoxification is the task of transferring the style of text from toxic to neutral. While here are approaches yielding promising results in monolingual setup, e.g., (Dale et al., 2021; Hallinan et al., 2022), cross-lingual transfer for this task remains a challenging open problem (Moskovskiy et al., 2022). In this work, we present a large-scale study of strategies for cross-lingual text detoxification -- given a parallel detoxification corpus for one language; the goal is to transfer detoxification ability to another language for which we do not have such a corpus. Moreover, we are the first to explore a new task where text translation and detoxification are performed simultaneously, providing several strong baselines for this task. Finally, we introduce new automatic detoxification evaluation metrics with higher correlations with human judgments than previous benchmarks. We assess the most promising approaches also with manual markup, determining the answer for the best strategy to transfer the knowledge of text detoxification between languages",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Daryna Dementieva",
+      "Daniil Moskovskiy",
+      "David Dale",
+      "Alexander Panchenko"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13921": {
+    "title": "Some Like It Small: Czech Semantic Embedding Models for Industry Applications",
+    "volume": "Nov",
+    "abstract": "This article focuses on the development and evaluation of Small-sized Czech sentence embedding models. Small models are important components for real-time industry applications in resource-constrained environments. Given the limited availability of labeled Czech data, alternative approaches, including pre-training, knowledge distillation, and unsupervised contrastive fine-tuning, are investigated. Comprehensive intrinsic and extrinsic analyses are conducted, showcasing the competitive performance of our models compared to significantly larger counterparts, with approximately 8 times smaller size and 5 times faster speed than conventional Base-sized models. To promote cooperation and reproducibility, both the models and the evaluation pipeline are made publicly accessible. Ultimately, this article presents practical applications of the developed sentence embedding models in Seznam.cz, the Czech search engine. These models have effectively replaced previous counterparts, enhancing the overall search experience for instance, in organic search, featured snippets, and image search. This transition has yielded improved performance",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jiří Bednář",
+      "Jakub Náplava",
+      "Petra Barančíková",
+      "Ondřej Lisický"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13910": {
+    "title": "Dialogue Quality and Emotion Annotations for Customer Support Conversations",
+    "volume": "Nov",
+    "abstract": "Task-oriented conversational datasets often lack topic variability and linguistic diversity. However, with the advent of Large Language Models (LLMs) pretrained on extensive, multilingual and diverse text data, these limitations seem overcome. Nevertheless, their generalisability to different languages and domains in dialogue applications remains uncertain without benchmarking datasets. This paper presents a holistic annotation approach for emotion and conversational quality in the context of bilingual customer support conversations. By performing annotations that take into consideration the complete instances that compose a conversation, one can form a broader perspective of the dialogue as a whole. Furthermore, it provides a unique and valuable resource for the development of text classification models. To this end, we present benchmarks for Emotion Recognition and Dialogue Quality Estimation and show that further research is needed to leverage these models in a production setting",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "John Mendonça",
+      "Patrícia Pereira",
+      "Miguel Menezes",
+      "Vera Cabarrão",
+      "Ana C. Farinha",
+      "Helena Moniz",
+      "João Paulo Carvalho",
+      "Alon Lavie",
+      "Isabel Trancoso"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13892": {
+    "title": "General Phrase Debiaser: Debiasing Masked Language Models at a Multi-Token Level",
+    "volume": "Nov",
+    "abstract": "The social biases and unwelcome stereotypes revealed by pretrained language models are becoming obstacles to their application. Compared to numerous debiasing methods targeting word level, there has been relatively less attention on biases present at phrase level, limiting the performance of debiasing in discipline domains. In this paper, we propose an automatic multi-token debiasing pipeline called \\textbf{General Phrase Debiaser}, which is capable of mitigating phrase-level biases in masked language models. Specifically, our method consists of a \\textit{phrase filter stage} that generates stereotypical phrases from Wikipedia pages as well as a \\textit{model debias stage} that can debias models at the multi-token level to tackle bias challenges on phrases. The latter searches for prompts that trigger model's bias, and then uses them for debiasing. State-of-the-art results on standard datasets and metrics show that our approach can significantly reduce gender biases on both career and multiple disciplines, across models with varying parameter sizes",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Bingkang Shi",
+      "Xiaodan Zhang",
+      "Dehan Kong",
+      "Yulei Wu",
+      "Zongzhen Liu",
+      "Honglei Lyu",
+      "Longtao Huang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13878": {
+    "title": "Minimizing Factual Inconsistency and Hallucination in Large Language Models",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) are widely used in critical fields such as healthcare, education, and finance due to their remarkable proficiency in various language-related tasks. However, LLMs are prone to generating factually incorrect responses or \"hallucinations,\" which can lead to a loss of credibility and trust among users. To address this issue, we propose a multi-stage framework that generates the rationale first, verifies and refines incorrect ones, and uses them as supporting references to generate the answer. The generated rationale enhances the transparency of the answer and our framework provides insights into how the model arrived at this answer, by using this rationale and the references to the context. In this paper, we demonstrate its effectiveness in improving the quality of responses to drug-related inquiries in the life sciences industry. Our framework improves traditional Retrieval Augmented Generation (RAG) by enabling OpenAI GPT-3.5-turbo to be 14-25% more faithful and 16-22% more accurate on two datasets. Furthermore, fine-tuning samples based on our framework improves the accuracy of smaller open-access LLMs by 33-42% and competes with RAG on commercial models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Muneeswaran I",
+      "Shreya Saxena",
+      "Siva Prasad",
+      "M V Sai Prakash",
+      "Advaith Shankar",
+      "Varun V",
+      "Vishal Vaddina",
+      "Saisubramaniam Gopalakrishnan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13857": {
+    "title": "Challenges of Large Language Models for Mental Health Counseling",
+    "volume": "Nov",
+    "abstract": "The global mental health crisis is looming with a rapid increase in mental disorders, limited resources, and the social stigma of seeking treatment. As the field of artificial intelligence (AI) has witnessed significant advancements in recent years, large language models (LLMs) capable of understanding and generating human-like text may be used in supporting or providing psychological counseling. However, the application of LLMs in the mental health domain raises concerns regarding the accuracy, effectiveness, and reliability of the information provided. This paper investigates the major challenges associated with the development of LLMs for psychological counseling, including model hallucination, interpretability, bias, privacy, and clinical effectiveness. We explore potential solutions to these challenges that are practical and applicable to the current paradigm of AI. From our experience in developing and deploying LLMs for mental health, AI holds a great promise for improving mental health care, if we can carefully navigate and overcome pitfalls of LLMs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Neo Christopher Chung",
+      "George Dyer",
+      "Lennart Brocki"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13848": {
+    "title": "Grammatical Error Correction via Mixed-Grained Weighted Training",
+    "volume": "Nov",
+    "abstract": "The task of Grammatical Error Correction (GEC) aims to automatically correct grammatical errors in natural texts. Almost all previous works treat annotated training data equally, but inherent discrepancies in data are neglected. In this paper, the inherent discrepancies are manifested in two aspects, namely, accuracy of data annotation and diversity of potential annotations. To this end, we propose MainGEC, which designs token-level and sentence-level training weights based on inherent discrepancies in accuracy and potential diversity of data annotation, respectively, and then conducts mixed-grained weighted training to improve the training effect for GEC. Empirical evaluation shows that whether in the Seq2Seq or Seq2Edit manner, MainGEC achieves consistent and significant performance improvements on two benchmark datasets, demonstrating the effectiveness and superiority of the mixed-grained weighted training. Further ablation experiments verify the effectiveness of designed weights of both granularities in MainGEC",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jiahao Li",
+      "Quan Wang",
+      "Chiwei Zhu",
+      "Zhendong Mao",
+      "Yongdong Zhang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13833": {
+    "title": "Lego: Learning to Disentangle and Invert Concepts Beyond Object Appearance in Text-to-Image Diffusion Models",
+    "volume": "Nov",
+    "abstract": "Diffusion models have revolutionized generative content creation and text-to-image (T2I) diffusion models in particular have increased the creative freedom of users by allowing scene synthesis using natural language. T2I models excel at synthesizing concepts such as nouns, appearances, and styles. To enable customized content creation based on a few example images of a concept, methods such as Textual Inversion and DreamBooth invert the desired concept and enable synthesizing it in new scenes. However, inverting more general concepts that go beyond object appearance and style (adjectives and verbs) through natural language, remains a challenge. Two key characteristics of these concepts contribute to the limitations of current inversion methods. 1) Adjectives and verbs are entangled with nouns (subject) and can hinder appearance-based inversion methods, where the subject appearance leaks into the concept embedding and 2) describing such concepts often extends beyond single word embeddings (being frozen in ice, walking on a tightrope, etc.) that current methods do not handle. In this study, we introduce Lego, a textual inversion method designed to invert subject entangled concepts from a few example images. Lego disentangles concepts from their associated subjects using a simple yet effective Subject Separation step and employs a Context Loss that guides the inversion of single/multi-embedding concepts. In a thorough user study, Lego-generated concepts were preferred over 70% of the time when compared to the baseline. Additionally, visual question answering using a large language model suggested Lego-generated concepts are better aligned with the text description of the concept",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Saman Motamed",
+      "Danda Pani Paudel",
+      "Luc Van Gool"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13806": {
+    "title": "AdaTyper: Adaptive Semantic Column Type Detection",
+    "volume": "Nov",
+    "abstract": "Understanding the semantics of relational tables is instrumental for automation in data exploration and preparation systems. A key source for understanding a table is the semantics of its columns. With the rise of deep learning, learned table representations are now available, which can be applied for semantic type detection and achieve good performance on benchmarks. Nevertheless, we observe a gap between this performance and its applicability in practice. In this paper, we propose AdaTyper to address one of the most critical deployment challenges: adaptation. AdaTyper uses weak-supervision to adapt a hybrid type predictor towards new semantic types and shifted data distributions at inference time, using minimal human feedback. The hybrid type predictor of AdaTyper combines rule-based methods and a light machine learning model for semantic column type detection. We evaluate the adaptation performance of AdaTyper on real-world database tables hand-annotated with semantic column types through crowdsourcing and find that the f1-score improves for new and existing types. AdaTyper approaches an average precision of 0.6 after only seeing 5 examples, significantly outperforming existing adaptation methods based on human-provided regular expressions or dictionaries",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Madelon Hulsebos",
+      "Paul Groth",
+      "Çağatay Demiralp"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13784": {
+    "title": "DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling for Korean NLP",
+    "volume": "Nov",
+    "abstract": "This paper presents the DaG LLM (David and Goliath Large Language Model), a language model specialized for Korean and fine-tuned through Instruction Tuning across 41 tasks within 13 distinct categories",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Dongjun Jang",
+      "Sangah Lee",
+      "Sungjoo Byun",
+      "Jinwoong Kim",
+      "Jean Seo",
+      "Minseok Kim",
+      "Soyeon Kim",
+      "Chaeyoung Oh",
+      "Jaeyoon Kim",
+      "Hyemi Jo",
+      "Hyopil Shin"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13755": {
+    "title": "Transformer-based Named Entity Recognition in Construction Supply Chain Risk Management in Australia",
+    "volume": "Nov",
+    "abstract": "The construction industry in Australia is characterized by its intricate supply chains and vulnerability to myriad risks. As such, effective supply chain risk management (SCRM) becomes imperative. This paper employs different transformer models, and train for Named Entity Recognition (NER) in the context of Australian construction SCRM. Utilizing NER, transformer models identify and classify specific risk-associated entities in news articles, offering a detailed insight into supply chain vulnerabilities. By analysing news articles through different transformer models, we can extract relevant entities and insights related to specific risk taxonomies local (milieu) to the Australian construction landscape. This research emphasises the potential of NLP-driven solutions, like transformer models, in revolutionising SCRM for construction in geo-media specific contexts",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Milad Baghalzadeh Shishehgarkhaneh",
+      "Robert C. Moehler",
+      "Yihai Fang",
+      "Amer A. Hijazi",
+      "Hamed Aboutorab"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13735": {
+    "title": "Surpassing GPT-4 Medical Coding with a Two-Stage Approach",
+    "volume": "Nov",
+    "abstract": "Recent advances in large language models (LLMs) show potential for clinical applications, such as clinical decision support and trial recommendations. However, the GPT-4 LLM predicts an excessive number of ICD codes for medical coding tasks, leading to high recall but low precision. To tackle this challenge, we introduce LLM-codex, a two-stage approach to predict ICD codes that first generates evidence proposals using an LLM and then employs an LSTM-based verification stage. The LSTM learns from both the LLM's high recall and human expert's high precision, using a custom loss function. Our model is the only approach that simultaneously achieves state-of-the-art results in medical coding accuracy, accuracy on rare codes, and sentence-level evidence identification to support coding decisions without training on human-annotated evidence according to experiments on the MIMIC dataset",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhichao Yang",
+      "Sanjit Singh Batra",
+      "Joel Stremmel",
+      "Eran Halperin"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13729": {
+    "title": "Comparison of pipeline, sequence-to-sequence, and GPT models for end-to-end relation extraction: experiments with the rare disease use-case",
+    "volume": "Nov",
+    "abstract": "End-to-end relation extraction (E2ERE) is an important and realistic application of natural language processing (NLP) in biomedicine. In this paper, we aim to compare three prevailing paradigms for E2ERE using a complex dataset focused on rare diseases involving discontinuous and nested entities. We use the RareDis information extraction dataset to evaluate three competing approaches (for E2ERE): NER $\\rightarrow$ RE pipelines, joint sequence to sequence models, and generative pre-trained transformer (GPT) models. We use comparable state-of-the-art models and best practices for each of these approaches and conduct error analyses to assess their failure modes. Our findings reveal that pipeline models are still the best, while sequence-to-sequence models are not far behind; GPT models with eight times as many parameters are worse than even sequence-to-sequence models and lose to pipeline models by over 10 F1 points. Partial matches and discontinuous entities caused many NER errors contributing to lower overall E2E performances. We also verify these findings on a second E2ERE dataset for chemical-protein interactions. Although generative LM-based methods are more suitable for zero-shot settings, when training data is available, our results show that it is better to work with more conventional models trained and tailored for E2ERE. More innovative methods are needed to marry the best of the both worlds from smaller encoder-decoder pipeline models and the larger GPT models to improve E2ERE. As of now, we see that well designed pipeline models offer substantial performance gains at a lower cost and carbon footprint for E2ERE. Our contribution is also the first to conduct E2ERE for the RareDis dataset",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shashank Gupta",
+      "Xuguang Ai",
+      "Ramakanth Kavuluru"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13708": {
+    "title": "Dynamic Analysis Method for Hidden Dangers in Substation Based on Knowledge Graph",
+    "volume": "Nov",
+    "abstract": "To address the challenge of identifying and understanding hidden dangers in substations from unstructured text data, a novel dynamic analysis method is proposed. This approach begins by analyzing and extracting data from the unstructured text related to hidden dangers. It then leverages a flexible, distributed data search engine built on Elastic-Search to handle this information. Following this, the hidden Markov model is employed to train the data within the engine. The Viterbi algorithm is integrated to decipher the hidden state sequences, facilitating the segmentation and labeling of entities related to hidden dangers. The final step involves using the Neo4j graph database to dynamically create a knowledge map that visualizes hidden dangers in the substation. This method's effectiveness is demonstrated through an example analysis using data from a specific substation's hidden dangers",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Weiwei Li",
+      "Xing Liu",
+      "Wei Wang",
+      "Lu Chen",
+      "Sizhe Li",
+      "Hui Fan"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13668": {
+    "title": "MAIRA-1: A specialised large multimodal model for radiology report generation",
+    "volume": "Nov",
+    "abstract": "We present a radiology-specific multimodal model for the task for generating radiological reports from chest X-rays (CXRs). Our work builds on the idea that large language model(s) can be equipped with multimodal capabilities through alignment with pre-trained vision encoders. On natural images, this has been shown to allow multimodal models to gain image understanding and description capabilities. Our proposed model (MAIRA-1) leverages a CXR-specific image encoder in conjunction with a fine-tuned large language model based on Vicuna-7B, and text-based data augmentation, to produce reports with state-of-the-art quality. In particular, MAIRA-1 significantly improves on the radiologist-aligned RadCliQ metric and across all lexical metrics considered. Manual review of model outputs demonstrates promising fluency and accuracy of generated reports while uncovering failure modes not captured by existing evaluation practices. More information and resources can be found on the project website: https://aka.ms/maira",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Stephanie L. Hyland",
+      "Shruthi Bannur",
+      "Kenza Bouzid",
+      "Daniel C. Castro",
+      "Mercy Ranjit",
+      "Anton Schwaighofer",
+      "Fernando Pérez-García",
+      "Valentina Salvatelli",
+      "Shaury Srivastav",
+      "Anja Thieme",
+      "Noel Codella",
+      "Matthew P. Lungren",
+      "Maria Teodora Wetscherek",
+      "Ozan Oktay",
+      "Javier Alvarez-Valle"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13657": {
+    "title": "Efficient Transformer Knowledge Distillation: A Performance Review",
+    "volume": "Nov",
+    "abstract": "As pretrained transformer language models continue to achieve state-of-the-art performance, the Natural Language Processing community has pushed for advances in model compression and efficient attention mechanisms to address high computational requirements and limited input sequence length. Despite these separate efforts, no investigation has been done into the intersection of these two fields. In this work, we provide an evaluation of model compression via knowledge distillation on efficient attention transformers. We provide cost-performance trade-offs for the compression of state-of-the-art efficient attention architectures and the gains made in performance in comparison to their full attention counterparts. Furthermore, we introduce a new long-context Named Entity Recognition dataset, GONERD, to train and test the performance of NER models on long sequences. We find that distilled efficient attention transformers can preserve a significant amount of original model performance, preserving up to 98.6% across short-context tasks (GLUE, SQUAD, CoNLL-2003), up to 94.6% across long-context Question-and-Answering tasks (HotpotQA, TriviaQA), and up to 98.8% on long-context Named Entity Recognition (GONERD), while decreasing inference times by up to 57.8%. We find that, for most models on most tasks, performing knowledge distillation is an effective method to yield high-performing efficient attention models with low costs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nathan Brown",
+      "Ashton Williamson",
+      "Tahj Anderson",
+      "Logan Lawrence"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13647": {
+    "title": "Language Model Inversion",
+    "volume": "Nov",
+    "abstract": "Language models produce a distribution over the next token; can we use this information to recover the prompt tokens? We consider the problem of language model inversion and show that next-token probabilities contain a surprising amount of information about the preceding text. Often we can recover the text in cases where it is hidden from the user, motivating a method for recovering unknown prompts given only the model's current distribution output. We consider a variety of model access scenarios, and show how even without predictions for every token in the vocabulary we can recover the probability vector through search. On Llama-2 7b, our inversion method reconstructs prompts with a BLEU of $59$ and token-level F1 of $78$ and recovers $27\\%$ of prompts exactly. Code for reproducing all experiments is available at http://github.com/jxmorris12/vec2text",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "John X. Morris",
+      "Wenting Zhao",
+      "Justin T. Chiu",
+      "Vitaly Shmatikov",
+      "Alexander M. Rush"
+    ]
+  },
+  "http://arxiv.org/abs/2311.13628": {
+    "title": "Prompt Risk Control: A Rigorous Framework for Responsible Deployment of Large Language Models",
+    "volume": "Nov",
+    "abstract": "The recent explosion in the capabilities of large language models has led to a wave of interest in how best to prompt a model to perform a given task. While it may be tempting to simply choose a prompt based on average performance on a validation set, this can lead to a deployment where unexpectedly poor responses are generated, especially for the worst-off users. To mitigate this prospect, we propose Prompt Risk Control, a lightweight framework for selecting a prompt based on rigorous upper bounds on families of informative risk measures. We offer methods for producing bounds on a diverse set of metrics, including quantities that measure worst-case responses and disparities in generation quality across the population of users. In addition, we extend the underlying statistical bounding techniques to accommodate the possibility of distribution shifts in deployment. Experiments on applications such as open-ended chat, medical question summarization, and code generation highlight how such a framework can foster responsible deployment by reducing the risk of the worst outcomes",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Thomas P. Zollo",
+      "Todd Morrill",
+      "Zhun Deng",
+      "Jake C. Snell",
+      "Toniann Pitassi",
+      "Richard Zemel"
+    ]
+  },
   "http://arxiv.org/abs/2311.13581": {
     "title": "PaSS: Parallel Speculative Sampling",
     "volume": "Nov",
