@@ -1,4 +1,728 @@
 {
+  "http://arxiv.org/abs/2311.17049": {
+    "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training",
+    "volume": "Nov",
+    "abstract": "Contrastive pretraining of image-text foundation models, such as CLIP, demonstrated excellent zero-shot performance and improved robustness on a wide range of downstream tasks. However, these models utilize large transformer-based encoders with significant memory and latency overhead which pose challenges for deployment on mobile devices. In this work, we introduce MobileCLIP -- a new family of efficient image-text models optimized for runtime performance along with a novel and efficient training approach, namely multi-modal reinforced training. The proposed training approach leverages knowledge transfer from an image captioning model and an ensemble of strong CLIP encoders to improve the accuracy of efficient models. Our approach avoids train-time compute overhead by storing the additional knowledge in a reinforced dataset. MobileCLIP sets a new state-of-the-art latency-accuracy tradeoff for zero-shot classification and retrieval tasks on several datasets. Our MobileCLIP-S2 variant is 2.3$\\times$ faster while more accurate compared to previous best CLIP model based on ViT-B/16. We further demonstrate the effectiveness of our multi-modal reinforced training by training a CLIP model based on ViT-B/16 image backbone and achieving +2.9% average performance improvement on 38 evaluation benchmarks compared to the previous best. Moreover, we show that the proposed approach achieves 10$\\times$-1000$\\times$ improved learning efficiency when compared with non-reinforced CLIP training",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Pavan Kumar Anasosalu Vasu",
+      "Hadi Pouransari",
+      "Fartash Faghri",
+      "Raviteja Vemulapalli",
+      "Oncel Tuzel"
+    ]
+  },
+  "http://arxiv.org/abs/2311.17043": {
+    "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+    "volume": "Nov",
+    "abstract": "In this work, we present a novel method to tackle the token generation challenge in Vision Language Models (VLMs) for video and image understanding, called LLaMA-VID. Current VLMs, while proficient in tasks like image captioning and visual question answering, face computational burdens when processing long videos due to the excessive visual tokens. LLaMA-VID addresses this issue by representing each frame with two distinct tokens, namely context token and content token. The context token encodes the overall image context based on user input, whereas the content token encapsulates visual cues in each frame. This dual-token strategy significantly reduces the overload of long videos while preserving critical information. Generally, LLaMA-VID empowers existing frameworks to support hour-long videos and pushes their upper limit with an extra context token. It is proved to surpass previous methods on most of video- or image-based benchmarks. Code is available https://github.com/dvlab-research/LLaMA-VID}{https://github.com/dvlab-research/LLaMA-VID",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yanwei Li",
+      "Chengyao Wang",
+      "Jiaya Jia"
+    ]
+  },
+  "http://arxiv.org/abs/2311.17041": {
+    "title": "Efficient In-Context Learning in Vision-Language Models for Egocentric Videos",
+    "volume": "Nov",
+    "abstract": "Recent advancements in text-only large language models (LLMs) have highlighted the benefit of in-context learning for adapting to new tasks with a few demonstrations. However, extending in-context learning to large vision-language models (VLMs) using a huge amount of naturalistic vision-language data has shown limited success, particularly for egocentric videos, due to high data collection costs. We propose a novel training method $\\mathbb{E}$fficient $\\mathbb{I}$n-context $\\mathbb{L}$earning on $\\mathbb{E}$gocentric $\\mathbb{V}$ideos ($\\mathbb{EILEV}$), which elicits in-context learning in VLMs for egocentric videos without requiring massive, naturalistic egocentric video datasets. $\\mathbb{EILEV}$ involves architectural and training data adaptations to allow the model to process contexts interleaved with video clips and narrations, sampling of in-context examples with clusters of similar verbs and nouns, use of data with skewed marginal distributions with a long tail of infrequent verbs and nouns, as well as homonyms and synonyms. Our evaluations show that $\\mathbb{EILEV}$-trained models outperform larger VLMs trained on a huge amount of naturalistic data in in-context learning. Furthermore, they can generalize to not only out-of-distribution, but also novel, rare egocentric videos and texts via in-context learning, demonstrating potential for applications requiring cost-effective training, and rapid post-deployment adaptability. Our code and demo are available at \\url{https://github.com/yukw777/EILEV}",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Keunwoo Peter Yu",
+      "Zheyuan Zhang",
+      "Fengyuan Hu",
+      "Joyce Chai"
+    ]
+  },
+  "http://arxiv.org/abs/2311.17035": {
+    "title": "Scalable Extraction of Training Data from (Production) Language Models",
+    "volume": "Nov",
+    "abstract": "This paper studies extractable memorization: training data that an adversary can efficiently extract by querying a machine learning model without prior knowledge of the training dataset. We show an adversary can extract gigabytes of training data from open-source language models like Pythia or GPT-Neo, semi-open models like LLaMA or Falcon, and closed models like ChatGPT. Existing techniques from the literature suffice to attack unaligned models; in order to attack the aligned ChatGPT, we develop a new divergence attack that causes the model to diverge from its chatbot-style generations and emit training data at a rate 150x higher than when behaving properly. Our methods show practical attacks can recover far more data than previously thought, and reveal that current alignment techniques do not eliminate memorization",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Milad Nasr",
+      "Nicholas Carlini",
+      "Jonathan Hayase",
+      "Matthew Jagielski",
+      "A. Feder Cooper",
+      "Daphne Ippolito",
+      "Christopher A. Choquette-Choo",
+      "Eric Wallace",
+      "Florian Tramèr",
+      "Katherine Lee"
+    ]
+  },
+  "http://arxiv.org/abs/2311.17030": {
+    "title": "Is This the Subspace You Are Looking for? An Interpretability Illusion for Subspace Activation Patching",
+    "volume": "Nov",
+    "abstract": "Mechanistic interpretability aims to understand model behaviors in terms of specific, interpretable features, often hypothesized to manifest as low-dimensional subspaces of activations. Specifically, recent studies have explored subspace interventions (such as activation patching) as a way to simultaneously manipulate model behavior and attribute the features behind it to given subspaces. In this work, we demonstrate that these two aims diverge, potentially leading to an illusory sense of interpretability. Counterintuitively, even if a subspace intervention makes the model's output behave as if the value of a feature was changed, this effect may be achieved by activating a dormant parallel pathway leveraging another subspace that is causally disconnected from model outputs. We demonstrate this phenomenon in a distilled mathematical example, in two real-world domains (the indirect object identification task and factual recall), and present evidence for its prevalence in practice. In the context of factual recall, we further show a link to rank-1 fact editing, providing a mechanistic explanation for previous work observing an inconsistency between fact editing performance and fact localization. However, this does not imply that activation patching of subspaces is intrinsically unfit for interpretability. To contextualize our findings, we also show what a success case looks like in a task (indirect object identification) where prior manual circuit analysis informs an understanding of the location of a feature. We explore the additional evidence needed to argue that a patched subspace is faithful",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aleksandar Makelov",
+      "Georg Lange",
+      "Neel Nanda"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16989": {
+    "title": "ChatGPT's One-year Anniversary: Are Open-Source Large Language Models Catching up?",
+    "volume": "Nov",
+    "abstract": "Upon its release in late 2022, ChatGPT has brought a seismic shift in the entire landscape of AI, both in research and commerce. Through instruction-tuning a large language model (LLM) with supervised fine-tuning and reinforcement learning from human feedback, it showed that a model could answer human questions and follow instructions on a broad panel of tasks. Following this success, interests in LLMs have intensified, with new LLMs flourishing at frequent interval across academia and industry, including many start-ups focused on LLMs. While closed-source LLMs (e.g., OpenAI's GPT, Anthropic's Claude) generally outperform their open-source counterparts, the progress on the latter has been rapid with claims of achieving parity or even better on certain tasks. This has crucial implications not only on research but also on business. In this work, on the first anniversary of ChatGPT, we provide an exhaustive overview of this success, surveying all tasks where an open-source LLM has claimed to be on par or better than ChatGPT",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hailin Chen",
+      "Fangkai Jiao",
+      "Xingxuan Li",
+      "Chengwei Qin",
+      "Mathieu Ravaut",
+      "Ruochen Zhao",
+      "Caiming Xiong",
+      "Shafiq Joty"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16978": {
+    "title": "Assessing the influence of attractor-verb distance on grammatical agreement in humans and language models",
+    "volume": "Nov",
+    "abstract": "Subject-verb agreement in the presence of an attractor noun located between the main noun and the verb elicits complex behavior: judgments of grammaticality are modulated by the grammatical features of the attractor. For example, in the sentence \"The girl near the boys likes climbing\", the attractor (boys) disagrees in grammatical number with the verb (likes), creating a locally implausible transition probability. Here, we parametrically modulate the distance between the attractor and the verb while keeping the length of the sentence equal. We evaluate the performance of both humans and two artificial neural network models: both make more mistakes when the attractor is closer to the verb, but neural networks get close to the chance level while humans are mostly able to overcome the attractor interference. Additionally, we report a linear effect of attractor distance on reaction times. We hypothesize that a possible reason for the proximity effect is the calculation of transition probabilities between adjacent words. Nevertheless, classical models of attraction such as the cue-based model might suffice to explain this phenomenon, thus paving the way for new research. Data and analyses available at https://osf.io/d4g6k",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Christos-Nikolaos Zacharopoulos",
+      "Théo Desbordes",
+      "Mathias Sablé-Meyer"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16965": {
+    "title": "Natural Language Processing Through Transfer Learning: A Case Study on Sentiment Analysis",
+    "volume": "Nov",
+    "abstract": "Artificial intelligence and machine learning have significantly bolstered the technological world. This paper explores the potential of transfer learning in natural language processing focusing mainly on sentiment analysis. The models trained on the big data can also be used where data are scarce. The claim is that, compared to training models from scratch, transfer learning, using pre-trained BERT models, can increase sentiment classification accuracy. The study adopts a sophisticated experimental design that uses the IMDb dataset of sentimentally labelled movie reviews. Pre-processing includes tokenization and encoding of text data, making it suitable for NLP models. The dataset is used on a BERT based model, measuring its performance using accuracy. The result comes out to be 100 per cent accurate. Although the complete accuracy could appear impressive, it might be the result of overfitting or a lack of generalization. Further analysis is required to ensure the model's ability to handle diverse and unseen data. The findings underscore the effectiveness of transfer learning in NLP, showcasing its potential to excel in sentiment analysis tasks. However, the research calls for a cautious interpretation of perfect accuracy and emphasizes the need for additional measures to validate the model's generalization",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aman Yadav",
+      "Abhishek Vichare"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16941": {
+    "title": "Debiasing Multimodal Models via Causal Information Minimization",
+    "volume": "Nov",
+    "abstract": "Most existing debiasing methods for multimodal models, including causal intervention and inference methods, utilize approximate heuristics to represent the biases, such as shallow features from early stages of training or unimodal features for multimodal tasks like VQA, etc., which may not be accurate. In this paper, we study bias arising from confounders in a causal graph for multimodal data and examine a novel approach that leverages causally-motivated information minimization to learn the confounder representations. Robust predictive features contain diverse information that helps a model generalize to out-of-distribution data. Hence, minimizing the information content of features obtained from a pretrained biased model helps learn the simplest predictive features that capture the underlying data distribution. We treat these features as confounder representations and use them via methods motivated by causal theory to remove bias from models. We find that the learned confounder representations indeed capture dataset biases, and the proposed debiasing methods improve out-of-distribution (OOD) performance on multiple multimodal datasets without sacrificing in-distribution performance. Additionally, we introduce a novel metric to quantify the sufficiency of spurious features in models' predictions that further demonstrates the effectiveness of our proposed methods. Our code is available at: https://github.com/Vaidehi99/CausalInfoMin",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Vaidehi Patil",
+      "Adyasha Maharana",
+      "Mohit Bansal"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16922": {
+    "title": "Mitigating Object Hallucinations in Large Vision-Language Models through Visual Contrastive Decoding",
+    "volume": "Nov",
+    "abstract": "Large Vision-Language Models (LVLMs) have advanced considerably, intertwining visual recognition and language understanding to generate content that is not only coherent but also contextually attuned. Despite their success, LVLMs still suffer from the issue of object hallucinations, where models generate plausible yet incorrect outputs that include objects that do not exist in the images. To mitigate this issue, we introduce Visual Contrastive Decoding (VCD), a simple and training-free method that contrasts output distributions derived from original and distorted visual inputs. The proposed VCD effectively reduces the over-reliance on statistical bias and unimodal priors, two essential causes of object hallucinations. This adjustment ensures the generated content is closely grounded to visual inputs, resulting in contextually accurate outputs. Our experiments show that VCD, without either additional training or the usage of external tools, significantly mitigates the object hallucination issue across different LVLM families. Beyond mitigating object hallucinations, VCD also excels in general LVLM benchmarks, highlighting its wide-ranging applicability",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sicong Leng",
+      "Hang Zhang",
+      "Guanzheng Chen",
+      "Xin Li",
+      "Shijian Lu",
+      "Chunyan Miao",
+      "Lidong Bing"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16882": {
+    "title": "Optimisation-Based Multi-Modal Semantic Image Editing",
+    "volume": "Nov",
+    "abstract": "Image editing affords increased control over the aesthetics and content of generated images. Pre-existing works focus predominantly on text-based instructions to achieve desired image modifications, which limit edit precision and accuracy. In this work, we propose an inference-time editing optimisation, designed to extend beyond textual edits to accommodate multiple editing instruction types (e.g. spatial layout-based; pose, scribbles, edge maps). We propose to disentangle the editing task into two competing subtasks: successful local image modifications and global content consistency preservation, where subtasks are guided through two dedicated loss functions. By allowing to adjust the influence of each loss function, we build a flexible editing solution that can be adjusted to user preferences. We evaluate our method using text, pose and scribble edit conditions, and highlight our ability to achieve complex edits, through both qualitative and quantitative experiments",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Bowen Li",
+      "Yongxin Yang",
+      "Steven McDonagh",
+      "Shifeng Zhang",
+      "Petru-Daniel Tudosiu",
+      "Sarah Parisot"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16867": {
+    "title": "The Falcon Series of Open Language Models",
+    "volume": "Nov",
+    "abstract": "We introduce the Falcon series: 7B, 40B, and 180B parameters causal decoder-only models trained on a diverse high-quality corpora predominantly assembled from web data. The largest model, Falcon-180B, has been trained on over 3.5 trillion tokens of text--the largest openly documented pretraining run. Falcon-180B significantly outperforms models such as PaLM or Chinchilla, and improves upon concurrently developed models such as LLaMA 2 or Inflection-1. It nears the performance of PaLM-2-Large at a reduced pretraining and inference cost, making it, to our knowledge, one of the three best language models in the world along with GPT-4 and PaLM-2-Large. We report detailed evaluations, as well as a deep dive into the methods and custom tooling employed to pretrain Falcon. Notably, we report on our custom distributed training codebase, allowing us to efficiently pretrain these models on up to 4,096 A100s on cloud AWS infrastructure with limited interconnect. We release a 600B tokens extract of our web dataset, as well as the Falcon-7/40/180B models under a permissive license to foster open-science and accelerate the development of an open ecosystem of large language models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ebtesam Almazrouei",
+      "Hamza Alobeidli",
+      "Abdulaziz Alshamsi",
+      "Alessandro Cappelli",
+      "Ruxandra Cojocaru",
+      "Daniel Hesslow",
+      "Julien Launay",
+      "Quentin Malartic",
+      "Daniele Mazzotta",
+      "Badreddine Noune",
+      "Baptiste Pannier",
+      "Guilherme Penedo"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16865": {
+    "title": "A Benchmark for Evaluating Machine Translation Metrics on Dialects Without Standard Orthography",
+    "volume": "Nov",
+    "abstract": "For sensible progress in natural language processing, it is important that we are aware of the limitations of the evaluation metrics we use. In this work, we evaluate how robust metrics are to non-standardized dialects, i.e. spelling differences in language varieties that do not have a standard orthography. To investigate this, we collect a dataset of human translations and human judgments for automatic machine translations from English to two Swiss German dialects. We further create a challenge set for dialect variation and benchmark existing metrics' performances. Our results show that existing metrics cannot reliably evaluate Swiss German text generation outputs, especially on segment level. We propose initial design adaptations that increase robustness in the face of non-standardized dialects, although there remains much room for further improvement. The dataset, code, and models are available here: https://github.com/textshuttle/dialect_eval",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Noëmi Aepli",
+      "Chantal Amrhein",
+      "Florian Schottmann",
+      "Rico Sennrich"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16842": {
+    "title": "RELIC: Investigating Large Language Model Responses using Self-Consistency",
+    "volume": "Nov",
+    "abstract": "Large Language Models (LLMs) are notorious for blending fact with fiction and generating non-factual content, known as hallucinations. To tackle this challenge, we propose an interactive system that helps users obtain insights into the reliability of the generated text. Our approach is based on the idea that the self-consistency of multiple samples generated by the same LLM relates to its confidence in individual claims in the generated texts. Using this idea, we design RELIC, an interactive system that enables users to investigate and verify semantic-level variations in multiple long-form responses. This allows users to recognize potentially inaccurate information in the generated text and make necessary corrections. From a user study with ten participants, we demonstrate that our approach helps users better verify the reliability of the generated text. We further summarize the design implications and lessons learned from this research for inspiring future studies on reliable human-LLM interactions",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Furui Cheng",
+      "Vilém Zouhar",
+      "Simran Arora",
+      "Mrinmaya Sachan",
+      "Hendrik Strobelt",
+      "Mennatallah El-Assady"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16840": {
+    "title": "The Claire French Dialogue Dataset",
+    "volume": "Nov",
+    "abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models. This paper describes the 24 individual corpora of which CFDD is composed and provides links and citations to their original sources. It also provides our proposed breakdown of the full CFDD dataset into eight categories of subcorpora and describes the process we followed to standardize the format of the final dataset. We conclude with a discussion of similar work and future directions",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Julie Hunter",
+      "Jérôme Louradour",
+      "Virgile Rennard",
+      "Ismaïl Harrando",
+      "Guokan Shang",
+      "Jean-Pierre Lorré"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16839": {
+    "title": "Beyond Hallucinations: Enhancing LVLMs through Hallucination-Aware Direct Preference Optimization",
+    "volume": "Nov",
+    "abstract": "Multimodal large language models have made significant advancements in recent years, yet they still suffer from a common issue known as the \"hallucination problem\" where the models generate textual descriptions that contain inaccurate or non-existent content from the image. To address this issue, this paper introduces a novel strategy: Hallucination-Aware Direct Preference Optimization (HA-DPO). Our approach treats the hallucination problem as a unique preference selection issue, where the model is trained to favor the non-hallucinating response when presented with two responses of the same image (one accurate and one hallucinating). This paper also presents an efficient process for constructing hallucination sample pairs to ensure high-quality, style-consistent pairs for stable HA-DPO training. We applied this strategy to two mainstream multimodal models, and the results showed a significant reduction in the hallucination problem and an enhancement in the models' generalization capabilities. With HA-DPO, the MiniGPT-4 model demonstrates significant advancements: POPE accuracy increases from 51.13% to 85.66% (34.5% absolute improvement), and the MME score escalates from 968.58 to 1365.76 (41% relative improvement). The code, models, and datasets will be made publicly available",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhiyuan Zhao",
+      "Bin Wang",
+      "Linke Ouyang",
+      "Xiaoyi Dong",
+      "Jiaqi Wang",
+      "Conghui He"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16832": {
+    "title": "CharacterGLM: Customizing Chinese Conversational AI Characters with Large Language Models",
+    "volume": "Nov",
+    "abstract": "In this paper, we present CharacterGLM, a series of models built upon ChatGLM, with model sizes ranging from 6B to 66B parameters. Our CharacterGLM is designed for generating Character-based Dialogues (CharacterDial), which aims to equip a conversational AI system with character customization for satisfying people's inherent social desires and emotional needs. On top of CharacterGLM, we can customize various AI characters or social agents by configuring their attributes (identities, interests, viewpoints, experiences, achievements, social relationships, etc.) and behaviors (linguistic features, emotional expressions, interaction patterns, etc.). Our model outperforms most mainstream close-source large langauge models, including the GPT series, especially in terms of consistency, human-likeness, and engagement according to manual evaluations. We will release our 6B version of CharacterGLM and a subset of training data to facilitate further research development in the direction of character-based dialogue generation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jinfeng Zhou",
+      "Zhuang Chen",
+      "Dazhen Wan",
+      "Bosi Wen",
+      "Yi Song",
+      "Jifan Yu",
+      "Yongkang Huang",
+      "Libiao Peng",
+      "Jiaming Yang",
+      "Xiyao Xiao",
+      "Sahand Sabour",
+      "Xiaohan Zhang",
+      "Wenjing Hou",
+      "Yijia Zhang",
+      "Yuxiao Dong",
+      "Jie Tang",
+      "Minlie Huang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16822": {
+    "title": "Large Language Models Suffer From Their Own Output: An Analysis of the Self-Consuming Training Loop",
+    "volume": "Nov",
+    "abstract": "Large language models (LLM) have become state of the art in many benchmarks and conversational LLM applications like ChatGPT are now widely used by the public. Those LLMs can be used to generate large amounts of content which is posted on the internet to various platforms. As LLMs are trained on datasets usually collected from the internet, this LLM-generated content might be used to train the next generation of LLMs. Therefore, a self-consuming training loop emerges in which new LLM generations are trained on the output from the previous generations. We empirically study this self-consuming training loop using a novel dataset to analytically and accurately measure quality and diversity of generated outputs. We find that this self-consuming training loop initially improves both quality and diversity. However, after a few generations the output inevitably degenerates in diversity. We find that the rate of degeneration depends on the proportion of real and generated data",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Martin Briesch",
+      "Dominik Sobania",
+      "Franz Rothlauf"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16789": {
+    "title": "A Survey of the Evolution of Language Model-Based Dialogue Systems",
+    "volume": "Nov",
+    "abstract": "Dialogue systems, including task-oriented_dialogue_system (TOD) and open-domain_dialogue_system (ODD), have undergone significant transformations, with language_models (LM) playing a central role. This survey delves into the historical trajectory of dialogue systems, elucidating their intricate relationship with advancements in language models by categorizing this evolution into four distinct stages, each marked by pivotal LM breakthroughs: 1) Early_Stage: characterized by statistical LMs, resulting in rule-based or machine-learning-driven dialogue_systems; 2) Independent development of TOD and ODD based on neural_language_models (NLM; e.g., LSTM and GRU), since NLMs lack intrinsic knowledge in their parameters; 3) fusion between different types of dialogue systems with the advert of pre-trained_language_models (PLMs), starting from the fusion between four_sub-tasks_within_TOD, and then TOD_with_ODD; and 4) current LLM-based_dialogue_system, wherein LLMs can be used to conduct TOD and ODD seamlessly. Thus, our survey provides a chronological perspective aligned with LM breakthroughs, offering a comprehensive review of state-of-the-art research outcomes. What's more, we focus on emerging topics and discuss open challenges, providing valuable insights into future directions for LLM-based_dialogue_systems. Through this exploration, we pave the way for a deeper_comprehension of the evolution, guiding future developments in LM-based dialogue_systems",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hongru Wang",
+      "Lingzhi Wang",
+      "Yiming Du",
+      "Liang Chen",
+      "Jingyan Zhou",
+      "Yufei Wang",
+      "Kam-Fai Wong"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16787": {
+    "title": "Evaluating Optimal Reference Translations",
+    "volume": "Nov",
+    "abstract": "The overall translation quality reached by current machine translation (MT) systems for high-resourced language pairs is remarkably good. Standard methods of evaluation are not suitable nor intended to uncover the many translation errors and quality deficiencies that still persist. Furthermore, the quality of standard reference translations is commonly questioned and comparable quality levels have been reached by MT alone in several language pairs. Navigating further research in these high-resource settings is thus difficult. In this article, we propose a methodology for creating more reliable document-level human reference translations, called \"optimal reference translations,\" with the simple aim to raise the bar of what should be deemed \"human translation quality.\" We evaluate the obtained document-level optimal reference translations in comparison with \"standard\" ones, confirming a significant quality increase and also documenting the relationship between evaluation and translation editing",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Vilém Zouhar",
+      "Věra Kloudová",
+      "Martin Popel",
+      "Ondřej Bojar"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16764": {
+    "title": "Radiology-Aware Model-Based Evaluation Metric for Report Generation",
+    "volume": "Nov",
+    "abstract": "We propose a new automated evaluation metric for machine-generated radiology reports using the successful COMET architecture adapted for the radiology domain. We train and publish four medically-oriented model checkpoints, including one trained on RadGraph, a radiology knowledge graph. Our results show that our metric correlates moderately to high with established metrics such as BERTscore, BLEU, and CheXbert scores. Furthermore, we demonstrate that one of our checkpoints exhibits a high correlation with human judgment, as assessed using the publicly available annotations of six board-certified radiologists, using a set of 200 reports. We also performed our own analysis gathering annotations with two radiologists on a collection of 100 reports. The results indicate the potential effectiveness of our method as a radiology-specific evaluation metric. The code, data, and model checkpoints to reproduce our findings will be publicly available",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Amos Calamida",
+      "Farhad Nooralahzadeh",
+      "Morteza Rohanian",
+      "Koji Fujimoto",
+      "Mizuho Nishio",
+      "Michael Krauthammer"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16733": {
+    "title": "LLMs for Science: Usage for Code Generation and Data Analysis",
+    "volume": "Nov",
+    "abstract": "Large language models (LLMs) have been touted to enable increased productivity in many areas of today's work life. Scientific research as an area of work is no exception: the potential of LLM-based tools to assist in the daily work of scientists has become a highly discussed topic across disciplines. However, we are only at the very onset of this subject of study. It is still unclear how the potential of LLMs will materialise in research practice. With this study, we give first empirical evidence on the use of LLMs in the research process. We have investigated a set of use cases for LLM-based tools in scientific research, and conducted a first study to assess to which degree current tools are helpful. In this paper we report specifically on use cases related to software engineering, such as generating application code and developing scripts for data analytics. While we studied seemingly simple use cases, results across tools differ significantly. Our results highlight the promise of LLM-based tools in general, yet we also observe various issues, particularly regarding the integrity of the output these tools provide",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Mohamed Nejjar",
+      "Luca Zacharias",
+      "Fabian Stiehle",
+      "Ingo Weber"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16678": {
+    "title": "Entity-Aspect-Opinion-Sentiment Quadruple Extraction for Fine-grained Sentiment Analysis",
+    "volume": "Nov",
+    "abstract": "Product reviews often contain a large number of implicit aspects and object-attribute co-existence cases. Unfortunately, many existing studies in Aspect-Based Sentiment Analysis (ABSA) have overlooked this issue, which can make it difficult to extract opinions comprehensively and fairly. In this paper, we propose a new task called Entity-Aspect-Opinion-Sentiment Quadruple Extraction (EASQE), which aims to hierarchically decompose aspect terms into entities and aspects to avoid information loss, non-exclusive annotations, and opinion misunderstandings in ABSA tasks. To facilitate research in this new task, we have constructed four datasets (Res14-EASQE, Res15-EASQE, Res16-EASQE, and Lap14-EASQE) based on the SemEval Restaurant and Laptop datasets. We have also proposed a novel two-stage sequence-tagging based Trigger-Opinion framework as the baseline for the EASQE task. Empirical evaluations show that our Trigger-Opinion framework can generate satisfactory EASQE results and can also be applied to other ABSA tasks, significantly outperforming state-of-the-art methods. We have made the four datasets and source code of Trigger-Opinion publicly available to facilitate further research in this area",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Dan Ma",
+      "Jun Xu",
+      "Zongyu Wang",
+      "Xuezhi Cao",
+      "Yunsen Xian"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16675": {
+    "title": "A Distribution-Based Threshold for Determining Sentence Similarity",
+    "volume": "Nov",
+    "abstract": "We hereby present a solution to a semantic textual similarity (STS) problem in which it is necessary to match two sentences containing, as the only distinguishing factor, highly specific information (such as names, addresses, identification codes), and from which we need to derive a definition for when they are similar and when they are not. The solution revolves around the use of a neural network, based on the siamese architecture, to create the distributions of the distances between similar and dissimilar pairs of sentences. The goal of these distributions is to find a discriminating factor, that we call \"threshold\", which represents a well-defined quantity that can be used to distinguish vector distances of similar pairs from vector distances of dissimilar pairs in new predictions and later analyses. In addition, we developed a way to score the predictions by combining attributes from both the distributions' features and the way the distance function works. Finally, we generalize the results showing that they can be transferred to a wider range of domains by applying the system discussed to a well-known and widely used benchmark dataset for STS problems",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Gioele Cadamuro",
+      "Marco Gruppo"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16650": {
+    "title": "Text2Tree: Aligning Text Representation to the Label Tree Hierarchy for Imbalanced Medical Classification",
+    "volume": "Nov",
+    "abstract": "Deep learning approaches exhibit promising performances on various text tasks. However, they are still struggling on medical text classification since samples are often extremely imbalanced and scarce. Different from existing mainstream approaches that focus on supplementary semantics with external medical information, this paper aims to rethink the data challenges in medical texts and present a novel framework-agnostic algorithm called Text2Tree that only utilizes internal label hierarchy in training deep learning models. We embed the ICD code tree structure of labels into cascade attention modules for learning hierarchy-aware label representations. Two new learning schemes, Similarity Surrogate Learning (SSL) and Dissimilarity Mixup Learning (DML), are devised to boost text classification by reusing and distinguishing samples of other labels following the label representation hierarchy, respectively. Experiments on authoritative public datasets and real-world medical records show that our approach stably achieves superior performances over classical and advanced imbalanced classification methods",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jiahuan Yan",
+      "Haojun Gao",
+      "Zhang Kai",
+      "Weize Liu",
+      "Danny Chen",
+      "Jian Wu",
+      "Jintai Chen"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16639": {
+    "title": "Scaling Political Texts with ChatGPT",
+    "volume": "Nov",
+    "abstract": "We use GPT-4 to obtain position estimates of political texts in continuous spaces. We develop and validate a new approach by positioning British party manifestos on the economic, social, and immigration policy dimensions and tweets by members of the US Congress on the left-right ideological spectrum. For the party manifestos, the correlation between the positions produced by GPT-4 and experts is 93% or higher, a performance similar to or better than that obtained with crowdsourced position estimates. For individual tweets, the positions obtained with GPT-4 achieve a correlation of 91% with crowdsourced position estimates. For senators of the 117th US Congress, the positions obtained with GPT-4 achieve a correlation of 97% with estimates based on roll call votes and of 96% with those based on campaign funding. Correlations are also substantial within party, indicating that position estimates produced with GPT-4 capture within-party differences between senators. Overall, using GPT-4 for ideological scaling is fast, cost-efficient, and reliable. This approach provides a viable alternative to scaling by both expert raters and crowdsourcing",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Gaël Le Mens",
+      "Aina Gallego"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16620": {
+    "title": "On the Long Range Abilities of Transformers",
+    "volume": "Nov",
+    "abstract": "Despite their dominance in modern DL and, especially, NLP domains, transformer architectures exhibit sub-optimal performance on long-range tasks compared to recent layers that are specifically designed for this purpose. In this work, drawing inspiration from key attributes of long-range layers, such as state-space layers, linear RNN layers, and global convolution layers, we demonstrate that minimal modifications to the transformer architecture can significantly enhance performance on the Long Range Arena (LRA) benchmark, thus narrowing the gap with these specialized layers. We identify that two key principles for long-range tasks are (i) incorporating an inductive bias towards smoothness, and (ii) locality. As we show, integrating these ideas into the attention mechanism improves results with a negligible amount of additional computation and without any additional trainable parameters. Our theory and experiments also shed light on the reasons for the inferior performance of transformers on long-range tasks and identify critical properties that are essential for successfully capturing long-range dependencies",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Itamar Zimerman",
+      "Lior Wolf"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16588": {
+    "title": "MedGen: A Python Natural Language Processing Toolkit for Medical Text Processing",
+    "volume": "Nov",
+    "abstract": "This study introduces MedGen, a comprehensive natural language processing (NLP) toolkit designed for medical text processing. MedGen is tailored for biomedical researchers and healthcare professionals with an easy-to-use, all-in-one solution that requires minimal programming expertise. It includes (1) Generative Functions: For the first time, MedGen includes four advanced generative functions: question answering, text summarization, text simplification, and machine translation; (2) Basic NLP Functions: MedGen integrates 12 essential NLP functions such as word tokenization and sentence segmentation; and (3) Query and Search Capabilities: MedGen provides user-friendly query and search functions on text corpora. We fine-tuned 32 domain-specific language models, evaluated them thoroughly on 24 established benchmarks and conducted manual reviews with clinicians. Additionally, we expanded our toolkit by introducing query and search functions, while also standardizing and integrating functions from third-party libraries. The toolkit, its models, and associated data are publicly available via https://github.com/Yale-LILY/MedGen",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Rui Yang",
+      "Qingcheng Zeng",
+      "Keen You",
+      "Yujie Qiao",
+      "Lucas Huang",
+      "Chia-Chun Hsieh",
+      "Benjamin Rosand",
+      "Jeremy Goldwasser",
+      "Amisha D Dave",
+      "Tiarnan D. L. Keenan",
+      "Emily Y Chew",
+      "Dragomir Radev",
+      "Zhiyong Lu",
+      "Hua Xu",
+      "Qingyu Chen",
+      "Irene Li"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16579": {
+    "title": "Recognizing Conditional Causal Relationships about Emotions and Their Corresponding Conditions",
+    "volume": "Nov",
+    "abstract": "The study of causal relationships between emotions and causes in texts has recently received much attention. Most works focus on extracting causally related clauses from documents. However, none of these works has considered that the causal relationships among the extracted emotion and cause clauses can only be valid under some specific context clauses. To highlight the context in such special causal relationships, we propose a new task to determine whether or not an input pair of emotion and cause has a valid causal relationship under different contexts and extract the specific context clauses that participate in the causal relationship. Since the task is new for which no existing dataset is available, we conduct manual annotation on a benchmark dataset to obtain the labels for our tasks and the annotations of each context clause's type that can also be used in some other applications. We adopt negative sampling to construct the final dataset to balance the number of documents with and without causal relationships. Based on the constructed dataset, we propose an end-to-end multi-task framework, where we design two novel and general modules to handle the two goals of our task. Specifically, we propose a context masking module to extract the context clauses participating in the causal relationships. We propose a prediction aggregation module to fine-tune the prediction results according to whether the input emotion and causes depend on specific context clauses. Results of extensive comparative experiments and ablation studies demonstrate the effectiveness and generality of our proposed framework",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xinhong Chen",
+      "Zongxi Li",
+      "Yaowei Wang",
+      "Haoran Xie",
+      "Jianping Wang",
+      "Qing Li"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16522": {
+    "title": "Evaluation of dynamic characteristics of power grid based on GNN and application on knowledge graph",
+    "volume": "Nov",
+    "abstract": "A novel method for detecting faults in power grids using a graph neural network (GNN) has been developed, aimed at enhancing intelligent fault diagnosis in network operation and maintenance. This GNN-based approach identifies faulty nodes within the power grid through a specialized electrical feature extraction model coupled with a knowledge graph. Incorporating temporal data, the method leverages the status of nodes from preceding and subsequent time periods to aid in current fault detection. To validate the effectiveness of this GNN in extracting node features, a correlation analysis of the output features from each node within the neural network layer was conducted. The results from experiments show that this method can accurately locate fault nodes in simulated scenarios with a remarkable 99.53% accuracy. Additionally, the graph neural network's feature modeling allows for a qualitative examination of how faults spread across nodes, providing valuable insights for analyzing fault nodes",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hao Pei",
+      "Si Lin",
+      "Chuanfu Li",
+      "Che Wang",
+      "Haoming Chen",
+      "Sizhe Li"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16509": {
+    "title": "StyleCap: Automatic Speaking-Style Captioning from Speech Based on Speech and Language Self-supervised Learning Models",
+    "volume": "Nov",
+    "abstract": "We propose StyleCap, a method to generate natural language descriptions of speaking styles appearing in speech. Although most of conventional techniques for para-/non-linguistic information recognition focus on the category classification or the intensity estimation of pre-defined labels, they cannot provide the reasoning of the recognition result in an interpretable manner. As a first step towards an end-to-end method for generating speaking-style prompts from speech, i.e., automatic speaking-style captioning, StyleCap uses paired data of speech and natural language descriptions to train neural networks that predict prefix vectors fed into a large language model (LLM)-based text decoder from a speech representation vector. We explore an appropriate text decoder and speech feature representation suitable for this new task. The experimental results demonstrate that our StyleCap leveraging richer LLMs for the text decoder, speech self-supervised learning (SSL) features, and sentence rephrasing augmentation improves the accuracy and diversity of generated speaking-style captions. Samples of speaking-style captions generated by our StyleCap are publicly available",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Kazuki Yamauchi",
+      "Yusuke Ijima",
+      "Yuki Saito"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16466": {
+    "title": "Enhancing Human Persuasion With Large Language Models",
+    "volume": "Nov",
+    "abstract": "Although large language models (LLMs) are reshaping various aspects of human life, our current understanding of their impacts remains somewhat constrained. Here we investigate the impact of LLMs on human communication, in the context of consumer complaints in the financial industry. Employing an AI detection tool on more than 780K complaints gathered by the Consumer Financial Protection Bureau (CFPB), we find evidence of LLM usage in the writing of complaints - shortly after the release of ChatGPT. Our analyses reveal that LLM usage is positively correlated with the likelihood of obtaining desirable outcomes (i.e., offer of relief from financial firms) and suggest that this positive correlation may be partly due to the linguistic features improved by LLMs. We test this conjecture with a preregistered experiment, which reveals results consistent with those from observational studies: Consumer complaints written with ChatGPT for improved linguistic qualities were more likely to receive hypothetical relief offers than the original consumer complaints, demonstrating the LLM's ability to enhance message persuasiveness in human communication. Being some of the earliest empirical evidence on LLM usage for enhancing persuasion, our results highlight the transformative potential of LLMs in human communication",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Minkyu Shin",
+      "Jin Kim"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16452": {
+    "title": "Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine",
+    "volume": "Nov",
+    "abstract": "Generalist foundation models such as GPT-4 have displayed surprising capabilities in a wide variety of domains and tasks. Yet, there is a prevalent assumption that they cannot match specialist capabilities of fine-tuned models. For example, most explorations to date on medical competency benchmarks have leveraged domain-specific training, as exemplified by efforts on BioGPT and Med-PaLM. We build on a prior study of GPT-4's capabilities on medical challenge benchmarks in the absence of special training. Rather than using simple prompting to highlight the model's out-of-the-box capabilities, we perform a systematic exploration of prompt engineering. We find that prompting innovation can unlock deeper specialist capabilities and show that GPT-4 easily tops prior leading results for medical benchmarks. The prompting methods we explore are general purpose, and make no specific use of domain expertise, removing the need for expert-curated content. Our experimental design carefully controls for overfitting during the prompt engineering process. We introduce Medprompt, based on a composition of several prompting strategies. With Medprompt, GPT-4 achieves state-of-the-art results on all nine of the benchmark datasets in the MultiMedQA suite. The method outperforms leading specialist models such as Med-PaLM 2 by a significant margin with an order of magnitude fewer calls to the model. Steering GPT-4 with Medprompt achieves a 27% reduction in error rate on the MedQA dataset over the best methods to date achieved with specialist models and surpasses a score of 90% for the first time. Beyond medical problems, we show the power of Medprompt to generalize to other domains and provide evidence for the broad applicability of the approach via studies of the strategy on exams in electrical engineering, machine learning, philosophy, accounting, law, nursing, and clinical psychology",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Harsha Nori",
+      "Yin Tat Lee",
+      "Sheng Zhang",
+      "Dean Carignan",
+      "Richard Edgar",
+      "Nicolo Fusi",
+      "Nicholas King",
+      "Jonathan Larson",
+      "Yuanzhi Li",
+      "Weishung Liu",
+      "Renqian Luo",
+      "Scott Mayer McKinney",
+      "Robert Osazuwa Ness",
+      "Hoifung Poon",
+      "Tao Qin",
+      "Naoto Usuyama",
+      "Chris White",
+      "Eric Horvitz"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16444": {
+    "title": "Exo2EgoDVC: Dense Video Captioning of Egocentric Procedural Activities Using Web Instructional Videos",
+    "volume": "Nov",
+    "abstract": "We propose a novel benchmark for cross-view knowledge transfer of dense video captioning, adapting models from web instructional videos with exocentric views to an egocentric view. While dense video captioning (predicting time segments and their captions) is primarily studied with exocentric videos (e.g., YouCook2), benchmarks with egocentric videos are restricted due to data scarcity. To overcome the limited video availability, transferring knowledge from abundant exocentric web videos is demanded as a practical approach. However, learning the correspondence between exocentric and egocentric views is difficult due to their dynamic view changes. The web videos contain mixed views focusing on either human body actions or close-up hand-object interactions, while the egocentric view is constantly shifting as the camera wearer moves. This necessitates the in-depth study of cross-view transfer under complex view changes. In this work, we first create a real-life egocentric dataset (EgoYC2) whose captions are shared with YouCook2, enabling transfer learning between these datasets assuming their ground-truth is accessible. To bridge the view gaps, we propose a view-invariant learning method using adversarial training in both the pre-training and fine-tuning stages. While the pre-training is designed to learn invariant features against the mixed views in the web videos, the view-invariant fine-tuning further mitigates the view gaps between both datasets. We validate our proposed method by studying how effectively it overcomes the view change problem and efficiently transfers the knowledge to the egocentric domain. Our benchmark pushes the study of the cross-view transfer into a new task domain of dense video captioning and will envision methodologies to describe egocentric videos in natural language",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Takehiko Ohkawa",
+      "Takuma Yagi",
+      "Taichi Nishimura",
+      "Ryosuke Furuta",
+      "Atsushi Hashimoto",
+      "Yoshitaka Ushiku",
+      "Yoichi Sato"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16421": {
+    "title": "CDEval: A Benchmark for Measuring the Cultural Dimensions of Large Language Models",
+    "volume": "Nov",
+    "abstract": "As the scaling of Large Language Models (LLMs) has dramatically enhanced their capabilities, there has been a growing focus on the alignment problem to ensure their responsible and ethical use. While existing alignment efforts predominantly concentrate on universal values such as the HHH principle, the aspect of culture, which is inherently pluralistic and diverse, has not received adequate attention. This work introduces a new benchmark, CDEval, aimed at evaluating the cultural dimensions of LLMs. CDEval is constructed by incorporating both GPT-4's automated generation and human verification, covering six cultural dimensions across seven domains. Our comprehensive experiments provide intriguing insights into the culture of mainstream LLMs, highlighting both consistencies and variations across different dimensions and domains. The findings underscore the importance of integrating cultural considerations in LLM development, particularly for applications in diverse cultural settings. Through CDEval, we aim to broaden the horizon of LLM alignment research by including cultural dimensions, thus providing a more holistic framework for the future development and evaluation of LLMs. This benchmark serves as a valuable resource for cultural studies in LLMs, paving the way for more culturally aware and sensitive models",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yuhang Wang",
+      "Yanxu Zhu",
+      "Chao Kong",
+      "Shuyu Wei",
+      "Xiaoyuan Yi",
+      "Xing Xie",
+      "Jitao Sang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16362": {
+    "title": "Reducing Gender Bias in Machine Translation through Counterfactual Data Generation",
+    "volume": "Nov",
+    "abstract": "Recent advances in neural methods have led to substantial improvement in the quality of Neural Machine Translation (NMT) systems. However, these systems frequently produce translations with inaccurate gender (Stanovsky et al., 2019), which can be traced to bias in training data. Saunders and Byrne (2020) tackle this problem with a handcrafted dataset containing balanced gendered profession words. By using this data to fine-tune an existing NMT model, they show that gender bias can be significantly mitigated, albeit at the expense of translation quality due to catastrophic forgetting. They recover some of the lost quality with modified training objectives or additional models at inference. We find, however, that simply supplementing the handcrafted dataset with a random sample from the base model training corpus is enough to significantly reduce the catastrophic forgetting. We also propose a novel domain-adaptation technique that leverages in-domain data created with the counterfactual data generation techniques proposed by Zmigrod et al. (2019) to further improve accuracy on the WinoMT challenge test set without significant loss in translation quality. We show its effectiveness in NMT systems from English into three morphologically rich languages French, Spanish, and Italian. The relevant dataset and code will be available at Github",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ranjita Naik",
+      "Spencer Rarrick",
+      "Vishal Chowdhary"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16338": {
+    "title": "Releasing the CRaQAn (Coreference Resolution in Question-Answering): An open-source dataset and dataset creation methodology using instruction-following models",
+    "volume": "Nov",
+    "abstract": "Instruction-following language models demand robust methodologies for information retrieval to augment instructions for question-answering applications. A primary challenge is the resolution of coreferences in the context of chunking strategies for long documents. The critical barrier to experimentation of handling coreferences is a lack of open source datasets, specifically in question-answering tasks that require coreference resolution. In this work we present our Coreference Resolution in Question-Answering (CRaQAn) dataset, an open-source dataset that caters to the nuanced information retrieval requirements of coreference resolution in question-answering tasks by providing over 250 question-answer pairs containing coreferences. To develop this dataset, we developed a novel approach for creating high-quality datasets using an instruction-following model (GPT-4) and a Recursive Criticism and Improvement Loop",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Rob Grzywinski",
+      "Joshua D'Arcy",
+      "Rob Naidoff",
+      "Ashish Shukla",
+      "Alex Browne",
+      "Ren Gibbons",
+      "Brinnae Bent"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16302": {
+    "title": "Comprehensive Benchmarking of Entropy and Margin Based Scoring Metrics for Data Selection",
+    "volume": "Nov",
+    "abstract": "While data selection methods have been studied extensively in active learning, data pruning, and data augmentation settings, there is little evidence for the efficacy of these methods in industry scale settings, particularly in low-resource languages. Our work presents ways of assessing prospective training examples in those settings for their \"usefulness\" or \"difficulty\". We also demonstrate how these measures can be used in selecting important examples for training supervised machine learning models. We primarily experiment with entropy and Error L2-Norm (EL2N) scores. We use these metrics to curate high quality datasets from a large pool of \\textit{Weak Signal Labeled} data, which assigns no-defect high confidence hypotheses during inference as ground truth labels. We then conduct training data augmentation experiments using these de-identified datasets and demonstrate that score-based selection can result in a 2% decrease in semantic error rate and 4%-7% decrease in domain classification error rate when compared to the baseline technique of random selection",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Anusha Sabbineni",
+      "Nikhil Anand",
+      "Maria Minakova"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16298": {
+    "title": "Influence Scores at Scale for Efficient Language Data Sampling",
+    "volume": "Nov",
+    "abstract": "Modern ML systems ingest data aggregated from diverse sources, such as synthetic, human-annotated, and live customer traffic. Understanding \\textit{which} examples are important to the performance of a learning algorithm is crucial for efficient model training. Recently, a growing body of literature has given rise to various \"influence scores,\" which use training artifacts such as model confidence or checkpointed gradients to identify important subsets of data. However, these methods have primarily been developed in computer vision settings, and it remains unclear how well they generalize to language-based tasks using pretrained models. In this paper, we explore the applicability of influence scores in language classification tasks. We evaluate a diverse subset of these scores on the SNLI dataset by quantifying accuracy changes in response to pruning training data through random and influence-score-based sampling. We then stress-test one of the scores -- \"variance of gradients\" (VoG) from Agarwal et al. (2022) -- in an NLU model stack that was exposed to dynamic user speech patterns in a voice assistant type of setting. Our experiments demonstrate that in many cases, encoder-based language models can be finetuned on roughly 50% of the original data without degradation in performance metrics. Along the way, we summarize lessons learned from applying out-of-the-box implementations of influence scores, quantify the effects of noisy and class-imbalanced data, and offer recommendations on score-based sampling for better accuracy and training efficiency",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nikhil Anand",
+      "Joshua Tan",
+      "Maria Minakova"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16292": {
+    "title": "Student Mastery or AI Deception? Analyzing ChatGPT's Assessment Proficiency and Evaluating Detection Strategies",
+    "volume": "Nov",
+    "abstract": "Generative AI systems such as ChatGPT have a disruptive effect on learning and assessment. Computer science requires practice to develop skills in problem solving and programming that are traditionally developed using assignments. Generative AI has the capability of completing these assignments for students with high accuracy, which dramatically increases the potential for academic integrity issues and students not achieving desired learning outcomes. This work investigates the performance of ChatGPT by evaluating it across three courses (CS1,CS2,databases). ChatGPT completes almost all introductory assessments perfectly. Existing detection methods, such as MOSS and JPlag (based on similarity metrics) and GPTzero (AI detection), have mixed success in identifying AI solutions. Evaluating instructors and teaching assistants using heuristics to distinguish between student and AI code shows that their detection is not sufficiently accurate. These observations emphasize the need for adapting assessments and improved detection methods",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Kevin Wang",
+      "Seth Akins",
+      "Abdallah Mohammed",
+      "Ramon Lawrence"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16267": {
+    "title": "Applications of Large Language Models in Data Processing: Innovative Approaches to Segmenting and Renewing Information",
+    "volume": "Nov",
+    "abstract": "Our paper investigates effective methods for code generation in \"specific-domain\" applications, including the use of Large Language Models (LLMs) for data segmentation and renewal, as well as stimulating deeper thinking in LLMs through prompt adjustments. Using a real company product as an example, we provide user manuals, API documentation, and other data. The ideas discussed in this paper help segment and then convert this data into semantic vectors to better reflect their true positioning. Subsequently, user requirements are transformed into vectors to retrieve the most relevant content, achieving about 70% accuracy in simple to medium-complexity tasks through various prompt techniques. This paper is the first to enhance specific-domain code generation effectiveness from this perspective. Additionally, we experiment with generating more scripts from a limited number using llama2-based fine-tuning to test its effectiveness in professional domain code generation. This is a challenging and promising field, and once achieved, it will not only lead to breakthroughs in LLM development across multiple industries but also enable LLMs to understand and learn any new knowledge effectively",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yu-Chen Lin",
+      "Akhilesh Kumar",
+      "Wen-Liang Zhang",
+      "Norman Chang",
+      "Muhammad Zakir",
+      "Rucha Apte",
+      "Chao Wang",
+      "Jyh-Shing Roger Jang"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16258": {
+    "title": "An Exploration of Left-Corner Transformations",
+    "volume": "Nov",
+    "abstract": "The left-corner transformation (Rosenkrantz and Lewis, 1970) is used to remove left recursion from context-free grammars, which is an important step towards making the grammar parsable top-down with simple techniques. This paper generalizes prior left-corner transformations to support semiring-weighted production rules and to provide finer-grained control over which left corners may be moved. Our generalized left-corner transformation (GLCT) arose from unifying the left-corner transformation and speculation transformation (Eisner and Blatz, 2007), originally for logic programming. Our new transformation and speculation define equivalent weighted languages. Yet, their derivation trees are structurally different in an important way: GLCT replaces left recursion with right recursion, and speculation does not. We also provide several technical results regarding the formal relationships between the outputs of GLCT, speculation, and the original grammar. Lastly, we empirically investigate the efficiency of GLCT for left-recursion elimination from grammars of nine languages",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Andreas Opedal",
+      "Eleftheria Tsipidi",
+      "Tiago Pimentel",
+      "Ryan Cotterell",
+      "Tim Vieira"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16254": {
+    "title": "Removing NSFW Concepts from Vision-and-Language Models for Text-to-Image Retrieval and Generation",
+    "volume": "Nov",
+    "abstract": "Vision-and-Language models such as CLIP have demonstrated remarkable effectiveness across a wide range of tasks. However, these models are typically trained on web-scale data, which can introduce inappropriate content and lead to the development of unsafe and biased behavior. This, in turn, hampers their applicability in sensitive and trustworthy contexts and could raise significant concern in their adoption. To overcome these limitations, we introduce a methodology to make Vision-and-Language models safer by removing their sensitivity to not-safe-for-work concepts. We show how this can be done by distilling from a large language model which converts between safe and unsafe sentences and which is fine-tuned starting from just 100 manually-curated pairs. We conduct extensive experiments on the resulting embedding space for both retrieval and text-to-image generation, where we show that our model can also be properly employed with pre-trained image generators. Our source code and trained models are available at: https://github.com/aimagelab/safe-clip",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Samuele Poppi",
+      "Tobia Poppi",
+      "Federico Cocchi",
+      "Marcella Cornia",
+      "Lorenzo Baraldi",
+      "Rita Cucchiara"
+    ]
+  },
   "http://arxiv.org/abs/2311.16101": {
     "title": "How Many Unicorns Are in This Image? A Safety Evaluation Benchmark for Vision LLMs",
     "volume": "Nov",
@@ -90,6 +814,39 @@
       "François Remy",
       "Kris Demuynck",
       "Thomas Demeester"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16502": {
+    "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
+    "volume": "Nov",
+    "abstract": "We introduce MMMU: a new benchmark designed to evaluate multimodal models on massive multi-discipline tasks demanding college-level subject knowledge and deliberate reasoning. MMMU includes 11.5K meticulously collected multimodal questions from college exams, quizzes, and textbooks, covering six core disciplines: Art & Design, Business, Science, Health & Medicine, Humanities & Social Science, and Tech & Engineering. These questions span 30 subjects and 183 subfields, comprising 30 highly heterogeneous image types, such as charts, diagrams, maps, tables, music sheets, and chemical structures. Unlike existing benchmarks, MMMU focuses on advanced perception and reasoning with domain-specific knowledge, challenging models to perform tasks akin to those faced by experts. Our evaluation of 14 open-source LMMs and the proprietary GPT-4V(ision) highlights the substantial challenges posed by MMMU. Even the advanced GPT-4V only achieves a 56% accuracy, indicating significant room for improvement. We believe MMMU will stimulate the community to build next-generation multimodal foundation models towards expert artificial general intelligence",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xiang Yue",
+      "Yuansheng Ni",
+      "Kai Zhang",
+      "Tianyu Zheng",
+      "Ruoqi Liu",
+      "Ge Zhang",
+      "Samuel Stevens",
+      "Dongfu Jiang",
+      "Weiming Ren",
+      "Yuxuan Sun",
+      "Cong Wei",
+      "Botao Yu",
+      "Ruibin Yuan",
+      "Renliang Sun",
+      "Ming Yin",
+      "Boyuan Zheng",
+      "Zhenzhu Yang",
+      "Yibo Liu",
+      "Wenhao Huang",
+      "Huan Sun",
+      "Yu Su",
+      "Wenhu Chen"
     ]
   },
   "http://arxiv.org/abs/2311.15983": {
@@ -192,6 +949,25 @@
       "Emmanuel Dupoux",
       "Dieuwke Hupkes",
       "Pascal Vincent"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16483": {
+    "title": "ChartLlama: A Multimodal LLM for Chart Understanding and Generation",
+    "volume": "Nov",
+    "abstract": "Multi-modal large language models have demonstrated impressive performances on most vision-language tasks. However, the model generally lacks the understanding capabilities for specific domain data, particularly when it comes to interpreting chart figures. This is mainly due to the lack of relevant multi-modal instruction tuning datasets. In this article, we create a high-quality instruction-tuning dataset leveraging GPT-4. We develop a multi-step data generation process in which different steps are responsible for generating tabular data, creating chart figures, and designing instruction tuning data separately. Our method's flexibility enables us to generate diverse, high-quality instruction-tuning data consistently and efficiently while maintaining a low resource expenditure. Additionally, it allows us to incorporate a wider variety of chart and task types not yet featured in existing datasets. Next, we introduce ChartLlama, a multi-modal large language model that we've trained using our created dataset. ChartLlama outperforms all prior methods in ChartQA, Chart-to-text, and Chart-extraction evaluation benchmarks. Additionally, ChartLlama significantly improves upon the baseline in our specially compiled chart dataset, which includes new chart and task types. The results of ChartLlama confirm the value and huge potential of our proposed data generation method in enhancing chart comprehension",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yucheng Han",
+      "Chi Zhang",
+      "Xin Chen",
+      "Xu Yang",
+      "Zhibin Wang",
+      "Gang Yu",
+      "Bin Fu",
+      "Hanwang Zhang"
     ]
   },
   "http://arxiv.org/abs/2311.15896": {
@@ -369,6 +1145,24 @@
       "Heng Ji"
     ]
   },
+  "http://arxiv.org/abs/2311.16203": {
+    "title": "ChatTraffc: Text-to-Traffic Generation via Diffusion Model",
+    "volume": "Nov",
+    "abstract": "Traffic prediction is one of the most significant foundations in Intelligent Transportation Systems (ITS). Traditional traffic prediction methods rely only on historical traffic data to predict traffic trends and face two main challenges. 1) insensitivity to unusual events. 2) poor performance in long-term prediction. In this work, we explore how generative models combined with text describing the traffic system can be applied for traffic generation and name the task Text-to-Traffic Generation (TTG). The key challenge of the TTG task is how to associate text with the spatial structure of the road network and traffic data for generating traffic situations. To this end, we propose ChatTraffic, the first diffusion model for text-to-traffic generation. To guarantee the consistency between synthetic and real data, we augment a diffusion model with the Graph Convolutional Network (GCN) to extract spatial correlations of traffic data. In addition, we construct a large dataset containing text-traffic pairs for the TTG task. We benchmarked our model qualitatively and quantitatively on the released dataset. The experimental results indicate that ChatTraffic can generate realistic traffic situations from the text. Our code and dataset are available at https://github.com/ChyaZhang/ChatTraffic",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Chengyang Zhang",
+      "Yong Zhang",
+      "Qitan Shao",
+      "Bo Li",
+      "Yisheng Lv",
+      "Xinglin Piao",
+      "Baocai Yin"
+    ]
+  },
   "http://arxiv.org/abs/2311.15626": {
     "title": "The WebCrow French Crossword Solver",
     "volume": "Nov",
@@ -436,6 +1230,22 @@
       "Peng Li",
       "Huaping Liu",
       "Yang Liu"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16201": {
+    "title": "Pre-trained Language Models Do Not Help Auto-regressive Text-to-Image Generation",
+    "volume": "Nov",
+    "abstract": "Recent advances in image tokenizers, such as VQ-VAE, have enabled text-to-image generation using auto-regressive methods, similar to language modeling. However, these methods have yet to leverage pre-trained language models, despite their adaptability to various downstream tasks. In this work, we explore this gap by adapting a pre-trained language model for auto-regressive text-to-image generation, and find that pre-trained language models offer limited help. We provide a two-fold explanation by analyzing tokens from each modality. First, we demonstrate that image tokens possess significantly different semantics compared to text tokens, rendering pre-trained language models no more effective in modeling them than randomly initialized ones. Second, the text tokens in the image-text datasets are too simple compared to normal language model pre-training data, which causes the catastrophic degradation of language models' capability",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yuhui Zhang",
+      "Brandon McKinzie",
+      "Zhe Gan",
+      "Vaishaal Shankar",
+      "Alexander Toshev"
     ]
   },
   "http://arxiv.org/abs/2311.15566": {
@@ -521,6 +1331,22 @@
     "authors": [
       "Sue Lim",
       "Ralf Schmälzle"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16480": {
+    "title": "MI-Gen: Multiple Instance Generation of Pathology Reports for Gigapixel Whole-Slide Images",
+    "volume": "Nov",
+    "abstract": "Whole slide images are the foundation of digital pathology for the diagnosis and treatment of carcinomas. Writing pathology reports is laborious and error-prone for inexperienced pathologists. To reduce the workload and improve clinical automation, we investigate how to generate pathology reports given whole slide images. On the data end, we curated the largest WSI-text dataset (TCGA-PathoText). In specific, we collected nearly 10000 high-quality WSI-text pairs for visual-language models by recognizing and cleaning pathology reports which narrate diagnostic slides in TCGA. On the model end, we propose the multiple instance generative model (MI-Gen) which can produce pathology reports for gigapixel WSIs. We benchmark our model on the largest subset of TCGA-PathoText. Experimental results show our model can generate pathology reports which contain multiple clinical clues. Furthermore, WSI-text prediction can be seen as an approach of visual-language pre-training, which enables our model to be transferred to downstream diagnostic tasks like carcinoma grading and phenotyping. We observe that simple semantic extraction from the pathology reports can achieve the best performance (0.838 of F1 score) on BRCA subtyping without adding extra parameters or tricky fine-tuning. Our collected dataset and related code will all be publicly available",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Pingyi Chen",
+      "Honglin Li",
+      "Chenglu Zhu",
+      "Sunyi Zheng",
+      "Lin Yang"
     ]
   },
   "http://arxiv.org/abs/2311.15525": {
@@ -848,6 +1674,19 @@
       "Kin Wah Fung",
       "Yu Su",
       "Olivier Bodenreider"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16185": {
+    "title": "Enhancing Sentiment Analysis Results through Outlier Detection Optimization",
+    "volume": "Nov",
+    "abstract": "When dealing with text data containing subjective labels like speaker emotions, inaccuracies or discrepancies among labelers are not uncommon. Such discrepancies can significantly affect the performance of machine learning algorithms. This study investigates the potential of identifying and addressing outliers in text data with subjective labels, aiming to enhance classification outcomes. We utilized the Deep SVDD algorithm, a one-class classification method, to detect outliers in nine text-based emotion and sentiment analysis datasets. By employing both a small-sized language model (DistilBERT base model with 66 million parameters) and non-deep learning machine learning algorithms (decision tree, KNN, Logistic Regression, and LDA) as the classifier, our findings suggest that the removal of outliers can lead to enhanced results in most cases. Additionally, as outliers in such datasets are not necessarily unlearnable, we experienced utilizing a large language model -- DeBERTa v3 large with 131 million parameters, which can capture very complex patterns in data. We continued to observe performance enhancements across multiple datasets",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yuetian Chen",
+      "Mei Si"
     ]
   },
   "http://arxiv.org/abs/2311.15077": {
@@ -2214,6 +3053,19 @@
       "Jeremey Dohmann",
       "Alex Trott",
       "Jacob Portes"
+    ]
+  },
+  "http://arxiv.org/abs/2311.16173": {
+    "title": "Conditions for Length Generalization in Learning Reasoning Skills",
+    "volume": "Nov",
+    "abstract": "Reasoning is a fundamental capability of AI agents. Recently, large language models (LLMs) have shown remarkable abilities to perform reasoning tasks. However, numerous evaluations of the reasoning capabilities of LLMs have also showed some limitations. An outstanding limitation is length generalization, meaning that when trained on reasoning problems of smaller lengths or sizes, the resulting models struggle with problems of larger sizes or lengths. This potentially indicates some theoretical limitations of generalization in learning reasoning skills. These evaluations and their observations motivated us to perform a theoretical study of the length generalization problem. This work focused on reasoning tasks that can be formulated as Markov dynamic processes (MDPs) and/or directed acyclic graphs (DAGs). It identifies and proves conditions that decide whether the length generalization problem can be solved or not for a reasoning task in a particular representation. Experiments are also conducted to verify the theoretical results",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Changnan Xiao",
+      "Bing Liu"
     ]
   },
   "http://arxiv.org/abs/2311.13126": {
