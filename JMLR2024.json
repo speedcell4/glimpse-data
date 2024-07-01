@@ -2455,5 +2455,411 @@
       "Yuheng Ma",
       "Hanfang Yang"
     ]
+  },
+  "https://jmlr.org/papers/v25/21-1028.html": {
+    "title": "Optimization-based Causal Estimation from Heterogeneous Environments",
+    "volume": "main",
+    "abstract": "This paper presents a new optimization approach to causal estimation. Given data that contains covariates and an outcome, which covariates are causes of the outcome, and what is the strength of the causality? In classical machine learning (ML), the goal of optimization is to maximize predictive accuracy. However, some covariates might exhibit a non-causal association with the outcome. Such spurious associations provide predictive power for classical ML, but they prevent us from causally interpreting the result. This paper proposes CoCo, an optimization algorithm that bridges the gap between pure prediction and causal inference. CoCo leverages the recently-proposed idea of environments, datasets of covariates/response where the causal relationships remain invariant but where the distribution of the covariates changes from environment to environment. Given datasets from multiple environments—and ones that exhibit sufficient heterogeneity—CoCo maximizes an objective for which the only solution is the causal solution. We describe the theoretical foundations of this approach and demonstrate its effectiveness on simulated and real datasets. Compared to classical ML and existing methods, CoCo provides more accurate estimates of the causal model and more accurate predictions under interventions",
+    "checked": false,
+    "id": "3ec10d951a24a18d8335874a14d74c1c77a4bd9b",
+    "semantic_title": "invariant feature learning based on causal inference from heterogeneous environments",
+    "citation_count": 0,
+    "authors": [
+      "Mingzhang Yin",
+      "Yixin Wang",
+      "David M. Blei"
+    ]
+  },
+  "https://jmlr.org/papers/v25/21-1437.html": {
+    "title": "On the Computational and Statistical Complexity of Over-parameterized Matrix Sensing",
+    "volume": "main",
+    "abstract": "We consider solving the low-rank matrix sensing problem with the Factorized Gradient Descent (FGD) method when the specified rank is larger than the true rank. We refer to this as over-parameterized matrix sensing. If the ground truth signal $\\mathbf{X}^* \\in \\mathbb{R}^{d \\times d}$ is of rank $r$, but we try to recover it using $\\mathbf{F} \\mathbf{F}^\\top$ where $\\mathbf{F} \\in \\mathbb{R}^{d \\times k}$ and $k>r$, the existing statistical analysis either no longer holds or produces a vacuous statistical error upper bound (infinity) due to the flat local curvature of the loss function around the global maxima. By decomposing the factorized matrix $\\mathbf{F}$ into separate column spaces to capture the impact of using $k > r$, we show that $\\left\\| {\\mathbf{F}_t \\mathbf{F}_t - \\mathbf{X}^*} \\right\\|_F^2$ converges sub-linearly to a statistical error of $\\tilde{\\mathcal{O}} (k d \\sigma^2/n)$ after $\\tilde{\\mathcal{O}}(\\frac{\\sigma_{r}}{\\sigma}\\sqrt{\\frac{n}{d}})$ iterations, where $\\mathbf{F}_t$ is the output of FGD after $t$ iterations, $\\sigma^2$ is the variance of the observation noise, $\\sigma_{r}$ is the $r$-th largest eigenvalue of $\\mathbf{X}^*$, and $n$ is the number of samples. With a precise characterization of the convergence behavior and the statistical error, our results, therefore, offer a comprehensive picture of the statistical and computational complexity if we solve the over-parameterized matrix sensing problem with FGD",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jiacheng Zhuo",
+      "Jeongyeol Kwon",
+      "Nhat Ho",
+      "Constantine Caramanis"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0192.html": {
+    "title": "Cluster-Adaptive Network A/B Testing: From Randomization to Estimation",
+    "volume": "main",
+    "abstract": "The performance of A/B testing in both online and offline experimental settings hinges on mitigating network interference and achieving covariate balancing. These experiments often involve an observable network with identifiable clusters, and measurable cluster-level and individual-level attributes. Exploiting these inherent characteristics holds potential for refining experimental design and subsequent statistical analyses. In this article, we propose a novel cluster-adaptive network A/B testing procedure, which contains a cluster-adaptive randomization (CLAR) and a cluster-adjusted estimator (CAE) to facilitate the design of the experiment and enhance the performance of ATE estimation. The CLAR sequentially assigns clusters to minimize the Mahalanobis distance, which further leads to the balance of the cluster-level covariates and the within-cluster-averaged individual-level covariates. The cluster-adjusted estimator (CAE) is tailored to offset biases caused by network interference. The proposed procedure has the following two folds of the desirable properties. First, we show that the Malanobis distance calculated for the two levels of covariates is $O_p(m^{-1})$, where $m$ represents the number of clusters. This result justifies the simultaneous balance of the cluster-level and individual-level covariates. Under mild conditions, we derive the asymptotic normality of CAE and demonstrate the benefit of covariate balancing on improving the precision for estimating ATE. The proposed A/B testing procedure is easy to calculate, consistent, and achieves higher accuracy. Extensive numerical studies are conducted to demonstrate the finite sample property of the proposed network A/B testing procedure",
+    "checked": false,
+    "id": "4e4cd3ccc5ce360d27313957afd304a90b42a967",
+    "semantic_title": "adaptive a/b test on networks with cluster structures",
+    "citation_count": 2,
+    "authors": [
+      "Yang Liu",
+      "Yifan Zhou",
+      "Ping Li",
+      "Feifang Hu"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0878.html": {
+    "title": "Log Barriers for Safe Black-box Optimization with Application to Safe Reinforcement Learning",
+    "volume": "main",
+    "abstract": "Optimizing noisy functions online, when evaluating the objective requires experiments on a deployed system, is a crucial task arising in manufacturing, robotics and various other domains. Often, constraints on safe inputs are unknown ahead of time, and we only obtain noisy information, indicating how close we are to violating the constraints. Yet, safety must be guaranteed at all times, not only for the final output of the algorithm. We introduce a general approach for seeking a stationary point in high dimensional non-linear stochastic optimization problems in which maintaining safety during learning is crucial. Our approach called LB-SGD, is based on applying stochastic gradient descent (SGD) with a carefully chosen adaptive step size to a logarithmic barrier approximation of the original problem. We provide a complete convergence analysis of non-convex, convex, and strongly-convex smooth constrained problems, with first-order and zeroth-order feedback. Our approach yields efficient updates and scales better with dimensionality compared to existing approaches. We empirically compare the sample complexity and the computational cost of our method with existing safe learning approaches. Beyond synthetic benchmarks, we demonstrate the effectiveness of our approach on minimizing constraint violation in policy search tasks in safe reinforcement learning (RL)",
+    "checked": true,
+    "id": "7ad4d6858279620e6a9acdfe090f3798e7f47d6e",
+    "semantic_title": "log barriers for safe black-box optimization with application to safe reinforcement learning",
+    "citation_count": 4,
+    "authors": [
+      "Ilnura Usmanova",
+      "Yarden As",
+      "Maryam Kamgarpour",
+      "Andreas Krause"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1036.html": {
+    "title": "Decentralized Natural Policy Gradient with Variance Reduction for Collaborative Multi-Agent Reinforcement Learning",
+    "volume": "main",
+    "abstract": "This paper studies a policy optimization problem arising from collaborative multi-agent reinforcement learning in a decentralized setting where agents communicate with their neighbors over an undirected graph to maximize the sum of their cumulative rewards. A novel decentralized natural policy gradient method, dubbed Momentum-based Decentralized Natural Policy Gradient (MDNPG), is proposed, which incorporates natural gradient, momentum-based variance reduction, and gradient tracking into the decentralized stochastic gradient ascent framework. The $\\mathcal{O}(n^{-1}\\epsilon^{-3})$ sample complexity for MDNPG to converge to an $\\epsilon$-stationary point has been established under standard assumptions, where $n$ is the number of agents. It indicates that MDNPG can achieve the optimal convergence rate for decentralized policy gradient methods and possesses a linear speedup in contrast to centralized optimization methods. Moreover, superior empirical performance of MDNPG over other state-of-the-art algorithms has been demonstrated by extensive numerical experiments",
+    "checked": true,
+    "id": "f87448bba2da4994ae3fb319259d8f937e74b338",
+    "semantic_title": "decentralized natural policy gradient with variance reduction for collaborative multi-agent reinforcement learning",
+    "citation_count": 4,
+    "authors": [
+      "Jinchi Chen",
+      "Jie Feng",
+      "Weiguo Gao",
+      "Ke Wei"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1337.html": {
+    "title": "Two is Better Than One: Regularized Shrinkage of Large Minimum Variance Portfolios",
+    "volume": "main",
+    "abstract": "In this paper, we construct a shrinkage estimator of the global minimum variance (GMV) portfolio by combining two techniques: Tikhonov regularization and direct shrinkage of portfolio weights. More specifically, we employ a double shrinkage approach, where the covariance matrix and portfolio weights are shrunk simultaneously. The ridge parameter controls the stability of the covariance matrix, while the portfolio shrinkage intensity shrinks the regularized portfolio weights to a predefined target. Both parameters simultaneously minimize, with probability one, the out-of-sample variance as the number of assets $p$ and the sample size $n$ tend to infinity, while their ratio $p/n$ tends to a constant $c > 0$. This method can also be seen as the optimal combination of the well-established linear shrinkage approach of Ledoit and Wolf (2004) and the shrinkage of the portfolio weights by Bodnar, Parolya and Schmid (2018). No specific distribution is assumed for the asset returns, except for the assumption of finite moments of order $4 + \\varepsilon$ for $\\varepsilon > 0$. The performance of the double shrinkage estimator is investigated via extensive simulation and empirical studies. The suggested method significantly outperforms its predecessor (without regularization) and the nonlinear shrinkage approach in terms of the out-of-sample variance, Sharpe ratio, and other empirical measures in the majority of scenarios. Moreover, it maintains the most stable portfolio weights with uniformly smallest turnover",
+    "checked": false,
+    "id": "6291dc1acd53d297731093a61dc231d39efa1b08",
+    "semantic_title": "two is better than one: regularized shrinkage of large minimum variance portfolio",
+    "citation_count": 0,
+    "authors": [
+      "Taras Bodnar",
+      "Nestor Parolya",
+      "Erik Thorsen"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0137.html": {
+    "title": "A PDE-based Explanation of Extreme Numerical Sensitivities and Edge of Stability in Training Neural Networks",
+    "volume": "main",
+    "abstract": "We discover restrained numerical instabilities in current training practices of deep networks with stochastic gradient descent (SGD), and its variants. We show numerical error (on the order of the smallest floating point bit and thus the most extreme or limiting numerical perturbations induced from floating point arithmetic in training deep nets can be amplified significantly and result in significant test accuracy variance (sensitivities), comparable to the test accuracy variance due to stochasticity in SGD. We show how this is likely traced to instabilities of the optimization dynamics that are restrained, i.e., localized over iterations and regions of the weight tensor space. We do this by presenting a theoretical framework using numerical analysis of partial differential equations (PDE), and analyzing the gradient descent PDE of convolutional neural networks (CNNs). We show that it is stable only under certain conditions on the learning rate and weight decay. We show that rather than blowing up when the conditions are violated, the instability can be restrained. We show this is a consequence of the non-linear PDE associated with the gradient descent of the CNN, whose local linearization changes when over-driving the step size of the discretization, resulting in a stabilizing effect. We link restrained instabilities to the recently discovered Edge of Stability (EoS) phenomena, in which the stable step size predicted by classical theory is exceeded while continuing to optimize the loss and still converging. Because restrained instabilities occur at the EoS, our theory provides new insights and predictions about the EoS, in particular, the role of regularization and the dependence on the network complexity",
+    "checked": true,
+    "id": "6ec47bb38331f7a63d40845a6d2d1dd94fafe676",
+    "semantic_title": "a pde-based explanation of extreme numerical sensitivities and edge of stability in training neural networks",
+    "citation_count": 5,
+    "authors": [
+      "Yuxin Sun",
+      "Dong Lao",
+      "Anthony Yezzi",
+      "Ganesh Sundaramoorthi"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0547.html": {
+    "title": "Spherical Rotation Dimension Reduction with Geometric Loss Functions",
+    "volume": "main",
+    "abstract": "Modern datasets often exhibit high dimensionality, yet the data reside in low-dimensional manifolds that can reveal underlying geometric structures critical for data analysis. A prime example of such a dataset is a collection of cell cycle measurements, where the inherently cyclical nature of the process can be represented as a circle or sphere. Motivated by the need to analyze these types of datasets, we propose a nonlinear dimension reduction method, Spherical Rotation Component Analysis (SRCA), that incorporates geometric information to better approximate low-dimensional manifolds. SRCA is a versatile method designed to work in both high-dimensional and small sample size settings. By employing spheres or ellipsoids, SRCA provides a low-rank spherical representation of the data with general theoretic guarantees, effectively retaining the geometric structure of the dataset during dimensionality reduction. A comprehensive simulation study, along with a successful application to human cell cycle data, further highlights the advantages of SRCA compared to state-of-the-art alternatives, demonstrating its superior performance in approximating the manifold while preserving inherent geometric structures",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hengrui Luo",
+      "Jeremy E. Purvis",
+      "Didong Li"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0939.html": {
+    "title": "Fermat Distances: Metric Approximation, Spectral Convergence, and Clustering Algorithms",
+    "volume": "main",
+    "abstract": "We analyze the convergence properties of Fermat distances, a family of density-driven metrics defined on Riemannian manifolds with an associated probability measure. Fermat distances may be defined either on discrete samples from the underlying measure, in which case they are random, or in the continuum setting, where they are induced by geodesics under a density-distorted Riemannian metric. We prove that discrete, sample-based Fermat distances converge to their continuum analogues in small neighborhoods with a precise rate that depends on the intrinsic dimensionality of the data and the parameter governing the extent of density weighting in Fermat distances. This is done by leveraging novel geometric and statistical arguments in percolation theory that allow for non-uniform densities and curved domains. Our results are then used to prove that discrete graph Laplacians based on discrete, sample-driven Fermat distances converge to corresponding continuum operators. In particular, we show the discrete eigenvalues and eigenvectors converge to their continuum analogues at a dimension-dependent rate, which allows us to interpret the efficacy of discrete spectral clustering using Fermat distances in terms of the resulting continuum limit. The perspective afforded by our discrete-to-continuum Fermat distance analysis leads to new clustering algorithms for data and related insights into efficient computations associated to density-driven spectral clustering. Our theoretical analysis is supported with numerical simulations and experiments on synthetic and real image data",
+    "checked": true,
+    "id": "d6af7a5818a38d303a2227baf791389dc4c2f93d",
+    "semantic_title": "fermat distances: metric approximation, spectral convergence, and clustering algorithms",
+    "citation_count": 1,
+    "authors": [
+      "Nicolás García Trillos",
+      "Anna Little",
+      "Daniel McKenzie",
+      "James M. Murphy"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1013.html": {
+    "title": "Multi-Objective Neural Architecture Search by Learning Search Space Partitions",
+    "volume": "main",
+    "abstract": "Deploying deep learning models requires taking into consideration neural network metrics such as model size, inference latency, and #FLOPs, aside from inference accuracy. This results in deep learning model designers leveraging multi-objective optimization to design effective deep neural networks in multiple criteria. However, applying multi-objective optimizations to neural architecture search (NAS) is nontrivial because NAS tasks usually have a huge search space, along with a non-negligible searching cost. This requires effective multi-objective search algorithms to alleviate the GPU costs. In this work, we implement a novel multi-objectives optimizer based on a recently proposed meta-algorithm called LaMOO on NAS tasks. In a nutshell, LaMOO speedups the search process by learning a model from observed samples to partition the search space and then focusing on promising regions likely to contain a subset of the Pareto frontier. Using LaMOO, we observe an improvement of more than 200% sample efficiency compared to Bayesian optimization and evolutionary-based multi-objective optimizers on different NAS datasets. For example, when combined with LaMOO, qEHVI achieves a 225% improvement in sample efficiency compared to using qEHVI alone in NasBench201. For real-world tasks, LaMOO achieves 97.36% accuracy with only 1.62M #Params on CIFAR10 in only 600 search samples. On ImageNet, our large model reaches 80.4% top-1 accuracy with only 522M #FLOPs",
+    "checked": true,
+    "id": "c68bbd48a29569e96d7645c5fecf18df44cc00d2",
+    "semantic_title": "multi-objective neural architecture search by learning search space partitions",
+    "citation_count": 0,
+    "authors": [
+      "Yiyang Zhao",
+      "Linnan Wang",
+      "Tian Guo"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1072.html": {
+    "title": "Optimistic Online Mirror Descent for Bridging Stochastic and Adversarial Online Convex Optimization",
+    "volume": "main",
+    "abstract": "The stochastically extended adversarial (SEA) model, introduced by Sachs et al. (2022), serves as an interpolation between stochastic and adversarial online convex optimization. Under the smoothness condition on expected loss functions, it is shown that the expected static regret of optimistic follow-the-regularized-leader (FTRL) depends on the cumulative stochastic variance $\\sigma_{1:T}^2$ and the cumulative adversarial variation $\\Sigma_{1:T}^2$ for convex functions. Sachs et al. (2022) also provide a regret bound based on the maximal stochastic variance $\\sigma_{\\max}^2$ and the maximal adversarial variation $\\Sigma_{\\max}^2$ for strongly convex functions. Inspired by their work, we investigate the theoretical guarantees of optimistic online mirror descent (OMD) for the SEA model with smooth expected loss functions. For convex and smooth functions, we obtain the same $\\mathcal{O}(\\sqrt{\\sigma_{1:T}^2}+\\sqrt{\\Sigma_{1:T}^2})$ regret bound, but with a relaxation of the convexity requirement from individual functions to expected functions. For strongly convex and smooth functions, we establish an $\\mathcal{O}\\left(\\frac{1}{\\lambda}\\left(\\sigma_{\\max}^2+\\Sigma_{\\max}^2\\right)\\log \\left(\\left(\\sigma_{1:T}^2 + \\Sigma_{1:T}^2\\right)/\\left(\\sigma_{\\max}^2+\\Sigma_{\\max}^2\\right)\\right)\\right)$ bound, better than their $\\mathcal{O}((\\sigma_{\\max}^2$ $ + \\Sigma_{\\max}^2) \\log T)$ result. For exp-concave and smooth functions, our approach yields a new $\\mathcal{O}(d\\log(\\sigma_{1:T}^2+\\Sigma_{1:T}^2))$ bound. Moreover, we introduce the first expected dynamic regret guarantee for the SEA model with convex and smooth expected functions, which is more favorable than static regret bounds in non-stationary environments. Furthermore, we expand our investigation to scenarios with non-smooth expected loss functions and propose novel algorithms built upon optimistic OMD with an implicit update, successfully attaining both static and dynamic regret guarantees",
+    "checked": true,
+    "id": "c8a190e0da5751ff34f24eca57b5281fdb9a1c81",
+    "semantic_title": "optimistic online mirror descent for bridging stochastic and adversarial online convex optimization",
+    "citation_count": 8,
+    "authors": [
+      "Sijia Chen",
+      "Yu-Jie Zhang",
+      "Wei-Wei Tu",
+      "Peng Zhao",
+      "Lijun Zhang"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1285.html": {
+    "title": "Sharpness-Aware Minimization and the Edge of Stability",
+    "volume": "main",
+    "abstract": "Recent experiments have shown that, often, when training a neural network with gradient descent (GD) with a step size $\\eta$, the operator norm of the Hessian of the loss grows until it approximately reaches $2/\\eta$, after which it fluctuates around this value. The quantity $2/\\eta$ has been called the \"edge of stability\" based on consideration of a local quadratic approximation of the loss. We perform a similar calculation to arrive at an \"edge of stability\" for Sharpness-Aware Minimization (SAM), a variant of GD which has been shown to improve its generalization. Unlike the case for GD, the resulting SAM-edge depends on the norm of the gradient. Using three deep learning training tasks, we see empirically that SAM operates on the edge of stability identified by this analysis",
+    "checked": true,
+    "id": "75f7c145cfe499b900196aab1595b61614bde36a",
+    "semantic_title": "sharpness-aware minimization and the edge of stability",
+    "citation_count": 5,
+    "authors": [
+      "Philip M. Long",
+      "Peter L. Bartlett"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1385.html": {
+    "title": "Bayesian Regression Markets",
+    "volume": "main",
+    "abstract": "Although machine learning tasks are highly sensitive to the quality of input data, relevant datasets can often be challenging for firms to acquire, especially when held privately by a variety of owners. For instance, if these owners are competitors in a downstream market, they may be reluctant to share information. Focusing on supervised learning for regression tasks, we develop a regression market to provide a monetary incentive for data sharing. Our mechanism adopts a Bayesian framework, allowing us to consider a more general class of regression tasks. We present a thorough exploration of the market properties, and show that similar proposals in literature expose the market agents to sizeable financial risks, which can be mitigated in our setup",
+    "checked": true,
+    "id": "c492fb1b1b1272521d59bbd4e9670befa94fd314",
+    "semantic_title": "bayesian regression markets",
+    "citation_count": 1,
+    "authors": [
+      "Thomas Falconer",
+      "Jalal Kazempour",
+      "Pierre Pinson"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1663.html": {
+    "title": "Towards Optimal Sobolev Norm Rates for the Vector-Valued Regularized Least-Squares Algorithm",
+    "volume": "main",
+    "abstract": "We present the first optimal rates for infinite-dimensional vector-valued ridge regression on a continuous scale of norms that interpolate between L2 and the hypothesis space, which we consider as a vector-valued reproducing kernel Hilbert space. These rates allow to treat the misspecified case in which the true regression function is not contained in the hypothesis space. We combine standard assumptions on the capacity of the hypothesis space with a novel tensor product construction of vector-valued interpolation spaces in order to characterize the smoothness of the regression function. Our upper bound not only attains the same rate as real-valued kernel ridge regression, but also removes the assumption that the target regression function is bounded. For the lower bound, we reduce the problem to the scalar setting using a projection argument. We show that these rates are optimal in most cases and independent of the dimension of the output space. We illustrate our results for the special case of vector-valued Sobolev spaces",
+    "checked": true,
+    "id": "1738107d9d58d47a2256772cc55aaa4915effd6a",
+    "semantic_title": "towards optimal sobolev norm rates for the vector-valued regularized least-squares algorithm",
+    "citation_count": 3,
+    "authors": [
+      "Zhu Li",
+      "Dimitri Meunier",
+      "Mattes Mollenhauer",
+      "Arthur Gretton"
+    ]
+  },
+  "https://jmlr.org/papers/v25/21-1082.html": {
+    "title": "Volterra Neural Networks (VNNs)",
+    "volume": "main",
+    "abstract": "The importance of inference in Machine Learning (ML) has led to an explosive number of different proposals, particularly in Deep Learning. In an attempt to reduce the complexity of Convolutional Neural Networks, we propose a Volterra filter-inspired Network architecture. This architecture introduces controlled non-linearities in the form of interactions between the delayed input samples of data. We propose a cascaded implementation of Volterra Filtering so as to significantly reduce the number of parameters required to carry out the same classification task as that of a conventional Neural Network. We demonstrate an efficient parallel implementation of this Volterra Neural Network (VNN), along with its remarkable performance while retaining a relatively simpler and potentially more tractable structure. Furthermore, we show a rather sophisticated adaptation of this network to nonlinearly fuse the RGB (spatial) information and the Optical Flow (temporal) information of a video sequence for action recognition. The proposed approach is evaluated on UCF-101 and HMDB-51 datasets for action recognition, and is shown to outperform state of the art CNN approaches",
+    "checked": false,
+    "id": "23253d2c731204480189e3fbaa7686e4960d3f80",
+    "semantic_title": "covariance neural networks",
+    "citation_count": 7,
+    "authors": [
+      "Siddharth Roheda",
+      "Hamid Krim",
+      "Bo Jiang"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0058.html": {
+    "title": "Permuted and Unlinked Monotone Regression in R^d: an approach based on mixture modeling and optimal transport",
+    "volume": "main",
+    "abstract": "Suppose that we have a regression problem with response variable $Y \\in \\mathbb{R}^d$ and predictor $X \\in \\mathbb{R}^d$, for $d \\ge 1$. In permuted or unlinked regression we have access to separate unordered data on $X$ and $Y$, as opposed to data on $(X,Y)$-pairs in usual regression. So far in the literature the case $d=1$ has received attention, see e.g., the recent papers by Rigollet and Weed [Information & Inference, 8, 619-717] and Balabdaoui et al. [J. Mach. Learn. Res., 22 (172), 1-60]. In this paper, we consider the general multivariate setting with $d \\geq 1$. We show that the notion of cyclical monotonicity of the regression function is sufficient for identification and estimation in the permuted/unlinked regression model. We study permutation recovery in the permuted regression setting and develop a computationally efficient and easy-to-use algorithm for denoising based on the Kiefer-Wolfowitz [Ann. Math. Statist., 27, 887-906] nonparametric maximum likelihood estimator and techniques from the theory of optimal transport. We provide explicit upper bounds on the associated mean squared denoising error for Gaussian noise. As in previous work on the case $d = 1$, the permuted/unlinked setting involves slow (logarithmic) rates of convergence rooted in the underlying deconvolution problem. We also provide an extension to a certain class of elliptic noise distributions that includes a multivariate generalization of the Laplace distribution, for which polynomial rates can be obtained. Numerical studies complement our theoretical analysis and show that the proposed approach performs at least on par with the methods in the aforementioned prior work in the case $d = 1$ while achieving substantial reductions in terms of computational complexity",
+    "checked": false,
+    "id": "b0560c87df97560c6305202da2d377615c46157e",
+    "semantic_title": "permuted and unlinked monotone regression in rd: an approach based on mixture modeling and optimal transport",
+    "citation_count": 6,
+    "authors": [
+      "Martin Slawski",
+      "Bodhisattva Sen"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0597.html": {
+    "title": "Spectral Analysis of the Neural Tangent Kernel for Deep Residual Networks",
+    "volume": "main",
+    "abstract": "Deep residual network architectures have been shown to achieve superior accuracy over classical feed-forward networks, yet their success is still not fully understood. Focusing on massively over-parameterized, fully connected residual networks with ReLU activation through their respective neural tangent kernels (ResNTK), we provide here a spectral analysis of these kernels. Specifically, we show that, much like NTK for fully connected networks (FC-NTK), for input distributed uniformly on the hypersphere $S^d$, the eigenvalues of ResNTK corresponding to their spherical harmonics eigenfunctions decay polynomially with frequency $k$ as $k^{-d}$. These in turn imply that the set of functions in their Reproducing Kernel Hilbert Space are identical to those of both FC-NTK as well as the standard Laplace kernel. Our spectral analysis allows us to highlight several additional properties of ResNTK, which depend on the choice of a hyper-parameter that balances between the skip and residual connections. Specifically, (1) with no bias, deep ResNTK is significantly biased toward even frequency functions; (2) unlike FC-NTK for deep networks, which is spiky and therefore yields poor generalization, ResNTK is stable and yields small generalization errors. We finally demonstrate these with experiments showing further that these phenomena arise in real networks",
+    "checked": false,
+    "id": "74c6e841e373a19c9c224165349bfe285537634a",
+    "semantic_title": "global convergence of deep galerkin and pinns methods for solving partial differential equations",
+    "citation_count": 2,
+    "authors": [
+      "Yuval Belfer",
+      "Amnon Geifman",
+      "Meirav Galun",
+      "Ronen Basri"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0953.html": {
+    "title": "A flexible empirical Bayes approach to multiple linear regression and connections with penalized regression",
+    "volume": "main",
+    "abstract": "We introduce a new empirical Bayes approach for large-scale multiple linear regression. Our approach combines two key ideas: (i) the use of flexible \"adaptive shrinkage\" priors, which approximate the nonparametric family of scale mixture of normal distributions by a finite mixture of normal distributions; and (ii) the use of variational approximations to efficiently estimate prior hyperparameters and compute approximate posteriors. Combining these two ideas results in fast and flexible methods, with computational speed comparable to fast penalized regression methods such as the Lasso, and with competitive prediction accuracy across a wide range of scenarios. Further, we provide new results that establish conceptual connections between our empirical Bayes methods and penalized methods. Specifically, we show that the posterior mean from our method solves a penalized regression problem, with the form of the penalty function being learned from the data by directly solving an optimization problem (rather than being tuned by cross-validation). Our methods are implemented in an R package, mr.ash.alpha, available from https://github.com/stephenslab/mr.ash.alpha",
+    "checked": true,
+    "id": "b167427ef4e3ef081a992f3aadec1bae404dfaf4",
+    "semantic_title": "a flexible empirical bayes approach to multiple linear regression and connections with penalized regression",
+    "citation_count": 8,
+    "authors": [
+      "Youngseok Kim",
+      "Wei Wang",
+      "Peter Carbonetto",
+      "Matthew Stephens"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1088.html": {
+    "title": "Optimal Clustering with Bandit Feedback",
+    "volume": "main",
+    "abstract": "This paper considers the problem of online clustering with bandit feedback. A set of arms (or items) can be partitioned into various groups that are unknown. Within each group, the observations associated to each of the arms follow the same distribution with the same mean vector. At each time step, the agent queries or pulls an arm and obtains an independent observation from the distribution it is associated to. Subsequent pulls depend on previous ones as well as the previously obtained samples. The agent's task is to uncover the underlying partition of the arms with the least number of arm pulls and with a probability of error not exceeding a prescribed constant $\\delta$. The problem proposed finds numerous applications from clustering of variants of viruses to online market segmentation. We present an instance-dependent information-theoretic lower bound on the expected sample complexity for this task, and design a computationally efficient and asymptotically optimal algorithm, namely Bandit Online Clustering (BOC). The algorithm includes a novel stopping rule for adaptive sequential testing that circumvents the need to exactly solve any NP-hard weighted clustering problem as its subroutines. We show through extensive simulations on synthetic and real-world datasets that BOC's performance matches the lower bound asymptotically, and significantly outperforms a non-adaptive baseline algorithm",
+    "checked": true,
+    "id": "ddf88f7f1f74746cc887ff14e002b8cded71551b",
+    "semantic_title": "optimal clustering with bandit feedback",
+    "citation_count": 5,
+    "authors": [
+      "Junwen Yang",
+      "Zixin Zhong",
+      "Vincent Y. F. Tan"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0096.html": {
+    "title": "An Entropy-Based Model for Hierarchical Learning",
+    "volume": "main",
+    "abstract": "Machine learning, the predominant approach in the field of artificial intelligence, enables computers to learn from data and experience. In the supervised learning framework, accurate and efficient learning of dependencies between data instances and their corresponding labels requires auxiliary information about the data distribution and the target function. This central concept aligns with the notion of regularization in statistical learning theory. Real-world datasets are often characterized by multiscale data instance distributions and well-behaved, smooth target functions. Scale-invariant probability distributions, such as power-law distributions, provide notable examples of multiscale data instance distributions in various contexts. This paper introduces a hierarchical learning model that leverages such a multiscale data structure with a multiscale entropy-based training procedure and explores its statistical and computational advantages. The hierarchical learning model is inspired by the logical progression in human learning from easy to complex tasks and features interpretable levels. In this model, the logarithm of any data instance's norm can be construed as the data instance's complexity, and the allocation of computational resources is tailored to this complexity, resulting in benefits such as increased inference speed. Furthermore, our multiscale analysis of the statistical risk yields stronger guarantees compared to conventional uniform convergence bounds",
+    "checked": true,
+    "id": "edf11186b2beb7f230116f6ccddc1ca8091ec4e3",
+    "semantic_title": "an entropy-based model for hierarchical learning",
+    "citation_count": 1,
+    "authors": [
+      "Amir R. Asadi"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0383.html": {
+    "title": "On the Optimality of Misspecified Spectral Algorithms",
+    "volume": "main",
+    "abstract": "In the misspecified spectral algorithms problem, researchers usually assume the underground true function $f_{\\rho}^{*} \\in [\\mathcal{H}]^{s}$, a less-smooth interpolation space of a reproducing kernel Hilbert space (RKHS) $\\mathcal{H}$ for some $s\\in (0,1)$. The existing minimax optimal results require $\\|f_{\\rho}^{*}\\|_{L^{\\infty}}<\\infty$ which implicitly requires $s > \\alpha_{0}$ where $\\alpha_{0}\\in (0,1)$ is the embedding index, a constant depending on $\\mathcal{H}$. Whether the spectral algorithms are optimal for all $s\\in (0,1)$ is an outstanding problem lasting for years. In this paper, we show that spectral algorithms are minimax optimal for any $\\alpha_{0}-\\frac{1}{\\beta} < s < 1$, where $\\beta$ is the eigenvalue decay rate of $\\mathcal{H}$. We also give several classes of RKHSs whose embedding index satisfies $ \\alpha_0 = \\frac{1}{\\beta} $. Thus, the spectral algorithms are minimax optimal for all $s\\in (0,1)$ on these RKHSs",
+    "checked": true,
+    "id": "17586f46d3d93c1c266ad5e57a09e4cb1f0a8617",
+    "semantic_title": "on the optimality of misspecified spectral algorithms",
+    "citation_count": 7,
+    "authors": [
+      "Haobo Zhang",
+      "Yicheng Li",
+      "Qian Lin"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0585.html": {
+    "title": "Differentially Private Topological Data Analysis",
+    "volume": "main",
+    "abstract": "This paper is the first to attempt differentially private (DP) topological data analysis (TDA), producing near-optimal private persistence diagrams. We analyze the sensitivity of persistence diagrams in terms of the bottleneck distance, and we show that the commonly used Cech complex has sensitivity that does not decrease as the sample size $n$ increases. This makes it challenging for the persistence diagrams of Cech complexes to be privatized. As an alternative, we show that the persistence diagram obtained by the $L^1$-distance to measure (DTM) has sensitivity $O(1/n)$. Based on the sensitivity analysis, we propose using the exponential mechanism whose utility function is defined in terms of the bottleneck distance of the $L^1$-DTM persistence diagrams. We also derive upper and lower bounds of the accuracy of our privacy mechanism; the obtained bounds indicate that the privacy error of our mechanism is near-optimal. We demonstrate the performance of our privatized persistence diagrams through simulations as well as on a real data set tracking human movement",
+    "checked": true,
+    "id": "73ea6f7515e2fc66f73a7a9e13112ca1115243fe",
+    "semantic_title": "differentially private topological data analysis",
+    "citation_count": 3,
+    "authors": [
+      "Taegyu Kang",
+      "Sehwan Kim",
+      "Jinwon Sohn",
+      "Jordan Awan"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0957.html": {
+    "title": "Classification of Data Generated by Gaussian Mixture Models Using Deep ReLU Networks",
+    "volume": "main",
+    "abstract": "This paper studies the binary classification of unbounded data from ${\\mathbb R}^d$ generated under Gaussian Mixture Models (GMMs) using deep ReLU neural networks. We obtain — for the first time — non-asymptotic upper bounds and convergence rates of the excess risk (excess misclassification error) for the classification without restrictions on model parameters. While the majority of existing generalization analysis of classification algorithms relies on a bounded domain, we consider an unbounded domain by leveraging the analyticity and fast decay of Gaussian distributions. To facilitate our analysis, we give a novel approximation error bound for general analytic functions using ReLU networks, which may be of independent interest. Gaussian distributions can be adopted nicely to model data arising in applications, e.g., speeches, images, and texts; our results provide a theoretical verification of the observed efficiency of deep neural networks in practical classification problems",
+    "checked": true,
+    "id": "505542399e50dc6275781ffaece447cb03020830",
+    "semantic_title": "classification of data generated by gaussian mixture models using deep relu networks",
+    "citation_count": 3,
+    "authors": [
+      "Tian-Yi Zhou",
+      "Xiaoming Huo"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1052.html": {
+    "title": "Generalized Independent Noise Condition for Estimating Causal Structure with Latent Variables",
+    "volume": "main",
+    "abstract": "We investigate the challenging task of learning causal structure in the presence of latent variables, including locating latent variables, determining their quantity, and identifying causal relationships among both latent and observed variables. To address this, we propose a Generalized Independent Noise (GIN) condition for linear non-Gaussian acyclic causal models that incorporate latent variables, which establishes the independence between a linear combination of certain measured variables and some other measured variables. Specifically, for two observed random vectors $\\bf{Y}$ and $\\bf{Z}$, GIN holds if and only if $\\omega^{\\intercal}\\mathbf{Y}$ and $\\mathbf{Z}$ are statistically independent, where $\\omega$ is a non-zero parameter vector determined by the cross-covariance between $\\mathbf{Y}$ and $\\mathbf{Z}$. We then give necessary and sufficient graphical criteria of the GIN condition in linear non-Gaussian acyclic causal models. From a graphical perspective, roughly speaking, GIN implies the existence of a set $\\mathcal{S}$ such that $\\mathcal{S}$ is causally earlier (w.r.t. the causal ordering) than $\\mathbf{Y}$, and that every active (collider-free) path between $\\mathbf{Y}$ and $\\mathbf{Z}$ must contain a node from $\\mathcal{S}$. Interestingly, we find that the independent noise condition (i.e., if there is no confounder, causes are independent of the residual derived from regressing the effect on the causes) can be seen as a special case of GIN. With such a connection between GIN and latent causal structures, we further leverage the proposed GIN condition, together with a well-designed search procedure, to efficiently estimate Linear, Non-Gaussian Latent Hierarchical Models (LiNGLaHs), where latent confounders may also be causally related and may even follow a hierarchical structure. We show that the underlying causal structure of a LiNGLaH is identifiable in light of GIN conditions under mild assumptions. Experimental results on both synthetic and three real-world data sets show the effectiveness of the proposed approach",
+    "checked": true,
+    "id": "d13a1dce3cc48026f4a2c0b3cdd1f54e1f81bef5",
+    "semantic_title": "generalized independent noise condition for estimating causal structure with latent variables",
+    "citation_count": 2,
+    "authors": [
+      "Feng Xie",
+      "Biwei Huang",
+      "Zhengming Chen",
+      "Ruichu Cai",
+      "Clark Glymour",
+      "Zhi Geng",
+      "Kun Zhang"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1215.html": {
+    "title": "Neural Collapse for Unconstrained Feature Model under Cross-entropy Loss with Imbalanced Data",
+    "volume": "main",
+    "abstract": "Neural Collapse (NC) is a fascinating phenomenon that arises during the terminal phase of training (TPT) of deep neural networks (DNNs). Specifically, for balanced training datasets (each class shares the same number of samples), it is observed that the feature vectors of samples from the same class converge to their corresponding in-class mean features and their pairwise angles are the same. In this paper, we study the extension of the NC phenomenon to imbalanced datasets under cross-entropy loss function in the context of the unconstrained feature model (UFM). Our contribution is multi-fold compared with the state-of-the-art results: (a) we show that the feature vectors within the same class still collapse to the same mean vector; (b) the mean feature vectors no longer share the same pairwise angle. Instead, those angles depend on sample sizes; (c) we also characterize the sharp threshold on which the minority collapse (the feature vectors of the minority groups collapse to one single vector) will happen; (d) finally, we argue that the effect of the imbalance in datasets diminishes as the sample size grows. Our results provide a complete picture of the NC under the cross-entropy loss for imbalanced datasets. Numerical experiments confirm our theories",
+    "checked": true,
+    "id": "14b31861313eb5e9e2d5020a8d920c8d1aaca857",
+    "semantic_title": "neural collapse for unconstrained feature model under cross-entropy loss with imbalanced data",
+    "citation_count": 4,
+    "authors": [
+      "Wanli Hong",
+      "Shuyang Ling"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1287.html": {
+    "title": "Three-Way Trade-Off in Multi-Objective Learning: Optimization, Generalization and Conflict-Avoidance",
+    "volume": "main",
+    "abstract": "Multi-objective learning (MOL) often arises in machine learning problems when there are multiple data modalities or tasks. One critical challenge in MOL is the potential conflict among different objectives during the optimization process. Recent works have developed various dynamic weighting algorithms for MOL, where the central idea is to find an update direction that avoids conflicts among objectives. Albeit its appealing intuition, empirical studies show that dynamic weighting methods may not outperform static ones. To understand this theory-practice gap, we focus on a stochastic variant of MGDA, the Multi-objective gradient with Double sampling (MoDo), and study the generalization performance and its interplay with optimization through the lens of algorithmic stability in the framework of statistical learning theory. We find that the key rationale behind MGDA—updating along conflict-avoidant direction—may hinder dynamic weighting algorithms from achieving the optimal $O(1/\\sqrt{n})$ population risk, where $n$ is the number of training samples. We further demonstrate the impact of dynamic weights on the three-way trade-off among optimization, generalization, and conflict avoidance unique in MOL. We showcase the generality of our theoretical framework by analyzing other algorithms under the framework. Experiments on various multi-task learning benchmarks are performed to demonstrate the practical applicability. Code is available at https://github.com/heshandevaka/Trade-Off-MOL",
+    "checked": true,
+    "id": "ba1c8e1d51dc8a2685d2f0ddc146c54ef7d61d23",
+    "semantic_title": "three-way trade-off in multi-objective learning: optimization, generalization and conflict-avoidance",
+    "citation_count": 9,
+    "authors": [
+      "Lisha Chen",
+      "Heshan Fernando",
+      "Yiming Ying",
+      "Tianyi Chen"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1526.html": {
+    "title": "On the Intrinsic Structures of Spiking Neural Networks",
+    "volume": "main",
+    "abstract": "Recent years have emerged a surge of interest in spiking neural networks (SNNs). The performance of SNNs hinges not only on searching apposite architectures and connection weights, similar to conventional artificial neural networks, but also on the meticulous configuration of their intrinsic structures. However, there has been a dearth of comprehensive studies examining the impact of intrinsic structures; thus developers often feel challenging to apply a standardized configuration of SNNs across diverse datasets or tasks. This work delves deep into the intrinsic structures of SNNs. Initially, we draw two key conclusions: (1) the membrane time hyper-parameter is intimately linked to the eigenvalues of the integration operation, dictating the functional topology of spiking dynamics; (2) various hyper-parameters of the firing-reset mechanism govern the overall firing capacity of an SNN, mitigating the injection ratio or sampling density of input data. These findings elucidate why the efficacy of SNNs hinges heavily on the configuration of intrinsic structures and lead to a recommendation that enhancing the adaptability of these structures contributes to improving the overall performance and applicability of SNNs. Inspired by this recognition, we propose two feasible approaches to enhance SNN learning, involving developing self-connection architectures and stochastic spiking neurons to augment the adaptability of the integration operation and firing-reset mechanism, respectively. We theoretically prove that (1) both methods promote the expressive property for universal approximation, (2) the incorporation of self-connection architectures fosters ample solutions and structural stability for SNNs approximating adaptive dynamical systems, (3) the stochastic spiking neurons maintain generalization bounds with an exponential reduction in Rademacher complexity. Empirical experiments conducted on various real-world datasets affirm the effectiveness of our proposed methods",
+    "checked": true,
+    "id": "272796d86860fa410f5922fc2dfc9c4e44383971",
+    "semantic_title": "on the intrinsic structures of spiking neural networks",
+    "citation_count": 0,
+    "authors": [
+      "Shao-Qun Zhang",
+      "Jia-Yi Chen",
+      "Jin-Hui Wu",
+      "Gao Zhang",
+      "Huan Xiong",
+      "Bin Gu",
+      "Zhi-Hua Zhou"
+    ]
+  },
+  "https://jmlr.org/papers/v25/24-0006.html": {
+    "title": "Sharp analysis of power iteration for tensor PCA",
+    "volume": "main",
+    "abstract": "We investigate the power iteration algorithm for the tensor PCA model introduced in Richard and Montanari (2014). Previous work studying the properties of tensor power iteration is either limited to a constant number of iterations, or requires a non-trivial data-independent initialization. In this paper, we move beyond these limitations and analyze the dynamics of randomly initialized tensor power iteration up to polynomially many steps. Our contributions are threefold: First, we establish sharp bounds on the number of iterations required for power method to converge to the planted signal, for a broad range of the signal-to-noise ratios. Second, our analysis reveals that the actual algorithmic threshold for power iteration is smaller than the one conjectured in the literature by a $\\mathrm{polylog}(n)$ factor, where $n$ is the ambient dimension. Finally, we propose a simple and effective stopping criterion for power iteration, which provably outputs a solution that is highly correlated with the true signal. Extensive numerical experiments verify our theoretical results",
+    "checked": true,
+    "id": "fc600b3d76099fa036c85f86014cc3b9e61d5eb3",
+    "semantic_title": "sharp analysis of power iteration for tensor pca",
+    "citation_count": 0,
+    "authors": [
+      "Yuchen Wu",
+      "Kangjie Zhou"
+    ]
   }
 }
