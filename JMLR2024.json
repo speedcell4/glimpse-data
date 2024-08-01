@@ -2861,5 +2861,322 @@
       "Yuchen Wu",
       "Kangjie Zhou"
     ]
+  },
+  "https://jmlr.org/papers/v25/21-1260.html": {
+    "title": "Training Integrable Parameterizations of Deep Neural Networks in the Infinite-Width Limit",
+    "volume": "main",
+    "abstract": "To theoretically understand the behavior of trained deep neural networks, it is necessary to study the dynamics induced by gradient methods from a random initialization. However, the nonlinear and compositional structure of these models make these dynamics difficult to analyze. To overcome these challenges, large-width asymptotics have recently emerged as a fruitful viewpoint and led to practical insights on real-world deep networks. For two-layer neural networks, it has been understood via these asymptotics that the nature of the trained model radically changes depending on the scale of the initial random weights, ranging from a kernel regime (for large initial variance) to a feature learning regime (for small initial variance). For deeper networks more regimes are possible, and in this paper we study in detail a specific choice of \"small\" initialization corresponding to \"mean-field\" limits of neural networks, which we call integrable parameterizations (IPs). First, we show that under standard i.i.d. zero-mean initialization, integrable parameterizations of neural networks with more than four layers start at a stationary point in the infinite-width limit and no learning occurs. We then propose various methods to avoid this trivial behavior and analyze in detail the resulting dynamics. In particular, one of these methods consists in using large initial learning rates, and we show that it is equivalent to a modification of the recently proposed maximal update parameterization µP. We confirm our results with numerical experiments on image classification tasks, which additionally show a strong difference in behavior between various choices of activation functions that is not yet captured by theory",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Karl Hajjar",
+      "Lénaïc Chizat",
+      "Christophe Giraud"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0930.html": {
+    "title": "Linear Regression With Unmatched Data: A Deconvolution Perspective",
+    "volume": "main",
+    "abstract": "Consider the regression problem where the response $Y\\in\\mathbb{R}$ and the covariate $X\\in\\mathbb{R}^d$ for $d\\geq 1$ are unmatched. Under this scenario, we do not have access to pairs of observations from the distribution of $(X, Y)$, but instead, we have separate data sets $\\{Y_i\\}_{i=1}^{n_Y}$ and $\\{X_j\\}_{j=1}^{n_X}$, possibly collected from different sources. We study this problem assuming that the regression function is linear and the noise distribution is known, an assumption that we relax in the applications we consider. We introduce an estimator of the regression vector based on deconvolution and demonstrate its consistency and asymptotic normality under identifiability. Even when identifiability does not hold, we show in some cases that our estimator, the DLSE (Deconvolution Least Squared Estimator), is consistent in terms of an extended $\\ell_2$ norm. Using this observation, we devise a method for semi-supervised learning, i.e., when we have access to a small sample of matched pairs $\\{(X_k, Y_k)\\}_{k=1}^m$. Several applications with synthetic and real data sets are considered to illustrate the theory",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Mona Azadkia",
+      "Fadoua Balabdaoui"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0980.html": {
+    "title": "Unsupervised Tree Boosting for Learning Probability Distributions",
+    "volume": "main",
+    "abstract": "We propose an unsupervised tree boosting algorithm for inferring the underlying sampling distribution of an i.i.d. sample based on fitting additive tree ensembles in a manner analogous to supervised tree boosting. Integral to the algorithm is a new notion of \"addition\" on probability distributions that leads to a coherent notion of \"residualization\", i.e., subtracting a probability distribution from an observation to remove the distributional structure from the sampling distribution of the latter. We show that these notions arise naturally for univariate distributions through cumulative distribution function (CDF) transforms and compositions due to several \"group-like\" properties of univariate CDFs. While the traditional multivariate CDF does not preserve these properties, a new definition of multivariate CDF can restore these properties, thereby allowing the notions of \"addition\" and \"residualization\" to be formulated for multivariate settings as well. This then gives rise to the unsupervised boosting algorithm based on forward-stagewise fitting of an additive tree ensemble, which sequentially reduces the Kullback-Leibler divergence from the truth. The algorithm allows analytic evaluation of the fitted density and outputs a generative model that can be readily sampled from. We enhance the algorithm with scale-dependent shrinkage and a two-stage strategy that separately fits the marginals and the copula. The algorithm then performs competitively with state-of-the-art deep-learning approaches in multivariate density estimation on multiple benchmark data sets",
+    "checked": false,
+    "id": "61f3331a37dbe9f7bb83b02ae16666680682202f",
+    "semantic_title": "semisupervised transfer boosting (ss-trboosting)",
+    "citation_count": 2,
+    "authors": [
+      "Naoki Awaya",
+      "Li Ma"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1228.html": {
+    "title": "Grokking phase transitions in learning local rules with gradient descent",
+    "volume": "main",
+    "abstract": "We discuss two solvable grokking (generalisation beyond overfitting) models in a rule-learning scenario. We show that grokking is a phase transition and find exact analytic expressions for the critical exponents, grokking probability, and grokking time distribution. Further, we introduce a tensor network map that connects the proposed grokking setup with the standard (perceptron) statistical learning theory and provide evidence that grokking is a consequence of the locality of the teacher model. We analyze the rule-30 cellular automaton learning task, numerically determine the critical exponent and the grokking time distribution, and compare them with the prediction of the proposed grokking model. Finally, we numerically study the connection between structure formation and grokking",
+    "checked": true,
+    "id": "9a5bf5abd0b1548214f35c835f815a880a9d64a4",
+    "semantic_title": "grokking phase transitions in learning local rules with gradient descent",
+    "citation_count": 13,
+    "authors": [
+      "Bojan Žunkovič",
+      "Enej Ilievski"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1482.html": {
+    "title": "Distributionally Robust Model-Based Offline Reinforcement Learning with Near-Optimal Sample Complexity",
+    "volume": "main",
+    "abstract": "This paper concerns the central issues of model robustness and sample efficiency in offline reinforcement learning (RL), which aims to learn to perform decision making from history data without active exploration. Due to uncertainties and variabilities of the environment, it is critical to learn a robust policy---with as few samples as possible---that performs well even when the deployed environment deviates from the nominal one used to collect the history dataset. We consider a distributionally robust formulation of offline RL, focusing on tabular robust Markov decision processes with an uncertainty set specified by the Kullback-Leibler divergence in both finite-horizon and infinite-horizon settings. To combat with sample scarcity, a model-based algorithm that combines distributionally robust value iteration with the principle of pessimism in the face of uncertainty is proposed, by penalizing the robust value estimates with a carefully designed data-driven penalty term. Under a mild and tailored assumption of the history dataset that measures distribution shift without requiring full coverage of the state-action space, we establish the finite-sample complexity of the proposed algorithms. We further develop an information-theoretic lower bound, which suggests that learning RMDPs is at least as hard as the standard MDPs when the uncertainty level is sufficient small, and corroborates the tightness of our upper bound up to polynomial factors of the (effective) horizon length for a range of uncertainty levels. To the best our knowledge, this provides the first provably near-optimal robust offline RL algorithm that learns under model uncertainty and partial coverage",
+    "checked": true,
+    "id": "f05bd3200ad8511261318d2d658277fc1cccc6c4",
+    "semantic_title": "distributionally robust model-based offline reinforcement learning with near-optimal sample complexity",
+    "citation_count": 39,
+    "authors": [
+      "Laixi Shi",
+      "Yuejie Chi"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0166.html": {
+    "title": "An Algorithmic Framework for the Optimization of Deep Neural Networks Architectures and Hyperparameters",
+    "volume": "main",
+    "abstract": "In this paper, we propose DRAGON (for DiRected Acyclic Graph OptimizatioN), an algorithmic framework to automatically generate efficient deep neural networks architectures and optimize their associated hyperparameters. The framework is based on evolving Directed Acyclic Graphs (DAGs), defining a more flexible search space than the existing ones in the literature. It allows mixtures of different classical operations: convolutions, recurrences and dense layers, but also more newfangled operations such as self-attention. Based on this search space we propose neighbourhood and evolution search operators to optimize both the architecture and hyper-parameters of our networks. These search operators can be used with any metaheuristic capable of handling mixed search spaces. We tested our algorithmic framework with an asynchronous evolutionary algorithm on a time series forecasting benchmark. The results demonstrate that DRAGON outperforms state-of-the-art handcrafted models and AutoML techniques for time series forecasting on numerous datasets. DRAGON has been implemented as a python open-source package",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Julie Keisler",
+      "El-Ghazali Talbi",
+      "Sandra Claudel",
+      "Gilles Cabriel"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0396.html": {
+    "title": "Manifold Learning by Mixture Models of VAEs for Inverse Problems",
+    "volume": "main",
+    "abstract": "Representing a manifold of very high-dimensional data with generative models has been shown to be computationally efficient in practice. However, this requires that the data manifold admits a global parameterization. In order to represent manifolds of arbitrary topology, we propose to learn a mixture model of variational autoencoders. Here, every encoder-decoder pair represents one chart of a manifold. We propose a loss function for maximum likelihood estimation of the model weights and choose an architecture that provides us the analytical expression of the charts and of their inverses. Once the manifold is learned, we use it for solving inverse problems by minimizing a data fidelity term restricted to the learned manifold. To solve the arising minimization problem we propose a Riemannian gradient descent algorithm on the learned manifold. We demonstrate the performance of our method for low-dimensional toy examples as well as for deblurring and electrical impedance tomography on certain image manifolds",
+    "checked": true,
+    "id": "1b445f28121460dc52fb539aaa18044248139da0",
+    "semantic_title": "manifold learning by mixture models of vaes for inverse problems",
+    "citation_count": 5,
+    "authors": [
+      "Giovanni S. Alberti",
+      "Johannes Hertrich",
+      "Matteo Santacesaria",
+      "Silvia Sciutto"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0528.html": {
+    "title": "Efficient Convex Algorithms for Universal Kernel Learning",
+    "volume": "main",
+    "abstract": "The accuracy and complexity of machine learning algorithms based on kernel optimization are determined by the set of kernels over which they are able to optimize. An ideal set of kernels should: admit a linear parameterization (for tractability); be dense in the set of all kernels (for robustness); be universal (for accuracy). Recently, a framework was proposed for using positive matrices to parameterize a class of positive semi-separable kernels. Although this class can be shown to meet all three criteria, previous algorithms for optimization of such kernels were limited to classification and furthermore relied on computationally complex Semidefinite Programming (SDP) algorithms. In this paper, we pose the problem of learning semiseparable kernels as a minimax optimization problem and propose a SVD-QCQP primal-dual algorithm which dramatically reduces the computational complexity as compared with previous SDP-based approaches. Furthermore, we provide an efficient implementation of this algorithm for both classification and regression -- an implementation which enables us to solve problems with 100 features and up to 30,000 datums. Finally, when applied to benchmark data, the algorithm demonstrates the potential for significant improvement in accuracy over typical (but non-convex) approaches such as Neural Nets and Random Forest with similar or better computation time",
+    "checked": true,
+    "id": "c4adbe61f160a00c587ca78c39fa670b06af6440",
+    "semantic_title": "efficient convex algorithms for universal kernel learning",
+    "citation_count": 1,
+    "authors": [
+      "Aleksandr Talitckii",
+      "Brendon Colbert",
+      "Matthew M. Peet"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0803.html": {
+    "title": "Dropout Regularization Versus l2-Penalization in the Linear Model",
+    "volume": "main",
+    "abstract": "We investigate the statistical behavior of gradient descent iterates with dropout in the linear regression model. In particular, non-asymptotic bounds for the convergence of expectations and covariance matrices of the iterates are derived. The results shed more light on the widely cited connection between dropout and $\\ell_2$-regularization in the linear model. We indicate a more subtle relationship, owing to interactions between the gradient descent dynamics and the additional randomness induced by dropout. Further, we study a simplified variant of dropout which does not have a regularizing effect and converges to the least squares estimator",
+    "checked": false,
+    "id": "ecfa59a60ddc984276e0de1cdcf6a71bfe109ce7",
+    "semantic_title": "dropout regularization versus $\\ell_2$-penalization in the linear model",
+    "citation_count": 3,
+    "authors": [
+      "Gabriel Clara",
+      "Sophie Langer",
+      "Johannes Schmidt-Hieber"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0882.html": {
+    "title": "Scalable High-Dimensional Multivariate Linear Regression for Feature-Distributed Data",
+    "volume": "main",
+    "abstract": "Feature-distributed data, referred to data partitioned by features and stored across multiple computing nodes, are increasingly common in applications with a large number of features. This paper proposes a two-stage relaxed greedy algorithm (TSRGA) for applying multivariate linear regression to such data. The main advantage of TSRGA is that its communication complexity does not depend on the feature dimension, making it highly scalable to very large data sets. In addition, for multivariate response variables, TSRGA can be used to yield low-rank coefficient estimates. The fast convergence of TSRGA is validated by simulation experiments. Finally, we apply the proposed TSRGA in a financial application that leverages unstructured data from the 10-K reports, demonstrating its usefulness in applications with many dense large-dimensional matrices",
+    "checked": true,
+    "id": "41c178b2926cb74674e1931cf089cd28a5c72baf",
+    "semantic_title": "scalable high-dimensional multivariate linear regression for feature-distributed data",
+    "citation_count": 0,
+    "authors": [
+      "Shuo-Chieh Huang",
+      "Ruey S. Tsay"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1261.html": {
+    "title": "Parallel-in-Time Probabilistic Numerical ODE Solvers",
+    "volume": "main",
+    "abstract": "Probabilistic numerical solvers for ordinary differential equations (ODEs) treat the numerical simulation of dynamical systems as problems of Bayesian state estimation. Aside from producing posterior distributions over ODE solutions and thereby quantifying the numerical approximation error of the method itself, one less-often noted advantage of this formalism is the algorithmic flexibility gained by formulating numerical simulation in the framework of Bayesian filtering and smoothing. In this paper, we leverage this flexibility and build on the time-parallel formulation of iterated extended Kalman smoothers to formulate a parallel-in-time probabilistic numerical ODE solver. Instead of simulating the dynamical system sequentially in time, as done by current probabilistic solvers, the proposed method processes all time steps in parallel and thereby reduces the computational complexity from linear to logarithmic in the number of time steps. We demonstrate the effectiveness of our approach on a variety of ODEs and compare it to a range of both classic and probabilistic numerical ODE solvers",
+    "checked": true,
+    "id": "1d0380e00e2cb92d33ed7f0edfc930ae70c68da3",
+    "semantic_title": "parallel-in-time probabilistic numerical ode solvers",
+    "citation_count": 0,
+    "authors": [
+      "Nathanael Bosch",
+      "Adrien Corenflos",
+      "Fatemeh Yaghoobi",
+      "Filip Tronarp",
+      "Philipp Hennig",
+      "Simo Särkkä"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0641.html": {
+    "title": "Risk Measures and Upper Probabilities: Coherence and Stratification",
+    "volume": "main",
+    "abstract": "Machine learning typically presupposes classical probability theory which implies that aggregation is built upon expectation. There are now multiple reasons to motivate looking at richer alternatives to classical probability theory as a mathematical foundation for machine learning. We systematically examine a powerful and rich class of alternative aggregation functionals, known variously as spectral risk measures, Choquet integrals or Lorentz norms. We present a range of characterization results, and demonstrate what makes this spectral family so special. In doing so we arrive at a natural stratification of all coherent risk measures in terms of the upper probabilities that they induce by exploiting results from the theory of rearrangement invariant Banach spaces. We empirically demonstrate how this new approach to uncertainty helps tackling practical machine learning problems",
+    "checked": true,
+    "id": "8f9bcba8ae37dbcb9db345b072fb22b432b306a3",
+    "semantic_title": "risk measures and upper probabilities: coherence and stratification",
+    "citation_count": 11,
+    "authors": [
+      "Christian Fröhlich",
+      "Robert C. Williamson"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0952.html": {
+    "title": "Law of Large Numbers and Central Limit Theorem for Wide Two-layer Neural Networks: The Mini-Batch and Noisy Case",
+    "volume": "main",
+    "abstract": "In this work, we consider a wide two-layer neural network and study the behavior of its empirical weights under a dynamics set by a stochastic gradient descent along the quadratic loss with mini-batches and noise. Our goal is to prove a trajectorial law of large number as well as a central limit theorem for their evolution. When the noise is scaling as $1/N^\\beta$ and $1/2<\\beta\\le\\infty$, we rigorously derive and generalize the LLN obtained for example by Rotskoff and Van den Injden (Com. Pure. Appl. Math, 2022), Mei and Montanari and Nguyen (Pnas 2018) or Sirignano and Spiliopoulos (Siam. J. Appl. Math. 2020). When $3/4<\\beta\\le\\infty$, we also generalize the CLT of Sirignano and Spiliopoulos (Stoch. Proc. Appl. 2020) and further exhibit the effect of mini-batching on the asymptotic variance which leads the fluctuations. The case $\\beta=3/4$ is trickier and we give an example showing the divergence with time of the variance thus establishing the instability of the predictions of the neural network in this case. It is illustrated by simple numerical examples",
+    "checked": true,
+    "id": "9f5d631221a06ef3d981e47266391bc1cd63f8c9",
+    "semantic_title": "law of large numbers and central limit theorem for wide two-layer neural networks: the mini-batch and noisy case",
+    "citation_count": 3,
+    "authors": [
+      "Arnaud Descours",
+      "Arnaud Guillin",
+      "Manon Michel",
+      "Boris Nectoux"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1026.html": {
+    "title": "PAMI: An Open-Source Python Library for Pattern Mining",
+    "volume": "MLOSS",
+    "abstract": "Crucial information that can empower users with competitive information to achieve socio-economic development lies hidden in big data. Pattern mining aims to discover this needy information by finding user interest-based patterns in big data. Unfortunately, existing pattern mining libraries are limited to finding a few types of patterns in transactional and sequence databases. This paper tackles this problem by providing a cross-platform open-source Python library called PAttern MIning (PAMI). PAMI provides several algorithms to discover different types of patterns hidden in various types of databases across multiple computing architectures. PAMI also contains algorithms to generate various types of synthetic databases. PAMI offers a command line interface, Jupyter Notebook support, and easy maintenance through the Python Package Index. Furthermore, the source code is available under the GNU General Public License, version 3. Finally, PAMI offers several resources, such as a user's guide, a developer's guide, datasets, and a bug report",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Uday Kiran Rage",
+      "Veena Pamalla",
+      "Masashi Toyoda",
+      "Masaru Kitsuregawa"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1344.html": {
+    "title": "From Small Scales to Large Scales: Distance-to-Measure Density based Geometric Analysis of Complex Data",
+    "volume": "main",
+    "abstract": "How can we tell complex point clouds with different small scale characteristics apart, while disregarding global features? Can we find a suitable transformation of such data in a way that allows to discriminate between differences in this sense with statistical guarantees? In this paper, we consider the analysis and classification of complex point clouds as they are obtained, e.g., via single molecule localization microscopy. We focus on the task of identifying differences between noisy point clouds based on small scale characteristics, while disregarding large scale information such as overall size. We propose an approach based on a transformation of the data via the so-called Distance-to-Measure (DTM) function, a transformation which is based on the average of nearest neighbor distances. For each data set, we estimate the probability density of average local distances of all data points and use the estimated densities for classification. While the applicability is immediate and the practical performance of the proposed methodology is very good, the theoretical study of the density estimators is quite challenging, as they are based on non-i.i.d. observations that have been obtained via a complicated transformation. In fact, the transformed data are stochastically dependent in a non-local way that is not captured by commonly considered dependence measures. Nonetheless, we show that the asymptotic behaviour of the density estimator is driven by a kernel density estimator of certain i.i.d. random variables by using theoretical properties of $U$-statistics, which allows to handle the dependencies via a Hoeffding decomposition. We show via a numerical study and in an application to simulated single molecule localization microscopy data of chromatin fibers that unsupervised classification tasks based on estimated DTM-densities achieve excellent separation results",
+    "checked": true,
+    "id": "6dbe9929ba9e589ea5c7819d5542eed56f376fef",
+    "semantic_title": "from small scales to large scales: distance-to-measure density based geometric analysis of complex data",
+    "citation_count": 0,
+    "authors": [
+      "Katharina Proksch",
+      "Christoph Alexander Weikamp",
+      "Thomas Staudt",
+      "Benoit Lelandais",
+      "Christophe Zimmer"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0059.html": {
+    "title": "Heterogeneity-aware Clustered Distributed Learning for Multi-source Data Analysis",
+    "volume": "main",
+    "abstract": "In diverse fields ranging from finance to omics, it is increasingly common that data is distributed with multiple individual sources (referred to as \"clients\" in some studies). Integrating raw data, although powerful, is often not feasible, for example, when there are considerations on privacy protection. Distributed learning techniques have been developed to integrate summary statistics as opposed to raw data. In many existing distributed learning studies, it is stringently assumed that all the clients have the same model. To accommodate data heterogeneity, some federated learning methods allow for client-specific models. In this article, we consider the scenario that clients form clusters, those in the same cluster have the same model, and different clusters have different models. Further considering the clustering structure can lead to a better understanding of the \"interconnections\" among clients and reduce the number of parameters. To this end, we develop a novel penalization approach. Specifically, group penalization is imposed for regularized estimation and selection of important variables, and fusion penalization is imposed to automatically cluster clients. An effective ADMM algorithm is developed, and the estimation, selection, and clustering consistency properties are established under mild conditions. Simulation and data analysis further demonstrate the practical utility and superiority of the proposed approach",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yuanxing Chen",
+      "Qingzhao Zhang",
+      "Shuangge Ma",
+      "Kuangnan Fang"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0269.html": {
+    "title": "Pre-trained Gaussian Processes for Bayesian Optimization",
+    "volume": "main",
+    "abstract": "Bayesian optimization (BO) has become a popular strategy for global optimization of expensive real-world functions. Contrary to a common expectation that BO is suited to optimizing black-box functions, it actually requires domain knowledge about those functions to deploy BO successfully. Such domain knowledge often manifests in Gaussian process (GP) priors that specify initial beliefs on functions. However, even with expert knowledge, it is non-trivial to quantitatively define a prior. This is especially true for hyperparameter tuning problems on complex machine learning models, where landscapes of tuning objectives are often difficult to comprehend. We seek an alternative practice for setting these functional priors. In particular, we consider the scenario where we have data from similar functions that allow us to pre-train a tighter distribution a priori. We detail what pre-training entails for GPs using a KL divergence based loss function, and propose a new pre-training based BO framework named HyperBO. Theoretically, we show bounded posterior predictions and near-zero regrets for HyperBO without assuming the \"ground truth\" GP prior is known. To verify our approach in realistic setups, we collect a large multi-task hyperparameter tuning dataset by training tens of thousands of configurations of near-state-of-the-art deep learning models on popular image and text datasets, as well as a protein sequence dataset. Our results show that on average, HyperBO is able to locate good hyperparameters at least 3 times more efficiently than the best competing methods on both our new tuning dataset and existing multi-task BO benchmarks",
+    "checked": false,
+    "id": "f4f195d41e0f738447b28cb20e52724f0ece01a4",
+    "semantic_title": "pre-training helps bayesian optimization too",
+    "citation_count": 9,
+    "authors": [
+      "Zi Wang",
+      "George E. Dahl",
+      "Kevin Swersky",
+      "Chansoo Lee",
+      "Zachary Nado",
+      "Justin Gilmer",
+      "Jasper Snoek",
+      "Zoubin Ghahramani"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0397.html": {
+    "title": "On the Connection between Lp- and Risk Consistency and its Implications on Regularized Kernel Methods",
+    "volume": "main",
+    "abstract": "As a predictor's quality is often assessed by means of its risk, it is natural to regard risk consistency as a desirable property of learning methods, and many such methods have indeed been shown to be risk consistent. The first aim of this paper is to establish the close connection between risk consistency and $L_p$-consistency for a considerably wider class of loss functions than has been done before. The attempt to transfer this connection to shifted loss functions surprisingly reveals that this shift does not reduce the assumptions needed on the underlying probability measure to the same extent as it does for many other results. The results are applied to regularized kernel methods such as support vector machines",
+    "checked": false,
+    "id": "f0c9dffa15787ab3342c5ea00b402091ef7072ae",
+    "semantic_title": "on the connection between lp and risk consistency and its implications on regularized kernel methods",
+    "citation_count": 1,
+    "authors": [
+      "Hannes Köhler"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0764.html": {
+    "title": "FedCBO: Reaching Group Consensus in Clustered Federated Learning through Consensus-based Optimization",
+    "volume": "main",
+    "abstract": "Federated learning is an important framework in modern machine learning that seeks to integrate the training of learning models from multiple users, each user having their own local data set, in a way that is sensitive to data privacy and to communication loss constraints. In clustered federated learning, one assumes an additional unknown group structure among users, and the goal is to train models that are useful for each group, rather than simply training a single global model for all users. In this paper, we propose a novel solution to the problem of clustered federated learning that is inspired by ideas in consensus-based optimization (CBO). Our new CBO-type method is based on a system of interacting particles that is oblivious to group memberships. Our model is motivated by rigorous mathematical reasoning, which includes a mean-field analysis describing the large number of particles limit of our particle system, as well as convergence guarantees for the simultaneous global optimization of general non-convex objective functions (corresponding to the loss functions of each cluster of users) in the mean-field regime. Experimental results demonstrate the efficacy of our FedCBO algorithm compared to other state-of-the-art methods and help validate our methodological and theoretical work",
+    "checked": true,
+    "id": "4b37eb6dee96278a27cffe8e970fe7b0ec9a1963",
+    "semantic_title": "fedcbo: reaching group consensus in clustered federated learning through consensus-based optimization",
+    "citation_count": 8,
+    "authors": [
+      "José A. Carrillo",
+      "Nicolás García Trillos",
+      "Sixu Li",
+      "Yuhua Zhu"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0816.html": {
+    "title": "Interpretable algorithmic fairness in structured and unstructured data",
+    "volume": "main",
+    "abstract": "Systemic bias with respect to gender and race is prevalent in datasets, making it challenging to train classification models that are accurate and alleviate bias. We propose a unified method for alleviating bias in structured and unstructured data, based on a novel optimization approach for optimally flipping outcome labels and training classification models simultaneously. In the case of structured data, we introduce constraints on selected objective measures of meritocracy, and present four case studies, demonstrating that our approach often outperforms state-of the art methods in terms of fairness and meritocracy. In the case of unstructured data, we present two case studies on image classification, demonstrating that our method outperforms state-of-the-art approaches in terms of fairness. Moreover, we note that the decrease in accuracy over the nominal model is $3.31 \\%$ on structured data and $0.65 \\%$ on unstructured data. Finally, we leverage Optimal Classification Trees (OCTs), to provide insights on which attributes of individuals lead to flipping of their labels and apply it to interpret the flipping decisions on structured data. Utilizing OCTs with auxiliary tabular data as well as Gradient-weighted Class Activation Mapping (Grad-CAM), we provide insights on the flipping decisions for unstructured data",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hari Bandi",
+      "Dimitris Bertsimas",
+      "Thodoris Koukouvinos",
+      "Sofie Kupiec"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1145.html": {
+    "title": "Learning from many trajectories",
+    "volume": "main",
+    "abstract": "We initiate a study of supervised learning from many independent sequences (\"trajectories\") of non-independent covariates, reflecting tasks in sequence modeling, control, and reinforcement learning. Conceptually, our multi-trajectory setup sits between two traditional settings in statistical learning theory: learning from independent examples and learning from a single auto-correlated sequence. Our conditions for efficient learning generalize the former setting---trajectories must be non-degenerate in ways that extend standard requirements for independent examples. Notably, we do not require that trajectories be ergodic, long, nor strictly stable. For linear least-squares regression, given $n$-dimensional examples produced by $m$ trajectories, each of length $T$, we observe a notable change in statistical efficiency as the number of trajectories increases from a few (namely $m \\lesssim n$) to many (namely $m \\gtrsim n$). Specifically, we establish that the worst-case error rate of this problem is $\\Theta(n / m T)$ whenever $m \\gtrsim n$. Meanwhile, when $m \\lesssim n$, we establish a (sharp) lower bound of $\\Omega(n^2 / m^2 T)$ on the worst-case error rate, realized by a simple, marginally unstable linear dynamical system. A key upshot is that, in domains where trajectories regularly reset, the error rate eventually behaves as if all of the examples were independent, drawn from their marginals. As a corollary of our analysis, we also improve guarantees for the linear system identification problem",
+    "checked": true,
+    "id": "4565f7f615e68bc5f2d87464e56d691d1484398c",
+    "semantic_title": "learning from many trajectories",
+    "citation_count": 19,
+    "authors": [
+      "Stephen Tu",
+      "Roy Frostig",
+      "Mahdi Soltanolkotabi"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1612.html": {
+    "title": "BenchMARL: Benchmarking Multi-Agent Reinforcement Learning",
+    "volume": "MLOSS",
+    "abstract": "The field of Multi-Agent Reinforcement Learning (MARL) is currently facing a reproducibility crisis. While solutions for standardized reporting have been proposed to address the issue, we still lack a benchmarking tool that enables standardization and reproducibility, while leveraging cutting-edge Reinforcement Learning (RL) implementations. In this paper, we introduce BenchMARL, the first MARL training library created to enable standardized benchmarking across different algorithms, models, and environments. BenchMARL uses TorchRL as its backend, granting it high-performance and maintained state-of-the-art implementations while addressing the broad community of MARL PyTorch users. Its design enables systematic configuration and reporting, thus allowing users to create and run complex benchmarks from simple one-line inputs. BenchMARL is open-sourced on GitHub at https://github.com/facebookresearch/BenchMARL",
+    "checked": true,
+    "id": "e52b101c0bee3490dbd60ed5c13f8f5287dd0321",
+    "semantic_title": "benchmarl: benchmarking multi-agent reinforcement learning",
+    "citation_count": 2,
+    "authors": [
+      "Matteo Bettini",
+      "Amanda Prorok",
+      "Vincent Moens"
+    ]
   }
 }
