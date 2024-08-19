@@ -3178,5 +3178,255 @@
       "Amanda Prorok",
       "Vincent Moens"
     ]
+  },
+  "https://jmlr.org/papers/v25/21-1295.html": {
+    "title": "Understanding Entropic Regularization in GANs",
+    "volume": "main",
+    "abstract": "Generative Adversarial Networks (GANs) are a popular method for learning distributions from data by modeling the target distribution as a function of a known distribution. The function, often referred to as the generator, is optimized to minimize a chosen distance measure between the generated and target distributions. One commonly used measure for this purpose is the Wasserstein distance. However, Wasserstein distance is hard to compute and optimize, and in practice entropic regularization techniques are used to facilitate its computation and improve numerical convergence. The influence of regularization on the learned solution, however, remains not well-understood. In this paper, we study how several popular entropic regularizations of Wasserstein distance impact the solution learned by a Wasserstein GAN in a simple benchmark setting where the generator is linear and the target distribution is high-dimensional Gaussian. We show that entropy regularization of Wasserstein distance promotes sparsification of the solution, while replacing the Wasserstein distance with the Sinkhorn divergence recovers the unregularized solution. The significant benefit of both regularization techniques is that they remove the curse of dimensionality suffered by Wasserstein distance. We show that in both cases the optimal generator can be learned to accuracy $\\epsilon$ with $O(1/\\epsilon^2)$ samples from the target distribution without requiring to constrain the discriminator. We thus conclude that these regularization techniques can improve the quality of the generator learned from empirical data in a way that is applicable for a large class of distributions",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Daria Reshetova",
+      "Yikun Bai",
+      "Xiugang Wu",
+      "Ayfer Özgür"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0327.html": {
+    "title": "A Framework for Improving the Reliability of Black-box Variational Inference",
+    "volume": "main",
+    "abstract": "Black-box variational inference (BBVI) now sees widespread use in machine learning and statistics as a fast yet flexible alternative to Markov chain Monte Carlo methods for approximate Bayesian inference. However, stochastic optimization methods for BBVI remain unreliable and require substantial expertise and hand-tuning to apply effectively. In this paper, we propose robust and automated black-box VI (RABVI), a framework for improving the reliability of BBVI optimization. RABVI is based on rigorously justified automation techniques, includes just a small number of intuitive tuning parameters, and detects inaccurate estimates of the optimal variational approximation. RABVI adaptively decreases the learning rate by detecting convergence of the fixed--learning-rate iterates, then estimates the symmetrized Kullback--Leibler (KL) divergence between the current variational approximation and the optimal one. It also employs a novel optimization termination criterion that enables the user to balance desired accuracy against computational cost by comparing (i) the predicted relative decrease in the symmetrized KL divergence if a smaller learning were used and (ii) the predicted computation required to converge with the smaller learning rate. We validate the robustness and accuracy of RABVI through carefully designed simulation studies and on a diverse set of real-world model and data examples",
+    "checked": true,
+    "id": "2499ddb52041299f957dce72744abfc9e5003443",
+    "semantic_title": "a framework for improving the reliability of black-box variational inference",
+    "citation_count": 11,
+    "authors": [
+      "Manushi Welandawe",
+      "Michael Riis Andersen",
+      "Aki Vehtari",
+      "Jonathan H. Huggins"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0852.html": {
+    "title": "Low-Rank Matrix Estimation in the Presence of Change-Points",
+    "volume": "main",
+    "abstract": "We consider a general trace regression model with multiple structural changes and propose a universal approach for simultaneous exact or near-low-rank matrix recovery and change-point detection. It incorporates nuclear norm penalized least-squares minimization into a grid search scheme that determines the potential structural break. Under a set of general conditions, we establish the non-asymptotic error bounds with a nearly-oracle rate for the matrix estimators as well as the super-consistency rate for the change-point localization. We use concrete random design instances to justify the appropriateness of the proposed conditions. Numerical results demonstrate the validity and effectiveness of the proposed scheme",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lei Shi",
+      "Guanghui Wang",
+      "Changliang Zou"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1253.html": {
+    "title": "Bridging Distributional and Risk-sensitive Reinforcement Learning with Provable Regret Bounds",
+    "volume": "main",
+    "abstract": "We study the regret guarantee for risk-sensitive reinforcement learning (RSRL) via distributional reinforcement learning (DRL) methods. In particular, we consider finite episodic Markov decision processes whose objective is the entropic risk measure (EntRM) of return. By leveraging a key property of the EntRM, the independence property, we establish the risk-sensitive distributional dynamic programming framework. We then propose two novel DRL algorithms that implement optimism through two different schemes, including a model-free one and a model-based one. We prove that they both attain $\\tilde{\\mathcal{O}}\\left(\\frac{\\exp(|\\beta| H)-1}{|\\beta|}H\\sqrt{S^2AK}\\right)$ regret upper bound, where $S$, $A$, $K$, $H$, $T=KH$, and $\\beta$ represent the number of states, actions, episodes, time horizon, number of total time-steps, and risk parameter respectively. It matches RSVI2, with novel distributional analysis that focuses on the distributions of returns rather than the risk values associated with these returns. To the best of our knowledge, this is the first regret analysis that bridges DRL and RSRL in terms of sample complexity. To address the computational inefficiencies inherent in the model-free DRL algorithm, we propose an alternative DRL algorithm with distribution representation. This approach effectively represents any bounded distribution using a refined distribution class. It significantly amplifies computational efficiency while maintaining the established regret bounds. We also prove a tighter minimax lower bound of $\\Omega\\left(\\frac{\\exp(\\beta H/6)-1}{\\beta }\\sqrt{SAT}\\right)$ for the $\\beta>0$ case, which recovers the tight lower bound $\\Omega(H\\sqrt{SAT})$ in the risk-neutral setting",
+    "checked": true,
+    "id": "43bc4efde444306a5a5374c935f5d3a4f9110b5a",
+    "semantic_title": "bridging distributional and risk-sensitive reinforcement learning with provable regret bounds",
+    "citation_count": 10,
+    "authors": [
+      "Hao Liang",
+      "Zhi-Quan Luo"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0296.html": {
+    "title": "Statistical analysis for a penalized EM algorithm in high-dimensional mixture linear regression model",
+    "volume": "main",
+    "abstract": "The expectation-maximization (EM) algorithm and its variants are widely used in statistics. In high-dimensional mixture linear regression, the model is assumed to be a finite mixture of linear regression and the number of predictors is much larger than the sample size. The standard EM algorithm, which attempts to find the maximum likelihood estimator, becomes infeasible for such model. We devise a group lasso penalized EM algorithm and study its statistical properties. Existing theoretical results of regularized EM algorithms often rely on dividing the sample into many independent batches and employing a fresh batch of sample in each iteration of the algorithm. Our algorithm and theoretical analysis do not require sample-splitting, and can be extended to multivariate response cases. The proposed methods also have encouraging performances in numerical studies",
+    "checked": true,
+    "id": "f0b5455d9c1e6147d08ed5158dfb2d7b8f2e5081",
+    "semantic_title": "statistical analysis for a penalized em algorithm in high-dimensional mixture linear regression model",
+    "citation_count": 0,
+    "authors": [
+      "Ning Wang",
+      "Xin Zhang",
+      "Qing Mai"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0878.html": {
+    "title": "Sparse Graphical Linear Dynamical Systems",
+    "volume": "main",
+    "abstract": "Time-series datasets are central in machine learning with applications in numerous fields of science and engineering, such as biomedicine, Earth observation, and network analysis. Extensive research exists on state-space models (SSMs), which are powerful mathematical tools that allow for probabilistic and interpretable learning on time series. Learning the model parameters in SSMs is arguably one of the most complicated tasks, and the inclusion of prior knowledge is known to both ease the interpretation but also to complicate the inferential tasks. Very recent works have attempted to incorporate a graphical perspective on some of those model parameters, but they present notable limitations that this work addresses. More generally, existing graphical modeling tools are designed to incorporate either static information, focusing on statistical dependencies among independent random variables (e.g., graphical Lasso approach), or dynamic information, emphasizing causal relationships among time series samples (e.g., graphical Granger approaches). However, there are no joint approaches combining static and dynamic graphical modeling within the context of SSMs. This work proposes a novel approach to fill this gap by introducing a joint graphical modeling framework that bridges the graphical Lasso model and a causal-based graphical approach for the linear-Gaussian SSM. We present DGLASSO (Dynamic Graphical Lasso), a new inference method within this framework that implements an efficient block alternating majorization-minimization algorithm. The algorithm's convergence is established by departing from modern tools from nonlinear analysis. Experimental validation on various synthetic data showcases the effectiveness of the proposed model and inference algorithm. This work will significantly contribute to the understanding and utilization of time-series data in diverse scientific and engineering applications where incorporating a graphical approach is essential to perform the inference",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Emilie Chouzenoux",
+      "Victor Elvira"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1365.html": {
+    "title": "Structured Dynamic Pricing: Optimal Regret in a Global Shrinkage Model",
+    "volume": "main",
+    "abstract": "We consider dynamic pricing strategies in a streamed longitudinal data set-up where the objective is to maximize, over time, the cumulative profit across a large number of customer segments. We consider a dynamic model with the consumers' preferences as well as price sensitivity varying over time. Building on the well-known finding that consumers sharing similar characteristics act in similar ways, we consider a global shrinkage structure, which assumes that the consumers' preferences across the different segments can be well approximated by a spatial autoregressive (SAR) model. In such a streamed longitudinal setup, we measure the performance of a dynamic pricing policy via regret, which is the expected revenue loss compared to a clairvoyant that knows the sequence of model parameters in advance. We propose a pricing policy based on penalized stochastic gradient descent (PSGD) and explicitly characterize its regret as functions of time, the temporal variability in the model parameters as well as the strength of the auto-correlation network structure spanning the varied customer segments. Our regret analysis results not only demonstrate asymptotic optimality of the proposed policy but also show that for policy planning it is essential to incorporate available structural information as policies based on unshrunken models are highly sub-optimal in the aforementioned set-up. We conduct simulation experiments across a wide range of regimes as well as real-world networks based studies and report encouraging performance for our proposed method",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Rashmi Ranjan Bhuyan",
+      "Adel Javanmard",
+      "Sungchul Kim",
+      "Gourab Mukherjee",
+      "Ryan A. Rossi",
+      "Tong Yu",
+      "Handong Zhao"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1553.html": {
+    "title": "Split Conformal Prediction and Non-Exchangeable Data",
+    "volume": "main",
+    "abstract": "Split conformal prediction (CP) is arguably the most popular CP method for uncertainty quantification, enjoying both academic interest and widespread deployment. However, the original theoretical analysis of split CP makes the crucial assumption of data exchangeability, which hinders many real-world applications. In this paper, we present a novel theoretical framework based on concentration inequalities and decoupling properties of the data, proving that split CP remains valid for many non-exchangeable processes by adding a small coverage penalty. Through experiments with both real and synthetic data, we show that our theoretical results translate to good empirical performance under non-exchangeability, e.g., for time series and spatiotemporal data. Compared to recent conformal algorithms designed to counter specific exchangeability violations, we show that split CP is competitive in terms of coverage and interval size, with the benefit of being extremely simple and orders of magnitude faster than alternatives",
+    "checked": false,
+    "id": "7b924d7e49dda6cddf5210aed39d701d1ba8dbe0",
+    "semantic_title": "split conformal prediction for dependent data",
+    "citation_count": 13,
+    "authors": [
+      "Roberto I. Oliveira",
+      "Paulo Orenstein",
+      "Thiago Ramos",
+      "Joao Vitor Romano"
+    ]
+  },
+  "https://jmlr.org/papers/v25/24-0066.html": {
+    "title": "Sample Complexity of Neural Policy Mirror Descent for Policy Optimization on Low-Dimensional Manifolds",
+    "volume": "main",
+    "abstract": "Policy gradient methods equipped with deep neural networks have achieved great success in solving high-dimensional reinforcement learning (RL) problems. However, current analyses cannot explain why they are resistant to the curse of dimensionality. In this work, we study the sample complexity of the neural policy mirror descent (NPMD) algorithm with deep convolutional neural networks (CNN). Motivated by the empirical observation that many high-dimensional environments have state spaces possessing low-dimensional structures, such as those taking images as states, we consider the state space to be a $d$-dimensional manifold embedded in the $D$-dimensional Euclidean space with intrinsic dimension $d\\ll D$. We show that in each iteration of NPMD, both the value function and the policy can be well approximated by CNNs. The approximation errors are controlled by the size of the networks, and the smoothness of the previous networks can be inherited. As a result, by properly choosing the network size and hyperparameters, NPMD can find an $\\epsilon$-optimal policy with $\\tilde{O}(\\epsilon^{-\\frac{d}{\\alpha}-2})$ samples in expectation, where $\\alpha\\in(0,1]$ indicates the smoothness of environment. Compared to previous work, our result exhibits that NPMD can leverage the low-dimensional structure of state space to escape from the curse of dimensionality, explaining the efficacy of deep policy gradient algorithms",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Zhenghao Xu",
+      "Xiang Ji",
+      "Minshuo Chen",
+      "Mengdi Wang",
+      "Tuo Zhao"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0125.html": {
+    "title": "Memory-Efficient Sequential Pattern Mining with Hybrid Tries",
+    "volume": "main",
+    "abstract": "This paper develops a memory-efficient approach for Sequential Pattern Mining (SPM), a fundamental topic in knowledge discovery that faces a well-known memory bottleneck for large data sets. Our methodology involves a novel hybrid trie data structure that exploits recurring patterns to compactly store the data set in memory; and a corresponding mining algorithm designed to effectively extract patterns from this compact representation. Numerical results on small to medium-sized real-life test instances show an average improvement of 85% in memory consumption and 49% in computation time compared to the state of the art. For large data sets, our algorithm stands out as the only capable SPM approach within 256GB of system memory, potentially saving 1.7TB in memory consumption",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Amin Hosseininasab",
+      "Willem-Jan van Hoeve",
+      "Andre A. Cire"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-0803.html": {
+    "title": "Continuous Prediction with Experts' Advice",
+    "volume": "main",
+    "abstract": "Prediction with experts' advice is one of the most fundamental problems in online learning and captures many of its technical challenges. A recent line of work has looked at online learning through the lens of differential equations and continuous-time analysis. This viewpoint has yielded optimal results for several problems in online learning. In this paper, we employ continuous-time stochastic calculus in order to study the discrete-time experts' problem. We use these tools to design a continuous-time, parameter-free algorithm with improved guarantees on the quantile regret. We then develop an analogous discrete-time algorithm with a very similar analysis and identical quantile regret bounds. Finally, we design an anytime continuous-time algorithm with regret matching the optimal fixed-time rate when the gains are independent Brownian motions; in many settings, this is the most difficult case. This gives some evidence that, even with adversarial gains, the optimal anytime and fixed-time regrets may coincide",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nicholas J. A. Harvey",
+      "Christopher Liaw",
+      "Victor S. Portella"
+    ]
+  },
+  "https://jmlr.org/papers/v25/22-1062.html": {
+    "title": "Data-driven Automated Negative Control Estimation (DANCE): Search for, Validation of, and Causal Inference with Negative Controls",
+    "volume": "main",
+    "abstract": "Negative control variables are increasingly used to adjust for unmeasured confounding bias in causal inference using observational data. They are typically identified by subject matter knowledge and there is currently a severe lack of data-driven methods to find negative controls. In this paper, we present a statistical test for discovering negative controls of a special type---disconnected negative controls---that can serve as surrogates of the unmeasured confounder, and we incorporate that test into the Data-driven Automated Negative Control Estimation (DANCE) algorithm. DANCE first uses the new validation test to identify subsets of a set of candidate negative control variables that satisfy the assumptions of disconnected negative controls. It then applies a negative control method to each pair of these validated negative control variables, and aggregates the output to produce an unbiased point estimate and confidence interval for a causal effect in the presence of unmeasured confounding. We (1) prove the correctness of this validation test, and thus of DANCE; (2) demonstrate via simulation experiments that DANCE outperforms both naive analysis ignoring unmeasured confounding and negative control method with randomly selected candidate negative controls; and (3) demonstrate the effectiveness of DANCE on a challenging real-world problem",
+    "checked": true,
+    "id": "9a508c14a7caa69721ff408d4d676c24e9e6989f",
+    "semantic_title": "data-driven automated negative control estimation (dance): search for, validation of, and causal inference with negative controls",
+    "citation_count": 2,
+    "authors": [
+      "Erich Kummerfeld",
+      "Jaewon Lim",
+      "Xu Shi"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0005.html": {
+    "title": "Individual-centered Partial Information in Social Networks",
+    "volume": "main",
+    "abstract": "In statistical network analysis, we often assume either the full network is available or multiple subgraphs can be sampled to estimate various global properties of the network. However, in a real social network, people frequently make decisions based on their local view of the network alone. Here, we consider a partial information framework that characterizes the local network centered at a given individual by path length $L$ and gives rise to a partial adjacency matrix. Under $L=2$, we focus on the problem of (global) community detection using the popular stochastic block model (SBM) and its degree-corrected variant (DCSBM). We derive theoretical properties of the eigenvalues and eigenvectors from the signal term of the partial adjacency matrix and propose new spectral-based community detection algorithms that achieve consistency under appropriate conditions. Our analysis also allows us to propose a new centrality measure that assesses the importance of an individual's partial information in determining global community structure. Using simulated and real networks, we demonstrate the performance of our algorithms and compare our centrality measure with other popular alternatives to show it captures unique nodal information. Our results illustrate that the partial information framework enables us to compare the viewpoints of different individuals regarding the global structure",
+    "checked": false,
+    "id": "389e22af5651e8b6760b685c7adbd8d54950c8ad",
+    "semantic_title": "deep learning–based dynamic user alignment in social networks",
+    "citation_count": 0,
+    "authors": [
+      "Xiao Han",
+      "Y. X. Rachel Wang",
+      "Qing Yang",
+      "Xin Tong"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-0677.html": {
+    "title": "Variation Spaces for Multi-Output Neural Networks: Insights on Multi-Task Learning and Network Compression",
+    "volume": "main",
+    "abstract": "This paper introduces a novel theoretical framework for the analysis of vector-valued neural networks through the development of vector-valued variation spaces, a new class of reproducing kernel Banach spaces. These spaces emerge from studying the regularization effect of weight decay in training networks with activation functions like the rectified linear unit (ReLU). This framework offers a deeper understanding of multi-output networks and their function-space characteristics. A key contribution of this work is the development of a representer theorem for the vector-valued variation spaces. This representer theorem establishes that shallow vector-valued neural networks are the solutions to data-fitting problems over these infinite-dimensional spaces, where the network widths are bounded by the square of the number of training data. This observation reveals that the norm associated with these vector-valued variation spaces encourages the learning of features that are useful for multiple tasks, shedding new light on multi-task learning with neural networks. Finally, this paper develops a connection between weight-decay regularization and the multi-task lasso problem. This connection leads to novel bounds for layer widths in deep networks that depend on the intrinsic dimensions of the training data representations. This insight not only deepens the understanding of the deep network architectural requirements, but also yields a simple convex optimization method for deep neural network compression. The performance of this compression procedure is evaluated on various architectures",
+    "checked": true,
+    "id": "b1668a9cb0d4b9a00e4bbc48dabbc180c024ae16",
+    "semantic_title": "variation spaces for multi-output neural networks: insights on multi-task learning and network compression",
+    "citation_count": 9,
+    "authors": [
+      "Joseph Shenouda",
+      "Rahul Parhi",
+      "Kangwook Lee",
+      "Robert D. Nowak"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1280.html": {
+    "title": "Distribution Learning via Neural Differential Equations: A Nonparametric Statistical Perspective",
+    "volume": "main",
+    "abstract": "Ordinary differential equations (ODEs), via their induced flow maps, provide a powerful framework to parameterize invertible transformations for representing complex probability distributions. While such models have achieved enormous success in machine learning, little is known about their statistical properties. This work establishes the first general nonparametric statistical convergence analysis for distribution learning via ODE models trained through likelihood maximization. We first prove a convergence theorem applicable to arbitrary velocity field classes $\\mathcal{F}$ satisfying certain simple boundary constraints. This general result captures the trade-off between the approximation error and complexity of the ODE model. We show that the latter can be quantified via the $C^1$-metric entropy of the class $\\mathcal{F}$. We then apply this general framework to the setting of $C^k$-smooth target densities, and establish nearly minimax-optimal convergence rates for two relevant velocity field classes $\\mathcal{F}$: $C^k$ functions and neural networks. The latter is the practically important case of neural ODEs. Our results also provide insight on how the choice of velocity field class, and the dependence of this choice on sample size (e.g., the scaling of neural network classes), impact statistical performance",
+    "checked": true,
+    "id": "56dfa47f97bc91b64fafd9c0a9d4132ead97cb84",
+    "semantic_title": "distribution learning via neural differential equations: a nonparametric statistical perspective",
+    "citation_count": 5,
+    "authors": [
+      "Youssef Marzouk",
+      "Zhi (Robert) Ren",
+      "Sven Wang",
+      "Jakob Zech"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1511.html": {
+    "title": "Invariant Physics-Informed Neural Networks for Ordinary Differential Equations",
+    "volume": "main",
+    "abstract": "Physics-informed neural networks have emerged as a prominent new method for solving differential equations. While conceptually straightforward, they often suffer training difficulties that lead to relatively large discretization errors or the failure to obtain correct solutions. In this paper we introduce invariant physics-informed neural networks for ordinary differential equations that admit a finite-dimensional group of Lie point symmetries. Using the method of equivariant moving frames, a differential equation is invariantized to obtain a, generally, simpler equation in the space of differential invariants. A solution to the invariantized equation is then mapped back to a solution of the original differential equation by solving the reconstruction equations for the left moving frame. The invariantized differential equation together with the reconstruction equations are solved using a physics-informed neural network, and form what we call an invariant physics-informed neural network. We illustrate the method with several examples, all of which considerably outperform standard non-invariant physics-informed neural networks",
+    "checked": true,
+    "id": "4529a4dc99c92bea0cdbec34516b22076f26e32e",
+    "semantic_title": "invariant physics-informed neural networks for ordinary differential equations",
+    "citation_count": 2,
+    "authors": [
+      "Shivam Arora",
+      "Alex Bihlo",
+      "Francis Valiquette"
+    ]
+  },
+  "https://jmlr.org/papers/v25/23-1627.html": {
+    "title": "Regret Analysis of Bilateral Trade with a Smoothed Adversary",
+    "volume": "main",
+    "abstract": "We study repeated bilateral trade where an adaptive $\\sigma$-smooth adversary generates the valuations of sellers and buyers. We completely characterize the regret regimes for fixed-price mechanisms under different feedback models in the two cases where the learner can post the same or different prices to buyers and sellers. We begin by showing that, in the full-feedback scenario, the minimax regret after $T$ rounds is of order $\\sqrt{T}$. Under partial feedback, any algorithm that has to post the same price to buyers and sellers suffers worst-case linear regret. However, when the learner can post two different prices at each round, we design an algorithm enjoying regret of order $T^{3/4}$, ignoring log factors. We prove that this rate is optimal by presenting a surprising $T^{3/4}$ lower bound, which is the paper's main technical contribution",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nicolò Cesa-Bianchi",
+      "Tommaso Cesari",
+      "Roberto Colomboni",
+      "Federico Fusco",
+      "Stefano Leonardi"
+    ]
   }
 }
