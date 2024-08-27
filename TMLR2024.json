@@ -1,4 +1,50 @@
 {
+  "https://openreview.net/forum?id=YoWBLu74TL": {
+    "title": "Path Development Network with Finite-dimensional Lie Group",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hang Lou",
+      "Siran Li",
+      "Hao Ni"
+    ]
+  },
+  "https://openreview.net/forum?id=HwAZDVxkLX": {
+    "title": "Biased Dueling Bandits with Stochastic Delayed Feedback",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Bongsoo Yi",
+      "Yue Kang",
+      "Yao Li"
+    ]
+  },
+  "https://openreview.net/forum?id=lXyZr9TLEU": {
+    "title": "AdaStop: adaptive statistical testing for sound comparisons of Deep RL agents",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Timothée Mathieu",
+      "Matheus Medeiros Centa",
+      "Riccardo Della Vecchia",
+      "Hector Kohler",
+      "Alena Shilova",
+      "Odalric-Ambrym Maillard",
+      "Philippe Preux"
+    ]
+  },
   "https://openreview.net/forum?id=9OHAtWdFWB": {
     "title": "Robust Feature Inference: A Test-time Defense Strategy using Spectral Projections",
     "volume": "main",
@@ -8364,6 +8410,23 @@
       "Georgios Kaissis"
     ]
   },
+  "https://openreview.net/forum?id=3FsVtsISHW": {
+    "title": "Deconfounding Imitation Learning with Variational Inference",
+    "volume": "expert",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Risto Vuorio",
+      "Pim De Haan",
+      "Johann Brehmer",
+      "Hanno Ackermann",
+      "Daniel Dijkman",
+      "Taco Cohen"
+    ]
+  },
   "https://openreview.net/forum?id=Aoj9H6jl6F": {
     "title": "Improving Predictor Reliability with Selective Recalibration",
     "volume": "expert",
@@ -8610,7 +8673,7 @@
     "title": "Temporal Difference Learning with Compressed Updates: Error-Feedback meets Reinforcement Learning",
     "volume": "main",
     "abstract": "In large-scale distributed machine learning, recent works have studied the effects of compressing gradients in stochastic optimization to alleviate the communication bottleneck. These works have collectively revealed that stochastic gradient descent (SGD) is robust to structured perturbations such as quantization, sparsification, and delays. Perhaps surprisingly, despite the surge of interest in multi-agent reinforcement learning, almost nothing is known about the analogous question: \\textit{Are common reinforcement learning (RL) algorithms also robust to similar perturbations?} We investigate this question by studying a variant of the classical temporal difference (TD) learning algorithm with a perturbed update direction, where a general compression operator is used to model the perturbation. Our work makes three important technical contributions. First, we prove that compressed TD algorithms, coupled with an error-feedback mechanism used widely in optimization, exhibit the same non-asymptotic theoretical guarantees as their SGD counterparts. Second, we show that our analysis framework extends seamlessly to nonlinear stochastic approximation schemes that subsume Q-learning. Third, we prove that for multi-agent TD learning, one can achieve linear convergence speedups with respect to the number of agents while communicating just $\\tilde{O}(1)$ bits per iteration. Notably, these are the first finite-time results in RL that account for general compression operators and error-feedback in tandem with linear function approximation and Markovian sampling. Our proofs hinge on the construction of novel Lyapunov functions that capture the dynamics of a memory variable introduced by error-feedback",
-    "checked": true,
+    "checked": null,
     "id": "a58ea65258e4c3569cd02d2038246b2b8720bf1d",
     "semantic_title": "temporal difference learning with compressed updates: error-feedback meets reinforcement learning",
     "citation_count": 8,
@@ -8624,7 +8687,7 @@
     "title": "Granger Causal Interaction Skill Chains",
     "volume": "main",
     "abstract": "Reinforcement Learning (RL) has demonstrated promising results in learning policies for complex tasks, but it often suffers from low sample efficiency and limited transferability. Hierarchical RL (HRL) methods aim to address the difficulty of learning long-horizon tasks by decomposing policies into skills, abstracting states, and reusing skills in new tasks. However, many HRL methods require some initial task success to discover useful skills, which paradoxically may be very unlikely without access to useful skills. On the other hand, reward-free HRL methods often need to learn far too many skills to achieve proper coverage in high-dimensional domains. In contrast, we introduce the Chain of Interaction Skills (COInS) algorithm, which focuses on \\textit{controllability} in factored domains to identify a small number of task-agnostic skills that allow for a high degree of control of the factored state. COInS uses learned detectors to identify interactions between state factors and then trains a chain of skills to control each of these factors successively. We evaluate COInS on a robotic pushing task with obstacles—a challenging domain where other RL and HRL methods fall short. We also demonstrate the transferability of skills learned by COInS, using variants of Breakout, a common RL benchmark, and show 2-3x improvement in both sample efficiency and final performance compared to standard RL baselines",
-    "checked": true,
+    "checked": null,
     "id": "d324e77123e9d5cfdeeb6f9172a76be2713910b4",
     "semantic_title": "granger causal interaction skill chains",
     "citation_count": 0,
@@ -8640,7 +8703,7 @@
     "title": "Models of human preference for learning reward functions",
     "volume": "main",
     "abstract": "The utility of reinforcement learning is limited by the alignment of reward functions with the interests of human stakeholders. One promising method for alignment is to learn the reward function from human-generated preferences between pairs of trajectory segments, a type of reinforcement learning from human feedback (RLHF). These human preferences are typically assumed to be informed solely by partial return, the sum of rewards along each segment. We find this assumption to be flawed and propose modeling human preferences instead as informed by each segment's regret, a measure of a segment's deviation from optimal decision-making. Given infinitely many preferences generated according to regret, we prove that we can identify a reward function equivalent to the reward function that generated those preferences, and we prove that the previous partial return model lacks this identifiability property in multiple contexts. We empirically show that our proposed regret preference model outperforms the partial return preference model with finite training data in otherwise the same setting. Additionally, we find that our proposed regret preference model better predicts real human preferences and also learns reward functions from these preferences that lead to policies that are better human-aligned. Overall, this work establishes that the choice of preference model is impactful, and our proposed regret preference model provides an improvement upon a core assumption of recent research. We have open sourced our experimental code, the human preferences dataset we gathered, and our training and preference elicitation interfaces for gathering such a dataset",
-    "checked": true,
+    "checked": null,
     "id": "9f9b61e429e85e37d6df0e3c478a074f7e6cb9fc",
     "semantic_title": "models of human preference for learning reward functions",
     "citation_count": 25,
@@ -8657,7 +8720,7 @@
     "title": "Continual Learning: Applications and the Road Forward",
     "volume": "main",
     "abstract": "Continual learning is a subfield of machine learning, which aims to allow machine learning models to continuously learn on new data, by accumulating knowledge without forgetting what was learned in the past. In this work, we take a step back, and ask: \"Why should one care about continual learning in the first place?\". We set the stage by examining recent continual learning papers published at four major machine learning conferences, and show that memory-constrained settings dominate the field. Then, we discuss five open problems in machine learning, and even though they might seem unrelated to continual learning at first sight, we show that continual learning will inevitably be part of their solution. These problems are model editing, personalization and specialization, on-device learning, faster (re-)training and reinforcement learning. Finally, by comparing the desiderata from these unsolved problems and the current assumptions in continual learning, we highlight and discuss four future directions for continual learning research. We hope that this work offers an interesting perspective on the future of continual learning, while displaying its potential value and the paths we have to pursue in order to make it successful. This work is the result of the many discussions the authors had at the Dagstuhl seminar on Deep Continual Learning, in March 2023",
-    "checked": true,
+    "checked": null,
     "id": "3d7e5485fae2965ddf081dc64be6ab52f5834cf8",
     "semantic_title": "continual learning: applications and the road forward",
     "citation_count": 12,
@@ -8688,7 +8751,7 @@
     "title": "AutoML in the Age of Large Language Models: Current Challenges, Future Opportunities and Risks",
     "volume": "main",
     "abstract": "The fields of both Natural Language Processing (NLP) and Automated Machine Learning (AutoML) have achieved remarkable results over the past years. In NLP, especially Large Language Models (LLMs) have experienced a rapid series of breakthroughs very recently. We envision that the two fields can radically push the boundaries of each other through tight integration. To showcase this vision, we explore the potential of a symbiotic relationship between AutoML and LLMs, shedding light on how they can benefit each other. In particular, we investigate both the opportunities to enhance AutoML approaches with LLMs from different perspectives and the challenges of leveraging AutoML to further improve LLMs. To this end, we survey existing work, and we critically assess risks. We strongly believe that the integration of the two fields has the potential to disrupt both fields, NLP and AutoML. By highlighting conceivable synergies, but also risks, we aim to foster further exploration at the intersection of AutoML and LLMs",
-    "checked": true,
+    "checked": null,
     "id": "9afa0c3227fd0ec3a76928784e59c4205cbace24",
     "semantic_title": "automl in the age of large language models: current challenges, future opportunities and risks",
     "citation_count": 14,
@@ -8710,7 +8773,7 @@
     "title": "Controlling Federated Learning for Covertness",
     "volume": "main",
     "abstract": "A learner aims to minimize a function $f$ by repeatedly querying a distributed oracle that provides noisy gradient evaluations. At the same time, the learner seeks to hide $\\arg\\min f$ from a malicious eavesdropper that observes the learner's queries. This paper considers the problem of \\textit{covert} or \\textit{learner-private} optimization, where the learner has to dynamically choose between learning and obfuscation by exploiting the stochasticity. The problem of controlling the stochastic gradient algorithm for covert optimization is modeled as a Markov decision process, and we show that the dynamic programming operator has a supermodular structure implying that the optimal policy has a monotone threshold structure. A computationally efficient policy gradient algorithm is proposed to search for the optimal querying policy without knowledge of the transition probabilities. As a practical application, our methods are demonstrated on a hate speech classification task in a federated setting where an eavesdropper can use the optimal weights to generate toxic content, which is more easily misclassified. Numerical results show that when the learner uses the optimal policy, an eavesdropper can only achieve a validation accuracy of $52\\%$ with no information and $69\\%$ when it has a public dataset with $10\\%$ positive samples compared to $83\\%$ when the learner employs a greedy policy",
-    "checked": true,
+    "checked": null,
     "id": "2a864f9dbd52e8965818cce75b2b51fecc6d47f4",
     "semantic_title": "controlling federated learning for covertness",
     "citation_count": 4,
@@ -8723,7 +8786,7 @@
     "title": "Unmasking the Veil: An Investigation into Concept Ablation for Privacy and Copyright Protection in Images",
     "volume": "main",
     "abstract": "In this paper, we extend the study of concept ablation within pre-trained models as introduced in 'Ablating Concepts in Text-to-Image Diffusion Models' by $\\citep{Kumari2022}$. Our work focuses on reproducing the results achieved by the different variants of concept ablation proposed through predefined metrics. We also introduce a novel variant of concept ablation—trademark ablation. This variant combines the principles of memorization and instance ablation to tackle the nuanced influence of proprietary or branded elements in model outputs. Further, our research contributions include an observational analysis of the model's limitations. Moreover, we investigate the model's behavior in response to ablation leakage-inducing prompts, which aim to indirectly ablate concepts, revealing insights into the model's resilience and adaptability. We also observe the model's performance degradation on images generated by concepts far from its target ablation concept, which is documented in the appendix",
-    "checked": true,
+    "checked": null,
     "id": "f81a1ef3154346be192588637105974766464060",
     "semantic_title": "unmasking the veil: an investigation into concept ablation for privacy and copyright protection in images",
     "citation_count": 0,
@@ -8736,7 +8799,7 @@
     "title": "Reproducibility Study of \"ITI-GEN: Inclusive Text-to-Image Generation",
     "volume": "main",
     "abstract": "Text-to-image generative models often present issues regarding fairness with respect to certain sensitive attributes, such as gender or skin tone. This study aims to reproduce the results presented in \"ITI-GEN: Inclusive Text-to-Image Generation\" by Zhang et al. (2023), which introduces a model to improve inclusiveness in these kinds of models. We show that most of the claims made by the authors about ITI-GEN hold: it improves the diversity and quality of generated images, it is scalable to different domains, it has plug-and-play capabilities, and it is efficient from a computational point of view. However, ITI-GEN sometimes uses undesired attributes as proxy features and it is unable to disentangle some pairs of (correlated) attributes such as gender and baldness. In addition, when the number of considered attributes increases, the training time grows exponentially and ITI-GEN struggles to generate inclusive images for all elements in the joint distribution. To solve these issues, we propose using Hard Prompt Search with negative prompting, a method that does not require training and that handles negation better than vanilla Hard Prompt Search. Nonetheless, Hard Prompt Search (with or without negative prompting) cannot be used for continuous attributes that are hard to express in natural language, an area where ITI-GEN excels as it is guided by images during training. Finally, we propose combining ITI-GEN and Hard Prompt Search with negative prompting",
-    "checked": true,
+    "checked": null,
     "id": "54cfe67fb02467fbf45b24f8ce1caa34728cde30",
     "semantic_title": "reproducibility study of \"iti-gen: inclusive text-to-image generation",
     "citation_count": 0,
@@ -8751,7 +8814,7 @@
     "title": "Reproducibility study of FairAC",
     "volume": "main",
     "abstract": "This work aims to reproduce the findings of the paper \"Fair Attribute Completion on Graph with Missing Attributes\" written by Guo et al. (2023) by investigating the claims made in the paper. This paper suggests that the results of the original paper are reproducible and thus, the claims hold. However, the claim that FairAC is a generic framework for many downstream tasks is very broad and could therefore only be partially tested. Moreover, we show that FairAC is generalizable to various datasets and sensitive attributes and show evidence that the improvement in group fairness of the FairAC framework does not come at the expense of individual fairness. Lastly, the codebase of FairAC has been refactored and is now easily applicable for various datasets and models",
-    "checked": true,
+    "checked": null,
     "id": "24a348dfaf029a87e10bb46eb8c3ab6dd54197a3",
     "semantic_title": "reproducibility study of fairac",
     "citation_count": 0,
@@ -8766,7 +8829,7 @@
     "title": "[Re] CUDA: Curriculum of Data Augmentation for Long‐tailed Recognition",
     "volume": "main",
     "abstract": "In this reproducibility study, we present our results and experience during replicating the paper, titled CUDA: Curriculum of Data Augmentation for Long-Tailed Recognition(Ahn et al., 2023).Traditional datasets used in image recognition, such as ImageNet, are often synthetically balanced, meaning each class has an equal number of samples. In practical scenarios, datasets frequently exhibit significant class imbalances, with certain classes having a disproportionately larger number of samples compared to others. This discrepancy poses a challenge for traditional image recognition models, as they tend to favor classes with larger sample sizes, leading to poor performance on minority classes. CUDA proposes a class-wise data augmentation technique which can be used over any existing model to improve the accuracy for LTR: Long Tailed Recognition. We successfully replicated all of the results pertaining to the long-tailed CIFAR-100-LT dataset and extended our analysis to provide deeper insights into how CUDA efficiently tackles class imbalance. The code and the readings are available in https://anonymous.4open.science/r/CUDA-org--C2FD/README.md",
-    "checked": false,
+    "checked": null,
     "id": "1e6c5ebf8d03eacc501fd344531e9a25b139e504",
     "semantic_title": "[re] cuda: curriculum of data augmentation for long-tailed recognition",
     "citation_count": 2,
@@ -8778,7 +8841,7 @@
     "title": "[Re] Reproducibility Study of \"Explaining Temporal Graph Models Through an Explorer-Navigator Framework",
     "volume": "main",
     "abstract": "This paper seeks to reproduce and extend the results of the paper \"Explaining Temporal Graph Models Through an Explorer-Navigator Framework\" by (Xia et al., 2023). The main contribution of the original authors is a novel explainer for temporal graph networks, the Temporal GNN Explainer (T-GNNExplainer), which finds a subset of preceding events that \"explain\" a prediction made by a temporal graph model. The explorer is tested on two temporal graph models that are trained on two real-world and two synthetic datasets. The explorer is evaluated using a newly proposed metric for explanatory graph models. The authors compare the performance of their explorer to three baseline explainer methods, either adapted from a GNN explainer or developed by the authors. The authors claim that T-GNNExplainer achieves superior performance compared to the baselines when evaluated with their proposed metric. This work reproduces the original experiments by using the code (with minor adjustments), model specifications, and hyperparameters provided by the original authors. To evaluate the robustness of these claims, the method was extended to one new dataset (MOOC). Results show that the T-GNNexplainer performs best on some, but not all metrics as reported in the original findings. We conclude that the main lines of this paper hold up even though all results are less pronounced than claimed. Results show that the T-GNNExplainer does not perform similarly across different T-GNN models, precise dataset specifications are needed to obtain high performance, and there are simpler, less computationally costly explainer methods (like PBONE) that could offer competitive results",
-    "checked": true,
+    "checked": null,
     "id": "5b58f532809ef51513f5e8c27e349abc5710a7f6",
     "semantic_title": "[re] reproducibility study of \"explaining temporal graph models through an explorer-navigator framework",
     "citation_count": 0,
