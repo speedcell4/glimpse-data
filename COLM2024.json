@@ -1283,10 +1283,10 @@
     "title": "Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training",
     "volume": "main",
     "abstract": "Mixture-of-experts (MoE) models facilitate efﬁcient scaling; however, training the router network introduces the challenge of optimizing a non-differentiable, discrete objective. Recently, a fully-differentiable MoE architecture SMEAR was proposed (Muqeeth et al., 2023), which softly merges experts in the parameter space. Nevertheless, its effectiveness was only demonstrated in downstream ﬁne-tuning on classiﬁcation tasks. In this paper, we present Lory, a novel approach that scales such architectures to autoregressive language model pre-training. Lory introduces two key techniques: (1) a causal segment routing strategy that achieves high efﬁciency for expert merging operations while preserving the autoregressive nature of language models; (2) a similarity-based data batching method that encourages expert specialization by grouping similar documents in training instances. We pre-train a series of Lory models from scratch on 150B tokens, with up to 32 experts and 30B (1.5B active) parameters. Experimental results show signiﬁcant performance gains over parameter-matched dense models in both perplexity (+13.9%) and a variety of downstream tasks (+1.5%-11.1%). Despite segment-level routing, Lory models achieve competitive performance compared to state-of-the-art MoE models with token-level routing. We further demonstrate that the trained experts capture domain-level specialization without supervision. Our work highlights the potential of fully-differentiable MoE architectures for language model pre-training and advocates future research in this area",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "4b879f069d023e03bf537309a99bdaeb39916ea5",
+    "semantic_title": "lory: fully differentiable mixture-of-experts for autoregressive language model pre-training",
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=dJMTn3QOWO": {
@@ -1296,7 +1296,7 @@
     "checked": true,
     "id": "028d75496e51943f52c7b2177344a3c089c18058",
     "semantic_title": "fine-grained hallucination detection and editing for language models",
-    "citation_count": 43,
+    "citation_count": 51,
     "authors": []
   },
   "https://openreview.net/forum?id=7QaEO9WYMa": {
@@ -1306,7 +1306,7 @@
     "checked": false,
     "id": "ab003ca4c9479d1b155f8da9505160e8c07e83ce",
     "semantic_title": "mousi: poly-visual-expert vision-language models",
-    "citation_count": 5,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=mUlLf50Y6H": {
@@ -1316,7 +1316,7 @@
     "checked": false,
     "id": "1aeb3239735e28c7318af096044e48d919ea500b",
     "semantic_title": "is chatgpt a good sentiment analyzer? a preliminary study",
-    "citation_count": 118,
+    "citation_count": 119,
     "authors": []
   },
   "https://openreview.net/forum?id=F2yGbwXJAi": {
@@ -1326,7 +1326,7 @@
     "checked": false,
     "id": "c74e9642ec71c6dfaadd3b8638c110d4048ff53e",
     "semantic_title": "suspicion-agent: playing imperfect information games with theory of mind aware gpt-4",
-    "citation_count": 25,
+    "citation_count": 27,
     "authors": []
   },
   "https://openreview.net/forum?id=2cop2jmQVL": {
@@ -1336,7 +1336,7 @@
     "checked": true,
     "id": "b2688b3a0ddf190cd99b11b6bf589a6e071c5369",
     "semantic_title": "stream of search (sos): learning to search in language",
-    "citation_count": 5,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=i2oJjC0ESQ": {
@@ -1346,7 +1346,7 @@
     "checked": true,
     "id": "6d306d582ce303c16f3a2387cfdf1c846ac82973",
     "semantic_title": "does in-context learning really learn? rethinking how large language models respond and solve tasks via in-context learning",
-    "citation_count": 1,
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=Zu8OWNUC0u": {
@@ -1366,7 +1366,7 @@
     "checked": true,
     "id": "746b96ee17e329f1085a047116c05e12eaa3925a",
     "semantic_title": "rq-rag: learning to refine queries for retrieval augmented generation",
-    "citation_count": 23,
+    "citation_count": 24,
     "authors": []
   },
   "https://openreview.net/forum?id=5RdIMlGLXL": {
@@ -1376,7 +1376,7 @@
     "checked": false,
     "id": "af067c6f1c12941625e4c3b49b002c7c7c0b2542",
     "semantic_title": "bookgpt: a general framework for book recommendation empowered by large language model",
-    "citation_count": 17,
+    "citation_count": 20,
     "authors": []
   },
   "https://openreview.net/forum?id=CybBmzWBX0": {
@@ -1393,10 +1393,10 @@
     "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
     "volume": "main",
     "abstract": "The burgeoning interest in developing Large Language Models (LLMs) with up to trillion parameters has been met with concerns regarding resource efficiency and practical expense, particularly given the immense cost of experimentation. This scenario underscores the importance of exploring the potential of Small Language Models (SLMs) as a resource-efficient alternative. In this context, we introduce MiniCPM, specifically the 1.2B and 2.4B non-embedding parameter variants, not only excel in their respective categories but also demonstrate capabilities on par with 7B-13B LLMs. While focusing on SLMs, our approach exhibits scalability in both model and data dimensions for future LLM research. Regarding model scaling, we employ extensive model wind tunnel experiments for stable and optimal scaling. For data scaling, we introduce a Warmup-Stable-Decay (WSD) learning rate scheduler (LRS), conducive to continuous training and domain adaptation. We present an in-depth analysis of the intriguing training dynamics that occurred in the WSD LRS. With WSD LRS, we are now able to efficiently study data-model scaling law without extensive retraining experiments on both axes of model and data, from which we derive the much higher compute optimal data-model ratio than Chinchilla Optimal. Additionally, we introduce MiniCPM family, including MiniCPM-DPO, MiniCPM-MoE and MiniCPM-128K, whose excellent performance further cementing MiniCPM's foundation in diverse SLM applications. MiniCPM models are available publicly~\\footnote{\\url{https://github.com/OpenBMB/MiniCPM}}",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "49873ee415619efd9e1e4c16f73ee066ff008c1f",
+    "semantic_title": "minicpm: unveiling the potential of small language models with scalable training strategies",
+    "citation_count": 143,
     "authors": []
   },
   "https://openreview.net/forum?id=6U1FEKP7Ar": {
@@ -1416,7 +1416,7 @@
     "checked": true,
     "id": "5df905efd0c79e9a39b98a537769cbe9f9462847",
     "semantic_title": "why do small language models underperform? studying language model saturation via the softmax bottleneck",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=3TzGD95Jw1": {
@@ -1426,17 +1426,17 @@
     "checked": true,
     "id": "d78763acfc8aaba3d6deecb8fb1d5b829d7c3a11",
     "semantic_title": "timo: towards better temporal reasoning for language models",
-    "citation_count": 3,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=iMqJsQ4evS": {
     "title": "LLM as a Mastermind: A Survey of Strategic Reasoning with Large Language Models",
     "volume": "main",
     "abstract": "This paper presents a comprehensive survey of the current status and opportunities for Large Language Models (LLMs) in strategic reasoning, a sophisticated form of reasoning that necessitates understanding and predicting adversary actions in multi-agent settings while adjusting strategies accordingly. Strategic reasoning is distinguished by its focus on the dynamic and uncertain nature of interactions among multi-agents, where comprehending the environment and anticipating the behavior of others is crucial. We explore the scopes, applications, methodologies, and evaluation metrics related to strategic reasoning with LLMs, highlighting the burgeoning development in this area and the interdisciplinary approaches enhancing their decision-making performance. It aims to systematize and clarify the scattered literature on this subject, providing a systematic review that underscores the importance of strategic reasoning as a critical cognitive capability and offers insights into future research directions and potential improvements",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "ac8bc36c253c8593492afc2db620c01b152dc778",
+    "semantic_title": "llm as a mastermind: a survey of strategic reasoning with large language models",
+    "citation_count": 22,
     "authors": []
   },
   "https://openreview.net/forum?id=8tKjqqMM5z": {
@@ -1446,17 +1446,17 @@
     "checked": false,
     "id": "6c67e17fdd763f212e582f8de56b56dd5ed58832",
     "semantic_title": "keep the cost down: a review on methods to optimize llm' s kv-cache consumption",
-    "citation_count": 3,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=y6SqbJfCSk": {
     "title": "HGRN2: Gated Linear RNNs with State Expansion",
     "volume": "main",
     "abstract": "Hierarchically gated linear RNN (HGRN) has demonstrated competitive training speed and performance in language modeling while offering efficient inference. However, the recurrent state size of HGRN remains relatively small, limiting its expressiveness. To address this issue, we introduce a simple outer product-based state expansion mechanism, which significantly enlarges the recurrent state size without introducing any additional parameters. This enhancement also provides a linear attention interpretation for HGRN2, enabling hardware-efficient training. Our extensive experiments verify the advantage of HGRN2 over HGRN consistently across different settings and comptetive to other recurrent models",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "46732358e98ce6be0c564ae11f71d556a64b4c35",
+    "semantic_title": "hgrn2: gated linear rnns with state expansion",
+    "citation_count": 17,
     "authors": []
   },
   "https://openreview.net/forum?id=0VLBwQGWpA": {
@@ -1504,8 +1504,8 @@
     "volume": "main",
     "abstract": "LLMs may exhibit harmful behavior without aligning with human values. The dominant approach for steering LLMs towards beneficial behavior is Reinforcement Learning with Human Feedback (RLHF). This involves training a reward model with a human-labeled ranking dataset and fine-tuning the LLM with the reward signal using RL. Despite the fact that the reward is learned from comparing different responses, the RL stage doesn't involve direct comparisons. This inconsistency between reward learning and reinforcement learning stages exacerbates RL's instability. An example would be that the well adopted RL optimizer, Proximal Policy Optimization (PPO), could perform different gradient updates even for batches with identical human preference information. To address this, we propose a new framework, reinforcement learning with comparative feedback, and a simple policy gradient algorithm, Pairwise Proximal Policy Optimization (P3O), that learns to improve from direct comparison. Theoretically, P3O has the nice property of being invariant with any reward functions that contain identical preference information, while doesn't require learning a value function. Empirical evaluations demonstrate that P3O can align with human preferences better than existing methods. This suggest that comparative RL is strong candidate for aligning LLM with preference data",
     "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "id": "951a11a4d247de5823dfa42affe39cf849c708b8",
+    "semantic_title": "pairwise proximal policy optimization: large language models alignment via comparative rl",
     "citation_count": 0,
     "authors": []
   },
@@ -1513,10 +1513,10 @@
     "title": "Top Leaderboard Ranking = Top Coding Proficiency, Always? EvoEval: Evolving Coding Benchmarks via LLM",
     "volume": "main",
     "abstract": "Large language models (LLMs) have become the go-to choice for code generation tasks, with an exponential increase in the training, development, and usage of LLMs specifically for code generation. To evaluate the ability of LLMs on code, both academic and industry practitioners rely on popular handcrafted benchmarks. However, prior benchmarks contain only a very limited set of problems, both in quantity and variety. Further, due to popularity and age, many benchmarks are prone to data leakage where example solutions can be readily found on the web and thus potentially in training data. Such limitations inevitably lead us to inquire: Is the leaderboard performance on existing benchmarks reliable and comprehensive enough to measure the program synthesis ability of LLMs? To address this, we introduce EvoEval – a program synthesis benchmark suite created by evolving existing benchmarks into different targeted domains for a comprehensive evaluation of LLM coding abilities. Our study on 51 LLMs shows that compared to the high performance obtained on standard benchmarks like HumanEval, there is a significant drop in performance (on average 39.4%) when using EvoEval. Additionally, the decrease in performance can range from 19.6% to 47.7%, leading to drastic ranking changes amongst LLMs and showing potential overfitting of existing benchmarks. Furthermore, we showcase various insights including the brittleness of instruction-following models when encountering rewording or subtle changes as well as the importance of learning problem composition and decomposition. EvoEval not only provides comprehensive benchmarks, but can be used to further evolve arbitrary problems to keep up with advances and the ever-changing landscape of LLMs for code. We have open-sourced our benchmarks, tools, and all LLM-generated code at https://github.com/evo-eval/evoeval",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "af9df109e409b485e1337362431ba61623195145",
+    "semantic_title": "top leaderboard ranking = top coding proficiency, always? evoeval: evolving coding benchmarks via llm",
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=7VPKtz8CHN": {
@@ -1556,7 +1556,7 @@
     "checked": true,
     "id": "b4afc7b4a6836054c1b4568ce9d49993afbb0461",
     "semantic_title": "helping or herding? reward model ensembles mitigate but do not eliminate reward hacking",
-    "citation_count": 49,
+    "citation_count": 52,
     "authors": []
   },
   "https://openreview.net/forum?id=Szp33itD10": {
@@ -1583,10 +1583,10 @@
     "title": "Do Large Language Models Have Compositional Ability? An Investigation into Limitations and Scalability",
     "volume": "main",
     "abstract": "Large language models (LLMs) have emerged as powerful tools for many AI problems and exhibit remarkable in-context learning (ICL) capabilities. Compositional ability, solving unseen complex tasks that combine two or more simple tasks, is an essential reasoning ability for Artificial General Intelligence. Despite the tremendous success of LLMs, how they approach composite tasks, especially those not encountered during the pretraining phase, remains an open and largely underexplored question. In this study, we delve into the ICL capabilities of LLMs on composite tasks, with only simple tasks as in-context examples. We develop a test suite of composite tasks including linguistic and logical challenges and perform empirical studies across different LLM families. We observe that models exhibit divergent behaviors: (1) For simpler composite tasks that apply distinct mapping mechanisms to different input segments, the models demonstrate decent compositional ability, while scaling up the model enhances this ability; (2) for more complex composite tasks involving reasoning multiple steps, where each step represents one task, models typically underperform, and scaling up generally provides no improvements. We offer theoretical analysis in a simplified setting, explaining that models exhibit compositional capability when the task handles different input parts separately. We believe our work sheds new light on the capabilities of LLMs in solving composite tasks regarding the nature of the tasks and model scale. Our dataset and code are available at {\\url{https://github.com/OliverXUZY/LLM_Compose}}",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "0e177741ef1e09fcf70b4236621d7204bc619439",
+    "semantic_title": "do large language models have compositional ability? an investigation into limitations and scalability",
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=X1xNsuKssb": {
@@ -1596,7 +1596,7 @@
     "checked": true,
     "id": "a6e2dca754f3dc625a9da5f10f9b7a57079bfd27",
     "semantic_title": "mambabyte: token-free selective state space model",
-    "citation_count": 22,
+    "citation_count": 24,
     "authors": []
   },
   "https://openreview.net/forum?id=TBNYjdOazs": {
@@ -1616,7 +1616,7 @@
     "checked": false,
     "id": "874287c656fb35098dfd81a3fd1a88198f8909db",
     "semantic_title": "are large language models robust coreference resolvers?",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=9Ik05cycLq": {
@@ -1626,17 +1626,17 @@
     "checked": true,
     "id": "1ab91d6ac7afc1a0121487a9089fa70edc1634d4",
     "semantic_title": "certifying llm safety against adversarial prompting",
-    "citation_count": 108,
+    "citation_count": 112,
     "authors": []
   },
   "https://openreview.net/forum?id=5B2K4LRgmz": {
     "title": "Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data",
     "volume": "main",
     "abstract": "The proliferation of generative models, combined with pretraining on web-scale data, raises a timely question: what happens when future models are trained on model-generated data? Recent investigations answered that such model-data feedback loops cause performance to progressively degrades with each model-data iteration until fitted models become useless, a phenomenon termed model collapse. However, those studies largely assumed that new data replace old data over time, where a more realistic assumption is that data accumulate over time. In this paper, we ask: what effect does accumulating data have on model collapse? We first empirically study this question by pretraining sequences of language models on text corpora. After confirming that replacing the original real data by each generation's synthetic data does indeed tend towards model collapse, we demonstrate that accumulating synthetic data with real data avoids model collapse; these results hold across a range of sizes, architectures, and hyperparameters. We obtain similar results for other deep generative models: diffusion models for molecule conformation generation and variational autoencoders for image generation. To understand why accumulating data can avoid model collapse, we use an analytically tractable framework introduced by prior work in which a sequence of linear models are fit to previous models' outputs. Previous work used this framework to show that if data are replaced, the test error increases with the number of model-fitting iterations; we extend this argument to prove that if data instead accumulate, the test error has a finite upper bound independent of the number of iterations, meaning model collapse is avoided. Our work provides consistent empirical and theoretical evidence that data accumulation avoids model collapse",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "e8815da26d4e6cac8b23b7e6aa75cec028cb66d2",
+    "semantic_title": "is model collapse inevitable? breaking the curse of recursion by accumulating real and synthetic data",
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=PEQFHRUFca": {
@@ -1646,7 +1646,7 @@
     "checked": true,
     "id": "1f898d66acabff511a3871b82799aa73c0055402",
     "semantic_title": "a reparameterized discrete diffusion model for text generation",
-    "citation_count": 33,
+    "citation_count": 38,
     "authors": []
   },
   "https://openreview.net/forum?id=didvEO1can": {
@@ -1683,10 +1683,10 @@
     "title": "LLM4Causal: Democratized Causal Tools for Everyone via Large Language Model",
     "volume": "main",
     "abstract": "Large Language Models (LLMs) have shown their success in language understanding and reasoning on general topics. However, their capability to perform inference based on user-specified structured data and knowl- edge in corpus-rare concepts, such as causal decision-making is still limited. In this work, we explore the possibility of fine-tuning an open-sourced LLM into LLM4Causal, which can identify the causal task, execute a cor- responding function, and interpret its numerical results based on users' queries and the provided dataset. Meanwhile, we propose a data gen- eration process for more controllable GPT prompting and present two instruction-tuning datasets: (1) Causal-Retrieval-Bench for causal problem identification and input parameter extraction for causal function calling and (2) Causal-Interpret-Bench for in-context causal interpretation. By conducting end-to-end evaluations and two ablation studies, we showed that LLM4Causal can deliver end-to-end solutions for causal problems and provide easy-to-understand answers, which significantly outperforms the baselines",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "618052378a39fbed35d615ad70c618e6fe37e295",
+    "semantic_title": "llm4causal: democratized causal tools for everyone via large language model",
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=NikbrdtYvG": {
@@ -1696,7 +1696,7 @@
     "checked": true,
     "id": "397e5015f761bc4a0d4e81daff7d6462ae7c5a98",
     "semantic_title": "let's think dot by dot: hidden computation in transformer language models",
-    "citation_count": 21,
+    "citation_count": 27,
     "authors": []
   },
   "https://openreview.net/forum?id=lVOw78nYXS": {
@@ -1716,7 +1716,7 @@
     "checked": true,
     "id": "4ad33969188555b8303b375e18f5c117a68387c6",
     "semantic_title": "amplegcg: learning a universal and transferable generative model of adversarial suffixes for jailbreaking both open and closed llms",
-    "citation_count": 32,
+    "citation_count": 44,
     "authors": []
   },
   "https://openreview.net/forum?id=FbhjirzvJG": {
@@ -1726,7 +1726,7 @@
     "checked": true,
     "id": "d0b049018c9e21b7b95c179d33e1e2ac9113c85b",
     "semantic_title": "hydra: sequentially-dependent draft heads for medusa decoding",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=wF6k0aWjAu": {
@@ -1736,7 +1736,7 @@
     "checked": true,
     "id": "cc8dec40ee2ccce16fb70218f970515338149a09",
     "semantic_title": "instruction mining: instruction data selection for tuning large language models",
-    "citation_count": 13,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=z7FvXbyyrM": {
@@ -1766,7 +1766,7 @@
     "checked": true,
     "id": "42b6852b2e5e8e50687a6aa34fb4655e413caa0c",
     "semantic_title": "culture-gen: revealing global cultural perception in language models through natural language prompting",
-    "citation_count": 7,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=zlw6AHwukB": {
@@ -1776,7 +1776,7 @@
     "checked": true,
     "id": "6a4501fefaf73261dc180ff86b52208679f3fb9c",
     "semantic_title": "a survey on deep learning for theorem proving",
-    "citation_count": 6,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=Ti67584b98": {
@@ -1786,7 +1786,7 @@
     "checked": true,
     "id": "210b0a3d76e93079cc51b03c4115fde545eea966",
     "semantic_title": "gpqa: a graduate-level google-proof q&a benchmark",
-    "citation_count": 97,
+    "citation_count": 112,
     "authors": []
   },
   "https://openreview.net/forum?id=QbCHlIqbDJ": {
@@ -1836,7 +1836,7 @@
     "checked": true,
     "id": "659292949b854fd485ac45215c7f9619cef46d01",
     "semantic_title": "do language models plan ahead for future tokens?",
-    "citation_count": 10,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=IA8CWtNkUr": {
@@ -1846,7 +1846,7 @@
     "checked": true,
     "id": "fa168fe11fa77c9728412e49596f8a808b67a4d8",
     "semantic_title": "early weight averaging meets high learning rates for llm pre-training",
-    "citation_count": 13,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=MkppMETE49": {
@@ -1866,27 +1866,27 @@
     "checked": true,
     "id": "6a28f9390a2fa99e593b2b3efeccce4abec52631",
     "semantic_title": "prompt public large language models to synthesize data for private on-device applications",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=k8KS9Ps71d": {
     "title": "PRobELM: Plausibility Ranking Evaluation for Language Models",
     "volume": "main",
     "abstract": "This paper introduces PRobELM (Plausibility Ranking Evaluation for Language Models), a benchmark designed to assess language models' ability to discern more plausible from less plausible scenarios through their parametric knowledge. While benchmarks such as TruthfulQA emphasise factual accuracy or truthfulness, and others such as COPA explore plausible scenarios without explicitly incorporating world knowledge, PRobELM seeks to bridge this gap by evaluating models' capabilities to prioritise plausible scenarios that leverage world knowledge over less plausible alternatives. This design allows us to assess the potential of language models for downstream use cases such as literature-based discovery where the focus is on identifying information that is likely but not yet known. Our benchmark is constructed from a dataset curated from Wikidata edit histories, tailored to align the temporal bounds of the training data for the evaluated models. PRobELM facilitates the evaluation of language models across multiple prompting types, including statement, text completion, and question-answering. Experiments with 10 models of various sizes and architectures on the relationship between model scales, training recency, and plausibility performance, reveal that factual accuracy does not directly correlate with plausibility performance and that up-to-date training data enhances plausibility assessment across different model architectures",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "7633d8e74d9749becc0fdc14826ee98048ec1a36",
+    "semantic_title": "probelm: plausibility ranking evaluation for language models",
+    "citation_count": 1,
     "authors": []
   },
   "https://openreview.net/forum?id=SGoVIC0u0f": {
     "title": "Beyond A*: Better Planning with Transformers via Search Dynamics Bootstrapping",
     "volume": "main",
     "abstract": "While Transformers have enabled tremendous progress in various application settings, such architectures still struggle with solving planning and sequential decision-making tasks. In this work, we demonstrate how to train Transformers to solve complex planning tasks. This is accomplished by first designing a synthetic language that captures the computation performed by the $A^*$ search algorithm when solving a planning task. Then, an encoder-decoder Transformer model is trained to predict this language, resulting in a language model that can correctly solve novel planning tasks by generating $A^*$'s search dynamics. We fine tune this model to obtain a Searchformer, a Transformer model that optimally solves previously unseen Sokoban puzzles 93.7\\% of the time, while using up to 26.8\\% fewer search steps than our $A^*$ reference implementation. Searchformer significantly outperforms baselines that predict the optimal plan directly with a 5-10$\\times$ smaller model size and a 10$\\times$ smaller training dataset. Lastly, we demonstrate how Searchformer scales to larger and more complex decision making tasks with improved percentage of solved tasks and shortened search dynamics",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "df5bb57e03c38a439d664d3c609a1c03a9a64009",
+    "semantic_title": "beyond a*: better planning with transformers via search dynamics bootstrapping",
+    "citation_count": 31,
     "authors": []
   },
   "https://openreview.net/forum?id=eGCw1UVOhk": {
@@ -1903,10 +1903,10 @@
     "title": "EnvGen: Generating and Adapting Environments via LLMs for Training Embodied Agents",
     "volume": "main",
     "abstract": "Recent state-of-the-art approaches for embodied learning via interaction directly employ large language models (LLMs) as agents to determine the next steps in an environment. Due to their world knowledge and reasoning capabilities, LLM agents achieve stronger performance than previous smaller agents based on reinforcement learning (RL); however, frequently calling LLMs is slow and expensive. This begs an interesting question: Instead of directly employing LLMs as embodied agents, can we use LLMs' reasoning capabilities to adaptively create training environments to help smaller embodied RL agents learn useful skills that they are weak at? In this work, we propose EnvGen, a novel framework to address this question. First, we prompt an LLM to generate training environments that allow agents to quickly learn different tasks in parallel. Concretely, the LLM is given the task description and environment simulator objectives that the agents should learn and is then asked to generate a set of environment configurations (e.g., different terrains, items initially given to agents, chances of finding certain objects, etc.). Next, we train a small RL agent in a mixture of the original and LLM-generated environments. Then, we enable the LLM to continuously adapt the generated environments to progressively improve the skills that the agent is weak at, by providing feedback to the LLM in the form of the agent's performance. We demonstrate the usefulness of EnvGen with comprehensive experiments in Crafter and Heist game environments. We find that a small RL agent trained with EnvGen can outperform SOTA methods, including a GPT-4 agent, and learns long-horizon tasks significantly faster. We also show that using an LLM to adapt environments dynamically outperforms curriculum learning approaches and how the LLM adapts training environments to help improve RL agents' weaker skills over time. Additionally, EnvGen is substantially more efficient as it only uses a small number of LLM calls (e.g., 4 in total), whereas LLM agents require one or more LLM calls per step (resulting in thousands of LLM calls per episode). We also present detailed analyses of EnvGen's design choices",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "6cd1b99ec6d399a682b01e6fe9096e2fcf450862",
+    "semantic_title": "envgen: generating and adapting environments via llms for training embodied agents",
+    "citation_count": 2,
     "authors": []
   },
   "https://openreview.net/forum?id=FX4fUThO9H": {
@@ -1923,10 +1923,10 @@
     "title": "DiagrammerGPT: Generating Open-Domain, Open-Platform Diagrams via LLM Planning",
     "volume": "main",
     "abstract": "Text-to-image (T2I) generation has seen significant growth over the past few years. Despite this, there has been little work on generating diagrams with T2I models. A diagram is a symbolic/schematic representation that explains information using structurally rich and spatially complex visualizations (e.g., a dense combination of related objects, text labels, directional arrows/lines, etc.). Existing state-of-the-art T2I models often fail at diagram generation because they lack fine-grained object layout control when many objects are densely connected via complex relations such as arrows/lines, and also often fail to render comprehensible text labels. To address this gap, we present DiagrammerGPT, a novel two-stage text-to-diagram generation framework leveraging the layout guidance capabilities of LLMs to generate more accurate diagrams. In the first stage, we use LLMs to generate and iteratively refine ‘diagram plans' (in a planner-auditor feedback loop). In the second stage, we use a diagram generator, DiagramGLIGEN, and a text label rendering module to generate diagrams (with clear text labels) following the diagram plans. To benchmark the text-to-diagram generation task, we introduce AI2D-Caption, a densely annotated diagram dataset built on top of the AI2D dataset. We show that our DiagrammerGPT framework produces more accurate diagrams, outperforming existing T2I models. We also provide comprehensive analysis, including open-domain diagram generation, multi-platform vector graphic diagram generation, human-in-the-loop editing, and multimodal planner/auditor LLMs",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "ba7f09d76f465c7d5fefc87de859a491d6c5e145",
+    "semantic_title": "diagrammergpt: generating open-domain, open-platform diagrams via llm planning",
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=sKNIjS2brr": {
@@ -1943,20 +1943,20 @@
     "title": "Towards Verifiable Text Generation with Symbolic References",
     "volume": "main",
     "abstract": "LLMs are vulnerable to hallucinations, and thus their outputs generally require laborious human verification for high-stakes applications. To this end, we propose symbolically grounded generation (SymGen) as a simple approach for enabling easier manual validation of an LLM's output. SymGen prompts an LLM to interleave its regular output text with explicit symbolic references to fields present in some conditioning data (e.g., a table in JSON format). The references can be used to display the provenance of different spans of text in the generation, reducing the effort required for manual verification. Across a range of data-to-text and question-answering exper- iments, we find that LLMs are able to directly output text that makes use of accurate symbolic references while maintaining fluency and factuality. In a human study we further find that such annotations can streamline human verification of machine-generated text",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "722aa3bb6e426afc40f05c42a2fc0623adb51af9",
+    "semantic_title": "towards verifiable text generation with symbolic references",
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=c30qeMg8dv": {
     "title": "Fakes of Varying Shades: How Warning Affects Human Perception and Engagement Regarding LLM Hallucinations",
     "volume": "main",
     "abstract": "The widespread adoption and transformative effects of large language models (LLMs) have sparked concerns regarding their capacity to produce inaccurate and fictitious content, referred to as `hallucinations'. Given the potential risks associated with hallucinations, humans should be able to identify them. This research aims to understand the human perception of LLM hallucinations by systematically varying the degree of hallucination (genuine, minor hallucination, major hallucination) and examining its interaction with warning (i.e., a warning of potential inaccuracies: absent vs. present). Participants ($N=419$) from Prolific rated the perceived accuracy and engaged with content (e.g., like, dislike, share) in a Q/A format. Results indicate that humans rank content as truthful in the order genuine > minor hallucination > major hallucination and user engagement behaviors mirror this pattern. More importantly, we observed that warning improves hallucination detection without significantly affecting the perceived truthfulness of genuine content. We conclude by offering insights for future tools to aid human detection of hallucinations",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "d67d3e31ce219a82eb6315295f60ab663edebc96",
+    "semantic_title": "fakes of varying shades: how warning affects human perception and engagement regarding llm hallucinations",
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=VHhwhmtx3b": {
@@ -1976,7 +1976,7 @@
     "checked": true,
     "id": "94abf13f6a0598dcd9239ce5d5715c19f42b15da",
     "semantic_title": "stronger random baselines for in-context learning",
-    "citation_count": 0,
+    "citation_count": 2,
     "authors": []
   },
   "https://openreview.net/forum?id=nqLAuMOF6n": {
@@ -1986,7 +1986,7 @@
     "checked": true,
     "id": "07894aeadab9158fdb97647c4792816ede1b60b9",
     "semantic_title": "branch-train-mix: mixing expert llms into a mixture-of-experts llm",
-    "citation_count": 35,
+    "citation_count": 36,
     "authors": []
   },
   "https://openreview.net/forum?id=B41hNBoWLo": {
@@ -1996,7 +1996,7 @@
     "checked": true,
     "id": "6ef1ab6b6775861b7f6a78343d5b90a15226c654",
     "semantic_title": "tofu: a task of fictitious unlearning for llms",
-    "citation_count": 61,
+    "citation_count": 71,
     "authors": []
   },
   "https://openreview.net/forum?id=Hi8jKh4HE9": {
@@ -2006,7 +2006,7 @@
     "checked": true,
     "id": "0391aee67b008aee6aa12aeea67a7f90c954c113",
     "semantic_title": "what is in your safe data? identifying benign data that breaks safety",
-    "citation_count": 18,
+    "citation_count": 20,
     "authors": []
   },
   "https://openreview.net/forum?id=soz1SEiPeq": {
@@ -2016,7 +2016,7 @@
     "checked": true,
     "id": "157ed5647da39a7f5d33a84a90414b2a9e97e301",
     "semantic_title": "eagle and finch: rwkv with matrix-valued states and dynamic recurrence",
-    "citation_count": 27,
+    "citation_count": 28,
     "authors": []
   },
   "https://openreview.net/forum?id=gUNeyiLNxr": {
@@ -2046,17 +2046,17 @@
     "checked": true,
     "id": "cdce4525bc94b8b72d7330f4e26775142edd0018",
     "semantic_title": "the curious case of nonverbal abstract reasoning with multi-modal large language models",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=MXLBXjQkmb": {
     "title": "Negative Preference Optimization: From Catastrophic Collapse to Effective Unlearning",
     "volume": "main",
     "abstract": "Large Language Models (LLMs) often memorize sensitive, private, or copyrighted data during pre-training. LLM unlearning aims to eliminate the influence of undesirable data from the pre-trained model while preserving the model's utilities on other tasks. Several practical methods have recently been proposed for LLM unlearning, mostly based on gradient ascent (GA) on the loss of undesirable data. However, on certain unlearning tasks, these methods either fail to effectively unlearn the target data or suffer from catastrophic collapse --- a drastic degradation of the model's utilities. In this paper, we propose \\emph{Negative Preference Optimization} (NPO), a simple alignment-inspired method that could efficiently and effectively unlearn a target dataset. We theoretically show that the progression toward catastrophic collapse by minimizing the NPO loss is exponentially slower than GA. Through experiments on synthetic data and the benchmark TOFU dataset, we demonstrate that NPO-based methods achieve a better balance between unlearning the undesirable data and maintaining the model's utilities. We also observe that NPO-based methods generate more sensible outputs than GA-based methods, whose outputs are often gibberish. Remarkably, on TOFU, NPO-based methods are the first to achieve reasonable unlearning results in forgetting 50\\% (or more) of the training data, whereas existing methods already struggle with forgetting 10\\% of training data",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "6dc1bb04eb0df303b1820ff1de15ab78f554cfff",
+    "semantic_title": "negative preference optimization: from catastrophic collapse to effective unlearning",
+    "citation_count": 55,
     "authors": []
   },
   "https://openreview.net/forum?id=wLQ3I0F1oj": {
@@ -2073,10 +2073,10 @@
     "title": "Helmsman of the Masses? Evaluate the Opinion Leadership of Large Language Models in the Werewolf Game",
     "volume": "main",
     "abstract": "Large language models (LLMs) have exhibited memorable strategic behaviors in social deductive games. However, the significance of opinion leadership exhibited by LLM-based agents has been largely overlooked, which is crucial for practical applications in multi-agent and human-AI interaction settings. Opinion leaders are individuals who have a noticeable impact on the beliefs and behaviors of others within a social group. In this work, we employ the Werewolf game as a simulation platform to assess the opinion leadership of LLMs. The game includes the role of the Sheriff, tasked with summarizing arguments and recommending decision options, and therefore serves as a credible proxy for an opinion leader. We develop a framework integrating the Sheriff role and devise two novel metrics based on the critical characteristics of opinion leaders. The first metric measures the reliability of the opinion leader, and the second assesses the influence of the opinion leader on other players' decisions. We conduct extensive experiments to evaluate LLMs of different scales. In addition, we collect a Werewolf question-answering dataset (WWQA) to assess and enhance LLM's grasp of the game rules, and we also incorporate human participants for further analysis. The results suggest that the Werewolf game is a suitable test bed to evaluate the opinion leadership of LLMs, and few LLMs possess the capacity for opinion leadership",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "e7fac49adb164902cf286c777d0ca836fe2728e7",
+    "semantic_title": "helmsman of the masses? evaluate the opinion leadership of large language models in the werewolf game",
+    "citation_count": 1,
     "authors": []
   },
   "https://openreview.net/forum?id=xI8C7sfN1H": {
@@ -2096,7 +2096,7 @@
     "checked": true,
     "id": "98aa313fbe30734eb3bb50683204765bcbc607eb",
     "semantic_title": "deductive beam search: decoding deducible rationale for chain-of-thought reasoning",
-    "citation_count": 5,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=PPTrmvEnpW": {
@@ -2106,7 +2106,7 @@
     "checked": true,
     "id": "197a45da6e58d86998b81771a714caa611eae05a",
     "semantic_title": "emergent world models and latent variable estimation in chess-playing language models",
-    "citation_count": 8,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=Qmq4zqdnWh": {
@@ -2163,9 +2163,9 @@
     "title": "Exploiting the Potential of Seq2Seq Models as Robust Few-Shot Learners",
     "volume": "main",
     "abstract": "In-context learning, which offers substantial advantages over fine-tuning, is predominantly observed in decoder-only models, while encoder-decoder (i.e., seq2seq) models excel in methods that rely on weight updates. Recently, a few studies have demonstrated the feasibility of few-shot learning with seq2seq models; however, this has been limited to tasks that align well with the seq2seq architecture, such as summarization and translation. Inspired by these initial studies, we provide a first-ever extensive experiment comparing the in-context few-shot learning capabilities of decoder-only and encoder-decoder models on a broad range of tasks. Furthermore, we propose two methods to more effectively elicit in-context learning ability in seq2seq models: objective-aligned prompting and a fusion-based approach. Remarkably, our approach outperforms a decoder-only model that is six times larger and exhibits significant performance improvements compared to conventional seq2seq models across a variety of settings. We posit that, with the right configuration and prompt design, seq2seq models can be highly effective few-shot learners for a wide spectrum of applications",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "checked": true,
+    "id": "07bc02bd16f6fe78a7ea3bb8d966fcc6e3893195",
+    "semantic_title": "exploiting the potential of seq2seq models as robust few-shot learners",
     "citation_count": 0,
     "authors": []
   },
@@ -2176,7 +2176,7 @@
     "checked": true,
     "id": "cc49514a9859ae171a7cd7eaae111990605a5e4e",
     "semantic_title": "tower: an open multilingual large language model for translation-related tasks",
-    "citation_count": 52,
+    "citation_count": 57,
     "authors": []
   },
   "https://openreview.net/forum?id=Zq9Dfj4nBo": {
@@ -2196,7 +2196,7 @@
     "checked": true,
     "id": "1823b8aecd62ccfca0cb6caa8e2a1159754afc5e",
     "semantic_title": "llasmol: advancing large language models for chemistry with a large-scale, comprehensive, high-quality instruction tuning dataset",
-    "citation_count": 17,
+    "citation_count": 20,
     "authors": []
   },
   "https://openreview.net/forum?id=7BCmIWVT0V": {
@@ -2206,7 +2206,7 @@
     "checked": true,
     "id": "bfeda6c7aa7899a80adb01894555b09d24756a59",
     "semantic_title": "corex: pushing the boundaries of complex reasoning through multi-model collaboration",
-    "citation_count": 20,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=HLoWN6m4fS": {
@@ -2216,7 +2216,7 @@
     "checked": true,
     "id": "a58112381efffe6f1b43f8b663a5d30a2ff27eef",
     "semantic_title": "elephants never forget: memorization and learning of tabular data in large language models",
-    "citation_count": 5,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=wi9IffRhVM": {
@@ -2226,17 +2226,17 @@
     "checked": true,
     "id": "b29134737a0c81c13d31fc0263b3c4d4f05ccb78",
     "semantic_title": "guiding language model reasoning with planning tokens",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=3nTbuygoop": {
     "title": "StateFlow: Enhancing LLM Task-Solving through State-Driven Workflows",
     "volume": "main",
     "abstract": "It is a notable trend to use Large Language Models (LLMs) to tackle complex tasks, e.g., tasks that require a sequence of actions and dynamic interaction with tools and external environments. In this paper, we propose StateFlow, a novel LLM-based task-solving paradigm that conceptualizes complex task-solving processes as state machines. In StateFlow, we distinguish between \"process grounding\" (via state and state transitions) and \"sub-task solving\" (through actions within a state), enhancing control and interpretability of the task-solving procedure. A state represents the status of a running process. The transitions between states are controlled by heuristic rules or decisions made by the LLM, allowing for a dynamic and adaptive progression. Upon entering a state, a series of actions is executed, involving not only calling LLMs guided by different prompts, but also the utilization of external tools as needed. Our results show that StateFlow significantly enhances LLMs' efficiency. For instance, StateFlow achieves 13\\% and 28\\% higher success rates compared to ReAct in InterCode SQL and ALFWorld benchmark, with 5$\\times$ and 3$\\times$ less cost respectively. We also show that StateFlow can be combined with iterative refining methods like Reflexion to further improve performance",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "b8cc74d8c2a009cc99a8b285503d86be80d840d9",
+    "semantic_title": "stateflow: enhancing llm task-solving through state-driven workflows",
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=9gdZI7c6yr": {
@@ -2246,7 +2246,7 @@
     "checked": true,
     "id": "aae01e933690e1f060b8bc5e3ecbef785630d0f9",
     "semantic_title": "aligning with human judgement: the role of pairwise preference in large language model evaluators",
-    "citation_count": 26,
+    "citation_count": 32,
     "authors": []
   },
   "https://openreview.net/forum?id=eJ3cHNu7ss": {
@@ -2256,7 +2256,7 @@
     "checked": true,
     "id": "2a86d281bef364e2ea2d4fc61fde46ca25b955f1",
     "semantic_title": "huatuogpt-ii, one-stage training for medical adaption of llms",
-    "citation_count": 38,
+    "citation_count": 40,
     "authors": []
   },
   "https://openreview.net/forum?id=Dt6qXZsgaU": {
@@ -2266,7 +2266,7 @@
     "checked": true,
     "id": "31d9e19005b99dba626d66e1da7b9967e579210c",
     "semantic_title": "self-guide: better task-specific instruction following via self-synthetic finetuning",
-    "citation_count": 8,
+    "citation_count": 17,
     "authors": []
   },
   "https://openreview.net/forum?id=DMUGTMWrKZ": {
@@ -2286,7 +2286,7 @@
     "checked": true,
     "id": "9eaa62a2a45634c6e922ed1a3f2e44b4424398fb",
     "semantic_title": "empowering large language model agents through action learning",
-    "citation_count": 2,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=Nd950RAcCW": {
@@ -2296,7 +2296,7 @@
     "checked": true,
     "id": "c7d6597da713c85306040b6037c9e6365a9119de",
     "semantic_title": "multi-hop question answering under temporal knowledge editing",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=7jSMMvXLri": {
@@ -2316,7 +2316,7 @@
     "checked": true,
     "id": "5215a3cfd67fdc6eb0201822dd0004bd4b830f91",
     "semantic_title": "with greater text comes greater necessity: inference-time training helps long text generation",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=xm8zYRfrqE": {
@@ -2413,10 +2413,10 @@
     "title": "CHOPS: CHat with custOmer Profile Systems for Customer Service with LLMs",
     "volume": "main",
     "abstract": "Businesses and software platforms are increasingly utilizing Large Language Models (LLMs) like GPT-3.5, GPT-4, GLM-3, and LLaMa-2 as chat assistants with file access or as reasoning agents for custom service. Current LLM-based customer service models exhibit limited integration with customer profiles and lack operational capabilities, while existing API integrations prioritize diversity over precision and error avoidance that are crucial in real-world scenarios for Customer Service. We propose an LLMs agent called **CHOPS** (**CH**at with cust**O**mer **P**rofile in existing **S**ystem) that: (1) efficiently utilizes existing databases or systems to access user information or interact with these systems based on existing guidance; (2) provides accurate and reasonable responses or executing required operations in the system while avoiding harmful operations; and (3) leverages the combination of small and large LLMs together to provide satisfying performance while having decent inference cost. We introduce a practical dataset, *CPHOS-dataset*, including a database, some guiding files, and QA pairs collected from *CPHOS*, which employs an online platform to facilitate the organization of simulated Physics Olympiads for high school teachers and students. We conduct extensive experiments to validate the performance of our proposed **CHOPS** architecture using the *CPHOS-dataset*, aiming to demonstrate how LLMs can enhance or serve as alternatives to human customer service",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "e262b485df299a0388bcb1a4f2780504ac7eb8f9",
+    "semantic_title": "chops: chat with customer profile systems for customer service with llms",
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=95TayIeqJ4": {
@@ -2424,9 +2424,9 @@
     "volume": "main",
     "abstract": "We present TMMLU+, a new benchmark designed for Traditional Chinese language understanding. TMMLU+ is a multi-choice question-answering dataset with 66 subjects from elementary to professional level. It is six times larger and boasts a more balanced subject distribution than its predecessor, Taiwan Massive Multitask Language Understanding (TMMLU). We also benchmark closed-source models and 26 open-weight Chinese large language models (LLMs) of parameters ranging from 1.8B to 72B on the proposed TMMLU+. Our findings reveal that (1.) Traditional Chinese models still trail behind their Simplified Chinese counterparts, highlighting a need for more focused advancements in LLMs catering to Traditional Chinese. (2.) Current LLMs still fall short of human performance in average scores, indicating a potential need for future research to delve deeper into social science and humanities subjects. (3.) Among all the tokenization compression metrics examined, we identify that only the fertility score uniquely demonstrates strong correlations with our benchmark results. We foresee that TMMLU+ will pinpoint areas for future model improvement, thereby narrowing the gap between machine and human linguistic capabilities and supporting researchers in developing Traditional Chinese LLMs. Our dataset, along with the benchmark source code, is accessible at huggingface.co/datasets/ikala/tmmluplus",
     "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "id": "14394ae5ee9153b78266cbc53a04dd6ecc4d1a4e",
+    "semantic_title": "an improved traditional chinese evaluation suite for foundation model",
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=1ba209BACA": {
@@ -2446,27 +2446,27 @@
     "checked": true,
     "id": "d0deaec3e1f74701ac43600d9e64c5c969be7391",
     "semantic_title": "triforce: lossless acceleration of long sequence generation with hierarchical speculative decoding",
-    "citation_count": 16,
+    "citation_count": 20,
     "authors": []
   },
   "https://openreview.net/forum?id=oSG6qGkt1I": {
     "title": "Reasoning about concepts with LLMs: Inconsistencies abound",
     "volume": "main",
     "abstract": "The ability to summarize and organize knowledge into abstract concepts is key to learning and reasoning. Many industrial applications rely on the consistent and systematic use of concepts, especially when dealing with decision-critical knowledge. However, we demonstrate that, when methodically questioned, large language models (LLMs) often display and demonstrate significant inconsistencies in their knowledge. Computationally, the basic aspects of the conceptualization of a given domain can be represented as Is-A hierarchies in a knowledge graph (KG) or ontology, together with a few properties or axioms that enable straightforward reasoning. We show that even simple ontologies can be used to reveal conceptual inconsistencies across several LLMs. We also propose strategies that domain experts can use to evaluate and improve the coverage of key domain concepts in LLMs of various sizes. In particular, we have been able to significantly enhance the performance of LLMs of various sizes with openly available weights using simple knowledge-graph (KG) based prompting strategies",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "8ac8eff3ecdc06619c1d412197ddaf8d90fc2cb3",
+    "semantic_title": "reasoning about concepts with llms: inconsistencies abound",
+    "citation_count": 1,
     "authors": []
   },
   "https://openreview.net/forum?id=CrzAj0kZjR": {
     "title": "STaR-GATE: Teaching Language Models to Ask Clarifying Questions",
     "volume": "main",
     "abstract": "When prompting language models to complete a task, users often leave important aspects unsaid. While asking questions could resolve this ambiguity (GATE; Li et al., 2023), models often struggle to ask good questions. We explore a language model's ability to self-improve (STaR; Zelikman et al., 2022) by rewarding the model for generating useful questions—a simple method we dub STaR-GATE. We generate a synthetic dataset of 25,500 unique persona-task prompts to simulate conversations between a pretrained language model—the $\\texttt{Questioner}$—and a $\\texttt{Roleplayer}$ whose preferences are unknown to the $\\texttt{Questioner}$. By asking questions, the $\\texttt{Questioner}$ elicits preferences from the $\\texttt{Roleplayer}$. The $\\texttt{Questioner}$ is iteratively finetuned on questions that increase the probability of high-quality responses to the task, which are generated by an $\\texttt{Oracle}$ with access to the $\\texttt{Roleplayer}$'s latent preferences. After two iterations of self-improvement, the $\\texttt{Questioner}$ asks better questions, allowing it to generate responses that are preferred over responses from the initial model on $\\textbf{72}$% of tasks. Our results indicate that teaching a language model to ask better questions leads to better personalized responses",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "61be5b2d4b73cde6b11a8b988aea95c22364c86e",
+    "semantic_title": "star-gate: teaching language models to ask clarifying questions",
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=UfWwBaLuXV": {
@@ -2523,10 +2523,10 @@
     "title": "Impact of Preference Noise on the Alignment Performance of Generative Language Models",
     "volume": "main",
     "abstract": "A key requirement in developing Generative Language Models (GLMs) is to have their values aligned with human's values. Preference-based alignment is a widely used paradigm for this purpose, in which preferences over generation pairs are first elicited from human annotators or AI systems, and then fed into some alignment techniques, e.g., Direct Preference Optimization. However, a substantial percent (up to 42%) of the preference pairs used in GLM alignment are noisy, and it remains unclear how the noise affect the alignment performance and how to mitigate their negative impact. In this paper, we propose a framework to inject desirable amounts and types of noise to the preferences, and systematically study the impact of preference noise on the alignment performance in two tasks (summarization and dialogue generation). We find that the alignment performance can be highly sensitive to the noise rates in the preference data: e.g., a 10 percentage points (pp) increase of the noise rate can lead to 30 pp drop in the alignment performance (in win rate). To mitigate the impact of noise, confidence-based data filtering shows significant benefit when certain types of noise are present. We hope our work can help the community better understand and mitigate the impact of preference noise in GLM alignment",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "865bf47dedfec416221504708cd1f039050b0a2d",
+    "semantic_title": "impact of preference noise on the alignment performance of generative language models",
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=8TdcXwfNRB": {
@@ -2536,17 +2536,17 @@
     "checked": true,
     "id": "d3234875f7a5e70cc9210004a57b625fa1299d58",
     "semantic_title": "paperclip: associating astronomical observations and natural language with multi-modal models",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=KidynPuLNW": {
     "title": "On Limitations of the Transformer Architecture",
     "volume": "main",
     "abstract": "What are the root causes of hallucinations in large language models (LLMs)? We use Communication Complexity to prove that the Transformer layer is incapable of composing functions (e.g., identify a grandparent of a person in a genealogy) if the domains of the functions are large enough; we show through examples that this inability is already empirically present when the domains are quite small. We also point out that several mathematical tasks that are at the core of the so-called compositional tasks thought to be hard for LLMs are unlikely to be solvable by Transformers, for large enough instances and assuming that certain well accepted conjectures in the field of Computational Complexity are true",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "bbe0e4cc9b052e960362fdc18b6805043b81ca6b",
+    "semantic_title": "on limitations of the transformer architecture",
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=DRffhKBVlE": {
