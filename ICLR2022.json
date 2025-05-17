@@ -1339,6 +1339,56 @@
     "citation_count": 14,
     "authors": []
   },
+  "https://openreview.net/forum?id=CzceR82CYc": {
+    "title": "Score-Based Generative Modeling with Critically-Damped Langevin Diffusion",
+    "volume": "spotlight",
+    "abstract": "Score-based generative models (SGMs) have demonstrated remarkable synthesis quality. SGMs rely on a diffusion process that gradually perturbs the data towards a tractable distribution, while the generative model learns to denoise. The complexity of this denoising task is, apart from the data distribution itself, uniquely determined by the diffusion process. We argue that current SGMs employ overly simplistic diffusions, leading to unnecessarily complex denoising processes, which limit generative modeling performance. Based on connections to statistical mechanics, we propose a novel critically-damped Langevin diffusion (CLD) and show that CLD-based SGMs achieve superior performance. CLD can be interpreted as running a joint diffusion in an extended space, where the auxiliary variables can be considered \"velocities\" that are coupled to the data variables as in Hamiltonian dynamics. We derive a novel score matching objective for CLD and show that the model only needs to learn the score function of the conditional distribution of the velocity given data, an easier task than learning scores of the data directly. We also derive a new sampling scheme for efficient synthesis from CLD-based diffusion models. We find that CLD outperforms previous SGMs in synthesis quality for similar network architectures and sampling compute budgets. We show that our novel sampler for CLD significantly outperforms solvers such as Euler–Maruyama. Our framework provides new insights into score-based denoising diffusion models and can be readily used for high-resolution image synthesis. Project page and code: https://nv-tlabs.github.io/CLD-SGM",
+    "checked": true,
+    "id": "a28cdccba07dbf977795e15ff2c9b7ec80dac050",
+    "semantic_title": "score-based generative modeling with critically-damped langevin diffusion",
+    "citation_count": 230,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=DIjCrlsu6Z": {
+    "title": "Controlling Directions Orthogonal to a Classifier",
+    "volume": "spotlight",
+    "abstract": "We propose to identify directions invariant to a given classifier so that these directions can be controlled in tasks such as style transfer. While orthogonal decomposition is directly identifiable when the given classifier is linear, we formally define a notion of orthogonality in the non-linear case. We also provide a surprisingly simple method for constructing the orthogonal classifier (a classifier utilizing directions other than those of the given classifier). Empirically, we present three use cases where controlling orthogonal variation is important: style transfer, domain adaptation, and fairness. The orthogonal classifier enables desired style transfer when domains vary in multiple aspects, improves domain adaptation with label shifts and mitigates the unfairness as a predictor. The code is available at https://github.com/Newbeeer/orthogonal_classifier",
+    "checked": true,
+    "id": "c2c26d7e6b3679cd0a48ca8eace3ffed24f273a3",
+    "semantic_title": "controlling directions orthogonal to a classifier",
+    "citation_count": 19,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=2eXhNpHeW6E": {
+    "title": "R5: Rule Discovery with Reinforced and Recurrent Relational Reasoning",
+    "volume": "spotlight",
+    "abstract": "Systematicity, i.e., the ability to recombine known parts and rules to form new sequences while reasoning over relational data, is critical to machine intelligence. A model with strong systematicity is able to train on small-scale tasks and generalize to large-scale tasks. In this paper, we propose R5, a relational reasoning framework based on reinforcement learning that reasons over relational graph data and explicitly mines underlying compositional logical rules from observations. R5 has strong systematicity and being robust to noisy data. It consists of a policy value network equipped with Monte Carlo Tree Search to perform recurrent relational prediction and a backtrack rewriting mechanism for rule mining. By alternately applying the two components, R5 progressively learns a set of explicit rules from data and performs explainable and generalizable relation prediction. We conduct extensive evaluations on multiple datasets. Experimental results show that R5 outperforms various embedding-based and rule induction baselines on relation prediction tasks while achieving a high recall rate in discovering ground truth rules",
+    "checked": true,
+    "id": "477e4f98e03a88628b86605e10c9d2f9fbc73a0e",
+    "semantic_title": "r5: rule discovery with reinforced and recurrent relational reasoning",
+    "citation_count": 8,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=J4iSIR9fhY0": {
+    "title": "Representation Learning for Online and Offline RL in Low-rank MDPs",
+    "volume": "spotlight",
+    "abstract": "This work studies the question of Representation Learning in RL: how can we learn a compact low-dimensional representation such that on top of the representation we can perform RL procedures such as exploration and exploitation, in a sample efficient manner. We focus on the low-rank Markov Decision Processes (MDPs) where the transition dynamics correspond to a low-rank transition matrix. Unlike prior works that assume the representation is known (e.g., linear MDPs), here we need to learn the representation for the low-rank MDP. We study both the online RL and offline RL settings. For the online setting, operating with the same computational oracles used in FLAMBE (Agarwal et.al), the state-of-art algorithm for learning representations in low-rank MDPs, we propose an algorithm REP-UCB Upper Confidence Bound driven Representation learning for RL), which significantly improves the sample complexity from $\\widetilde{O}( A^9 d^7 / (\\epsilon^{10} (1-\\gamma)^{22}))$ for FLAMBE to $\\widetilde{O}( A^4 d^4 / (\\epsilon^2 (1-\\gamma)^{2}) )$ with $d$ being the rank of the transition matrix (or dimension of the ground truth representation), $A$ being the number of actions, and $\\gamma$ being the discounted factor. Notably, REP-UCB is simpler than FLAMBE, as it directly balances the interplay between representation learning, exploration, and exploitation, while FLAMBE is an explore-then-commit style approach and has to perform reward-free exploration step-by-step forward in time. For the offline RL setting, we develop an algorithm that leverages pessimism to learn under a partial coverage condition: our algorithm is able to compete against any policy as long as it is covered by the offline distribution",
+    "checked": true,
+    "id": "8d16ffb11c7b62181146db43296852424426a3cd",
+    "semantic_title": "representation learning for online and offline rl in low-rank mdps",
+    "citation_count": 125,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=X_hByk2-5je": {
+    "title": "Lossless Compression with Probabilistic Circuits",
+    "volume": "spotlight",
+    "abstract": "Despite extensive progress on image generation, common deep generative model architectures are not easily applied to lossless compression. For example, VAEs suffer from a compression cost overhead due to their latent variables. This overhead can only be partially eliminated with elaborate schemes such as bits-back coding, often resulting in poor single-sample compression rates. To overcome such problems, we establish a new class of tractable lossless compression models that permit efficient encoding and decoding: Probabilistic Circuits (PCs). These are a class of neural networks involving $|p|$ computational units that support efficient marginalization over arbitrary subsets of the $D$ feature dimensions, enabling efficient arithmetic coding. We derive efficient encoding and decoding schemes that both have time complexity $\\mathcal{O} (\\log(D) \\cdot |p|)$, where a naive scheme would have linear costs in $D$ and $|p|$, making the approach highly scalable. Empirically, our PC-based (de)compression algorithm runs 5-40 times faster than neural compression algorithms that achieve similar bitrates. By scaling up the traditional PC structure learning pipeline, we achieve state-of-the-art results on image datasets such as MNIST. Furthermore, PCs can be naturally integrated with existing neural compression algorithms to improve the performance of these base models on natural image datasets. Our results highlight the potential impact that non-standard learning architectures may have on neural data compression",
+    "checked": true,
+    "id": "43157e4f2e4c7f85cdfa9e4a92eff7b3bcecb2c7",
+    "semantic_title": "lossless compression with probabilistic circuits",
+    "citation_count": 19,
+    "authors": []
+  },
   "https://openreview.net/forum?id=T8vZHIRTrY": {
     "title": "Understanding Domain Randomization for Sim-to-real Transfer",
     "volume": "spotlight",
@@ -2239,6 +2289,56 @@
     "citation_count": 2,
     "authors": []
   },
+  "https://openreview.net/forum?id=7l1IjZVddDW": {
+    "title": "Improving Federated Learning Face Recognition via Privacy-Agnostic Clusters",
+    "volume": "spotlight",
+    "abstract": "The growing public concerns on data privacy in face recognition can be partly relieved by the federated learning (FL) paradigm. However, conventional FL methods usually perform poorly due to the particularity of the task, \\textit{i.e.}, broadcasting class centers among clients is essential for recognition performances but leads to privacy leakage. To resolve the privacy-utility paradox, this work proposes PrivacyFace, a framework largely improves the federated learning face recognition via communicating auxiliary and privacy-agnostic information among clients. PrivacyFace mainly consists of two components: First, a practical Differentially Private Local Clustering (DPLC) mechanism is proposed to distill sanitized clusters from local class centers. Second, a consensus-aware recognition loss subsequently encourages global consensuses among clients, which ergo leads to more discriminative features. The proposed schemes are mathematically proved to be differential private, introduce a lightweight overhead as well as yield prominent performance boosts (\\textit{e.g.}, +9.63\\% and +10.26\\% for TAR@FAR=1e-4 on IJB-B and IJB-C respectively). Extensive experiments and ablation studies on a large-scale dataset have demonstrated the efficacy and practicability of our method",
+    "checked": true,
+    "id": "eaccb8a31f7d7b7b442747bf2ffe1d0b4c6570b3",
+    "semantic_title": "improving federated learning face recognition via privacy-agnostic clusters",
+    "citation_count": 38,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=HndgQudNb91": {
+    "title": "Learning to Downsample for Segmentation of Ultra-High Resolution Images",
+    "volume": "poster",
+    "abstract": "Many computer vision systems require low-cost segmentation algorithms based on deep learning, either because of the enormous size of input images or limited computational budget. Common solutions uniformly downsample the input images to meet memory constraints, assuming all pixels are equally informative. In this work, we demonstrate that this assumption can harm the segmentation performance because the segmentation difficulty varies spatially (see Figure 1 \"Uniform\"). We combat this problem by introducing a learnable downsampling module, which can be optimised together with the given segmentation model in an end-to-end fashion. We formulate the problem of training such downsampling module as optimisation of sampling density distributions over the input images given their low-resolution views. To defend against degenerate solutions (e.g. over-sampling trivial regions like the backgrounds), we propose a regularisation term that encourages the sampling locations to concentrate around the object boundaries. We find the downsampling module learns to sample more densely at difficult locations, thereby improving the segmentation performance (see Figure 1 \"Ours\"). Our experiments on benchmarks of high-resolution street view, aerial and medical images demonstrate substantial improvements in terms of efficiency-and-accuracy trade-off compared to both uniform downsampling and two recent advanced downsampling techniques",
+    "checked": true,
+    "id": "c31e7b6b56d0c8584ca4d1b6cc01f511a705273b",
+    "semantic_title": "learning to downsample for segmentation of ultra-high resolution images",
+    "citation_count": 34,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=7fFO4cMBx_9": {
+    "title": "Variational Neural Cellular Automata",
+    "volume": "poster",
+    "abstract": "In nature, the process of cellular growth and differentiation has lead to an amazing diversity of organisms --- algae, starfish, giant sequoia, tardigrades, and orcas are all created by the same generative process. Inspired by the incredible diversity of this biological generative process, we propose a generative model, the Variational Neural Cellular Automata (VNCA), which is loosely inspired by the biological processes of cellular growth and differentiation. Unlike previous related works, the VNCA is a proper probabilistic generative model, and we evaluate it according to best practices. We find that the VNCA learns to reconstruct samples well and that despite its relatively few parameters and simple local-only communication, the VNCA can learn to generate a large variety of output from information encoded in a common vector format. While there is a significant gap to the current state-of-the-art in terms of generative modeling performance, we show that the VNCA can learn a purely self-organizing generative process of data. Additionally, the self-organizing nature bestows the VNCA with some inherent robustness against perturbations in the early stages of growth",
+    "checked": true,
+    "id": "9e2fcbf361e3d89b10f1ae2e3d9c49876db42976",
+    "semantic_title": "variational neural cellular automata",
+    "citation_count": 22,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=FKp8-pIRo3y": {
+    "title": "Wish you were here: Hindsight Goal Selection for long-horizon dexterous manipulation",
+    "volume": "poster",
+    "abstract": "Complex sequential tasks in continuous-control settings often require agents to successfully traverse a set of ``narrow passages'' in their state space. Solving such tasks with a sparse reward in a sample-efficient manner poses a challenge to modern reinforcement learning (RL) due to the associated long-horizon nature of the problem and the lack of sufficient positive signal during learning. Various tools have been applied to address this challenge. When available, large sets of demonstrations can guide agent exploration. Hindsight relabelling on the other hand does not require additional sources of information. However, existing strategies explore based on task-agnostic goal distributions, which can render the solution of long-horizon tasks impractical. In this work, we extend hindsight relabelling mechanisms to guide exploration along task-specific distributions implied by a small set of successful demonstrations. We evaluate the approach on four complex, single and dual arm, robotics manipulation tasks against strong suitable baselines. The method requires far fewer demonstrations to solve all tasks and achieves a significantly higher overall performance as task complexity increases. Finally, we investigate the robustness of the proposed solution with respect to the quality of input representations and the number of demonstrations",
+    "checked": true,
+    "id": "fdc60fed400833caf0b936321f91b41b154fd09f",
+    "semantic_title": "wish you were here: hindsight goal selection for long-horizon dexterous manipulation",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=KntaNRo6R48": {
+    "title": "L0-Sparse Canonical Correlation Analysis",
+    "volume": "poster",
+    "abstract": "Canonical Correlation Analysis (CCA) models are powerful for studying the associations between two sets of variables. The canonically correlated representations, termed \\textit{canonical variates} are widely used in unsupervised learning to analyze unlabeled multi-modal registered datasets. Despite their success, CCA models may break (or overfit) if the number of variables in either of the modalities exceeds the number of samples. Moreover, often a significant fraction of the variables measures modality-specific information, and thus removing them is beneficial for identifying the \\textit{canonically correlated variates}. Here, we propose $\\ell_0$-CCA, a method for learning correlated representations based on sparse subsets of variables from two observed modalities. Sparsity is obtained by multiplying the input variables by stochastic gates, whose parameters are learned together with the CCA weights via an $\\ell_0$-regularized correlation loss. We further propose $\\ell_0$-Deep CCA for solving the problem of non-linear sparse CCA by modeling the correlated representations using deep nets. We demonstrate the efficacy of the method using several synthetic and real examples. Most notably, by gating nuisance input variables, our approach improves the extracted representations compared to other linear, non-linear and sparse CCA-based models",
+    "checked": true,
+    "id": "ee8e867420d7e3603dc5e8aab50555a386e23a13",
+    "semantic_title": "l0-sparse canonical correlation analysis",
+    "citation_count": 17,
+    "authors": []
+  },
   "https://openreview.net/forum?id=B7ZbqNLDn-_": {
     "title": "Recycling Model Updates in Federated Learning: Are Gradient Subspaces Low-Rank?",
     "volume": "poster",
@@ -2537,6 +2637,56 @@
     "id": "610621a8ac941ae6c6781250a3cdb705616c983c",
     "semantic_title": "neural link prediction with walk pooling",
     "citation_count": 33,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=YeShU5mLfLt": {
+    "title": "On the Convergence of Certified Robust Training with Interval Bound Propagation",
+    "volume": "poster",
+    "abstract": "Interval Bound Propagation (IBP) is so far the base of state-of-the-art methods for training neural networks with certifiable robustness guarantees when potential adversarial perturbations present, while the convergence of IBP training remains unknown in existing literature. In this paper, we present a theoretical analysis on the convergence of IBP training. With an overparameterized assumption, we analyze the convergence of IBP robust training. We show that when using IBP training to train a randomly initialized two-layer ReLU neural network with logistic loss, gradient descent can linearly converge to zero robust training error with a high probability if we have sufficiently small perturbation radius and large network width",
+    "checked": true,
+    "id": "889dc6112e4cfa6ac2557c9d3a4b47bc40854ba3",
+    "semantic_title": "on the convergence of certified robust training with interval bound propagation",
+    "citation_count": 9,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=sX3XaHwotOg": {
+    "title": "Pretraining Text Encoders with Adversarial Mixture of Training Signal Generators",
+    "volume": "poster",
+    "abstract": "We present a new framework AMOS that pretrains text encoders with an Adversarial learning curriculum via a Mixture Of Signals from multiple auxiliary generators. Following ELECTRA-style pretraining, the main encoder is trained as a discriminator to detect replaced tokens generated by auxiliary masked language models (MLMs). Different from ELECTRA which trains one MLM as the generator, we jointly train multiple MLMs of different sizes to provide training signals at various levels of difficulty. To push the discriminator to learn better with challenging replaced tokens, we learn mixture weights over the auxiliary MLMs' outputs to maximize the discriminator loss by backpropagating the gradient from the discriminator via Gumbel-Softmax. For better pretraining efficiency, we propose a way to assemble multiple MLMs into one unified auxiliary model. AMOS outperforms ELECTRA and recent state-of-the-art pretrained models by about 1 point on the GLUE benchmark for BERT base-sized models",
+    "checked": true,
+    "id": "02f36289e227595dd2786b32c3975ce7e61dff48",
+    "semantic_title": "pretraining text encoders with adversarial mixture of training signal generators",
+    "citation_count": 16,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=0jP2n0YFmKG": {
+    "title": "Towards Training Billion Parameter Graph Neural Networks for Atomic Simulations",
+    "volume": "poster",
+    "abstract": "Recent progress in Graph Neural Networks (GNNs) for modeling atomic simulations has the potential to revolutionize catalyst discovery, which is a key step in making progress towards the energy breakthroughs needed to combat climate change. However, the GNNs that have proven most effective for this task are memory intensive as they model higher-order interactions in the graphs such as those between triplets or quadruplets of atoms, making it challenging to scale these models. In this paper, we introduce Graph Parallelism, a method to distribute input graphs across multiple GPUs, enabling us to train very large GNNs with hundreds of millions or billions of parameters. We empirically evaluate our method by scaling up the recently proposed DimeNet++ and GemNet models by over an order of magnitude in the number of parameters. On the large-scale Open Catalyst 2020 (OC20) dataset, these graph-parallelized models lead to relative improvements of 1) 15% on the force MAE metric on the S2EF task and 2) 21% on the AFbT metric on the IS2RS task, establishing new state-of-the-art results",
+    "checked": true,
+    "id": "6a62ca8c617656caef26a31b13e1cadab6e996e3",
+    "semantic_title": "towards training billion parameter graph neural networks for atomic simulations",
+    "citation_count": 27,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=shbAgEsk3qM": {
+    "title": "Understanding and Leveraging Overparameterization in Recursive Value Estimation",
+    "volume": "poster",
+    "abstract": "The theory of function approximation in reinforcement learning (RL) typically considers low capacity representations that incur a tradeoff between approximation error, stability and generalization. Current deep architectures, however, operate in an overparameterized regime where approximation error is not necessarily a bottleneck. To better understand the utility of deep models in RL we present an analysis of recursive value estimation using \\emph{overparameterized} linear representations that provides useful, transferable findings. First, we show that classical updates such as temporal difference (TD) learning or fitted-value-iteration (FVI) converge to \\emph{different} fixed points than residual minimization (RM) in the overparameterized linear case. We then develop a unified interpretation of overparameterized linear value estimation as minimizing the Euclidean norm of the weights subject to alternative constraints. A practical consequence is that RM can be modified by a simple alteration of the backup targets to obtain the same fixed points as FVI and TD (when they converge), while universally ensuring stability. Further, we provide an analysis of the generalization error of these methods, demonstrating per iterate bounds on the value prediction error of FVI, and fixed point bounds for TD and RM. Given this understanding, we then develop new algorithmic tools for improving recursive value estimation with deep models. In particular, we extract two regularizers that penalize out-of-span top-layer weights and co-linearity in top-layer features respectively. Empirically we find that these regularizers dramatically improve the stability of TD and FVI, while allowing RM to match and even sometimes surpass their generalization performance with assured stability",
+    "checked": true,
+    "id": "46f100e7f8a8e73b38371d4ddef110fece012031",
+    "semantic_title": "understanding and leveraging overparameterization in recursive value estimation",
+    "citation_count": 14,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=dPyRNUlttBv": {
+    "title": "Optimization and Adaptive Generalization of Three layer Neural Networks",
+    "volume": "poster",
+    "abstract": "While there has been substantial recent work studying generalization of neural networks, the ability of deep nets in automating the process of feature extraction still evades a thorough mathematical understanding. As a step toward this goal, we analyze learning and generalization of a three-layer neural network with ReLU activations in a regime that goes beyond the linear approximation of the network, and is hence not captured by the common Neural Tangent Kernel. We show that despite nonconvexity of the empirical loss, a variant of SGD converges in polynomially many iterations to a good solution that generalizes. In particular, our generalization bounds are adaptive: they automatically optimize over a family of kernels that includes the Neural Tangent Kernel, to provide the tightest bound",
+    "checked": true,
+    "id": "bee817efbcd3e1e67995ea033462540bad5e66d4",
+    "semantic_title": "optimization and adaptive generalization of three layer neural networks",
+    "citation_count": 1,
     "authors": []
   },
   "https://openreview.net/forum?id=-TSe5o7STVR": {
@@ -2839,6 +2989,56 @@
     "citation_count": 1,
     "authors": []
   },
+  "https://openreview.net/forum?id=Rf58LPCwJj0": {
+    "title": "Optimal Representations for Covariate Shift",
+    "volume": "poster",
+    "abstract": "Machine learning systems often experience a distribution shift between training and testing. In this paper, we introduce a simple variational objective whose optima are exactly the set of all representations on which risk minimizers are guaranteed to be robust to any distribution shift that preserves the Bayes predictor, e.g., covariate shifts. Our objective has two components. First, a representation must remain discriminative for the task, i.e., some predictor must be able to simultaneously minimize the source and target risk. Second, the representation's marginal support needs to be the same across source and target. We make this practical by designing self-supervised objectives that only use unlabelled data and augmentations to train robust representations. Our objectives give insights into the robustness of CLIP, and further improve CLIP's representations to achieve SOTA results on DomainBed",
+    "checked": true,
+    "id": "5382d9bc17aabfd47b7c7d9873d2b64fdde48305",
+    "semantic_title": "optimal representations for covariate shift",
+    "citation_count": 68,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=ei3SY1_zYsE": {
+    "title": "Fortuitous Forgetting in Connectionist Networks",
+    "volume": "poster",
+    "abstract": "Forgetting is often seen as an unwanted characteristic in both human and machine learning. However, we propose that forgetting can in fact be favorable to learning. We introduce forget-and-relearn as a powerful paradigm for shaping the learning trajectories of artificial neural networks. In this process, the forgetting step selectively removes undesirable information from the model, and the relearning step reinforces features that are consistently useful under different conditions. The forget-and-relearn framework unifies many existing iterative training algorithms in the image classification and language emergence literature, and allows us to understand the success of these algorithms in terms of the disproportionate forgetting of undesirable information. We leverage this understanding to improve upon existing algorithms by designing more targeted forgetting operations. Insights from our analysis provide a coherent view on the dynamics of iterative training in neural networks and offer a clear path towards performance improvements",
+    "checked": true,
+    "id": "48ec22d24a83d3dfc12e4a6bac8bf77af1f41c3e",
+    "semantic_title": "fortuitous forgetting in connectionist networks",
+    "citation_count": 42,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=So6YAqnqgMj": {
+    "title": "EigenGame Unloaded: When playing games is better than optimizing",
+    "volume": "poster",
+    "abstract": "We build on the recently proposed EigenGame that views eigendecomposition as a competitive game. EigenGame's updates are biased if computed using minibatches of data, which hinders convergence and more sophisticated parallelism in the stochastic setting. In this work, we propose an unbiased stochastic update that is asymptotically equivalent to EigenGame, enjoys greater parallelism allowing computation on datasets of larger sample sizes, and outperforms EigenGame in experiments. We present applications to finding the principal components of massive datasets and performing spectral clustering of graphs. We analyze and discuss our proposed update in the context of EigenGame and the shift in perspective from optimization to games",
+    "checked": true,
+    "id": "f9464bda6ca2e1ae20a335163b0172a3fcf599f8",
+    "semantic_title": "eigengame unloaded: when playing games is better than optimizing",
+    "citation_count": 12,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Oh1r2wApbPv": {
+    "title": "Contextualized Scene Imagination for Generative Commonsense Reasoning",
+    "volume": "poster",
+    "abstract": "Humans use natural language to compose common concepts from their environment into plausible, day-to-day scene descriptions. However, such generative commonsense reasoning (GCSR) skills are lacking in state-of-the-art text generation methods. Descriptive sentences about arbitrary concepts generated by neural text generation models (e.g., pre-trained text-to-text Transformers) are often grammatically fluent but may not correspond to human common sense, largely due to their lack of mechanisms to capture concept relations, to identify implicit concepts, and to perform generalizable reasoning about unseen concept compositions. In this paper, we propose an Imagine-and-Verbalize (I\\&V) method, which learns to imagine a relational scene knowledge graph (SKG) with relations between the input concepts, and leverage the SKG as a constraint when generating a plausible scene description. We collect and harmonize a set of knowledge resources from different domains and modalities, providing a rich auxiliary supervision signal for I\\&V. The experiments demonstrate the effectiveness of I\\&V in improving language models on both concept-to-sentence and concept-to-story generation tasks, while enabling the model to learn well from fewer task examples and generate SKGs that make common sense to human annotators",
+    "checked": true,
+    "id": "cc37f5821b2ea4c4528b5ba3b96f302db7ec3870",
+    "semantic_title": "contextualized scene imagination for generative commonsense reasoning",
+    "citation_count": 16,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Wm3EA5OlHsG": {
+    "title": "Scene Transformer: A unified architecture for predicting future trajectories of multiple agents",
+    "volume": "poster",
+    "abstract": "Predicting the motion of multiple agents is necessary for planning in dynamic environments. This task is challenging for autonomous driving since agents (e.g., vehicles and pedestrians) and their associated behaviors may be diverse and influence one another. Most prior work have focused on predicting independent futures for each agent based on all past motion, and planning against these independent predictions. However, planning against independent predictions can make it challenging to represent the future interaction possibilities between different agents, leading to sub-optimal planning. In this work, we formulate a model for predicting the behavior of all agents jointly, producing consistent futures that account for interactions between agents. Inspired by recent language modeling approaches, we use a masking strategy as the query to our model, enabling one to invoke a single model to predict agent behavior in many ways, such as potentially conditioned on the goal or full future trajectory of the autonomous vehicle or the behavior of other agents in the environment. Our model architecture employs attention to combine features across road elements, agent interactions, and time steps. We evaluate our approach on autonomous driving datasets for both marginal and joint motion prediction, and achieve state of the art performance across two popular datasets. Through combining a scene-centric approach, agent permutation equivariant model, and a sequence masking strategy, we show that our model can unify a variety of motion prediction tasks from joint motion predictions to conditioned prediction",
+    "checked": true,
+    "id": "a4bc6aee56e91c8881c421fa3472e2d211e0bdb2",
+    "semantic_title": "scene transformer: a unified architecture for predicting future trajectories of multiple agents",
+    "citation_count": 136,
+    "authors": []
+  },
   "https://openreview.net/forum?id=qY79G8jGsep": {
     "title": "DISSECT: Disentangled Simultaneous Explanations via Concept Traversals",
     "volume": "poster",
@@ -3139,6 +3339,56 @@
     "citation_count": 19,
     "authors": []
   },
+  "https://openreview.net/forum?id=ZKy2X3dgPA": {
+    "title": "It Takes Two to Tango: Mixup for Deep Metric Learning",
+    "volume": "poster",
+    "abstract": "Metric learning involves learning a discriminative representation such that embeddings of similar classes are encouraged to be close, while embeddings of dissimilar classes are pushed far apart. State-of-the-art methods focus mostly on sophisticated loss functions or mining strategies. On the one hand, metric learning losses consider two or more examples at a time. On the other hand, modern data augmentation methods for classification consider two or more examples at a time. The combination of the two ideas is under-studied. In this work, we aim to bridge this gap and improve representations using mixup, which is a powerful data augmentation approach interpolating two or more examples and corresponding target labels at a time. This task is challenging because, unlike classification, the loss functions used in metric learning are not additive over examples, so the idea of interpolating target labels is not straightforward. To the best of our knowledge, we are the first to investigate mixing both examples and target labels for deep metric learning. We develop a generalized formulation that encompasses existing metric learning loss functions and modify it to accommodate for mixup, introducing Metric Mix, or Metrix. We also introduce a new metric---utilization---to demonstrate that by mixing examples during training, we are exploring areas of the embedding space beyond the training classes, thereby improving representations. To validate the effect of improved representations, we show that mixing inputs, intermediate representations or embeddings along with target labels significantly outperforms state-of-the-art metric learning methods on four benchmark deep metric learning datasets",
+    "checked": true,
+    "id": "a7721bf626f4996117dbb88b385be2e12462e7e6",
+    "semantic_title": "it takes two to tango: mixup for deep metric learning",
+    "citation_count": 25,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=G89-1yZLFHk": {
+    "title": "Data Efficient Language-Supervised Zero-Shot Recognition with Optimal Transport Distillation",
+    "volume": "poster",
+    "abstract": "Traditional computer vision models are trained to predict a fixed set of predefined categories. Recently, natural language has been shown to be a broader and richer source of supervision that provides finer descriptions to visual concepts than supervised \"gold\" labels. Previous works, such as CLIP, use InfoNCE loss to train a model to predict the pairing between images and text captions. CLIP, however, is data hungry and requires more than 400M image-text pairs for training. The inefficiency can be \\textit{partially} attributed to the fact that the image-text pairs are noisy. To address this, we propose OTTER (Optimal TransporT distillation for Efficient zero-shot Recognition), which uses online entropic optimal transport to find a soft image-text match as labels for contrastive learning. Based on pretrained image and text encoders, models trained with OTTER achieve strong performance with only 3M image text pairs. Compared with InfoNCE loss, label smoothing, and knowledge distillation, OTTER consistently outperforms these baselines in zero-shot evaluation on Google Open Images (19,958 classes) and multi-labeled ImageNet 10K (10032 classes) from Tencent ML-Images. Over 42 evaluations on 7 different dataset/architecture settings x 6 metrics, OTTER outperforms (32) or ties (2) all baselines in 34 of them. Our source code is open sourced at https://github.com/facebookresearch/OTTER",
+    "checked": true,
+    "id": "38cc96e5a780716dc7e19e037d96d952b3a37940",
+    "semantic_title": "data efficient language-supervised zero-shot recognition with optimal transport distillation",
+    "citation_count": 45,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Oy9WeuZD51": {
+    "title": "A Statistical Framework for Efficient Out of Distribution Detection in Deep Neural Networks",
+    "volume": "poster",
+    "abstract": "Background. Commonly, Deep Neural Networks (DNNs) generalize well on samples drawn from a distribution similar to that of the training set. However, DNNs' predictions are brittle and unreliable when the test samples are drawn from a dissimilar distribution. This is a major concern for deployment in real-world applications, where such behavior may come at a considerable cost, such as industrial production lines, autonomous vehicles, or healthcare applications. Contributions. We frame Out Of Distribution (OOD) detection in DNNs as a statistical hypothesis testing problem. Tests generated within our proposed framework combine evidence from the entire network. Unlike previous OOD detection heuristics, this framework returns a $p$-value for each test sample. It is guaranteed to maintain the Type I Error (T1E - incorrectly predicting OOD for an actual in-distribution sample) for test data. Moreover, this allows to combine several detectors while maintaining the T1E. Building on this framework, we suggest a novel OOD procedure based on low-order statistics. Our method achieves comparable or better results than state-of-the-art methods on well-accepted OOD benchmarks, without retraining the network parameters or assuming prior knowledge on the test distribution --- and at a fraction of the computational cost",
+    "checked": true,
+    "id": "9e52bc970e53b350d393c7c3880ddab074867367",
+    "semantic_title": "a statistical framework for efficient out of distribution detection in deep neural networks",
+    "citation_count": 37,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=HuaYQfggn5u": {
+    "title": "FedBABU: Toward Enhanced Representation for Federated Image Classification",
+    "volume": "poster",
+    "abstract": "Federated learning has evolved to improve a single global model under data heterogeneity (as a curse) or to develop multiple personalized models using data heterogeneity (as a blessing). However, little research has considered both directions simultaneously. In this paper, we first investigate the relationship between them by analyzing Federated Averaging at the client level and determine that a better federated global model performance does not constantly improve personalization. To elucidate the cause of this personalization performance degradation problem, we decompose the entire network into the body (extractor), which is related to universality, and the head (classifier), which is related to personalization. We then point out that this problem stems from training the head. Based on this observation, we propose a novel federated learning algorithm, coined FedBABU, which only updates the body of the model during federated training (i.e., the head is randomly initialized and never updated), and the head is fine-tuned for personalization during the evaluation process. Extensive experiments show consistent performance improvements and an efficient personalization of FedBABU. The code is available at https://github.com/jhoon-oh/FedBABU",
+    "checked": false,
+    "id": "3cd5b67f7bc25a14a9505d27a5b18cfb5592769b",
+    "semantic_title": "fedbabu: towards enhanced representation for federated image classification",
+    "citation_count": 200,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=AP1MKT37rJ": {
+    "title": "Should I Run Offline Reinforcement Learning or Behavioral Cloning?",
+    "volume": "poster",
+    "abstract": "Offline reinforcement learning (RL) algorithms can acquire effective policies by utilizing only previously collected experience, without any online interaction. While it is widely understood that offline RL is able to extract good policies even from highly suboptimal data, in practice offline RL is often used with data that resembles demonstrations. In this case, one can also use behavioral cloning (BC) algorithms, which mimic a subset of the dataset via supervised learning. It seems natural to ask: When should we prefer offline RL over BC? In this paper, our goal is to characterize environments and dataset compositions where offline RL leads to better performance than BC. In particular, we characterize the properties of environments that allow offline RL methods to perform better than BC methods even when only provided with expert data. Additionally, we show that policies trained on suboptimal data that is sufficiently noisy can attain better performance than even BC algorithms with expert data, especially on long-horizon problems. We validate our theoretical results via extensive experiments on both diagnostic and high-dimensional domains including robot manipulation, maze navigation and Atari games, when learning from a variety of data sources. We observe that modern offline RL methods trained on suboptimal, noisy data in sparse reward domains outperform cloning the expert data in several practical problems",
+    "checked": true,
+    "id": "a8c409791404828a3276ffb0e4a71d3263b0526e",
+    "semantic_title": "should i run offline reinforcement learning or behavioral cloning?",
+    "citation_count": 69,
+    "authors": []
+  },
   "https://openreview.net/forum?id=CLpxpXqqBV": {
     "title": "Learning State Representations via Retracing in Reinforcement Learning",
     "volume": "poster",
@@ -3437,6 +3687,56 @@
     "id": "c4025c12d802491a56d1801b7ca32a58ea1b14bb",
     "semantic_title": "memory augmented optimizers for deep learning",
     "citation_count": 3,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=c87d0TS4yX": {
+    "title": "Orchestrated Value Mapping for Reinforcement Learning",
+    "volume": "poster",
+    "abstract": "We present a general convergent class of reinforcement learning algorithms that is founded on two distinct principles: (1) mapping value estimates to a different space using arbitrary functions from a broad class, and (2) linearly decomposing the reward signal into multiple channels. The first principle enables incorporating specific properties into the value estimator that can enhance learning. The second principle, on the other hand, allows for the value function to be represented as a composition of multiple utility functions. This can be leveraged for various purposes, e.g. dealing with highly varying reward scales, incorporating a priori knowledge about the sources of reward, and ensemble learning. Combining the two principles yields a general blueprint for instantiating convergent algorithms by orchestrating diverse mapping functions over multiple reward channels. This blueprint generalizes and subsumes algorithms such as Q-Learning, Log Q-Learning, and Q-Decomposition. In addition, our convergence proof for this general class relaxes certain required assumptions in some of these algorithms. Based on our theory, we discuss several interesting configurations as special cases. Finally, to illustrate the potential of the design space that our theory opens up, we instantiate a particular algorithm and evaluate its performance on the Atari suite",
+    "checked": true,
+    "id": "32455a01db6a0054bb606358eab53596a99a64df",
+    "semantic_title": "orchestrated value mapping for reinforcement learning",
+    "citation_count": 8,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=CIaQKbTBwtU": {
+    "title": "Learning to Generalize across Domains on Single Test Samples",
+    "volume": "poster",
+    "abstract": "We strive to learn a model from a set of source domains that generalizes well to unseen target domains. The main challenge in such a domain generalization scenario is the unavailability of any target domain data during training, resulting in the learned model not being explicitly adapted to the unseen target domains. We propose learning to generalize across domains on single test samples. We leverage a meta-learning paradigm to learn our model to acquire the ability of adaptation with single samples at training time so as to further adapt itself to each single test sample at test time. We formulate the adaptation to the single test sample as a variational Bayesian inference problem, which incorporates the test sample as a conditional into the generation of model parameters. The adaptation to each test sample requires only one feed-forward computation at test time without any fine-tuning or self-supervised training on additional data from the unseen domains. Extensive ablation studies demonstrate that our model learns the ability to adapt models to each single sample by mimicking domain shifts during training. Further, our model achieves at least comparable -- and often better -- performance than state-of-the-art methods on multiple benchmarks for domain generalization",
+    "checked": true,
+    "id": "e6a619cdb4bdfa973078809f4b4d215c98174e2f",
+    "semantic_title": "learning to generalize across domains on single test samples",
+    "citation_count": 31,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=lY0-7bj0Vfz": {
+    "title": "Prototype memory and attention mechanisms for few shot image generation",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=FEBFJ98FKx": {
+    "title": "TPU-GAN: Learning temporal coherence from dynamic point cloud sequences",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=JBAZe2yN6Ub": {
+    "title": "A First-Occupancy Representation for Reinforcement Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=ci7LBzDn2Q": {
@@ -3949,6 +4249,56 @@
     "citation_count": 12,
     "authors": []
   },
+  "https://openreview.net/forum?id=rhOiUS8KQM9": {
+    "title": "Enabling Arbitrary Translation Objectives with Adaptive Tree Search",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=rpxJc9j04U": {
+    "title": "Proof Artifact Co-Training for Theorem Proving with Language Models",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=aBO5SvgSt1": {
+    "title": "Mirror Descent Policy Optimization",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=OcKMT-36vUs": {
+    "title": "A Loss Curvature Perspective on Training Instabilities of Deep Learning Models",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=xP3cPq2hQC": {
+    "title": "Cross-Domain Imitation Learning via Optimal Transport",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=0UXT6PpRpW": {
     "title": "Large-Scale Representation Learning on Graphs via Bootstrapping",
     "volume": "poster",
@@ -4247,6 +4597,56 @@
     "id": "9557af7426fde227e1cbd623dd4d221122265863",
     "semantic_title": "gatsbi: generative adversarial training for simulation-based inference",
     "citation_count": 24,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=AwgtcUAhBq": {
+    "title": "Domain Adversarial Training: A Game Perspective",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=MXdFBmHT4C": {
+    "title": "Differentiable Expectation-Maximization for Set Representation Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=vIC-xLFuM6": {
+    "title": "Overcoming The Spectral Bias of Neural Value Approximation",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=AIgn9uwfcD1": {
+    "title": "Prospect Pruning: Finding Trainable Weights at Initialization using Meta-Gradients",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=PVJ6j87gOHz": {
+    "title": "CoMPS: Continual Meta Policy Search",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=ziRLU3Y2PN_": {
@@ -4679,6 +5079,56 @@
     "citation_count": 0,
     "authors": []
   },
+  "https://openreview.net/forum?id=jJOjjiZHy3h": {
+    "title": "Defending Against Image Corruptions Through Adversarial Augmentations",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Zf4ZdI4OQPV": {
+    "title": "Attacking deep networks with surrogate-based adversarial black-box methods is easy",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Lm8T39vLDTE": {
+    "title": "Autoregressive Diffusion Models",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=H94a1_Pyr-6": {
+    "title": "Auto-scaling Vision Transformers without Training",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=KPEFXR1HdIo": {
+    "title": "Fine-grained Differentiable Physics: A Yarn-level Model for Fabrics",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=6y2KBh-0Fd9": {
     "title": "Revisiting flow generative models for Out-of-distribution detection",
     "volume": "poster",
@@ -4979,6 +5429,56 @@
     "citation_count": 2,
     "authors": []
   },
+  "https://openreview.net/forum?id=RQ428ZptQfU": {
+    "title": "A Deep Variational Approach to Clustering Survival Data",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=qaxhBG1UUaS": {
+    "title": "GPT-Critic: Offline Reinforcement Learning for End-to-End Task-Oriented Dialogue Systems",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=JtBRnrlOEFN": {
+    "title": "Charformer: Fast Character Transformers via Gradient-based Subword Tokenization",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=mQxt8l7JL04": {
+    "title": "Regularized Autoencoders for Isometric Representation Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=dTqOcTUOQO": {
+    "title": "Knowledge Removal in Sampling-based Bayesian Inference",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=vEZyTBRPP6o": {
     "title": "Actor-critic is implicitly biased towards high entropy optimal policies",
     "volume": "poster",
@@ -5277,6 +5777,56 @@
     "id": "0c78bf086ae589d0a5a68b8e8326d2048b87018f",
     "semantic_title": "offline neural contextual bandits: pessimism, optimization and generalization",
     "citation_count": 23,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=QDdJhACYrlX": {
+    "title": "THOMAS: Trajectory Heatmap Output with learned Multi-Agent Sampling",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=rHMaBYbkkRJ": {
+    "title": "CLEVA-Compass: A Continual Learning Evaluation Assessment Compass to Promote Research Transparency and Comparability",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=aisKPsMM3fg": {
+    "title": "Neural Stochastic Dual Dynamic Programming",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=BrPdX1bDZkQ": {
+    "title": "DemoDICE: Offline Imitation Learning with Supplementary Imperfect Demonstrations",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=ZTsoE8G3GG": {
+    "title": "Learning to Extend Molecular Scaffolds with Structural Motifs",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=p98WJxUC3Ca": {
@@ -5729,6 +6279,56 @@
     "citation_count": 5,
     "authors": []
   },
+  "https://openreview.net/forum?id=BK-4qbGgIE3": {
+    "title": "No One Representation to Rule Them All: Overlapping Features of Training Methods",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=IfNu7Dr-3fQ": {
+    "title": "Generalized Kernel Thinning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=zf_Ll3HZWgy": {
+    "title": "How Much Can CLIP Benefit Vision-and-Language Tasks?",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=3tbDrs77LJ5": {
+    "title": "Large Learning Rate Tames Homogeneity: Convergence and Balancing Effect",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=l5aSHXi8jG5": {
+    "title": "Demystifying Limited Adversarial Transferability in Automatic Speech Recognition Systems",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=kSwqMH0zn1F": {
     "title": "PipeGCN: Efficient Full-Graph Training of Graph Convolutional Networks with Pipelined Feature Communication",
     "volume": "poster",
@@ -6027,6 +6627,56 @@
     "id": "ccd3631a4509aac2d71c320a6ac677f311d94b05",
     "semantic_title": "neural networks as kernel learners: the silent alignment effect",
     "citation_count": 50,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=B6EIcyp-Rb7": {
+    "title": "Learning Object-Oriented Dynamics for Planning from Text",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=pWBNOgdeURp": {
+    "title": "An Operator Theoretic View On Pruning Deep Neural Networks",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=_4GFbtOuWq-": {
+    "title": "Capacity of Group-invariant Linear Readouts from Equivariant Representations: How Many Objects can be Linearly Classified Under All Possible Views?",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=V0A5g83gdQ_": {
+    "title": "Tuformer: Data-driven Design of Transformers for Improved Generalization or Efficiency",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=MSwEFaztwkE": {
+    "title": "Learning Weakly-supervised Contrastive Representations",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=Vs5NK44aP9P": {
@@ -6329,6 +6979,56 @@
     "citation_count": 33,
     "authors": []
   },
+  "https://openreview.net/forum?id=zrW-LVXj2k1": {
+    "title": "On the benefits of maximum likelihood estimation for Regression and Forecasting",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=GhVS8_yPeEa": {
+    "title": "Effect of scale on catastrophic forgetting in neural networks",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=FndDxSz3LxQ": {
+    "title": "Learn Locally, Correct Globally: A Distributed Algorithm for Training Graph Neural Networks",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=7MV6uLzOChW": {
+    "title": "Conditional Image Generation by Conditioning Variational Auto-Encoders",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=hm2tNDdgaFK": {
+    "title": "Learning 3D Representations of Molecular Chirality with Invariance to Bond Rotations",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=tgcAoUVHRIB": {
     "title": "Neural Methods for Logical Reasoning over Knowledge Graphs",
     "volume": "poster",
@@ -6627,6 +7327,56 @@
     "id": "b8f816e23ff40d6afabccca2ee4770087ef0ef57",
     "semantic_title": "pre-training molecular graph representation with 3d geometry",
     "citation_count": 185,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=-HSOjDPfhBJ": {
+    "title": "PER-ETD: A Polynomially Efficient Emphatic Temporal Difference Learning Method",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=B72HXs80q4": {
+    "title": "Taming Sparsely Activated Transformer with Stochastic Experts",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=i3RI65sR7N": {
+    "title": "Hierarchical Variational Memory for Few-shot Learning Across Domains",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Z1Qlm11uOM": {
+    "title": "Learning Audio-Visual Speech Representation by Masked Multimodal Cluster Prediction",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=RdJVFCHjUMI": {
+    "title": "An Explanation of In-context Learning as Implicit Bayesian Inference",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=w_drCosT76": {
@@ -6929,6 +7679,56 @@
     "citation_count": 4,
     "authors": []
   },
+  "https://openreview.net/forum?id=uVXEKeqJbNa": {
+    "title": "Stiffness-aware neural network for learning Hamiltonian systems",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=PilZY3omXV2": {
+    "title": "CoST: Contrastive Learning of Disentangled Seasonal-Trend Representations for Time Series Forecasting",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=oAy7yPmdNz": {
+    "title": "CoordX: Accelerating Implicit Neural Representation with a Split MLP Architecture",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=9n9c8sf0xm": {
+    "title": "Plant 'n' Seek: Can You Find the Winning Ticket?",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=gjNcH0hj0LM": {
+    "title": "Coherence-based Label Propagation over Time Series for Accelerated Active Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=_X90SIKbHa": {
     "title": "A Class of Short-term Recurrence Anderson Mixing Methods and Their Applications",
     "volume": "poster",
@@ -7217,6 +8017,56 @@
     "id": "32bcee7bafa179cf468b3ec0bd66a2c91104573c",
     "semantic_title": "policy gradients incorporating the future",
     "citation_count": 9,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=rzvOQrnclO0": {
+    "title": "Gradient Information Matters in Policy Optimization by Back-propagating through Model",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=xm6YD62D1Ub": {
+    "title": "VICReg: Variance-Invariance-Covariance Regularization for Self-Supervised Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=gI7feJ9yXPz": {
+    "title": "High Probability Generalization Bounds with Fast Rates for Minimax Problems",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=Z8FzvVU6_Kj": {
+    "title": "SUMNAS: Supernet with Unbiased Meta-Features for Neural Architecture Search",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=_XNtisL32jv": {
+    "title": "Temporal Efficient Training of Spiking Neural Network via Gradient Re-weighting",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=u6TRGdzhfip": {
@@ -7519,6 +8369,56 @@
     "citation_count": 4,
     "authors": []
   },
+  "https://openreview.net/forum?id=xS8AMYiEav3": {
+    "title": "Sound and Complete Neural Network Repair with Minimality and Locality Guarantees",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=JJxiD-kg-oK": {
+    "title": "Blaschke Product Neural Networks (BPNN): A Physics-Infused Neural Network for Phase Retrieval of Meromorphic Functions",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=rFbR4Fv-D6-": {
+    "title": "Automated Self-Supervised Learning for Graphs",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=m8uJvVgwRci": {
+    "title": "Creating Training Sets via Weak Indirect Supervision",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=aTzMi4yV_RO": {
+    "title": "Do Not Escape From the Manifold: Discovering the Local Coordinates on the Latent Space of GANs",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
   "https://openreview.net/forum?id=HObMhrCeAAF": {
     "title": "GradSign: Model Performance Inference with Theoretical Insights",
     "volume": "poster",
@@ -7817,6 +8717,56 @@
     "id": "5e7cd7421d9f43c3171e792e8884feb5e02c7b5f",
     "semantic_title": "unsupervised disentanglement with tensor product representations on the torus",
     "citation_count": 3,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=_hszZbt46bT": {
+    "title": "Anomaly Detection for Tabular Data with Internal Contrastive Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=CpTuR2ECuW": {
+    "title": "LIGS: Learnable Intrinsic-Reward Generation Selection for Multi-Agent Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=EVVadRFRgL7": {
+    "title": "Bayesian Modeling and Uncertainty Quantification for Learning to Optimize: What, Why, and How",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=RLtqs6pzj1-": {
+    "title": "Deep Ensembling with No Overhead for either Training or Testing: The All-Round Blessings of Dynamic Sparsity",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": []
+  },
+  "https://openreview.net/forum?id=X0nrKAXu7g-": {
+    "title": "HyperDQN: A Randomized Exploration Method for Deep Reinforcement Learning",
+    "volume": "poster",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=3rULBvOJ8D2": {
