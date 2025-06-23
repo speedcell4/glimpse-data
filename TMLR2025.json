@@ -1,4 +1,529 @@
 {
+  "https://openreview.net/forum?id=cjK5ZvP4zZ": {
+    "title": "Directed Exploration in Reinforcement Learning from Linear Temporal Logic",
+    "volume": "main",
+    "abstract": "Linear temporal logic (LTL) is a powerful language for task specification in reinforcement learning, as it allows describing objectives beyond the expressivity of conventional discounted return formulations. Nonetheless, recent works have shown that LTL formulas can be translated into a variable rewarding and discounting scheme, whose optimization produces a policy maximizing a lower bound on the probability of formula satisfaction. However, the synthesized reward signal remains fundamentally sparse, making exploration challenging. We aim to overcome this limitation, which can prevent current algorithms from scaling beyond low-dimensional, short-horizon problems. We show how better exploration can be achieved by further leveraging the LTL specification and casting its corresponding Limit Deterministic Büchi Automaton (LDBA) as a Markov reward process, thus enabling a form of high-level value estimation. By taking a Bayesian perspective over LDBA dynamics and proposing a suitable prior distribution, we show that the values estimated through this procedure can be treated as a shaping potential and mapped to informative intrinsic rewards. Empirically, we demonstrate applications of our method from tabular settings to high-dimensional continuous systems, which have so far represented a significant challenge for LTL-based reinforcement learning algorithms",
+    "checked": true,
+    "id": "46b6a615baf77306611f77ecf6dfe35d611eab59",
+    "semantic_title": "directed exploration in reinforcement learning from linear temporal logic",
+    "citation_count": 1,
+    "authors": [
+      "Marco Bagatella",
+      "Andreas Krause",
+      "Georg Martius"
+    ]
+  },
+  "https://openreview.net/forum?id=lbrO3bGpeO": {
+    "title": "EMMA: Efficient Visual Alignment in Multi-Modal LLMs",
+    "volume": "main",
+    "abstract": "Multi-modal Large Language Models (MLLMs) have recently exhibited impressive general- purpose capabilities by leveraging vision foundation models to encode the core concepts of images into representations. These are then combined with instructions and processed by the language model to generate high-quality responses. Despite significant progress in enhancing the language component, challenges persist in optimally fusing visual encodings within the language model for task-specific adaptability. Recent research has focused on improving this fusion through modality adaptation modules but at the cost of significantly increased model complexity and training data needs. In this paper, we propose EMMA (Efficient Multi-Modal Adaptation), a lightweight cross-modality module designed to efficiently fuse visual and textual encodings, generating instruction-aware visual representations for the language model. Our key contributions include: (1) an efficient early fusion mechanism that integrates vision and language representations with minimal added parameters (less than 0.2% increase in model size), (2) an in-depth interpretability analysis that sheds light on the internal mechanisms of the proposed method; (3) comprehensive experiments that demonstrate notable improvements on both specialized and general benchmarks for MLLMs. Empirical results show that EMMA boosts performance across multiple tasks by up to 9.3% while significantly improving robustness against hallucinations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sara Ghazanfari",
+      "Alexandre Araujo",
+      "Prashanth Krishnamurthy",
+      "Siddharth Garg",
+      "Farshad Khorrami"
+    ]
+  },
+  "https://openreview.net/forum?id=pT8sgtRVAf": {
+    "title": "Scaling Channel-Adaptive Self-Supervised Learning",
+    "volume": "main",
+    "abstract": "Recent advances in self-supervised pre-training of foundation models for natural images have made them a popular choice for various visual systems and applications. Self-supervised strategies are also promising in non-RGB scientific imaging domains such as in biology, medical and satellite imagery, but their broader application is hampered by heterogeneity in channel composition and semantics between relevant datasets: two datasets may contain different numbers of channels, and these may reveal distinct aspects of an object or scene. Recent works on channel adaptive strategies report substantial advantages for those that account for variable channel compositions without sacrificing the ability to jointly encode channels; yet, how these strategies behave at scale remains unclear. We here show that, surprisingly, trained across large-scale datasets, independent-encoding of channels outperforms joint-encoding methods by a substantial margin. We validate this result along an extensive set of experiments on various datasets from cell microscopy to geospatial imagery. Our DINO BoC approach sets a new state-of-the-art across challenging benchmarks, including generalization to out-of-distribution tasks and unseen channel combinations at test time. We will open source the code, along with model weights that constitute a new general purpose feature extractor for fluorescent microscopy",
+    "checked": false,
+    "id": "a09a197325be3fb2e865692b164e8827042201d1",
+    "semantic_title": "blockwise self-supervised learning at scale",
+    "citation_count": 16,
+    "authors": [
+      "Alice V. De Lorenci",
+      "Seung Eun Yi",
+      "Théo Moutakanni",
+      "Piotr Bojanowski",
+      "Camille Couprie",
+      "Juan C Caicedo",
+      "Wolfgang Maximilian Anton Pernice"
+    ]
+  },
+  "https://openreview.net/forum?id=fywo0eRzAu": {
+    "title": "Seeing Beyond Labels: Source-Free Domain Adaptation via Hypothesis Consolidation of Prediction Rationale",
+    "volume": "main",
+    "abstract": "Source-Free Unsupervised Domain Adaptation (SFUDA) is a challenging task where a model needs to be adapted to a new domain without access to target domain labels or source domain data. The primary difficulty in this task is that the model's predictions may be inaccurate, and using these inaccurate predictions for model adaptation can lead to misleading results. To address this issue, this paper proposes a novel approach that considers multiple prediction hypotheses for each sample and investigates the rationale behind each hypothesis. By consolidating these hypothesis rationales, we identify the most likely correct hypotheses, which we then use as a pseudo-labeled set to support a semi-supervised learning procedure for model adaptation. This approach distinguishes itself from conventional semi-supervised learning by relying solely on pseudo-labels rather than ground-truth annotations. To achieve the optimal performance, we propose a three-step adaptation process: model pre-adaptation, hypothesis consolidation, and semi-supervised learning. Extensive experimental results demonstrate that our approach achieves state-of-the-art performance in the SFUDA task and can be easily integrated into existing approaches to improve their performance. The codes are available at \\url{https://github.com/GANPerf/HCPR}",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yangyang Shu",
+      "Yuhang Liu",
+      "Xiaofeng Cao",
+      "Qi Chen",
+      "Bowen Zhang",
+      "Ziqin Zhou",
+      "Anton van den Hengel",
+      "Lingqiao Liu"
+    ]
+  },
+  "https://openreview.net/forum?id=a0mLrqkWyx": {
+    "title": "Gradient Inversion Attack on Graph Neural Networks",
+    "volume": "main",
+    "abstract": "Graph federated learning is of essential importance for training over large graph datasets while protecting data privacy, where each client stores a subset of local graph data, while the server collects the local gradients and broadcasts only the aggregated gradients. Recent studies reveal that a malicious attacker can steal private image data from the gradient exchange of neural networks during federated learning. However, the vulnerability of graph data and graph neural networks under such attacks, i.e., reconstructing both node features and graph structure from gradients, remains largely underexplored. To answer this question, this paper studies the problem of whether private data can be reconstructed from leaked gradients in both node classification and graph classification tasks and proposes a novel attack named Graph Leakage from Gradients (GLG). Two widely used GNN frameworks are analyzed, namely GCN and GraphSAGE. The effects of different model settings on reconstruction are extensively discussed. Theoretical analysis and empirical validation demonstrate that, by leveraging the unique properties of graph data and GNNs, GLG achieves more accurate reconstruction of both nodal features and graph structure from gradients",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Divya Anand Sinha",
+      "Yezi Liu",
+      "Ruijie Du",
+      "Athina Markopoulou",
+      "Yanning Shen"
+    ]
+  },
+  "https://openreview.net/forum?id=Q9AkJpfJks": {
+    "title": "Theoretical Learning Performance of Graph Networks: the Impact of Jumping Connections and Layer-wise Sparsification",
+    "volume": "main",
+    "abstract": "Jumping connections enable Graph Convolutional Networks (GCNs) to overcome over-smoothing, while graph sparsification reduces computational demands by selecting a submatrix of the graph adjacency matrix during neighborhood aggregation. Learning GCNs with graph sparsification has shown empirical success across various applications, but a theoretical understanding of the generalization guarantees remains limited, with existing analyses ignoring either graph sparsification or jumping connections. This paper presents the first learning dynamics and generalization analysis of GCNs with jumping connections using graph sparsification. Our analysis demonstrates that the generalization accuracy of the learned model closely approximates the highest achievable accuracy within a broad class of target functions dependent on the proposed sparse effective adjacency matrix $A^*$. Thus, graph sparsification maintains generalization performance when $A^*$ accurately models data correlations. We reveal that jumping connections lead to different sparsification requirements across layers. In a two-hidden-layer GCN, the generalization is more affected by the sparsified matrix deviations from $A^*$ of the first layer than the second layer. To the best of our knowledge, this marks the first theoretical characterization of jumping connections' role in sparsification requirements. We validate our theoretical results on benchmark datasets in deep GCNs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jiawei Sun",
+      "Hongkang Li",
+      "Meng Wang"
+    ]
+  },
+  "https://openreview.net/forum?id=15keyzQj9h": {
+    "title": "On the Generalizability of \"Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals",
+    "volume": "main",
+    "abstract": "We present a reproduction study of \"Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals\" (Ortu et al., 2024), which investigates competition of mechanisms in language models between factual recall and counterfactual in-context repetition. Our study successfully reproduces their primary findings regarding the localization of factual and counterfactual information, the dominance of attention blocks in mechanism competition, and the specialization of attention heads in handling competing information. We reproduce their results on both GPT-2 (Radford et al., 2019) and Pythia 6.9B (Biderman et al., 2023). We extend their work in three significant directions. First, we explore the generalizability of these findings to even larger models by replicating the experiments on Llama 3.1 8B (Grattafiori et al., 2024), discovering greatly reduced attention head specialization. Second, we investigate the impact of prompt structure by introducing variations where we avoid repeating the counterfactual statement verbatim or we change the premise word, observing a marked decrease in the logit for the counterfactual token. Finally, we test the validity of the authors' claims for prompts of specific domains, discovering that certain categories of prompts skew the results by providing the factual prediction token as part of the subject of the sentence. Overall, we find that the attention head ablation proposed in Ortu et al. (2024) is ineffective for domains that are underrepresented in their dataset, and that the effectiveness varies based on model architecture, prompt structure, domain and task",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Asen Dotsinski",
+      "Udit Thakur",
+      "Marko Ivanov",
+      "Mohammad Hafeez Khan",
+      "Maria Heuss"
+    ]
+  },
+  "https://openreview.net/forum?id=5L90cl0xtf": {
+    "title": "Revisiting CroPA: A Reproducibility Study and Enhancements for Cross-Prompt Adversarial Transferability in Vision-Language Models",
+    "volume": "main",
+    "abstract": "Large Vision-Language Models (VLMs) have revolutionized computer vision, enabling tasks such as image classification, captioning, and visual question answering. However, they re- main highly vulnerable to adversarial attacks, particularly in scenarios where both visual and textual modalities can be manipulated. In this study, we conduct a comprehensive reproducibility study of \"An Image is Worth 1000 Lies: Adversarial Transferability Across Prompts on Vision-Language Models\" validating the Cross-Prompt Attack (CroPA) and confirming its superior cross-prompt transferability compared to existing baselines. Be- yond replication we propose several key improvements: (1) A novel initialization strategy that significantly improves Attack Success Rate (ASR). (2) Investigate cross-image trans- ferability by learning universal perturbations. (3) A novel loss function targeting vision encoder attention mechanisms to improve generalization. Our evaluation across prominent VLMs—including Flamingo, BLIP-2, and InstructBLIP as well as extended experiments on LLaVA validates the original results and demonstrates that our improvements consistently boost adversarial effectiveness. Our work reinforces the importance of studying adversarial vulnerabilities in VLMs and provides a more robust framework for generating transferable adversarial examples, with significant implications for understanding the security of VLMs in real-world applications",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Atharv Mittal",
+      "Agam Pandey",
+      "Amritanshu Tiwari",
+      "Sukrit Jindal",
+      "Swadesh Swain"
+    ]
+  },
+  "https://openreview.net/forum?id=0CY5APFnFI": {
+    "title": "Universal and Efficient Detection of Adversarial Data through Nonuniform Impact on Network Layers",
+    "volume": "main",
+    "abstract": "Deep Neural Networks (DNNs) are notoriously vulnerable to adversarial input designs with limited noise budgets. While numerous successful attacks with subtle modifications to original input have been proposed, defense techniques against these attacks are relatively understudied. Existing defense approaches either focus on improving DNN robustness by negating the effects of perturbations or use a secondary model to detect adversarial data. Although equally important, the attack detection approach, which is studied in this work, provides a more practical defense compared to the robustness approach. We show that the existing detection methods are either ineffective against the state-of-the-art attack techniques or computationally inefficient for real-time processing. We propose a novel universal and efficient method to detect adversarial examples by analyzing the varying degrees of impact of attacks on different DNN layers. Our method trains a lightweight regression model that predicts deeper-layer features from early-layer features, and uses the prediction error to detect adversarial samples. Through theoretical arguments and extensive experiments, we demonstrate that our detection method is highly effective, computationally efficient for real-time processing, compatible with any DNN architecture, and applicable across different domains, such as image, video, and audio",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Furkan Mumcu",
+      "Yasin Yilmaz"
+    ]
+  },
+  "https://openreview.net/forum?id=ABT1XQLbOx": {
+    "title": "Regularized Gradient Clipping Provably Trains Wide and Deep Neural Networks",
+    "volume": "main",
+    "abstract": "We present and analyze a novel regularized form of the gradient clipping algorithm, proving that it converges to global minima of the loss surface of deep neural networks under the squared loss, provided that the layers are of sufficient width. The algorithm presented here, dubbed $\\delta-$GClip, introduces a modification to gradient clipping that leads to a first-of-its-kind example of a step size scheduling for gradient descent that provably minimizes training losses of deep neural nets. We also present empirical evidence that our theoretically founded $\\delta-$GClip algorithm is competitive with the state-of-the-art deep learning heuristics on various neural architectures including modern transformer based architectures. The modification we do to standard gradient clipping is designed to leverage the PL* condition, a variant of the Polyak-Łojasiewicz inequality which was recently proven to be true for sufficiently wide neural networks at any depth within a neighbourhood of the initialization",
+    "checked": true,
+    "id": "757b1c8aa2b9b5fc586e313db53f519c8e8d6671",
+    "semantic_title": "regularized gradient clipping provably trains wide and deep neural networks",
+    "citation_count": 1,
+    "authors": [
+      "Matteo Tucat",
+      "Anirbit Mukherjee",
+      "Procheta Sen",
+      "Mingfei Sun",
+      "Omar Rivasplata"
+    ]
+  },
+  "https://openreview.net/forum?id=t5WzHOniAF": {
+    "title": "Enhancing Molecular Conformer Generation via Fragment- Augmented Diffusion Pretraining",
+    "volume": "main",
+    "abstract": "Recent advances in diffusion-based methods have shown promising results for molecular conformer generation, yet their performance remains constrained by training data scarcity---particularly for structurally complex molecules. In this work, we present Fragment-Augmented Diffusion (FragDiff), a data-centric augmentation strategy that incorporates chemical fragmentation techniques into the pre-training phase of modern diffusion-based generative models. Our key innovation lies in decomposing molecules into chemically meaningful fragments that serve as building blocks for systematic data augmentation, enabling the diffusion model to learn enhanced local geometry while maintaining global molecular topology. Unlike existing approaches that focus on complex architectural modifications, FragDiff adopts a data-centric paradigm orthogonal to model design. Comprehensive benchmarks show FragDiff's superior performance, especially in data-scarce scenarios. Notably, it achieves 12.2--13.4% performance improvement on molecules 3$\\times$ beyond training scale through pretraining on fragments. Overall, we establish a new paradigm integrating chemical fragmentations with diffusion models, advancing computational chemistry workflows. The code is available at https://github.com/ShawnKS/fragdiff",
+    "checked": false,
+    "id": "8b967982e5ac942bc0ec4868b227cd86e01f4e04",
+    "semantic_title": "hybridlinker: topology-guided posterior sampling for enhanced diversity and validity in 3d molecular linker generation",
+    "citation_count": 2,
+    "authors": [
+      "Xiaozhuang Song",
+      "YUZHAO TU",
+      "Tianshu Yu"
+    ]
+  },
+  "https://openreview.net/forum?id=II9agMKTb1": {
+    "title": "Beyond Parameter Count: Implicit Bias in Soft Mixture of Experts",
+    "volume": "main",
+    "abstract": "The traditional viewpoint on Sparse Mixture of Experts (MoE) models is that instead of training a single _large_ expert, which is computationally expensive, we can train many _small_ experts. The hope is that if the total parameter count of the small experts equals that of the singular large expert, then we retain the representation power of the large expert while gaining computational tractability and promoting expert specialization. The recently introduced Soft MoE replaces the Sparse MoE's discrete routing mechanism with a differentiable gating function that smoothly mixes tokens. While this smooth gating function successfully mitigates the various training instabilities associated with Sparse MoE, it is unclear whether it induces implicit biases that affect Soft MoE's representation power or potential for expert specialization. We prove that Soft MoE with a single arbitrarily powerful expert cannot represent simple convex functions. This justifies that Soft MoE's success cannot be explained by the traditional viewpoint of many small experts collectively mimicking the representation power of a single large expert, and that multiple experts are actually _necessary_ to achieve good representation power (even for a fixed total parameter count). Continuing along this line of investigation, we introduce a notion of expert specialization for Soft MoE, and while varying the number of experts yet fixing the total parameter count, we consider the following (computationally intractable) task. Given any input, how can we discover the expert subset that is specialized to predict this input's label? We empirically show that when there are many small experts, the architecture is implicitly biased in a fashion that allows us to efficiently approximate the specialized expert subset. Our method can be easily implemented to potentially reduce computation during inference. For example, using our method on ImageNet, one can perform inference using only $1/8$ of the experts and still retain $99$% of the test accuracy of using all experts",
+    "checked": true,
+    "id": "f5d66a1b1492579827147687a2a2e72537a90e05",
+    "semantic_title": "beyond parameter count: implicit bias in soft mixture of experts",
+    "citation_count": 1,
+    "authors": [
+      "Youngseog Chung",
+      "Dhruv Malik",
+      "Jeff Schneider",
+      "Yuanzhi Li",
+      "Aarti Singh"
+    ]
+  },
+  "https://openreview.net/forum?id=W22g6Ksmbi": {
+    "title": "AQA-Bench: An Interactive Benchmark for Evaluating LLMs' Sequential Reasoning Ability in Algorithmic Environments",
+    "volume": "main",
+    "abstract": "This paper introduces AQA-Bench, a novel benchmark to assess the sequential reasoning capabilities of large language models (LLMs) in algorithmic contexts, such as depth-first search (DFS). The key feature of our evaluation benchmark lies in its interactive evaluation protocol — for example, in DFS, the availability of each node's connected edge is contingent upon the model's traversal to that node, thereby necessitating the LLM's ability to effectively remember visited nodes and strategize subsequent moves considering the possible environmental feedback in the future steps. We comprehensively build AQA-Bench with three different algorithms, namely binary search, depth-first search, and breadth-first search, and to evaluate the sequential reasoning ability of 14 different LLMs. Our investigations reveal several interesting findings: (1) Closed-source models like GPT-4 and Gemini generally show much stronger sequential reasoning ability, significantly outperforming open-source LLMs. (2) Naively providing in-context examples may inadvertently hurt few-shot performance in an interactive environment due to over-fitting to examples. (3) Instead of using optimal steps from another test case as the in-context example, a very limited number of predecessor steps in the current test case following the optimal policy can substantially boost small models' performance. (4) The performance gap between weak models and strong models is greatly due to the incapability of weak models to start well. (5) The scaling correlation between performance and model size is not always significant, sometimes even showcasing an inverse trend. We hope our study can catalyze future work on advancing the understanding and enhancement of LLMs' capabilities in sequential reasoning",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Siwei Yang",
+      "Bingchen Zhao",
+      "Cihang Xie"
+    ]
+  },
+  "https://openreview.net/forum?id=R20kKdWmVZ": {
+    "title": "ModernTCN Revisited: A Critical Look at the Experimental Setup in General Time Series Analysis",
+    "volume": "main",
+    "abstract": "While numerous time series models claim state-of-the-art performance, their evaluation often relies on flawed experimental setups, leading to questionable conclusions. This study provides a critical re-evaluation of this landscape, using ModernTCN as a case study. We conduct a rigorous and extended benchmark, correcting methodological issues related to data loading, validation, and evaluation methods, and show that performance claims are sensitive to these details. Additionally, we find that ModernTCN overlooks a line of research in global convolutional models, and our comparison reveals that despite claims of an enlarged effective receptive field (ERF), it falls short of these methods. More than a critique, we introduce an architectural innovation: by embedding irregularly sampled data with a continuous kernel convolution and processing it with the ModernTCN backbone, we achieve new state-of-the-art performance on the challenging PhysioNet 2019 dataset. This work not only provides a robust reassessment of ModernTCN but also serves as an audit of the commonly used general time series analysis experimental setup, which includes tasks such as forecasting, imputation, classification, and anomaly detection",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Önder Akacik",
+      "Mark Hoogendoorn"
+    ]
+  },
+  "https://openreview.net/forum?id=VqLe8tPbZn": {
+    "title": "Synthesizing Minority Samples for Long-tailed Classification via Distribution Matching",
+    "volume": "main",
+    "abstract": "In many real-world applications, deep neural networks (DNNs) often perform poorly on datasets with long-tailed distributions. To address this issue, a promising approach is to propose an optimization objective to transform real majority samples into synthetic minority samples. However, this objective is designed only from the classification perspective. To this end, we propose a novel framework that synthesizes minority samples from the majority by considering both classification and distribution matching. Specifically, our method adjusts the distribution of synthetic minority samples to closely align with that of the true minority class, while enforcing the synthetic samples to learn more generalizable and discriminative features of the minority class. Experimental results on several standard benchmark datasets demonstrate the effectiveness of our method in both long-tailed classification and synthesizing high-quality synthetic minority samples",
+    "checked": true,
+    "id": "0f43f514441df2097971150738f525f1dfa93652",
+    "semantic_title": "synthesizing minority samples for long-tailed classification via distribution matching",
+    "citation_count": 0,
+    "authors": [
+      "Zhuo Li",
+      "He Zhao",
+      "Jinke Ren",
+      "Anningzhe Gao",
+      "Dandan Guo",
+      "Xiang Wan",
+      "Hongyuan Zha"
+    ]
+  },
+  "https://openreview.net/forum?id=1PRBHKgQVM": {
+    "title": "Cross-lingual Transfer in Programming Languages: An Extensive Empirical Study",
+    "volume": "main",
+    "abstract": "Large language models (LLMs) have achieved state-of-the-art performance in various software engineering tasks, including error detection, clone detection, and code translation, primarily leveraging high-resource programming languages like Python and Java. However, many critical languages, such as COBOL, as well as emerging languages, such as Rust and Swift, remain low-resource due to limited openly available code. This scarcity hampers the training and effectiveness of LLMs for these languages, increasing software maintenance costs and stifling innovation. Addressing this gap, we investigate the potential of transfer learning to enhance LLM performance on low-resource programming languages by leveraging data from high-resource counterparts. Our extensive empirical study evaluates transferability across 10 to 41 programming languages and five key tasks: code generation, clone detection, code repair, solution domain classification, and error detection. Additionally, we develop a performance prediction model to guess the best source languages for a given target and task, and analyze the features that influence transfer performance. We further replicate a representative subset of experiments with a larger model to test the generalizability of our conclusions to contemporary large‑scale LLMs. Our findings demonstrate that cross-lingual transfer significantly outperforms zero-shot learning, with effectiveness varying based on both source and target languages. Languages such as Java and Go emerge as the best targets, while Kotlin and JavaScript are excellent sources. Furthermore, our model reliably predicts successful transfer sources by considering linguistic and dataset-specific features, offering practical guidance for data acquisition and model training. This work contributes to the development of LLM-driven tools for low-resource programming languages and provides insights into the characteristics that facilitate transfer across language pairs",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Razan Baltaji",
+      "Saurabh Pujar",
+      "Martin Hirzel",
+      "Louis Mandel",
+      "Luca Buratti",
+      "Lav R. Varshney"
+    ]
+  },
+  "https://openreview.net/forum?id=P02hoA7vln": {
+    "title": "Neural varifolds: an aggregate representation for quantifying the geometry of point clouds",
+    "volume": "main",
+    "abstract": "Point clouds are popular 3D representations for real-life objects (such as in LiDAR and Kinect) due to their detailed and compact representation of surface-based geometry. Recent approaches characterise the geometry of point clouds by bringing deep learning based techniques together with geometric fidelity metrics such as optimal transportation costs (e.g., Chamfer and Wasserstein metrics). In this paper, we propose a new surface geometry characterisation within this realm, namely a neural varifold representation of point clouds. Here, the surface is represented as a measure/distribution over both point positions and tangent spaces of point clouds. The varifold representation quantifies not only the surface geometry of point clouds through the manifold-based representation, but also subtle geometric consistencies on the surface due to the combined product space. This study proposes neural varifold algorithms to compute the varifold norm between two point clouds using neural networks on point clouds and their neural tangent kernel representations. The proposed neural varifold is evaluated on three different sought-after tasks -- shape matching, few-shot shape classification, and shape reconstruction. Detailed evaluation and comparison to the state-of-the-art methods demonstrate that the proposed versatile neural varifold is superior in shape matching and few-shot shape classification, and is competitive for shape reconstruction",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Juheon Lee",
+      "Xiaohao Cai",
+      "Carola-Bibiane Schönlieb",
+      "Simon Masnou"
+    ]
+  },
+  "https://openreview.net/forum?id=FO3IA4lUEY": {
+    "title": "Generalized Out-of-Distribution Detection and Beyond in Vision Language Model Era: A Survey",
+    "volume": "main",
+    "abstract": "Detecting out-of-distribution (OOD) samples is crucial for ensuring the safety of machine learning systems and has shaped the field of OOD detection. Meanwhile, several other problems are closely related to OOD detection, including anomaly detection (AD), novelty detection (ND), open set recognition (OSR), and outlier detection (OD). To unify these problems, a generalized OOD detection framework was proposed, taxonomically categorizing these five problems. However, Vision Language Models (VLMs) such as CLIP have significantly changed the paradigm and blurred the boundaries between these fields, again confusing researchers. In this survey, we first present a generalized OOD detection v2, encapsulating the evolution of these fields in the VLM era. Our framework reveals that, with some field inactivity and integration, the demanding challenges have become OOD detection and AD. Then, we highlight the significant shift in the definition, problem settings, and benchmarks; we thus feature a comprehensive review of the methodology for OOD detection and related tasks to clarify their relationship to OOD detection. Finally, we explore the advancements in the emerging Large Vision Language Model (LVLM) era, such as GPT-4V. We conclude with open challenges and future directions. The resource is available at https://github.com/AtsuMiyai/Awesome-OOD-VLM",
+    "checked": true,
+    "id": "2e6813cad2e41c683277aa2d400dc2a2761309a2",
+    "semantic_title": "generalized out-of-distribution detection and beyond in vision language model era: a survey",
+    "citation_count": 13,
+    "authors": [
+      "Atsuyuki Miyai",
+      "Jingkang Yang",
+      "Jingyang Zhang",
+      "Yifei Ming",
+      "Yueqian Lin",
+      "Qing Yu",
+      "Go Irie",
+      "Shafiq Joty",
+      "Yixuan Li",
+      "Hai Helen Li",
+      "Ziwei Liu",
+      "Toshihiko Yamasaki",
+      "Kiyoharu Aizawa"
+    ]
+  },
+  "https://openreview.net/forum?id=XBL7xi5rt0": {
+    "title": "GaussianFlow: Splatting Gaussian Dynamics for 4D Content Creation",
+    "volume": "main",
+    "abstract": "Creating 4D fields of Gaussian Splatting from images or videos is a challenging task due to its under-constrained nature. While the optimization can draw photometric reference from the input videos or be regulated by generative models, directly supervising Gaussian motions remains underexplored. In this paper, we introduce a novel concept, Gaussian flow, which connects the dynamics of 3D Gaussians and pixel velocities between consecutive frames. The Gaussian flow can be obtained efficiently by splatting Gaussian dynamics into the image space. This differentiable process enables direct dynamic supervision from optical flow. Our method significantly benefits 4D dynamic content generation and 4D novel view synthesis with Gaussian Splatting, especially for contents with rich motions that are hard to handle by existing methods. The common color drifting issue that occurs in 4D generation is also resolved with improved Guassian dynamics. Superior visual quality in extensive experiments demonstrates the effectiveness of our method. As shown in our evaluation, GaussianFlow can drastically improve both quantitative and qualitative results for 4D generation and 4D novel view synthesis",
+    "checked": true,
+    "id": "7c8336921d620d3ff5a21de33f9d2af59265235b",
+    "semantic_title": "gaussianflow: splatting gaussian dynamics for 4d content creation",
+    "citation_count": 55,
+    "authors": [
+      "Quankai Gao",
+      "Qiangeng Xu",
+      "Zhe Cao",
+      "Ben Mildenhall",
+      "Wenchao Ma",
+      "Le Chen",
+      "Danhang Tang",
+      "Ulrich Neumann"
+    ]
+  },
+  "https://openreview.net/forum?id=l5fXUKi8GO": {
+    "title": "Reassessing Fairness: A Reproducibility Study of NIFA's Impact on GNN Models",
+    "volume": "main",
+    "abstract": "Graph Neural Networks (GNNs) have shown strong performance on graph-structured data but raise fairness concerns by amplifying existing biases. The Node Injection-based Fairness Attack (NIFA) (Luo et al., 2024) is a recently proposed gray-box attack that degrades group fairness while preserving predictive utility. In this study, we reproduce and evaluate NIFA across multiple datasets and GNN architectures. Our findings confirm that NIFA consistently degrades fairness—measured via Statistical Parity and Equal Opportunity—while maintaining utility on classical GNNs. However, claims of NIFA's superiority over existing fairness and utility attacks are only partially supported due to limitations in baseline reproducibility. We further extend NIFA to accommodate multi-class sensitive attributes and evaluate its behavior under varying levels of graph homophily. While NIFA remains effective in multi-class contexts, its impact is more sensitive in mixed and highly homophilic graphs. Although this is not a comprehensive validation of all NIFA claims, our work provides targeted insights into its reproducibility and generalizability across fairness-sensitive scenarios. The codebase is publicly available at: https://github.com/sjoerdgunneweg/Reassessing-NIFA",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ruben Figge",
+      "Sjoerd Gunneweg",
+      "Aaron Kuin",
+      "Mees Lindeman"
+    ]
+  },
+  "https://openreview.net/forum?id=uMir8UIHST": {
+    "title": "A Survey on Verifiable Cross-Silo Federated Learning",
+    "volume": "main",
+    "abstract": "Federated Learning (FL) is a widespread approach that allows training machine learning (ML) models with data distributed across multiple storage units. In cross-silo FL, which often appears in domains like healthcare or finance, the number of participants is moderate, and each party typically represents a well-known organization. For instance, in medicine data owners are often hospitals or data hubs which are well-established entities. However, malicious parties may still attempt to disturb the training procedure in order to obtain certain benefits, for example, a biased result or a reduction in computational load. While one can easily detect a malicious agent when data used for training is public, the problem becomes much more acute when it is necessary to maintain the privacy of the training dataset. To address this issue, there is recently growing interest in developing verifiable protocols, where one can check that parties do not deviate from the training procedure and perform computations correctly. In this paper, we present a survey on verifiable cross-silo FL. We analyze various protocols, fit them in a taxonomy, and compare their efficiency and threat models. We also analyze Zero-Knowledge Proof (ZKP) schemes and discuss how their overall cost in a FL context can be minimized. Lastly, we identify research gaps and discuss potential directions for future scientific work",
+    "checked": false,
+    "id": "a59bff592a8854074a552ef6962d5bc58c21951a",
+    "semantic_title": "decentralized machine learning training: a survey on synchronization, consolidation, and topologies",
+    "citation_count": 16,
+    "authors": [
+      "Aleksei Korneev",
+      "Jan Ramon"
+    ]
+  },
+  "https://openreview.net/forum?id=BVH81SAAh2": {
+    "title": "[Re] Benchmarking LLM Capabilities in Negotiation through Scoreable Games",
+    "volume": "main",
+    "abstract": "Large Language Models (LLMs) demonstrate significant potential in multi-agent negotiation tasks, yet evaluation in this domain remains challenging due to a lack of robust and generalizable benchmarks. Abdelnabi et al. (2024) introduce a negotiation benchmark based on Scoreable Games, with the aim of developing a highly complex and realistic evaluation framework for LLMs. Our work investigates the reproducibility of claims in their benchmark, and provides a deeper understanding of its usability and generalizability. We replicate the original experiments on additional models, and introduce additional metrics to verify negotiation quality and evenness of evaluation. Our findings reveal that while the benchmark is indeed complex, model comparison is ambiguous, raising questions about its objectivity. Furthermore, we identify limitations in the experimental setup, particularly in information leakage detection and thoroughness of the ablation study. By examining and analyzing the behavior of a wider range of models on an extended version of the benchmark, we reveal insights that provide additional context to potential users. Our results highlight the importance of context in model-comparative evaluations",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jorge Carrasco Pollo",
+      "Ioannis Kapetangeorgis",
+      "Joshua Rosenthal",
+      "John Hua Yao"
+    ]
+  },
+  "https://openreview.net/forum?id=qgHq1NFUJk": {
+    "title": "MagicPose4D: Crafting Articulated Models with Appearance and Motion Control",
+    "volume": "main",
+    "abstract": "With the success of 2D and 3D visual generative models, there is growing interest in generating 4D content. Existing methods primarily rely on text prompts to produce 4D content, but they often fall short of accurately defining complex or rare motions. To address this limitation, we propose MagicPose4D, a novel framework for refined control over both appearance and motion in 4D generation. Unlike current 4D generation methods, MagicPose4D accepts monocular videos or mesh sequences as motion prompts, enabling precise and customizable motion control. MagicPose4D comprises two key modules: (i) Dual-Phase 4D Reconstruction Module which operates in two phases. The first phase focuses on capturing the model's shape using accurate 2D supervision and less accurate but geometrically informative 3D pseudo-supervision without imposing skeleton constraints. The second phase extracts the 3D motion (skeleton poses) using more accurate pseudo-3D supervision, obtained in the first phase, and introduces kinematic chain-based skeleton constraints to ensure physical plausibility. Additionally, we propose a Global-local Chamfer loss that aligns the overall distribution of predicted mesh vertices with the supervision while maintaining part-level alignment without extra annotations. (ii) Cross-category Motion Transfer Module leverages the extracted motion from the 4D reconstruction module and uses a kinematic-chain-based skeleton to achieve cross-category motion transfer. It ensures smooth transitions between frames through dynamic rigidity, facilitating robust generalization without additional training. Through extensive experiments, we demonstrate that MagicPose4D significantly improves the accuracy and consistency of 4D content generation, outperforming existing methods in various benchmarks",
+    "checked": true,
+    "id": "9009075202066e9918078c9977b08f2fd5f1b6fb",
+    "semantic_title": "magicpose4d: crafting articulated models with appearance and motion control",
+    "citation_count": 8,
+    "authors": [
+      "Hao Zhang",
+      "Di Chang",
+      "Fang Li",
+      "Mohammad Soleymani",
+      "Narendra Ahuja"
+    ]
+  },
+  "https://openreview.net/forum?id=vltzxxhzLU": {
+    "title": "A reproducibility study of \"User-item fairness tradeoffs in recommendations",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sander Honig",
+      "Elyanne Oey",
+      "Lisanne Wallaard",
+      "Sharanda Suttorp",
+      "Clara Rus"
+    ]
+  },
+  "https://openreview.net/forum?id=jIAPLDdGVx": {
+    "title": "Provable Robustness of (Graph) Neural Networks Against Data Poisoning and Backdoor Attacks",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lukas Gosch",
+      "Mahalakshmi Sabanayagam",
+      "Debarghya Ghoshdastidar",
+      "Stephan Günnemann"
+    ]
+  },
+  "https://openreview.net/forum?id=HiUZtgAPoH": {
+    "title": "SynCode: LLM Generation with Grammar Augmentation",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shubham Ugare",
+      "Tarun Suresh",
+      "Hangoo Kang",
+      "Sasa Misailovic",
+      "Gagandeep Singh"
+    ]
+  },
+  "https://openreview.net/forum?id=8hAxEFRVQT": {
+    "title": "Solving Multi-agent Path Finding as an LLM Benchmark: How, How Good and Why",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Weizhe Chen",
+      "Sven Koenig",
+      "Bistra Dilkina"
+    ]
+  },
+  "https://openreview.net/forum?id=jVABSsD4Vf": {
+    "title": "Towards Undistillable Models by Minimizing Conditional Mutual Information",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Linfeng Ye",
+      "Shayan Mohajer Hamidi",
+      "EN-HUI YANG"
+    ]
+  },
+  "https://openreview.net/forum?id=Eu7XMLJqsC": {
+    "title": "Distributionally Robust Coreset Selection under Covariate Shift",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Tomonari Tanaka",
+      "Hiroyuki Hanada",
+      "Hanting Yang",
+      "Aoyama Tatsuya",
+      "Yu Inatsu",
+      "Akahane Satoshi",
+      "Yoshito Okura",
+      "Noriaki Hashimoto",
+      "Taro Murayama",
+      "Hanju Lee",
+      "Shinya Kojima",
+      "Ichiro Takeuchi"
+    ]
+  },
+  "https://openreview.net/forum?id=o6mnkDzVuc": {
+    "title": "Thoughts and Lessons on Using Visual Foundation Models for Manipulation",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ryan Chen",
+      "Ziteng Pang",
+      "Bradly C. Stadie"
+    ]
+  },
+  "https://openreview.net/forum?id=bzk1sV1svm": {
+    "title": "SR-Reward: Taking The Path More Traveled",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Seyed Mahdi B. Azad",
+      "Zahra Padar",
+      "Gabriel Kalweit",
+      "Joschka Boedecker"
+    ]
+  },
+  "https://openreview.net/forum?id=Zy4uFzMviZ": {
+    "title": "AI Agents That Matter",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Sayash Kapoor",
+      "Benedikt Stroebl",
+      "Zachary S Siegel",
+      "Nitya Nadgir",
+      "Arvind Narayanan"
+    ]
+  },
+  "https://openreview.net/forum?id=J65NBLWrmh": {
+    "title": "LASE: Learned Adjacency Spectral Embeddings",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "María Sofía Pérez Casulo",
+      "Marcelo Fiori",
+      "Federico Larroca",
+      "Gonzalo Mateos"
+    ]
+  },
   "https://openreview.net/forum?id=OMOFmb6ve7": {
     "title": "Optimization Guarantees for Square-Root Natural-Gradient Variational Inference",
     "volume": "main",
@@ -9012,6 +9537,36 @@
       "Yong Jae Lee"
     ]
   },
+  "https://openreview.net/forum?id=a0rytDAGUD": {
+    "title": "Reproducibility Study of \"Improving Interpretation Faithfulness For Vision Transformers",
+    "volume": "reprod",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Meher Changlani",
+      "Benjamin Hucko",
+      "Ioannis Kechagias",
+      "Aswin Krishna Mahadevan"
+    ]
+  },
+  "https://openreview.net/forum?id=cPtqOkxQqH": {
+    "title": "Revisiting XRec: How Collaborative Signals Influence LLM-Based Recommendation Explanations",
+    "volume": "reprod",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Cătălin-Emanuel Brița",
+      "Hieu Nguyen",
+      "Lubov Chalakova",
+      "Nikola Petrov"
+    ]
+  },
   "https://openreview.net/forum?id=xeGWsmqFS8": {
     "title": "Pitfalls in Evaluating Inference-time Methods for Improving LLM Reliability",
     "volume": "survey",
@@ -9079,6 +9634,7 @@
     "authors": [
       "Lola Le Breton",
       "Quentin Fournier",
+      "John Xavier Morris",
       "Mariam El Mezouar",
       "Sarath Chandar"
     ]
@@ -9266,6 +9822,24 @@
     "authors": [
       "Hiroyuki Sakai",
       "Hideaki Iiduka"
+    ]
+  },
+  "https://openreview.net/forum?id=fzmw8Joug4": {
+    "title": "Monocular Dynamic Gaussian Splatting: Fast, Brittle, and Scene Complexity Rules",
+    "volume": "survey",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yiqing Liang",
+      "Mikhail Okunev",
+      "Mikaela Angelina Uy",
+      "Runfeng Li",
+      "Leonidas Guibas",
+      "James Tompkin",
+      "Adam W Harley"
     ]
   },
   "https://openreview.net/forum?id=tf6A9EYMo6": {
