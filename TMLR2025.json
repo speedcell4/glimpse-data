@@ -5354,9 +5354,9 @@
     "title": "Quantile Activation: Correcting a failure mode of traditional ML models",
     "volume": "main",
     "abstract": "Standard ML models fail to infer the context distribution and suitably adapt. For instance, the learning fails when the underlying distribution is actually a mixture of distributions with contradictory labels. Learning also fails if there is a shift between train and test distributions. Standard neural network architectures like MLPs or CNNs are not equipped to handle this. In this article, we propose a simple activation function, quantile activation (QAct), that addresses this problem without significantly increasing computational costs. The core idea is to \"adapt\" the outputs of each neuron to its context distribution. The proposed quantile activation (QAct) outputs the relative quantile position of neuron activations within their context distribution, diverging from the direct numerical outputs common in traditional networks. A specific case of the above failure mode is when there is an inherent distribution shift, i.e the test distribution differs slightly from the train distribution. We validate the proposed activation function under covariate shifts, using datasets designed to test robustness against distortions. Our results demonstrate significantly better generalisation across distortions compared to conventional classifiers and other adaptive methods, across various architectures. Although this paper presents a proof of concept, we find that this approach unexpectedly outperforms DINOv2 (small), despite DINOv2 being trained with a much larger network and dataset",
-    "checked": false,
+    "checked": true,
     "id": "451d57bf84f776b631fddaf05127169838e71051",
-    "semantic_title": "quantile activation: correcting a failure mode of ml models",
+    "semantic_title": "quantile activation: correcting a failure mode of traditional ml models",
     "citation_count": 0,
     "authors": [
       "Aditya Challa",
@@ -5600,7 +5600,7 @@
     "checked": true,
     "id": "4b1278b2266ce5009e70f2efe85ccff87350de9c",
     "semantic_title": "vision-language models provide promptable representations for reinforcement learning",
-    "citation_count": 27,
+    "citation_count": 28,
     "authors": [
       "William Chen",
       "Oier Mees",
@@ -5823,7 +5823,7 @@
     "checked": true,
     "id": "2717e5c7384ec12cfd6cf9c34897c6adad3230ed",
     "semantic_title": "long-context llms struggle with long in-context learning",
-    "citation_count": 193,
+    "citation_count": 194,
     "authors": [
       "Tianle Li",
       "Ge Zhang",
@@ -6248,7 +6248,7 @@
   "https://openreview.net/forum?id=qsipSdfWeV": {
     "title": "Distilling Datasets Into Less Than One Image",
     "volume": "main",
-    "abstract": "Dataset distillation aims to compress a dataset into a much smaller one so that a model trained on the distilled dataset achieves high accuracy. Current methods frame this as maximizing the distilled classification accuracy for a budget of K distilled images-per-class, where K is a positive integer. In this paper, we push the boundaries of dataset distillation, compressing the dataset into less than an image-per-class. It is important to realize that the meaningful quantity is not the number of distilled images-per-class but the number of distilled pixels-per-dataset. We therefore, propose Poster Dataset Distillation (PoDD), a new approach that distills the entire original dataset into a single poster. The poster approach motivates new technical solutions for creating training images and learnable labels. Our method can achieve comparable or better performance with less than an image-per-class compared to existing methods that use one image-per-class. Specifically, our method establishes a new state-of-the-art performance on CIFAR-10, CIFAR-100, and CUB200 on the well established 1 IPC benchmark, while using as little as 0.3 images-per-class",
+    "abstract": "",
     "checked": true,
     "id": "c911985d5882cf9f6c0f6212afd9fbba9e7a0453",
     "semantic_title": "distilling datasets into less than one image",
@@ -6262,7 +6262,7 @@
   "https://openreview.net/forum?id=uxyWlXPuIg": {
     "title": "On Using Secure Aggregation in Differentially Private Federated Learning with Multiple Local Steps",
     "volume": "main",
-    "abstract": "Federated learning is a distributed learning setting where the main aim is to train machine learning models without having to share raw data but only what is required for learning. To guarantee training data privacy and high-utility models, differential privacy and secure aggregation techniques are often combined with federated learning. However, with fine-grained protection granularities, e.g., with the common sample-level protection, the currently existing techniques generally require the parties to communicate for each local optimization step, if they want to fully benefit from the secure aggregation in terms of the resulting formal privacy guarantees. In this paper, we show how a simple new analysis allows the parties to perform multiple local optimization steps while still benefiting from using secure aggregation. We show that our analysis enables higher utility models with guaranteed privacy protection under limited number of communication rounds",
+    "abstract": "",
     "checked": true,
     "id": "1c1fd6b10cc266fd2c81b0361252b92e9b56772f",
     "semantic_title": "on using secure aggregation in differentially private federated learning with multiple local steps",
@@ -6274,7 +6274,7 @@
   "https://openreview.net/forum?id=XVSQnnf7QT": {
     "title": "Which Backbone to Use: A Resource-efficient Domain Specific Comparison for Computer Vision",
     "volume": "main",
-    "abstract": "For computer vision applications on small, niche, and proprietary datasets, fine-tuning a neural network (NN) backbone that is pre-trained on a large dataset, such as the ImageNet, is a common practice. However, it is unknown whether the backbones that perform well on large datasets, such as vision transformers, are also the right choice for fine-tuning on smaller custom datasets. The present comprehensive analysis aims to aid machine learning practitioners in selecting the most suitable backbone for their specific problem. We systematically evaluated multiple lightweight, pre-trained backbones under consistent training settings across a variety of domains spanning natural, medical, deep space, and remote sensing images. We found that even though attention-based architectures are gaining popularity, they tend to perform poorly compared to CNNs when fine-tuned on small amounts of domain-specific data. We also observed that certain CNN architectures consistently perform better than others when controlled for network size. Our findings provide actionable insights into the performance trade-offs and effectiveness of different backbones for a broad spectrum of computer vision domains",
+    "abstract": "",
     "checked": true,
     "id": "d19547be89a5b3acad6087ed65c62286d855e14a",
     "semantic_title": "which backbone to use: a resource-efficient domain specific comparison for computer vision",
@@ -6287,7 +6287,7 @@
   "https://openreview.net/forum?id=tIfS6jyO9f": {
     "title": "Enhancing Maritime Trajectory Forecasting via H3 Index and Causal Language Modelling (CLM)",
     "volume": "main",
-    "abstract": "The prediction of ship trajectories is a growing field of study in artificial intelligence. Traditional methods rely on the use of LSTM, GRU networks, and even Transformer architectures for the prediction of spatio-temporal series. This study proposes a viable alternative for predicting these trajectories using only GNSS positions. It considers this spatio-temporal problem as a natural language processing problem. The latitude/longitude coordinates of AIS messages are transformed into cell identifiers using the H3 index. Thanks to the pseudo-octal representation, it becomes easier for language models to learn the spatial hierarchy of the H3 index. The method is qualitatively compared to a classical Kalman filter and quantitatively to Seq2Seq and TrAISformer models. The Fréchet distance is introduced as the main evaluation metric for these comparisons. We show that it is possible to predict ship trajectories quite precisely up to 8 hours ahead with 30 minutes of context, using solely GNSS positions, without relying on any additional information such as speed, course, or external conditions — unlike many traditional methods. We demonstrate that this alternative works well enough to predict trajectories worldwide",
+    "abstract": "",
     "checked": true,
     "id": "5edac0ff5c13118de4d32272a08c3b8c7bd1d1b5",
     "semantic_title": "enhancing maritime trajectory forecasting via h3 index and causal language modelling (clm)",
