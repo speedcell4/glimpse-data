@@ -5001,7 +5001,7 @@
   "https://openreview.net/forum?id=KxBQPz7HKh": {
     "title": "Multi-dimensional concept discovery (MCD): A unifying framework with completeness guarantees",
     "volume": "main",
-    "abstract": "",
+    "abstract": "The completeness axiom renders the explanation of a post-hoc eXplainable AI (XAI) method only locally faithful to the model, i.e. for a single decision. For the trustworthy application of XAI, in particular for high-stake decisions, a more global model understanding is required. To this end, concept-based methods have been proposed, which are however not guaranteed to be bound to the actual model reasoning. To circumvent this problem, we propose Multi-dimensional Concept Discovery (MCD) as an extension of previous approaches that fulfills a completeness relation on the level of concepts. Our method starts from general linear subspaces as concepts and does neither require reinforcing concept interpretability nor re-training of model parts. We propose sparse subspace clustering to discover improved concepts and fully leverage the potential of multi-dimensional subspaces. MCD offers two complementary analysis tools for concepts in input space: (1) concept activation maps, that show where a concept is expressed within a sample, allowing for concept characterization through prototypical samples, and (2) concept relevance heatmaps, that decompose the model decision into concept contributions. Both tools together enable a detailed global understanding of the model reasoning, which is guaranteed to relate to the model via a completeness relation. Thus, MCD paves the way towards more trustworthy concept-based XAI. We empirically demonstrate the superiority of MCD against more constrained concept definitions",
     "checked": true,
     "id": "e695a6a6d8a677f528add0118effc7736da35709",
     "semantic_title": "multi-dimensional concept discovery (mcd): a unifying framework with completeness guarantees",
@@ -5015,7 +5015,7 @@
   "https://openreview.net/forum?id=TyBd56VK7z": {
     "title": "Dr-Fairness: Dynamic Data Ratio Adjustment for Fair Training on Real and Generated Data",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Fair visual recognition has become critical for preventing demographic disparity. A major cause of model unfairness is the imbalanced representation of different groups in training data. Recently, several works aim to alleviate this issue using generated data. However, these approaches often use generated data to obtain similar amounts of data across groups, which is not optimal for achieving high fairness due to different learning difficulties and generated data qualities across groups. To address this issue, we propose a novel adaptive sampling approach that leverages both real and generated data for fairness. We design a bilevel optimization that finds the optimal data sampling ratios among groups and between real and generated data while training a model. The ratios are dynamically adjusted considering both the model's accuracy as well as its fairness. To efficiently solve our non-convex bilevel optimization, we propose a simple approximation to the solution given by the implicit function theorem. Extensive experiments show that our framework achieves state-of-the-art fairness and accuracy on the CelebA and ImageNet People Subtree datasets. We also observe that our method adaptively relies less on the generated data when it has poor quality. Our work shows the importance of using generated data together with real data for improving model fairness",
     "checked": true,
     "id": "37aa9f75ac8b983470e89989a533e277e00c0ef8",
     "semantic_title": "dr-fairness: dynamic data ratio adjustment for fair training on real and generated data",
@@ -5032,7 +5032,7 @@
   "https://openreview.net/forum?id=N7lCDaeNiS": {
     "title": "Federated Learning under Covariate Shifts with Generalization Guarantees",
     "volume": "main",
-    "abstract": "",
+    "abstract": "This paper addresses intra-client and inter-client covariate shifts in federated learning (FL) with a focus on the overall generalization performance. To handle covariate shifts, we formulate a new global model training paradigm and propose Federated Importance-Weighted Empirical Risk Minimization (FTW-ERM) along with improving density ratio matching methods without requiring perfect knowledge of the supremum over true ratios. We also propose the communication-efficient variant FITW-ERM with the same level of privacy guarantees as those of classical ERM in FL. We theoretically show that FTW-ERM achieves smaller generalization error than classical ERM under certain settings. Experimental results demonstrate the superiority of FTW-ERM over existing FL baselines in challenging imbalanced federated settings in terms of data distribution shifts across clients",
     "checked": true,
     "id": "537ede99556e763aaeb1ccaa1a34801d276daee4",
     "semantic_title": "federated learning under covariate shifts with generalization guarantees",
@@ -5352,10 +5352,10 @@
     "title": "Guillotine Regularization: Why removing layers is needed to improve generalization in Self-Supervised Learning",
     "volume": "main",
     "abstract": "One unexpected technique that emerged in recent years consists in training a Deep Network (DN) with a Self-Supervised Learning (SSL) method, and using this network on downstream tasks but with its last few layers entirely removed. This usually skimmed-over trick of throwing away the entire projector is actually critical for SSL methods to display competitive performances. For example, on ImageNet classification, more than 30 points of percentage can be gained that way. This is a little vexing, as one would hope that the network layer at which invariance is explicitly enforced by the SSL criterion during training (the last layer) should be the one to use for best generalization performance downstream. But it seems not to be, and this study sheds some light on why. This trick, which we name Guillotine Regularization (GR), is in fact a generically applicable method that has been used to improve generalization performance in transfer learning scenarios. In this work, we identify the underlying reasons behind its success and challenge the preconceived idea that we should through away the entire projector in SSL. In fact, the optimal layer to use might change significantly depending on the training setup, the data or the downstream task. Lastly, we give some insights on how to reduce the need for a projector in SSL by aligning the pretext SSL task and the downstream task",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "3f60e8735f735cc84febde2340cb735e33fa1a76",
+    "semantic_title": "guillotine regularization: why removing layers is needed to improve generalization in self-supervised learning",
+    "citation_count": 24,
     "authors": [
       "Florian Bordes",
       "Randall Balestriero",
@@ -5495,10 +5495,10 @@
     "title": "Agent-State Construction with Auxiliary Inputs",
     "volume": "main",
     "abstract": "In many, if not every realistic sequential decision-making task, the decision-making agent is not able to model the full complexity of the world. The environment is often much larger and more complex than the agent, a setting also known as partial observability. In such settings, the agent must leverage more than just the current sensory inputs; it must construct an agent state that summarizes previous interactions with the world. Currently, a popular approach for tackling this problem is to learn the agent-state function via a recurrent network from the agent's sensory stream as input. Many impressive reinforcement learning applications have instead relied on environment-specific functions to aid the agent's inputs for history summarization. These augmentations are done in multiple ways, from simple approaches like concatenating observations to more complex ones such as uncertainty estimates. Although ubiquitous in the field, these additional inputs, which we term auxiliary inputs, are rarely emphasized, and it is not clear what their role or impact is. In this work we explore this idea further, and relate these auxiliary inputs to prior classic approaches to state construction. We present a series of examples illustrating the different ways of using auxiliary inputs for reinforcement learning. We show that these auxiliary inputs can be used to discriminate between observations that would otherwise be aliased, leading to more expressive features that smoothly interpolate between different states. Finally, we show that this approach is complementary to state-of-the-art methods such as recurrent neural networks and truncated back-propagation through time, and acts as a heuristic that facilitates longer temporal credit assignment, leading to better performance",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "checked": true,
+    "id": "a04611387661acfc81266260fa443803062953d0",
+    "semantic_title": "agent-state construction with auxiliary inputs",
+    "citation_count": 5,
     "authors": [
       "Ruo Yu Tao",
       "Adam White",
@@ -5550,7 +5550,7 @@
   "https://openreview.net/forum?id=IqJsyulDUX": {
     "title": "Ensembles for Uncertainty Estimation: Benefits of Prior Functions and Bootstrapping",
     "volume": "main",
-    "abstract": "In machine learning, an agent needs to estimate uncertainty to efficiently explore and adapt and to make effective decisions. A common approach to uncertainty estimation maintains an ensemble of models. In recent years, several approaches have been proposed for training ensembles, and conflicting views prevail with regards to the importance of various ingredients of these approaches. In this paper, we aim to address the benefits of two ingredients -- prior functions and bootstrapping -- which have come into question. We show that prior functions can significantly improve an ensemble agent's joint predictions across inputs and that bootstrapping affords additional benefits if the signal-to-noise ratio varies across inputs. Our claims are justified by both theoretical and experimental results",
+    "abstract": "",
     "checked": true,
     "id": "f030e634f1b20b23f5d6ea5bf4472426244d66d5",
     "semantic_title": "ensembles for uncertainty estimation: benefits of prior functions and bootstrapping",
@@ -5567,7 +5567,7 @@
   "https://openreview.net/forum?id=W98rebBxlQ": {
     "title": "Soft Diffusion: Score Matching with General Corruptions",
     "volume": "main",
-    "abstract": "We define a broader family of corruption processes that generalizes previously known diffusion models. To reverse these general diffusions, we propose a new objective called Soft Score Matching. Soft Score Matching incorporates the degradation process in the network and provably learns the score function for any linear corruption process. Our new loss trains the model to predict a clean image, that after corruption, matches the diffused observation. This objective learns the gradient of the likelihood under suitable regularity conditions for the family of linear corruption processes. We further develop an algorithm to select the corruption levels for general diffusion processes and a novel sampling method that we call Momentum Sampler. We show experimentally that our framework works for general linear corruption processes, such as Gaussian blur and masking. Our method outperforms all linear diffusion models on CelebA-64 achieving FID score 1.85. We also show computational benefits compared to vanilla denoising diffusion",
+    "abstract": "",
     "checked": true,
     "id": "aecbe351822b77cb36d22e8a43b4fe2bda6ab998",
     "semantic_title": "soft diffusion: score matching with general corruptions",
@@ -5583,7 +5583,7 @@
   "https://openreview.net/forum?id=mySiFHCeAl": {
     "title": "Spectral Regularization Allows Data-frugal Learning over Combinatorial Spaces",
     "volume": "main",
-    "abstract": "Data-driven machine learning models are being increasingly employed in several important inference problems in biology, chemistry, and physics, which require learning over combinatorial spaces. Recent empirical evidence (see, e.g., ~\\cite{tseng2020fourier,aghazadeh2021epistatic,ha2021adaptive}) suggests that regularizing the spectral representation of such models improves their generalization power when labeled data is scarce. However, despite these empirical studies, the theoretical underpinning of when and how spectral regularization enables improved generalization is poorly understood. In this paper, we focus on learning pseudo-Boolean functions and demonstrate that regularizing the empirical mean squared error by the $L_1$ norm of the spectral transform of the learned function reshapes the loss landscape and allows for data-frugal learning under a restricted secant condition on the learner's empirical error measured against the ground truth function. Under a weaker quadratic growth condition, we show that stationary points, which also approximately interpolate the training data points achieve statistically optimal generalization performance. Complementing our theory, we empirically demonstrate that running gradient descent on the regularized loss results in a better generalization performance compared to baseline algorithms in several data-scarce real-world problems",
+    "abstract": "",
     "checked": true,
     "id": "a902afd1e45a9409c3b6209fe2f634232cd7cf11",
     "semantic_title": "spectral regularization allows data-frugal learning over combinatorial spaces",
@@ -5598,7 +5598,7 @@
   "https://openreview.net/forum?id=jVMMdg31De": {
     "title": "A Cubic Regularization Approach for Finding Local Minimax Points in Nonconvex Minimax Optimization",
     "volume": "main",
-    "abstract": "Gradient descent-ascent (GDA) is a widely used algorithm for minimax optimization. However, GDA has been proved to converge to stationary points for nonconvex minimax optimization, which are suboptimal compared with local minimax points. In this work, we develop cubic regularization (CR) type algorithms that globally converge to local minimax points in nonconvex-strongly-concave minimax optimization. We first show that local minimax points are equivalent to second-order stationary points of a certain envelope function. Then, inspired by the classic cubic regularization algorithm, we propose an algorithm named Cubic-LocalMinimax for finding local minimax points, and provide a comprehensive convergence analysis by leveraging its intrinsic potential function. Specifically, we establish the global convergence of Cubic-LocalMinimax to a local minimax point at a sublinear convergence rate and characterize its iteration complexity. Also, we propose a GDA-based solver for solving the cubic subproblem involved in Cubic-LocalMinimax up to certain pre-defined accuracy, and analyze the overall gradient and Hessian-vector product computation complexities of such an inexact Cubic-LocalMinimax algorithm. Moreover, we propose a stochastic variant of Cubic-LocalMinimax for large-scale minimax optimization, and characterize its sample complexity under stochastic sub-sampling. Experimental results demonstrate faster or comparable convergence speed of our stochastic Cubic-LocalMinimax than the state-of-the-art algorithms such as GDA and Minimax Cubic-Newton. In particular, our stochastic Cubic-LocalMinimax was also faster as compared to several other algorithms for minimax optimization on a particular adversarial loss for training a convolutional neural network on MNIST",
+    "abstract": "",
     "checked": true,
     "id": "010ccf4ee5abc99cbba51ae62deeb458e35d7ad1",
     "semantic_title": "a cubic regularization approach for finding local minimax points in nonconvex minimax optimization",
