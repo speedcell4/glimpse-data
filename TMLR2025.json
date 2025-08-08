@@ -1,4 +1,240 @@
 {
+  "https://openreview.net/forum?id=LHchZthcOf": {
+    "title": "Discovering group dynamics in coordinated time series via hierarchical recurrent switching-state models",
+    "volume": "main",
+    "abstract": "We seek a computationally efficient model for a collection of time series arising from multiple interacting entities (a.k.a. \"agents\"). Recent models of temporal patterns across individuals fail to incorporate explicit system-level collective behavior that can influence the trajectories of individual entities. To address this gap in the literature, we present a new hierarchical switching-state model that can be trained in an unsupervised fashion to simultaneously learn both system-level and individual-level dynamics. We employ a latent system-level discrete state Markov chain that provides top-down influence on latent entity-level chains which in turn govern the emission of each observed time series. Recurrent feedback from the observations to the latent chains at both entity and system levels allows recent situational context to inform how dynamics unfold at all levels in bottom-up fashion. We hypothesize that including both top-down and bottom-up influences on group dynamics will improve interpretability of the learned dynamics and reduce error when forecasting. Our hierarchical switching recurrent dynamical model can be learned via closed-form variational coordinate ascent updates to all latent chains that scale linearly in the number of entities. This is asymptotically no more costly than fitting a separate model for each entity. Analysis of both synthetic data and real basketball team movements suggests our lean parametric model can achieve competitive forecasts compared to larger neural network models that require far more computational resources. Further experiments on soldier data as well as a synthetic task with 64 cooperating entities show how our approach can yield interpretable insights about team dynamics over time",
+    "checked": true,
+    "id": "1ec8ae3456a5238b24617b492b4a0cff73e896e5",
+    "semantic_title": "discovering group dynamics in coordinated time series via hierarchical recurrent switching-state models",
+    "citation_count": 1,
+    "authors": [
+      "Michael Wojnowicz",
+      "Kaitlin Gili",
+      "Preetish Rath",
+      "Eric Miller",
+      "Jeffrey W. Miller",
+      "Clifford Lee Hancock",
+      "Meghan O'Donovan",
+      "Seth Elkin-Frankston",
+      "Tad Brunye",
+      "Michael C Hughes"
+    ]
+  },
+  "https://openreview.net/forum?id=2HFmicB8kh": {
+    "title": "Robust and Efficient Fine-tuning of LLMs with Bayesian Reparameterization of Low-Rank Adaptation",
+    "volume": "main",
+    "abstract": "Large Language Models (LLMs) are highly resource-intensive to fine-tune due to their enormous size. While low-rank adaptation is a prominent parameter-efficient fine-tuning approach, it suffers from sensitivity to hyperparameter choices, leading to instability in model performance on fine-tuning downstream tasks. This paper highlights the importance of effective parameterization in low-rank fine-tuning to reduce estimator variance and enhance the stability of final model outputs. We propose MonteCLoRA, an efficient fine-tuning technique that employs Monte Carlo estimation to learn an unbiased posterior estimation of low-rank parameters with low expected variance, stabilizing fine-tuned LLMs with only $\\mathcal{O}(r)$ additional parameters, for a given rank $r$. MonteCLoRA shows significant improvements in accuracy and robustness, achieving up to $3.8$% higher accuracy and $8.6$% greater robustness than existing efficient fine-tuning methods on natural language understanding tasks with pre-trained RoBERTa-base. Furthermore, in generative tasks with pre-trained LLaMA-1-7B and LLaMA-3.2-3B-Instruct, MonteCLoRA demonstrates robust performance with $50\\%$ and $62\\%$ lower spreads, respectively, than the contemporary, efficient fine-tuning methods. The theoretical and empirical results presented in the paper underscore how parameterization and hyperpriors balance exploration-exploitation in the low-rank parametric space, therefore leading to more optimal and robust parameter estimation during efficient fine-tuning",
+    "checked": true,
+    "id": "6a73d2e0060fa70c7ee496a3db0759a020b4321b",
+    "semantic_title": "robust and efficient fine-tuning of llms with bayesian reparameterization of low-rank adaptation",
+    "citation_count": 2,
+    "authors": [
+      "Vaibhav Seth",
+      "Ayan Sengupta",
+      "Arinjay Pathak",
+      "Aastha A K Verma",
+      "Natraj Raman",
+      "Sriram Gopalakrishnan",
+      "Niladri Chatterjee",
+      "Tanmoy Chakraborty"
+    ]
+  },
+  "https://openreview.net/forum?id=HvoG8SxggZ": {
+    "title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+    "volume": "main",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in complex tasks. Recent advancements in Large Reasoning Models (LRMs), such as OpenAI o1 and DeepSeek-R1, have further improved performance in System-2 reasoning domains like mathematics and programming by harnessing supervised fine-tuning (SFT) and reinforcement learning (RL) to enhance Chain-of-Thought (CoT) reasoning. However, while longer CoT reasoning sequences improve performance, they also introduce significant computational overhead due to lengthy and redundant outputs, known as the ''overthinking phenomenon''. Efficient Reasoning, which seeks to optimize reasoning length while preserving reasoning capabilities, offers practical benefits such as faster processing times, lower energy consumption, and improved responsiveness, especially valuable for reasoning-intensive applications. Despite its potential, efficient reasoning remains in the early stages of research. In this paper, we provide the first structured survey to systematically investigate and explore the current progress toward achieving efficient reasoning in LLMs. Overall, relying on the inherent mechanism of LLMs, we categorize existing works into several key directions: (1) model-based efficient reasoning, which considers optimizing full-length reasoning models into more concise reasoning models or directly training efficient reasoning models; (2) reasoning output-based efficient reasoning, which aims to dynamically reduce reasoning steps and length during inference; (3) input prompts-based efficient reasoning, which seeks to enhance reasoning efficiency based on input prompt properties such as difficulty or length control. Additionally, we introduce the use of efficient data for training reasoning models, explore the reasoning capabilities of small language models, and discuss evaluation methods and benchmarking",
+    "checked": true,
+    "id": "891cc1397f949d4432a5a0602e3757e9e3610862",
+    "semantic_title": "stop overthinking: a survey on efficient reasoning for large language models",
+    "citation_count": 135,
+    "authors": [
+      "Yang Sui",
+      "Yu-Neng Chuang",
+      "Guanchu Wang",
+      "Jiamu Zhang",
+      "Tianyi Zhang",
+      "Jiayi Yuan",
+      "Hongyi Liu",
+      "Andrew Wen",
+      "Shaochen Zhong",
+      "Hanjie Chen",
+      "Xia Hu"
+    ]
+  },
+  "https://openreview.net/forum?id=tTdzbnvTno": {
+    "title": "Potential Score Matching: Debiasing Molecular Structure Sampling with Potential Energy Guidance",
+    "volume": "main",
+    "abstract": "The ensemble average of physical properties of molecules is closely related to the distribution of molecular conformations, and sampling such distributions is a fundamental challenge in physics and chemistry. Traditional methods like molecular dynamics (MD) simulations and Markov chain Monte Carlo (MCMC) sampling are commonly used but can be time-consuming and costly. Recently, diffusion models have emerged as efficient alternatives by learning the distribution of training data. Obtaining an unbiased target distribution is still an expensive task, primarily because it requires satisfying ergodicity. To tackle these challenges, we propose Potential Score Matching (PSM), an approach that utilizes the potential energy gradient to guide generative models. PSM does not require exact energy functions and can debias sample distributions even when trained on limited and biased data. Our method outperforms existing state-of-the-art (SOTA) models on the Lennard-Jones (LJ) potential, a commonly used toy model. Furthermore, we extend the evaluation of PSM to high-dimensional problems using the MD17 and MD22 datasets. The results demonstrate that molecular distributions generated by PSM more closely approximate the Boltzmann distribution compared to traditional diffusion models",
+    "checked": true,
+    "id": "d43b460d944abde4b8a4e6d9f950b1ae61751bed",
+    "semantic_title": "potential score matching: debiasing molecular structure sampling with potential energy guidance",
+    "citation_count": 0,
+    "authors": [
+      "Liya Guo",
+      "Zun Wang",
+      "Chang Liu",
+      "Junzhe Li",
+      "Pipi Hu",
+      "Yi Zhu",
+      "Tao Qin"
+    ]
+  },
+  "https://openreview.net/forum?id=n0lzHrAWIA": {
+    "title": "Set-Based Training for Neural Network Verification",
+    "volume": "main",
+    "abstract": "Neural networks are vulnerable to adversarial attacks, i.e., small input perturbations can significantly affect the outputs of a neural network. Therefore, to ensure safety of neural networks in safety-critical environments, the robustness of a neural network must be formally verified against input perturbations, e.g., from noisy sensors. To improve the robustness of neural networks and thus simplify the formal verification, we present a novel set-based training procedure in which we compute the set of possible outputs given the set of possible inputs and compute for the first time a gradient set, i.e., each possible output has a different gradient. Therefore, we can directly reduce the size of the output enclosure by choosing gradients toward its center. Small output enclosures increase the robustness of a neural network and, at the same time, simplify its formal verification. The latter benefit is due to the fact that a larger size of propagated sets increases the conservatism of most verification methods. Our extensive evaluation demonstrates that set-based training produces robust neural networks with competitive performance, which can be verified using fast (polynomial-time) verification algorithms due to the reduced output set",
+    "checked": true,
+    "id": "99dd7327eacd18b8fe697ac19249dd95263a1df5",
+    "semantic_title": "set-based training for neural network verification",
+    "citation_count": 3,
+    "authors": [
+      "Lukas Koller",
+      "Tobias Ladner",
+      "Matthias Althoff"
+    ]
+  },
+  "https://openreview.net/forum?id=E6LOh5vz5x": {
+    "title": "Probabilities of Chat LLMs Are Miscalibrated but Still Predict Correctness on Multiple-Choice Q&A",
+    "volume": "main",
+    "abstract": "We study 15 large language models (LLMs) fine-tuned for chat and find that their maximum softmax probabilities (MSPs) are consistently miscalibrated on multiple-choice Q&A. However, those MSPs might still encode useful uncertainty information. Specifically, we hypothesized that wrong answers would be associated with smaller MSPs compared to correct answers. Via rigorous statistical testing, we show that this hypothesis holds for models which perform well on the underlying Q&A task. We also find a strong direction correlation between Q&A accuracy and MSP correctness prediction, while finding no correlation between Q&A accuracy and calibration error. This suggests that within the current fine-tuning paradigm, we can expect correctness prediction but not calibration to improve as LLM capabilities progress. To demonstrate the utility of correctness prediction, we show that when models have the option to abstain, performance can be improved by selectively abstaining based on the MSP of the initial model response, using only a small amount of labeled data to choose the MSP threshold",
+    "checked": true,
+    "id": "fd18f1846c3e58dddd4054ad0cad90f140408ef1",
+    "semantic_title": "probabilities of chat llms are miscalibrated but still predict correctness on multiple-choice q&a",
+    "citation_count": 5,
+    "authors": [
+      "Benjamin Plaut",
+      "Khanh Xuan Nguyen",
+      "Tu Trinh"
+    ]
+  },
+  "https://openreview.net/forum?id=lK7tjysj0s": {
+    "title": "Formulating Node Labelling as Node Classification or Link Prediction in Different Graph Representations",
+    "volume": "main",
+    "abstract": "Message-passing Graph Neural Networks (GNNs) are increasingly used for predictive tasks on graphs. Much work has been done to improve GNN architectures, but how the actual data graph should be designed is not well studied. In this paper, we investigate how two different graph representations impact the performance of GNN models across datasets with varying characteristics grouped by homophily, heterogeneity, and number of labels per node. A unique phenomenon is that the same abstract predictive task of labelling nodes is formulated as a node classification problem on one representation and as a link prediction problem on the other. Our work is the first to blur the line between these two basic and fundamental tasks in graph learning. Our experiments on 12 real-world datasets suggest that different representations (and tasks) are optimal for different datasets, models, and hyperparameters. We derive empirical heuristics of choosing between the two and pave the way towards a criterion of choosing the optimal graph representations and towards formally understanding the interconnection between node classification and link prediction",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Tobias Möller",
+      "Borun Shi"
+    ]
+  },
+  "https://openreview.net/forum?id=OGvmCpcHdV": {
+    "title": "Sortability of Time Series Data",
+    "volume": "main",
+    "abstract": "Evaluating the performance of causal discovery algorithms that aim to find causal relationships between time-dependent processes remains a challenging topic. In this paper, we show that certain characteristics of datasets, such as varsortability (Reisach et al. 2021) and R2-sortability (Reisach et al. 2023), also occur in datasets for autocorrelated stationary time series. We illustrate this empirically using four types of data: simulated data based on SVAR models and Erdős-Rényi graphs, the data used in the 2019 causality-for-climate challenge (Runge et al. 2019), real-world river stream datasets, and real-world data generated by the Causal Chamber of (Gamella et al. 2024). To do this, we adapt var- and R2-sortability to time series data. We also investigate the extent to which the performance of continuous score-based causal discovery methods goes hand in hand with high sortability. Arguably, our most surprising finding is that the investigated real-world datasets exhibit high varsortability and low R2-sortability indicating that scales may carry a significant amount of causal information",
+    "checked": true,
+    "id": "e3d479da542a4353c2379183fe7b1a2c9e34e919",
+    "semantic_title": "sortability of time series data",
+    "citation_count": 2,
+    "authors": [
+      "Christopher Lohse",
+      "Jonas Wahl"
+    ]
+  },
+  "https://openreview.net/forum?id=lcTFm4LIRR": {
+    "title": "Associative memory inspires improvements for in-context learning using a novel attention residual stream architecture",
+    "volume": "main",
+    "abstract": "Large language models (LLMs) demonstrate an impressive ability to utilise information within the context of their input sequences to appropriately respond to data unseen by the LLM during its training procedure. This ability is known as in-context learning (ICL). Humans and non-human animals demonstrate similar abilities, however their neural architectures differ substantially from LLMs. Despite this, a critical component within LLMs, the attention mechanism, resembles modern associative memory models, widely used in and influenced by the computational neuroscience community to model biological memory systems. Using this connection, we introduce an associative memory model capable of performing ICL. We use this as inspiration for a novel residual stream architecture which allows information to directly flow between attention heads. We test this architecture during training within a two-layer Transformer and show its ICL abilities manifest more quickly than without this modification. We then apply our architecture in small language models with 8 million and 1 billion parameters, focusing on attention head values, with results also indicating improved performance at these larger and more naturalistic scales",
+    "checked": true,
+    "id": "ff26fb9b8e7250e544005b2dcce4ef7c2fca5b74",
+    "semantic_title": "associative memory inspires improvements for in-context learning using a novel attention residual stream architecture",
+    "citation_count": 2,
+    "authors": [
+      "Thomas F Burns",
+      "Tomoki Fukai",
+      "Christopher Earls"
+    ]
+  },
+  "https://openreview.net/forum?id=NUXpBMtDYs": {
+    "title": "Shared Imagination: LLMs Hallucinate Alike",
+    "volume": "main",
+    "abstract": "Despite the recent proliferation of large language models (LLMs), their training recipes -- model architecture, pre-training data and optimization algorithm -- are often very similar. This naturally raises the question of the similarity among the resulting models. In this paper, we propose a novel setting, imaginary question answering (IQA), to better understand model similarity. In IQA, we ask one model to generate purely imaginary questions (e.g., on completely made-up concepts in physics) and prompt another model to answer. Surprisingly, despite the total fictionality of these questions, all models can answer each other's questions with remarkable consistency, suggesting a \"shared imagination space\" in which these models operate during such hallucinations. We conduct a series of investigations into this phenomenon and discuss the implications of such model homogeneity on hallucination detection and computational creativity",
+    "checked": true,
+    "id": "15469636bb307578cfe72ec43504dd75d65da638",
+    "semantic_title": "shared imagination: llms hallucinate alike",
+    "citation_count": 2,
+    "authors": [
+      "Yilun Zhou",
+      "Caiming Xiong",
+      "Silvio Savarese",
+      "Chien-Sheng Wu"
+    ]
+  },
+  "https://openreview.net/forum?id=dzND5haNvA": {
+    "title": "Approximation, Estimation and Optimization Errors for a Deep Neural Network",
+    "volume": "main",
+    "abstract": "The error of supervised learning is typically split into three components: approximation, estimation and optimization errors. While all three have been extensively studied in the literature, a unified treatment is less frequent, in part because of conflicting assumptions. Current approximation results rely on carefully hand crafted weights or practically unavailable information, which are difficult to achieve by gradient descent. Optimization theory is best understood in over-parametrized regimes with more weights than samples, while classical estimation errors require the opposite regime with more samples than weights. This paper contains two results which bound all three error components simultaneously for (non-convex) training of the second but last layer of deep fully connected networks on the unit sphere. The first uses a regular least squares loss and shows convergence in the under-parametrized regime. The second uses a kernel based loss function and shows convergence in both under and over-parametrized regimes",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Gerrit Welper",
+      "Benjamin Keene"
+    ]
+  },
+  "https://openreview.net/forum?id=fk1ZZdXCE3": {
+    "title": "Model Tensor Planning",
+    "volume": "main",
+    "abstract": "Sampling-based model predictive control (MPC) offers strong performance in nonlinear and contact-rich robotic tasks, yet often suffers from poor exploration due to locally greedy sampling schemes. We propose \\emph{Model Tensor Planning} (MTP), a novel sampling-based MPC framework that introduces high-entropy control trajectory generation through structured tensor sampling. By sampling over randomized multipartite graphs and interpolating control trajectories with B-splines and Akima splines, MTP ensures smooth and globally diverse control candidates. We further propose a simple $\\beta$-mixing strategy that blends local exploitative and global exploratory samples within the modified Cross-Entropy Method (CEM) update, balancing control refinement and exploration. Theoretically, we show that MTP achieves asymptotic path coverage and maximum entropy in the control trajectory space in the limit of infinite tensor depth and width. Our implementation is fully vectorized using JAX and compatible with MuJoCo XLA, supporting \\emph{Just-in-time} (JIT) compilation and batched rollouts for real-time control with online domain randomization. Through experiments on various challenging robotic tasks, ranging from dexterous in-hand manipulation to humanoid locomotion, we demonstrate that MTP outperforms standard MPC and evolutionary strategy baselines in task success and control robustness. Design and sensitivity ablations confirm the effectiveness of MTP's tensor sampling structure, spline interpolation choices, and mixing strategy. Altogether, MTP offers a scalable framework for robust exploration in model-based planning and control",
+    "checked": true,
+    "id": "19da52fc068de320ec8e2508ee6e022772e9acf7",
+    "semantic_title": "model tensor planning",
+    "citation_count": 0,
+    "authors": [
+      "An Thai Le",
+      "Khai Nguyen",
+      "Minh Nhat VU",
+      "Joao Carvalho",
+      "Jan Peters"
+    ]
+  },
+  "https://openreview.net/forum?id=BGoRme2MfG": {
+    "title": "HDCS: Hierarchy Discovery and Critic Shaping for Reinforcement Learning with Automaton Specification",
+    "volume": "main",
+    "abstract": "Training reinforcement learning (RL) agents by scalar reward signals is often infeasible when an environment has sparse and non-Markovian rewards. Deterministic finite-state automaton (DFA) provides a streamlined method for specifying tasks in reinforcement learning (RL) that surpass the limitations of traditional discounted return formulations. However, existing RL algorithms designed to address DFA tasks face unresolved challenges, hindering their practical application. One key issue is that subgoals in the DFA may exhibit hidden hierarchical structures, with some macro-subgoals comprising multiple micro-subgoals in certain orders. Without understanding this hierarchy, RL algorithms may struggle to efficiently solve tasks involving such macro-subgoals. Additionally, the sparse reward problem remains inadequately addressed. Previous approaches, such as potential-based reward shaping, often encounter inefficiencies or result in suboptimal solutions. To address these challenges, we propose a novel RL framework designed to uncover the hierarchical structure of subgoals and accelerating the solving of DFA tasks without changing the original optimal policies, short as HDCS. The framework operates in two phases: first, a hierarchical RL method is used to identify the prerequisites of subgoals and build the hierarchy; second, given any task specification (DFA), the subgoal hierarchy is incorporated into task DFA to make a product DFA, and then a simple and novel critic shaping approach is proposed to accelerate the satisfaction of product DFA, which does not change optimal policies of the original problem. The effectiveness of HDCS is demonstrated through experiments conducted across various domains. Especially, compared with representative baselines, the critic shaping can have 2X or 3X acceleration on task solving",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Duo XU",
+      "Faramarz Fekri"
+    ]
+  },
+  "https://openreview.net/forum?id=uvQTYi6kbu": {
+    "title": "Don't Judge Before You CLIP: A Unified Approach for Perceptual Tasks",
+    "volume": "main",
+    "abstract": "Visual perceptual tasks aim to predict human judgment of images (e.g., emotions invoked by images, image quality assessment). Unlike objective tasks such as object/scene recognition, perceptual tasks rely on {subjective} human assessments, making their data-labeling difficult. The scarcity of such human-annotated data results in small datasets leading to poor generalization. Typically, specialized models were designed for each perceptual task, tailored to its unique characteristics and its own training dataset. We propose an identical architectural framework for solving multiple different perceptual tasks leveraging CLIP as a prior. Our approach is based on recent cognitive findings which indicate that CLIP correlates well with human judgment. While CLIP was explicitly trained to align images and text, it implicitly also learned human inclinations. We attribute this to the inclusion of human-written image captions in CLIP's training data, which contain not only factual image descriptions, but inevitably also human sentiments and emotions. This makes CLIP a particularly strong prior for perceptual tasks. Accordingly, we suggest that minimal adaptation of CLIP suffices for solving a variety of perceptual tasks. Our simple unified framework employs a lightweight adaptation to fine-tune CLIP to each task, without requiring any task-specific architectural changes. We evaluate our approach on three tasks: (i) Image Memorability Prediction, (ii) No-reference Image Quality Assessment, and (iii) Visual Emotion Analysis. Our model achieves state-of-the-art results on all three tasks, while demonstrating improved generalization across different datasets",
+    "checked": true,
+    "id": "06854292488db666a7086f50dea195e1cfac0668",
+    "semantic_title": "don't judge before you clip: a unified approach for perceptual tasks",
+    "citation_count": 0,
+    "authors": [
+      "Amit Zalcher",
+      "navve wasserman",
+      "Roman Beliy",
+      "Oliver Heinimann",
+      "michal Irani"
+    ]
+  },
+  "https://openreview.net/forum?id=ZnSYEcZod3": {
+    "title": "Training Dynamics of the Cooldown Stage in Warmup-Stable-Decay Learning Rate Scheduler",
+    "volume": "main",
+    "abstract": "Learning rate scheduling is essential in transformer training, where the final annealing plays a crucial role in getting the best performance. However, the mechanisms behind this cooldown phase, with its characteristic drop in loss, remain poorly understood. To address this, we provide a comprehensive analysis focusing solely on the cooldown phase in the Warmup-Stable-Decay (WSD) learning rate scheduler. Our analysis reveals that different cooldown shapes reveal a fundamental bias-variance trade-off in the resulting models, with shapes that balance exploration and exploitation consistently outperforming alternatives. Similarly, we find substantial performance variations — comparable to those from cooldown shape selection — when tuning AdamW hyperparameters. Notably, we observe consistent improvements with higher values of $\\beta_2$ during cooldown. From a loss landscape perspective, we provide visualizations of the landscape during cooldown, supporting the river valley loss perspective empirically. These findings offer practical recommendations for configuring the WSD scheduler in transformer training, emphasizing the importance of optimizing the cooldown phase alongside traditional hyperparameter tuning",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aleksandr Dremov",
+      "Alexander Hägele",
+      "Atli Kosson",
+      "Martin Jaggi"
+    ]
+  },
   "https://openreview.net/forum?id=7M1adi1nfX": {
     "title": "SuFP: Piecewise Bit Allocation Floating-Point for Robust Neural Network Quantization",
     "volume": "main",
@@ -201,8 +437,8 @@
     "volume": "main",
     "abstract": "Measurement and analysis of high energetic particles for scientific, medical or industrial applications is a complex procedure, requiring the design of sophisticated detector and data processing systems. The development of adaptive and differentiable software pipelines using a combination of conventional and machine learning algorithms is therefore getting ever more important to optimize and operate the system efficiently while maintaining end-to-end (E2E) differentiability. In this work, we lay the groundwork for E2E differentiable decision focused learning for the application of charged particle tracking using graph neural networks with combinatorial components solving a linear assignment problem for each detector layer. We demonstrate empirically that including differentiable variations of discrete assignment operations allows for efficient network optimization, working better or on par with approaches that lack E2E differentiability. In additional studies, we dive deeper into the optimization process and provide further insights from a loss landscape perspective, providing a robust foundation for future work. We demonstrate that while both methods converge into similar performing, globally well-connected regions, they suffer under substantial predictive instability across initialization and optimization methods, which can have unpredictable consequences on the performance of downstream tasks such as image reconstruction. We also point out a dependency between the interpolation factor of the gradient estimator and the prediction stability of the model, suggesting the choice of sufficiently small values. Given the strong global connectivity of learned solutions and the excellent training performance, we argue that E2E differentiability provides, besides the general availability of gradient information, an important tool for robust particle tracking to mitigate prediction instabilities by favoring solutions that perform well on downstream tasks",
     "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "id": "ecb458f07a9e9d52aee1cf865706dd4c6411010f",
+    "semantic_title": "exploring end-to-end differentiable neural charged particle tracking - a loss landscape perspective",
     "citation_count": 0,
     "authors": [
       "Tobias Kortus",
@@ -377,9 +613,9 @@
     "title": "DIVINE: Diverse-Inconspicuous Feature Learning to Mitigate Abridge Learning",
     "volume": "main",
     "abstract": "Deep learning algorithms aim to minimize overall error and exhibit impressive performance on test datasets across various domains. However, they often struggle with out-of-distribution (OOD) data samples. We posit that deep models primarily capture prominent features beneficial for the task while neglecting subtle yet discriminative features, a phenomenon we refer to as Abridge Learning. To address this issue and encourage more comprehensive feature utilization, we introduce DIVINE (DIVerse and INconspicuous FEature Learning), a novel approach that leverages iterative feature suppression guided by dominance maps to ensure that models engage with a diverse and complementary set of discriminative features. Through extensive experiments on multiple datasets, including MNIST, CIFAR-10, CIFAR-100, TinyImageNet, and their corrupted and perturbed variants (CIFAR-10-C/P, CIFAR-100-C/P, TinyImageNet-C/P), we demonstrate that DIVINE significantly improves model robustness and generalization. On perturbation benchmarks, DIVINE achieves mean Flip Rates (mFR) of 5.36%, 3.10%, and 21.85% on CIFAR-10-P, CIFAR-100-P, and TinyImageNet-P respectively, compared to 6.53%, 11.75%, and 31.90% for standard training methods exhibiting Abridge Learning. Moreover, DIVINE attains state-of-the-art results on CIFAR-100-P, demonstrating that addressing Abridge Learning leads to more robust models against real-world distribution variations",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "checked": true,
+    "id": "d12a0a2ad52d359470523b617dff57a90bd108e5",
+    "semantic_title": "divine: diverse-inconspicuous feature learning to mitigate abridge learning",
     "citation_count": 0,
     "authors": [
       "Saheb Chhabra",
@@ -393,9 +629,9 @@
     "title": "Variance Reduction of Stochastic Hypergradient Estimation by Mixed Fixed-Point Iteration",
     "volume": "main",
     "abstract": "Hypergradient represents how the hyperparameter of an optimization problem (or inner-problem) changes an outer-cost through the optimized inner-parameter, and it takes a crucial role in hyperparameter optimization, meta learning, and data influence estimation. This paper studies hypergradient computation involving a stochastic inner-problem, a typical machine learning setting where the empirical loss is estimated by minibatches. Stochastic hypergradient estimation requires estimating products of Jacobian matrices of the inner iteration. Current methods struggle with large estimation variance because they depend on a specific sequence of Jacobian samples to estimate this product. This paper overcomes this problem by \\emph{mixing} two different stochastic hypergradient estimation methods that use distinct sequences of Jacobian samples. Furthermore, we show that the proposed method enables almost sure convergence to the true hypergradient through the stochastic Krasnosel'ski\\u{\\i}-Mann iteration. Theoretical analysis demonstrates that, compared to existing approaches, our method achieves lower asymptotic variance bounds while maintaining comparable computational complexity. Empirical evaluations on synthetic and real-world tasks verify our theoretical results and superior variance reduction over existing methods",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "checked": true,
+    "id": "9ef4f49cc8d2b9a2edd63f00172aaceeb554c1c3",
+    "semantic_title": "variance reduction of stochastic hypergradient estimation by mixed fixed-point iteration",
     "citation_count": 0,
     "authors": [
       "Naoyuki Terashita",
@@ -516,9 +752,9 @@
     "title": "Budgeted-Bandits with Controlled Restarts with Applications in Learning and Computing",
     "volume": "main",
     "abstract": "Maximizing the cumulative reward of a sequence of tasks under a time budget has been ubiquitous in many applications in computing and machine learning. Often, tasks can have random completion time and the controller needs to learn the unknown statistics while making optimal decisions. In addition to the classic exploration-exploitation trade-off, it has been shown that restarting strategy can boost the performance of the control algorithm by interrupting ongoing tasks at the expense of losing its reward. In this work, we consider a bandit setting where each decision takes a random completion time and yields a random (possibly correlated) reward at the end, both with unknown values at the time of decision. The goal of the decision-maker is to maximize the expected total reward subject to a stringent time budget $\\tau$. As an additional control, we allow the decision-maker to interrupt an ongoing task and forgo its reward for a potentially more rewarding restart. Unlike previous works, we do not: assume any prior knowledge on the system statistics, or limit the action space of restarting strategies to be finite. Under this general framework, we developed efficient bandit algorithms to find optimal arms and restart strategies with $O(\\log(\\tau))$ and $O(\\sqrt{\\tau\\log(\\tau)})$ regret for both finite and continuous set of restart times, respectively. Furthermore, through numerical studies, we verified the applicability of our algorithm in the diverse contexts of: (i) algorithm portfolios for SAT solvers; (ii) task scheduling in wireless networks; and (iii) hyperparameter tuning in neural network training",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "checked": true,
+    "id": "b7da1fa3cd17254a5280093186c6dc8d37c9c855",
+    "semantic_title": "budgeted-bandits with controlled restarts with applications in learning and computing",
     "citation_count": 0,
     "authors": [
       "Semih Cayci",
@@ -550,10 +786,10 @@
   "https://openreview.net/forum?id=vk7b11DHcW": {
     "title": "Leveraging AutoML for Sustainable Deep Learning: A Multi- Objective HPO Approach on Deep Shift Neural Networks",
     "volume": "main",
-    "abstract": "Deep Learning (DL) has advanced various fields by extracting complex patterns from large datasets. However, the computational demands of DL models pose environmental and resource challenges. Deep Shift Neural Networks (DSNNs) present a solution by leveraging shift operations to reduce computational complexity at inference. Compared to common DNNs, DSNNs are still less well understood and less well optimized. By leveraging AutoML techniques, we provide valuable insights into the potential of DSNNs and how to design them in a better way. We focus on image classification, a core task in computer vision, especially in low-resource environments. Since we consider complementary objectives such as accuracy and energy consumption, we combine state-of-the-art multi-fidelity (MF) hyperparameter optimization (HPO) with multi-objective optimization to find a set of Pareto optimal trade-offs on how to design DSNNs. Our approach led to significantly better configurations of DSNNs regarding loss and emissions compared to default DSNNs. This includes simultaneously increasing performance by about 20% and reducing emissions, in some cases by more than 60%. Investigating the behavior of quantized networks in terms of both emissions and accuracy, our experiments reveal surprising model-specific trade-offs, yielding the greatest energy savings. For example, in contrast to common expectations, quantizing smaller portions of the network with low precision can be optimal with respect to energy consumption while retaining or improving performance. We corroborated these findings across multiple backbone architectures, highlighting important nuances in quantization strategies and offering an automated approach to balancing energy efficiency and model performance",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "",
+    "checked": true,
+    "id": "69603bb5003fffde488c0309fb241116f45bf1d3",
+    "semantic_title": "leveraging automl for sustainable deep learning: a multi- objective hpo approach on deep shift neural networks",
     "citation_count": 0,
     "authors": [
       "Leona Hennig",
@@ -563,7 +799,7 @@
   "https://openreview.net/forum?id=ZzUz0jo200": {
     "title": "Sparsity regularization via tree-structured environments for disentangled representations",
     "volume": "main",
-    "abstract": "Many causal systems such as biological processes in cells can only be observed indirectly via measurements, such as gene expression. Causal representation learning---the task of correctly mapping low-level observations to latent causal variables---could advance scientific understanding by enabling inference of latent variables such as pathway activation. In this paper, we develop methods for inferring latent variables from multiple related datasets (environments) and tasks. As a running example, we consider the task of predicting a phenotype from gene expression, where we often collect data from multiple cell types or organisms that are related in known ways. The key insight is that the mapping from latent variables driven by gene expression to the phenotype of interest changes sparsely across closely related environments. To model sparse changes, we introduce Tree-Based Regularization (TBR), an objective that minimizes both prediction error and regularizes closely related environments to learn similar predictors. We prove that under assumptions about the degree of sparse changes, TBR identifies the true latent variables up to some simple transformations. We evaluate the theory empirically with both simulations and ground-truth gene expression data. We find that TBR recovers the latent causal variables better than related methods across these settings, even under settings that violate some assumptions of the theory",
+    "abstract": "",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -594,11 +830,11 @@
   "https://openreview.net/forum?id=E60YbLnQd2": {
     "title": "Model Tampering Attacks Enable More Rigorous Evaluations of LLM Capabilities",
     "volume": "main",
-    "abstract": "Evaluations of large language model (LLM) risks and capabilities are increasingly being incorporated into AI risk management and governance frameworks. Currently, most risk evaluations are conducted by designing inputs that elicit harmful behaviors from the system. However, this approach suffers from two limitations. First, input-output evaluations cannot fully evaluate realistic risks from open-weight models. Second, the behaviors identified during any particular input-output evaluation can only lower-bound the model's worst-possible-case input-output behavior. As a complementary method for eliciting harmful behaviors, we propose evaluating LLMs with model tampering attacks which allow for modifications to latent activations or weights. We pit state-of-the-art techniques for removing harmful LLM capabilities against a suite of 5 input-space and 6 model tampering attacks. In addition to benchmarking these methods against each other, we show that (1) model resilience to capability elicitation attacks lies on a low-dimensional robustness subspace; (2) the success rate of model tampering attacks can empirically predict and offer conservative estimates for the success of held-out input-space attacks; and (3) state-of-the-art unlearning methods can easily be undone within 16 steps of fine-tuning. Together, these results highlight the difficulty of suppressing harmful LLM capabilities and show that model tampering attacks enable substantially more rigorous evaluations than input-space attacks alone",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "",
+    "checked": true,
+    "id": "b01f5109dff79d108f5758966bd20bc17af561de",
+    "semantic_title": "model tampering attacks enable more rigorous evaluations of llm capabilities",
+    "citation_count": 10,
     "authors": [
       "Zora Che",
       "Stephen Casper",
@@ -707,7 +943,7 @@
   "https://openreview.net/forum?id=FYe66NLDkO": {
     "title": "YoooP: You Only Optimize One Prototype per Class for Non-Exemplar Incremental Learning",
     "volume": "main",
-    "abstract": "Incremental learning (IL) usually addresses catastrophic forgetting of old tasks when learning new tasks by replaying old tasks' raw data stored in memory, which can be limited by its size and the risk of privacy leakage. Recent non-exemplar IL methods store class centroids as prototypes and perturb them with high-dimensional Gaussian noise to generate synthetic data for replaying. Unfortunately, this approach has two major limitations. First, the boundary between embedding clusters around prototypes of different classes might be unclear, leading to serious catastrophic forgetting. Second, directly applying high-dimensional Gaussian noise produces nearly identical synthetic samples that fail to preserve the true data distribution, ultimately degrading performance. In this paper, we propose YoooP, a novel exemplar-free IL approach that can greatly outperform previous methods by only storing and replaying one prototype per class even without synthetic data replay. Instead of merely storing class centroids, YoooP optimizes each prototype by (1) shifting it to high-density regions within each class using an attentional mean-shift algorithm, and (2) optimizing its cosine similarity with class-specific embeddings to form compact, well-separated clusters. As a result, replaying only the optimized prototypes effectively reduces inter-class interference and maintains clear decision boundaries. Furthermore, we extend YoooP to YoooP+ by synthesizing replay data preserving the angular distribution between each class prototype and the class's real data in history, which cannot be obtained by high-dimensional Gaussian perturbation. YoooP+ effectively stabilizes and further improves YoooP without storing real data. Extensive experiments demonstrate the superiority of YoooP/YoooP+ over non-exemplar baselines in terms of different metrics. The code is released at https://github.com/Snowball0823/YoooP.git",
+    "abstract": "",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -9949,21 +10185,6 @@
       "Bradly C. Stadie"
     ]
   },
-  "https://openreview.net/forum?id=v47f4DwYZb": {
-    "title": "Graph-level Representation Learning with Joint-Embedding Predictive Architectures",
-    "volume": "main",
-    "abstract": "Joint-Embedding Predictive Architectures (JEPAs) have recently emerged as a novel and powerful technique for self-supervised representation learning. They aim to learn an energy-based model by predicting the latent representation of a target signal y from the latent representation of a context signal x. JEPAs bypass the need for negative and positive samples, traditionally required by contrastive learning while avoiding the overfitting issues associated with generative pretraining. In this paper, we show that graph-level representations can be effectively modeled using this paradigm by proposing a Graph Joint-Embedding Predictive Architecture (Graph-JEPA). In particular, we employ masked modeling and focus on predicting the latent representations of masked subgraphs starting from the latent representation of a context subgraph. To endow the representations with the implicit hierarchy that is often present in graph-level concepts, we devise an alternative prediction objective that consists of predicting the coordinates of the encoded subgraphs on the unit hyperbola in the 2D plane. Through multiple experimental evaluations, we show that Graph-JEPA can learn highly semantic and expressive representations, as shown by the downstream performance in graph classification, regression, and distinguishing non-isomorphic graphs. The code is available at https://github.com/geriskenderi/graph-jepa",
-    "checked": true,
-    "id": "ab599a501d82d6d1c54d6db0574bf7f4f5a0a825",
-    "semantic_title": "graph-level representation learning with joint-embedding predictive architectures",
-    "citation_count": 5,
-    "authors": [
-      "Geri Skenderi",
-      "Hang Li",
-      "Jiliang Tang",
-      "Marco Cristani"
-    ]
-  },
   "https://openreview.net/forum?id=L7sQ8CW2FY": {
     "title": "Conformalized Credal Regions for Classification with Ambiguous Ground Truth",
     "volume": "main",
@@ -11660,6 +11881,22 @@
       "Aleksander Madry"
     ]
   },
+  "https://openreview.net/forum?id=CtMXJxO7SJ": {
+    "title": "Understanding In-Context Learning of Linear Models in Transformers Through an Adversarial Lens",
+    "volume": "featured",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Usman Anwar",
+      "Johannes von Oswald",
+      "Louis Kirsch",
+      "David Krueger",
+      "Spencer Frei"
+    ]
+  },
   "https://openreview.net/forum?id=ahVFKFLYk2": {
     "title": "The Geometry of Phase Transitions in Diffusion Models: Tubular Neighbourhoods and Singularities",
     "volume": "featured",
@@ -12905,6 +13142,21 @@
       "Prasanna Sattigeri",
       "Ameet Talwalkar",
       "David Sontag"
+    ]
+  },
+  "https://openreview.net/forum?id=v47f4DwYZb": {
+    "title": "Graph-level Representation Learning with Joint-Embedding Predictive Architectures",
+    "volume": "main",
+    "abstract": "Joint-Embedding Predictive Architectures (JEPAs) have recently emerged as a novel and powerful technique for self-supervised representation learning. They aim to learn an energy-based model by predicting the latent representation of a target signal y from the latent representation of a context signal x. JEPAs bypass the need for negative and positive samples, traditionally required by contrastive learning while avoiding the overfitting issues associated with generative pretraining. In this paper, we show that graph-level representations can be effectively modeled using this paradigm by proposing a Graph Joint-Embedding Predictive Architecture (Graph-JEPA). In particular, we employ masked modeling and focus on predicting the latent representations of masked subgraphs starting from the latent representation of a context subgraph. To endow the representations with the implicit hierarchy that is often present in graph-level concepts, we devise an alternative prediction objective that consists of predicting the coordinates of the encoded subgraphs on the unit hyperbola in the 2D plane. Through multiple experimental evaluations, we show that Graph-JEPA can learn highly semantic and expressive representations, as shown by the downstream performance in graph classification, regression, and distinguishing non-isomorphic graphs. The code is available at https://github.com/geriskenderi/graph-jepa",
+    "checked": null,
+    "id": "ab599a501d82d6d1c54d6db0574bf7f4f5a0a825",
+    "semantic_title": "graph-level representation learning with joint-embedding predictive architectures",
+    "citation_count": 5,
+    "authors": [
+      "Geri Skenderi",
+      "Hang Li",
+      "Jiliang Tang",
+      "Marco Cristani"
     ]
   }
 }
