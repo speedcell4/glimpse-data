@@ -5076,33 +5076,33 @@
     "checked": true,
     "id": "4935ed52766af2ebca8f08ca027b87261719b69f",
     "semantic_title": "on representation complexity of model-based and model-free reinforcement learning",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=sKPzAXoylB": {
     "title": "Addressing Loss of Plasticity and Catastrophic Forgetting in Continual Learning",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Deep representation learning methods struggle with continual learning, suffering from both catastrophic forgetting of useful units and loss of plasticity, often due to rigid and unuseful units. While many methods address these two issues separately, only a few currently deal with both simultaneously. In this paper, we introduce Utility-based Perturbed Gradient Descent (UPGD) as a novel approach for the continual learning of representations. UPGD combines gradient updates with perturbations, where it applies smaller modifications to more useful units, protecting them from forgetting, and larger modifications to less useful units, rejuvenating their plasticity. We use a challenging streaming learning setup where continual learning problems have hundreds of non-stationarities and unknown task boundaries. We show that many existing methods suffer from at least one of the issues, predominantly manifested by their decreasing accuracy over tasks. On the other hand, UPGD continues to improve performance and surpasses or is competitive with all methods in all problems. Finally, in extended reinforcement learning experiments with PPO, we show that while Adam exhibits a performance drop after initial learning, UPGD avoids it by addressing both continual learning issues",
     "checked": true,
     "id": "6a74033a9bac3fdda1e22d0f3b0017062a5dc3d0",
     "semantic_title": "addressing loss of plasticity and catastrophic forgetting in continual learning",
-    "citation_count": 24,
+    "citation_count": 27,
     "authors": []
   },
   "https://openreview.net/forum?id=Ixi4j6LtdX": {
     "title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Knowledge distillation (KD) is a technique used to transfer knowledge from a larger ''teacher'' model into a smaller ''student'' model. Recent advancements in meta-learning-based knowledge distillation (MetaKD) emphasize that the fine-tuning of teacher models should be aware of the student's need to achieve better knowledge distillation. However, existing MetaKD methods often lack incentives for the teacher model to improve itself. In this study, we introduce MPDistil, a meta-policy distillation technique, that utilizes novel optimization strategies to foster both *collaboration* and *competition* during the fine-tuning of the teacher model in the meta-learning step. Additionally, we propose a curriculum learning framework for the student model in a competitive setup, in which the student model aims to outperform the teacher model by self-training on various tasks. Exhaustive experiments on SuperGLUE and GLUE benchmarks demonstrate the efficacy of MPDistil compared to $20$ conventional KD and advanced MetaKD baselines, showing significant performance enhancements in the student model -- e.g., a distilled 6-layer BERT model outperforms a 12-layer BERT model on five out of six SuperGLUE tasks. Furthermore, MPDistil, while applied to a large language teacher model (DeBERTa-v2-xxlarge), significantly narrows the performance gap of its smaller student counterpart (DeBERTa-12) by just $4.6$% on SuperGLUE. We further demonstrate how higher rewards and customized training curricula strengthen the student model and enhance generalizability",
     "checked": true,
     "id": "367a81167305d5e85e6a13b0dcc5434e1ed616e3",
     "semantic_title": "a good learner can teach better: teacher-student collaborative knowledge distillation",
-    "citation_count": 7,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=k581sTMyPt": {
     "title": "Diagnosing Transformers: Illuminating Feature Spaces for Clinical Decision-Making",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Pre-trained transformers are often fine-tuned to aid clinical decision-making using limited clinical notes. Model interpretability is crucial, especially in high-stakes domains like medicine, to establish trust and ensure safety, which requires human engagement. We introduce SUFO, a systematic framework that enhances interpretability of fine-tuned transformer feature spaces. SUFO utilizes a range of analytic and visualization techniques, including Supervised probing, Unsupervised similarity analysis, Feature dynamics, and Outlier analysis to address key questions about model trust and interpretability (e.g. model suitability for a task, feature space evolution during fine-tuning, and interpretation of fine-tuned features and failure modes). We conduct a case study investigating the impact of pre-training data where we focus on real-world pathology classification tasks, and validate our findings on MedNLI. We evaluate five 110M-sized pre-trained transformer models, categorized into general-domain (BERT, TNLR), mixed-domain (BioBERT, Clinical BioBERT), and domain-specific (PubMedBERT) groups. Our SUFO analyses reveal that: (1) while PubMedBERT, the domain-specific model, contains valuable information for fine-tuning, it can overfit to minority classes when class imbalances exist. In contrast, mixed-domain models exhibit greater resistance to overfitting, suggesting potential improvements in domain-specific model robustness; (2) in-domain pre-training accelerates feature disambiguation during fine-tuning; and (3) feature spaces undergo significant sparsification during this process, enabling clinicians to identify common outlier modes among fine-tuned models as demonstrated in this paper. These findings showcase the utility of SUFO in enhancing trust and safety when using transformers in medicine, and we believe SUFO can aid practitioners in evaluating fine-tuned language models (LMs) for other applications in medicine and in more critical domains",
     "checked": true,
     "id": "a893a42e32651a0d6d1fee327c285765216809ae",
     "semantic_title": "diagnosing transformers: illuminating feature spaces for clinical decision-making",
@@ -5112,7 +5112,7 @@
   "https://openreview.net/forum?id=A0HKeKl4Nl": {
     "title": "Mechanistically analyzing the effects of fine-tuning on procedurally defined tasks",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Fine-tuning large pre-trained models has become the de facto strategy for developing both task-specific and general-purpose machine learning systems, including developing models that are safe to deploy. Despite its clear importance, there has been minimal work that explains how fine-tuning alters the underlying capabilities learned by a model during pretraining: does fine-tuning yield entirely novel capabilities or does it just modulate existing ones? We address this question empirically in synthetic, controlled settings where we can use mechanistic interpretability tools (e.g., network pruning and probing) to understand how the model's underlying capabilities are changing. We perform an extensive analysis of the effects of fine-tuning in these settings, and show that: (i) fine-tuning rarely alters the underlying model capabilities; (ii) a minimal transformation, which we call a `wrapper', is typically learned on top of the underlying model capabilities, creating the illusion that they have been modified; and (iii) further fine-tuning on a task where such ``wrapped capabilities'' are relevant leads to sample-efficient revival of the capability, i.e., the model begins reusing these capabilities after only a few gradient steps. This indicates that practitioners can unintentionally remove a model's safety wrapper merely by fine-tuning it on a, e.g., superficially unrelated, downstream task. We additionally perform analysis on language models trained on the TinyStories dataset to support our claims in a more realistic setup",
     "checked": true,
     "id": "320da764bd416e7c0dcc1b89fd16cf73560ea852",
     "semantic_title": "mechanistically analyzing the effects of fine-tuning on procedurally defined tasks",
@@ -5126,7 +5126,7 @@
     "checked": true,
     "id": "f97413a497d47c739d41d237917e6566154647b4",
     "semantic_title": "repobench: benchmarking repository-level code auto-completion systems",
-    "citation_count": 170,
+    "citation_count": 187,
     "authors": []
   },
   "https://openreview.net/forum?id=mIEHIcHGOo": {
@@ -5136,7 +5136,7 @@
     "checked": true,
     "id": "2ccc2463e702302acdb096adba9d736da5a64af3",
     "semantic_title": "seeking neural nuggets: knowledge transfer in large language models from a parametric perspective",
-    "citation_count": 12,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=RXFVcynVe1": {
@@ -5146,7 +5146,7 @@
     "checked": true,
     "id": "2d2b05f0969568ac3fd3c2cca5df04c4136c5416",
     "semantic_title": "harnessing explanations: llm-to-lm interpreter for enhanced text-attributed graph representation learning",
-    "citation_count": 82,
+    "citation_count": 92,
     "authors": []
   },
   "https://openreview.net/forum?id=w4DW6qkRmt": {
@@ -5156,7 +5156,7 @@
     "checked": true,
     "id": "22e21f328e3c4aec3abe0006d974a1260d0ee996",
     "semantic_title": "sure: summarizing retrievals using answer candidates for open-domain qa of llms",
-    "citation_count": 51,
+    "citation_count": 56,
     "authors": []
   },
   "https://openreview.net/forum?id=xw5nxFWMlo": {
@@ -5166,7 +5166,7 @@
     "checked": true,
     "id": "2b35b946a8ad64e018c24b283bc1c6c65d36fb67",
     "semantic_title": "retrieval meets long context large language models",
-    "citation_count": 85,
+    "citation_count": 90,
     "authors": []
   },
   "https://openreview.net/forum?id=2DbVeuoa6a": {
@@ -5176,7 +5176,7 @@
     "checked": true,
     "id": "85723719399b7763181a77158598e65b2de7b613",
     "semantic_title": "neural spectral methods: self-supervised learning in the spectral domain",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=he6mX9LTyE": {
@@ -5186,7 +5186,7 @@
     "checked": true,
     "id": "409961b88a3c7495afd21a9a4183c0bfaa858da0",
     "semantic_title": "kosmos-g: generating images in context with multimodal large language models",
-    "citation_count": 68,
+    "citation_count": 81,
     "authors": []
   },
   "https://openreview.net/forum?id=lAhQCHuANV": {
@@ -5206,7 +5206,7 @@
     "checked": true,
     "id": "2479fe3a646762c24230e6d97270bac4de2da600",
     "semantic_title": "litcab: lightweight language model calibration over short- and long-form responses",
-    "citation_count": 27,
+    "citation_count": 29,
     "authors": []
   },
   "https://openreview.net/forum?id=cPgh4gWZlz": {
@@ -5216,7 +5216,7 @@
     "checked": true,
     "id": "e468ed6b824e60f45ba9a20b034e4090c6630751",
     "semantic_title": "chain-of-knowledge: grounding large language models via dynamic knowledge adapting over heterogeneous sources",
-    "citation_count": 102,
+    "citation_count": 113,
     "authors": []
   },
   "https://openreview.net/forum?id=m3xVPaZp6Z": {
@@ -5236,7 +5236,7 @@
     "checked": true,
     "id": "f7606dfb1cccd62cb6094e1ada89cbecf85cd160",
     "semantic_title": "energy-based automated model evaluation",
-    "citation_count": 12,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=iS5ADHNg2A": {
@@ -5246,7 +5246,7 @@
     "checked": true,
     "id": "a78da05384191d8a9b1d6b6f04a9d7de591ed367",
     "semantic_title": "deceptive fairness attacks on graphs via meta learning",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=CTlUHIKF71": {
@@ -5296,7 +5296,7 @@
     "checked": true,
     "id": "373b642a2a3e91178b09c2d07587addcad7f8a22",
     "semantic_title": "data debugging with shapley importance over machine learning pipelines",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=4kLVvIh8cp": {
@@ -5316,7 +5316,7 @@
     "checked": true,
     "id": "bc508431522f5ce74d15fa77ccd4c91ee533151f",
     "semantic_title": "skill-mix: a flexible and expandable family of evaluations for ai models",
-    "citation_count": 47,
+    "citation_count": 51,
     "authors": []
   },
   "https://openreview.net/forum?id=yroyhkhWS6": {
@@ -5326,7 +5326,7 @@
     "checked": true,
     "id": "16c164cf5d2bb0b1c8a9f4580608126d53766ec8",
     "semantic_title": "a quadratic synchronization rule for distributed deep learning",
-    "citation_count": 1,
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=e2YOVTenU9": {
@@ -5346,7 +5346,7 @@
     "checked": true,
     "id": "60d90e96e7c434861697194fa47f1978d86b9d28",
     "semantic_title": "leftover lunch: advantage-based offline reinforcement learning for language models",
-    "citation_count": 10,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=mlJLVigNHp": {
@@ -5356,7 +5356,7 @@
     "checked": true,
     "id": "a75e2f6682e3370e55a076ef3ee3e3f01c065f11",
     "semantic_title": "recomp: improving retrieval-augmented lms with context compression and selective augmentation",
-    "citation_count": 86,
+    "citation_count": 99,
     "authors": []
   },
   "https://openreview.net/forum?id=rkplYfqUr0": {
@@ -5366,7 +5366,7 @@
     "checked": true,
     "id": "d3f387fa3cbfcb6255ac93786b6027eb86eba580",
     "semantic_title": "gen-z: generative zero-shot text classification with contextualized label descriptions",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=62K7mALO2q": {
@@ -5386,7 +5386,7 @@
     "checked": true,
     "id": "bea3593ba91fda7c9ae2ee07ad3b9465cd45ffff",
     "semantic_title": "dichotomy of early and late phase implicit biases can provably induce grokking",
-    "citation_count": 38,
+    "citation_count": 44,
     "authors": []
   },
   "https://openreview.net/forum?id=52fz5sUAy2": {
@@ -5406,7 +5406,7 @@
     "checked": true,
     "id": "1eb1a8c7f88de27af224153f43ecdd41774600f2",
     "semantic_title": "promptagent: strategic planning with language models enables expert-level prompt optimization",
-    "citation_count": 125,
+    "citation_count": 138,
     "authors": []
   },
   "https://openreview.net/forum?id=JnRStoIuTe": {
@@ -5416,7 +5416,7 @@
     "checked": true,
     "id": "1607ee857e7fd5bcd16581859f4049cd61fc909a",
     "semantic_title": "repeated random sampling for minimizing the time-to-accuracy of learning",
-    "citation_count": 14,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=kGteeZ18Ir": {
@@ -5426,7 +5426,7 @@
     "checked": true,
     "id": "1b0e3360b3341fc411a6c7841173a8d78ac2ab43",
     "semantic_title": "bias runs deep: implicit reasoning biases in persona-assigned llms",
-    "citation_count": 122,
+    "citation_count": 141,
     "authors": []
   },
   "https://openreview.net/forum?id=AZW3qlCGTe": {
@@ -5456,7 +5456,7 @@
     "checked": true,
     "id": "4fbaf9bb73193294ab1dbff9db106f428cbfadf9",
     "semantic_title": "srgb real noise modeling via noise-aware sampling with normalizing flows",
-    "citation_count": 2,
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=8dN7gApKm3": {
@@ -5486,7 +5486,7 @@
     "checked": true,
     "id": "6cb43f5d31f3fb8f35bc20f7f23c8394f3e7e0e5",
     "semantic_title": "graph transformers on ehrs: better representation improves downstream performance",
-    "citation_count": 16,
+    "citation_count": 18,
     "authors": []
   },
   "https://openreview.net/forum?id=dwzLn78jq7": {
@@ -5496,7 +5496,7 @@
     "checked": true,
     "id": "32f4bb40804cc768ad190a3fb25c199532d3ca07",
     "semantic_title": "on the scalability and memory efficiency of semidefinite programs for lipschitz constant estimation of neural networks",
-    "citation_count": 12,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=kZEXgtMNNo": {
@@ -5516,7 +5516,7 @@
     "checked": true,
     "id": "5b838e3be86f9f86828f9892aca4f937ec882da8",
     "semantic_title": "clam-tts: improving neural codec language model for zero-shot text-to-speech",
-    "citation_count": 44,
+    "citation_count": 49,
     "authors": []
   },
   "https://openreview.net/forum?id=4VgBjsOC8k": {
@@ -5536,7 +5536,7 @@
     "checked": true,
     "id": "7aa3f5f5a262678d75715b3fe8ea39e2853f921f",
     "semantic_title": "unr-explainer: counterfactual explanations for unsupervised node representation learning models",
-    "citation_count": 2,
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=x8VNtpCu1I": {
@@ -5556,7 +5556,7 @@
     "checked": true,
     "id": "8133ad3008aebcc734708f05580a21a0b948ed60",
     "semantic_title": "exploring the promise and limits of real-time recurrent learning",
-    "citation_count": 16,
+    "citation_count": 17,
     "authors": []
   },
   "https://openreview.net/forum?id=YH5w12OUuU": {
@@ -5566,7 +5566,7 @@
     "checked": true,
     "id": "83ac79bb8e8695fb3c3c024be74790d862adea74",
     "semantic_title": "tempo: prompt-based generative pre-trained transformer for time series forecasting",
-    "citation_count": 134,
+    "citation_count": 151,
     "authors": []
   },
   "https://openreview.net/forum?id=u3dX2CEIZb": {
@@ -5576,7 +5576,7 @@
     "checked": true,
     "id": "f95444d41c3bc38815009a1e4ca40d1f94a20554",
     "semantic_title": "scaling physics-informed hard constraints with mixture-of-experts",
-    "citation_count": 16,
+    "citation_count": 18,
     "authors": []
   },
   "https://openreview.net/forum?id=bvjcMvMn7B": {
@@ -5586,7 +5586,7 @@
     "checked": true,
     "id": "b97d0d8136a67b2bf3069b002a7dd3072d7db25c",
     "semantic_title": "structural fairness-aware active learning for graph neural networks",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=FWJAmwE0xH": {
@@ -5596,7 +5596,7 @@
     "checked": true,
     "id": "61d56ece2d19f4bfeb322c92085fb28521e169da",
     "semantic_title": "neural-symbolic recursive machine for systematic generalization",
-    "citation_count": 9,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=ITq4ZRUT4a": {
@@ -5606,7 +5606,7 @@
     "checked": true,
     "id": "c3b1174989748777173f25406627727073608c05",
     "semantic_title": "davidsonian scene graph: improving reliability in fine-grained evaluation for text-to-image generation",
-    "citation_count": 81,
+    "citation_count": 91,
     "authors": []
   },
   "https://openreview.net/forum?id=3EWTEy9MTM": {
@@ -5616,7 +5616,7 @@
     "checked": true,
     "id": "5a20aa49b81b4e14fdb36814e557b3da60259ce9",
     "semantic_title": "chain of thought empowers transformers to solve inherently serial problems",
-    "citation_count": 133,
+    "citation_count": 153,
     "authors": []
   },
   "https://openreview.net/forum?id=pmweVpJ229": {
@@ -5646,7 +5646,7 @@
     "checked": true,
     "id": "e831d41650e4a724bdc58499c595378d41f3088f",
     "semantic_title": "reverse diffusion monte carlo",
-    "citation_count": 28,
+    "citation_count": 31,
     "authors": []
   },
   "https://openreview.net/forum?id=qaJxPhkYtD": {
@@ -5662,41 +5662,41 @@
   "https://openreview.net/forum?id=w1JanwReU6": {
     "title": "Are Models Biased on Text without Gender-related Language?",
     "volume": "poster",
-    "abstract": "Gender bias research has been pivotal in revealing undesirable behaviors in large language models, exposing serious gender stereotypes associated with occupations, and emotions. A key observation in prior work is that models reinforce stereotypes as a consequence of the gendered correlations that are present in the training data. In this paper, we focus on bias where the effect from training data is unclear, and instead address the question: *Do language models still exhibit gender bias in non-stereotypical settings?* To do so, we introduce **UnStereoEval (USE)**, a novel framework tailored for investigating gender bias in stereotype-free scenarios. USE defines a sentence-level score based on pretraining data statistics to determine if the sentence contain minimal word-gender associations. To systematically benchmark the fairness of popular language models in stereotype-free scenarios, we utilize USE to automatically generate benchmarks without any gender-related language. By leveraging USE's sentence-level score, we also repurpose prior gender bias benchmarks (Winobias and Winogender) for non-stereotypical evaluation. Surprisingly, we find low fairness across all 28 tested models. Concretely, models demonstrate fair behavior in only 9%-41% of stereotype-free sentences, suggesting that bias does not solely stem from the presence of gender-related words. These results raise important questions about where underlying model biases come from and highlight the need for more systematic and comprehensive bias evaluation. We release the full dataset and code at [ucinlp.github.io/unstereo-eval](https://ucinlp.github.io/unstereo-eval)",
+    "abstract": "",
     "checked": true,
     "id": "6ca24da0beafd904c836234effb943f43882481b",
     "semantic_title": "are models biased on text without gender-related language?",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=dFcXJgnrGB": {
     "title": "PlaSma: Procedural Knowledge Models for Language-based Planning and Re-Planning",
     "volume": "poster",
-    "abstract": "Procedural planning, which entails decomposing a high-level goal into a sequence of temporally ordered steps, is an important yet intricate task for machines. It involves integrating common-sense knowledge to reason about complex and often contextualized situations, e.g. ``scheduling a doctor's appointment without a phone''. While current approaches show encouraging results using large language models (LLMs), they are hindered by drawbacks such as costly API calls and reproducibility issues. In this paper, we advocate planning using smaller language models. We present PlaSma, a novel two-pronged approach to endow small language models with procedural knowledge and (constrained) language-based planning capabilities. More concretely, we develop *symbolic procedural knowledge distillation* to enhance the commonsense knowledge in small language models and an *inference-time algorithm* to facilitate more structured and accurate reasoning. In addition, we introduce a new related task, *Replanning*, that requires a revision of a plan to cope with a constrained situation. In both the planning and replanning settings, we show that orders-of-magnitude smaller models (770M-11B parameters) can compete and often surpass their larger teacher models' capabilities. Finally, we showcase successful application of PlaSma in an embodied environment, VirtualHome",
+    "abstract": "",
     "checked": true,
     "id": "e61158cc520946b43b3439389295111514b9f087",
     "semantic_title": "plasma: procedural knowledge models for language-based planning and re-planning",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=PfPnugdxup": {
     "title": "From Molecules to Materials: Pre-training Large Generalizable Models for Atomic Property Prediction",
     "volume": "poster",
-    "abstract": "Foundation models have been transformational in machine learning fields such as natural language processing and computer vision. Similar success in atomic property prediction has been limited due to the challenges of training effective models across multiple chemical domains. To address this, we introduce Joint Multi-domain Pre-training (JMP), a supervised pre-training strategy that simultaneously trains on multiple datasets from different chemical domains, treating each dataset as a unique pre-training task within a multi-task framework. Our combined training dataset consists of $\\sim$120M systems from OC20, OC22, ANI-1x, and Transition-1x. We evaluate performance and generalization by fine-tuning over a diverse set of downstream tasks and datasets including: QM9, rMD17, MatBench, QMOF, SPICE, and MD22. JMP demonstrates an average improvement of 59% over training from scratch and matches or sets state-of-the-art on 34 out of 40 tasks. Our work highlights the potential of pre-training strategies that utilize diverse data to advance property prediction across chemical domains, especially for low-data tasks",
+    "abstract": "",
     "checked": true,
     "id": "a2bd39046159f4b3ed080ea6834b7c35dfc937f0",
     "semantic_title": "from molecules to materials: pre-training large generalizable models for atomic property prediction",
-    "citation_count": 37,
+    "citation_count": 39,
     "authors": []
   },
   "https://openreview.net/forum?id=Zc2aIcucwc": {
     "title": "Towards Foundational Models for Molecular Learning on Large-Scale Multi-Task Datasets",
     "volume": "poster",
-    "abstract": "Recently, pre-trained foundation models have enabled significant advancements in multiple fields. In molecular machine learning, however, where datasets are often hand-curated, and hence typically small, the lack of datasets with labeled features, and codebases to manage those datasets, has hindered the development of foundation models. In this work, we present seven novel datasets categorized by size into three distinct categories: ToyMix, LargeMix and UltraLarge. These datasets push the boundaries in both the scale and the diversity of supervised labels for molecular learning. They cover nearly 100 million molecules and over 3000 sparsely defined tasks, totaling more than 13 billion individual labels of both quantum and biological nature. In comparison, our datasets contain 300 times more data points than the widely used OGB-LSC PCQM4Mv2 dataset, and 13 times more than the quantum-only QM1B dataset. In addition, to support the development of foundational models based on our proposed datasets, we present the Graphium graph machine learning library which simplifies the process of building and training molecular machine learning models for multi-task and multi-level molecular datasets. Finally, we present a range of baseline results as a starting point of multi-task and multi-level training on these datasets. Empirically, we observe that performance on low-resource biological datasets show improvement by also training on large amounts of quantum data. This indicates that there may be potential in multi-task and multi-level training of a foundation model and fine-tuning it to resource-constrained downstream tasks. The Graphium library is publicly available on Github and the dataset links are available in Part 1 and Part 2",
+    "abstract": "",
     "checked": true,
     "id": "a85db1f84c70ccebaf1d7551fc1d584ab267fce0",
     "semantic_title": "towards foundational models for molecular learning on large-scale multi-task datasets",
-    "citation_count": 25,
+    "citation_count": 28,
     "authors": []
   },
   "https://openreview.net/forum?id=w50MQ9Vfty": {
