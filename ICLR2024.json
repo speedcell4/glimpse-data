@@ -3146,7 +3146,7 @@
     "checked": true,
     "id": "b7b7a549629bbe7fa325572339938980e77d155c",
     "semantic_title": "anytext: multilingual visual text generation and editing",
-    "citation_count": 83,
+    "citation_count": 95,
     "authors": []
   },
   "https://openreview.net/forum?id=KIPJKST4gw": {
@@ -3156,13 +3156,13 @@
     "checked": true,
     "id": "1e0caa706e9d9fdad82d6713fa20b52975a1703b",
     "semantic_title": "at which training stage does code data help llms reasoning?",
-    "citation_count": 68,
+    "citation_count": 71,
     "authors": []
   },
   "https://openreview.net/forum?id=4UiLqimGm5": {
     "title": "Coordinate-Aware Modulation for Neural Fields",
     "volume": "spotlight",
-    "abstract": "",
+    "abstract": "Neural fields, mapping low-dimensional input coordinates to corresponding signals, have shown promising results in representing various signals. Numerous methodologies have been proposed, and techniques employing MLPs and grid representations have achieved substantial success. MLPs allow compact and high expressibility, yet often suffer from spectral bias and slow convergence speed. On the other hand, methods using grids are free from spectral bias and achieve fast training speed, however, at the expense of high spatial complexity. In this work, we propose a novel way for exploiting both MLPs and grid representations in neural fields. Unlike the prevalent methods that combine them sequentially (extract features from the grids first and feed them to the MLP), we inject spectral bias-free grid representations into the intermediate features in the MLP. More specifically, we suggest a Coordinate-Aware Modulation (CAM), which modulates the intermediate features using scale and shift parameters extracted from the grid representations. This can maintain the strengths of MLPs while mitigating any remaining potential biases, facilitating the rapid learning of high-frequency components. In addition, we empirically found that the feature normalizations, which have not been successful in neural filed literature, proved to be effective when applied in conjunction with the proposed CAM. Experimental results demonstrate that CAM enhances the performance of neural representation and improves learning stability across a range of signals. Especially in the novel view synthesis task, we achieved state-of-the-art performance with the least number of parameters and fast training speed for dynamic scenes and the best performance under 1MB memory for static scenes. CAM also outperforms the best-performing video compression methods using neural fields by a large margin. Our project page is available at https://maincold2.github.io/cam/",
     "checked": true,
     "id": "06d57b742fefdf77fab7e19ef28173f53bb0bf11",
     "semantic_title": "coordinate-aware modulation for neural fields",
@@ -3172,7 +3172,7 @@
   "https://openreview.net/forum?id=lHZm9vNm5H": {
     "title": "Efficient ConvBN Blocks for Transfer Learning and Beyond",
     "volume": "spotlight",
-    "abstract": "",
+    "abstract": "Convolution-BatchNorm (ConvBN) blocks are integral components in various computer vision tasks and other domains. A ConvBN block can operate in three modes: Train, Eval, and Deploy. While the Train mode is indispensable for training models from scratch, the Eval mode is suitable for transfer learning and beyond, and the Deploy mode is designed for the deployment of models. This paper focuses on the trade-off between stability and efficiency in ConvBN blocks: Deploy mode is efficient but suffers from training instability; Eval mode is widely used in transfer learning but lacks efficiency. To solve the dilemma, we theoretically reveal the reason behind the diminished training stability observed in the Deploy mode. Subsequently, we propose a novel Tune mode to bridge the gap between Eval mode and Deploy mode. The proposed Tune mode is as stable as Eval mode for transfer learning, and its computational efficiency closely matches that of the Deploy mode. Through extensive experiments in object detection, classification, and adversarial example generation across $5$ datasets and $12$ model architectures, we demonstrate that the proposed Tune mode retains the performance while significantly reducing GPU memory footprint and training time, thereby contributing efficient ConvBN blocks for transfer learning and beyond. Our method has been integrated into both PyTorch (general machine learning framework) and MMCV/MMEngine (computer vision framework). Practitioners just need one line of code to enjoy our efficient ConvBN blocks thanks to PyTorch's builtin machine learning compilers",
     "checked": true,
     "id": "6927fd6b30c3b3e466e4d9f9c2667e7b2e9c1977",
     "semantic_title": "efficient convbn blocks for transfer learning and beyond",
@@ -3182,21 +3182,21 @@
   "https://openreview.net/forum?id=TrKq4Wlwcz": {
     "title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
     "volume": "spotlight",
-    "abstract": "",
+    "abstract": "Shannon and Weaver's seminal information theory divides communication into three levels: technical, semantic, and effectiveness. While the technical level deals with the accurate reconstruction of transmitted symbols, the semantic and effectiveness levels deal with the inferred meaning and its effect on the receiver. Large Language Models (LLMs), with their wide generalizability, make some progress towards the second level. However, LLMs and other communication models are not conventionally designed for predicting and optimizing communication for desired receiver behaviors and intents. As a result, the effectiveness level remains largely untouched by modern communication systems. In this paper, we introduce the receivers' \"behavior tokens,\" such as shares, likes, clicks, purchases, and retweets, in the LLM's training corpora to optimize content for the receivers and predict their behaviors. Other than showing similar performance to LLMs on content understanding tasks, our trained models show generalization capabilities on the behavior dimension for behavior simulation, content simulation, behavior understanding, and behavior domain adaptation. We show results on all these capabilities using a wide range of tasks on three corpora. We call these models Large Content and Behavior Models (LCBMs). Further, to spur more research on LCBMs, we release our new Content Behavior Corpus (CBC), a repository containing communicator, message, and corresponding receiver behavior (https://behavior-in-the-wild.github.io/LCBM)",
     "checked": true,
     "id": "355a3402d1a9f0c0199e1b8488ebeb5bc952b23a",
     "semantic_title": "large content and behavior models to understand, simulate, and optimize content and behavior",
-    "citation_count": 8,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=2cRzmWXK9N": {
     "title": "Beyond Reverse KL: Generalizing Direct Preference Optimization with Diverse Divergence Constraints",
     "volume": "spotlight",
-    "abstract": "",
+    "abstract": "The increasing capabilities of large language models (LLMs) raise opportunities for artificial general intelligence but concurrently amplify safety concerns, such as potential misuse of AI systems, necessitating effective AI alignment. Reinforcement Learning from Human Feedback (RLHF) has emerged as a promising pathway towards AI alignment but brings forth challenges due to its complexity and dependence on a separate reward model. Direct Preference Optimization (DPO) has been proposed as an alternative; and it remains equivalent to RLHF under the reverse KL regularization constraint. This paper presents $f$-DPO, a generalized approach to DPO by incorporating diverse divergence constraints. We show that under certain $f$-divergences, including Jensen-Shannon divergence, forward KL divergences and $\\alpha$-divergences, the complex relationship between the reward and optimal policy can also be simplified by addressing the Karush–Kuhn–Tucker conditions. This eliminates the need for estimating the normalizing constant in the Bradley-Terry model and enables a tractable mapping between the reward function and the optimal policy. Our approach optimizes LLMs to align with human preferences in a more efficient and supervised manner under a broad set of divergence constraints. Empirically, adopting these divergences ensures a balance between alignment performance and generation diversity. Importantly, our $f$-DPO outperforms PPO-based methods in divergence efficiency, and divergence constraints directly influence expected calibration error (ECE)",
     "checked": true,
     "id": "860c8de4fdac38695ff6860dd15312f1079c6117",
     "semantic_title": "beyond reverse kl: generalizing direct preference optimization with diverse divergence constraints",
-    "citation_count": 108,
+    "citation_count": 117,
     "authors": []
   },
   "https://openreview.net/forum?id=CYmF38ysDa": {
@@ -3206,7 +3206,7 @@
     "checked": true,
     "id": "b5069352383579c6464d8e5ec34eab693c45f59a",
     "semantic_title": "flask: fine-grained language model evaluation based on alignment skill sets",
-    "citation_count": 107,
+    "citation_count": 118,
     "authors": []
   },
   "https://openreview.net/forum?id=BOfDKxfwt0": {
@@ -3216,7 +3216,7 @@
     "checked": true,
     "id": "84a36e19f9394f22b34f79756fa9628a795e02ea",
     "semantic_title": "lmsys-chat-1m: a large-scale real-world llm conversation dataset",
-    "citation_count": 221,
+    "citation_count": 257,
     "authors": []
   },
   "https://openreview.net/forum?id=UmMa3UNDAz": {
@@ -3226,7 +3226,7 @@
     "checked": true,
     "id": "1c044b2bd2487feef414b7b9f3570d7e4e938d40",
     "semantic_title": "efficientdm: efficient quantization-aware fine-tuning of low-bit diffusion models",
-    "citation_count": 51,
+    "citation_count": 56,
     "authors": []
   },
   "https://openreview.net/forum?id=3TO3TtnOFl": {
@@ -3236,7 +3236,7 @@
     "checked": true,
     "id": "f99116659c7522941c2353f23bddd07251adaccc",
     "semantic_title": "btr: binary token representations for efficient retrieval augmented language models",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=t0FI3Q66K5": {
@@ -3246,7 +3246,7 @@
     "checked": true,
     "id": "beb3e8acd816bac1a5b7fccfd073f79048877e33",
     "semantic_title": "frozen transformers in language models are effective visual encoder layers",
-    "citation_count": 27,
+    "citation_count": 36,
     "authors": []
   },
   "https://openreview.net/forum?id=s9z0HzWJJp": {
@@ -3256,7 +3256,7 @@
     "checked": true,
     "id": "ba8400cd7b94f04f91cf3c2d8c1e1fa5ef83e8d3",
     "semantic_title": "sociodojo: building lifelong analytical agents with real-world text and time series",
-    "citation_count": 9,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=ix7rLVHXyY": {
@@ -3266,7 +3266,7 @@
     "checked": true,
     "id": "1786a2f9140ed7211b21302977de64e948b92308",
     "semantic_title": "learning performance-improving code edits",
-    "citation_count": 91,
+    "citation_count": 100,
     "authors": []
   },
   "https://openreview.net/forum?id=Wd47f7HEXg": {
@@ -3276,7 +3276,7 @@
     "checked": true,
     "id": "5306ba33d3ac5838d2b84b1d53bede563c474398",
     "semantic_title": "quasi-monte carlo for 3d sliced wasserstein",
-    "citation_count": 17,
+    "citation_count": 19,
     "authors": []
   },
   "https://openreview.net/forum?id=l3qtSNsPvC": {
@@ -3326,7 +3326,7 @@
     "checked": true,
     "id": "a6f01cda1d53cef6345d6ea9dfd4258286da5853",
     "semantic_title": "an image is worth 1000 lies: transferability of adversarial images across prompts on vision-language models",
-    "citation_count": 35,
+    "citation_count": 37,
     "authors": []
   },
   "https://openreview.net/forum?id=4IT2pgc9v6": {
@@ -3336,7 +3336,7 @@
     "checked": true,
     "id": "ab22d54dd13876d25c6c8f46c40fb9ac41c61ec5",
     "semantic_title": "one for all: towards training one graph model for all classification tasks",
-    "citation_count": 132,
+    "citation_count": 153,
     "authors": []
   },
   "https://openreview.net/forum?id=wg8NPfeMF9": {
@@ -3356,7 +3356,7 @@
     "checked": true,
     "id": "526c02aa9f649da627f1631687c8b37a2a05868d",
     "semantic_title": "feature emergence via margin maximization: case studies in algebraic tasks",
-    "citation_count": 16,
+    "citation_count": 18,
     "authors": []
   },
   "https://openreview.net/forum?id=JORAfH2xFd": {
@@ -3366,7 +3366,7 @@
     "checked": true,
     "id": "64bbc6f10a701490d2acff4bc4e6782c563fbb12",
     "semantic_title": "on the stability of iterative retraining of generative models on their own data",
-    "citation_count": 51,
+    "citation_count": 56,
     "authors": []
   },
   "https://openreview.net/forum?id=rmg0qMKYRQ": {
@@ -3376,7 +3376,7 @@
     "checked": true,
     "id": "af66cfb7290366491044d1c7e43ee4c0021fc878",
     "semantic_title": "intriguing properties of generative classifiers",
-    "citation_count": 39,
+    "citation_count": 40,
     "authors": []
   },
   "https://openreview.net/forum?id=qnWtw3l0jb": {
@@ -3386,7 +3386,7 @@
     "checked": true,
     "id": "e946a9a8abdc873d6c44257320f4c5e90d6d8fde",
     "semantic_title": "fast imitation via behavior foundation models",
-    "citation_count": 13,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=zSxpnKh1yS": {
@@ -3396,7 +3396,7 @@
     "checked": true,
     "id": "2f7673ec43be0cb7302d921ac652db5cec019103",
     "semantic_title": "task adaptation from skills: information geometry, disentanglement, and new objectives for unsupervised reinforcement learning",
-    "citation_count": 7,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=sLdVl0q68X": {
@@ -3406,7 +3406,7 @@
     "checked": true,
     "id": "539fc0eccdf352a7aec8f72aa9135dd7fdf1dd60",
     "semantic_title": "nuwadynamics: discovering and updating in causal spatio-temporal modeling",
-    "citation_count": 17,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=ylhiMfpqkm": {
@@ -3416,7 +3416,7 @@
     "checked": true,
     "id": "ded711d2593522e0134d3404e5232bbb6af02e61",
     "semantic_title": "pre-training and fine-tuning generative flow networks",
-    "citation_count": 13,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=ZO5cn4IfaN": {
@@ -3426,7 +3426,7 @@
     "checked": true,
     "id": "cfb0a89ce5295ddc6ea568295611f8baf17d8c25",
     "semantic_title": "co2: efficient distributed training with full communication-computation overlap",
-    "citation_count": 11,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=zMoNrajk2X": {
@@ -3436,7 +3436,7 @@
     "checked": true,
     "id": "941bf95e89ad2d0f851c2b8fcd59c7c077c0af2b",
     "semantic_title": "cads: unleashing the diversity of diffusion models through condition-annealed sampling",
-    "citation_count": 52,
+    "citation_count": 61,
     "authors": []
   },
   "https://openreview.net/forum?id=rUf9G9k2im": {
@@ -3446,7 +3446,7 @@
     "checked": true,
     "id": "a8cdbbab9f33552025bade36a74c1150a10aff02",
     "semantic_title": "image inpainting via iteratively decoupled probabilistic modeling",
-    "citation_count": 12,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=5BXAXOpaWu": {
@@ -3456,7 +3456,7 @@
     "checked": true,
     "id": "a90d05db0d61a68c8eea0722f45144bce11b71c1",
     "semantic_title": "image2sentence based asymmetrical zero-shot composed image retrieval",
-    "citation_count": 10,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=1PXEY7ofFX": {
@@ -3476,7 +3476,7 @@
     "checked": true,
     "id": "10ee2ffe72765f8fe34e899aeff820d574771e0d",
     "semantic_title": "leveraging augmented-lagrangian techniques for differentiating over infeasible quadratic programs in machine learning",
-    "citation_count": 2,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=TzoHLiGVMo": {
@@ -3486,7 +3486,7 @@
     "checked": true,
     "id": "e17579b2ac5efbc9128c248c64b41bb718d75a38",
     "semantic_title": "odeformer: symbolic regression of dynamical systems with transformers",
-    "citation_count": 25,
+    "citation_count": 30,
     "authors": []
   },
   "https://openreview.net/forum?id=fLXpXa7iiz": {
@@ -3496,7 +3496,7 @@
     "checked": true,
     "id": "bfd80379190f17d1afcd4ed675d5822d236564e8",
     "semantic_title": "convergence of bayesian bilevel optimization",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=QQ6RgKYiQq": {
@@ -3516,7 +3516,7 @@
     "checked": true,
     "id": "dcfc69c3fdc5d59785e3a8284143c7be989fae36",
     "semantic_title": "equivariant matrix function neural networks",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=kUuKFW7DIF": {
@@ -3526,7 +3526,7 @@
     "checked": true,
     "id": "3f4decfbe642d09a2779ed58dcc5de1e8258d543",
     "semantic_title": "multi-resolution hubert: multi-resolution speech self-supervised learning with masked unit prediction",
-    "citation_count": 27,
+    "citation_count": 28,
     "authors": []
   },
   "https://openreview.net/forum?id=nLWiR5P3wr": {
@@ -3546,7 +3546,7 @@
     "checked": true,
     "id": "e51678cbb6d81465adeab904ac263c0bd2c8092d",
     "semantic_title": "prototypical information bottlenecking and disentangling for multimodal cancer survival prediction",
-    "citation_count": 29,
+    "citation_count": 34,
     "authors": []
   },
   "https://openreview.net/forum?id=8xliOUg9EW": {
@@ -3556,7 +3556,7 @@
     "checked": true,
     "id": "a36b13d1088b958fd44859ddb90009674991bd92",
     "semantic_title": "mustard: mastering uniform synthesis of theorem and proof data",
-    "citation_count": 38,
+    "citation_count": 43,
     "authors": []
   },
   "https://openreview.net/forum?id=xsd2llWYSA": {
@@ -3566,7 +3566,7 @@
     "checked": true,
     "id": "af25d5d13aa2d896822654d3f05baf7efb0a6d05",
     "semantic_title": "fld: fourier latent dynamics for structured motion representation and learning",
-    "citation_count": 10,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=Tw9wemV6cb": {
@@ -3576,7 +3576,7 @@
     "checked": true,
     "id": "f8036a0dbeb67c3523a59173a8c3feda12702d66",
     "semantic_title": "towards reliable and efficient backdoor trigger inversion via decoupling benign features",
-    "citation_count": 27,
+    "citation_count": 31,
     "authors": []
   },
   "https://openreview.net/forum?id=ziDFH8TPPK": {
@@ -3596,7 +3596,7 @@
     "checked": true,
     "id": "becd8a181ac1743ffc30c972d50c5d712c239166",
     "semantic_title": "poisoned forgery face: towards backdoor attacks on face forgery detection",
-    "citation_count": 24,
+    "citation_count": 29,
     "authors": []
   },
   "https://openreview.net/forum?id=1vCnDyQkjg": {
@@ -3606,7 +3606,7 @@
     "checked": true,
     "id": "dca4ed6d4db18216796336d647f8d4bdf197f039",
     "semantic_title": "unified human-scene interaction via prompted chain-of-contacts",
-    "citation_count": 75,
+    "citation_count": 86,
     "authors": []
   },
   "https://openreview.net/forum?id=G32oY4Vnm8": {
@@ -3616,7 +3616,7 @@
     "checked": true,
     "id": "f61f5169321f5228f018567f8e46802977cb7c8c",
     "semantic_title": "ptarl: prototype-based tabular representation learning via space calibration",
-    "citation_count": 25,
+    "citation_count": 27,
     "authors": []
   },
   "https://openreview.net/forum?id=4VIgNuQ1pY": {
@@ -3626,7 +3626,7 @@
     "checked": true,
     "id": "d70125dc8a5bc89bc0fc9a95767dd4510260d737",
     "semantic_title": "stable neural stochastic differential equations in analyzing irregular time series data",
-    "citation_count": 17,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=2HJRwwbV3G": {
@@ -3636,7 +3636,7 @@
     "checked": true,
     "id": "8c90e1465917674076f860b707f396c1ad6d56b9",
     "semantic_title": "what does the knowledge neuron thesis have to do with knowledge?",
-    "citation_count": 38,
+    "citation_count": 39,
     "authors": []
   },
   "https://openreview.net/forum?id=DqziS8DG4M": {
@@ -3656,7 +3656,7 @@
     "checked": true,
     "id": "13fd3836a0082a91591528c241c9879107208660",
     "semantic_title": "improving domain generalization with domain relations",
-    "citation_count": 9,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=XlkN11Xj6J": {
@@ -3666,7 +3666,7 @@
     "checked": true,
     "id": "1036f39069a1fe3d5f818f1d7bc07286ad3f1363",
     "semantic_title": "generating images with 3d annotations using diffusion models",
-    "citation_count": 5,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=MHjigVnI04": {
@@ -3676,7 +3676,7 @@
     "checked": false,
     "id": "879808647db6c5aa418f273675ff1fe2d033c6cd",
     "semantic_title": "spectral alignment of stochastic gradient descent for high-dimensional classification tasks",
-    "citation_count": 11,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=fLf589bx1f": {
@@ -3686,7 +3686,7 @@
     "checked": false,
     "id": "6a0f1a8a03baba3e54a1a2ef348a1b0c2b8dff4b",
     "semantic_title": "b-coder: value-based deep reinforcement learning for program synthesis",
-    "citation_count": 13,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=auKAUJZMO6": {
@@ -3696,7 +3696,7 @@
     "checked": true,
     "id": "10f829a80a7ee0cdb16307f04e206133d75f81da",
     "semantic_title": "adaptive chameleon or stubborn sloth: revealing the behavior of large language models in knowledge conflicts",
-    "citation_count": 180,
+    "citation_count": 200,
     "authors": []
   },
   "https://openreview.net/forum?id=mQ72XRfYRZ": {
@@ -3706,7 +3706,7 @@
     "checked": true,
     "id": "a8c4f683f08d8406c465dcf9ac32343949cd5eb5",
     "semantic_title": "a hierarchical bayesian model for few-shot meta learning",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=yKksu38BpM": {
@@ -3726,7 +3726,7 @@
     "checked": true,
     "id": "af2fba1911f0d0977c731e3918c51428e08741da",
     "semantic_title": "conformal risk control",
-    "citation_count": 141,
+    "citation_count": 150,
     "authors": []
   },
   "https://openreview.net/forum?id=770DetV8He": {
@@ -3736,33 +3736,33 @@
     "checked": true,
     "id": "93cca81522fd4e11a89b59fa5f9030cd4556593e",
     "semantic_title": "retrobridge: modeling retrosynthesis with markov bridges",
-    "citation_count": 16,
+    "citation_count": 19,
     "authors": []
   },
   "https://openreview.net/forum?id=LtuRgL03pI": {
     "title": "InstructScene: Instruction-Driven 3D Indoor Scene Synthesis with Semantic Graph Prior",
     "volume": "spotlight",
-    "abstract": "Comprehending natural language instructions is a charming property for 3D indoor scene synthesis systems. Existing methods directly model object joint distributions and express object relations implicitly within a scene, thereby hindering the controllability of generation. We introduce InstructScene, a novel generative framework that integrates a semantic graph prior and a layout decoder to improve controllability and fidelity for 3D scene synthesis. The proposed semantic graph prior jointly learns scene appearances and layout distributions, exhibiting versatility across various downstream tasks in a zero-shot manner. To facilitate the benchmarking for text-driven 3D scene synthesis, we curate a high-quality dataset of scene-instruction pairs with large language and multimodal models. Extensive experimental results reveal that the proposed method surpasses existing state-of-the-art approaches by a large margin. Thorough ablation studies confirm the efficacy of crucial design components. Project page: https://chenguolin.github.io/projects/InstructScene",
+    "abstract": "",
     "checked": true,
     "id": "8ea1afe4dd58ed64d234a00a61f2395301b103de",
     "semantic_title": "instructscene: instruction-driven 3d indoor scene synthesis with semantic graph prior",
-    "citation_count": 40,
+    "citation_count": 50,
     "authors": []
   },
   "https://openreview.net/forum?id=DrhZneqz4n": {
     "title": "Single Motion Diffusion",
     "volume": "spotlight",
-    "abstract": "Synthesizing realistic animations of humans, animals, and even imaginary creatures, has long been a goal for artists and computer graphics professionals. Compared to the imaging domain, which is rich with large available datasets, the number of data instances for the motion domain is limited, particularly for the animation of animals and exotic creatures (e.g., dragons), which have unique skeletons and motion patterns. In this work, we introduce SinMDM, a Single Motion Diffusion Model. It is designed to learn the internal motifs of a single motion sequence with arbitrary topology and synthesize a variety of motions of arbitrary length that remain faithful to the learned motifs. We harness the power of diffusion models and present a denoising network explicitly designed for the task of learning from a single input motion. SinMDM is crafted as a lightweight architecture, which avoids overfitting by using a shallow network with local attention layers that narrow the receptive field and encourage motion diversity. Our work applies to multiple contexts, including spatial and temporal in-betweening, motion expansion, style transfer, and crowd animation. Our results show that SinMDM outperforms existing methods both qualitatively and quantitatively. Moreover, while prior network-based approaches require additional training for different applications, SinMDM supports these applications during inference. Our project page, which includes links to the code and trained models, is accessible at https://sinmdm.github.io/SinMDM-page",
+    "abstract": "",
     "checked": true,
     "id": "03541e93629055228357814c4c59f87b6090fc23",
     "semantic_title": "single motion diffusion",
-    "citation_count": 60,
+    "citation_count": 64,
     "authors": []
   },
   "https://openreview.net/forum?id=5Dwqu5urzs": {
     "title": "Physics-Regulated Deep Reinforcement Learning: Invariant Embeddings",
     "volume": "spotlight",
-    "abstract": "This paper proposes the Phy-DRL: a physics-regulated deep reinforcement learning (DRL) framework for safety-critical autonomous systems. The Phy-DRL has three distinguished invariant-embedding designs: i) residual action policy (i.e., integrating data-driven-DRL action policy and physics-model-based action policy), ii) automatically constructed safety-embedded reward, and iii) physics-model-guided neural network (NN) editing, including link editing and activation editing. Theoretically, the Phy-DRL exhibits 1) a mathematically provable safety guarantee and 2) strict compliance of critic and actor networks with physics knowledge about the action-value function and action policy. Finally, we evaluate the Phy-DRL on a cart-pole system and a quadruped robot. The experiments validate our theoretical results and demonstrate that Phy-DRL features guaranteed safety compared to purely data-driven DRL and solely model-based design while offering remarkably fewer learning parameters and fast training towards safety guarantee",
+    "abstract": "",
     "checked": true,
     "id": "fc867cdaa921dec90aaa0c277461da742cf0913c",
     "semantic_title": "physics-regulated deep reinforcement learning: invariant embeddings",
@@ -3772,7 +3772,7 @@
   "https://openreview.net/forum?id=sxGugrYhP9": {
     "title": "BatteryML: An Open-source Platform for Machine Learning on Battery Degradation",
     "volume": "spotlight",
-    "abstract": "Battery degradation remains a pivotal concern in the energy storage domain, with machine learning emerging as a potent tool to drive forward insights and solutions. However, this intersection of electrochemical science and machine learning poses complex challenges. Machine learning experts often grapple with the intricacies of battery science, while battery researchers face hurdles in adapting intricate models tailored to specific datasets. Beyond this, a cohesive standard for battery degradation modeling, inclusive of data formats and evaluative benchmarks, is conspicuously absent. Recognizing these impediments, we present BatteryML—a one-step, all-encompass, and open-source platform designed to unify data preprocessing, feature extraction, and the implementation of both traditional and state-of-the-art models. This streamlined approach promises to enhance the practicality and efficiency of research applications. BatteryML seeks to fill this void, fostering an environment where experts from diverse specializations can collaboratively contribute, thus elevating the collective understanding and advancement of battery research",
+    "abstract": "",
     "checked": true,
     "id": "a96757f4d4dc77818b6854acf9f0bcebc64d80d5",
     "semantic_title": "batteryml: an open-source platform for machine learning on battery degradation",
