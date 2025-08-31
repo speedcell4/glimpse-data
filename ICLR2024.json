@@ -7626,7 +7626,7 @@
     "checked": true,
     "id": "ffcbc17638beb1e1aff3eba1dd48735ed72a02d4",
     "semantic_title": "llm-cxr: instruction-finetuned llm for cxr image understanding and generation",
-    "citation_count": 51,
+    "citation_count": 56,
     "authors": []
   },
   "https://openreview.net/forum?id=fszrlQ2DuP": {
@@ -7636,13 +7636,13 @@
     "checked": false,
     "id": "09fbe8046036d639ff38b6fd2cc67a5bbd0cce58",
     "semantic_title": "can we evaluate domain adaptation models without target-domain labels? a metric for unsupervised evaluation of domain adaptation",
-    "citation_count": 10,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=fyTPWfXtcc": {
     "title": "Global Optimality for Non-linear Constrained Restoration Problems via Invexity",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Signal restoration is an important constrained optimization problem with significant applications in various domains. Although non-convex constrained optimization problems have been shown to perform better than convex counterparts in terms of reconstruction quality, convex constrained optimization problems have been preferably for its global optima guarantees. Despite the success of non-convex methods in a large number of applications, it is not an overstatement to say that there is little or no hope for non-convex problems to ensure global optima. In this paper, for the first time, we develop invex constrained optimization theory to mitigate the loss of guarantees for global optima in non-convex constrained inverse problems, where the invex function is a mapping where any critical point is a global minimizer. We also develop relevant theories to extend the global optima guarantee to a set of quasi-invex functions - the largest optimizable mappings. More specifically, we propose a family of invex/quasi-invex of functions for handling constrained inverse problems using the non-convex setting along with guarantees for their global optima. Our experimental evaluation shows that the proposed approach is very promising and can aid in extending existing convex optimization algorithms, such as the alternating direction method of multipliers, and accelerated proximal gradient methods",
     "checked": true,
     "id": "32cb9babca02b8f24b11265201b7ceccb980c8de",
     "semantic_title": "global optimality for non-linear constrained restoration problems via invexity",
@@ -7652,31 +7652,31 @@
   "https://openreview.net/forum?id=iriEqxFB4y": {
     "title": "DOS: Diverse Outlier Sampling for Out-of-Distribution Detection",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Modern neural networks are known to give overconfident predictions for out-of-distribution inputs when deployed in the open world. It is common practice to leverage a surrogate outlier dataset to regularize the model during training, and recent studies emphasize the role of uncertainty in designing the sampling strategy for outlier datasets. However, the OOD samples selected solely based on predictive uncertainty can be biased towards certain types, which may fail to capture the full outlier distribution. In this work, we empirically show that diversity is critical in sampling outliers for OOD detection performance. Motivated by the observation, we propose a straightforward and novel sampling strategy named DOS (Diverse Outlier Sampling) to select diverse and informative outliers. Specifically, we cluster the normalized features at each iteration, and the most informative outlier from each cluster is selected for model training with absent category loss. With DOS, the sampled outliers efficiently shape a globally compact decision boundary between ID and OOD data. Extensive experiments demonstrate the superiority of DOS, reducing the average FPR95 by up to 25.79% on CIFAR-100 with TI-300K",
     "checked": true,
     "id": "913d26360f1a715f6ae80f5a775f398aa2f66c9d",
     "semantic_title": "dos: diverse outlier sampling for out-of-distribution detection",
-    "citation_count": 11,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=MY0qlcFcUg": {
     "title": "Denoising Task Routing for Diffusion Models",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Diffusion models generate highly realistic images by learning a multi-step denoising process, naturally embodying the principles of multi-task learning (MTL). Despite the inherent connection between diffusion models and MTL, there remains an unexplored area in designing neural architectures that explicitly incorporate MTL into the framework of diffusion models. In this paper, we present Denoising Task Routing (DTR), a simple add-on strategy for existing diffusion model architectures to establish distinct information pathways for individual tasks within a single architecture by selectively activating subsets of channels in the model. What makes DTR particularly compelling is its seamless integration of prior knowledge of denoising tasks into the framework: (1) Task Affinity: DTR activates similar channels for tasks at adjacent timesteps and shifts activated channels as sliding windows through timesteps, capitalizing on the inherent strong affinity between tasks at adjacent timesteps. (2) Task Weights: During the early stages (higher timesteps) of the denoising process, DTR assigns a greater number of task-specific channels, leveraging the insight that diffusion models prioritize reconstructing global structure and perceptually rich contents in earlier stages, and focus on simple noise removal in later stages. Our experiments reveal that DTR not only consistently boosts diffusion models' performance across different evaluation protocols without adding extra parameters but also accelerates training convergence. Finally, we show the complementarity between our architectural approach and existing MTL optimization techniques, providing a more complete view of MTL in the context of diffusion training. Significantly, by leveraging this complementarity, we attain matched performance of DiT-XL using the smaller DiT-L with a reduction in training iterations from 7M to 2M. Our project page is available at https://byeongjun-park.github.io/DTR/",
     "checked": true,
     "id": "fae76f91b776310727c0668faa0ddd0ce957877c",
     "semantic_title": "denoising task routing for diffusion models",
-    "citation_count": 18,
+    "citation_count": 19,
     "authors": []
   },
   "https://openreview.net/forum?id=dcjtMYkpXx": {
     "title": "Reward Model Ensembles Help Mitigate Overoptimization",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Reinforcement learning from human feedback (RLHF) is a standard approach for fine-tuning large language models to follow instructions. As part of this process, learned reward models are used to approximately model human preferences. However, as imperfect representations of the \"true\" reward, these learned reward models are susceptible to overoptimization. Gao et al. (2023) studied this phenomenon in a synthetic human feedback setup with a significantly larger \"gold\" reward model acting as the true reward (instead of humans) and showed that overoptimization remains a persistent problem regardless of the size of the proxy reward model and training data used. Using a similar setup, we conduct a systematic study to evaluate the efficacy of using ensemble-based conservative optimization objectives, specifically worst-case optimization (WCO) and uncertainty-weighted optimization (UWO), for mitigating reward model overoptimization when using two optimization methods: (a) best-of-n sampling (BoN) (b) proximal policy optimization (PPO). We additionally extend the setup of Gao et al. (2023) to include 25% label noise to better mirror real-world conditions. Both with and without label noise we find that conservative optimization practically eliminates overoptimization and improves performance by up to 70% for BoN sampling. For PPO, ensemble-based conservative optimization always reduces overoptimization and outperforms single reward model optimization. Moreover, combining it with a small KL penalty successfully prevents overoptimization at no performance cost. Overall, our results demonstrate that ensemble-based conservative optimization can effectively counter overoptimization",
     "checked": true,
     "id": "023d462ec6ff84cee0d0716a34d11efc7cde8534",
     "semantic_title": "reward model ensembles help mitigate overoptimization",
-    "citation_count": 139,
+    "citation_count": 146,
     "authors": []
   },
   "https://openreview.net/forum?id=HKGQDDTuvZ": {
@@ -7686,7 +7686,7 @@
     "checked": true,
     "id": "c2b0de6112d61994e2f873a29e8ef6133ae2a873",
     "semantic_title": "frequency-aware transformer for learned image compression",
-    "citation_count": 29,
+    "citation_count": 37,
     "authors": []
   },
   "https://openreview.net/forum?id=nMFSUjxMIl": {
@@ -7696,7 +7696,7 @@
     "checked": true,
     "id": "84d69931dd1ca2391e4c2256bbc10b981000c486",
     "semantic_title": "circuitnet 2.0: an advanced dataset for promoting machine learning innovations in realistic chip design environment",
-    "citation_count": 15,
+    "citation_count": 17,
     "authors": []
   },
   "https://openreview.net/forum?id=q9jQPA6zPK": {
@@ -7716,7 +7716,7 @@
     "checked": true,
     "id": "3f40edfcafc018b2cb54612a9aaa9d6b43a11a26",
     "semantic_title": "gollie: annotation guidelines improve zero-shot information-extraction",
-    "citation_count": 91,
+    "citation_count": 102,
     "authors": []
   },
   "https://openreview.net/forum?id=vZ6r9GMT1n": {
@@ -7736,7 +7736,7 @@
     "checked": true,
     "id": "97b6f4357d1e3ab40a7ee60acb5260a948e3641d",
     "semantic_title": "hybrid llm: cost-efficient and quality-aware query routing",
-    "citation_count": 106,
+    "citation_count": 130,
     "authors": []
   },
   "https://openreview.net/forum?id=3cuJwmPxXj": {
@@ -7746,7 +7746,7 @@
     "checked": true,
     "id": "c52c351f67f627233ea09b0c20e1aa505c4d65ab",
     "semantic_title": "identifying representations for intervention extrapolation",
-    "citation_count": 16,
+    "citation_count": 17,
     "authors": []
   },
   "https://openreview.net/forum?id=j5JvZCaDM0": {
@@ -7756,7 +7756,7 @@
     "checked": true,
     "id": "a2246e09ab0b56ba91322747addad030eae56c50",
     "semantic_title": "safe offline reinforcement learning with feasibility-guided diffusion model",
-    "citation_count": 30,
+    "citation_count": 35,
     "authors": []
   },
   "https://openreview.net/forum?id=S5EqslEHnz": {
@@ -7766,7 +7766,7 @@
     "checked": true,
     "id": "f63d5ff387a0c3477d58cb47348099a472632066",
     "semantic_title": "do generated data always help contrastive learning?",
-    "citation_count": 26,
+    "citation_count": 27,
     "authors": []
   },
   "https://openreview.net/forum?id=kMp8zCsXNb": {
@@ -7776,7 +7776,7 @@
     "checked": true,
     "id": "7629e62dca4ca11b88d481913274a975e7c21adb",
     "semantic_title": "asmr: activation-sharing multi-resolution coordinate networks for efficient inference",
-    "citation_count": 4,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=JsnR0YO4Fq": {
@@ -7796,7 +7796,7 @@
     "checked": true,
     "id": "fb48bffe6610ad544cb713af85b1579694dc4478",
     "semantic_title": "zero bubble (almost) pipeline parallelism",
-    "citation_count": 12,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=vtyasLn4RM": {
@@ -7806,7 +7806,7 @@
     "checked": true,
     "id": "e419a8b8f278cab276a3f8ae65daf1d26ac487af",
     "semantic_title": "core-gd: a hierarchical framework for scalable graph visualization with gnns",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=HRkyLbBRHI": {
@@ -7846,7 +7846,7 @@
     "checked": true,
     "id": "fc4542b579faa873f00106065827e9b64cc87a44",
     "semantic_title": "topic modeling as multi-objective contrastive optimization",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=9DvDRTTdlu": {
@@ -7856,7 +7856,7 @@
     "checked": true,
     "id": "007cbbc23c05b11c47bd5a5081a96103fbe86c2f",
     "semantic_title": "ed-nerf: efficient text-guided editing of 3d scene with latent space nerf",
-    "citation_count": 13,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=8FHWkY0SwF": {
@@ -7866,7 +7866,7 @@
     "checked": true,
     "id": "6519e207a99ec7257d10b4c3df17f8da70d3471a",
     "semantic_title": "learning personalized causally invariant representations for heterogeneous federated clients",
-    "citation_count": 4,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=R7rZUSGOPD": {
@@ -7886,7 +7886,7 @@
     "checked": true,
     "id": "e8c5cbc40bb3f5f96cccef757b2ad2a13ac8469f",
     "semantic_title": "advancing pose-guided image synthesis with progressive conditional diffusion models",
-    "citation_count": 63,
+    "citation_count": 83,
     "authors": []
   },
   "https://openreview.net/forum?id=8p3fu56lKc": {
@@ -7896,7 +7896,7 @@
     "checked": true,
     "id": "cbec8bf16a459b0ae38856f604a6a14cd1343477",
     "semantic_title": "one step of gradient descent is provably the optimal in-context learner with one layer of linear self-attention",
-    "citation_count": 102,
+    "citation_count": 106,
     "authors": []
   },
   "https://openreview.net/forum?id=8euJaTveKw": {
@@ -7906,7 +7906,7 @@
     "checked": true,
     "id": "9ebf47129c15f61f4b77bbfe305c522480c20347",
     "semantic_title": "prometheus: inducing fine-grained evaluation capability in language models",
-    "citation_count": 240,
+    "citation_count": 273,
     "authors": []
   },
   "https://openreview.net/forum?id=THUBTfSAS2": {
@@ -7916,7 +7916,7 @@
     "checked": true,
     "id": "df445acf973470bf73aee2ec8b13d5c5bfba3dbf",
     "semantic_title": "querying easily flip-flopped samples for deep active learning",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=FDb2JQZsFH": {
@@ -7956,7 +7956,7 @@
     "checked": true,
     "id": "c0bb2b869211028755c6610231ccf95619d3ede9",
     "semantic_title": "some fundamental aspects about lipschitz continuity of neural networks",
-    "citation_count": 7,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=3ZqKxMHcAg": {
@@ -7966,7 +7966,7 @@
     "checked": true,
     "id": "d0cc57eccbc9b2ee027cff4813701ae3e61aedbc",
     "semantic_title": "evaluating language model agency through negotiations",
-    "citation_count": 29,
+    "citation_count": 34,
     "authors": []
   },
   "https://openreview.net/forum?id=ZS4m74kZpH": {
@@ -7976,7 +7976,7 @@
     "checked": true,
     "id": "3aee33831e0bdea1a1eaae21c7586e4f7c0396d6",
     "semantic_title": "making retrieval-augmented language models robust to irrelevant context",
-    "citation_count": 216,
+    "citation_count": 237,
     "authors": []
   },
   "https://openreview.net/forum?id=K9sVJ17zvB": {
@@ -7986,7 +7986,7 @@
     "checked": true,
     "id": "f4e91b2213cec38cbed6b38c740bedeeadd84e58",
     "semantic_title": "versvideo: leveraging enhanced temporal diffusion models for versatile video generation",
-    "citation_count": 2,
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=SIZWiya7FE": {
@@ -7996,7 +7996,7 @@
     "checked": true,
     "id": "9bf0c7e9d49a80967090771f216bc402913f2eba",
     "semantic_title": "label-agnostic forgetting: a supervision-free unlearning in deep models",
-    "citation_count": 13,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=t3vnnLeajU": {
@@ -8006,7 +8006,7 @@
     "checked": true,
     "id": "5e7d9e031c7eeaaad102627a9894bf14bf240a63",
     "semantic_title": "controlling vision-language models for multi-task image restoration",
-    "citation_count": 40,
+    "citation_count": 56,
     "authors": []
   },
   "https://openreview.net/forum?id=ox2ATRM90I": {
@@ -8046,7 +8046,7 @@
     "checked": true,
     "id": "66094085e3c3f51faf926ebc1a8d52288c1f0240",
     "semantic_title": "adaptive stochastic gradient algorithm for black-box multi-objective learning",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=zAdUB0aCTQ": {
@@ -8056,7 +8056,7 @@
     "checked": true,
     "id": "5dbf93a68b7fda600521f046dea35ea8ba9e884f",
     "semantic_title": "agentbench: evaluating llms as agents",
-    "citation_count": 315,
+    "citation_count": 355,
     "authors": []
   },
   "https://openreview.net/forum?id=ym0ubZrsmm": {
@@ -8076,7 +8076,7 @@
     "checked": true,
     "id": "322351e6efc401114f308047f34580d5b8cf5490",
     "semantic_title": "differentially private synthetic data via foundation model apis 1: images",
-    "citation_count": 44,
+    "citation_count": 46,
     "authors": []
   },
   "https://openreview.net/forum?id=pdJXYfJjz9": {
@@ -8106,7 +8106,7 @@
     "checked": true,
     "id": "baf257116866b91781b9259662feccd59b5234a2",
     "semantic_title": "understanding addition in transformers",
-    "citation_count": 19,
+    "citation_count": 21,
     "authors": []
   },
   "https://openreview.net/forum?id=36L7W3ri4U": {
@@ -8136,7 +8136,7 @@
     "checked": true,
     "id": "b1e60c2515d2431a2dd2cc03791b8c0ccc855c36",
     "semantic_title": "kill two birds with one stone: rethinking data augmentation for deep long-tailed learning",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=MCNqgUFTHI": {
@@ -8146,7 +8146,7 @@
     "checked": true,
     "id": "debe978e02b664fb7254b6c7b58a74c09ce897e3",
     "semantic_title": "plug-and-play policy planner for large language model powered dialogue agents",
-    "citation_count": 42,
+    "citation_count": 50,
     "authors": []
   },
   "https://openreview.net/forum?id=9bmTbVaA2A": {
@@ -8156,7 +8156,7 @@
     "checked": true,
     "id": "28ddaaf763c8f5e3ff6630cae93c885ce0e84f70",
     "semantic_title": "bootstrapping variational information pursuit with large language and vision models for interpretable image classification",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=5ep85sakT3": {
@@ -8176,7 +8176,7 @@
     "checked": true,
     "id": "6f217d984f36499d88ab8a3d89572171552e6f3f",
     "semantic_title": "evaluating large language models at evaluating instruction following",
-    "citation_count": 192,
+    "citation_count": 213,
     "authors": []
   },
   "https://openreview.net/forum?id=ZTssMmhC2X": {
@@ -8196,7 +8196,7 @@
     "checked": true,
     "id": "e1a51e2bfec910d46fb5b42ae51aed8c8fd9da74",
     "semantic_title": "backdoor contrastive learning via bi-level trigger optimization",
-    "citation_count": 6,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=ByR3NdDSZB": {
@@ -8206,7 +8206,7 @@
     "checked": true,
     "id": "ad91dbea609bbfc499d8788a18171bf4744b0692",
     "semantic_title": "parl: a unified framework for policy alignment in reinforcement learning from human feedback",
-    "citation_count": 27,
+    "citation_count": 30,
     "authors": []
   },
   "https://openreview.net/forum?id=tsE5HLYtYg": {
@@ -8216,23 +8216,23 @@
     "checked": true,
     "id": "067239c3a60c8649db4ab2791a8bbddb7b4c7c99",
     "semantic_title": "safedreamer: safe reinforcement learning with world models",
-    "citation_count": 19,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=DiWRG9JTWZ": {
     "title": "MetaCoCo: A New Few-Shot Classification Benchmark with Spurious Correlation",
     "volume": "poster",
-    "abstract": "Out-of-distribution (OOD) problems in few-shot classification (FSC) occur when novel classes sampled from testing distributions differ from base classes drawn from training distributions, which considerably degrades the performance of deep learning models deployed in real-world applications. Recent studies suggest that the OOD problems in FSC mainly including: (a) cross-domain few-shot classification (CD-FSC) and (b) spurious-correlation few-shot classification (SC-FSC). Specifically, CD-FSC occurs when a classifier learns transferring knowledge from base classes drawn from \\underline{seen} training distributions but recognizes novel classes sampled from unseen testing distributions. In contrast, SC-FSC arises when a classifier relies on non-causal features (or contexts) that happen to be correlated with the labels (or concepts) in base classes but such relationships no longer hold during the model deployment. Despite CD-FSC has been extensively studied, SC-FSC remains understudied due to lack of the corresponding evaluation benchmarks. To this end, we present Meta Concept Context (MetaCoCo), a benchmark with spurious-correlation shifts collected from real-world scenarios. Moreover, to quantify the extent of spurious-correlation shifts of the presented MetaCoCo, we further propose a metric by using CLIP as a pre-trained vision-language model. Extensive experiments on the proposed benchmark are performed to evaluate the state-of-the-art methods in FSC, cross-domain shifts, and self-supervised learning. The experimental results show that the performance of the existing methods degrades significantly in the presence of spurious-correlation shifts. We open-source all codes of our benchmark and hope that the proposed MetaCoCo can facilitate future research on spurious-correlation shifts problems in FSC",
+    "abstract": "",
     "checked": true,
     "id": "5ac486297971665f8d24cf18041b195c46ca0308",
     "semantic_title": "metacoco: a new few-shot classification benchmark with spurious correlation",
-    "citation_count": 12,
+    "citation_count": 15,
     "authors": []
   },
   "https://openreview.net/forum?id=5sixirvG0I": {
     "title": "Whittle Index with Multiple Actions and State Constraint for Inventory Management",
     "volume": "poster",
-    "abstract": "Whittle index is a heuristic tool that leads to good performance for the restless bandits problem. In this paper, we extend Whittle index to a new multi-agent reinforcement learning (MARL) setting with multiple discrete actions and a possibly changing constraint on the state space, resulting in WIMS (Whittle Index with Multiple actions and State constraint). This setting is common for inventory management where each agent chooses a replenishing quantity level for the corresponding stock-keeping-unit (SKU) such that the total profit is maximized while the total inventory does not exceed a certain limit. Accordingly, we propose a deep MARL algorithm based on WIMS for inventory management. Empirically, our algorithm is evaluated on real large-scale inventory management problems with up to 2307 SKUs and outperforms operation-research-based methods and baseline MARL algorithms",
+    "abstract": "",
     "checked": true,
     "id": "e48eeaa1ce5ea4416b10559e38267a1f3999d68d",
     "semantic_title": "whittle index with multiple actions and state constraint for inventory management",
@@ -8242,21 +8242,21 @@
   "https://openreview.net/forum?id=HHbRxoDTxE": {
     "title": "Looped Transformers are Better at Learning Learning Algorithms",
     "volume": "poster",
-    "abstract": "Transformers have demonstrated effectiveness in in-context solving data-fitting problems from various (latent) models, as reported by Garg et al. (2022). However, the absence of an inherent iterative structure in the transformer architecture presents a challenge in emulating the iterative algorithms, which are commonly employed in traditional machine learning methods. To address this, we propose the utilization of looped transformer architecture and its associated training methodology, with the aim of incorporating iterative characteristics into the transformer architectures. Experimental results suggest that the looped transformer achieves performance comparable to the standard transformer in solving various data-fitting problems, while utilizing less than 10% of the parameter count",
+    "abstract": "",
     "checked": true,
     "id": "ed3ec3ba82f7ba7adf8aa47a73c685ac023d6efd",
     "semantic_title": "looped transformers are better at learning learning algorithms",
-    "citation_count": 26,
+    "citation_count": 34,
     "authors": []
   },
   "https://openreview.net/forum?id=mF3cTns4pe": {
     "title": "Sum-Product-Set Networks: Deep Tractable Models for Tree-Structured Graphs",
     "volume": "poster",
-    "abstract": "Daily internet communication relies heavily on tree-structured graphs, embodied by popular data formats such as XML and JSON. However, many recent generative (probabilistic) models utilize neural networks to learn a probability distribution over undirected cyclic graphs. This assumption of a generic graph structure brings various computational challenges, and, more importantly, the presence of non-linearities in neural networks does not permit tractable probabilistic inference. We address these problems by proposing sum-product-set networks, an extension of probabilistic circuits from unstructured tensor data to tree-structured graph data. To this end, we use random finite sets to reflect a variable number of nodes and edges in the graph and to allow for exact and efficient inference. We demonstrate that our tractable model performs comparably to various intractable models based on neural networks",
+    "abstract": "",
     "checked": true,
     "id": "4761f446eb1020a1c9de2471d3653c7d022c3a61",
     "semantic_title": "sum-product-set networks: deep tractable models for tree-structured graphs",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=qaKRfobbTg": {
