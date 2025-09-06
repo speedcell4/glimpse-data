@@ -7906,7 +7906,7 @@
     "checked": true,
     "id": "9ebf47129c15f61f4b77bbfe305c522480c20347",
     "semantic_title": "prometheus: inducing fine-grained evaluation capability in language models",
-    "citation_count": 274,
+    "citation_count": 275,
     "authors": []
   },
   "https://openreview.net/forum?id=THUBTfSAS2": {
@@ -8152,7 +8152,7 @@
   "https://openreview.net/forum?id=9bmTbVaA2A": {
     "title": "Bootstrapping Variational Information Pursuit with Large Language and Vision Models for Interpretable Image Classification",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Variational Information Pursuit (V-IP) is an interpretable-by-design framework that makes predictions by sequentially selecting a short chain of user-defined, interpretable queries about the data that are most informative for the task. The prediction is based solely on the obtained query answers, which also serve as a faithful explanation for the prediction. Applying the framework to any task requires (i) specification of a query set, and (ii) densely annotated data with query answers to train classifiers to answer queries at test time. This limits V-IP's application to small-scale tasks where manual data annotation is feasible. In this work, we focus on image classification tasks and propose to relieve this bottleneck by leveraging pretrained language and vision models. Specifically, following recent work, we propose to use GPT, a Large Language Model, to propose semantic concepts as queries for a given classification task. To answer these queries, we propose a light-weight Concept Question-Answering network (Concept-QA) which learns to answer binary queries about semantic concepts in images. We design pseudo-labels to train our Concept-QA model using GPT and CLIP (a Vision-Language Model). Empirically, we find our Concept-QA model to be competitive with state-of-the-art VQA models in terms of answering accuracy but with an order of magnitude fewer parameters. This allows for seamless integration of Concept-QA into the V-IP framework as a fast-answering mechanism. We name this method Concept-QA+V-IP. Finally, we show on several datasets that Concept-QA+V-IP produces shorter, interpretable query chains which are more accurate than V-IP trained with CLIP-based answering systems. Code available at https://github.com/adityac94/conceptqa_vip",
     "checked": true,
     "id": "28ddaaf763c8f5e3ff6630cae93c885ce0e84f70",
     "semantic_title": "bootstrapping variational information pursuit with large language and vision models for interpretable image classification",
@@ -8162,7 +8162,7 @@
   "https://openreview.net/forum?id=5ep85sakT3": {
     "title": "Contextual Bandits with Online Neural Regression",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Recent works have shown a reduction from contextual bandits to online regression under a realizability assumption (Foster and Rakhlin, 2020; Foster and Krishnamurthy, 2021). In this work, we investigate the use of neural networks for such online regression and associated Neural Contextual Bandits (NeuCBs). Using existing results for wide networks, one can readily show a ${\\mathcal{O}}(\\sqrt{T})$ regret for online regression with square loss, which via the reduction implies a ${\\mathcal{O}}(\\sqrt{K} T^{3/4})$ regret for NeuCBs. Departing from this standard approach, we first show a $\\mathcal{O}(\\log T)$ regret for online regression with almost convex losses that satisfy QG (Quadratic Growth) condition, a generalization of the PL (Polyak-\\L ojasiewicz) condition, and that have a unique minima. Although not directly applicable to wide networks since they do not have unique minima, we show that adding a suitable small random perturbation to the network predictions surprisingly makes the loss satisfy QG with unique minima. Based on such a perturbed prediction, we show a ${\\mathcal{O}}(\\log T)$ regret for online regression with both squared loss and KL loss, and subsequently convert these respectively to $\\tilde{\\mathcal{O}}(\\sqrt{KT})$ and $\\tilde{\\mathcal{O}}(\\sqrt{KL^*} + K)$ regret for NeuCB, where $L^*$ is the loss of the best policy. Separately, we also show that existing regret bounds for NeuCBs are $\\Omega(T)$ or assume i.i.d. contexts, unlike this work. Finally, our experimental results on various datasets demonstrate that our algorithms, especially the one based on KL loss, persistently outperform existing algorithms",
     "checked": true,
     "id": "da0e334cf8b1dd433593cf7e2c6fd13db902233a",
     "semantic_title": "contextual bandits with online neural regression",
@@ -8172,7 +8172,7 @@
   "https://openreview.net/forum?id=tr0KidwPLc": {
     "title": "Evaluating Large Language Models at Evaluating Instruction Following",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "As research in large language models (LLMs) continues to accelerate, LLM-based evaluation has emerged as a scalable and cost-effective alternative to human evaluations for comparing the ever increasing list of models. This paper investigates the efficacy of these \"LLM evaluators\", particularly in using them to assess instruction following, a metric that gauges how closely generated text adheres to the given instruction. We introduce a challenging meta-evaluation benchmark, LLMBar, designed to test the ability of an LLM evaluator in discerning instruction-following outputs. The authors manually curated 419 pairs of outputs, one adhering to instructions while the other diverging, yet may possess deceptive qualities that mislead an LLM evaluator, e.g., a more engaging tone. Contrary to existing meta-evaluation, we discover that different evaluators (i.e., combinations of LLMs and prompts) exhibit distinct performance on LLMBar and even the highest-scoring ones have substantial room for improvement. We also present a novel suite of prompting strategies that further close the gap between LLM and human evaluators. With LLMBar, we hope to offer more insight into LLM evaluators and foster future research in developing better instruction-following models",
     "checked": true,
     "id": "6f217d984f36499d88ab8a3d89572171552e6f3f",
     "semantic_title": "evaluating large language models at evaluating instruction following",
@@ -8182,7 +8182,7 @@
   "https://openreview.net/forum?id=ZTssMmhC2X": {
     "title": "How to Fine-Tune Vision Models with SGD",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "SGD and AdamW are the two most used optimizers for fine-tuning large neural networks in computer vision. When the two methods perform the same, SGD is preferable because it uses less memory (12 bytes/parameter with momentum and 8 bytes/parameter without) than AdamW (16 bytes/parameter). However, on a suite of downstream tasks, especially those with distribution shifts, we find that fine-tuning with AdamW performs substantially better than SGD on modern Vision Transformer and ConvNeXt models. We find that large gaps in performance between SGD and AdamW occur when the fine-tuning gradients in the first \"embedding\" layer are much larger than in the rest of the model. Our analysis suggests an easy fix that works consistently across datasets and models: freezing the embedding layer (less than 1% of the parameters) leads to SGD with or without momentum performing slightly better than AdamW while using less memory (e.g., on ViT-L, SGD uses 33% less GPU memory). Our insights result in state-of-the-art accuracies on five popular distribution shift benchmarks: WILDS-FMoW, WILDS-Camelyon, BREEDS-Living-17, Waterbirds, and DomainNet",
     "checked": true,
     "id": "6aec7f40412ceaeb811d71345d9888fca7a24f82",
     "semantic_title": "how to fine-tune vision models with sgd",
@@ -8352,7 +8352,7 @@
   "https://openreview.net/forum?id=pBxeZ6pVUD": {
     "title": "Grounded Object-Centric Learning",
     "volume": "poster",
-    "abstract": "The extraction of object-centric representations for downstream tasks is an emerging area of research. Learning grounded representations of objects that are guaranteed to be stable and invariant promises robust performance across different tasks and environments. Slot Attention (SA) learns object-centric representations by assigning objects to *slots*, but presupposes a *single* distribution from which all slots are randomly initialised. This results in an inability to learn *specialized* slots which bind to specific object types and remain invariant to identity-preserving changes in object appearance. To address this, we present *Conditional Slot Attention* (CoSA) using a novel concept of *Grounded Slot Dictionary* (GSD) inspired by vector quantization. Our proposed GSD comprises (i) canonical object-level property vectors and (ii) parametric Gaussian distributions, which define a prior over the slots. We demonstrate the benefits of our method in multiple downstream tasks such as scene generation, composition, and task adaptation, whilst remaining competitive with SA in object discovery",
+    "abstract": "",
     "checked": true,
     "id": "56cc5dc96d02dba7c2469d32dd4efcccb1896113",
     "semantic_title": "grounded object-centric learning",
@@ -8362,17 +8362,17 @@
   "https://openreview.net/forum?id=xAqcJ9XoTf": {
     "title": "On the Stability of Expressive Positional Encodings for Graphs",
     "volume": "poster",
-    "abstract": "Designing effective positional encodings for graphs is key to building powerful graph transformers and enhancing message-passing graph neural networks. Although widespread, using Laplacian eigenvectors as positional encodings faces two fundamental challenges: (1) *Non-uniqueness*: there are many different eigendecompositions of the same Laplacian, and (2) *Instability*: small perturbations to the Laplacian could result in completely different eigenspaces, leading to unpredictable changes in positional encoding. Despite many attempts to address non-uniqueness, most methods overlook stability, leading to poor generalization on unseen graph structures. We identify the cause of instability to be the use of \"hard partition'' of eigenspaces. Hence, we introduce Stable and Expressive Positional Encodings (SPE), an architecture for processing eigenvectors that uses eigenvalues to ``softly partition'' eigenspaces. SPE is the first architecture that is (1) provably stable, and (2) universally expressive for basis invariant functions whilst respecting all symmetries of eigenvectors. Besides guaranteed stability, we prove that SPE is at least as expressive as existing methods, and highly capable of counting graph structures. Finally, we evaluate the effectiveness of our method on molecular property prediction, and out-of-distribution generalization tasks, finding improved generalization compared to existing positional encoding methods. Our code is available at https://github.com/Graph-COM/SPE",
+    "abstract": "",
     "checked": true,
-    "id": "8dc42af5b1f1563dca4b2c8f299e2c450e6272ab",
-    "semantic_title": "on the stability of expressive positional encodings for graph neural networks",
-    "citation_count": 23,
+    "id": "1ac3f806316e1e5b27c68c1da7616ced2a7e3c25",
+    "semantic_title": "on the stability of expressive positional encodings for graphs",
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=HiTg16qhxp": {
     "title": "Dynamic Neural Response Tuning",
     "volume": "poster",
-    "abstract": "Artificial Neural Networks (ANNs) have gained widespread applications across various areas in recent years. The ANN design was initially inspired by principles of biology. The biological neural network's fundamental response process comprises information transmission and aggregation. The information transmission in biological neurons is often achieved by triggering action potentials that propagate through axons. ANNs utilize activation mechanisms to simulate such biological behavior. However, previous studies have only considered static response conditions, while the biological neuron's response conditions are typically dynamic, depending on multiple factors such as neuronal properties and the real-time environment. Therefore, the dynamic response conditions of biological neurons could help improve the static ones of existing activations in ANNs. Additionally, the biological neuron's aggregated response exhibits high specificity for different categories, allowing the nervous system to differentiate and identify objects. Inspired by these biological patterns, we propose a novel Dynamic Neural Response Tuning (DNRT) mechanism, which aligns the response patterns of ANNs with those of biological neurons. DNRT comprises Response-Adaptive Activation (RAA) and Aggregated Response Regularization (ARR), mimicking the biological neuron's information transmission and aggregation behaviors. RAA dynamically adjusts the response condition based on the characteristics and strength of the input signal. ARR is devised to enhance the network's ability to learn category specificity by imposing constraints on the network's response distribution. Extensive experimental studies indicate that the proposed DNRT is highly interpretable, applicable to various mainstream network architectures, and can achieve remarkable performance compared with existing neural response mechanisms in multiple tasks and domains. Code is available at https://github.com/horrible-dong/DNRT",
+    "abstract": "",
     "checked": true,
     "id": "275054e0af7a4e62ad350ac92da977bd0e101e76",
     "semantic_title": "dynamic neural response tuning",
@@ -8382,7 +8382,7 @@
   "https://openreview.net/forum?id=Let8OMe20n": {
     "title": "Confidence-aware Reward Optimization for Fine-tuning Text-to-Image Models",
     "volume": "poster",
-    "abstract": "Fine-tuning text-to-image models with reward functions trained on human feedback data has proven effective for aligning model behavior with human intent. However, excessive optimization with such reward models, which serve as mere proxy objectives, can compromise the performance of fine-tuned models, a phenomenon known as reward overoptimization. To investigate this issue in depth, we introduce the Text-Image Alignment Assessment (TIA2) benchmark, which comprises a diverse collection of text prompts, images, and human annotations. Our evaluation of several state-of-the-art reward models on this benchmark reveals their frequent misalignment with human assessment. We empirically demonstrate that overoptimization occurs notably when a poorly aligned reward model is used as the fine-tuning objective. To address this, we propose TextNorm, a simple method that enhances alignment based on a measure of reward model confidence estimated across a set of semantically contrastive text prompts. We demonstrate that incorporating the confidence-calibrated rewards in fine-tuning effectively reduces overoptimization, resulting in twice as many wins in human evaluation for text-image alignment compared against the baseline reward models",
+    "abstract": "",
     "checked": true,
     "id": "546000d89b036b6768ca0182538adf895c2bb97c",
     "semantic_title": "confidence-aware reward optimization for fine-tuning text-to-image models",
