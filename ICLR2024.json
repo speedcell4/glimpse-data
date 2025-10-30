@@ -6836,7 +6836,7 @@
     "checked": true,
     "id": "6988596f88276920a4e555cbe624e1431bc8a9f7",
     "semantic_title": "understanding catastrophic forgetting in language models via implicit inference",
-    "citation_count": 92,
+    "citation_count": 95,
     "authors": []
   },
   "https://openreview.net/forum?id=gppLqZLQeY": {
@@ -6876,7 +6876,7 @@
     "checked": true,
     "id": "6d130ebff26dbbf00e3c601973872ff0c0c4235f",
     "semantic_title": "how do language models bind entities in context?",
-    "citation_count": 51,
+    "citation_count": 52,
     "authors": []
   },
   "https://openreview.net/forum?id=HfXDrAzFvG": {
@@ -6996,7 +6996,7 @@
     "checked": true,
     "id": "9dfd2248d66f7227eb8a2b5d29064acf66174c9a",
     "semantic_title": "vocos: closing the gap between time-domain and fourier-based neural vocoders for high-quality audio synthesis",
-    "citation_count": 154,
+    "citation_count": 158,
     "authors": []
   },
   "https://openreview.net/forum?id=YrTI2Zu0dd": {
@@ -7032,37 +7032,37 @@
   "https://openreview.net/forum?id=4r2ybzJnmN": {
     "title": "Learning Delays in Spiking Neural Networks using Dilated Convolutions with Learnable Spacings",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "Spiking Neural Networks (SNNs) are a promising research direction for building power-efficient information processing systems, especially for temporal tasks such as speech recognition. In SNNs, delays refer to the time needed for one spike to travel from one neuron to another. These delays matter because they influence the spike arrival times, and it is well-known that spiking neurons respond more strongly to coincident input spikes. More formally, it has been shown theoretically that plastic delays greatly increase the expressivity in SNNs. Yet, efficient algorithms to learn these delays have been lacking. Here, we propose a new discrete-time algorithm that addresses this issue in deep feedforward SNNs using backpropagation, in an offline manner. To simulate delays between consecutive layers, we use 1D convolutions across time. The kernels contain only a few non-zero weights – one per synapse – whose positions correspond to the delays. These positions are learned together with the weights using the recently proposed Dilated Convolution with Learnable Spacings (DCLS). We evaluated our method on three datasets: the Spiking Heidelberg Dataset (SHD), the Spiking Speech Commands (SSC) and its non spiking version Google Speech Commands v0.02 (GSC) benchmarks, which require detecting temporal patterns. We used feedforward SNNs with two or three hidden fully connected layers, and vanilla leaky integrate-and-fire neurons. We showed that fixed random delays help and that learning them helps even more. Furthermore, our method outperformed the state-of-the-art in the three datasets without using recurrent connections and with substantially fewer parameters. Our work demonstrates the potential of delay learning in developing accurate and precise models for temporal data processing. Our code is based on PyTorch / SpikingJelly and available at: https://github.com/Thvnvtos/SNN-delays",
     "checked": true,
     "id": "127bb6014bb1f59f6381498d17e24dea62d2810e",
     "semantic_title": "learning delays in spiking neural networks using dilated convolutions with learnable spacings",
-    "citation_count": 67,
+    "citation_count": 69,
     "authors": []
   },
   "https://openreview.net/forum?id=GPKTIktA0k": {
     "title": "The Reversal Curse: LLMs trained on \"A is B\" fail to learn \"B is A",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "We expose a surprising failure of generalization in auto-regressive large language models (LLMs). If a model is trained on a sentence of the form ''_A_ is _B_'', it will not automatically generalize to the reverse direction ''_B_ is _A_''. This is the **Reversal Curse**. For instance, if a model is trained on ''Valentina Tereshkova was the first woman to travel to space'', it will not automatically be able to answer the question, ''Who was the first woman to travel to space?''. Moreover, the likelihood of the correct answer (''Valentina Tershkova'') will not be higher than for a random name. Thus, models do not generalize a prevalent pattern in their training set: if ''_A_ is _B_'' occurs, ''_B_ is _A_'' is more likely to occur. It is worth noting, however, that if ''_A_ is _B_'' appears _in-context_, models can deduce the reverse relationship. We provide evidence for the Reversal Curse by finetuning GPT-3 and Llama-1 on fictitious statements such as ''Uriah Hawthorne is the composer of _Abyssal Melodies_'' and showing that they fail to correctly answer ''Who composed _Abyssal Melodies?_''. The Reversal Curse is robust across model sizes and model families and is not alleviated by data augmentation. We also evaluate ChatGPT (GPT-3.5 and GPT-4) on questions about real-world celebrities, such as ''Who is Tom Cruise's mother? [A: Mary Lee Pfeiffer]'' and the reverse ''Who is Mary Lee Pfeiffer's son?''. GPT-4 correctly answers questions like the former 79\\% of the time, compared to 33\\% for the latter. Code available at: https://github.com/lukasberglund/reversal_curse",
     "checked": true,
     "id": "8eafec7014d08043517834b5a2ed26384f188873",
     "semantic_title": "the reversal curse: llms trained on \"a is b\" fail to learn \"b is a",
-    "citation_count": 342,
+    "citation_count": 345,
     "authors": []
   },
   "https://openreview.net/forum?id=7Jwpw4qKkb": {
     "title": "AutoDAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "The aligned Large Language Models (LLMs) are powerful language understanding and decision-making tools that are created through extensive alignment with human feedback. However, these large models remain susceptible to jailbreak attacks, where adversaries manipulate prompts to elicit malicious outputs that should not be given by aligned LLMs. Investigating jailbreak prompts can lead us to delve into the limitations of LLMs and further guide us to secure them. Unfortunately, existing jailbreak techniques suffer from either (1) scalability issues, where attacks heavily rely on manual crafting of prompts, or (2) stealthiness problems, as attacks depend on token-based algorithms to generate prompts that are often semantically meaningless, making them susceptible to detection through basic perplexity testing. In light of these challenges, we intend to answer this question: Can we develop an approach that can automatically generate stealthy jailbreak prompts? In this paper, we introduce AutoDAN, a novel jailbreak attack against aligned LLMs. AutoDAN can automatically generate stealthy jailbreak prompts by the carefully designed hierarchical genetic algorithm. Extensive evaluations demonstrate that AutoDAN not only automates the process while preserving semantic meaningfulness, but also demonstrates superior attack strength in cross-model transferability, and cross-sample universality compared with the baseline. Moreover, we also compare AutoDAN with perplexity-based defense methods and show that AutoDAN can bypass them effectively. Code is available at https://github.com/SheltonLiu-N/AutoDAN",
     "checked": true,
     "id": "f3f23f7f9f5369aade19f20bc5d028cce7b9c9aa",
     "semantic_title": "autodan: generating stealthy jailbreak prompts on aligned large language models",
-    "citation_count": 468,
+    "citation_count": 473,
     "authors": []
   },
   "https://openreview.net/forum?id=PXXuLvIH5r": {
     "title": "MixSATGEN: Learning Graph Mixing for SAT Instance Generation",
     "volume": "poster",
-    "abstract": "",
+    "abstract": "The Boolean satisfiability problem (SAT) stands as a canonical NP-complete task. In particular, the scarcity of real-world SAT instances and their usefulness for tuning SAT solvers underscore the necessity for effective and efficient ways of hard instance generation, whereas existing methods either struggle to maintain plausible hardness or suffer from limited applicability. Different from the typical construction-based methods, this paper introduces an adaptive and efficient graph interpolation approach that in place modifies the raw structure of graph-represented SAT instance by replacing it with a counterpart from another instance. Specifically, it involves a two-stage matching and mixing pipeline. The matching aims to find a correspondence map of literal nodes from two instance graphs via learned features from a matching network; while the mixing stage involves iteratively exchanging clause pairs with the highest correspondence scores until a specified replacement ratio is achieved. We further show that under our matching-mixing framework, moderate randomness can avoid hardness degradation of instances by introducing Gumbel noise. Experimental results show the superiority of our method with both resemblance in structure and hardness, and general applicability",
     "checked": true,
     "id": "397b6e7f4ccd2955716b350da6080ac63b39f4b3",
     "semantic_title": "mixsatgen: learning graph mixing for sat instance generation",
@@ -7076,7 +7076,7 @@
     "checked": true,
     "id": "50f243afd582ab72af641b63dfe754a587c39175",
     "semantic_title": "a stable, fast, and fully automatic learning algorithm for predictive coding networks",
-    "citation_count": 15,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=DjIsNDEOYX": {
@@ -7166,7 +7166,7 @@
     "checked": true,
     "id": "2ea9167ca0dd536923ea0968d6b89e2b6cc34f21",
     "semantic_title": "consistency trajectory models: learning probability flow ode trajectory of diffusion",
-    "citation_count": 260,
+    "citation_count": 268,
     "authors": []
   },
   "https://openreview.net/forum?id=icTZCUbtD6": {
@@ -7176,7 +7176,7 @@
     "checked": true,
     "id": "a787fda941cb9d54daa78e8bc0bcd62e4a74938e",
     "semantic_title": "dissecting sample hardness: a fine-grained analysis of hardness characterization methods for data-centric ai",
-    "citation_count": 11,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=1OfAO2mes1": {
@@ -7206,7 +7206,7 @@
     "checked": true,
     "id": "cad09c0d9119adeefc11b1bc1d431f121df068ea",
     "semantic_title": "deep se(3)-equivariant geometric reasoning for precise placement tasks",
-    "citation_count": 20,
+    "citation_count": 21,
     "authors": []
   },
   "https://openreview.net/forum?id=Q3YaCghZNt": {
@@ -7216,7 +7216,7 @@
     "checked": true,
     "id": "840e9bd68aa9f991148a905e6bc9336fcd22ead6",
     "semantic_title": "lemur: integrating large language models in automated program verification",
-    "citation_count": 43,
+    "citation_count": 44,
     "authors": []
   },
   "https://openreview.net/forum?id=liuqDwmbQJ": {
@@ -7266,7 +7266,7 @@
     "checked": true,
     "id": "e723e37ef2e9be0220cc9d54312401824d46f45f",
     "semantic_title": "diffusion in diffusion: cyclic one-way diffusion for text-vision-conditioned generation",
-    "citation_count": 15,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=DfPtC8uSot": {
@@ -7276,7 +7276,7 @@
     "checked": true,
     "id": "c4bcb54e36945fc7ddd7892c8c94c4948be1967c",
     "semantic_title": "bounding the expected robustness of graph neural networks subject to node feature attacks",
-    "citation_count": 10,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=oXjnwQLcTA": {
@@ -7316,7 +7316,7 @@
     "checked": true,
     "id": "3fa9f7aa5e8050b54e1aca41407c12922a6e4867",
     "semantic_title": "supervised knowledge makes large language models better in-context learners",
-    "citation_count": 22,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=XN6ZPINdSg": {
@@ -7336,7 +7336,7 @@
     "checked": true,
     "id": "9480a64d9520f4b8857ed291fd42db11e46594a7",
     "semantic_title": "contrastive difference predictive coding",
-    "citation_count": 21,
+    "citation_count": 22,
     "authors": []
   },
   "https://openreview.net/forum?id=LNLjU5C5dK": {
@@ -7356,7 +7356,7 @@
     "checked": true,
     "id": "1e05c5427d6a35a3b1bf37fb955f2ea94995a71d",
     "semantic_title": "effective data augmentation with diffusion models",
-    "citation_count": 305,
+    "citation_count": 311,
     "authors": []
   },
   "https://openreview.net/forum?id=TYXtXLYHpR": {
@@ -7386,7 +7386,7 @@
     "checked": true,
     "id": "2e41749107602d5d128ae566e1e361efc293ccb5",
     "semantic_title": "mcm: masked cell modeling for anomaly detection in tabular data",
-    "citation_count": 13,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=KNvubydSB5": {
