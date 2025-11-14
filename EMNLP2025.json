@@ -7790,10 +7790,10 @@
   "https://aclanthology.org/2025.emnlp-main.459": {
     "title": "LLM-OREF: An Open Relation Extraction Framework Based on Large Language Models",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "The goal of open relation extraction (OpenRE) is to develop an RE model that can generalize to new relations not encountered during training. Existing studies primarily formulate OpenRE as a clustering task. They first cluster all test instances based on the similarity between the instances, and then manually assign a new relation to each cluster. However, their reliance on human annotation limits their practicality. In this paper, we propose an OpenRE framework based on large language models (LLMs), which directly predicts new relations for test instances by leveraging their strong language understanding and generation abilities, without human intervention. Specifically, our framework consists of two core components: (1) a relation discoverer (RD), designed to predict new relations for test instances based on demonstrations formed by training instances with known relations; and (2) a relation predictor (RP), used to select the most likely relation for a test instance from n candidate relations, guided by demonstrations composed of their instances. To enhance the ability of our framework to predict new relations, we design a self-correcting inference strategy composed of three stages: relation discovery, relation denoising, and relation prediction. In the first stage, we use RD to preliminarily predict new relations for all test instances. Next, we apply RP to select some high-reliability test instances for each new relation from the prediction results of RD through a cross-validation method. During the third stage, we employ RP to re-predict the relations of all test instances based on the demonstrations constructed from these reliable test instances. Extensive experiments on three OpenRE datasets demonstrate the effectiveness of our framework. We release our code at https://github.com/XMUDeepLIT/LLM-OREF.git",
+    "checked": true,
+    "id": "cb8bdaaf512ce26f6eaf9aec3e4eb53ce0aeb52e",
+    "semantic_title": "llm-oref: an open relation extraction framework based on large language models",
     "citation_count": 0,
     "authors": [
       "Hongyao Tu",
@@ -7808,10 +7808,10 @@
   "https://aclanthology.org/2025.emnlp-main.460": {
     "title": "Ambiguity Awareness Optimization: Towards Semantic Disambiguation for Direct Preference Optimization",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Direct Preference Optimization (DPO) is a widely used reinforcement learning from human feedback (RLHF) method across various domains. The study of token importance has attracted widespread attention in DPO. Researchers have found that token importance is crucial for improving the effectiveness of DPO. It is observed that identical or semantically similar content (defined as ambiguous content) frequently appears within the preference pairs. We hypothesize that the presence of ambiguous content during DPO training may introduce ambiguity, thereby limiting further improvements in alignment. Through mathematical analysis and proof-of-concept experiments, we reveal that ambiguous content may potentially introduce ambiguities, thereby degrading performance. To address this issue, we introduce Ambiguity Awareness Optimization (AAO), a simple yet effective approach that automatically re-weights ambiguous content to reduce ambiguities by calculating semantic similarity from preference pairs. Through extensive experiments, we demonstrate that AAO consistently and significantly surpasses state-of-the-art approaches in performance, without markedly increasing response length, across multiple model scales and widely adopted benchmark datasets, including AlpacaEval 2, MT-Bench, and Arena-Hard. Specifically, AAO outperforms DPO by up to 8.9 points on AlpacaEval 2 and achieves an improvement of by up to 15.0 points on Arena-Hard",
+    "checked": true,
+    "id": "aca39f338e5ff73300934fda9fffc00f18c904e6",
+    "semantic_title": "ambiguity awareness optimization: towards semantic disambiguation for direct preference optimization",
     "citation_count": 0,
     "authors": [
       "Jian Li",
@@ -7826,11 +7826,11 @@
   "https://aclanthology.org/2025.emnlp-main.461": {
     "title": "Improving Multilingual Retrieval-Augmented Language Models through Dialectic Reasoning Argumentations",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Retrieval-augmented generation (RAG) is key to improving large language models (LLMs) in systematically accessing richer factual knowledge. Yet, using RAG mechanisms brings intrinsic challenges, as LLMs must deal with conflicting knowledge, especially in multilingual retrieval, where the heterogeneity of knowledge retrieved may deliver different outlooks. To make RAG more analytical, critical and grounded, we introduce Dialectic-RAG (DRAG), a modular approach guided by Argumentative Explanations, i.e., structured reasoning process that systematically evaluates retrieved information by comparing, contrasting, and resolving conflicting perspectives. Given a query and a set of multilingual related documents, selects and exemplifies relevant knowledge for delivering dialectic explanations that, by critically weighing opposing arguments and filtering extraneous content, clearly determine the final response. We show the impact of our framework both as an in-context learning strategy and for constructing demonstrations to instruct smaller models. Our experiments demonstrate that significantly improves RAG approaches, requiring low-impact computational effort and providing robustness to knowledge perturbations",
+    "checked": true,
+    "id": "406eb631bbb8f499a93e6b73a3e49b295563f8d7",
+    "semantic_title": "improving multilingual retrieval-augmented language models through dialectic reasoning argumentations",
+    "citation_count": 1,
     "authors": [
       "Leonardo Ranaldi",
       "Federico Ranaldi",
@@ -7842,10 +7842,10 @@
   "https://aclanthology.org/2025.emnlp-main.462": {
     "title": "Predicate-Guided Generation for Mathematical Reasoning",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "We present Prolog-MATH, a curated corpus designed to support mathematical reasoning in large language models (LLMs) through logic programming. Each verbal math problem in the dataset is paired with a chain-of-thought explanation to generate Prolog program via a two-stage automated pipeline. In the first stage, an LLM (e.g., Deepseek-V3) predicts a set of relevant mathematical predicates that could be useful in solving the problem. In the second stage, the LLM uses these suggested predicates along with the expected answer type to gen- erate a complete Prolog program. To improve coverage, we fine-tune an open-source LLM us- ing supervised fine-tuning, followed by GRPO (Group Relative Policy Optimization) training to address problems that Deepseek-V3 fails to solve. To support this training, we propose a predicate-aware reward function that evaluates how well the generated solution incorporates the suggested predicates, complementing the standard binary reward. Experimental results show that: 1) Our two-stage pipeline achieves 81.3% solution coverage on the MATH training set; 2) GRPO training with the predicate-aware reward function enables a series of base models to correctly solve additional problems missed by Deepseek-V3, further increasing solution coverage to 97.4%. Data and source code can be obtained at the Github repository",
+    "checked": true,
+    "id": "86a1e65a80a27be6dc142b929f74eb03c044db06",
+    "semantic_title": "predicate-guided generation for mathematical reasoning",
     "citation_count": 0,
     "authors": [
       "Jiajun Chen",
@@ -7855,10 +7855,10 @@
   "https://aclanthology.org/2025.emnlp-main.463": {
     "title": "ComplexTempQA: A 100m Dataset for Complex Temporal Question Answering",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "We introduce ComplexTempQA,a large-scale dataset consisting of over 100 million question-answer pairs designed to tackle the challenges in temporal question answering. ComplexTempQA significantly surpasses existing benchmarks in scale and scope. Utilizing Wikipedia and Wikidata, the dataset covers questions spanning over two decades and offers an unmatched scale. We introduce a new taxonomy that categorizes questions as attributes, comparisons, and counting questions, revolving around events, entities, and time periods, respectively. A standout feature of ComplexTempQA is the high complexity of its questions, which demand reasoning capabilities for answering such as across-time comparison, temporal aggregation, and multi-hop reasoning involving temporal event ordering and entity recognition. Additionally, each question is accompanied by detailed metadata, including specific time scopes, allowing for comprehensive evaluation of temporal reasoning abilities of large language models",
+    "checked": true,
+    "id": "7f4bc71a88e2aef8d2d9212c8e2c444a47dbed3a",
+    "semantic_title": "complextempqa: a 100m dataset for complex temporal question answering",
     "citation_count": 0,
     "authors": [
       "Raphael Gruber",
@@ -7870,11 +7870,11 @@
   "https://aclanthology.org/2025.emnlp-main.464": {
     "title": "ViDoRAG: Visual Document Retrieval-Augmented Generation via Dynamic Iterative Reasoning Agents",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Understanding information from visually rich documents remains a significant challenge for traditional Retrieval-Augmented Generation (RAG) methods. Existing benchmarks predominantly focus on image-based question answering (QA), overlooking the fundamental challenges of efficient retrieval, comprehension, and reasoning within dense visual documents. To bridge this gap, we introduce ViDoSeek, a novel dataset designed to evaluate RAG performance on visually rich documents requiring complex reasoning. Based on it, we identify key limitations in current RAG approaches: (i) purely visual retrieval methods struggle to effectively integrate both textual and visual features, and (ii) previous approaches often allocate insufficient reasoning tokens, limiting their effectiveness. To address these challenges, we propose ViDoRAG, a novel multi-agent RAG framework tailored for complex reasoning across visual documents. ViDoRAG employs a Gaussian Mixture Model (GMM)-based hybrid strategy to effectively handle multi-modal retrieval. To further elicit the model's reasoning capabilities, we introduce an iterative agent workflow incorporating exploration, summarization, and reflection, providing a framework for investigating test-time scaling in RAG domains. Extensive experiments on ViDoSeek validate the effectiveness and generalization of our approach. Notably, ViDoRAG outperforms existing methods by over 10% on the competitive ViDoSeek benchmark. The code will be available",
+    "checked": true,
+    "id": "afa3685b3a2bd6986346330c9dc990b64407e4ca",
+    "semantic_title": "vidorag: visual document retrieval-augmented generation via dynamic iterative reasoning agents",
+    "citation_count": 24,
     "authors": [
       "Qiuchen Wang",
       "Ruixue Ding",
