@@ -21141,11 +21141,11 @@
   "https://aclanthology.org/2025.emnlp-main.1259": {
     "title": "Beyond Text: Unveiling Privacy Vulnerabilities in Multi-modal Retrieval-Augmented Generation",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Multimodal Retrieval-Augmented Generation (MRAG) systems enhance LMMs by integrating external multimodal databases, but introduce unexplored privacy vulnerabilities. While text-based RAG privacy risks have been studied, multimodal data presents unique challenges. We provide the first systematic analysis of MRAG privacy vulnerabilities across vision-language and speech-language modalities. Using a novel compositional structured prompt attack in a black-box setting, we demonstrate how attackers can extract private information by manipulating queries. Our experiments reveal that LMMs can both directly generate outputs resembling retrieved content and produce descriptions that indirectly expose sensitive information, highlighting the urgent need for robust privacy-preserving MRAG techniques",
+    "checked": true,
+    "id": "974b67239d162a4df465e247b71551303880149d",
+    "semantic_title": "beyond text: unveiling privacy vulnerabilities in multi-modal retrieval-augmented generation",
+    "citation_count": 1,
     "authors": [
       "Jiankun Zhang",
       "Shenglai Zeng",
@@ -21160,11 +21160,11 @@
   "https://aclanthology.org/2025.emnlp-main.1260": {
     "title": "Code Execution as Grounded Supervision for LLM Reasoning",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Training large language models (LLMs) with chain-of-thought (CoT) supervision has proven effective for enhancing their reasoning abilities. However, obtaining reliable and accurate reasoning supervision remains a significant challenge. We propose a scalable method for generating a high-quality CoT supervision dataset by leveraging the determinism of program execution. Unlike existing reasoning dataset generation methods that rely on costly human annotations or error-prone LLM-generated CoT, our approach extracts verifiable, step-by-step reasoning traces from code execution and transforms them into a natural language CoT reasoning. Experiments on reasoning benchmarks across various domains show that our method effectively equips LLMs with transferable reasoning abilities across diverse tasks. Furthermore, the ablation studies validate that our method produces highly accurate reasoning data and reduces overall token length during inference by reducing meaningless repetition and overthinking",
+    "checked": true,
+    "id": "187bbecf22372528db697dcad7ddcf99e98203c2",
+    "semantic_title": "code execution as grounded supervision for llm reasoning",
+    "citation_count": 2,
     "authors": [
       "Dongwon Jung",
       "Wenxuan Zhou",
@@ -21174,10 +21174,10 @@
   "https://aclanthology.org/2025.emnlp-main.1261": {
     "title": "Subjective Behaviors and Preferences in LLM: Language of Browsing",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "A Large Language Model (LLM) offers versatility across domains and tasks, purportedly benefiting users with a wide variety of behaviors and preferences. We question this perception about an LLM when users have inherently subjective behaviors and preferences, as seen in their ubiquitous and idiosyncratic browsing of websites or apps. The sequential behavior logs of pages, thus generated, form something akin to each user's self-constructed \"language\", albeit without the structure and grammar imbued in natural languages. We ask: (i) Can a small LM represent the \"language of browsing\" better than a large LM? (ii) Can an LM with a single set of parameters (or, single LM) adequately capture myriad users' heterogeneous, subjective behaviors and preferences? (iii) Can a single LM with high average performance, yield low variance in performance to make alignment good at user level? We introduce clusterwise LM training, HeTLM (Heterogeneity aware Training of Language Model), appropriate for subjective behaviors. We find that (i) a small LM trained using a page-level tokenizer outperforms large pretrained or finetuned LMs; (ii) HeTLM with heterogeneous cluster specific set of parameters outperforms a single LM of the same family, controlling for the number of parameters; and (iii) a higher mean and a lower variance in generation ensues, implying improved alignment",
+    "checked": true,
+    "id": "736d53d747139da2b22927165a3e15b71205278e",
+    "semantic_title": "subjective behaviors and preferences in llm: language of browsing",
     "citation_count": 0,
     "authors": [
       "Sai Sundaresan",
@@ -21192,7 +21192,7 @@
   "https://aclanthology.org/2025.emnlp-main.1262": {
     "title": "Pixels Versus Priors: Controlling Knowledge Priors in Vision-Language Models through Visual Counterfacts",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Multimodal Large Language Models (MLLMs) perform well on tasks such as visual question answering, but it remains unclear whether their reasoning relies more on memorized world knowledge or on the visual information present in the input image. To investigate this, we introduce Visual CounterFact, a new dataset of visually-realistic counterfactuals that put world knowledge priors (e.g, red strawberry) into direct conflict with visual input (e.g, blue strawberry). Using Visual CounterFact, we show that model predictions initially reflect memorized priors, but shift toward visual evidence in mid-to-late layers. This dynamic reveals a competition between the two modalities, with visual input ultimately overriding priors during evaluation. To control this behavior, we propose Pixels Versus Priors (PvP) steering vectors, a mechanism for controlling model outputs toward either world knowledge or visual input through activation-level interventions. On average, PvP successfully shifts 99.3% of color and 80.8% of size predictions from priors to counterfactuals. Together, these findings offer new tools for interpreting and controlling factual behavior in multimodal models",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21209,10 +21209,10 @@
   "https://aclanthology.org/2025.emnlp-main.1263": {
     "title": "Balcony: A Lightweight Approach to Dynamic Inference of Generative Language Models",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Deploying large language models (LLMs) in real-world applications is often hindered by strict computational and latency constraints. While dynamic inference offers the flexibility to adjust model behavior based on varying resource budgets, existing methods are frequently limited by hardware inefficiencies or performance degradation. In this paper, we introduce Balcony, a simple yet highly effective framework for depth-based dynamic inference. By freezing the pretrained LLM and inserting additional transformer layers at selected exit points, Balcony maintains the full model's performance while enabling real-time adaptation to different computational budgets. These additional layers are trained using a straightforward self-distillation loss, aligning the sub-model outputs with those of the full model. This approach requires significantly fewer training tokens and tunable parameters, drastically reducing computational costs compared to prior methods. When applied to the LLaMA3-8B model, using only 0.2% of the original pretraining data, Balcony achieves minimal performance degradation while enabling significant speedups. Remarkably, we show that Balcony outperforms state-of-the-art methods such as Flextron and Layerskip on multiple models at various scales, as well as other leading compression techniques across a variety of benchmarks",
+    "checked": true,
+    "id": "fa7f9bdee161c0e45c7d69c473c8fed92ae4dbb4",
+    "semantic_title": "balcony: a lightweight approach to dynamic inference of generative language models",
     "citation_count": 0,
     "authors": [
       "Benyamin Jamialahmadi",
@@ -21228,7 +21228,7 @@
   "https://aclanthology.org/2025.emnlp-main.1264": {
     "title": "Social Genome: Grounded Social Reasoning Abilities of Multimodal Models",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Social reasoning abilities are crucial for AI systems to effectively interpret and respond to multimodal human communication and interaction within social contexts. We introduce Social Genome, the first benchmark for fine-grained, grounded social reasoning abilities of multimodal models. Social Genome contains 272 videos of interactions and 1,486 human-annotated reasoning traces related to inferences about these interactions. These traces contain 5,777 reasoning steps that reference evidence from visual cues, verbal cues, vocal cues, and external knowledge (contextual knowledge external to videos). Social Genome is also the first modeling challenge to study external knowledge in social reasoning. Social Genome computes metrics to holistically evaluate semantic and structural qualities of model-generated social reasoning traces. We demonstrate the utility of Social Genome through experiments with state-of-the-art models, identifying performance gaps and opportunities for future research to improve the grounded social reasoning abilities of multimodal models",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21243,7 +21243,7 @@
   "https://aclanthology.org/2025.emnlp-main.1265": {
     "title": "Profiler: Black-box AI-generated Text Origin Detection via Context-aware Inference Pattern Analysis",
     "volume": "main",
-    "abstract": "",
+    "abstract": "With the increasing capabilities of Large Language Models (LLMs), the proliferation of AI-generated texts has become a serious concern. Given the diverse range of organizations providing LLMs, it is crucial for governments and third-party entities to identify the origin LLM of a given AI-generated text to enable accurate mitigation of potential misuse and infringement. However, existing detection methods, primarily designed to distinguish between human-generated and LLM-generated texts, often fail to accurately identify the origin LLM due to the high similarity of AI-generated texts from different LLMs. In this paper, we propose a novel black-box AI-generated text origin detection method, dubbed Profiler, which accurately predicts the origin of an input text by extracting distinct context inference patterns through calculating and analyzing novel context losses between the surrogate model's output logits and the adjacent input context. Extensive experimental results show that Profiler outperforms 10 state-of-the-art baselines, achieving more than a 25% increase in AUC score on average across both natural language and code datasets when evaluated against five of the latest commercial LLMs under both in-distribution and out-of-distribution settings",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21263,7 +21263,7 @@
   "https://aclanthology.org/2025.emnlp-main.1266": {
     "title": "Speech Discrete Tokens or Continuous Features? A Comparative Analysis for Spoken Language Understanding in SpeechLLMs",
     "volume": "main",
-    "abstract": "",
+    "abstract": "With the rise of Speech Large Language Models (SpeechLLMs), two dominant approaches have emerged for speech processing: discrete tokens and continuous features. Each approach has demonstrated strong capabilities in audio-related processing tasks. However, the performance gap between these two paradigms has not been thoroughly explored. To address this gap, we present a fair comparison of self-supervised learning (SSL)-based discrete and continuous features under the same experimental settings. We evaluate their performance across six spoken language understanding-related tasks using both small and large-scale LLMs (Qwen1.5-0.5B and Llama3.1-8B). We further conduct in-depth analyses, including efficient comparison, SSL layer analysis, LLM layer analysis, and robustness comparison. Our findings reveal that continuous features generally outperform discrete tokens in various tasks. Each speech processing method exhibits distinct characteristics and patterns in how it learns and processes speech information. We hope our results will provide valuable insights to advance spoken language understanding in SpeechLLMs",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21280,7 +21280,7 @@
   "https://aclanthology.org/2025.emnlp-main.1267": {
     "title": "RAG-Zeval: Enhancing RAG Responses Evaluator through End-to-End Reasoning and Ranking-Based Reinforcement Learning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Robust evaluation is critical for deploying trustworthy retrieval-augmented generation (RAG) systems. However, current LLM-based evaluation frameworks predominantly rely on directly prompting resource-intensive models with complex multi-stage prompts, underutilizing models' reasoning capabilities and introducing significant computational cost. In this paper, we present RAG-Zeval (RAG-Zero Evaluator), a novel end-to-end framework that formulates faithfulness and correctness evaluation of RAG systems as a rule-guided reasoning task. Our approach trains evaluators with reinforcement learning, facilitating compact models to generate comprehensive and sound assessments with detailed explanation in one-pass. We introduce a ranking-based outcome reward mechanism, using preference judgments rather than absolute scores, to address the challenge of obtaining precise pointwise reward signals. To this end, we synthesize the ranking references by generating quality-controlled responses with zero human annotation. Experiments demonstrate RAG-Zeval's superior performance, achieving the strongest correlation with human judgments and outperforming baselines that rely on LLMs with 10-100× more parameters. Our approach also exhibits superior interpretability in response evaluation",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21298,11 +21298,11 @@
   "https://aclanthology.org/2025.emnlp-main.1268": {
     "title": "Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Language models are trained mainly on massive text data from the Internet, and it becomes increasingly important to understand this data source. Exact-match search engines enable searching in large text corpora – counting string appearances and retrieving the enclosing documents – yet the high storage overhead hinders their application on Internet-scale data. We present Infini-gram mini, an efficient and scalable system that can make petabyte-level text corpora searchable. Based on the FM-index data structure (Ferragina and Manzini, 2000), which simultaneously indexes and compresses text, our system creates indexes with size only 44% of the corpus. Infini-gram mini greatly improves upon the best existing implementation of FM-index in terms of indexing speed (18×) and memory use during both indexing (3.2× reduction) and querying (down to a negligible amount). We index 83TB of Internet text in 99 days with a single 128-core CPU node (or 19 hours if using 137 such nodes). We show one important use case of Infini-gram mini in a large-scale analysis of benchmark contamination. We find several core LM evaluation benchmarks to be heavily contaminated in Internet crawls (up to 74.2% in GSM8K), which could lead to overestimating the capabilities of language models if trained on such data. We host a benchmark contamination bulletin to share the contamination rate of many core and community-contributed benchmarks. We also release a web interface and an API endpoint to serve general search queries on Infini-gram mini indexes",
+    "checked": true,
+    "id": "1f0a2372634da5204fcd67767cc1f1a17c97d96b",
+    "semantic_title": "infini-gram mini: exact n-gram search at the internet scale with fm-index",
+    "citation_count": 2,
     "authors": [
       "Hao Xu",
       "Jiacheng Liu",
@@ -21314,11 +21314,11 @@
   "https://aclanthology.org/2025.emnlp-main.1269": {
     "title": "Mahānāma: A Unique Testbed for Literary Entity Discovery and Linking",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "High lexical variation, ambiguous references, and long-range dependencies make entity resolution in literary texts particularly challenging. We present Mahānāma, the first large-scale dataset for end-to-end Entity Discovery and Linking (EDL) in Sanskrit, a morphologically rich and under-resourced language. Derived from the Mahābhārata , the world's longest epic, the dataset comprises over 109K named entity mentions mapped to 5.5K unique entities, and is aligned with an English knowledge base to support cross-lingual linking. The complex narrative structure of Mahānāma, coupled with extensive name variation and ambiguity, poses significant challenges to resolution systems. Our evaluation reveals that current coreference and entity linking models struggle when evaluated on the global context of the test set. These results highlight the limitations of current approaches in resolving entities within such complex discourse. Mahānāma thus provides a unique benchmark for advancing entity resolution, especially in literary domains",
+    "checked": true,
+    "id": "d916611ad891c8b841ab1245aa6aa4c7cafd021e",
+    "semantic_title": "mahānāma: a unique testbed for literary entity discovery and linking",
+    "citation_count": 1,
     "authors": [
       "Sujoy Sarkar",
       "Gourav Sarkar",
@@ -21331,11 +21331,11 @@
   "https://aclanthology.org/2025.emnlp-main.1270": {
     "title": "Adaptively profiling models with task elicitation",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Language model evaluations often fail to characterize consequential failure modes, forcing experts to inspect outputs and build new benchmarks. We introduce task elicitation, a method that automatically builds new evaluations to profile model behavior. Task elicitation finds hundreds of natural-language tasks—an order of magnitude more than prior work—where frontier models exhibit systematic failures, in domains ranging from forecasting to online harassment. For example, we find that Sonnet 3.5 over-associates quantum computing and AGI and that o3-mini is prone to hallucination when fabrications are repeated in-context",
+    "checked": true,
+    "id": "259cd8938997e3ca4bea00c06c0cf923b0df7a53",
+    "semantic_title": "adaptively profiling models with task elicitation",
+    "citation_count": 1,
     "authors": [
       "Davis Brown",
       "Prithvi Balehannina",
@@ -21348,7 +21348,7 @@
   "https://aclanthology.org/2025.emnlp-main.1271": {
     "title": "Causal Interventions Reveal Shared Structure Across English Filler–Gap Constructions",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Language Models (LMs) have emerged as powerful sources of evidence for linguists seeking to develop theories of syntax. In this paper, we argue that causal interpretability methods, applied to LMs, can greatly enhance the value of such evidence by helping us characterize the abstract mechanisms that LMs learn to use. Our empirical focus is a set of English filler–gap dependency constructions (e.g., questions, relative clauses). Linguistic theories largely agree that these constructions share many properties. Using experiments based in Distributed Interchange Interventions, we show that LMs converge on similar abstract analyses of these constructions. These analyses also reveal previously overlooked factors – relating to frequency, filler type, and surrounding context – that could motivate changes to standard linguistic theory. Overall, these results suggest that mechanistic, internal analyses of LMs can push linguistic theory forward",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21362,10 +21362,10 @@
   "https://aclanthology.org/2025.emnlp-main.1272": {
     "title": "TactfulToM: Do LLMs have the Theory of Mind ability to understand White Lies?",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "While recent studies explore Large Language Models' (LLMs) performance on Theory of Mind (ToM) reasoning tasks, research on ToM abilities that require more nuanced social context is limited, such as white lies. We introduce TactfulToM, a novel English benchmark designed to evaluate LLMs' ability to understand white lies within real-life conversations and reason about prosocial motivations behind them, particularly when they are used to spare others' feelings and maintain social harmony. Our benchmark is generated through a multi-stage human-in-the-loop pipeline where LLMs expand manually designed seed stories into conversations to maintain the information asymmetry between participants necessary for authentic white lies. We show that TactfulToM is challenging for state-of-the-art models, which perform substantially below humans, revealing shortcomings in their ability to fully comprehend the ToM reasoning that enables true understanding of white lies",
+    "checked": true,
+    "id": "100a3b9f535896d1077c339f52f1548cecad6ce8",
+    "semantic_title": "tactfultom: do llms have the theory of mind ability to understand white lies?",
     "citation_count": 0,
     "authors": [
       "Yiwei Liu",
@@ -21377,10 +21377,10 @@
   "https://aclanthology.org/2025.emnlp-main.1273": {
     "title": "Don't Sweat the Small Stuff: Segment-Level Meta-Evaluation Based on Pairwise Difference Correlation",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "This paper introduces Pairwise Difference Pearson (PDP), a novel segment-level meta-evaluation metric for Machine Translation (MT) that addresses limitations in previous Pearson's 𝜌-based and Kendall's 𝜏-based meta-evaluation approaches. PDP is a correlation-based metric that utilizes pairwise differences rather than raw scores. It draws on information from all segments for a more robust understanding of score distributions and uses only pairwise differences to refine Global Pearson to intra-segment comparisons. Analysis on the WMT'24 shared task shows PDP properly ranks sentinel evaluation metrics and better aligns with human error weightings than acceq",
+    "checked": true,
+    "id": "23d0f4209cc82d27d742cc285178808dca78cf5d",
+    "semantic_title": "don't sweat the small stuff: segment-level meta-evaluation based on pairwise difference correlation",
     "citation_count": 0,
     "authors": [
       "Colten DiIanni",
@@ -21390,11 +21390,11 @@
   "https://aclanthology.org/2025.emnlp-main.1274": {
     "title": "SMART: Simulated Students Aligned with Item Response Theory for Question Difficulty Prediction",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Item (question) difficulties play a crucial role in educational assessments, enabling accurate and efficient assessment of student abilities and personalization to maximize learning outcomes. Traditionally, estimating item difficulties can be costly, requiring real students to respond to items, followed by fitting an item response theory (IRT) model to get difficulty estimates. This approach cannot be applied to the cold-start setting for previously unseen items either. In this work, we present SMART (Simulated Students Aligned with IRT), a novel method for aligning simulated students with instructed ability, which can then be used in simulations to predict the difficulty of open-ended items. We achieve this alignment using direct preference optimization (DPO), where we form preference pairs based on how likely responses are under a ground-truth IRT model. We perform a simulation by generating thousands of responses, evaluating them with a large language model (LLM)-based scoring model, and fit the resulting data to an IRT model to obtain item difficulty estimates. Through extensive experiments on two real-world student response datasets, we show that SMART outperforms other item difficulty prediction methods by leveraging its improved ability alignment",
+    "checked": true,
+    "id": "fafea7c3040cec360f47e5c44e5458640cdad61e",
+    "semantic_title": "smart: simulated students aligned with item response theory for question difficulty prediction",
+    "citation_count": 2,
     "authors": [
       "Alexander Scarlatos",
       "Nigel Fernandez",
@@ -21406,7 +21406,7 @@
   "https://aclanthology.org/2025.emnlp-main.1275": {
     "title": "HESEIA: A community-based dataset for evaluating social biases in large language models, co-designed in real school settings in Latin America",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Most resources for evaluating social biases in Large Language Models are developed without co-design from the communities affected by these biases, and rarely involve participatory approaches. We introduce HESEIA, a dataset of 46,499 sentences created in a professional development course. The course involved 370 high-school teachers and 5,370 students from 189 Latin-American schools. Unlike existing benchmarks, HESEIA captures intersectional biases across multiple demographic axes and school subjects. It reflects local contexts through the lived experience and pedagogical expertise of educators. Teachers used minimal pairs to create sentences that express stereotypes relevant to their school subjects and communities. We show the dataset diversity in term of demographic axes represented and also in terms of the knowledge areas included. We demonstrate that the dataset contains more stereotypes unrecognized by current LLMs than previous datasets. HESEIA is available to support bias assessments grounded in educational communities",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21425,11 +21425,11 @@
   "https://aclanthology.org/2025.emnlp-main.1276": {
     "title": "WebMMU: A Benchmark for Multimodal Multilingual Website Understanding and Code Generation",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "We present WebMMU, a multilingual benchmark that evaluates three core web tasks: (1) website visual question answering, (2) code editing involving HTML/CSS/JavaScript, and (3) mockup-to-code generation. Unlike prior benchmarks that treat these tasks separately, WebMMU unifies them using expert-annotated, real-world web data to assess models' abilities in complex multi-step reasoning, precise element grounding, and functional UI comprehension and coding. Our evaluation shows that while multimodal large language models (MLLMs) perform well on basic information extraction, they struggle with reasoning and grounding, editing code to preserve functionality, and generating design-to-code that maintains hierarchy and supports multilingual content. These findings reveal key limitations in current MLLMs and underscore the need for improved multimodal and cross-lingual reasoning to build future web agents capable of automating diverse web development tasks",
+    "checked": true,
+    "id": "e3e9ceee8c7e78cac6b5d70ed35194733050c6e9",
+    "semantic_title": "webmmu: a benchmark for multimodal multilingual website understanding and code generation",
+    "citation_count": 8,
     "authors": [
       "Rabiul Awal",
       "Mahsa Massoud",
@@ -21449,7 +21449,7 @@
   "https://aclanthology.org/2025.emnlp-main.1277": {
     "title": "Analyzing values about gendered language reform in LLMs' revisions",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Within the common LLM use case of text revision, we study LLMs' revision of gendered role nouns (e.g., outdoorsperson/woman/man) and their justifications of such revisions. We evaluate their alignment with feminist and trans-inclusive language reforms for English. Drawing on insight from sociolinguistics, we further assess if LLMs are sensitive to the same contextual effects in the application of such reforms as people are, finding broad evidence of such effects. We discuss implications for value alignment",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21465,10 +21465,10 @@
   "https://aclanthology.org/2025.emnlp-main.1278": {
     "title": "ALLabel: Three-stage Active Learning for LLM-based Entity Recognition using Demonstration Retrieval",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Many contemporary data-driven research efforts in the natural sciences, such as chemistry and materials science, require large-scale, high-performance entity recognition from scientific datasets. Large language models (LLMs) have increasingly been adopted to solve the entity recognition task, with the same trend being observed on all-spectrum NLP tasks. The prevailing entity recognition LLMs rely on fine-tuned technology, yet the fine-tuning process often incurs significant cost. To achieve a best performance-cost trade-off, we propose ALLabel, a three-stage framework designed to select the most informative and representative samples in preparing the demonstrations for LLM modeling. The annotated examples are used to construct a ground-truth retrieval corpus for LLM in-context learning. By sequentially employing three distinct active learning strategies, ALLabel consistently outperforms all baselines under the same annotation budget across three specialized domain datasets. Experimental results also demonstrate that selectively annotating only 5%-10% of the dataset with ALLabel can achieve performance comparable to the method annotating the entire dataset. Further analyses and ablation studies verify the effectiveness and generalizability of our proposal",
+    "checked": true,
+    "id": "f55025d588ebb12d247d192c54332525f4816236",
+    "semantic_title": "allabel: three-stage active learning for llm-based entity recognition using demonstration retrieval",
     "citation_count": 0,
     "authors": [
       "Zihan Chen",
@@ -21481,10 +21481,10 @@
   "https://aclanthology.org/2025.emnlp-main.1279": {
     "title": "HyperKGR: Knowledge Graph Reasoning in Hyperbolic Space with Graph Neural Network Encoding Symbolic Path",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Knowledge graphs (KGs) enable reasoning tasks such as link prediction, question answering, and knowledge discovery. However, real-world KGs are often incomplete, making link prediction both essential and challenging. Existing methods, including embedding-based and path-based approaches, rely on Euclidean embeddings, which struggle to capture hierarchical structures. GNN-based methods aggregate information through message passing in Euclidean space, but they struggle to effectively encode the recursive tree-like structures that emerge in multi-hop reasoning. To address these challenges, we propose a hyperbolic GNN framework that embeds recursive learning trees in hyperbolic space and generates query-specific embeddings. By incorporating hierarchical message passing, our method naturally aligns with reasoning paths and dynamically adapts to queries, improving prediction accuracy. Unlike static embedding-based approaches, our model computes context-aware embeddings tailored to each query. Experiments on multiple benchmark datasets show that our approach consistently outperforms state-of-the-art methods, demonstrating its effectiveness in KG reasoning",
+    "checked": true,
+    "id": "3e8ccf52d3d51e719e03417d07c3484dbde47fb9",
+    "semantic_title": "hyperkgr: knowledge graph reasoning in hyperbolic space with graph neural network encoding symbolic path",
     "citation_count": 0,
     "authors": [
       "Lihui Liu"
@@ -21493,7 +21493,7 @@
   "https://aclanthology.org/2025.emnlp-main.1280": {
     "title": "LLaMP: Large Language Model Made Powerful for High-fidelity Materials Knowledge Retrieval",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Materials science research requires multi-step reasoning and precise material informatics retrieval, where minor errors can propagate into significant failures in downstream experiments. Despite their general success, Large Language Models (LLMs) often struggle with hallucinations, handling domain-specific data effectively (e.g., crystal structures), and integrating experimental workflows. To address these challenges, we introduce LLaMP, a hierarchical multi-agent framework designed to emulate the materials science research workflow. The high-level supervisor agent decomposes user requests into sub-tasks and coordinates with specialized assistant agents. These assistant agents handle domain-specific tasks, such as retrieving and processing data from the Materials Project (MP) or conducting simulations as needed. This pipeline facilitates iterative refinement of material property retrieval and enables the simulation of real-world research workflows. To ensure reliability, we propose a novel metric combining uncertainty and confidence estimate to evaluate the self-consistency of responses from LLaMP and baseline methods. Our experiments demonstrate LLaMP's superior performance in material property retrieval, crystal structure editing, and annealing molecular dynamics simulations using pre-trained interatomic potentials. Unlike prior work focused solely on material property prediction or discovery, LLaMP serves as a foundation for autonomous materials research by combining grounded informatics and enabling iterative experimental processes. Code and live demo are available at https://github.com/chiang-yuan/llamp",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21508,10 +21508,10 @@
   "https://aclanthology.org/2025.emnlp-main.1281": {
     "title": "ReSeeding Latent States for Sequential Language Understanding",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "We introduce Refeeding State Embeddings aligned using Environmental Data (ReSEED), a novel method for grounding language in environmental data. While large language models (LLMs) excel at many tasks, they continue to struggle with multi-step sequential reasoning. ReSEED addresses this by producing latent embeddings aligned with the true state of the environment and refeeding these embeddings into the model before generating its output. To evaluate its effectiveness, we develop three new sequential reasoning benchmarks, each with a training set of paired state-text trajectories and several text-only evaluation sets that test generalization to longer, unseen trajectories. Across all benchmarks, ReSEED significantly improves generalization and scalability over a text-only baseline. We further show that ReSEED outperforms commercial LLMs on our benchmarks, highlighting the value of grounding language in the environment",
+    "checked": true,
+    "id": "b39a7f23ddbd4503e45af30d360a2ffc174d5a71",
+    "semantic_title": "reseeding latent states for sequential language understanding",
     "citation_count": 0,
     "authors": [
       "Stéphane Aroca-Ouellette",
@@ -21522,10 +21522,10 @@
   "https://aclanthology.org/2025.emnlp-main.1282": {
     "title": "DPED: Multi-Layer Noise Distillation for Privacy-Preserving Text Embeddings",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Training text embedding models under differential privacy constraints is challenging due to the high dimensionality of language data and the presence of rare, identifying linguistic features. We propose (Differentially Private Embedding Distillation), a framework that leverages teacher-student distillation with multi-layer noise injection to learn high-quality embeddings while providing differential privacy guarantees. DPED trains an ensemble of teacher models on disjoint subsets of sensitive text data, then transfers their knowledge to a student model through noisy aggregation at multiple layers. A rare-word-aware strategy adaptively handles infrequent words, improving privacy-utility trade-offs. Experiments on benchmark datasets demonstrate that DPED outperforms standard differentially private training methods, achieving substantially higher utility at the same privacy budget. Our approach protects individual word usage patterns in training documents, preventing models from memorizing unique linguistic fingerprints while maintaining practical utility for downstream NLP tasks. Source code is available at https://github.com/datasec-lab/DPED",
+    "checked": true,
+    "id": "5c81b48b3eb2e5f3907c8f0e1cc704647ade5d94",
+    "semantic_title": "dped: multi-layer noise distillation for privacy-preserving text embeddings",
     "citation_count": 0,
     "authors": [
       "Shuya Feng",
@@ -21535,10 +21535,10 @@
   "https://aclanthology.org/2025.emnlp-main.1283": {
     "title": "Identifying & Interactively Refining Ambiguous User Goals for Data Visualization Code Generation",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Establishing shared goals is a fundamental step in human-AI communication. However, ambiguities can lead to outputs that seem correct but fail to reflect the speaker's intent. In this paper, we explore this issue with a focus on the data visualization domain, where ambiguities in natural language impact the generation of code that visualizes data. The availability of multiple views on the contextual (e.g. the intended plot and the code rendering the plot) allows for a unique and comprehensive analysis of diverse ambiguity types. We develop a taxonomy of types of ambiguity that arise in this task and propose metrics to quantify them. Using Matplotlib problems from the DS-1000 dataset, we demonstrate that our ambiguity metrics better correlate with human annotations than uncertainty baselines. Our work also explores how multi-turn dialogue can reduce ambiguity, and therefore, improve code accuracy by better matching user goals. We evaluate three pragmatic models to inform our dialogue strategies: Gricean Cooperativity, Discourse Representation Theory, and Questions under Discussion. A simulated user study reveals how pragmatic dialogues reduce ambiguity and enhance code accuracy, highlighting the value of multi-turn exchanges in code generation",
+    "checked": true,
+    "id": "65ebaaf603dfc9cc3abab4d36d493c0d2173d669",
+    "semantic_title": "identifying & interactively refining ambiguous user goals for data visualization code generation",
     "citation_count": 0,
     "authors": [
       "Mert Inan",
@@ -21552,10 +21552,10 @@
   "https://aclanthology.org/2025.emnlp-main.1284": {
     "title": "Morpheme Induction for Emergent Language",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "We introduce CSAR, an algorithm for inducing morphemes from emergent language corpora of parallel utterances and meanings.It is a greedy algorithm that (1) weights morphemes based on mutual information between forms and meanings, (2) selects the highest-weighted pair, (3) removes it from the corpus, and (4) repeats the process to induce further morphemes (i.e., Count, Select, Ablate, Repeat).The effectiveness of CSAR is first validated on procedurally generated datasets and compared against baselines for related tasks.Second, we validate CSAR's performance on human language data to show that the algorithm makes reasonable predictions in adjacent domains.Finally, we analyze a handful of emergent languages, quantifying linguistic characteristics like degree of synonymy and polysemy",
+    "checked": true,
+    "id": "16acf7151f7e51bc7226764367af876708b47409",
+    "semantic_title": "morpheme induction for emergent language",
     "citation_count": 0,
     "authors": [
       "Brendon Boldt",
@@ -21565,11 +21565,11 @@
   "https://aclanthology.org/2025.emnlp-main.1285": {
     "title": "Stepwise Informativeness Search for Improving LLM Reasoning",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Advances in Large Language Models (LLMs) have improved multi-step reasoning by generating free-text rationales, but these models tend to lose focus over the middle of long contexts. This raises concerns that as reasoning progresses, LLMs may overlook information in earlier steps when decoding subsequent steps, leading to unreliable and redundant rationales. To address this, we propose guiding LLMs to generate more accurate and concise rationales by (1) proactively referencing information from underutilized prior steps, and (2) minimizing redundant information between new and existing steps. We introduce stepwise informativeness search, an inference-time tree search framework incorporating two selection heuristics: grounding-guided selection which prioritizes steps paying higher attention over underutilized steps; and novelty-guided selection which encourages steps with novel conclusions. We further utilize a self-grounding strategy that prompts LLMs to explicitly reference relevant prior steps as premises before deduction at each step, mitigating distraction from irrelevant content. Experiments on five reasoning datasets across five LLMs show the effectiveness and efficiency of our approach to improve reasoning with reduced errors and redundancy",
+    "checked": true,
+    "id": "3ed305d8fafec30942d8c92ec296336058669788",
+    "semantic_title": "stepwise informativeness search for improving llm reasoning",
+    "citation_count": 4,
     "authors": [
       "Siyuan Wang",
       "Enda Zhao",
@@ -21579,7 +21579,7 @@
   "https://aclanthology.org/2025.emnlp-main.1286": {
     "title": "Social Good or Scientific Curiosity? Uncovering the Research Framing Behind NLP Artefacts",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Clarifying the research framing of NLP artefacts (e.g., models, datasets, etc.) is crucial to aligning research with practical applications when researchers claim that their findings have real-world impact. Recent studies manually analyzed NLP research across domains, showing that few papers explicitly identify key stakeholders, intended uses, or appropriate contexts. In this work, we propose to automate this analysis, developing a three-component system that infers research framings by first extracting key elements (means, ends, stakeholders), then linking them through interpretable rules and contextual reasoning.We evaluate our approach on two domains: automated fact-checking using an existing dataset, and hate speech detection for which we annotate a new dataset—achieving consistent improvements over strong LLM baselines.Finally, we apply our system to recent automated fact-checking papers and uncover three notable trends: a rise in underspecified research goals, increased emphasis on scientific exploration over application, and a shift toward supporting human fact-checkers rather than pursuing full automation",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21594,11 +21594,11 @@
   "https://aclanthology.org/2025.emnlp-main.1287": {
     "title": "FairGen: Controlling Sensitive Attributes for Fair Generations in Diffusion Models via Adaptive Latent Guidance",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Text-to-image diffusion models often exhibit biases toward specific demographic groups, such as generating more males than females when prompted to generate images of engineers, raising ethical concerns and limiting their adoption. In this paper, we tackle the challenge of mitigating generation bias towards any target attribute value (e.g., \"male\" for \"gender\") in diffusion models while preserving generation quality. We propose FairGen, an adaptive latent guidance mechanism which controls the generation distribution during inference. In FairGen, a latent guidance module dynamically adjusts the diffusion process to enforce specific attributes, while a memory module tracks the generation statistics and steers latent guidance to align with the targeted fair distribution of the attribute values. Further, given the limitations of existing datasets in comprehensively assessing bias in diffusion models, we introduce a holistic bias evaluation benchmark HBE, covering diverse domains and incorporating complex prompts across various applications. Extensive evaluations on HBE and Stable Bias datasets demonstrate that FairGen outperforms existing bias mitigation approaches, achieving substantial bias reduction (e.g., 68.5% gender bias reduction on Stable Diffusion 2). Ablation studies highlight FairGen's ability to flexibly and precisely control generation distribution at any user-specified granularity, ensuring adaptive and targeted bias mitigation",
+    "checked": true,
+    "id": "5a0fa9a9f981d7e69f7a46f00bb9467eb2595729",
+    "semantic_title": "fairgen: controlling sensitive attributes for fair generations in diffusion models via adaptive latent guidance",
+    "citation_count": 1,
     "authors": [
       "Mintong Kang",
       "Vinayshekhar Bannihatti Kumar",
@@ -21612,10 +21612,10 @@
   "https://aclanthology.org/2025.emnlp-main.1288": {
     "title": "Contra4: Evaluating Contrastive Cross-Modal Reasoning in Audio, Video, Image, and 3D",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Real-world decision-making often begins with identifying which modality contains the most relevant information for a given query. While recent multimodal models have made impressive progress in processing diverse inputs, it remains unclear whether they can reason contrastively across multiple modalities to select the one that best satisfies a natural language prompt. We argue this capability is foundational, especially in retrieval-augmented and decision-time contexts, where systems must evaluate multiple signals and identify which one conveys the relevant information. To evaluate this skill, we introduce Contra4, a dataset for contrastive cross-modal reasoning across four modalities: image, audio, video, and 3D. Each example presents a natural language question alongside multiple candidate modality instances, and the model must select the one that semantically aligns with the prompt. Contra4 combines human-annotated captions with a mixture-of-models round-trip-consistency filter to ensure high-quality supervision, resulting in 174k training examples and a manually verified test set of 2.3k samples. While task-specific fine-tuning improves performance by 56% relative to baseline, state-of-the-art models still achieve only 56% accuracy overall and 42% in four-modality settings, underscoring a significant limitation in current multimodal models",
+    "checked": true,
+    "id": "5208a49cce02b7b286610ec893ffccf70f45e465",
+    "semantic_title": "contra4: evaluating contrastive cross-modal reasoning in audio, video, image, and 3d",
     "citation_count": 0,
     "authors": [
       "Artemis Panagopoulou",
@@ -21632,10 +21632,10 @@
   "https://aclanthology.org/2025.emnlp-main.1289": {
     "title": "Proactive Hearing Assistants that Isolate Egocentric Conversations",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "We introduce proactive hearing assistants that automatically identify and separate the wearer's conversation partners, without requiring explicit prompts. Our system operates on egocentric binaural audio and uses the wearer's self-speech as an anchor, leveraging turn-taking behavior and dialogue dynamics to infer conversational partners and suppress others. To enable real-time, on-device operation, we propose a dual-model architecture: a lightweight streaming model runs every 12.5 ms for low-latency extraction of the conversation partners, while a slower model runs less frequently to capture longer-range conversational dynamics. Results on real-world 2- and 3-speaker conversation test sets, collected with binaural egocentric hardware from 11 participants totaling 6.8 hours, show generalization in identifying and isolating conversational partners in multi-conversation settings. Our work marks a step toward hearing assistants that adapt proactively to conversational dynamics and engagement",
+    "checked": true,
+    "id": "7b3293f23a4bf518d3dcc8fb4e769277cf004b75",
+    "semantic_title": "proactive hearing assistants that isolate egocentric conversations",
     "citation_count": 0,
     "authors": [
       "Guilin Hu",
@@ -21647,10 +21647,10 @@
   "https://aclanthology.org/2025.emnlp-main.1290": {
     "title": "fLSA: Learning Semantic Structures in Document Collections Using Foundation Models",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Humans can learn to solve new tasks by inducing high-level strategies from example solutions to similar problems and then adapting these strategies to solve unseen problems. Can we use large language models to induce such high-level structure from example documents or solutions? We introduce fLSA, a foundation-model-based Latent Semantic Analysis method that iteratively clusters and tags document segments based on document-level contexts. These tags can be used to model the latent structure of given documents and for hierarchical sampling of new texts. Our experiments on story writing, math, and multi-step reasoning datasets demonstrate that fLSA tags are more informative in reconstructing the original texts than existing tagging methods. Moreover, when used for hierarchical sampling, fLSA tags help expand the output space in the right directions that lead to correct solutions more often than direct sampling and hierarchical sampling with existing tagging methods",
+    "checked": true,
+    "id": "f6e6b0792de44e5c024b38548fa8a3bb302c7b47",
+    "semantic_title": "flsa: learning semantic structures in document collections using foundation models",
     "citation_count": 0,
     "authors": [
       "Weijia Xu",
@@ -21661,7 +21661,7 @@
   "https://aclanthology.org/2025.emnlp-main.1291": {
     "title": "SafeKey: Amplifying Aha-Moment Insights for Safety Reasoning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large Reasoning Models (LRMs) introduce a new generation paradigm of explicitly reasoning before answering, leading to remarkable improvements in complex tasks. However, they pose great safety risks against harmful queries and adversarial attacks. While recent mainstream safety efforts on LRMs, supervised fine-tuning (SFT), improve safety performance, we find that SFT-aligned models struggle to generalize to unseen jailbreak prompts. After thorough investigation, we identify a safety aha moment that can activate safety reasoning and lead to a safe response. This aha moment typically appears in the ‘key sentence' that follows models' query understanding process and can indicate whether the model will proceed safely. Based on these insights, we propose SafeKey, including two complementary objectives to better activate the safety aha-moment in the key sentence: (1) a Dual-Path Safety Head to enhance the safety signal in the model's internal representations before the key sentence, and (2) a Query-Mask Modeling objective to improve the models' attention on its query understanding, which has important safety hints. Experiments across multiple safety benchmarks demonstrate that our methods significantly improve safety generalization to a wide range of jailbreak attacks and out-of-distribution harmful prompts, lowering the harmfulness rate by 9.6%, while maintaining general abilities. Our analysis reveals how SafeKey enhances safety by reshaping internal attention and improving the quality of hidden representations",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21679,11 +21679,11 @@
   "https://aclanthology.org/2025.emnlp-main.1292": {
     "title": "HypER: Literature-grounded Hypothesis Generation and Distillation with Provenance",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Large Language models have demonstrated promising performance in research ideation across scientific domains. Hypothesis development, the process of generating a highly specific declarative statement connecting a research idea with empirical validation, has received relatively less attention. Existing approaches trivially deploy retrieval augmentation and focus only on the quality of the final output ignoring the underlying reasoning process behind ideation. We present HypER (Hypothesis Generation with Explanation and Reasoning), a small language model (SLM) trained for literature-guided reasoning and evidence-based hypothesis generation. HypER is trained in a multi-task setting to discriminate between valid and invalid scientific reasoning chains in presence of controlled distractions. We find that HypER outperformes the base model, distinguishing valid from invalid reasoning chains (+22% average absolute F1), generates better evidence-grounded hypotheses (0.327 vs. 0.305 base model) with high feasibility and impact as judged by human experts (>3.5 on 5-point Likert scale)",
+    "checked": true,
+    "id": "7ee73d3697e10331c2050743e3085980495e5b84",
+    "semantic_title": "hyper: literature-grounded hypothesis generation and distillation with provenance",
+    "citation_count": 2,
     "authors": [
       "Rosni Vasu",
       "Chandrayee Basu",
@@ -21696,11 +21696,11 @@
   "https://aclanthology.org/2025.emnlp-main.1293": {
     "title": "Empowering GraphRAG with Knowledge Filtering and Integration",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "In recent years, large language models (LLMs) have revolutionized the field of natural language processing. However, they often suffer from knowledge gaps and hallucinations. Graph retrieval-augmented generation (GraphRAG) enhances LLM reasoning by integrating structured knowledge from external graphs. However, we identify two key challenges that plague GraphRAG: (1) Retrieving noisy and irrelevant information can degrade performance and (2) Excessive reliance on external knowledge suppresses the model's intrinsic reasoning.To address these issues, we propose GraphRAG-FI (Filtering & Integration), consisting of GraphRAG-Filtering and GraphRAG-Integration. GraphRAG-Filtering employs a two-stage filtering mechanism to refine retrieved information. GraphRAG-Integration employs a logits-based selection strategy to balance external knowledge from GraphRAG with the LLM's intrinsic reasoning, reducing over-reliance on retrievals. Experiments on knowledge graph QA tasks demonstrate that GraphRAG-FI significantly improves reasoning performance across multiple backbone models, establishing a more reliable and effective GraphRAG framework",
+    "checked": true,
+    "id": "48f8df1c713c4c40695aaf2ec10b0f3b514443ad",
+    "semantic_title": "empowering graphrag with knowledge filtering and integration",
+    "citation_count": 8,
     "authors": [
       "Kai Guo",
       "Harry Shomer",
@@ -21713,11 +21713,11 @@
   "https://aclanthology.org/2025.emnlp-main.1294": {
     "title": "Interpretable Mnemonic Generation for Kanji Learning via Expectation-Maximization",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Learning Japanese vocabulary is a challenge for learners from Roman alphabet backgrounds due to script differences. Japanese combines syllabaries like hiragana with kanji, which are logographic characters of Chinese origin. Kanji are also complicated due to their complexity and volume. Keyword mnemonics are a common strategy to aid memorization, often using the compositional structure of kanji to form vivid associations. Despite recent efforts to use large language models (LLMs) to assist learners, existing methods for LLM-based keyword mnemonic generation function as a black box, offering limited interpretability. We propose a generative framework that explicitly models the mnemonic construction process as driven by a set of common rules, and learn them using a novel Expectation-Maximization-type algorithm. Trained on learner-authored mnemonics from an online platform, our method learns latent structures and compositional rules, enabling interpretable and systematic mnemonics generation. Experiments show that our method performs well in the cold-start setting for new learners while providing insight into the mechanisms behind effective mnemonic creation",
+    "checked": true,
+    "id": "0be2eb2d5d8dc1215ed67bfa956860f6243199ce",
+    "semantic_title": "interpretable mnemonic generation for kanji learning via expectation-maximization",
+    "citation_count": 1,
     "authors": [
       "Jaewook Lee",
       "Alexander Scarlatos",
@@ -21727,10 +21727,10 @@
   "https://aclanthology.org/2025.emnlp-main.1295": {
     "title": "Refining Attention for Explainable and Noise-Robust Fact-Checking with Transformers",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "In tasks like question answering and fact-checking, models must discern relevant information from extensive corpora in an \"open-book\" setting. Conventional transformer-based models excel at classifying input data, but (i) often falter due to sensitivity to noise and (ii) lack explainability regarding their decision process. To address these challenges, we introduce ATTUN, a novel transformer architecture designed to enhance model transparency and resilience to noise by refining the attention mechanisms. Our approach involves a dedicated module that directly modifies attention weights, allowing the model to both improve predictions and identify the most relevant sections of input data. We validate our methodology using fact-checking datasets and show promising results in question answering. Experiments demonstrate improvements of up to 51% in F1 score for detecting relevant context, and gains of up to 18% in task accuracy when integrating ATTUN into a model",
+    "checked": true,
+    "id": "7af516f3fc61942899d13b21038d1489d57ce58e",
+    "semantic_title": "refining attention for explainable and noise-robust fact-checking with transformers",
     "citation_count": 0,
     "authors": [
       "Jean-Flavien Bussotti",
@@ -21740,7 +21740,7 @@
   "https://aclanthology.org/2025.emnlp-main.1296": {
     "title": "Harmful Prompt Laundering: Jailbreaking LLMs with Abductive Styles and Symbolic Encoding",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across diverse tasks, but their potential misuse for harmful purposes remains a significant concern. To strengthen defenses against such vulnerabilities, it is essential to investigate universal jailbreak attacks that exploit intrinsic weaknesses in the architecture and learning paradigms of LLMs. In response, we propose Harmful Prompt Laundering (HaPLa), a novel and broadly applicable jailbreaking technique that requires only black-box access to target models. HaPLa incorporates two primary strategies: 1) abductive framing, which instructs LLMs to infer plausible intermediate steps toward harmful activities, rather than directly responding to explicit harmful queries; and 2) symbolic encoding, a lightweight and flexible approach designed to obfuscate harmful content, given that current LLMs remain sensitive primarily to explicit harmful keywords. Experimental results show that HaPLa achieves over 95% attack success rate on GPT-series models and 70% across all targets. Further analysis with diverse symbolic encoding rules also reveals a fundamental challenge: it remains difficult to safely tune LLMs without significantly diminishing their helpfulness in responding to benign queries",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21754,7 +21754,7 @@
   "https://aclanthology.org/2025.emnlp-main.1297": {
     "title": "Pathway to Relevance: How Cross-Encoders Implement a Semantic Variant of BM25",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Mechanistic interpretation has greatly contributed to a more detailed understanding of generative language models, enabling significant progress in identifying structures that implement key behaviors through interactions between internal components. In contrast, interpretability in information retrieval (IR) remains relatively coarse-grained, and much is still unknown as to how IR models determine whether a document is relevant to a query. In this work, we address this gap by mechanistically analyzing how one commonly used model, a cross-encoder, estimates relevance. We find that the model extracts traditional relevance signals, such as term frequency and inverse document frequency, in early-to-middle layers. These concepts are then combined in later layers, similar to the well-known probabilistic ranking function, BM25. Overall, our analysis offers a more nuanced understanding of how IR models compute relevance. Isolating these components lays the groundwork for future interventions that could enhance transparency, mitigate safety risks, and improve scalability",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21768,11 +21768,11 @@
   "https://aclanthology.org/2025.emnlp-main.1298": {
     "title": "Rewarding the Unlikely: Lifting GRPO Beyond Distribution Sharpening",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Reinforcement learning is emerging as a primary driver for improving language model reasoning capabilities. A fundamental question is whether current reinforcement learning algorithms—such as Group Relative Policy Optimization (GRPO), the de facto standard algorithm used to improve language model reasoning—merely sharpen the base model's distribution around problems it can already solve. We investigate this question in the context of formal theorem proving, which has access to a perfect verifier. We identify a degenerate rank bias in GRPO in which highly probable trajectories are reinforced and rare ones are neglected. This results in distribution sharpening: the model can solve some problems with fewer samples, but underperforms simply sampling more solutions from the original model. To overcome GRPO's rank bias we introduce unlikeliness reward, a simple method for explicitly up-weighting rare but correct solutions. We show that unlikeliness reward mitigates rank bias and improves pass@N across a large range of N in both synthetic and real theorem proving settings. We also uncover an unexpected link between rank bias and a seemingly mundane hyperparameter—the number of updates per batch—that leads to a second, complementary mitigation. We combine our insights into a revised GRPO training recipe for formal theorem proving, yielding an open pipeline that achieves competitive performance to DeepSeek-Prover-V1.5-RL on the miniF2F-test benchmark",
+    "checked": true,
+    "id": "2587ee3880c15a247f8f5fca40ffdef088102100",
+    "semantic_title": "rewarding the unlikely: lifting grpo beyond distribution sharpening",
+    "citation_count": 23,
     "authors": [
       "Andre Wang He",
       "Daniel Fried",
@@ -21782,11 +21782,11 @@
   "https://aclanthology.org/2025.emnlp-main.1299": {
     "title": "PhoniTale: Phonologically Grounded Mnemonic Generation for Typologically Distant Language Pairs",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
-    "citation_count": 0,
+    "abstract": "Vocabulary acquisition poses a significant challenge for second-language (L2) learners, especially when learning typologically distant languages such as English and Korean, where phonological and structural mismatches complicate vocabulary learning. Recently, large language models (LLMs) have been used to generate keyword mnemonics by leveraging similar keywords from a learner's first language (L1) to aid in acquiring L2 vocabulary. However, most methods still rely on direct IPA-based phonetic matching or employ LLMs without phonological guidance. In this paper, we present PhoniTale, a novel cross-lingual mnemonic generation system that performs IPA-based phonological adaptation and syllable-aware alignment to retrieve L1 keyword sequence and uses LLMs to generate verbal cues. We evaluate PhoniTale through automated metrics and a short-term recall test with human participants, comparing its output to human-written and prior automated mnemonics. Our findings show that PhoniTale consistently outperforms previous automated approaches and achieves quality comparable to human-written mnemonics",
+    "checked": true,
+    "id": "7385431e3af247a4c1150b1a37c3fa6b2072eef4",
+    "semantic_title": "phonitale: phonologically grounded mnemonic generation for typologically distant language pairs",
+    "citation_count": 1,
     "authors": [
       "Sana Kang",
       "Myeongseok Gwon",
@@ -21800,10 +21800,10 @@
   "https://aclanthology.org/2025.emnlp-main.1300": {
     "title": "Amulet: Putting Complex Multi-Turn Conversations on the Stand with LLM Juries",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Today, large language models are widely used as judges to evaluate responses from other language models. Hence, it is imperative to benchmark and improve these LLM-judges on real-world language model usage: a typical human-assistant conversation is lengthy, and shows significant diversity in topics, intents, and requirements across turns, e.g. social interactions, task requests, feedback. We present Amulet, a framework that leverages pertinent linguistic concepts of dialog-acts and maxims to improve the accuracy of LLM-judges on preference data with complex, multi-turn conversational context. Amulet presents valuable insights about (a) the communicative structures and intents present in the conversation (dialog acts), and (b) the satisfaction of conversational principles (maxims) by the preference pair responses, and uses them to make judgments. On 4 challenging datasets, Amulet shows that (a) humans frequently (60-70% of the time) change their intents from one turn of the conversation to the next, and (b) in ∼75% of instances, the preference responses can be differentiated via dialog acts and/or maxims, reiterating the latter's significance in judging such data. Amulet can be used either as a judge by applying the framework to a single LLM, or integrated into a jury with different LLM judges; our judges and juries show strong improvements on relevant baselines for all 4 datasets",
+    "checked": true,
+    "id": "602c23958a567878d6a9d8e4831402611a038a6a",
+    "semantic_title": "amulet: putting complex multi-turn conversations on the stand with llm juries",
     "citation_count": 0,
     "authors": [
       "Sahana Ramnath",
@@ -21816,10 +21816,10 @@
   "https://aclanthology.org/2025.emnlp-main.1301": {
     "title": "Exploring Chain-of-Thought Reasoning for Steerable Pluralistic Alignment",
     "volume": "main",
-    "abstract": "",
-    "checked": false,
-    "id": null,
-    "semantic_title": "",
+    "abstract": "Large Language Models (LLMs) are typically trained to reflect a relatively uniform set of values, which limits their applicability to tasks that require understanding of nuanced human perspectives. Recent research has underscored the importance of enabling LLMs to support steerable pluralism — the capacity to adopt a specific perspective and align generated outputs with it. In this work, we investigate whether Chain-of-Thought (CoT) reasoning techniques can be applied to building steerable pluralistic models. We explore several methods, including CoT prompting, fine-tuning on human-authored CoT, fine-tuning on synthetic explanations, and Reinforcement Learning with Verifiable Rewards (RLVR). We evaluate these approaches using the Value Kaleidoscope and OpinionQA datasets. Among the methods studied, RLVR consistently outperforms others and demonstrates strong training sample efficiency. We further analyze the generated CoT traces with respect to faithfulness and safety",
+    "checked": true,
+    "id": "3d603a4fd6cb5d1d6cf9f8b1ffbed9b73bbd5563",
+    "semantic_title": "exploring chain-of-thought reasoning for steerable pluralistic alignment",
     "citation_count": 0,
     "authors": [
       "Yunfan Zhang",
@@ -21830,7 +21830,7 @@
   "https://aclanthology.org/2025.emnlp-main.1302": {
     "title": "CMedCalc-Bench: A Fine-Grained Benchmark for Chinese Medical Calculations in LLM",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large Language Models (LLMs) have demonstrated significant potential in medical diagnostics and clinical decision-making. While benchmarks such as MedQA and PubMedQA have advanced the evaluation of qualitative reasoning, existing medical NLP benchmarks still face two limitations: the absence of a Chinese benchmark for medical calculation tasks, and the lack of fine-grained evaluation of intermediate reasoning. In this paper, we introduce CMedCalc-Bench, a new benchmark designed for Chinese medical calculation. CMedCalc-Bench covers 69 calculators across 12 clinical departments, featuring over 1,000 real-world patient cases. Building on this, we design a fine-grained evaluation framework that disentangles clinical entity extraction from numerical computation, enabling systematic diagnosis of model deficiencies. Experiments across four model families, including medical-specialized and reasoning-focused, provide an assessment of their strengths and limitations on Chinese medical calculation. Furthermore, explorations on faithful reasoning and the demonstration effect offer early insights into advancing safe and reliable clinical computation",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21844,7 +21844,7 @@
   "https://aclanthology.org/2025.emnlp-main.1303": {
     "title": "Evaluating Robustness of Large Audio Language Models to Audio Injection: An Empirical Study",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large Audio-Language Models (LALMs) are increasingly deployed in real-world applications, yet their robustness against malicious audio injection remains underexplored. To address this gap, this study systematically evaluates five leading LALMs across four attack scenarios: Audio Interference Attack, Instruction Following Attack, Context Injection Attack, and Judgment Hijacking Attack. We quantitatively assess their vulnerabilities and resilience using metrics: the Defense Success Rate, Context Robustness Score, and Judgment Robustness Index. The experiments reveal significant performance disparities, with no single model demonstrating consistent robustness across all attack types. Attack effectiveness is significantly influenced by the position of the malicious content, particularly when injected at the beginning of a sequence. Furthermore, our analysis uncovers a negative correlation between a model's instruction-following capability and its robustness: models that strictly adhere to instructions tend to be more susceptible, whereas safety-aligned models exhibit greater resistance. To facilitate future research, this work introduces a comprehensive benchmark framework. Our findings underscore the critical need for integrating robustness into training pipelines and developing multi-modal defenses, ultimately facilitating the secure deployment of LALMs. The dataset used in this work is available on Hugging Face",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21862,7 +21862,7 @@
   "https://aclanthology.org/2025.emnlp-main.1304": {
     "title": "How Far Can LLMs Improve from Experience? Measuring Test-Time Learning Ability in LLMs with Human Comparison",
     "volume": "main",
-    "abstract": "",
+    "abstract": "As evaluation designs of large language models may shape our trajectory toward artificial general intelligence, comprehensive and forward-looking assessment is essential. Existing benchmarks primarily assess static knowledge, while intelligence also entails the ability to rapidly learn from experience. To this end, we advocate for the evaluation of Test-time Learning, the capacity to improve performance in experience-based, reasoning-intensive tasks during test time. In this work, we propose semantic games as effective testbeds for evaluating test-time learning, due to their resistance to saturation and inherent demand for strategic reasoning. We introduce an objective evaluation framework that compares model performance under both limited and cumulative experience settings, and contains four forms of experience representation. To provide a comparative baseline, we recruit eight human participants to complete the same task. Results show that LLMs exhibit measurable test-time learning capabilities; however, their improvements are less stable under cumulative experience and progress more slowly than those observed in humans. These findings underscore the potential of LLMs as general-purpose learning machines, while also revealing a substantial intellectual gap between models and humans, irrespective of how well LLMs perform on static benchmarks. The code and data are available",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21877,7 +21877,7 @@
   "https://aclanthology.org/2025.emnlp-main.1305": {
     "title": "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large Language Models (LLMs) are increasingly used for decision making in embodied agents, yet existing safety evaluations often rely on coarse success rates and domain-specific setups, making it difficult to diagnose why and where these models fail. This obscures our understanding of embodied safety and limits the selective deployment of LLMs in high-risk physical environments. We introduce SAFEL, the framework for systematically evaluating the physical safety of LLMs in embodied decision making. SAFEL assesses two key competencies: (1) rejecting unsafe commands via the Command Refusal Test, and (2) generating safe and executable plans via the Plan Safety Test. Critically, the latter is decomposed into functional modules, goal interpretation, transition modeling, action sequencing enabling fine-grained diagnosis of safety failures. To support this framework, we introduce EMBODYGUARD, a PDDL-grounded benchmark containing 942 LLM-generated scenarios covering both overtly malicious and contextually hazardous instructions. Evaluation across 13 state-of-the-art LLMs reveals that while models often reject clearly unsafe commands, they struggle to anticipate and mitigate subtle, situational risks. Our results highlight critical limitations in current LLMs and provide a foundation for more targeted, modular improvements in safe embodied reasoning",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21896,7 +21896,7 @@
   "https://aclanthology.org/2025.emnlp-main.1306": {
     "title": "SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation",
     "volume": "main",
-    "abstract": "",
+    "abstract": "LLM inference for enterprise applications, such as summarization, RAG, and code-generation, typically observe much longer prompt than generations, leading to high prefill cost and response latency. We present SwiftKV, a novel model transformation and distillation procedure targeted at reducing the prefill compute (in FLOPs) of prompt tokens while preserving high generation quality. First, SwiftKV prefills later layers' KV cache using an earlier layer's output, allowing prompt tokens to skip those later layers. Second, SwiftKV employs a lightweight knowledge-preserving distillation procedure that can adapt existing LLMs with minimal accuracy impact. Third, SwiftKV can naturally incorporate KV cache compression to improve inference performance in low-memory scenarios. Our comprehensive experiments show that SwiftKV can effectively reduce prefill computation by 25-50% across several LLM families while incurring minimum quality degradation. In the end-to-end inference serving, SwiftKV realizes up to 2x higher aggregate throughput and 60% lower time per output token. It can achieve a staggering 560 TFlops/GPU of normalized inference throughput, which translates to 16K tokens/s for Llama-3.1-70B. SwiftKV is open-sourced at https://github.com/snowflakedb/arctictraining and https://github.com/snowflakedb/arcticinference",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21911,7 +21911,7 @@
   "https://aclanthology.org/2025.emnlp-main.1307": {
     "title": "Co-Eval: Augmenting LLM-based Evaluation with Machine Metrics",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large language models (LLMs) are increasingly used as evaluators in natural language generation tasks, offering advantages in scalability and interpretability over traditional evaluation methods. However, existing LLM-based evaluations often suffer from biases and misalignment, particularly in domain-specific tasks, due to limited functional understanding and knowledge gaps. To address these challenges, we first investigate the relationship between an LLM-based evaluator's familiarity with the target task and its evaluation performance. We then introduce the Co-Eval framework, which leverages a criteria planner model and optimized machine metrics to enhance the scalability and fairness of LLM-based evaluation. Experimental results on both general and domain-specific tasks demonstrate that Co-Eval reduces biases, achieving up to a 0.4903 reduction in self-preference bias, and improves alignment with human preferences, with gains of up to 0.324 in Spearman correlation",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21927,7 +21927,7 @@
   "https://aclanthology.org/2025.emnlp-main.1308": {
     "title": "Sali4Vid: Saliency-Aware Video Reweighting and Adaptive Caption Retrieval for Dense Video Captioning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Dense video captioning aims to temporally localize events in video and generate captions for each event. While recent works propose end-to-end models, they suffer from two limitations: (1) applying timestamp supervision only to text while treating all video frames equally, and (2) retrieving captions from fixed-size video chunks, overlooking scene transitions. To address these, we propose **Sali4Vid**, a simple yet effective saliency-aware framework. We introduce Saliency-aware Video Reweighting, which converts timestamp annotations into sigmoid-based frame importance weights, and Semantic-based Adaptive Caption Retrieval, which segments videos by frame similarity to capture scene transitions and improve caption retrieval. Sali4Vid achieves state-of-the-art results on YouCook2 and ViTT, demonstrating the benefit of jointly improving video weighting and retrieval for dense video captioning",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21943,7 +21943,7 @@
   "https://aclanthology.org/2025.emnlp-main.1309": {
     "title": "Semantic Networks Extracted from Students' Think-Aloud Data are Correlated with Students' Learning Performance",
     "volume": "main",
-    "abstract": "",
+    "abstract": "When students reflect on their learning from a textbook via think-aloud processes, network representations can be used to capture the concepts and relations from these data. What can we learn from the resulting network representations about students' learning processes, knowledge acquisition, and learning outcomes? This study brings methods from entity and relation extraction using classic and LLM-based methods to the application domain of educational psychology. We built a ground-truth baseline of relational data that represents relevant (to educational science), textbook-based information as a semantic network. Among the tested models, SPN4RE and LUKE achieved the best performance in extracting concepts and relations from students' verbal data. Network representations of students' verbalizations varied in structure, reflecting different learning processes. Correlating the students' semantic networks with learning outcomes revealed that denser and more interconnected semantic networks were associated with more elaborated knowledge acquisition. Structural features such as the number of edges and surface overlap with textbook networks significantly correlated with students' posttest performance",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21958,7 +21958,7 @@
   "https://aclanthology.org/2025.emnlp-main.1310": {
     "title": "Less is More: The Effectiveness of Compact Typological Language Representations",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Linguistic feature datasets such as URIEL+ are valuable for modelling cross-lingual relationships, but their high dimensionality and sparsity, especially for low-resource languages, limit the effectiveness of distance metrics. We propose a pipeline to optimize the URIEL+ typological feature space by combining feature selection and imputation, producing compact yet interpretable typological representations. We evaluate these feature subsets on linguistic distance alignment and downstream tasks, demonstrating that reduced-size representations of language typology can yield more informative distance metrics and improve performance in multilingual NLP applications",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21972,7 +21972,7 @@
   "https://aclanthology.org/2025.emnlp-main.1311": {
     "title": "Sparse Activation Editing for Reliable Instruction Following in Narratives",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Complex narrative contexts often challenge language models' ability to follow instructions, and existing benchmarks fail to capture these difficulties. To address this, we propose Concise-SAE, a training-free framework that improves instruction following by identifying and editing instruction-relevant neurons using only natural language instructions, without requiring labelled data. To thoroughly evaluate our method, we introduce FreeInstruct, a diverse and realistic benchmark that highlights the challenges of instruction following in narrative-rich settings. While initially motivated by complex narratives, Concise-SAE demonstrates state-of-the-art instruction adherence across varied tasks without compromising generation quality",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -21991,7 +21991,7 @@
   "https://aclanthology.org/2025.emnlp-main.1312": {
     "title": "Inceptive Transformers: Enhancing Contextual Representations through Multi-Scale Feature Learning Across Domains and Languages",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Encoder transformer models compress information from all tokens in a sequence into a single [CLS] token to represent global context. This approach risks diluting fine-grained or hierarchical features, leading to information loss in downstream tasks where local patterns are important. To remedy this, we propose a lightweight architectural enhancement: an inception-style 1-D convolution module that sits on top of the transformer layer and augments token representations with multi-scale local features. This enriched feature space is then processed by a self-attention layer that dynamically weights tokens based on their task relevance. Experiments on five diverse tasks show that our framework consistently improves general-purpose, domain-specific, and multilingual models, outperforming baselines by 1% to 14% while maintaining efficiency. Ablation studies show that multi-scale convolution performs better than any single kernel and that the self-attention layer is critical for performance",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22005,7 +22005,7 @@
   "https://aclanthology.org/2025.emnlp-main.1313": {
     "title": "Causal Tree Extraction from Medical Case Reports: A Novel Task for Experts-like Text Comprehension",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Extracting causal relationships from a medical case report is essential for comprehending the case, particularly its diagnostic process. Since the diagnostic process is regarded as a bottom-up inference, causal relationships in cases naturally form a multi-layered tree structure. The existing tasks, such as medical relation extraction, are insufficient for capturing the causal relationships of an entire case, as they treat all relations equally without considering the hierarchical structure inherent in the diagnostic process. Thus, we propose a novel task, Causal Tree Extraction (CTE), which receives a case report and generates a causal tree with the primary disease as the root, providing an intuitive understanding of a case's diagnostic process. Subsequently, we construct a Japanese case report CTE dataset, J-Casemap, propose a generation-based CTE method that outperforms the baseline by 20.2 points in the human evaluation, and introduce evaluation metrics that reflect clinician preferences. Further experiments also show that J-Casemap enhances the performance of solving other medical tasks, such as question answering",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22022,7 +22022,7 @@
   "https://aclanthology.org/2025.emnlp-main.1314": {
     "title": "OWL: Probing Cross-Lingual Recall of Memorized Texts via World Literature",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large language models (LLMs) are known to memorize and recall English text from their pretraining data. However, the extent to which this ability generalizes to non-English languages or transfers across languages remains unclear. This paper investigates multilingual and cross-lingual memorization in LLMs, probing if memorized content in one language (e.g., English) can be recalled when presented in translation. To do so, we introduce , a dataset of **31.5K** aligned excerpts from 20 books in ten languages, including English originals, official translations (Vietnamese, Spanish, Turkish), and new translations in six low-resource languages (Sesotho, Yoruba, Maithili, Malagasy, Setswana, Tahitian). We evaluate memorization across model families and sizes through three tasks: (1) **direct probing**, which asks the model to identify a book's title and author; (2) **name cloze**, which requires predicting masked character names; and (3) **prefix probing**, which involves generating continuations. We find that some LLMs consistently recall content across languages, even for texts without existing translation. GPT-4o, for example, identifies authors and titles 69.4% of the time and masked entities 6.3% of the time in newly translated excerpts. While perturbations (e.g., masking characters, shuffling words) reduce accuracy, the model's performance remains above chance level. Our results highlight the extent of cross-lingual memorization and provide insights on the differences between the models",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22040,7 +22040,7 @@
   "https://aclanthology.org/2025.emnlp-main.1315": {
     "title": "Enhanced Noun-Noun Compound Interpretation through Textual Enrichment",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Interpreting Noun-Noun Compounds remains a persistent challenge for Large Language Models (LLMs) because the semantic relation between the modifier and the head is rarely stated explicitly. Recent benchmarks frame Noun-Noun Compound Interpretation as a multiple-choice question. While this setting allows LLMs to produce more controlled results, it still faces two key limitations: vague relation descriptions as options and the inability to handle polysemous compounds. We introduce a dual-faceted textual enrichment framework that augments prompts. Description enrichment paraphrases relations into event‐oriented descriptions instantiated with the target compound to explicitly surface the hidden event connecting head and modifier. Conditioned context enrichment identifies polysemous compounds leveraging qualia-role binding and assigns each compound with condition cues for disambiguation. Our method yields consistently higher accuracy across three LLM families. These gains suggest that surfacing latent compositional structure and contextual constraint is a promising path toward deeper semantic understanding in language models",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22054,7 +22054,7 @@
   "https://aclanthology.org/2025.emnlp-main.1316": {
     "title": "ICL CIPHERS: Quantifying \"Learning\" in In-Context Learning via Substitution Ciphers",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Recent works have suggested that In-Context Learning (ICL) operates in dual modes, i.e. task retrieval (remember learned patterns from pre-training) and task learning (inference-time \"learning\" from demonstrations). However, disentangling these the two modes remains a challenging goal. We introduce ICL CIPHERS, a class of task reformulations based on substitution ciphers borrowed from classic cryptography. In this approach, a subset of tokens in the in-context inputs are substituted with other (irrelevant) tokens, rendering English sentences less comprehensible to human eye. However, by design, there is a latent, fixed pattern to this substitution, making it reversible. This bijective (reversible) cipher ensures that the task remains a well-defined task in some abstract sense, despite the transformations. It is a curious question if LLMs can solve tasks reformulated by ICL CIPHERS with a BIJECTIVE mapping, which requires \"deciphering\" the latent cipher. We show that LLMs are better at solving tasks reformulated by ICL CIPHERS with BIJECTIVE mappings than the NON-BIJECTIVE (irreversible) baseline, providing a novel approach to quantify \"learning\" in ICL. While this gap is small, it is consistent across the board on four datasets and six models. Finally, our interpretability analysis shows evidence that LLMs can internally decode ciphered inputs",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22070,7 +22070,7 @@
   "https://aclanthology.org/2025.emnlp-main.1317": {
     "title": "Corrupted but Not Broken: Understanding and Mitigating the Negative Impacts of Corrupted Data in Visual Instruction Tuning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Visual Instruction Tuning (VIT) aims to enhance Multimodal Large Language Models (MLLMs), yet its effectiveness is often compromised by corrupted datasets with issues such as hallucinated content, incorrect responses, and poor OCR quality. Previous approaches to address these challenges have focused on refining datasets through high-quality data collection or rule-based filtering that can be costly or limited in scope. In this paper, we conduct a systematic investigation into the impact of corrupted data on MLLMs and discover that, although corrupted data degrade model performance, such adverse effects are largely reversible, and MLLMs are corrupted but not broken. Specifically, we find that disabling a small subset of parameters can almost fully restore performance. Moreover, corrupted MLLMs inherently possess the capability to differentiate between clean and corrupted samples, facilitating dataset cleaning without external intervention. Building on these insights, we introduce a corruption-robust training paradigm that significantly surpasses existing strategies for mitigating the effects of corrupted data",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22092,7 +22092,7 @@
   "https://aclanthology.org/2025.emnlp-main.1318": {
     "title": "Memory OS of AI Agent",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large Language Models (LLMs) face a crucial challenge from fixed context windows and inadequate memory management, leading to a severe shortage of long-term memory capabilities and limited personalization in the interactive experience with AI agents. To overcome this challenge, we innovatively propose a Memory Operating System, i.e., MemoryOS, to achieve comprehensive and efficient memory management for AI agents. Inspired by the memory management principles in operating systems, MemoryOS designs a hierarchical storage architecture and consists of four key modules: memory Storage, Updating, Retrieval, and Generation. Specifically, the architecture comprises three levels of storage units: short-term memory, mid-term memory, and long-term personal memory. Key operations within MemoryOS include dynamic updates between storage units: short-term to mid-term updates follow a dialogue-chain-based FIFO principle, while mid-term to long-term updates use a segmented page organization strategy. Our pioneering MemoryOS enables hierarchical memory integration and dynamic updating. Extensive experiments on the LoCoMo benchmark show an average improvement of 48.36% on F1 and 46.18% on BLEU-1 over the baselines on GPT-4o-mini, showing contextual coherence and personalized memory retention in long conversations",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22107,7 +22107,7 @@
   "https://aclanthology.org/2025.emnlp-main.1319": {
     "title": "Rule Discovery for Natural Language Inference Data Generation Using Out-of-Distribution Detection",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Natural Language Inference (NLI) is a fundamental task in Natural Language Processing (NLP), yet adapting NLI models to new domains remains challenging due to the high cost of collecting domain-specific training data. While prior work proposed 15 sentence transformation rules to automate training data generation, these rules insufficiently capture the diversity of natural language. We propose a novel framework that combines Out-of-Distribution (OOD) detection and BERT-based clustering to identify premise–hypothesis pairs in the SNLI dataset that are not covered by existing rules and to discover four new transformation rules from them. Using these rules with Chain-of-Thought (CoT) prompting and Large Language Models (LLMs), we generate high-quality training data and augment the SNLI dataset. Our method yields consistent performance improvements across dataset sizes, achieving +0.85%p accuracy on 2k and +0.15%p on 550k samples. Furthermore, a distribution-aware augmentation strategy enhances performance across all scales. Beyond manual explanations, we extend our framework to automatically generated explanations (CoT-Ex), demonstrating that they provide a scalable alternative to human-written explanations and enable reliable rule discovery",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22121,7 +22121,7 @@
   "https://aclanthology.org/2025.emnlp-main.1320": {
     "title": "Jigsaw-Puzzles: From Seeing to Understanding to Reasoning in Vision-Language Models",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Spatial reasoning is a core component of human cognition, enabling individuals to perceive, comprehend, and interact with the physical world. It relies on a nuanced understanding of spatial structures and inter-object relationships, serving as the foundation for complex reasoning and decision-making. To investigate whether current vision-language models (VLMs) exhibit similar capability, we introduce Jigsaw-Puzzles, a novel benchmark consisting of 1,100 carefully curated real-world images with high spatial complexity. Based on this dataset, we design five tasks to rigorously evaluate VLMs' spatial perception, structural understanding, and reasoning capabilities, while deliberately minimizing reliance on domain-specific knowledge to better isolate and assess the general spatial reasoning capability. We conduct a comprehensive evaluation across 24 state-of-the-art VLMs. The results show that even the strongest model, Gemini-2.5-Pro, achieves only 77.14% overall accuracy and performs particularly poorly on the Order Generation task, with only 30.00% accuracy, far below the 90%+ performance achieved by human participants. This persistent gap underscores the need for continued progress, positioning Jigsaw-Puzzles as a challenging and diagnostic benchmark for advancing spatial reasoning research in VLMs. Our project page is at https://zesen01.github.io/jigsaw-puzzles",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22138,7 +22138,7 @@
   "https://aclanthology.org/2025.emnlp-main.1321": {
     "title": "Definition Generation for Word Meaning Modeling: Monolingual, Multilingual, and Cross-Lingual Perspectives",
     "volume": "main",
-    "abstract": "",
+    "abstract": "The task of Definition Generation has recently gained attention as an interpretable approach to modeling word meaning. Thus far, most research has been conducted in English, with limited work and resources for other languages. In this work, we expand Definition Generation beyond English to a suite of 22 languages and evaluate Llama-based models within a monolingual, multilingual, and cross-lingual setting. Our experiments show that monolingual fine-tuning consistently outperforms pretrained baselines, with the largest gains observed in languages with lower initial performance; and that multilingual fine-tuning does not consistently improve performance on the individual fine-tuning languages. Our cross-lingual evaluation reveals that models fine-tuned on a single language typically lose the ability to generate definitions in other languages, whereas multilingual models exhibit robust generalization even to languages unseen during fine-tuning",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -22153,7 +22153,7 @@
   "https://aclanthology.org/2025.emnlp-main.1322": {
     "title": "Language Model Based Text-to-Audio Generation: Anti-Causally Aligned Collaborative Residual Transformers",
     "volume": "main",
-    "abstract": "",
+    "abstract": "While language models (LMs) paired with residual vector quantization (RVQ) tokenizers have shown promise in text-to-audio (T2A) generation, they still lag behind diffusion-based models by a non-trivial margin. We identify a critical dilemma underpinning this gap: incorporating more RVQ layers improves audio reconstruction fidelity but exceeds the generation capacity of conventional LMs. To address this, we first analyze RVQ dynamics and uncover two key limitations: 1) orthogonality of features across RVQ layers hinders effective LMs training, and 2) descending semantic richness in tokens from deeper RVQ layers exacerbates exposure bias during autoregressive decoding. Based on these insights, we propose Siren, a novel LM-based framework that employs multiple isolated transformers with causal conditioning and anti-causal alignment via reinforcement learning. Extensive experiments demonstrate that Siren outperforms both existing LM-based and diffusion-based T2A systems, achieving state-of-the-art results. By bridging the representational strengths of LMs with the fidelity demands of audio synthesis, our approach repositions LMs as competitive contenders against diffusion models in T2A tasks. Moreover, by aligning audio representations with linguistic structures, Siren opens a promising pathway toward unified multi-modal generation frameworks",
     "checked": false,
     "id": null,
     "semantic_title": "",
