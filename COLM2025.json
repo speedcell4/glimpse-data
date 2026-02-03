@@ -2714,15 +2714,15 @@
     "volume": "main",
     "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in open-domain question answering (QA), but their reliance on knowledge learned during pretraining limits their ability to provide accurate and up-to-date information. Knowledge Graph Retrieval-Augmented Generation (KG-RAG) enhances LLMs by incorporating structured knowledge from knowledge graphs (KGs). A common approach in KG-RAG is to retrieve relevant knowledge paths starting from entities in the input question and expanding along KG edges by LLM reasoning. However, existing KG-RAG methods suffer from the challenge that retrieval is performed step by step greedily using only local graph context, which can lead to retrieval errors that prematurely discard essential paths. To address the issue and perform more accurate retrieval, we propose GGR (GNN-Guided Retrieval for LLM Reasoning), a novel GNN-enhanced KG-RAG framework that integrates graph-based relevance scoring into the retrieval process. Our approach computes global importance scores across a contextualized subgraph, ensuring that key reasoning knowledge paths are preserved, even if their local relevance appears weak. Additionally, we introduce local semantic alignment by incorporating query-relation semantic similarity, refining the relation selection of LLM. Extensive experiments on Question-Answering tasks demonstrate that our method significantly improves retrieval accuracy and answer quality, demonstrating the effectiveness of combining graph-based reasoning and LLM-driven retrieval for structured knowledge integration",
     "checked": false,
-    "id": "6dea1d2b95f93b44c379677bf844fde9a46a29d9",
-    "semantic_title": "retrieval-augmented generation of ontologies from relational databases",
-    "citation_count": 2,
+    "id": "1f4a1f400494cb48d34a951b6ca5eb5376302b13",
+    "semantic_title": "gracg: graph retrieval augmented code generation",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=2vDJiGUfhV": {
     "title": "Don't lie to your friends: Learning what you know from collaborative self-play",
     "volume": "main",
-    "abstract": "",
+    "abstract": "To be helpful assistants, AI agents must be aware of their own capabilities and limitations. This includes knowing when to answer from parametric knowledge versus using tools, when to trust tool outputs, and when to abstain or hedge. Such capabilities are hard to teach through supervised fine-tuning because they require constructing examples that reflect the agent's specific capabilities. We therefore propose a radically new approach to teaching agents what they know: \\emph{collaborative self-play}. We construct multi-agent collaborations in which the group is rewarded for collectively arriving at correct answers. The desired meta-knowledge emerges from the incentives built into the structure of the interaction. We focus on small societies of agents that have access to heterogeneous tools (corpus-specific retrieval), and therefore must collaborate to maximize their success with minimal effort. Experiments show that group-level rewards for multi-agent communities can induce policies that \\emph{transfer} to improve tool use and selective prediction in single-agent scenarios",
     "checked": true,
     "id": "d1755c9aff0c3cccad45b9474676b5a700f5b0c1",
     "semantic_title": "don't lie to your friends: learning what you know from collaborative self-play",
@@ -2732,31 +2732,31 @@
   "https://openreview.net/forum?id=Rwhi91ideu": {
     "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces \\Ours, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. \\Ours optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that \\Ours improves performance by 41\\% (Qwen2.5-7B) and 20\\% (Qwen2.5-3B) over RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning",
     "checked": true,
     "id": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
     "semantic_title": "search-r1: training llms to reason and leverage search engines with reinforcement learning",
-    "citation_count": 550,
+    "citation_count": 639,
     "authors": []
   },
   "https://openreview.net/forum?id=fQcUZMPIvu": {
     "title": "AgentRewardBench: Evaluating Automatic Evaluations of Web Agent Trajectories",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Web agents enable users to perform tasks on web browsers through natural language interaction. Evaluating web agents trajectories is an important problem, since it helps us determine whether the agent successfully completed the tasks. Rule-based methods are widely used for this purpose, but they are challenging to extend to new tasks and may not always recognize successful trajectories. We may achieve higher accuracy through human evaluation, but the process would be substantially slower and more expensive. Automatic evaluations with LLMs may avoid the challenges of designing new rules and manually annotating trajectories, enabling faster and cost-effective evaluation. However, it is unclear how effective they are at evaluating web agents. To this end, we propose AgentRewardBench, the first benchmark to assess the effectiveness of LLM judges for evaluating web agents. AgentRewardBench contains 1302 trajectories across 5 benchmarks and 4 LLMs. Each trajectory in AgentRewardBench is reviewed by an expert, who answers questions pertaining to the success, side effects, and repetitiveness of the agent. Using our benchmark, we evaluate 12 LLM judges and find that no single LLM excels across all benchmarks. We also find that the rule-based evaluation used by common benchmarks tends to underreport the success rate of web agents, highlighting a key weakness of rule-based evaluation and the need to develop more flexible automatic evaluations. We release the benchmark at: https://agent-reward-bench.github.io",
     "checked": true,
     "id": "9202e949917d6cbb2c3d1e42da5856f88693a520",
     "semantic_title": "agentrewardbench: evaluating automatic evaluations of web agent trajectories",
-    "citation_count": 17,
+    "citation_count": 22,
     "authors": []
   },
   "https://openreview.net/forum?id=aV2hQN9vkp": {
     "title": "EvalTree: Profiling Language Model Weaknesses via Hierarchical Capability Trees",
     "volume": "main",
-    "abstract": "",
+    "abstract": "An ideal model evaluation should achieve two goals: identifying where the model fails and providing actionable improvement guidance. Toward these goals for language model (LM) evaluations, we formulate the problem of generating a weakness profile, a set of weaknesses expressed in natural language, given an LM's performance on every individual instance in a benchmark. We introduce a suite of quantitative assessments to compare different weakness profiling methods. We also introduce a weakness profiling method EvalTree. EvalTree constructs a capability tree where each node represents a capability described in natural language and is linked to a subset of benchmark instances that specifically evaluate this capability; it then extracts nodes where the LM performs poorly to generate a weakness profile. On the MATH and WildChat benchmarks, we show that EvalTree outperforms baseline weakness profiling methods by identifying weaknesses more precisely and comprehensively. Weakness profiling further enables weakness-guided data collection, and training data collection guided by EvalTree-identified weaknesses improves LM performance more than other data collection strategies. We also show how EvalTree exposes flaws in Chatbot Arena's human-voter-based evaluation practice. To facilitate future work, we provide an interface that allows practitioners to interactively explore the capability trees built by EvalTree",
     "checked": true,
     "id": "d42afee8546260d197eb4aabc95f83ce28100d73",
     "semantic_title": "evaltree: profiling language model weaknesses via hierarchical capability trees",
-    "citation_count": 13,
+    "citation_count": 18,
     "authors": []
   },
   "https://openreview.net/forum?id=oHR862dpMC": {
@@ -2766,7 +2766,7 @@
     "checked": true,
     "id": "07e1f6303fea89f7d011fa745cba0c20e3f1539b",
     "semantic_title": "thoughtterminator: benchmarking, calibrating, and mitigating overthinking in reasoning models",
-    "citation_count": 18,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=IXwgE8hyJs": {
@@ -2786,7 +2786,7 @@
     "checked": true,
     "id": "4db3afe05068d7f7befd5be3cfdcfbbcb54f1cb5",
     "semantic_title": "putting the value back in rl: better test-time scaling by unifying llm reasoners with verifiers",
-    "citation_count": 11,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=Pbs4i3FgbD": {
@@ -2836,7 +2836,7 @@
     "checked": true,
     "id": "901b2e5b7ff4905965a07b970e9e0923f8d5afe7",
     "semantic_title": "how multimodal llms solve image tasks: a lens on visual grounding, task reasoning, and answer decoding",
-    "citation_count": 2,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=i1uGbfHHpH": {
@@ -2846,7 +2846,7 @@
     "checked": false,
     "id": "6a7c29829227bfd65ae0ffec294a874bb9ea0871",
     "semantic_title": "tülu 3: pushing frontiers in open language model post-training",
-    "citation_count": 424,
+    "citation_count": 464,
     "authors": []
   },
   "https://openreview.net/forum?id=HL5X5uX0RD": {
@@ -2876,7 +2876,7 @@
     "checked": true,
     "id": "cb98545d6ff56f4d0f8b639d3e778b7dcbf029cc",
     "semantic_title": "what is the visual cognition gap between humans and multimodal llms?",
-    "citation_count": 20,
+    "citation_count": 24,
     "authors": []
   },
   "https://openreview.net/forum?id=4jdIxXBNve": {
@@ -2886,7 +2886,7 @@
     "checked": true,
     "id": "0681d80cd58b6135534cf279a69f5f999f47ebca",
     "semantic_title": "l1: controlling how long a reasoning model thinks with reinforcement learning",
-    "citation_count": 225,
+    "citation_count": 239,
     "authors": []
   },
   "https://openreview.net/forum?id=whXh2YxMbt": {
@@ -2916,7 +2916,7 @@
     "checked": false,
     "id": "54145fcb714653b1143bef312fdac821cccbfb62",
     "semantic_title": "smollm2: when smol goes big - data-centric training of a small language model",
-    "citation_count": 153,
+    "citation_count": 165,
     "authors": []
   },
   "https://openreview.net/forum?id=GFPoM8Ylp8": {
@@ -2926,7 +2926,7 @@
     "checked": true,
     "id": "de6eac3913014da318da0935d01018d7e07ab2a9",
     "semantic_title": "longcodebench: evaluating coding llms at 1m context windows",
-    "citation_count": 9,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=vgmiRvpCLA": {
@@ -2956,7 +2956,7 @@
     "checked": true,
     "id": "a37a49321f26325a161f5c49d132ddc2ddcb9880",
     "semantic_title": "more is less: the pitfalls of multi-model synthetic preference data in dpo safety alignment",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=uLl7tSUOir": {
@@ -2996,7 +2996,7 @@
     "checked": true,
     "id": "aafbdcdc9be1450d33b3a8eb9944e723115d958b",
     "semantic_title": "insights from the inverse: reconstructing llm training goals through inverse reinforcement learning",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=c0RsezY2D1": {
@@ -3006,7 +3006,7 @@
     "checked": true,
     "id": "40cdc29bea804c2ad11d69392a0ade3028310690",
     "semantic_title": "llms are in-context bandit reinforcement learners",
-    "citation_count": 4,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=mpTIzK4Zca": {
@@ -3016,7 +3016,7 @@
     "checked": true,
     "id": "19dbe2bde1b9998adf5baca35c465436096c9a1c",
     "semantic_title": "rethinking multilingual continual pretraining: data mixing for adapting llms across languages and resources",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=TA6azZKWJq": {
@@ -3026,7 +3026,7 @@
     "checked": true,
     "id": "5a3b3a91e5d8900e082b128306f600b879223ac5",
     "semantic_title": "self-evolving critique abilities in large language models",
-    "citation_count": 8,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=UmUXPXHtdl": {
@@ -3036,7 +3036,7 @@
     "checked": false,
     "id": "44110e5f9c441bdb300b99995ac48989198ac350",
     "semantic_title": "scaling laws of synthetic data for language models",
-    "citation_count": 29,
+    "citation_count": 34,
     "authors": []
   },
   "https://openreview.net/forum?id=QByEdZMJdx": {
@@ -3056,7 +3056,7 @@
     "checked": true,
     "id": "fe05e1ab236f9d4f7a0c8440cf06a28db5b40a5e",
     "semantic_title": "contextualize-then-aggregate: circuits for in-context learning in gemma-2 2b",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=yfnaK1pZxu": {
@@ -3076,7 +3076,7 @@
     "checked": true,
     "id": "f89e85059a55b647c93822aefa7e985376e0ef20",
     "semantic_title": "aios: llm agent operating system",
-    "citation_count": 56,
+    "citation_count": 59,
     "authors": []
   },
   "https://openreview.net/forum?id=ASS5YD4hL4": {
@@ -3086,7 +3086,7 @@
     "checked": true,
     "id": "34fa74eda21ccf9c237b2e4cb43ca98e545bfafb",
     "semantic_title": "lox: low-rank extrapolation robustifies llm safety against fine-tuning",
-    "citation_count": 2,
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=3NjnRo6apU": {
@@ -3106,7 +3106,7 @@
     "checked": true,
     "id": "152625bc41c1c3d60371cad08ff38cc5b48f6a8c",
     "semantic_title": "towards user-level private reinforcement learning with human feedback",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=zLbmsdyTiN": {
@@ -3146,7 +3146,7 @@
     "checked": true,
     "id": "326c554455fdf0d6fb9636c87341d1c7748cd834",
     "semantic_title": "superbpe: space travel for language models",
-    "citation_count": 27,
+    "citation_count": 31,
     "authors": []
   },
   "https://openreview.net/forum?id=SHB0sLrZrh": {
@@ -3156,7 +3156,7 @@
     "checked": true,
     "id": "7a070cecef295098a529fb5ee40370584f1fe6c2",
     "semantic_title": "megamath: pushing the limits of open math corpora",
-    "citation_count": 24,
+    "citation_count": 26,
     "authors": []
   },
   "https://openreview.net/forum?id=hJkQL9VtWT": {
@@ -3166,7 +3166,7 @@
     "checked": false,
     "id": "7a5b44ea10a51708e18786595c8d70b18950da11",
     "semantic_title": "factool: factuality detection in generative ai - a tool augmented framework for multi-task and multi-domain scenarios",
-    "citation_count": 269,
+    "citation_count": 275,
     "authors": []
   },
   "https://openreview.net/forum?id=tybbSo6wba": {
@@ -3206,7 +3206,7 @@
     "checked": true,
     "id": "432cf4506d1fa7773abfaceb35841d60e5685839",
     "semantic_title": "cognitive behaviors that enable self-improving reasoners, or, four habits of highly effective stars",
-    "citation_count": 287,
+    "citation_count": 302,
     "authors": []
   },
   "https://openreview.net/forum?id=bdCWK4NkK7": {
@@ -3214,9 +3214,9 @@
     "volume": "main",
     "abstract": "Chain-of-Thought (CoT) reasoning has demonstrated remarkable effectiveness in enhancing the reasoning abilities of large language models (LLMs). However, its efficiency remains a challenge due to excessive intermediate reasoning tokens, which introduce both semantic redundancy and unnecessarily detailed reasoning steps. Moreover, the computational expense and latency remain high, as the cost is determined by the number of output tokens, which encompasses these intermediate steps. In this work, we observe that most CoT tokens are unnecessary, and retaining only a small portion of them is sufficient for high-quality responses. Inspired by this, we propose Hawkeye, a novel post-training and inference framework where a large model produce concise CoT instructions to guide a smaller model in response generation. Hawkeye quantifies redundancy in CoT reasoning and distills high-density information via reinforcement learning. By leveraging these concise CoTs, Hawkeye is able to expand responses while reducing token usage and computational cost significantly. Our evaluation results show that Hawkeye can achieve comparable response quality using only 35\\% of the complete CoTs while improving clarity, coherence, and conciseness by approximately 10\\%. Furthermore, Hawkeye can accelerate end-to-end reasoning by up to 3.4× on complex math tasks while saving up tp 60\\% inference cost. Hawkeye will be open-sourced and the models will be available soon",
     "checked": false,
-    "id": "3d3628e20a7499664345efcc95c231e5129ea6f9",
-    "semantic_title": "debate only when necessary: adaptive multiagent collaboration for efficient llm reasoning",
-    "citation_count": 12,
+    "id": "046858ffec7540e60840e9fa234bd61612ae6cf6",
+    "semantic_title": "confidence-calibrated small-large language model collaboration for cost-efficient reasoning",
+    "citation_count": 0,
     "authors": []
   },
   "https://openreview.net/forum?id=6vTv9M9ZAA": {
@@ -3302,7 +3302,7 @@
   "https://openreview.net/forum?id=JloZnCwhmk": {
     "title": "Understanding Layer Significance in LLM Alignment",
     "volume": "main",
-    "abstract": "Aligning large language models (LLMs) through supervised fine-tuning is essential for tailoring them to specific applications. Recent studies suggest that alignment primarily adjusts a model's presentation style rather than its foundational knowledge, indicating that only certain components of the model are significantly impacted. To uncover how alignment affects model behavior at a granular level, we propose identifying which layers within LLMs are most critical to the alignment process. Our approach, named ILA, involves learning a binary mask for the parameter changes in each layer during alignment, as an indicator of layer significance. Experimental results reveal that, despite substantial differences in alignment datasets, the important layers of a model identified by ILA exhibit nearly 90\\% overlap, highlighting fundamental patterns in LLM alignment. The results also indicate that freezing non-essential layers improves overall model performance, while selectively tuning the most critical layers significantly enhances fine-tuning efficiency with minimal performance loss. Finally, we discuss how these findings extend from LLM alignment to reasoning. The source code is available at https://github.com/moukamisama/ILA",
+    "abstract": "",
     "checked": true,
     "id": "239d787a5019dd3975e7117bf769d69d540f6856",
     "semantic_title": "understanding layer significance in llm alignment",
@@ -3312,27 +3312,27 @@
   "https://openreview.net/forum?id=wyYL5Jov6e": {
     "title": "EnrichIndex: Using LLMs to Enrich Retrieval Indices Offline",
     "volume": "main",
-    "abstract": "Existing information retrieval systems excel in cases where the language of target documents closely matches that of the user query. However, real-world retrieval systems are often required to *implicitly reason* whether a document is relevant. For example, when retrieving technical texts or tables, their relevance to the user query may be implied through a particular jargon or structure, rather than explicitly expressed in their content. Large language models (LLMs) hold great potential in identifying such implied relevance by leveraging their reasoning skills. Nevertheless, current LLM-augmented retrieval is hindered by high latency and computation cost, as the LLM typically computes the query-document relevance *online*, for every query anew. To tackle this issue we introduce EnrichIndex, a retrieval approach which instead uses the LLM *offline* to build semantically-enriched retrieval indices, by performing a single pass over all documents in the retrieval corpus once during ingestion time. Furthermore, the semantically-enriched indices can complement existing online retrieval approaches, boosting the performance of LLM re-rankers. We evaluated EnrichIndex on five retrieval tasks, involving passages and tables, and found that it outperforms strong online LLM-based retrieval systems, with an average improvement of 11.7 points in recall @ 10 and 10.6 points in NDCG @ 10 compared to strong baselines. In terms of online calls to the LLM, it processes 293.3 times fewer tokens which greatly reduces the online latency and cost. Overall, EnrichIndex is an effective way to build better retrieval indices offline by leveraging the strong reasoning skills of LLMs",
+    "abstract": "",
     "checked": true,
     "id": "580d7ef47811916b3efcf7e20b156729dc99d656",
     "semantic_title": "enrichindex: using llms to enrich retrieval indices offline",
-    "citation_count": 6,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=s0p9xpORgP": {
     "title": "Scalable Zeroth-Order Fine-Tuning for Extremely Large Language Models with Limited GPU Memory",
     "volume": "main",
-    "abstract": "Fine-tuning large pre-trained LLMs generally demands extensive GPU memory. Traditional first-order optimizers like SGD encounter substantial difficulties due to increased memory requirements from storing activations and gradients during both the forward and backward phases as the model size expands. Alternatively, zeroth-order (ZO) techniques can compute gradients using just forward operations, eliminating the need to store activations. Furthermore, by leveraging CPU capabilities, it's feasible to enhance both the memory and processing power available to a single GPU. We propose a novel framework, ZO2 (Zeroth-Order Offloading), for efficient zeroth-order fine-tuning of LLMs with only limited GPU memory. Our framework dynamically shifts model parameters between the CPU and GPU as required, optimizing computation flow and maximizing GPU usage by minimizing downtime. This integration of parameter adjustments with ZO's double forward operations reduces unnecessary data movement, enhancing the fine-tuning efficacy. Additionally, our framework supports an innovative low-bit precision approach in AMP (Automatic Mixed Precision) mode to streamline data exchanges between the CPU and GPU. Employing this approach allows us to fine-tune extraordinarily large models, such as the OPT-175B with 175 billion parameters, on a mere 18GB GPU. Moreover, our framework achieves these results with almost no additional time overhead and absolutely no accuracy loss compared to standard zeroth-order methods. ZO2's code has been open-sourced in https://github.com/liangyuwang/zo2",
+    "abstract": "",
     "checked": false,
     "id": "0afd211b7deb50b58c6b1c30528aa0e17a5cfaa8",
     "semantic_title": "zo2: scalable zeroth-order fine-tuning for extremely large language models with limited gpu memory",
-    "citation_count": 1,
+    "citation_count": 3,
     "authors": []
   },
   "https://openreview.net/forum?id=zHdSCtNmM4": {
     "title": "Deep Binding of Language Model Virtual Personas: a Study on Approximating Political Partisan Misperceptions",
     "volume": "main",
-    "abstract": "Large language models (LLMs) are increasingly capable of simulating human behavior, offering cost-effective ways to estimate user responses during the early phases of survey design. While previous studies have examined whether models can reflect individual opinions or attitudes, we argue that a higher-order binding of virtual personas requires successfully approximating not only the opinions of a user as an identified member of a group, but also the nuanced ways in which that user perceives and evaluates those outside the group. In particular, faithfully simulating how humans perceive different social groups is critical for applying LLMs to various political science studies, including timely topics on polarization dynamics, inter-group conflict, and democratic backsliding. To this end, we propose a novel methodology for constructing virtual personas with synthetic user \"backstories\" generated as extended, multi-turn interview transcripts. Our generated backstories are longer, rich in detail, and consistent in authentically describing a singular individual, compared to previous methods. We show that virtual personas conditioned on our backstories closely replicate human response distributions (up to an 87% improvement as measured by Wasserstein Distance) and produce effect sizes that closely match those observed in the original studies. Altogether, our work extends the applicability of LLMs beyond estimating individual self-opinions, enabling their use in a broader range of human studies",
+    "abstract": "",
     "checked": true,
     "id": "d3d69b7abdc31ea6e376faa3722a5ffa91e5b920",
     "semantic_title": "deep binding of language model virtual personas: a study on approximating political partisan misperceptions",
