@@ -1486,7 +1486,7 @@
     "checked": true,
     "id": "a45091a43189ae7657dbdc7e1a79b6684209c6f8",
     "semantic_title": "weak-for-strong: training weak meta-agent to harness strong executors",
-    "citation_count": 11,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=x4sdXZ7Jdu": {
@@ -1512,17 +1512,17 @@
   "https://openreview.net/forum?id=ufozo2Wc9e": {
     "title": "Missing Premise exacerbates Overthinking: Are Reasoning Models losing Critical Thinking Skill?",
     "volume": "main",
-    "abstract": "",
+    "abstract": "We find that the response length of reasoning LLMs, whether trained by reinforcement learning or supervised learning, drastically increases for ill-posed questions with missing premises (MiP), ending up with redundant and ineffective thinking. Such failures are against the ``test-time scaling law'' but have been widely observed on multiple datasets we curated with MiP, indicating the harm of cheap overthinking and a lack of critical thinking. Surprisingly, LLMs not specifically trained for reasoning exhibit much better critical thinking ability, producing much shorter responses that quickly identify ill-posed queries and ask for the MiP. This implies a critical flaw of the current training recipe for reasoning LLMs, which does not encourage efficient thinking adequately, leading to the abuse of thinking patterns. To further investigate the reasons behind such failures, we conduct fine-grained analyses of the reasoning length, overthinking patterns, and location of critical thinking on different types of LLMs. Moreover, our extended ablation study reveals that the overthinking is contagious through the distillation of reasoning models' responses. These results improve the understanding of overthinking and shed novel insights into mitigating the problem. Our code and data can be found in: https://github.com/tianyi-lab/MiP-Overthinking",
     "checked": true,
     "id": "a5003be7d014d2b4799cf6364e201b081f313dc6",
     "semantic_title": "missing premise exacerbates overthinking: are reasoning models losing critical thinking skill?",
-    "citation_count": 38,
+    "citation_count": 41,
     "authors": []
   },
   "https://openreview.net/forum?id=R94bCTckhV": {
     "title": "OpinioRAG: Towards Generating User-Centric Opinion Highlights from Large-scale Online Reviews",
     "volume": "main",
-    "abstract": "",
+    "abstract": "We study the problem of opinion highlights generation from large volumes of user reviews, often exceeding thousands per entity, where existing methods either fail to scale or produce generic, one-size-fits-all summaries that overlook personalized needs. To tackle this, we introduce OpinioRAG, a scalable, training-free framework that combines RAG-based evidence retrieval with LLMs to efficiently produce tailored summaries. Additionally, we propose novel reference-free verification metrics designed for sentiment-rich domains, where accurately capturing opinions and sentiment alignment is essential. These metrics offer a fine-grained, context-sensitive assessment of factual consistency. To facilitate evaluation, we contribute the first large-scale dataset of long-form user reviews, comprising entities with over a thousand reviews each, paired with unbiased expert summaries and manually annotated queries. Through extensive experiments, we identify key challenges, provide actionable insights into improving systems, pave the way for future research, and position OpinioRAG as a robust framework for generating accurate, relevant, and structured summaries at scale",
     "checked": true,
     "id": "f1bb6f3032bee8245b9e10a9748bd545be422722",
     "semantic_title": "opiniorag: towards generating user-centric opinion highlights from large-scale online reviews",
@@ -1532,7 +1532,7 @@
   "https://openreview.net/forum?id=yeVBHPLXxi": {
     "title": "Learning to Generate Unit Tests for Automated Debugging",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Unit tests (UTs) play an instrumental role in assessing code correctness as well as providing feedback to large language models (LLMs), motivating automated test generation. However, we uncover a trade-off between generating unit test inputs that reveal errors when given a faulty code and correctly predicting the unit test output without access to the gold solution. To address this trade-off, we propose UTGen, which teaches LLMs to generate unit test inputs that reveal errors along with their correct expected outputs based on task descriptions. Since model-generated tests can provide noisy signals (e.g., from incorrectly predicted outputs), we propose UTDebug that (i) scales UTGen via test-time compute to improve UT output prediction, and (ii) validates and backtracks edits based on multiple generated UTs to avoid overfitting, and helps LLMs debug effectively. We show that UTGen outperforms other LLM-based baselines by 7.59% based on a metric measuring the presence of both error-revealing UT inputs and correct UT outputs. When used with UTDebug, we find that feedback from UTGen's unit tests improves pass@1 accuracy of Qwen2.5 32B on HumanEvalFix and our own harder debugging split of MBPP+ by over 3.17% and 12.35% (respectively) over other LLM-based UT generation baselines. Moreover, we observe that feedback from Qwen2.5 32B-based UTGen model can enhance debugging with frontier LLMs like GPT-4o by 13.8%. Lastly, we demonstrate that UTGen is a better judge for code correctness, outperforming a state-of-the-art trained 8B reward model by 4.43% on HumanEval+ with best-of-10 sampling using Qwen2.5 7B",
     "checked": true,
     "id": "bcfc727ad4656f817186c3a95fcc3712db3d02e3",
     "semantic_title": "learning to generate unit tests for automated debugging",
@@ -1542,11 +1542,11 @@
   "https://openreview.net/forum?id=NMIqKUdDkw": {
     "title": "LLM Unlearning Reveals a Stronger-Than-Expected Coreset Effect in Current Benchmarks",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Large language model (LLM) unlearning has become a critical challenge in ensuring safety and controlled model behavior by removing *undesired* data-model influences from the pretrained model while preserving its general utility. Significant recent efforts have been dedicated to developing LLM unlearning benchmarks such as WMDP (Weapons of Mass Destruction Proxy) and MUSE (Machine Unlearning Six-way Evaluation), facilitating standardized unlearning performance assessment and method comparison. Despite their usefulness, we uncover for the first time a novel *coreset effect* within these benchmarks. Specifically, we find that LLM unlearning achieved with the original (full) forget set can be effectively maintained using a significantly smaller subset (functioning as a \"coreset\"), *e.g.*, as little as 5% of the forget set, even when selected at random. This suggests that LLM unlearning in these benchmarks can be performed surprisingly easily, even in an extremely low-data regime. We demonstrate that this coreset effect remains strong, regardless of the LLM unlearning method used, such as NPO (Negative Preference Optimization) and RMU (Representation Misdirection Unlearning), the popular ones in these benchmarks. The surprisingly strong coreset effect is also robust across various data selection methods, ranging from random selection to more sophisticated heuristic approaches. We explain the coreset effect in LLM unlearning through a keyword-based perspective, showing that keywords extracted from the forget set alone contribute significantly to unlearning effectiveness and indicating that current unlearning is driven by a compact set of high-impact tokens rather than the entire dataset. We further justify the faithfulness of coreset-unlearned models along additional dimensions, such as mode connectivity and robustness to jailbreaking attacks",
     "checked": true,
     "id": "432ac8a86c2a83c7ca6d712a3a551de5d2395934",
     "semantic_title": "llm unlearning reveals a stronger-than-expected coreset effect in current benchmarks",
-    "citation_count": 10,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=zOw2it5Ni6": {
@@ -1556,7 +1556,7 @@
     "checked": true,
     "id": "4ce577292bf0d8f220d08e96cbccfc8f1b905a24",
     "semantic_title": "investigating intersectional bias in large language models using confidence disparities in coreference resolution",
-    "citation_count": 1,
+    "citation_count": 2,
     "authors": []
   },
   "https://openreview.net/forum?id=yfRkNRFLzl": {
@@ -1566,7 +1566,7 @@
     "checked": true,
     "id": "16a3a2a4153ec845424a9b95daa86ea5221020b8",
     "semantic_title": "prompt-reverse inconsistency: llm self-inconsistency beyond generative randomness and prompt paraphrasing",
-    "citation_count": 13,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=vlUk8z8LaM": {
@@ -1576,7 +1576,7 @@
     "checked": true,
     "id": "5fa16af86816dc273ca435b33c1b212fa06ccda1",
     "semantic_title": "positional biases shift as inputs approach context window limits",
-    "citation_count": 5,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=Z8vtD1egtI": {
@@ -1596,7 +1596,7 @@
     "checked": true,
     "id": "2dbec8020b9111f1c70e90b112e6318f7d02426c",
     "semantic_title": "scireplicate-bench: benchmarking llms in agent-driven algorithmic reproduction from research papers",
-    "citation_count": 15,
+    "citation_count": 19,
     "authors": []
   },
   "https://openreview.net/forum?id=n4JdyBGu6T": {
@@ -1636,7 +1636,7 @@
     "checked": true,
     "id": "44b139cb211bf0c3f7410b6fa47e20039ac0b501",
     "semantic_title": "mused: a multimodal spanish dataset for sexism detection in social media videos",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=lEQnUI5lEA": {
@@ -1656,7 +1656,7 @@
     "checked": true,
     "id": "837939975453548d3364e4c5d3855a4543dee0b3",
     "semantic_title": "local mixtures of experts: essentially free test-time training via model merging",
-    "citation_count": 6,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=6jZi4HSs6o": {
@@ -1676,7 +1676,7 @@
     "checked": true,
     "id": "7eb43c444d7ef1f8378d038314ae931b0c7e2371",
     "semantic_title": "boundless byte pair encoding: breaking the pre-tokenization barrier",
-    "citation_count": 15,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=DAozI4etUp": {
@@ -1686,7 +1686,7 @@
     "checked": true,
     "id": "6e325d0c8bf92341ef95dc8b5fa8335890c0a6c7",
     "semantic_title": "multi-agent systems execute arbitrary malicious code",
-    "citation_count": 22,
+    "citation_count": 25,
     "authors": []
   },
   "https://openreview.net/forum?id=3xErKrVAdG": {
@@ -1726,7 +1726,7 @@
     "checked": false,
     "id": "d20022af3498343684f1105e614a4c03f4afdfd5",
     "semantic_title": "codexembed: a generalist embedding model family for multiligual and multi-task code retrieval",
-    "citation_count": 27,
+    "citation_count": 29,
     "authors": []
   },
   "https://openreview.net/forum?id=Zfa9jCYGCz": {
@@ -1736,7 +1736,7 @@
     "checked": true,
     "id": "ef18563fd33ac550f5f66620293d1be4a1d0ccf0",
     "semantic_title": "do llms understand your translations? evaluating paragraph-level mt with question answering",
-    "citation_count": 8,
+    "citation_count": 9,
     "authors": []
   },
   "https://openreview.net/forum?id=4d69EwfKAr": {
@@ -1776,7 +1776,7 @@
     "checked": true,
     "id": "3b57fe191542846461f1acb6789accda02dbecb9",
     "semantic_title": "the world according to llms: how geographic origin influences llms' entity deduction capabilities",
-    "citation_count": 1,
+    "citation_count": 2,
     "authors": []
   },
   "https://openreview.net/forum?id=WIfns41MAb": {
@@ -1876,7 +1876,7 @@
     "checked": true,
     "id": "994a08fd88f8e90affe78e7e518a4fe74f024ca6",
     "semantic_title": "critique fine-tuning: learning to critique is more effective than learning to imitate",
-    "citation_count": 42,
+    "citation_count": 47,
     "authors": []
   },
   "https://openreview.net/forum?id=x2y9i2HDjD": {
@@ -1886,7 +1886,7 @@
     "checked": true,
     "id": "a05d5102ce84d1830e1e0d8b7a6a7918bd9cfb68",
     "semantic_title": "goedel-prover: a frontier model for open-source automated theorem proving",
-    "citation_count": 82,
+    "citation_count": 86,
     "authors": []
   },
   "https://openreview.net/forum?id=3BmPSFAdq3": {
@@ -1896,7 +1896,7 @@
     "checked": true,
     "id": "1407966036a1d70124f822b16bd961526de88295",
     "semantic_title": "fast controlled generation from language models with adaptive weighted rejection sampling",
-    "citation_count": 7,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=DDtwtoAMjA": {
@@ -1936,7 +1936,7 @@
     "checked": true,
     "id": "feac380cd94a5c744430f9874c046216ebd6b7eb",
     "semantic_title": "multi-token attention",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=ROtDZDUgvw": {
@@ -1966,7 +1966,7 @@
     "checked": true,
     "id": "a6d813ecf0663e5d00c688daa322297568873471",
     "semantic_title": "crosswordbench: evaluating the reasoning capabilities of llms and lvlms with controllable puzzle generation",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=rgq9BFXSFl": {
@@ -1976,7 +1976,7 @@
     "checked": true,
     "id": "b262788f65a7468cd72a7142396faf810864658f",
     "semantic_title": "unifying autoregressive and diffusion-based sequence generation",
-    "citation_count": 10,
+    "citation_count": 12,
     "authors": []
   },
   "https://openreview.net/forum?id=IyOC5GCzv4": {
@@ -1986,7 +1986,7 @@
     "checked": true,
     "id": "5e5246bb96771b4392a87d5e26f4e69f8f12c4fa",
     "semantic_title": "control the temperature: selective sampling for diverse and high-quality llm outputs",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=8ExXncFpf6": {
@@ -2006,7 +2006,7 @@
     "checked": true,
     "id": "f6616802fc6dbb94b8418ccc08ab465483d6f2b8",
     "semantic_title": "radlads: rapid attention distillation to linear attention decoders at scale",
-    "citation_count": 5,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=YgwQ7sXPXU": {
@@ -2016,7 +2016,7 @@
     "checked": true,
     "id": "0055c0e439e5185ac71cbed49f3bb619839899ad",
     "semantic_title": "learning adaptive parallel reasoning with language models",
-    "citation_count": 49,
+    "citation_count": 53,
     "authors": []
   },
   "https://openreview.net/forum?id=8OqGNXKwo8": {
