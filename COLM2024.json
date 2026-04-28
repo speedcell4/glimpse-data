@@ -1816,7 +1816,7 @@
     "checked": true,
     "id": "ca4f899224c8232616e9a1e59aca33a4aad0675f",
     "semantic_title": "building a large japanese web corpus for large language models",
-    "citation_count": 12,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=BgvgMxY8s5": {
@@ -1836,7 +1836,7 @@
     "checked": true,
     "id": "659292949b854fd485ac45215c7f9619cef46d01",
     "semantic_title": "do language models plan ahead for future tokens?",
-    "citation_count": 36,
+    "citation_count": 41,
     "authors": []
   },
   "https://openreview.net/forum?id=IA8CWtNkUr": {
@@ -1846,7 +1846,7 @@
     "checked": true,
     "id": "fa168fe11fa77c9728412e49596f8a808b67a4d8",
     "semantic_title": "early weight averaging meets high learning rates for llm pre-training",
-    "citation_count": 29,
+    "citation_count": 31,
     "authors": []
   },
   "https://openreview.net/forum?id=MkppMETE49": {
@@ -1866,13 +1866,13 @@
     "checked": true,
     "id": "6a28f9390a2fa99e593b2b3efeccce4abec52631",
     "semantic_title": "prompt public large language models to synthesize data for private on-device applications",
-    "citation_count": 18,
+    "citation_count": 20,
     "authors": []
   },
   "https://openreview.net/forum?id=k8KS9Ps71d": {
     "title": "PRobELM: Plausibility Ranking Evaluation for Language Models",
     "volume": "main",
-    "abstract": "",
+    "abstract": "This paper introduces PRobELM (Plausibility Ranking Evaluation for Language Models), a benchmark designed to assess language models' ability to discern more plausible from less plausible scenarios through their parametric knowledge. While benchmarks such as TruthfulQA emphasise factual accuracy or truthfulness, and others such as COPA explore plausible scenarios without explicitly incorporating world knowledge, PRobELM seeks to bridge this gap by evaluating models' capabilities to prioritise plausible scenarios that leverage world knowledge over less plausible alternatives. This design allows us to assess the potential of language models for downstream use cases such as literature-based discovery where the focus is on identifying information that is likely but not yet known. Our benchmark is constructed from a dataset curated from Wikidata edit histories, tailored to align the temporal bounds of the training data for the evaluated models. PRobELM facilitates the evaluation of language models across multiple prompting types, including statement, text completion, and question-answering. Experiments with 10 models of various sizes and architectures on the relationship between model scales, training recency, and plausibility performance, reveal that factual accuracy does not directly correlate with plausibility performance and that up-to-date training data enhances plausibility assessment across different model architectures",
     "checked": true,
     "id": "7633d8e74d9749becc0fdc14826ee98048ec1a36",
     "semantic_title": "probelm: plausibility ranking evaluation for language models",
@@ -1882,7 +1882,7 @@
   "https://openreview.net/forum?id=SGoVIC0u0f": {
     "title": "Beyond A*: Better Planning with Transformers via Search Dynamics Bootstrapping",
     "volume": "main",
-    "abstract": "",
+    "abstract": "While Transformers have enabled tremendous progress in various application settings, such architectures still struggle with solving planning and sequential decision-making tasks. In this work, we demonstrate how to train Transformers to solve complex planning tasks. This is accomplished by first designing a synthetic language that captures the computation performed by the $A^*$ search algorithm when solving a planning task. Then, an encoder-decoder Transformer model is trained to predict this language, resulting in a language model that can correctly solve novel planning tasks by generating $A^*$'s search dynamics. We fine tune this model to obtain a Searchformer, a Transformer model that optimally solves previously unseen Sokoban puzzles 93.7\\% of the time, while using up to 26.8\\% fewer search steps than our $A^*$ reference implementation. Searchformer significantly outperforms baselines that predict the optimal plan directly with a 5-10$\\times$ smaller model size and a 10$\\times$ smaller training dataset. Lastly, we demonstrate how Searchformer scales to larger and more complex decision making tasks with improved percentage of solved tasks and shortened search dynamics",
     "checked": true,
     "id": "df5bb57e03c38a439d664d3c609a1c03a9a64009",
     "semantic_title": "beyond a*: better planning with transformers via search dynamics bootstrapping",
@@ -1892,7 +1892,7 @@
   "https://openreview.net/forum?id=eGCw1UVOhk": {
     "title": "LMD3: Language Model Data Density Dependence",
     "volume": "main",
-    "abstract": "",
+    "abstract": "We develop a methodology for analyzing language model task performance at the individual example level based on training data density estimation. Experiments with paraphrasing as a controlled intervention on finetuning data demonstrate that increasing the support in the training distribution for specific test queries results in a measurable increase in density, which is also a significant predictor of the performance increase caused by the intervention. Experiments with pretraining data demonstrate that we can explain a significant fraction of the variance in model perplexity via density measurements. We conclude that our framework can provide statistical evidence of the dependence of a target model's predictions on subsets of its training data, and can more generally be used to characterize the support (or lack thereof) in the training data for a given test task",
     "checked": true,
     "id": "edc6b26390200dfc9b375529ca774215fe13acfb",
     "semantic_title": "lmd3: language model data density dependence",
@@ -1902,11 +1902,11 @@
   "https://openreview.net/forum?id=F9tqgOPXH5": {
     "title": "EnvGen: Generating and Adapting Environments via LLMs for Training Embodied Agents",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Recent state-of-the-art approaches for embodied learning via interaction directly employ large language models (LLMs) as agents to determine the next steps in an environment. Due to their world knowledge and reasoning capabilities, LLM agents achieve stronger performance than previous smaller agents based on reinforcement learning (RL); however, frequently calling LLMs is slow and expensive. This begs an interesting question: Instead of directly employing LLMs as embodied agents, can we use LLMs' reasoning capabilities to adaptively create training environments to help smaller embodied RL agents learn useful skills that they are weak at? In this work, we propose EnvGen, a novel framework to address this question. First, we prompt an LLM to generate training environments that allow agents to quickly learn different tasks in parallel. Concretely, the LLM is given the task description and environment simulator objectives that the agents should learn and is then asked to generate a set of environment configurations (e.g., different terrains, items initially given to agents, chances of finding certain objects, etc.). Next, we train a small RL agent in a mixture of the original and LLM-generated environments. Then, we enable the LLM to continuously adapt the generated environments to progressively improve the skills that the agent is weak at, by providing feedback to the LLM in the form of the agent's performance. We demonstrate the usefulness of EnvGen with comprehensive experiments in Crafter and Heist game environments. We find that a small RL agent trained with EnvGen can outperform SOTA methods, including a GPT-4 agent, and learns long-horizon tasks significantly faster. We also show that using an LLM to adapt environments dynamically outperforms curriculum learning approaches and how the LLM adapts training environments to help improve RL agents' weaker skills over time. Additionally, EnvGen is substantially more efficient as it only uses a small number of LLM calls (e.g., 4 in total), whereas LLM agents require one or more LLM calls per step (resulting in thousands of LLM calls per episode). We also present detailed analyses of EnvGen's design choices",
     "checked": true,
     "id": "6cd1b99ec6d399a682b01e6fe9096e2fcf450862",
     "semantic_title": "envgen: generating and adapting environments via llms for training embodied agents",
-    "citation_count": 29,
+    "citation_count": 32,
     "authors": []
   },
   "https://openreview.net/forum?id=FX4fUThO9H": {
@@ -1926,7 +1926,7 @@
     "checked": true,
     "id": "ba7f09d76f465c7d5fefc87de859a491d6c5e145",
     "semantic_title": "diagrammergpt: generating open-domain, open-platform diagrams via llm planning",
-    "citation_count": 29,
+    "citation_count": 33,
     "authors": []
   },
   "https://openreview.net/forum?id=sKNIjS2brr": {
@@ -1936,7 +1936,7 @@
     "checked": true,
     "id": "16753e0317730e8c1b297338300a8c6163dd06f2",
     "semantic_title": "videodirectorgpt: consistent multi-scene video generation via llm-guided planning",
-    "citation_count": 120,
+    "citation_count": 133,
     "authors": []
   },
   "https://openreview.net/forum?id=fib9qidCpY": {
@@ -1956,7 +1956,7 @@
     "checked": true,
     "id": "d67d3e31ce219a82eb6315295f60ab663edebc96",
     "semantic_title": "fakes of varying shades: how warning affects human perception and engagement regarding llm hallucinations",
-    "citation_count": 23,
+    "citation_count": 26,
     "authors": []
   },
   "https://openreview.net/forum?id=VHhwhmtx3b": {
@@ -1986,7 +1986,7 @@
     "checked": true,
     "id": "07894aeadab9158fdb97647c4792816ede1b60b9",
     "semantic_title": "branch-train-mix: mixing expert llms into a mixture-of-experts llm",
-    "citation_count": 93,
+    "citation_count": 100,
     "authors": []
   },
   "https://openreview.net/forum?id=B41hNBoWLo": {
@@ -1996,7 +1996,7 @@
     "checked": true,
     "id": "6ef1ab6b6775861b7f6a78343d5b90a15226c654",
     "semantic_title": "tofu: a task of fictitious unlearning for llms",
-    "citation_count": 358,
+    "citation_count": 392,
     "authors": []
   },
   "https://openreview.net/forum?id=Hi8jKh4HE9": {
@@ -2026,7 +2026,7 @@
     "checked": true,
     "id": "40c34e85dc4558d26bfef7fb54327dbd4a0bebc3",
     "semantic_title": "uncovering intermediate variables in transformers using circuit probing",
-    "citation_count": 12,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=3ypWPhMGhV": {
@@ -2036,7 +2036,7 @@
     "checked": true,
     "id": "bf19d876b64922d41152a04955b309fb5ed8e929",
     "semantic_title": "cohesive conversations: enhancing authenticity in multi-agent simulated dialogues",
-    "citation_count": 9,
+    "citation_count": 11,
     "authors": []
   },
   "https://openreview.net/forum?id=eDWcNqiQWW": {
@@ -2046,7 +2046,7 @@
     "checked": true,
     "id": "cdce4525bc94b8b72d7330f4e26775142edd0018",
     "semantic_title": "the curious case of nonverbal abstract reasoning with multi-modal large language models",
-    "citation_count": 14,
+    "citation_count": 16,
     "authors": []
   },
   "https://openreview.net/forum?id=MXLBXjQkmb": {
@@ -2056,7 +2056,7 @@
     "checked": true,
     "id": "6dc1bb04eb0df303b1820ff1de15ab78f554cfff",
     "semantic_title": "negative preference optimization: from catastrophic collapse to effective unlearning",
-    "citation_count": 355,
+    "citation_count": 388,
     "authors": []
   },
   "https://openreview.net/forum?id=wLQ3I0F1oj": {
@@ -2106,7 +2106,7 @@
     "checked": true,
     "id": "197a45da6e58d86998b81771a714caa611eae05a",
     "semantic_title": "emergent world models and latent variable estimation in chess-playing language models",
-    "citation_count": 45,
+    "citation_count": 48,
     "authors": []
   },
   "https://openreview.net/forum?id=Qmq4zqdnWh": {
@@ -2126,7 +2126,7 @@
     "checked": true,
     "id": "f4f87904af97d7f567dd2f44930a73952ed4d5dd",
     "semantic_title": "stop reasoning! when multimodal llm with chain-of-thought reasoning meets adversarial image",
-    "citation_count": 24,
+    "citation_count": 27,
     "authors": []
   },
   "https://openreview.net/forum?id=RCdoMrg4I0": {
@@ -2176,7 +2176,7 @@
     "checked": true,
     "id": "cc49514a9859ae171a7cd7eaae111990605a5e4e",
     "semantic_title": "tower: an open multilingual large language model for translation-related tasks",
-    "citation_count": 245,
+    "citation_count": 254,
     "authors": []
   },
   "https://openreview.net/forum?id=Zq9Dfj4nBo": {
@@ -2196,7 +2196,7 @@
     "checked": true,
     "id": "1823b8aecd62ccfca0cb6caa8e2a1159754afc5e",
     "semantic_title": "llasmol: advancing large language models for chemistry with a large-scale, comprehensive, high-quality instruction tuning dataset",
-    "citation_count": 86,
+    "citation_count": 105,
     "authors": []
   },
   "https://openreview.net/forum?id=7BCmIWVT0V": {
@@ -2226,7 +2226,7 @@
     "checked": true,
     "id": "b29134737a0c81c13d31fc0263b3c4d4f05ccb78",
     "semantic_title": "guiding language model reasoning with planning tokens",
-    "citation_count": 64,
+    "citation_count": 68,
     "authors": []
   },
   "https://openreview.net/forum?id=3nTbuygoop": {
@@ -2236,7 +2236,7 @@
     "checked": true,
     "id": "b8cc74d8c2a009cc99a8b285503d86be80d840d9",
     "semantic_title": "stateflow: enhancing llm task-solving through state-driven workflows",
-    "citation_count": 43,
+    "citation_count": 47,
     "authors": []
   },
   "https://openreview.net/forum?id=9gdZI7c6yr": {
@@ -2246,7 +2246,7 @@
     "checked": true,
     "id": "aae01e933690e1f060b8bc5e3ecbef785630d0f9",
     "semantic_title": "aligning with human judgement: the role of pairwise preference in large language model evaluators",
-    "citation_count": 136,
+    "citation_count": 148,
     "authors": []
   },
   "https://openreview.net/forum?id=eJ3cHNu7ss": {
@@ -2256,7 +2256,7 @@
     "checked": true,
     "id": "2a86d281bef364e2ea2d4fc61fde46ca25b955f1",
     "semantic_title": "huatuogpt-ii, one-stage training for medical adaption of llms",
-    "citation_count": 114,
+    "citation_count": 120,
     "authors": []
   },
   "https://openreview.net/forum?id=Dt6qXZsgaU": {
@@ -2296,7 +2296,7 @@
     "checked": true,
     "id": "c7d6597da713c85306040b6037c9e6365a9119de",
     "semantic_title": "multi-hop question answering under temporal knowledge editing",
-    "citation_count": 37,
+    "citation_count": 39,
     "authors": []
   },
   "https://openreview.net/forum?id=7jSMMvXLri": {
@@ -2412,7 +2412,7 @@
   "https://openreview.net/forum?id=9Wmdk94oKF": {
     "title": "CHOPS: CHat with custOmer Profile Systems for Customer Service with LLMs",
     "volume": "main",
-    "abstract": "Businesses and software platforms are increasingly utilizing Large Language Models (LLMs) like GPT-3.5, GPT-4, GLM-3, and LLaMa-2 as chat assistants with file access or as reasoning agents for custom service. Current LLM-based customer service models exhibit limited integration with customer profiles and lack operational capabilities, while existing API integrations prioritize diversity over precision and error avoidance that are crucial in real-world scenarios for Customer Service. We propose an LLMs agent called **CHOPS** (**CH**at with cust**O**mer **P**rofile in existing **S**ystem) that: (1) efficiently utilizes existing databases or systems to access user information or interact with these systems based on existing guidance; (2) provides accurate and reasonable responses or executing required operations in the system while avoiding harmful operations; and (3) leverages the combination of small and large LLMs together to provide satisfying performance while having decent inference cost. We introduce a practical dataset, *CPHOS-dataset*, including a database, some guiding files, and QA pairs collected from *CPHOS*, which employs an online platform to facilitate the organization of simulated Physics Olympiads for high school teachers and students. We conduct extensive experiments to validate the performance of our proposed **CHOPS** architecture using the *CPHOS-dataset*, aiming to demonstrate how LLMs can enhance or serve as alternatives to human customer service",
+    "abstract": "",
     "checked": true,
     "id": "e262b485df299a0388bcb1a4f2780504ac7eb8f9",
     "semantic_title": "chops: chat with customer profile systems for customer service with llms",
@@ -2422,7 +2422,7 @@
   "https://openreview.net/forum?id=95TayIeqJ4": {
     "title": "TMMLU+: An Improved Traditional Chinese Evaluation Suite for Foundation Models",
     "volume": "main",
-    "abstract": "We present TMMLU+, a new benchmark designed for Traditional Chinese language understanding. TMMLU+ is a multi-choice question-answering dataset with 66 subjects from elementary to professional level. It is six times larger and boasts a more balanced subject distribution than its predecessor, Taiwan Massive Multitask Language Understanding (TMMLU). We also benchmark closed-source models and 26 open-weight Chinese large language models (LLMs) of parameters ranging from 1.8B to 72B on the proposed TMMLU+. Our findings reveal that (1.) Traditional Chinese models still trail behind their Simplified Chinese counterparts, highlighting a need for more focused advancements in LLMs catering to Traditional Chinese. (2.) Current LLMs still fall short of human performance in average scores, indicating a potential need for future research to delve deeper into social science and humanities subjects. (3.) Among all the tokenization compression metrics examined, we identify that only the fertility score uniquely demonstrates strong correlations with our benchmark results. We foresee that TMMLU+ will pinpoint areas for future model improvement, thereby narrowing the gap between machine and human linguistic capabilities and supporting researchers in developing Traditional Chinese LLMs. Our dataset, along with the benchmark source code, is accessible at huggingface.co/datasets/ikala/tmmluplus",
+    "abstract": "",
     "checked": false,
     "id": "14394ae5ee9153b78266cbc53a04dd6ecc4d1a4e",
     "semantic_title": "an improved traditional chinese evaluation suite for foundation model",
@@ -2432,7 +2432,7 @@
   "https://openreview.net/forum?id=1ba209BACA": {
     "title": "Agent-DocEdit: Language-Instructed LLM Agent for Content-Rich Document Editing",
     "volume": "main",
-    "abstract": "Editing content-rich and multimodal documents, such as posters, flyers, and slides, can be tedious if the edits are complex, repetitive, or require subtle skills and deep knowledge of the editing software. Motivated by recent advancements in both Large Language Model (LLM) agents and multimodal modeling, we propose a framework that automates document editing which takes as input a linguistic edit request from the user and then performs sequential editing actions to the document the satisfy the request. Our proposed method, Agent-DocEdit, first grounds the edit request directly in the underlying document structure to identify the elements that need to be manipulated. Then, we rely on the agent capabilities of LLMs to generate an edit program which calls a set of pre-defined APIs to modify the underlying structure of the document. To improve the generated edit program, we leverage a feedback mechanism incorporating a deterministic code executor and a multimodal LLM. We demonstrate the effectiveness of our proposed modularized LLM editing agent on the DocEdit dataset, where Agent-DocEdit outperforms existing state-of-the-art methods by 70+% in document element grounding and 16+% on final rendition generation",
+    "abstract": "",
     "checked": false,
     "id": null,
     "semantic_title": "",
@@ -2442,7 +2442,7 @@
   "https://openreview.net/forum?id=HVK6nl3i97": {
     "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
     "volume": "main",
-    "abstract": "With large language models (LLMs) widely deployed in long content generation recently, there has emerged an increasing demand for efficient long-sequence inference support. However, key-value (KV) cache, which is stored to avoid re-computation, has emerged as a critical bottleneck by growing linearly in size with the sequence length. Due to the auto-regressive nature of LLMs, the entire KV cache will be loaded for every generated token, resulting in low utilization of computational cores and high latency. While various compression methods for KV cache have been proposed to alleviate this issue, they suffer from degradation in generation quality. We introduce TriForce, a hierarchical speculative decoding system that is scalable for long sequence generation. This approach leverages the original model weights and dynamic sparse KV cache via retrieval as a draft model, which serves as an intermediate layer in the hierarchy and is further speculated by a smaller model to reduce its drafting latency. TriForce not only facilitates impressive speedups for Llama2-7B-128K, achieving up to 2.31$\\times$ on an A100 GPU but also showcases scalability in handling even longer contexts. For the offloading setting on two RTX 4090 GPUs, TriForce achieves 0.108s/token—only half as slow as the auto-regressive baseline on an A100, which attains 7.78$\\times$ on our optimized offloading system. Additionally, TriForce performs 4.86$\\times$ than DeepSpeed-Zero-Inference on a single RTX 4090 GPU. TriForce's robustness is highlighted by its consistently outstanding performance across various temperatures. The code is available at https://github.com/Infini-AI-Lab/TriForce",
+    "abstract": "",
     "checked": true,
     "id": "d0deaec3e1f74701ac43600d9e64c5c969be7391",
     "semantic_title": "triforce: lossless acceleration of long sequence generation with hierarchical speculative decoding",
