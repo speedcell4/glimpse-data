@@ -349,7 +349,7 @@
     "semantic_title": "anchored preference optimization and contrastive revisions: addressing underspecification in alignment",
     "citation_count": 35,
     "authors": [
-      "Karel D’Oosterlinck",
+      "Karel D'Oosterlinck",
       "Winnie Xu",
       "Chris Develder",
       "Thomas Demeester",
@@ -530,6 +530,804 @@
       "Jens Myrup Pedersen",
       "Leon Derczynski",
       "Johannes Bjerva"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.34": {
+    "title": "Patchwise Cooperative Game-based Interpretability Method for Large Vision-language Models",
+    "volume": "main",
+    "abstract": "Amidst the rapid advancement of artificial intelligence, research on large vision-language models (LVLMs) has emerged as a pivotal area. However, understanding their internal mechanisms remains challenging due to the limitations of existing interpretability methods, especially regarding faithfulness and plausibility. To address this, we first construct a human response interpretability dataset that evaluates the plausibility of model explanations by comparing the attention regions between the model and humans when answering the same questions. We then propose a patchwise cooperative game-based interpretability method for LVLMs, which employs Shapley values to quantify the impact of individual image patches on generation likelihood and enhances computational efficiency through a single input approximation approach. Experimental results demonstrate our method's faithfulness, plausibility, and robustness. Our method provides researchers with deeper insights into model behavior, allowing for an examination of the specific image regions each layer relies on during response generation, ultimately enhancing model reliability. Our code is available at https://github.com/ZY123-GOOD/Patchwise_Cooperative",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yao Zhu",
+      "Yunjian Zhang",
+      "Zizhe Wang",
+      "Xiu Yan",
+      "Peng Sun",
+      "Xiangyang Ji"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.35": {
+    "title": "REAL Sampling: Boosting Factuality and Diversity of Open-ended Generation by Extrapolating the Entropy of an Infinitely Large LM",
+    "volume": "main",
+    "abstract": "Decoding methods for large language models (LLMs) usually struggle with the tradeoff between ensuring factuality and maintaining diversity. In this paper, we propose REAL (Residual Entropy from Asymptotic Line) sampling,1 which predicts the step-wise hallucination likelihood of an LLM. When an LLM is likely to hallucinate, REAL lowers the p threshold in nucleus sampling. Otherwise, REAL sampling increases the p threshold to boost the diversity. To predict the step-wise hallucination likelihood without supervision, we construct a THF (Token-level Hallucination Forecasting) model, which predicts the asymptotic entropy (i.e., inherent uncertainty) of the next token by extrapolating the next-token entropies of an infinitely large language model from a series of LLMs with different sizes. If an LLM's entropy is higher than the asymptotic entropy (i.e., the LLM is more uncertain than it should be), the THF model predicts a high hallucination hazard, which leads to a lower p threshold in REAL sampling. In the FactualityPrompts benchmark (Lee et al., 2022), we demonstrate that REAL sampling based on a 70M THF model can substantially improve the factuality and diversity of 7B LLMs simultaneously. After combined with contrastive decoding, REAL sampling outperforms 13 sampling methods, and generates texts that are more factual than the greedy sampling and more diverse than the nucleus sampling with p = 0.5",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Haw-Shiuan Chang",
+      "Nanyun Peng",
+      "Mohit Bansal",
+      "Anil Ramakrishna",
+      "Tagyoung Chung"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.36": {
+    "title": "mt RAG: A Multi-Turn Conversational Benchmark for Evaluating Retrieval-Augmented Generation Systems",
+    "volume": "main",
+    "abstract": "Retrieval-augmented generation (RAG) has recently become a very popular task for Large Language Models (LLMs). Evaluating them on multi-turn RAG conversations, where the system is asked to generate a response to a question in the context of a preceding conversation, is an important and often overlooked task with several additional challenges. We present mtRAG, an end-to-end human-generated multi-turn RAG benchmark that reflects several real-world properties across diverse dimensions for evaluating the full RAG pipeline. mtRAG contains 110 conversations averaging 7.7 turns each across four domains for a total of 842 tasks. We also explore automation paths via synthetic data and LLM-as-a-Judge evaluation. Our human and automatic evaluations show that even state-of-the-art LLM RAG systems struggle on mtRAG. We demonstrate the need for strong retrieval and generation systems that can handle later turns, unanswerable questions, non-standalone questions, and multiple domains. mtRAG is available at https://github.com/ibm/mt-rag-benchmark",
+    "checked": false,
+    "id": "bb7047071062aea5d846005ff6dcd7782d29103e",
+    "semantic_title": "mtrag: a multi-turn conversational benchmark for evaluating retrieval-augmented generation systems",
+    "citation_count": 38,
+    "authors": [
+      "Yannis Katsis",
+      "Sara Rosenthal",
+      "Kshitij Fadnis",
+      "Chulaka Gunasekara",
+      "Young-Suk Lee",
+      "Lucian Popa",
+      "Vraj Shah",
+      "Huaiyu Zhu",
+      "Danish Contractor",
+      "Marina Danilevsky"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.37": {
+    "title": "Data Contamination Quiz: A Tool to Detect and Estimate Contamination in Large Language Models",
+    "volume": "main",
+    "abstract": "We propose the Data Contamination Quiz (DCQ), a simple and effective approach to detect data contamination in large language models (LLMs) and estimate the amount of it. Specifically, we frame data contamination detection as a series of multiple-choice questions, devising a quiz format wherein three perturbed versions of each instance, subsampled from a specific dataset partition, are created. These changes only include word-level perturbations. The generated perturbations, along with the original dataset instance, form the options in the DCQ, with an extra option accommodating the selection of none of the provided options. Given that the only distinguishing signal among the options is the exact wording with respect to the original dataset instance, an LLM, when tasked with identifying the original dataset instance, gravitates towards selecting the original one if it has been exposed to it. While accounting for positional biases in LLMs, the quiz performance reveals the contamination level for the tested model with the dataset partition to which the quiz pertains. Applied to various datasets and LLMs, under controlled and uncontrolled contamination, our findings—while fully lacking access to training data and model parameters—suggest that DCQ achieves state-of-the-art results and uncovers greater contamination levels through memorization compared to existing methods. Also, it proficiently bypasses more safety filters, especially those set to avoid generating copyrighted content.1",
+    "checked": true,
+    "id": "9ad167529a6365e37825ddea5d29ab2f17651959",
+    "semantic_title": "data contamination quiz: a tool to detect and estimate contamination in large language models",
+    "citation_count": 41,
+    "authors": [
+      "Shahriar Golchin",
+      "Mihai Surdeanu"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.38": {
+    "title": "Continual Pre-training on Character-level Noisy Texts Makes Decoder-based Language Models Robust Few-shot Learners",
+    "volume": "main",
+    "abstract": "Recent decoder-based pre-trained language models (PLMs) generally use subword tokenizers. However, adding character-level perturbations drastically changes the delimitation of texts by the tokenizers, leading to the vulnerability of PLMs. This study proposes a method of continual pre-training to convert decoder-based PLMs with subword tokenizers into perturbation-robust few-shot in-context learners. Our method continually trains decoder-based PLMs to predict the next tokens conditioning on artificially created character-level noisy texts. Since decoder-based language models are auto-regressive, we skip noised words from the target optimization. In addition, to maintain the same word prediction performance under noisy text as clean text, our method employs word distribution matching between the original PLMs and training models. We conducted experiments on various subword-based PLMs, including GPT2, Pythia, Mistral, Gemma2, and Llama3, ranging from 1B to 8B parameters. The results demonstrate that our method consistently improves the performance of few-shot in-context learning on downstream tasks which contain actual typos or misspellings as well as artificial noise.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Takeshi Kojima",
+      "Yutaka Matsuo",
+      "Yusuke Iwasawa"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.39": {
+    "title": "Prompt Contrastive Transformation: An Enhanced Strategy for Efficient Prompt Transfer in Natural Language Processing",
+    "volume": "main",
+    "abstract": "Prompt transfer is a transfer learning method based on prompt tuning, which enhances the parameter performance of prompts in target tasks by transferring source prompt embeddings. Among existing methods, weighted aggregation is effective and possesses the advantages of being lightweight and modular. However, these methods may transfer redundant or irrelevant information from the source prompts to the target prompt, leading to negative impacts. To alleviate this problem, we propose Prompt Contrastive Transformation (PCT), which achieves efficient prompt transfer through prompt contrastive transformation and attentional fusion. PCT transforms the source prompt into task-agnostic embedding and task-specific embeddings through singular value decomposition and contrastive learning, reducing information redundancy among source prompts. The attention module in PCT selects more effective task-specific embeddings and fuses them with task-agnostic embedding into the target prompt. Experimental results show that, despite tuning only 0.035% of task-specific parameters, PCT achieves improvements in prompt transfer for single target task adaptation across various NLP tasks",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shu Zhao",
+      "Shiji Yang",
+      "Shicheng Tan",
+      "Zhen Yang",
+      "Congyao Mei",
+      "Zhen Duan",
+      "Yanping Zhang",
+      "Jie Chen"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.40": {
+    "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance in Adaptation",
+    "volume": "main",
+    "abstract": "Large Language Models (LLMs) have demonstrated impressive performance across various domains. However, the enormous number of model parameters makes fine-tuning challenging, significantly limiting their application and deployment. Existing solutions combine parameter quantization with Low-Rank Adaptation (LoRA), reducing memory usage but causing performance degradation. Additionally, converting fine-tuned models to low-precision representations further degrades performance. In this paper, we identify an imbalance in fine-tuning quantized LLMs with LoRA: overly complex adapter inputs and outputs versus low effective trainability of the adapter, leading to underfitting during fine-tuning. Thus, we propose Quantized LLMs fine-tuning with Balanced Low-Rank Adaptation (Q-BLoRA), which simplifies the adapter's inputs and outputs while increasing the adapter's rank to alleviate underfitting during fine-tuning. For low-precision deployment, we propose Quantization-Aware fine-tuning with Balanced Low-Rank Adaptation (QA-BLoRA), which aligns with the block-wise quantization and facilitates quantization-aware fine-tuning of low-rank adaptation based on the parameter merging of Q-BLoRA. Both Q-BLoRA and QA-BLoRA are easily implemented and offer the following optimizations: (i) Q-BLoRA consistently achieves state-of-the-art accuracy compared to baselines and other variants; (ii) QA-BLoRA enables the direct generation of low-precision inference models, which exhibit significant performance improvements over other low-precision models. We validate the effectiveness of Q-BLoRA and QA-BLoRA across various models and scenarios. Code has been made available at https://github.com/xiaocaigou/qbaraqahira",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ao Shen",
+      "Zhiquan Lai",
+      "Qiang Wang",
+      "Xionglve Li",
+      "Lizhi Zhang",
+      "Dongsheng Li",
+      "Jiaxin Li"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.41": {
+    "title": "Contextualized Evaluations: Judging Language Model Responses to Underspecified Queries",
+    "volume": "main",
+    "abstract": "Language model users often issue queries that lack specification, where the context under which a query was issued—such as the user's identity, the query's intent, and the criteria for a response to be useful—is not explicit. For instance, a good response to a subjective query like \"What book should I read next?\" would depend on the user's preferences, and a good response to an open-ended query like \"How do antibiotics work against bacteria?\" would depend on the user's expertise. This makes evaluation of responses to such queries an ill-posed task, as evaluators may make arbitrary judgments about the response quality. To remedy this, we present contextualized evaluations, a protocol that synthetically constructs context surrounding an underspecified query and provides it during evaluation. We find that the presence of context can 1) alter conclusions drawn from evaluation, even flipping benchmark rankings between model pairs, 2) nudge evaluators to make fewer judgments based on surface-level criteria, like style, and 3) provide new insights about model behavior across diverse contexts. Specifically, our procedure suggests a potential bias towards WEIRD (Western, Educated, Industrialized, Rich and Democratic) contexts in models' \"default\" responses and we find that models are not equally sensitive to following different contexts, even when they are provided in prompts.1",
+    "checked": true,
+    "id": "48935db3907fda6c84d9d6d754317e16e49b85d6",
+    "semantic_title": "contextualized evaluations: judging language model responses to underspecified queries",
+    "citation_count": 6,
+    "authors": [
+      "Chaitanya Malaviya",
+      "Joseph Chee Chang",
+      "Dan Roth",
+      "Mohit Iyyer",
+      "Mark Yatskar",
+      "Kyle Lo"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.42": {
+    "title": "(Perhaps) Beyond Human Translation: Harnessing Multi-Agent Collaboration for Translating Ultra-Long Literary Texts",
+    "volume": "main",
+    "abstract": "Literary translations remains one of the most challenging frontiers in machine translation due to the complexity of capturing figurative language, cultural nuances, and unique stylistic elements. In this work, we introduce TransAgents, a novel multi-agent framework that simulates the roles and collaborative practices of a human translation company, including a CEO, Senior Editor, Junior Editor, Translator, Localization Specialist, and Proofreader. The translation process is divided into two stages: a preparation stage where the team is assembled and comprehensive translation guidelines are drafted, and an execution stage that involves sequential translation, localization, proofreading, and a final quality check. Furthermore, we propose two innovative evaluation strategies: Monolingual Human Preference (MHP), which evaluates translations based solely on target language quality and cultural appropriateness, and BLP, which leverages large language models like gpt-4 for direct text comparison. Although TransAgents achieves lower d-BLEU scores, due to the limited diversity of references, its translations are significantly better than those of other baselines and are preferred by both human evaluators and LLMs over traditional human references and gpt-4 translations. Our findings highlight the potential of multi-agent collaboration in enhancing translation quality, particularly for longer texts.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Minghao Wu",
+      "Jiahao Xu",
+      "Yulin Yuan",
+      "Gholamreza Haffari",
+      "Longyue Wan",
+      "Weihua Luo",
+      "Kaifu Zhang"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.43": {
+    "title": "STPar: A Structure-Aware Triaffine Parser for Screenplay Character Coreference Resolution",
+    "volume": "main",
+    "abstract": "Character Coreference Resolution in Movie Screenplays (MovieCoref) is a newly emerging task for understanding complex movie plots and character relationships. This task poses greater challenges than traditional coreference resolution, due to the intricate narrative structures and character interactions unique to screenplays. In light of these challenges, we introduce a novel approach: a Structure-aware Triaffine Parser (STPar) for the MovieCoref task. STPar combines discourse and syntactic structures in the feature encoding process, enabling comprehensive analysis of ternary relationships and complex interactions. During the pairing process, STPar utilizes a triaffine scorer to consider high-order relations between candidate mention pairs, thus enhancing its ability to capture detailed narrative structures. In addition, STPar incorporates multi-task learning, encompassing singleton and span detection tasks, to further improve coreference resolution performance. Our evaluations on the MovieCoref dataset demonstrate that STPar significantly outperforms the best baseline by 7.4%, 21.5%, 7.1%, and 10.2% in F1 scores of B3, CEAFe, LEA, and CoNLL. Further analysis highlights the benefits of integrating structural discourse and syntactic information as well as the combined approaches of triaffine and multi-task learning.1",
+    "checked": true,
+    "id": "a39977f34d45debf00b4c9291680ef09fab4350e",
+    "semantic_title": "stpar: a structure-aware triaffine parser for screenplay character coreference resolution",
+    "citation_count": 2,
+    "authors": [
+      "Li Zheng",
+      "Hao Fei",
+      "Lei Chen",
+      "Bobo Li",
+      "Fei Li",
+      "Chong Teng",
+      "Liang Zhao",
+      "Donghong Ji"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.44": {
+    "title": "MAKE: Memory-Associated Knowledge Editing",
+    "volume": "main",
+    "abstract": "Since their emergence, large language models (LLMs) have rapidly advanced, exerting substantial influence across various domains. Consequently, the importance of model editing techniques, aimed at locally correcting outdated or incorrect knowledge within language models, has grown significantly. However, traditional model editing methods face limitations: They cannot guarantee that highly related knowledge will transfer to the post-edited model, and they often rely on external knowledge bases to address this issue. In this paper, we propose a novel approach that leverages the internal knowledge of the language model to overcome the shortcomings of existing methods. First, we explore how to recall indirect associated knowledge from the model itself, which can be utilized in the editing process. Building on this, we propose MAKE (Memory-Associated Knowledge Editing), an editing method that takes into account the transfer of associated knowledge. As a result, MAKE successfully updates associated knowledge and achieves state-of-the-art performance in experiments conducted on the zsRE+, CounterFact+ and MQuAKE datasets",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Seongsik Park",
+      "Sangmin Park",
+      "Jaieun Kim",
+      "Harksoo Kim"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.45": {
+    "title": "Investigating Adversarial Trigger Transfer in Large Language Models",
+    "volume": "main",
+    "abstract": "Recent work has developed optimization procedures to find token sequences, called adversarial triggers, which can elicit unsafe responses from aligned language models. These triggers are believed to be highly transferable, i.e., a trigger optimized on one model can jailbreak other models. In this paper, we concretely show that such adversarial triggers are not consistently transferable. We extensively investigate trigger transfer among 13 open models and observe poor and inconsistent transfer. Our experiments further reveal a significant difference in robustness to adversarial triggers between models Aligned by Preference Optimization (APO) and models Aligned by Fine-Tuning (AFT). We find that APO models are extremely hard to jailbreak even when the trigger is optimized directly on the model. On the other hand, while AFT models may appear safe on the surface, exhibiting refusals to a range of unsafe instructions, we show that they are highly susceptible to adversarial triggers. Lastly, we observe that most triggers optimized on AFT models also generalize to new unsafe instructions from five diverse domains, further emphasizing their vulnerability. Overall, our work highlights the need for more comprehensive safety evaluations for aligned language models.1 Warning: This paper contains examples that may be offensive or upsetting",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Nicholas Meade",
+      "Arkil Patel",
+      "Siva Reddy"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.46": {
+    "title": "Human Choice Prediction in Language-based Persuasion Games: Simulation-based Off-Policy Evaluation",
+    "volume": "main",
+    "abstract": "Recent advances in Large Language Models (LLMs) have spurred interest in designing LLM-based agents for tasks that involve interaction with human and artificial agents. This paper addresses a key aspect in the design of such agents: predicting human decisions in off-policy evaluation (OPE). We focus on language-based persuasion games, where an expert aims to influence the decision-maker through verbal messages. In our OPE framework, the prediction model is trained on human interaction data collected from encounters with one set of expert agents, and its performance is evaluated on interactions with a different set of experts. Using a dedicated application, we collected a dataset of 87K decisions from humans playing a repeated decision-making game with artificial agents. To enhance off-policy performance, we propose a simulation technique involving interactions across the entire agent space and simulated decision-makers. Our learning strategy yields significant OPE gains, e.g., improving prediction accuracy in the top 15% challenging cases by 7.1%.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Eilam Shapira",
+      "Omer Madmon",
+      "Reut Apel",
+      "Moshe Tennenholtz",
+      "Roi Reichart"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.47": {
+    "title": "Efficient Tuning of Large Language Models for Knowledge-Grounded Dialogue Generation",
+    "volume": "main",
+    "abstract": "Large language models (LLMs) demonstrate remarkable text comprehension and generation capabilities but often lack the ability to utilize up-to-date or domain-specific knowledge not included in their training data. To address this gap, we introduce KEDiT, an efficient method for fine-tuning LLMs for knowledge-grounded dialogue generation. KEDiT operates in two main phases. First, it employs an information bottleneck to compress retrieved knowledge into learnable parameters, retaining essential information while minimizing computational overhead. Second, a lightweight knowledge-aware adapter integrates these compressed knowledge vectors into the LLM during fine-tuning, updating less than 2% of the model parameters. The experimental results on the Wizard of Wikipedia and a newly constructed PubMed-Dialog dataset demonstrate that KEDiT excels in generating contextually relevant and informative responses, outperforming competitive baselines in automatic, LLM-based, and human evaluations. This approach effectively combines the strengths of pretrained LLMs with the adaptability needed for incorporating dynamic knowledge, presenting a scalable solution for fields such as medicine.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Bo Zhang",
+      "Hui Ma",
+      "Dailin Li",
+      "Jian Ding",
+      "Jian Wang",
+      "Bo Xu",
+      "HongFei Lin"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.48": {
+    "title": "MURI: High-Quality Instruction Tuning Datasets for Low-Resource Languages via Reverse Instructions",
+    "volume": "main",
+    "abstract": "Instruction tuning enhances large language models (LLMs) by aligning them with human preferences across diverse tasks. Traditional approaches to create instruction tuning datasets face serious challenges for low-resource languages due to their dependence on data annotation. This work introduces a novel method, Multilingual Reverse Instructions (MURI), which generates high-quality instruction tuning datasets for low-resource languages without requiring human annotators or pre-existing multilingual models. Utilizing reverse instructions and a translation pipeline, MURI produces instruction-output pairs from existing human-written texts in low-resource languages. This method ensures cultural relevance and diversity by sourcing texts from different native domains and applying filters to eliminate inappropriate content. Our dataset, MURI-IT, includes more than 2 million instruction-output pairs across 200 languages. Evaluation by native speakers and fine-tuning experiments with mT5 models demonstrate the approach's effectiveness for both NLU and open-ended generation. We publicly release datasets and models at https://github.com/akoksal/muri",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Abdullatif Köksal",
+      "Marion Thaler",
+      "Ayyoob Imani",
+      "Ahmet Üstün",
+      "Anna Korhonen",
+      "Hinrich Schütze"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.49": {
+    "title": "KEFT: Knowledge-Enhanced Fine-Tuning for Large Language Models in Domain-Specific Question Answering",
+    "volume": "main",
+    "abstract": "The rapid advancement of large language models (LLMs) has opened up promising opportunities for their downstream applications in question-answering (QA), such as ChatGPT, ChatGLM, etc. However, such LLMs do not perform very well in domain-specific QA tasks without fine-tuning. But directly fine-tuning LLMs on domain-specific corpus data may lead to catastrophic forgetting, causing the LLMs to lose their general language capability. To address this problem, we propose the Knowledge-Enhanced Fine-Tuning (KEFT) method, an unsupervised fine-tuning approach to enhance the knowledge capability of LLMs in domain-specific QA tasks while preserving their general language capability. KEFT leverages the inherent language comprehension of pre-trained LLMs to generate synthetic-QA datasets from domain-specific corpus data autonomously for fine-tuning, and adopts a Low-Rank Adaptation (LoRA) method to further alleviate over-fitting. Furthermore, to enhance the representation of domain-specific knowledge, we introduce a knowledge-enhanced fine-tuning loss function, which encourages the model to learn the knowledge-question connection, thereby generating natural and knowledgeable answers. Our evaluations across multiple domain-specific datasets demonstrate that KEFT surpasses state-of-the-art fine-tuning approaches, enhancing the performance of various LLMs in QA tasks in both English and Chinese languages",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Haiyun Li",
+      "Jixin Zhang",
+      "Hua Shen",
+      "Ke Cheng",
+      "Xiaofeng Huang"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.50": {
+    "title": "BenCzechMark: A Czech-Centric Multitask and Multimetric Benchmark for Large Language Models with Duel Scoring Mechanism",
+    "volume": "main",
+    "abstract": "We present BenCzechMark (BCM), the first comprehensive Czech language benchmark designed for large language models, offering diverse tasks, multiple task formats, and multiple evaluation metrics. Its duel scoring system is grounded in statistical significance theory and uses aggregation across tasks inspired by social preference theory. Our benchmark encompasses 50 challenging tasks, with corresponding test datasets, primarily in native Czech, with 14 newly collected ones. These tasks span 8 categories and cover diverse domains, including historical Czech news, essays from pupils or language learners, and spoken word. Furthermore, we collect and clean BUT-Large Czech Collection, the largest publicly available clean Czech language corpus, and use it for (i) contamination analysis and (ii) continuous pretraining of the first Czech-centric 7B language model with Czech-specific tokenization. We use our model as a baseline for comparison with publicly available multilingual models. Lastly, we release and maintain a leaderboard with existing 50 model submissions, where new model submissions can be made at https://huggingface.co/spaces/CZLC/BenCzechMark",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Martin Fajcik",
+      "Martin Docekal",
+      "Jan Dolezal",
+      "Karel Ondrej",
+      "Karel Beneš",
+      "Jan Kapsa",
+      "Pavel Smrz",
+      "Alexander Polok",
+      "Michal Hradis",
+      "Zuzana Neverilova",
+      "Ales Horak",
+      "Radoslav Sabol",
+      "Michal Stefanik",
+      "Adam Jirkovsky",
+      "David Adamczyk",
+      "Petr Hyner",
+      "Jan Hula",
+      "Hynek Kydlicek"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.51": {
+    "title": "Analyzing and Adapting Large Language Models for Few-Shot Multilingual NLU: Are We There Yet?",
+    "volume": "main",
+    "abstract": "Supervised fine-tuning (SFT), supervised instruction tuning (SIT), and in-context learning (ICL) are three alternative, de facto standard approaches to few-shot learning. ICL has gained popularity recently with the advent of LLMs due to its versatile simplicity and sample efficiency. Prior research has conducted only limited investigation into how these approaches work for multilingual few-shot learning, and the focus so far has been mostly on their performance. In this work, we present an extensive and systematic comparison of the three approaches, testing them on a variety of high- and low-resource languages over five different NLU tasks, and a myriad of language and domain setups. Importantly, performance is only one aspect of the comparison, where we also analyze and discuss the approaches through the optics of their computational, inference and financial costs. Some of the highlighted findings concern an excellent trade-off between performance and resource requirements/cost for SIT. We further analyze the impact of target language adaptation of pretrained LLMs and find that the standard adaptation approaches can (superficially) improve target language generation capabilities, but language understanding elicited through ICL does not improve accordingly and remains limited, especially for low-resource languages",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Evgeniia Razumovskaia",
+      "Ivan Vulić",
+      "Anna Korhonen"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.52": {
+    "title": "DARE: Diverse Visual Question Answering with Robustness Evaluation",
+    "volume": "main",
+    "abstract": "Vision Language Models (VLMs) extend remarkable capabilities of text-only large language models and vision-only models, being able to learn from and process multi-modal vision-text input. While modern VLMs perform well on a number of standard image classification and image-text matching tasks, they still struggle with a number of crucial vision-language (VL) reasoning abilities such as counting and spatial reasoning. Moreover, while they might be very brittle to small variations in instructions and/or evaluation protocols, existing benchmarks fail to evaluate their robustness (or rather the lack of it). In order to couple challenging VL scenarios with comprehensive robustness evaluation, we introduce DARE, Diverse Visual Question Answering with Robustness Evaluation, a carefully created and curated multiple-choice VQA benchmark. DARE evaluates VLM performance on five diverse categories and includes four robustness-oriented evaluations based on the variations of prompts, the subsets of answer options, the output format, and the number of correct answers. Among a spectrum of other findings, we report that state-of-the-art VLMs still struggle with questions in most categories and are unable to consistently deliver their peak performance across the tested robustness evaluations. Consequently, our work calls for the systematic addition of robustness evaluations in future VLM research",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Hannah Sterz",
+      "Jonas Pfeiffer",
+      "Ivan Vulić"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.53": {
+    "title": "Explanatory Summarization with Discourse-Driven Planning",
+    "volume": "main",
+    "abstract": "Lay summaries for scientific documents typically include explanations to help readers grasp sophisticated concepts or arguments. However, current automatic summarization methods do not explicitly model explanations, which makes it difficult to align the proportion of explanatory content with human-written summaries. In this paper, we present a plan-based approach that leverages discourse frameworks to organize summary generation and guide explanatory sentences by prompting responses to the plan. Specifically, we propose two discourse-driven planning strategies, where the plan is conditioned as part of the input or part of the output prefix, respectively. Empirical experiments on three lay summarization datasets show that our approach outperforms existing state-of-the-art methods in terms of summary quality, and it enhances model robustness, controllability, and mitigates hallucination. The project information is available at https://dongqi.me/projects/ExpSum",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Dongqi Liu",
+      "Xi Yu",
+      "Vera Demberg",
+      "Mirella Lapata"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.54": {
+    "title": "Overcoming Source Object Grounding for Semantic Image Editing",
+    "volume": "main",
+    "abstract": "Recent diffusion models have demonstrated remarkable capabilities in text-to-image generation. However, their stochastic denoising process often causes semantic image editing (SIE) models to misapply textual instructions. That is, models often leave the source object unchanged or erroneously alter the background. We refer to this challenge as source object grounding. To address this challenge, we introduce R-SIE, a region-wise SIE framework. During the inference, R-SIE models noise separately for distinct image regions, enabling precise control over the transformed areas. To reinforce the inference, we devise an automatic pipeline leveraging bounding boxes to generate unambiguous training data. Additionally, we propose two region-focused metrics, CLIP-Region Class (CLIP-RC) and CLIP-Global Context (CLIP-GC), to independently assess how well the source object is edited and the background is preserved, respectively. Experimental results demonstrate that region-wise diffusion improves existing baselines, and our data generation pipeline further enhances these improvements.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yeonjoon Jung",
+      "Seungtaek Choi",
+      "Seung-won Hwang"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.55": {
+    "title": "Active Knowledge Structuring for Large Language Models in Materials Science Text Mining",
+    "volume": "main",
+    "abstract": "Large Language Models (LLMs) offer a promising alternative to traditional Materials Science Text Mining (MSTM) by reducing the need for extensive data labeling and fine-tuning. However, existing zero-/few-shot methods still face limitations in aligning with personalized needs in scientific discovery. To address this, we propose ClassMATe, an active knowledge structuring approach for MSTM. Specifically, we first propose a class definition stylization method to structure knowledge, enabling explicit clustering of latent material knowledge in LLMs for enhanced inference. To align with the scientists' needs, we propose an active needs refining strategy that iteratively clarifies needs by learning from uncertainty-aware hard samples of LLMs, further refining the knowledge structuring. Extensive experiments on seven tasks and eight datasets show that ClassMATe, as a plug-and-play method, achieves performance comparable to supervised learning without requiring fine-tuning or extra knowledge base, highlighting the potential to bridge the gap between LLMs' latent knowledge and real-world scientific applications.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xin Zhang",
+      "Jingling Yuan",
+      "Peiliang Zhang",
+      "Jia Liu",
+      "Lin Li"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.56": {
+    "title": "A Systematic Review of NLP for Dementia: Tasks, Datasets, and Opportunities",
+    "volume": "main",
+    "abstract": "The close link between cognitive decline and language has fostered long-standing collaboration between the NLP and medical communities in dementia research. To examine this, we reviewed over 240 papers applying NLP to dementia-related efforts, drawing from medical, technological, and NLP-focused literature. We identify key research areas, including dementia detection, linguistic biomarker extraction, caregiver support, and patient assistance, showing that half of all papers focus solely on dementia detection using clinical data. Yet, many directions remain unexplored, such as artificially degraded language models, synthetic data, digital twins, and more. We highlight gaps and opportunities around trust, scientific rigor, applicability, and cross-community collaboration. We raise ethical dilemmas in the field, and highlight the diverse datasets encountered throughout our review including recorded, written, structured, spontaneous, synthetic, clinical, social media–based, and more. This review aims to inspire more creative, impactful, and rigorous research on NLP for dementia",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Lotem Peled-Cohen",
+      "Roi Reichart"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.57": {
+    "title": "Elements of World Knowledge ( EWoK ): A Cognition-Inspired Framework for Evaluating Basic World Knowledge in Language Models",
+    "volume": "main",
+    "abstract": "The ability to build and reason about models of the world is essential for situated language understanding. But evaluating world modeling capabilities in modern AI systems—especially those based on language models—has proven challenging, in large part because of the difficulty of disentangling conceptual knowledge about the world from knowledge of surface co-occurrence statistics. This paper presents Elements of World Knowledge (EWoK), a framework for evaluating language models' understanding of the conceptual knowledge underlying world modeling. EWoK targets specific concepts from multiple knowledge domains known to be important for world modeling in humans, from social interactions (help, deceive) to spatial relations (left, right). Objects, agents, and locations in the items can be flexibly filled in, enabling easy generation of multiple controlled datasets. We then introduce EWoK-core-1.0, a dataset of 4,374 items covering 11 world knowledge domains. We evaluate 20 open-weights large language models (1.3B–70B parameters) and compare them with human performance. All tested models perform worse than humans, with results varying drastically across domains. Performance on social interactions and social properties was highest and performance on physical relations and spatial relations was lowest. Overall, this dataset highlights simple cases where even large models struggle and presents rich avenues for targeted research on LLM world modeling capabilities",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Anna A. Ivanova",
+      "Aalok Sathe",
+      "Benjamin Lipkin",
+      "Unnathi U. Kumar",
+      "Setayesh Radkani",
+      "Thomas H. Clark",
+      "Carina Kauf",
+      "Jennifer Hu",
+      "R. T. Pramod",
+      "Gabriel Grand",
+      "Vivian C. Paulun",
+      "Maria Ryskina",
+      "Ekin Akyürek",
+      "Ethan G. Wilcox",
+      "Nafisa Rashid",
+      "Leshem Choshen",
+      "Roger Levy",
+      "Evelina Fedorenko",
+      "Joshua Tenenbaum",
+      "Jacob Andreas"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.58": {
+    "title": "End-to-End Long Document Summarization using Gradient Caching",
+    "volume": "main",
+    "abstract": "Training transformer-based encoder-decoder models for long document summarization poses a significant challenge due to the quadratic memory consumption during training. Several approaches have been proposed to extend the input length at test time, but training with these approaches is still difficult, requiring truncation of input documents and causing a mismatch between training and test conditions. In this work, we propose CachED (Gradient Caching for Encoder-Decoder models), an approach that enables end-to-end training of existing transformer-based encoder-decoder models, using the entire document without truncation. Specifically, we apply non-overlapping sliding windows to input documents, followed by fusion in decoder. During backpropagation, the gradients are cached at the decoder and are passed through the encoder in chunks by re-computing the hidden vectors, similar to gradient checkpointing. In the experiments on long document summarization, we extend BART to CachED BART, processing more than 500K tokens during training and achieving superior performance without using any additional parameters",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Rohit Saxena",
+      "Hao Tang",
+      "Frank Keller"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.59": {
+    "title": "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination",
+    "volume": "main",
+    "abstract": "KVCache, by storing key-value pairs for reuse, has been crucial for enhancing inference efficiency for large language models (LLMs). However, the increasing memory demands of KVCache, especially with recent trends of longer input sequences, present a major challenge. In this work, we propose an innovative token-adaptive low-rank approximation strategy for KVCache compression. By applying varying ranks based on token significance, our method compresses KVCache efficiently while retaining critical information. Moreover, we introduce a lazy approximation technique, which approximates lazily only when needed, alongside a reconstruction-free design to bypass costly recalculations. Combined with multi-level quantization, this method reduces KVCache size by 9.1× on the Llama-3.1-8B model, with minimal performance degradation on complex tasks such as GSM8K. Moreover, our custom attention implementation shows up to 2× latency reduction compared to the conventional method in long context scenarios. The code is publicly available",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Jaeseong Lee",
+      "Seung-won Hwang",
+      "Aurick Qiao",
+      "Daniel Campos",
+      "Zhewei Yao",
+      "Yuxiong He"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.60": {
+    "title": "Adding Chocolate to Mint: Mitigating Metric Interference in Machine Translation",
+    "volume": "main",
+    "abstract": "As automatic metrics become increasingly stronger and widely adopted, the risk of unintentionally \"gaming the metric\" during model development rises. This issue is caused by metric interference (Mint), i.e., the use of the same or related metrics for both model tuning and evaluation. Mint can misguide practitioners into being overoptimistic about the performance of their systems: As system outputs become a function of the interfering metric, their estimated quality loses correlation with human judgments. In this work, we analyze two common cases of Mint in machine translation-related tasks: Filtering of training data, and decoding with quality signals. Importantly, we find that Mint strongly distorts instance-level metric scores, even when metrics are not directly optimized for—questioning the common strategy of leveraging a different, yet related metric for evaluation that is not used for tuning. To address this problem, we propose MintAdjust, a method for more reliable evaluation under Mint. On the WMT24 MT shared task test set, MintAdjust ranks translations and systems more accurately than state-of-the-art-metrics across a majority of language pairs, especially for high-quality systems. Furthermore, MintAdjust outperforms AutoRank, the ensembling method used by the organizers.1 We will release a codebase for replicating the results in this work upon publication",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "José Pombal",
+      "Nuno M. Guerreiro",
+      "Ricardo Rei",
+      "André F. T. Martins"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.61": {
+    "title": "FoVer: First-Order Logic Verification for Natural Language Reasoning",
+    "volume": "main",
+    "abstract": "Large Language Models (LLMs) have shown remarkable capabilities in various tasks, including logical reasoning. However, their propensity for generating incorrect or inconsistent responses remains a significant concern. To address this issue, we propose FoVer (First-order logic Verification), an automated pipeline that verifies the logical correctness of reasoning texts using first-order logic. The pipeline operates in two main steps: (1) LLM-driven translation of natural language into executable logical expressions, and (2) automated logical verification using the Z3 theorem prover. We evaluate FoVer on specialized logical datasets (ProofWriter and FOLIO) and real-world LLM outputs (REVEAL). The results demonstrate that FoVer outperforms existing methods in logical verification significantly, showing notable improvements in accuracy across both ideal and practical scenarios. The pipeline also demonstrates its potential in identifying annotation errors in existing datasets, and it could be utilized for constructing new logical reasoning datasets. This work presents a significant step forward in enhancing the trustworthiness of LLM outputs, particularly in tasks requiring logical integrity.1",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yu Pei",
+      "Yongping Du",
+      "Xingnan Jin"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.62": {
+    "title": "On the Effect of Instruction Tuning Loss on Generalization",
+    "volume": "main",
+    "abstract": "Instruction tuning has emerged as a pivotal post-training paradigm that enables pre-trained language models to better follow user instructions. Despite its significance, little attention has been given to optimizing the loss function used. A fundamental, yet often overlooked, question is whether the conventional auto-regressive objective—where loss is computed only on response tokens, excluding prompt tokens—is truly optimal for instruction tuning. In this work, we systematically investigate the impact of differentially weighting prompt and response tokens in instruction tuning loss, and propose Weighted Instruction Tuning (WIT) as a better alternative to conventional instruction tuning. Through extensive experiments on five language models of different families and scale, three finetuning datasets of different sizes, and five diverse evaluation benchmarks, we show that the standard instruction tuning loss often yields suboptimal performance and limited robustness to input prompt variations. We find that a low-to-moderate weight for prompt tokens coupled with a moderate-to-high weight for response tokens yields the best-performing models across settings and also serves as a better starting point for the subsequent preference alignment training. These findings highlight the need to reconsider instruction-tuning loss and offer actionable insights for developing more robust and generalizable models. Our code is open-sourced here",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Anwoy Chatterjee",
+      "H. S. V. N. S. Kowndinya Renduchintala",
+      "Sumit Bhatia",
+      "Tanmoy Chakraborty"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.63": {
+    "title": "Adversarial Defense without Adversarial Defense: Enhancing Language Model Robustness via Instance-level Principal Component Removal",
+    "volume": "main",
+    "abstract": "Pre-trained language models (PLMs) have driven substantial progress in natural language processing but remain vulnerable to adversarial attacks, raising concerns about their robustness in real-world applications. Previous studies have sought to mitigate the impact of adversarial attacks by introducing adversarial perturbations into the training process, either implicitly or explicitly. While both strategies enhance robustness, they often incur high computational costs. In this work, we propose a simple yet effective add-on module that enhances the adversarial robustness of PLMs by removing instance-level principal components, without relying on conventional adversarial defenses or perturbing the original training data. Our approach transforms the embedding space to approximate Gaussian properties, thereby reducing its susceptibility to adversarial perturbations while preserving semantic relationships. This transformation aligns embedding distributions in a way that minimizes the impact of adversarial noise on decision boundaries, enhancing robustness without requiring adversarial examples or costly training-time augmentation. Evaluations on eight benchmark datasets show that our approach improves adversarial robustness while maintaining comparable before-attack accuracy to baselines, achieving a balanced trade-off between robustness and generalization",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yang Wang",
+      "Chenghao Xiao",
+      "Yizhi Li",
+      "Stuart E. Middleton",
+      "Noura Al Moubayed",
+      "Chenghua Lin"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.64": {
+    "title": "QE4PE: Word-level Quality Estimation for Human Post-Editing",
+    "volume": "main",
+    "abstract": "Word-level quality estimation (QE) methods aim to detect erroneous spans in machine translations, which can direct and facilitate human post-editing. While the accuracy of word-level QE systems has been assessed extensively, their usability and downstream influence on the speed, quality, and editing choices of human post-editing remain understudied. In this study, we investigate the impact of word-level QE on machine translation (MT) post-editing in a realistic setting involving 42 professional post-editors across two translation directions. We compare four error-span highlight modalities, including supervised and uncertainty-based word-level QE methods, for identifying potential errors in the outputs of a state-of-the-art neural MT model. Post-editing effort and productivity are estimated from behavioral logs, while quality improvements are assessed by word- and segment-level human annotation. We find that domain, language and editors' speed are critical factors in determining highlights' effectiveness, with modest differences between human-made and automated QE highlights underlining a gap between accuracy and usability in professional workflows",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Gabriele Sarti",
+      "Vilém Zouhar",
+      "Grzegorz Chrupała",
+      "Ana Guerberof-Arenas",
+      "Malvina Nissim",
+      "Arianna Bisazza"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.65": {
+    "title": "Frame Representation Hypothesis: Multi-Token LLM Interpretability and Concept-Guided Text Generation",
+    "volume": "main",
+    "abstract": "Interpretability is a key challenge in fostering trust for Large Language Models (LLMs), which stems from the complexity of extracting reasoning from a model's parameters. We present the Frame Representation Hypothesis, a theoretically robust framework grounded in the Linear Representation Hypothesis (LRH) to interpret and control LLMs by modeling multi-token words. Prior research explored LRH to connect LLM representations with linguistic concepts, but was limited to single token analysis. As most words are composed of several tokens, we extend LRH to multi-token words, thereby enabling usage on any textual data with thousands of concepts. To this end, we propose that words can be interpreted as frames, ordered sequences of vectors that better capture token-word relationships. Then, concepts can be represented as the average of word frames sharing a common concept. We showcase these tools through Top-k Concept-Guided Decoding, which can intuitively steer text generation using concepts of choice. We verify said ideas on Llama 3, Gemma 2, Phi 3, and Qwen-2-VL families, demonstrating gender and language biases, exposing harmful content, but also potential to remediate them, leading to safer and more transparent LLMs. Code is available at this https url",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Pedro H. V. Valois",
+      "Lincon S. Souza",
+      "Erica K. Shimomoto",
+      "Kazuhiro Fukui"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.66": {
+    "title": "Early Detection and Reduction of Memorization for Domain Adaptation and Instruction Tuning",
+    "volume": "main",
+    "abstract": "Although large language models excel across many tasks, they can memorize training data and thereby expose private or copyrighted text. Most defenses target the pre-training stage, leaving memorization during fine-tuning–especially for domain adaptation and instruction tuning–poorly understood. We fine-tune Pythia, Llama3, and Mistral models spanning 1.4B–70B parameters on common evaluation datasets and track verbatim memorization throughout training. We find that memorization increases dramatically in the first few epochs, often significantly before either validation perplexity or evaluation performance is optimized. We use a simple but effective n-gram memorization score which reliably precedes verbatim memorization; using it as an early-stopping criterion mitigates memorization with minimal performance loss. Further, we introduce an n-gram–aware loss regularizer and show that it reduces memorization across all model families tested by up to 40% while minimizing evaluation performance trade-offs when compared to an existing memorization mitigation strategy. These results yield practical, scalable insights into memorization dynamics during language model fine-tuning",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Dean L. Slack",
+      "Noura Al Moubayed"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.67": {
+    "title": "Safe Pruning LoRA: Robust Distance-Guided Pruning for Safety Alignment in Adaptation of LLMs",
+    "volume": "main",
+    "abstract": "Fine-tuning Large Language Models (LLMs) with Low-Rank Adaptation (LoRA) enhances adaptability while reducing computational costs. However, fine-tuning can compromise safety alignment, even with benign data, increasing susceptibility to harmful outputs. Existing safety alignment methods struggle to capture complex parameter shifts, leading to suboptimal safety-utility trade-offs. To address this issue, we propose Safe Pruning LoRA (SPLoRA), a novel pruning-based approach that selectively removes LoRA layers that weaken safety alignment, improving safety while preserving performance. At its core, we introduce Empirical-DIEM (E-DIEM), a dimension-insensitive similarity metric that effectively detects safety misalignment in LoRA-adapted models. We conduct extensive experiments on LLMs fine-tuned with mixed of benign and malicious data, and purely benign datasets, evaluating SPLoRA across utility, safety, and reliability metrics. Results demonstrate that SPLoRA outperforms state-of-the-art safety alignment techniques, significantly reducing safety risks while maintaining or improving model performance and reliability. Additionally, SPLoRA reduces inference overhead, making it a scalable and efficient solution for deploying safer and more reliable LLMs. The code is available at https://github.com/AoShuang92/SPLoRA",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shuang Ao",
+      "Yi Dong",
+      "Jinwei Hu",
+      "Sarvapali D. Ramchurn"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.68": {
+    "title": "CRVQ: Channel-Relaxed Vector Quantization for Extreme Compression of LLMs",
+    "volume": "main",
+    "abstract": "Powerful large language models (LLMs) are increasingly expected to be deployed with lower computational costs, enabling their capabilities on resource-constrained devices. Post-training quantization (PTQ) has emerged as a star approach to achieve this ambition, with best methods compressing weights to less than 2 bit on average. In this paper, we propose Channel-Relaxed Vector Quantization (CRVQ), a novel technique that significantly improves the performance of PTQ baselines at the cost of only minimal additional bits. This state-of-the-art extreme compression method achieves its results through two key innovations: (1) carefully selecting and reordering a very small subset of critical weight channels, and (2) leveraging extended codebooks to relax the constraint of critical channels. With our method, we demonstrate a 38.9% improvement over the current strongest sub-2-bit PTQ baseline, enabling nearer lossless 1-bit compression. Furthermore, our approach offers flexible customization of quantization bit-width and performance, providing a wider range of deployment options for diverse hardware platforms. Code and checkpoints are available at https://github.com/xuyuzhuang11/CRVQ",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yuzhuang Xu",
+      "Shiyu Ji",
+      "Qingfu Zhu",
+      "Wanxiang Che"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.69": {
+    "title": "Benchmarking Linguistic Diversity of Large Language Models",
+    "volume": "main",
+    "abstract": "The development and evaluation of Large Language Models (LLMs) has primarily focused on their task-solving capabilities, with recent models even surpassing human performance in some areas. However, this focus often neglects whether machine-generated language matches the human level of diversity, in terms of vocabulary choice, syntactic construction, and expression of meaning, raising questions about whether the fundamentals of language generation have been fully addressed. This paper emphasizes the importance of examining the preservation of human linguistic richness by language models, given the concerning surge in online content produced or aided by LLMs. We adapt a comprehensive framework for evaluating LLMs from various linguistic diversity perspectives including lexical, syntactic, and semantic dimensions. Using this framework, we benchmark several state-of-the-art LLMs across all diversity dimensions, and conduct an in-depth analysis for syntactic diversity. Finally, we analyze how the design, development, and deployment choices of LLMs impact the linguistic diversity of their outputs, focusing on the creative task of story generation",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yanzhu Guo",
+      "Guokan Shang",
+      "Chloé Clavel"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.70": {
+    "title": "Objectifying the Subjective: Cognitive Biases in Topic Interpretations",
+    "volume": "main",
+    "abstract": "Interpretation of topics is crucial for their downstream applications. State-of-the-art evaluation measures of topic quality such as coherence and word intrusion do not measure how much a topic facilitates the exploration of a corpus. To design evaluation measures grounded on a task, and a population of users, we do user studies to understand how users interpret topics. We propose constructs of topic quality and ask users to assess them in the context of a topic and provide rationale behind evaluations. We use reflexive thematic analysis to identify themes of topic interpretations from rationales. Users interpret topics based on availability and representativeness heuristics rather than probability. We propose a theory of topic interpretation based on the anchoring-and-adjustment heuristic: users anchor on salient words and make semantic adjustments to arrive at an interpretation. Topic interpretation can be viewed as making a judgment under uncertainty by an ecologically rational user, and hence cognitive biases aware user models and evaluation frameworks are needed",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Swapnil Hingmire",
+      "Ze Shi Li",
+      "Shiyu (Vivienne) Zeng",
+      "Ahmed Musa Awon",
+      "Luiz Franciscatto Guerra",
+      "Neil Ernst"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.71": {
+    "title": "Are Triggers Needed for Document-Level Event Extraction?",
+    "volume": "main",
+    "abstract": "Most existing work on event extraction has focused on sentence-level texts and presumes the identification of a trigger-span—a word or phrase in the input that evokes the occurrence of an event of interest. Event arguments are then extracted with respect to the trigger. Indeed, triggers are treated as integral to, and trigger detection as an essential component of, event extraction. In this paper, we provide the first investigation of the role of triggers for the more difficult and much less studied task of document-level event extraction. We analyze their usefulness in multiple end-to-end and pipelined transformer-based event extraction models for three document-level event extraction datasets, measuring performance using triggers of varying quality (human-annotated, LLM-generated, keyword-based, and random). We find that whether or not systems benefit from explicitly extracting triggers depends both on dataset characteristics (i.e., the typical number of events per document) and task-specific information available during extraction (i.e., natural language event schemas). Perhaps surprisingly, we also observe that the mere existence of triggers in the input, even random ones, is important for prompt-based in-context learning approaches to the task",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shaden Shaar",
+      "Wayne Chen",
+      "Maitreyi Chatterjee",
+      "Barry Wang",
+      "Wenting Zhao",
+      "Claire Cardie"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.72": {
+    "title": "The Impact of Automatic Speech Transcription on Speaker Attribution",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Cristina Aggazzotti",
+      "Matthew Wiesner",
+      "Elizabeth Allyn Smith",
+      "Nicholas Andrews"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.73": {
+    "title": "Surveying the Landscape of Image Captioning Evaluation: A Comprehensive Taxonomy, Trends, and Metrics Analysis",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Uri Berger",
+      "Gabriel Stanovsky",
+      "Omri Abend",
+      "Lea Frermann"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.74": {
+    "title": "A Unifying Scheme for Extractive Content Selection Tasks",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Shmuel Amar",
+      "Ori Shapira",
+      "Aviv Slobodkin",
+      "Ido Dagan"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.75": {
+    "title": "BharatBBQ: A Multilingual Bias Benchmark for Question Answering in the Indian Context",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aditya Tomar",
+      "Nihar Ranjan Sahoo",
+      "Pushpak Bhattacharyya"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.76": {
+    "title": "CRAFT Your Dataset: Task-Specific Synthetic Dataset Generation Through Corpus Retrieval and Augmentation",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Ingo Ziegler",
+      "Abdullatif Köksal",
+      "Desmond Elliott",
+      "Hinrich Schütze"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.77": {
+    "title": "Persona-Aware Alignment Framework for Personalized Dialogue Generation",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Guanrong Li",
+      "Xinyu Liu",
+      "Zhen Wu",
+      "Xinyu Dai"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.78": {
+    "title": "Large Language Models Are Human-Like Internally",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Tatsuki Kuribayashi",
+      "Yohei Oseki",
+      "Souhaib Ben Taieb",
+      "Kentaro Inui",
+      "Timothy Baldwin"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.79": {
+    "title": "Step-by-Step Unmasking for Parameter-Efficient Fine-Tuning of Large Language Models",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Aradhye Agarwal",
+      "Suhas Kamasetty Ramesh",
+      "Ayan Sengupta",
+      "Tanmoy Chakraborty"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.80": {
+    "title": "How to Select Datapoints for Efficient Human Evaluation of NLG Models?",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Vilém Zouhar",
+      "Peng Cui",
+      "Mrinmaya Sachan"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.81": {
+    "title": "RepreGuard: Detecting LLM-Generated Text by Revealing Hidden Representation Patterns",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Xin Chen",
+      "Junchao Wu",
+      "Shu Yang",
+      "Runzhe Zhan",
+      "Zeyu Wu",
+      "Ziyang Luo",
+      "Di Wang",
+      "Min Yang",
+      "Lidia S. Chao",
+      "Derek F. Wong"
+    ]
+  },
+  "https://aclanthology.org/2025.tacl-1.82": {
+    "title": "Towards More Realistic Extraction Attacks: An Adversarial Perspective",
+    "volume": "main",
+    "abstract": "",
+    "checked": false,
+    "id": null,
+    "semantic_title": "",
+    "citation_count": 0,
+    "authors": [
+      "Yash More",
+      "Prakhar Ganesh",
+      "Golnoosh Farnadi"
     ]
   }
 }
