@@ -3612,7 +3612,7 @@
   "https://openreview.net/forum?id=R7qRUFHGTx": {
     "title": "When To Solve, When To Verify: Compute-Optimal Problem Solving and Generative Verification for LLM Reasoning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Scaling test-time compute has emerged as a key strategy for enhancing the reasoning capabilities of large language models (LLMs), particularly in tasks like mathematical problem-solving. A traditional approach, Self-Consistency (SC), generates multiple solutions to a problem and selects the most common answer via majority voting. Another common method involves scoring each solution with a reward model (verifier) and choosing the best one. Recent advancements in Generative Reward Models (GenRM) reframe verification as a next-token prediction task, enabling inference-time scaling along a new axis. Specifically, GenRM generates multiple verification chains-of-thought to score each solution. Under a limited inference budget, this introduces a fundamental trade-off: should you spend the budget on scaling solutions via SC or generate fewer solutions and allocate compute to verification via GenRM? To address this, we evaluate GenRM against SC under a fixed inference budget. Interestingly, we find that SC is more compute-efficient than GenRM for most practical inference budgets across diverse models and datasets. For instance, GenRM first matches SC after consuming up to $8\\times$ the inference compute and requires significantly more compute to outperform it. Furthermore, we derive inference scaling laws for the GenRM paradigm, revealing that compute-optimal inference favors scaling solution generation more aggressively than scaling the number of verifications. Our work provides practical guidance on optimizing test-time scaling by balancing solution generation and verification",
     "checked": true,
     "id": "d170e69de7519e926bee6af648c9ffd625689600",
     "semantic_title": "when to solve, when to verify: compute-optimal problem solving and generative verification for llm reasoning",
@@ -3622,7 +3622,7 @@
   "https://openreview.net/forum?id=7evvwwdo3z": {
     "title": "R2E-Gym: Procedural Environment Generation and Hybrid Verifiers for Scaling Open-Weights SWE Agents",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Improving open-source models on real-world SWE tasks (solving GITHUB issues) faces two key challenges: 1) scalable curation of execution environments to train these models, and, 2) optimal scaling of test-time compute. We introduce R2EGym, the largest procedurally-curated executable gym environment for training real-world SWE-agents, consisting of more than 8.1K tasks. R2EGym is powered by two main contributions: 1) SWEGEN: a synthetic data curation recipe that enables scalable curation of executable environments using test-generation and back-translation directly from commits, thereby reducing reliance on human-written issues or unit tests. We show that this enables more scalable training leading to pass@1 performance of 34.4% on SWE-Bench Verified benchmark with our 32B model. 2) Hybrid Test-time Scaling: we provide an in-depth analysis of two test-time scaling axes; execution-based and execution-free verifiers, demonstrating that they exhibit complementary strengths and limitations. Test-based verifiers suffer from low distinguishability, while execution-free verifiers are biased and often rely on stylistic features. Surprisingly, we find that while each approach individually saturates around 42-43%, significantly higher gains can be obtained by leveraging their complementary strengths. Overall, our approach achieves 51% on the SWE-Bench Verified benchmark, reflecting a new state-of-the-art for open-weight SWE-agents and for the first time showing competitive performance with proprietary models such as o1, o1-preview and sonnet-3.5-v2 (with tools). We will open-source our environments, models, and agent trajectories",
     "checked": false,
     "id": "5c29ce07433679fc5e2a5bed83d3a80464b966e6",
     "semantic_title": "r2e-gym: procedural environments and hybrid verifiers for scaling open-weights swe agents",
@@ -3632,7 +3632,7 @@
   "https://openreview.net/forum?id=WnZjdQOWiY": {
     "title": "Robo-Instruct: Simulator-Augmented Instruction Alignment For Finetuning Code LLMs",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Code LLMs have shown promising results with converting tasks in natural language to programs that can be executed by service robots. We are interested in finetuning small, specialized LLMs for this purpose, but collecting datasets of task-program pairs specific to each robot is time-consuming and expensive. While approaches such as SELF-INSTRUCT and EVOL-INSTRUCT are capable of generating novel tasks given a few examples, they are unable to provide the corresponding programs that correctly abide by physical-world and robot-constraints using the provided programming interface. Using a simulator is a natural potential solution to checking for such constraints, but building simulation environments that can handle arbitrary tasks and their necessary objects and locations, is challenging. To address these challenges, we introduce ROBO-INSTRUCT, which synthesizes task-specific simulation environments on the fly during program execution, by opportunistically inferring entity properties and enforcing corresponding constraints based on how the entities are used in the task program. Additionally, ROBO-INSTRUCT integrates an LLM-aided post-processing procedure to refine instructions for better alignment with robot programs. We demonstrate the effectiveness of ROBO-INSTRUCT across multiple LLMs, showing that our fine-tuned models outperform all baseline methods and even match or surpass the performance of several larger and proprietary models",
     "checked": false,
     "id": "7b5ad79c9339e5b823277d403d648948c0cc23cd",
     "semantic_title": "robo-instruct: simulator-augmented instruction alignment for finetuning codellms",
@@ -3642,7 +3642,7 @@
   "https://openreview.net/forum?id=Q5pVZCrrKr": {
     "title": "CodeARC: Benchmarking Reasoning Capabilities of LLM Agents for Inductive Program Synthesis",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Inductive program synthesis, or programming by example, requires synthesizing functions from input-output examples that generalize to unseen inputs. While large language model agents have shown promise in programming tasks guided by natural language, their ability to perform inductive program synthesis is underexplored. Existing evaluation protocols rely on static sets of examples and held-out tests, offering no feedback when synthesized functions are incorrect and failing to reflect real-world scenarios such as reverse engineering. We propose CodeARC, the *Code Abstraction and Reasoning Challenge*, a new evaluation framework where agents interact with a hidden target function by querying it with new inputs, synthesizing candidate functions, and iteratively refining their solutions using a differential testing oracle. This interactive setting encourages agents to perform function calls and self-correction based on feedback. We construct the first large-scale benchmark for general-purpose inductive program synthesis, featuring 1114 functions. Among 18 models evaluated, o3-mini performs best with a success rate of 52.7%, highlighting the difficulty of this task. Fine-tuning LLaMA-3.1-8B-Instruct on curated synthesis traces yields up to a 31% relative performance gain. CodeARC provides a more realistic and challenging testbed for evaluating LLM-based program synthesis and inductive reasoning. Our code, data, and models are publicly available at https://github.com/Anjiang-Wei/CodeARC",
     "checked": true,
     "id": "89cff9492b2fea767eadffd297baafdb61b8ca2a",
     "semantic_title": "codearc: benchmarking reasoning capabilities of llm agents for inductive program synthesis",
@@ -3766,7 +3766,7 @@
     "checked": true,
     "id": "f33966f21435bab8c65b73e907c30a391f05caea",
     "semantic_title": "eurobert: scaling multilingual encoders for european languages",
-    "citation_count": 24,
+    "citation_count": 26,
     "authors": []
   },
   "https://openreview.net/forum?id=5wAfbEs34A": {
@@ -3786,7 +3786,7 @@
     "checked": true,
     "id": "a7487e90969663d7d18709cf6b30c025f3b0833c",
     "semantic_title": "plancraft: an evaluation dataset for planning with llm agents",
-    "citation_count": 9,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=0zxugBcgF5": {
@@ -3796,7 +3796,7 @@
     "checked": true,
     "id": "00fc92a444573dfaada5251b45a45067c4b6d131",
     "semantic_title": "off-policy corrected reward modeling for reinforcement learning from human feedback",
-    "citation_count": 4,
+    "citation_count": 5,
     "authors": []
   },
   "https://openreview.net/forum?id=fuBrcTH8NM": {
@@ -3816,7 +3816,7 @@
     "checked": false,
     "id": "691a98d12b1a15e3bac08554c9fa9c8a12b5d9cb",
     "semantic_title": "efficient knowledge probing of large language models by adapting pre-trained embeddings",
-    "citation_count": 0,
+    "citation_count": 2,
     "authors": []
   },
   "https://openreview.net/forum?id=uzauWUW9u3": {
@@ -3836,7 +3836,7 @@
     "checked": true,
     "id": "03edb4f89aeb59a8ce056ec6b75a3e259350593f",
     "semantic_title": "lv-eval: a balanced long-context benchmark with 5 length levels up to 256k",
-    "citation_count": 74,
+    "citation_count": 76,
     "authors": []
   },
   "https://openreview.net/forum?id=vqN8uom4A1": {
@@ -3846,7 +3846,7 @@
     "checked": true,
     "id": "2d45cac81b28850a10f67fbd26928bab3bdd6342",
     "semantic_title": "base models beat aligned models at randomness and creativity",
-    "citation_count": 30,
+    "citation_count": 35,
     "authors": []
   },
   "https://openreview.net/forum?id=OgWh4J7bkT": {
@@ -3856,7 +3856,7 @@
     "checked": true,
     "id": "836d035ff15ae4dfa500f07fc119cdc4709cc212",
     "semantic_title": "enhancing llm reasoning with iterative dpo: a comprehensive empirical investigation",
-    "citation_count": 29,
+    "citation_count": 32,
     "authors": []
   },
   "https://openreview.net/forum?id=X39dK0SX9W": {
@@ -3876,7 +3876,7 @@
     "checked": true,
     "id": "244c0678b20f6050b4691287fe9b2d32d409e616",
     "semantic_title": "one ruler to measure them all: benchmarking multilingual long-context language models",
-    "citation_count": 12,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=klPszYDIRT": {
@@ -3926,7 +3926,7 @@
     "checked": true,
     "id": "473378f0a55f1764d6b3f65b0d4175a79716355e",
     "semantic_title": "trellis: learning to compress key-value memory in attention models",
-    "citation_count": 4,
+    "citation_count": 6,
     "authors": []
   },
   "https://openreview.net/forum?id=lEpPFmGH3L": {
@@ -3936,7 +3936,7 @@
     "checked": true,
     "id": "5b2ae2e396fbf608081274ec1f2aff94dc4b7dd8",
     "semantic_title": "beyond the reported cutoff: where large language models fall short on financial knowledge",
-    "citation_count": 5,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=b8cW86QcOD": {
