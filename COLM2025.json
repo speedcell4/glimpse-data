@@ -996,7 +996,7 @@
     "checked": true,
     "id": "de23d38bc2604dcf334dcc46aff217eb6bcd1fe1",
     "semantic_title": "understanding r1-zero-like training: a critical perspective",
-    "citation_count": 772,
+    "citation_count": 1022,
     "authors": []
   },
   "https://openreview.net/forum?id=oaCUsn391F": {
@@ -1006,7 +1006,7 @@
     "checked": true,
     "id": "3a8ade2f15446a843df7e8784cff433649b66c28",
     "semantic_title": "slimmoe: structured compression of large moe models via expert slimming and distillation",
-    "citation_count": 9,
+    "citation_count": 10,
     "authors": []
   },
   "https://openreview.net/forum?id=lI4LgGv4sX": {
@@ -1046,23 +1046,23 @@
     "checked": true,
     "id": "ff996cf4b98fa59d39966bbfbc756f2f22ba9c1d",
     "semantic_title": "agent s2: a compositional generalist-specialist framework for computer use agents",
-    "citation_count": 108,
+    "citation_count": 117,
     "authors": []
   },
   "https://openreview.net/forum?id=w5DSwn9wTC": {
     "title": "How Post-Training Reshapes LLMs: A Mechanistic View on Knowledge, Truthfulness, Refusal, and Confidence",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Post-training is essential for the success of large language models (LLMs), transforming pre-trained base models into more useful and aligned post-trained models. While plenty of works have studied post-training algorithms and evaluated post-training models by their outputs, it remains understudied how post-training reshapes LLMs internally. In this paper, we compare base and post-trained LLMs mechanistically from four perspectives to better understand post-training effects. Our findings across model families and datasets reveal that: (1) Post-training does not change the factual knowledge storage locations, and it adapts knowledge representations from the base model while developing new knowledge representations; (2) Both truthfulness and refusal can be represented by vectors in the hidden representation space. The truthfulness direction is highly similar between the base and post-trained model, and it is effectively transferable for interventions; (3) The refusal direction is different between the base and post-trained models, and it shows limited forward transferability; (4) Differences in confidence between the base and post-trained models cannot be attributed to entropy neurons. Our study provides insights into the fundamental mechanisms preserved and altered during post-training, facilitates downstream tasks like model steering, and could potentially benefit future research in interpretability and LLM post-training. Our code is publicly available at https://github.com/HZD01/post-training-mechanistic-analysis",
     "checked": true,
     "id": "5f9283f0bbe43001e7746e353ccf0c214b535bbf",
     "semantic_title": "how post-training reshapes llms: a mechanistic view on knowledge, truthfulness, refusal, and confidence",
-    "citation_count": 6,
+    "citation_count": 8,
     "authors": []
   },
   "https://openreview.net/forum?id=jST2VzWUFb": {
     "title": "Implicit In-Context Learning: Evidence from Artificial Language Experiments",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Humans acquire language through implicit learning, absorbing complex patterns without explicit awareness. While large language models (LLMs) demonstrate impressive linguistic capabilities, it remains unclear whether they exhibit human-like pattern recognition during in-context learning at inferencing level. We adapted three classic artificial language learning experiments spanning morphology (regular/irregular plural marking), morphosyntax (context-dependent determiners), and syntax (finite state grammar) to systematically evaluate implicit learning at inferencing level in two state-of-the-art Openai models: gpt-4o (optimized for general language tasks) and o3-mini (specifically fine-tuned for explicit reasoning). This comparison allowed us to examine whether models trained to articulate reasoning processes differ in their ability to extract implicit patterns. Our findings reveal a complex picture: o3-mini demonstrated human-like probabilistic learning in morphological regularization, while gpt-4o showed stronger performance in finite state grammar acquisition. Neither model successfully replicated human patterns in the morphosyntax task. Post-experiment probes revealed correlations between models' performance and their ability to articulate underlying patterns, suggesting alignment between implicit recognition and explicit awareness. These results indicate that different LLMs implement distinct in-context processing mechanisms, with architecture and training objectives influencing pattern extraction across linguistic domains. Our study contributes to understanding in-context learning in LLMs and provides a novel framework for evaluating these models through the lens of cognitive science, highlighting both similarities and differences between human implicit learning and machine in-context pattern recognition",
     "checked": true,
     "id": "e3841b08335ac1cb69bd62350d5606dacd6d6d6d",
     "semantic_title": "implicit in-context learning: evidence from artificial language experiments",
@@ -1072,17 +1072,17 @@
   "https://openreview.net/forum?id=XNQHMYsUHf": {
     "title": "To Backtrack or Not to Backtrack: When Sequential Search Limits Model Reasoning",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Recent advancements in large language models (LLMs) have significantly improved their reasoning abilities, particularly through techniques involving search and backtracking. Backtracking naturally scales test-time compute by enabling sequential, linearized exploration via long chain-of-thought (CoT) generation. However, this is not the only strategy for scaling test time-compute: parallel sampling with best-of-n selection provides an alternative that generates diverse solutions simultaneously. Despite the growing adoption of sequential search, its advantages over parallel sampling—especially under a fixed compute budget—remain poorly understood. In this paper, we systematically compare these two approaches on two challenging reasoning tasks: CountDown and Sudoku. Surprisingly, we find that sequential search underperforms parallel sampling on CountDown but outperforms it on Sudoku, suggesting that backtracking is not universally beneficial. We identify two factors that can cause backtracking to degrade performance: (1) training on fixed search traces can lock models intro suboptimal strategies, and (2) explicit CoT supervision can discourage ‘implicit‘ (non verbalized) reasoning. Extending our analysis to reinforcement learning (RL), we show that models with backtracking capabilities benefit significantly from RL fine-tuning, while models without backtracking see limited, mixed gains. Together, these findings challenge the assumption that backtracking universally enhances LLM reasoning, instead revealing a complex interaction between task structure, training data, model scale, and learning paradigm",
     "checked": true,
     "id": "0541ed8fe567c575d54c2cd4efdbb834041cf46e",
     "semantic_title": "to backtrack or not to backtrack: when sequential search limits model reasoning",
-    "citation_count": 18,
+    "citation_count": 20,
     "authors": []
   },
   "https://openreview.net/forum?id=teW4nIZ1gy": {
     "title": "One-shot Optimized Steering Vectors Mediate Safety-relevant Behaviors in LLMs",
     "volume": "main",
-    "abstract": "",
+    "abstract": "Steering vectors (SVs) have emerged as a promising approach for interpreting and controlling LLMs, but current methods typically require large contrastive datasets that are often impractical to construct and may capture spurious correlations. We propose directly optimizing SVs through gradient descent on a single training example, and systematically investigate how these SVs generalize. We consider several SV optimization techniques and find that the resulting SVs effectively mediate safety-relevant behaviors in multiple models. Indeed, in experiments on an alignment-faking model, we are able to optimize one-shot SVs that induce harmful behavior on benign examples and whose negations suppress harmful behavior on malign examples. And in experiments on refusal suppression, we demonstrate that one-shot optimized SVs can transfer across inputs, yielding a Harmbench attack success rate of 96.9%. Furthermore, we extend work on \"emergent misalignment\" and show that SVs optimized to induce a model to write vulnerable code cause the model to respond harmfully on unrelated open-ended prompts. Finally, we use one-shot SV optimization to investigate how an instruction-tuned LLM recovers from outputting false information, and find that this ability is independent of the model's explicit verbalization that the information was false. Overall, our findings suggest that optimizing SVs on a single example can mediate a wide array of misaligned behaviors in LLMs. Code can be found at https://github.com/jacobdunefsky/one-shot-steering-repro and https://github.com/jacobdunefsky/one-shot-steering-misalignment",
     "checked": true,
     "id": "b4ddfb036e01ffc0fc85b7567bedeeab41abeed2",
     "semantic_title": "one-shot optimized steering vectors mediate safety-relevant behaviors in llms",
@@ -1126,7 +1126,7 @@
     "checked": true,
     "id": "431bac8e3aebcff176b7d08c3849a553b8f3d525",
     "semantic_title": "do language models agree with human perceptions of suspense in stories?",
-    "citation_count": 0,
+    "citation_count": 1,
     "authors": []
   },
   "https://openreview.net/forum?id=RUAoV3j6tM": {
@@ -1156,7 +1156,7 @@
     "checked": true,
     "id": "cc1adc975d62a3559fa363fed4f8338bb0d05397",
     "semantic_title": "citer: collaborative inference for efficient large language model decoding with token-level routing",
-    "citation_count": 26,
+    "citation_count": 28,
     "authors": []
   },
   "https://openreview.net/forum?id=OeYdS51k8F": {
@@ -1196,7 +1196,7 @@
     "checked": true,
     "id": "90dae5017166bea450a54a14146601c87d8cff36",
     "semantic_title": "brains vs. bytes: evaluating llm proficiency in olympiad mathematics",
-    "citation_count": 20,
+    "citation_count": 23,
     "authors": []
   },
   "https://openreview.net/forum?id=HAjgxcHpzc": {
@@ -1206,7 +1206,7 @@
     "checked": true,
     "id": "7540ec597d256ae9a549d37caaa17c6df36450aa",
     "semantic_title": "hardware-efficient attention for fast decoding",
-    "citation_count": 11,
+    "citation_count": 13,
     "authors": []
   },
   "https://openreview.net/forum?id=XhdNFeMclS": {
@@ -1266,7 +1266,7 @@
     "checked": true,
     "id": "e93e656359879a6f1d2968dcab23b58918007f9b",
     "semantic_title": "multilingual contextualization of large language models for document-level machine translation",
-    "citation_count": 6,
+    "citation_count": 7,
     "authors": []
   },
   "https://openreview.net/forum?id=L7jS3peM3w": {
@@ -1456,7 +1456,7 @@
     "checked": true,
     "id": "831d8d655be8084cc7811105b7873fb8e9e1e39f",
     "semantic_title": "urania: differentially private insights into ai use",
-    "citation_count": 3,
+    "citation_count": 4,
     "authors": []
   },
   "https://openreview.net/forum?id=vv1ZyQF8LD": {
