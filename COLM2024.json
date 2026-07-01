@@ -2822,7 +2822,7 @@
   "https://openreview.net/forum?id=C0j44uRPcl": {
     "title": "On Robustness-Accuracy Characterization of Language Models using Synthetic Datasets",
     "volume": "main",
-    "abstract": "In recent years, language models (LMs) that were pretrained at scale on diverse data have proven to be a successful approach for solving different downstream tasks. However, new concerns about proper performance evaluation have been raised, especially for test-data leakage caused by accidentally including them during pretraining, or by indirectly exposing them through API calls for evaluation. Motivated by these, in this paper, we propose a new evaluation workflow that generates steerable synthetic language datasets and proxy tasks for benchmarking the performance of pre-trained LMs on sentence classification tasks. This approach allows for better characterization of the joint analysis on the robustness and accuracy of LMs without risking sensitive information leakage. It also provides a more controlled and private way to evaluate LMs that avoids overfitting specific test sets. Verified on various pretrained LMs, the proposed approach demonstrates promising high correlation with real downstream performance",
+    "abstract": "",
     "checked": null,
     "id": "ab0a24c4cb8f8630d79f1082064ecee232aca5dc",
     "semantic_title": "on robustness-accuracy characterization of large language models using synthetic datasets",
@@ -2832,17 +2832,17 @@
   "https://openreview.net/forum?id=QdWhj0QZFw": {
     "title": "LLM360: Towards Fully Transparent Open-Source LLMs",
     "volume": "main",
-    "abstract": "The recent surge in open-source Large Language Models (LLMs), such as LLaMA, Falcon, and Mistral, provides diverse options for AI practitioners and researchers. However, most LLMs have only released partial artifacts, such as the final model weights or inference code, and technical reports increasingly limit their scope to high-level design choices and surface statistics. These choices hinder progress in the field by degrading transparency into the training of LLMs and forcing teams to rediscover many details in the training process. We present **LLM360**, an initiative to fully open-source LLMs, which advocates for all training code and data, model checkpoints, and intermediate results to be made available to the community. The goal of LLM360 is to support open and collaborative AI research by making the end-to-end LLM training process transparent and reproducible by everyone. As a first step of LLM360, we release two 7B parameter LLMs pre-trained from scratch, Amber and Crystal, including their training code, data, intermediate checkpoints, and analyses. We are committed to continually pushing the boundaries of LLMs through this open-source effort. More large-scale and stronger models are underway and will be released in the future",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "9266dc3c65334e36a12fef7e4b231091d346b8a4",
     "semantic_title": "llm360: towards fully transparent open-source llms",
-    "citation_count": 111,
+    "citation_count": 110,
     "authors": []
   },
   "https://openreview.net/forum?id=dribhnhm1i": {
     "title": "Tuning Language Models by Proxy",
     "volume": "main",
-    "abstract": "Despite the general capabilities of large pretrained language models, they consistently benefit from further adaptation to better achieve desired behaviors. However, tuning these models has become increasingly resource-intensive, or impossible when model weights are private. We introduce **proxy-tuning**, a lightweight decoding-time algorithm that operates on top of black-box LMs to achieve the same end as direct tuning, but by accessing only its predictions over the output vocabulary, not its parameters. Our method tunes a *smaller* LM, then applies the difference between the predictions of the small tuned and untuned LMs to shift the original predictions of the larger untuned model in the direction of tuning, while retaining the benefits of larger-scale pretraining. In experiments, when we apply proxy-tuning to Llama2-70B using proxies of only 7B size, we can close 88% of the gap between Llama2-70B and its truly-tuned chat version, when evaluated across knowledge, reasoning, and safety benchmarks. We then demonstrate the generality of proxy-tuning by applying it to domain adaptation on code, and task-specific finetuning on question-answering and math problems. Finally, we show how to proxy-tune a truly black-box LM, GPT-3.5, for temporal adaptation, increasing its knowledge about recent events. Our work demonstrates the promise of using small tuned LMs to efficiently customize large, potentially proprietary LMs through decoding-time guidance",
+    "abstract": "",
     "checked": null,
     "id": "f6d7482bb5baf33f22b862ad4997f5c8cd13db21",
     "semantic_title": "tuning language models by proxy",
@@ -2852,17 +2852,17 @@
   "https://openreview.net/forum?id=PKfAq8N4fK": {
     "title": "AgentKit: Structured LLM Reasoning with Dynamic Graphs",
     "volume": "main",
-    "abstract": "We propose an intuitive LLM prompting framework (AgentKit) for multifunctional agents. AgentKit offers a unified framework for explicitly constructing a complex \"thought process\" from simple natural language prompts. The basic building block in AgentKit is a **node**, containing a natural language prompt for a specific subtask. The user then puts together chains of nodes, in order to build a \"thought process\" for any problem, like stacking LEGO pieces. The chains of nodes can be designed to explicitly enforce a naturally **structured** \"thought process\". For example, for the task of writing a paper, one may start with the thought process of 1) identify a core message, 2) identify prior research gaps, etc. The nodes in AgentKit can be designed and combined in different ways to implement multiple advanced capabilities including on-the-fly hierarchical planning, reflection, and learning from interactions. In addition, due to the modular nature and the intuitive design to simulate explicit human thought process, a basic agent could be implemented as simple as a list of prompts for the subtasks and therefore could be designed and tuned by someone *without any programming experience*. Quantitatively, we show that agents designed through AgentKit achieve SOTA performance on Webshop and Crafter. These advances underscore AgentKit's potential in making LLM agents effective and accessible for a wider range of applications",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "5c7a5bbcac94eb4ee97782a8708d8c2d85fc5984",
     "semantic_title": "agentkit: structured llm reasoning with dynamic graphs",
-    "citation_count": 11,
+    "citation_count": 14,
     "authors": []
   },
   "https://openreview.net/forum?id=DOMP5AgwQz": {
     "title": "CTIKG: LLM-Powered Knowledge Graph Construction from Cyber Threat Intelligence",
     "volume": "main",
-    "abstract": "To gain visibility into evolving threat landscape, knowledge of cyber threats has been aggressively collected across organizations and is often shared through Cyber Threat Intelligence (CTI). While knowledge of CTI can be shared via structured format such as Indicators of Compromise (IOC), articles in technical blogs and posts in forums (referred to as CTI articles) provide more comprehensive descriptions of the observed real-world at- tacks. However, existing works can only analyze standard texts from mainstream cyber threat knowledge bases such as CVE and NVD, and lack of the capability to link multiple CTI articles to uncover the relationships among security-related entities such as vulnerabilities. In this paper, we propose a novel approach, CTIKG, that utilizes prompt engineering to efficiently build a security-oriented knowledge graph from CTI articles based on LLMs. To mitigate the challenges of LLMs in randomness, hallucinations and tokens limitation, CTIKG divides an article into segments and employs multiple LLM agents with dual memory design to (1) process each text segment separately and (2) summarize the results of the text segments to generate more accurate results. We evaluate CTIKG on two representative benchmarks built from real world CTI articles, and the results show that CTIKG achieves 86.88% precision in building security-oriented knowledge graphs, achieving at least 30% improvements over the state-of-the-art techniques. We also demonstrate that the retry mechanism makes open source language models outperform GPT4 for building knowledge graphs",
+    "abstract": "",
     "checked": null,
     "id": "8a7f2cda8f95aac35660c60a2f92d81a0e308041",
     "semantic_title": "attackg+:boosting attack knowledge graph construction with large language models",
@@ -2872,7 +2872,7 @@
   "https://openreview.net/forum?id=Pvn1dKreZW": {
     "title": "Merge Conflicts!'\" Exploring the Impacts of External Knowledge Distractors to Parametric Knowledge Graphs",
     "volume": "main",
-    "abstract": "Large language models (LLMs) acquire extensive knowledge during pre-training, known as their parametric knowledge. However, to remain up-to-date and align with human instructions, LLMs inevitably require external knowledge during interactions. This raises a crucial question: How will LLMs respond when external knowledge interferes with their parametric knowledge? To uncover the impacts systematically, we construct parametric knowledge graphs to reveal different LLM knowledge structures, and introduce external information through external knowledge distractors of varying degrees, methods, positions, and formats. Experiments on both closed and open-source models demonstrate that LLMs tend to believe in external knowledge sources, particularly when they direct conflict or make confounding changes within detailed contexts. We also discover while LLMs are sensitive to external knowledge veracity, they still get distracted by unrelated information. These findings highlight the mechanisms behind LLM's integration of external knowledge, even indirectly, during model-user interactions",
+    "abstract": "",
     "checked": null,
     "id": "7bf607c643a1f7f4607db84dfc0f4b63ff0bde70",
     "semantic_title": "merge conflicts!\" exploring the impacts of external distractors to parametric knowledge graphs",
@@ -2882,17 +2882,17 @@
   "https://openreview.net/forum?id=soGxskHGox": {
     "title": "Linearizing Large Language Models",
     "volume": "main",
-    "abstract": "Linear transformers have emerged as a subquadratic-time alternative to softmax attention and have garnered significant interest due to their fixed recurrent state. However, they suffer from poor scaling and under-perform compute-matched transformers. Prior models such as RWKV and Mamba have attempted to address these shortcomings by proposing novel time-mixing and gating architectures, but pre-training large language models requires significant data and compute investments. In this paper, we propose Scalable UPtraining for Recurrent Attention (SUPRA), an alternative to pre-training linear transformers. We present a method to uptrain existing large pre-trained transformers into Recurrent Neural Networks (RNNs) with a modest compute budget. This allows us to leverage the strong pre- training data and performance of existing transformer LLMs, while requiring 5% of the training cost. We find that our linearization technique leads to competitive performance on standard benchmarks, but we identify a persistent in-context learning shortfall for even the largest linear models",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "862479f7bd78a69c52a0691766848caa8eb4660f",
     "semantic_title": "linearizing large language models",
-    "citation_count": 47,
+    "citation_count": 50,
     "authors": []
   },
   "https://openreview.net/forum?id=kh9Zt2Ldmn": {
     "title": "Don't throw away your value model! Generating more preferable text with Value-Guided Monte-Carlo Tree Search decoding",
     "volume": "main",
-    "abstract": "Inference-time search algorithms such as Monte-Carlo Tree Search (MCTS) may seem unnecessary when generating natural language text based on state-of-the-art reinforcement learning such as Proximal Policy Optimization (PPO). In this paper, we demonstrate that it is possible to get extra mileage out of PPO by integrating MCTS on top. The key idea is not to throw out the *value network*, a byproduct of PPO training for evaluating partial output sequences, when decoding text out of the *policy network*. More concretely, we present a novel *value-guided* decoding algorithm called **PPO-MCTS**, which can integrate the value network from PPO to work closely with the policy network during inference-time generation. Compared to prior approaches based on MCTS for controlled text generation, the key strength of our approach is to reduce the fundamental mismatch of the scoring mechanisms of the partial outputs between training and test. Evaluation on four text generation tasks demonstrate that PPO-MCTS greatly improves the preferability of generated text compared to the standard practice of using only the PPO policy. Our results demonstrate the promise of search algorithms even on top of the aligned language models from PPO, and the under-explored benefit of the value network",
+    "abstract": "",
     "checked": null,
     "id": "1671d70a135b1e28b3a9cbc830feaa9b0c57df32",
     "semantic_title": "don't throw away your value model! generating more preferable text with value-guided monte-carlo tree search decoding",
@@ -2902,17 +2902,17 @@
   "https://openreview.net/forum?id=u2vAyMeLMm": {
     "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
     "volume": "main",
-    "abstract": "Are $n$-gram language models still relevant in this era of neural large language models (LLMs)? Our answer is *yes*, and we showcase their values in both text analysis and improving neural LLMs. This was done by modernizing $n$-gram LMs in two aspects. First, we train them at the same data scale as neural LLMs -- **5 trillion tokens**. This is one of the largest $n$-gram LMs ever built. Second, existing $n$-gram LMs use small $n$ which hinders their performance; we instead allow $n$ to be arbitrarily large, by introducing a new **$\\infty$-gram LM** with backoff. Instead of pre-computing $n$-gram count tables (which would be very expensive), we develop an engine named infini-gram -- powered by suffix arrays -- that can compute $\\infty$-gram (as well as $n$-gram with arbitrary $n$) probabilities with **millisecond-level latency**. The $\\infty$-gram framework and infini-gram engine enable us to conduct many novel and interesting analyses of human-written and machine-generated text: we find that the $\\infty$-gram LM has fairly high accuracy for next-token prediction (47%), and can complement neural LLMs to greatly reduce their perplexity. When analyzing machine-generated text, we also observe irregularities in the machine: $\\infty$-gram agreement level with respect to the suffix length, which indicates deficiencies in neural LLM pretraining and the positional embeddings of Transformers",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "1c143a753d4eb82da5526132149f6e4ed5271b63",
     "semantic_title": "infini-gram: scaling unbounded n-gram language models to a trillion tokens",
-    "citation_count": 122,
+    "citation_count": 137,
     "authors": []
   },
   "https://openreview.net/forum?id=2nTzomzjjb": {
     "title": "ProLLM: Protein Chain-of-Thoughts Enhanced LLM for Protein-Protein Interaction Prediction",
     "volume": "main",
-    "abstract": "The prediction of protein-protein interactions (PPIs) is crucial for understanding biological functions and diseases. Previous machine learning approaches to PPI prediction mainly focus on direct physical interactions, ignoring the broader context of nonphysical connections through intermediate proteins, thus limiting their effectiveness. The emergence of Large Language Models (LLMs) provides a new opportunity for addressing this complex biological challenge. By transforming structured data into natural language prompts, we can map the relationships between proteins into texts. This approach allows LLMs to identify indirect connections between proteins, tracing the path from upstream to downstream. Therefore, we propose a novel framework ProLLM that employs an LLM tailored for PPI for the first time. Specifically, we propose Protein Chain of Thought (ProCoT), which replicates the biological mechanism of signaling pathways as natural language prompts. ProCoT considers a signaling pathway as a protein reasoning process, which starts from upstream proteins and passes through several intermediate proteins to transmit biological signals to downstream proteins. Thus, we can use ProCoT to predict the interaction between upstream proteins and downstream proteins. The training of ProLLM employs the ProCoT format, which enhances the model's understanding of complex biological problems. In addition to ProCoT, this paper also contributes to the exploration of embedding replacement of protein sites in natural language prompts, and instruction fine-tuning in protein knowledge datasets. We demonstrate the efficacy of ProLLM through rigorous validation against benchmark datasets, showing significant improvement over existing methods in terms of prediction accuracy and generalizability. Our results highlight the potential of LLMs to transform the field of PPI, serving as a robust potential tool for various categories of biological and medical research. The code is available at: https://anonymous.4open.science/r/ProLLM-AB04",
+    "abstract": "",
     "checked": null,
     "id": "a9086398e27327e5cc664cbabf8a7bbb25c2c50f",
     "semantic_title": "prollm: protein chain-of-thoughts enhanced llm for protein-protein interaction prediction",
@@ -2922,7 +2922,7 @@
   "https://openreview.net/forum?id=EEPBOB2Xww": {
     "title": "Ferret-v2: An Improved Baseline for Referring and Grounding with Large Language Models",
     "volume": "main",
-    "abstract": "While Ferret seamlessly integrates regional understanding into the Large Language Model (LLM) to facilitate its referring and grounding capability, it poses certain limitations: constrained by the pre-trained fixed visual encoder and failed to perform well on broader tasks. In this work, we unveil Ferret-v2, a significant upgrade to Ferret, with three key designs. (1) Any resolution grounding and referring: A flexible approach that effortlessly handles higher image resolution, improving the model's ability to process and understand images in greater detail. (2) Multi-granularity visual encoding: By integrating the additional DINOv2 encoder, the model learns better and diverse underlying contexts for global and fine-grained visual information. (3) A three-stage training paradigm: Besides image-caption alignment, an additional stage is proposed for high-resolution dense alignment before the final instruction tuning. Experiments show that Ferret-v2 provides substantial improvements over Ferret and other state-of-the-art methods, thanks to its high-resolution scaling and fine-grained visual processing",
+    "abstract": "",
     "checked": null,
     "id": "a39ed048aa86296b16f9d2d33011f94e3d5ac402",
     "semantic_title": "ferret-v2: an improved baseline for referring and grounding with large language models",
@@ -2932,8 +2932,8 @@
   "https://openreview.net/forum?id=HDkNbfLQgu": {
     "title": "Reverse Training to Nurse the Reversal Curse",
     "volume": "main",
-    "abstract": "Large language models (LLMs) have a surprising failure: when trained on ``A has a feature B``, they do not generalize to ``B is a feature of A``, which is termed the Reversal Curse. Even when training with trillions of tokens this issue still appears due to Zipf's law -- hence even if we train on the entire internet. This work proposes an alternative training scheme, called $reverse$ $training$, whereby all words are used twice, doubling the amount of available tokens. The LLM is trained in both forward and reverse directions by reversing training strings while preserving (i.e., not reversing) chosen substrings, such as entities. We show that data matched reverse-trained models provide superior performance to standard models on standard tasks, and compute matched reverse-trained models provide far superior performance on reversal tasks, helping resolve the reversal curse issue",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "e2c50a18b92713c89be991af6cc1a652adfee362",
     "semantic_title": "reverse training to nurse the reversal curse",
     "citation_count": 59,
@@ -2942,8 +2942,8 @@
   "https://openreview.net/forum?id=KZd1EErRJ1": {
     "title": "IsoBench: Benchmarking Multimodal Foundation Models on Isomorphic Representations",
     "volume": "main",
-    "abstract": "Current foundation models exhibit impressive capabilities when prompted either with text only or with both image and text inputs. But do their capabilities change depending on the input modality? In this work, we propose **IsoBench**, a benchmark dataset containing problems from four major areas: math, science, algorithms, and games. Each example is presented with multiple **isomorphic representations** of inputs, such as visual, textual, and mathematical presentations. IsoBench provides fine-grained feedback to diagnose performance gaps caused by the form of the representation. Across various foundation models, we observe that on the same problem, models have a consistent preference towards textual representations. Most prominently, when evaluated on all IsoBench problems, Claude-3 Opus performs 28.66 points worse when provided with images instead of text; similarly, GPT-4 Turbo is 18.71 points worse and Gemini Pro is 14.87 points worse. Finally, we present two prompting techniques, *IsoCombination* and *IsoScratchPad*, which improve model performance by considering combinations of, and translations between, different input representations",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "89d857fdd842e2a632b76a8f38cf8d0f03aef46f",
     "semantic_title": "isobench: benchmarking multimodal foundation models on isomorphic representations",
     "citation_count": 36,
@@ -2952,7 +2952,7 @@
   "https://openreview.net/forum?id=K1M3gLW0MX": {
     "title": "On Fairness of Low-Rank Adaptation of Large Models",
     "volume": "main",
-    "abstract": "Low-rank adaptation of large models, particularly LoRA, has gained traction due to its computational efficiency. This efficiency, contrasted with the prohibitive costs of full-model fine-tuning, means that practitioners often turn to LoRA without a complete understanding of its ramifications. In this study, we focus on fairness and ask whether LoRA has an unexamined impact on utility, calibration, and resistance to membership inference across different subgroups (e.g., genders, races, religions) compared to a full-model fine-tuning baseline. We present extensive experiments across vision and language domains and across classification and generation tasks using ViT-Base, Swin-v2-Large, Llama-2 7B, and Mistral 7B. Intriguingly, experiments suggest that while one can isolate cases where LoRA exacerbates model bias across subgroups, the pattern is inconsistent---in many cases, LoRA has equivalent or even improved fairness compared to the base model or its full fine-tuning baseline. We also examine the complications of evaluating fine-tuning fairness relating to task design and model token bias, calling for more careful fairness evaluations in future work",
+    "abstract": "",
     "checked": null,
     "id": "9d059ae691953578017f1361742c4b36046b92e8",
     "semantic_title": "on fairness of low-rank adaptation of large models",
@@ -2962,8 +2962,8 @@
   "https://openreview.net/forum?id=3GhOWfSLrD": {
     "title": "Will the Real Linda Please Stand up...to Large Language Models? Examining the Representativeness Heuristic in LLMs",
     "volume": "main",
-    "abstract": "Although large language models (LLMs) have demonstrated remarkable proficiency in modeling text and generating human-like text, they may exhibit biases acquired from training data in doing so. Specifically, LLMs may be susceptible to a common cognitive trap in human decision-making called the representativeness heuristic. This is a concept in psychology that refers to judging the likelihood of an event based on how closely it resembles a well-known prototype or typical example, versus considering broader facts or statistical evidence. This research investigates the impact of the representativeness heuristic on LLM reasoning. We created ReHeAT (Representativeness Heuristic AI Testing), a dataset containing a series of problems spanning six common types of representativeness heuristics. Experiments reveal that four LLMs applied to ReHeAT all exhibited representativeness heuristic biases. We further identify that the model's reasoning steps are often incorrectly based on a stereotype rather than on the problem's description. Interestingly, the performance improves when adding a hint in the prompt to remind the model to use its knowledge. This suggests the uniqueness of the representativeness heuristic compared to traditional biases. It can occur even when LLMs possess the correct knowledge while falling into a cognitive trap. This highlights the importance of future research focusing on the representativeness heuristic in model reasoning and decision-making and on developing solutions to address it",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "d4e3aa50b3d822021628d7c8d89519ec0389fbd8",
     "semantic_title": "will the real linda please stand up...to large language models? examining the representativeness heuristic in llms",
     "citation_count": 18,
@@ -2972,21 +2972,21 @@
   "https://openreview.net/forum?id=dnwRScljXr": {
     "title": "Evaluating LLMs at Detecting Errors in LLM Responses",
     "volume": "main",
-    "abstract": "With Large Language Models (LLMs) being widely used across various tasks, detecting errors in their responses is increasingly crucial. However, little research has been conducted on error detection of LLM responses. Collecting error annotations on LLM responses is challenging due to the subjective nature of many NLP tasks, and thus previous research focuses on tasks of little practical value (e.g., word sorting) or limited error types (e.g., faithfulness in summarization). This work introduces ReaLMistake, the first error detection benchmark consisting of objective, realistic, and diverse errors made by LLMs. ReaLMistake contains three challenging and meaningful tasks that introduce objectively assessable errors in four categories (reasoning correctness, instruction-following, context-faithfulness, and parameterized knowledge), eliciting naturally observed and diverse errors in responses of GPT-4 and Llama 2 70B annotated by experts. We use ReaLMistake to evaluate error detectors based on 12 LLMs. Our findings show: 1) Top LLMs like GPT-4 and Claude 3 detect errors made by LLMs at very low recall, and all LLM-based error detectors perform much worse than humans. 2) Explanations by LLM-based error detectors lack reliability. 3) LLMs-based error detection is sensitive to small changes in prompts but remains challenging to improve. 4) Popular approaches to improving LLMs, including self-consistency and majority vote, do not improve the error detection performance. Our benchmark and code are provided at https://github.com/psunlpgroup/ReaLMistake",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "d5e9532d12a26124f019de5f1a1d6a9a6eab3d03",
     "semantic_title": "evaluating llms at detecting errors in llm responses",
-    "citation_count": 55,
+    "citation_count": 57,
     "authors": []
   },
   "https://openreview.net/forum?id=F7aAhfitX6": {
     "title": "Massive Activations in Large Language Models",
     "volume": "main",
-    "abstract": "We observe an empirical phenomenon in Large Language Models (LLMs) -- very few activations exhibit significantly larger values than others (e.g., 100,000 times larger). We call them massive activations. First, we demonstrate the widespread existence of massive activations across various LLMs and characterize their locations. Second, we find their values largely stay constant regardless of the input, and they function as indispensable bias terms in LLMs. Third, these massive activations lead to the concentration of attention probabilities to their corresponding tokens, and further, implicit bias terms in the self-attention output. Last, we also study massive activations in Vision Transformers",
-    "checked": null,
+    "abstract": "",
+    "checked": true,
     "id": "aa085ed9a77d815d3c1d19a468be1d9a8d3efd13",
     "semantic_title": "massive activations in large language models",
-    "citation_count": 218,
+    "citation_count": 244,
     "authors": []
   }
 }
